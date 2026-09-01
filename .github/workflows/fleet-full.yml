@@ -43,7 +43,10 @@ jobs:
       github.event_name != 'pull_request' ||
       contains(github.event.pull_request.labels.*.name, 'full-fleet')
     name: pacmak + size shard ${{ matrix.shard }}/8
-    runs-on: ubuntu-latest
+    # Fleet convention: the heavy jobs run on Depot's 8-core/32 GB runners, the light ones stay on
+    # GitHub's standard two-core/16 GB image. Packing the fleet is ~880 CPU-seconds of jsii and
+    # pacmak — cores and memory — while the summary job below only adds up JSON.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     strategy:

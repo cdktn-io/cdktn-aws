@@ -155,8 +155,11 @@ build. In order:
    produces makes every PR permanently unmergeable. This is the exact mistake PR #83's second review
    round caught for `cdktn-awscc`.
 2. **Push `cdktn-aws` and get CI green.** `ci.yml` and `fleet-full.yml` have never executed. Expect
-   setup-level breakage (action versions, cache keys, runner tool versions, the 16 GB heap flag on a
-   standard runner) that local runs cannot surface. Nothing below is worth attempting until the PR
+   setup-level breakage (action versions, cache keys, runner tool versions) that local runs cannot
+   surface. The 16 GB heap flag is no longer among them: every job that carries it — `release.yml`'s
+   `build_monolith`, `build_fleet` and `assemble_go`, plus `ci.yml`'s typecheck, generate and shard
+   jobs and `fleet-full.yml`'s shards — runs on `depot-ubuntu-24.04-8` (8 cores, 32 GB), the fleet
+   convention. Light jobs stay on `ubuntu-latest`. Nothing below is worth attempting until the PR
    gate is green.
 3. **Both repositories start empty; do not hand-seed either.** `cdktn-aws-go` in particular is
    created by Terraform with an auto-init commit and nothing else — no template, no workflows, no

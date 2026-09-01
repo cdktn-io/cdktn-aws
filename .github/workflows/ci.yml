@@ -13,10 +13,11 @@
 # What is deliberately NOT here, and why:
 #
 #   * The full 258-group `jsii-pacmak --targets go` pack plus the whole-fleet `zip.CheckDir` size
-#     gate. Packing the fleet is ~880 CPU-seconds and produces ~540 MiB; on GitHub's two-core
-#     runners that is minutes added to every PR to re-prove a bound whose worst module sits at
-#     11.6 % of the cap with 8.6x of headroom. A PR packs and measures two of the eight shards, and
-#     `fleet-full.yml` does all eight nightly, on the `full-fleet` label, and on demand.
+#     gate. Packing the fleet is ~880 CPU-seconds and produces ~540 MiB; even on the eight-core
+#     Depot runners the pack shards use, that is minutes added to every PR to re-prove a bound whose
+#     worst module sits at 11.6 % of the cap with 8.6x of headroom. A PR packs and measures two of
+#     the eight shards, and `fleet-full.yml` does all eight nightly, on the `full-fleet` label, and
+#     on demand.
 #   * Anything that pushes, tags or publishes. `scripts/release.mjs` is dry-run-only by
 #     construction and no workflow runs it.
 #
@@ -67,7 +68,10 @@ jobs:
   # The gates that need nothing but the checkout: no provider schema, no Go toolchain, no jsii.
   checks:
     name: typecheck, tests and invariants
-    runs-on: ubuntu-latest
+    # Fleet convention: the heavy jobs run on Depot's 8-core/32 GB runners, the light ones stay on
+    # GitHub's standard two-core/16 GB image. Heavy here means the fleet-wide compiles — this job
+    # typechecks all 258 generated packages, which is cores and resident memory, not I/O.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     steps:
@@ -105,7 +109,9 @@ jobs:
   # Everything that reads the pinned provider schema.
   schema-gates:
     name: groups, generate determinism and runtime contract
-    runs-on: ubuntu-latest
+    # Depot: the mine/check gates are light, but this job generates the whole 258-group tree twice
+    # and builds the contract baseline, which is the CPU-bound half.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     steps:
@@ -191,7 +197,8 @@ jobs:
   # and the only limit is how many runners we ask for.
   fleet-jsii:
     name: jsii shard ${{ matrix.shard }}/8
-    runs-on: ubuntu-latest
+    # Depot: jsii holds a whole group assembly in memory per compile, eight legs of them.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     strategy:
@@ -313,7 +320,8 @@ jobs:
   # the same function `go mod download` runs — so this is the proxy's decision, not an estimate.
   fleet-pack-size:
     name: pacmak + size shard ${{ matrix.shard }}/8
-    runs-on: ubuntu-latest
+    # Depot: jsii + pacmak --targets go over a shard is the most expensive thing a PR runs.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     strategy:

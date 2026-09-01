@@ -1,7 +1,7 @@
 # Copyright (c) cdktn-io
 # SPDX-License-Identifier: MPL-2.0
 #
-# One suppression, and the reason it is not a workaround.
+# One suppression and one runner-label declaration, and the reasons neither is a workaround.
 #
 # `ci.yml` refers to this repository's own composite action as `uses: $/.github/actions/...` —
 # GitHub's self-repository syntax, shipped 2026-07-30 and required by runner >= 2.336.0. Unlike the
@@ -14,10 +14,20 @@
 # missing". Both gates are meant to pass, so the older tool's stale rule is suppressed by exact
 # message rather than the newer tool's live finding.
 #
-# DELETE THIS FILE once actionlint knows the syntax (track actionlint's release notes; the rule is
-# in its `action` check). If a second suppression is ever added here it needs its own paragraph —
-# an unexplained ignore is how a scanner stops meaning anything.
+# DELETE THE `paths:` BLOCK BELOW once actionlint knows the syntax (track actionlint's release
+# notes; the rule is in its `action` check) — the file itself stays for the runner labels. If a
+# second suppression is ever added here it needs its own paragraph — an unexplained ignore is how a
+# scanner stops meaning anything.
 paths:
   .github/workflows/**/*.yml:
     ignore:
       - 'specifying action "\$/\.github/actions/provider-schema" in invalid format'
+
+# The runner labels, which are a declaration and not an ignore. actionlint validates `runs-on:`
+# against GitHub's own hosted labels, so the fleet convention `depot-ubuntu-24.04-8` — Depot's
+# 8-core/32 GB Ubuntu 24.04 runner, used by the heavy compile jobs — reads to it as a typo. Listing
+# the label here is what tells it the difference: a real typo (`depot-ubuntu-24.4-8`) is still a
+# hard error, because nothing outside this list is accepted.
+self-hosted-runner:
+  labels:
+    - depot-ubuntu-24.04-8
