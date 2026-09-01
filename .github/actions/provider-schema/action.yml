@@ -11,7 +11,7 @@ runs:
   steps:
     - name: restore the cached dump
       id: cache
-      uses: actions/cache@v4
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
       with:
         path: schemas/schema.json
         # schemas/PROVIDER_VERSION is one of the three places the pin lives, and check:groups fails
@@ -20,7 +20,7 @@ runs:
 
     - name: install terraform
       if: steps.cache.outputs.cache-hit != 'true'
-      uses: hashicorp/setup-terraform@v3
+      uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
       with:
         terraform_wrapper: false
 

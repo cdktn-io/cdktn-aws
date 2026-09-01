@@ -1,0 +1,23 @@
+# Copyright (c) cdktn-io
+# SPDX-License-Identifier: MPL-2.0
+#
+# One suppression, and the reason it is not a workaround.
+#
+# `ci.yml` refers to this repository's own composite action as `uses: $/.github/actions/...` —
+# GitHub's self-repository syntax, shipped 2026-07-30 and required by runner >= 2.336.0. Unlike the
+# workspace-relative `./...` form it resolves to *this* repository at the commit being run rather
+# than to whatever happens to be on the runner's filesystem, so a previous step cannot substitute
+# the action; that is why zizmor's `self-repository` audit asks for it, and it is a real security
+# difference, not a style preference.
+#
+# actionlint 1.7.12 predates the feature and rejects the form as "invalid format because ref is
+# missing". Both gates are meant to pass, so the older tool's stale rule is suppressed by exact
+# message rather than the newer tool's live finding.
+#
+# DELETE THIS FILE once actionlint knows the syntax (track actionlint's release notes; the rule is
+# in its `action` check). If a second suppression is ever added here it needs its own paragraph —
+# an unexplained ignore is how a scanner stops meaning anything.
+paths:
+  .github/workflows/**/*.yml:
+    ignore:
+      - 'specifying action "\$/\.github/actions/provider-schema" in invalid format'

@@ -35,19 +35,41 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
+# Least privilege by default; every job below declares exactly the permissions it needs. Nothing in
+# either workflow writes to the repository, so every job is `contents: read` — but declared per job,
+# so adding one that does need more is a visible edit rather than an inherited grant.
+permissions: {}
 
+# The check contexts branch protection can require are the `name:` values below, not the job keys,
+# and the matrix jobs expand one context per shard. In full, on a pull request:
+#
+#   typecheck, tests and invariants
+#   groups, generate determinism and runtime contract
+#   synth smoke (validation on)
+#   jsii shard 1/8 … jsii shard 8/8
+#   every group compiled exactly once, JSII3/JSII6 zero
+#   pacmak + size shard 1/8, pacmak + size shard 5/8
+#   PR size coverage (2 of 8 shards)
+#
+# cdktn-repository-manager's `CustomConstructsStack` entry for this repo sets `protectMainChecks`,
+# and with `enforce_admins: true` a required context that no job produces makes every PR — admin
+# merges included — permanently unmergeable. That is exactly what round 2 of that repo's PR #83
+# caught for cdktn-awscc. **Any rename below is a change to the manager too.** The two must be
+# reconciled before the manager's adoption PR is applied, not after.
 jobs:
   # ---------------------------------------------------------------------------------------------
   # The gates that need nothing but the checkout: no provider schema, no Go toolchain, no jsii.
   checks:
     name: typecheck, tests and invariants
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: pnpm
@@ -78,22 +100,26 @@ jobs:
   schema-gates:
     name: groups, generate determinism and runtime contract
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - uses: ./.github/actions/provider-schema
+      - uses: $/.github/actions/provider-schema
 
       - name: check:groups (gate A coverage, gate B moves, canonical form)
         run: pnpm check:groups
 
       - name: cache the provider website checkout the miner clones
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
           path: tmp/terraform-provider-aws
           key: provider-website-${{ hashFiles('schemas/PROVIDER_VERSION') }}
@@ -132,10 +158,14 @@ jobs:
   synth-smoke:
     name: synth smoke (validation on)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: pnpm
@@ -156,14 +186,18 @@ jobs:
   fleet-jsii:
     name: jsii shard ${{ matrix.shard }}/8
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
         shard: [1, 2, 3, 4, 5, 6, 7, 8]
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: pnpm
@@ -190,7 +224,7 @@ jobs:
         # The reconciliation job below needs the per-group keys to prove the eight shards partition
         # the fleet. Without this every shard is green on its own and nobody adds them up.
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: jsii-shard-${{ matrix.shard }}
           path: tmp/m3/fleet-jsii.json
@@ -204,11 +238,15 @@ jobs:
     name: every group compiled exactly once, JSII3/JSII6 zero
     needs: fleet-jsii
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
       # No merge-multiple: every shard's file is named fleet-jsii.json, so merging would leave one
       # of the eight and the count would look right for the wrong reason.
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: jsii-shard-*
           path: shards
@@ -253,6 +291,8 @@ jobs:
   fleet-pack-size:
     name: pacmak + size shard ${{ matrix.shard }}/8
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
@@ -262,13 +302,15 @@ jobs:
         # lands. The other six are covered by fleet-full.yml.
         shard: [1, 5]
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
           cache: pnpm
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: "1.25"
           cache-dependency-path: tools/gosize/go.sum
@@ -288,7 +330,7 @@ jobs:
 
       - name: upload the size records
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: go-size-shard-${{ matrix.shard }}
           path: tmp/m3/
@@ -302,9 +344,13 @@ jobs:
     name: PR size coverage (2 of 8 shards)
     needs: fleet-pack-size
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: go-size-shard-*
           path: shards
