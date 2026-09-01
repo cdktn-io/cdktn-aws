@@ -19,34 +19,25 @@
  *   node scripts/check-js-tarball.mjs dist/js/aws@0.1.1.jsii.tgz
  */
 import { existsSync, readdirSync } from "node:fs";
-import { spawnSync } from "node:child_process";
 import * as path from "node:path";
+import { listTarball } from "./tar-list.mjs";
 
 /** Files the tarball must carry. `lib/` and `.jsii` are checked as prefixes, these as exact names. */
 const REQUIRED = ["package/package.json", "package/.jsii", "package/README.md", "package/LICENSE", "package/NOTICE"];
 
-const sh = (cmd) => {
-  const r = spawnSync("/bin/sh", ["-c", cmd], { encoding: "utf8", maxBuffer: 512 * 1024 * 1024 });
-  if (r.status !== 0) throw new Error(`command failed (exit ${r.status}): ${cmd}\n${r.stderr}`);
-  return r.stdout;
-};
-
 /**
  * @param {string} tgz path to the packed tarball
- * @returns {{ files: number, bytes: number }}
+ * @returns {Promise<{ files: number, bytes: number }>}
  */
-export function checkJsTarball(tgz) {
+export async function checkJsTarball(tgz) {
   if (!existsSync(tgz)) throw new Error(`[tarball] no such tarball: ${tgz}`);
 
-  // `tar -tzf` for the names and `tar -xzO | wc -c` for the unpacked size: two decompressions of a
-  // ~50 MB gzip, a few seconds, and no dependence on the wildly different `tar -tv` long formats of
-  // BSD tar (macOS) and GNU tar (CI).
-  const entries = sh(`tar -tzf ${JSON.stringify(tgz)}`)
-    .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean);
+  // One streaming gunzip, in-process, for both the names and the unpacked size — scripts/tar-list.mjs.
+  // No shell and no `tar` child: the path below is attacker-influenced in the only way that matters
+  // (pacmak names the file from the package version), and `tar -tv`'s long format differs between
+  // BSD tar (macOS) and GNU tar (CI) anyway.
+  const { entries, bytes } = await listTarball(tgz);
   const files = entries.filter((e) => !e.endsWith("/"));
-  const bytes = Number(sh(`tar -xzOf ${JSON.stringify(tgz)} | wc -c`).trim());
 
   const problems = [];
 
@@ -105,7 +96,7 @@ if (process.argv[1] && process.argv[1].endsWith("check-js-tarball.mjs")) {
   }
   try {
     const tgz = target.endsWith(".tgz") ? target : soleTarball(target);
-    const { files, bytes } = checkJsTarball(tgz);
+    const { files, bytes } = await checkJsTarball(tgz);
     console.log(`[tarball] ${path.basename(tgz)}: OK — ${files} files, ${bytes} B unpacked`);
   } catch (err) {
     console.error(err.message);

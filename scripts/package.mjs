@@ -125,7 +125,7 @@ for (const target of targets) {
   if (target === "js") {
     try {
       const tgz = soleTarball(outDir);
-      const { files, bytes: unpacked } = checkJsTarball(tgz);
+      const { files, bytes: unpacked } = await checkJsTarball(tgz);
       perTarget[target].tarball = { name: path.basename(tgz), files, unpackedBytes: unpacked };
       console.log(
         `[package] tarball gate: ${path.basename(tgz)} OK — ${files} files, ` +

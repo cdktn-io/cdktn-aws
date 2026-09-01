@@ -285,7 +285,7 @@ for (const target of pacmakTargets) {
   // unchecked tarball either.
   if (target === "js") {
     try {
-      const { files, bytes } = checkJsTarball(soleTarball(path.join(monolithDir, "dist", "js")));
+      const { files, bytes } = await checkJsTarball(soleTarball(path.join(monolithDir, "dist", "js")));
       console.log(`tarball gate: OK — ${files} files, ${bytes} B unpacked, no sources`);
     } catch (err) {
       console.error(err.message);

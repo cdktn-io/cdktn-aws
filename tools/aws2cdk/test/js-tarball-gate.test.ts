@@ -12,6 +12,11 @@
  *
  * The fixtures are real gzipped tarballs built with the system `tar` — the same bytes the real check
  * reads — because a mocked file list would only prove that the mock was shaped like the assertion.
+ *
+ * The last test is the security regression: the first version of the gate ran
+ * `/bin/sh -c "tar -tzf " + JSON.stringify(tgz)`, and JSON quoting is not shell quoting, so a path
+ * containing `$(…)` or backticks executed it. The gate now spawns no shell and no `tar` at all
+ * (scripts/tar-list.mjs); the test proves it by naming a fixture after a command with a side effect.
  */
 import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
@@ -32,7 +37,10 @@ function tarball(name: string, files: Record<string, string>): string {
     fs.writeFileSync(target, contents);
   }
   const tgz = path.join(workDir, `${name}.tgz`);
-  execFileSync("tar", ["-czf", tgz, "-C", stage, "package"]);
+  // COPYFILE_DISABLE: macOS `tar` otherwise stores an AppleDouble `._x` sidecar per entry, which
+  // its own `tar -tzf` hides but the gate (correctly) counts — the fixture would then have a
+  // different file count and byte total on macOS than on CI.
+  execFileSync("tar", ["-czf", tgz, "-C", stage, "package"], { env: { ...process.env, COPYFILE_DISABLE: "1" } });
   return tgz;
 }
 
@@ -110,5 +118,32 @@ describe("the js tarball gate", () => {
     const files = { ...WELL_FORMED };
     delete files["lib/index.js"];
     expect(check(tarball("nojs", files))).toMatch(/no package\/lib\/\*\*\/\*\.js/);
+  });
+
+  // SECURITY REGRESSION. The gate used to interpolate the path into `/bin/sh -c`. These three
+  // metacharacters each execute inside the double quotes JSON.stringify produces; if any of them
+  // still reaches a shell, `owned` appears next to the tarball and this test fails on that file
+  // rather than on the message.
+  it.each([
+    ["dollar-paren", "aws@$(touch owned)"],
+    ["backtick", "aws@`touch owned`"],
+    ["semicolon-and-glob", "aws@0.1.1; touch owned #*"],
+  ])("runs no shell on a hostile tarball path (%s)", (_label, hostile) => {
+    const tgz = tarball(hostile, WELL_FORMED);
+    expect(fs.existsSync(tgz)).toBe(true);
+
+    // The gate must still read this tarball correctly — the point is that the name is just a name.
+    expect(check(tgz)).toBeNull();
+    expect(check(tarball(`${hostile}-fat`, { ...WELL_FORMED, "src/index.ts": "//\n" }))).toMatch(/TypeScript source/);
+
+    for (const dir of [workDir, process.cwd(), os.tmpdir()]) {
+      expect(fs.existsSync(path.join(dir, "owned"))).toBe(false);
+    }
+  });
+
+  it("reports a missing tarball by name rather than executing it", () => {
+    const failure = check(path.join(workDir, "$(touch owned).tgz"));
+    expect(failure).toContain("no such tarball");
+    expect(fs.existsSync(path.join(workDir, "owned"))).toBe(false);
   });
 });
