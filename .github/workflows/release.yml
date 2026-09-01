@@ -583,7 +583,10 @@ jobs:
     name: Publish the fleet to cdktn-aws-go
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
-    # Holds GO_GITHUB_TOKEN, which can push to cdktn-io/cdktn-aws-go — env-scoped, branch-gated.
+    # Pushes to cdktn-io/cdktn-aws-go with a job-minted App installation token (below) — the
+    # environment gate still applies: no deployment approval, no token mint, no push. The
+    # env-scoped GO_GITHUB_TOKEN secret is currently unused by this job (kept manager-side until
+    # the fleet decides its fate — see cdktn-repository-manager#85).
     environment: release
     permissions:
       contents: read
@@ -612,12 +615,28 @@ jobs:
       # creates one `<dir>/v<version>` tag per module — the multi-module shape natively, the same
       # one cdktn-provider-aws-go already publishes with (aws/v25.3.0 and friends). Nothing here
       # loops in YAML.
+      # The credential the provider fleet actually pushes -go repos with (cdktn-provider-aws
+      # release.yml, "Generate token"): a short-lived App installation token scoped to exactly the
+      # companion repo with contents:write — not the GO_GITHUB_TOKEN PAT this job originally
+      # borrowed. Release 0.1.1's first run proved the difference the hard way: publib embeds
+      # $GITHUB_TOKEN verbatim into the clone/push URL, so the value MUST be the full
+      # `x-access-token:<token>` username:password pair. A bare token becomes a username-only URL
+      # and git falls back to prompting for a password, which on a headless runner dies with
+      # "could not read Password". Minted only on the real path — the dry run stays credential-free.
+      - name: Generate cdktn-aws-go push token
+        id: generate_token
+        if: ${{ !inputs.dry_run }}
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        with:
+          app-id: ${{ secrets.PROJEN_APP_ID }}
+          private-key: ${{ secrets.PROJEN_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: cdktn-aws-go
+          permission-contents: write
       - name: Publish
         if: ${{ !inputs.dry_run }}
         env:
-          # gh-token, aliased GO_GITHUB_TOKEN by the repository manager's PublishingSecretSet — the
-          # same secret every provider repo already uses to push its companion -go repo.
-          GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
+          GITHUB_TOKEN: x-access-token:${{ steps.generate_token.outputs.token }}
           GIT_USER_NAME: team-cdk-terrain
           GIT_USER_EMAIL: github-team-cdk-terrain@cdktn.io
           VERSION: ${{ needs.build_monolith.outputs.version }}
