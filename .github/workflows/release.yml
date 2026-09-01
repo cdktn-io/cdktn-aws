@@ -1,0 +1,498 @@
+# Copyright (c) cdktn-io
+# SPDX-License-Identifier: MPL-2.0
+#
+# THIS WORKFLOW HAS NEVER EXECUTED. Nothing in this repository has ever been published, pushed or
+# tagged; neither cdktn-io/cdktn-aws nor cdktn-io/cdktn-aws-go exists on GitHub yet. Treat the
+# first dispatched dry run as this file's own smoke test — and read docs/m4-publishing.md §3, which
+# is the checklist of one-time registrations (npm placeholder + trusted publisher, PyPI pending
+# publisher, the repository-manager adoption PR) that have to be done before the first real run.
+#
+# TRIGGER: workflow_dispatch only, and `dry_run` defaults to TRUE.
+#
+#   Push-to-main / tag-push auto-release is the documented future state. It is deliberately absent
+#   until the first dispatched dry run and the first dispatched real release have both succeeded:
+#   a release workflow that has never run should not be armed by an ordinary merge. Once both have
+#   happened, add
+#
+#       push:
+#         tags: ["v*"]
+#
+#   here and derive the version from `${GITHUB_REF_NAME#v}` in the "Determine version" step below
+#   (cdktn-awscc's release.yml already has exactly that branch — copy it), and flip `dry_run`'s
+#   default to false so a dispatch means what an operator expects.
+#
+# TWO PIPELINES, ONE RELEASE. This repository publishes two different artifacts out of one
+# generated tree (docs/m4-publishing.md §1):
+#
+#   * the monolith `@cdktn/aws` — one jsii assembly, 258 submodules — to npm, PyPI, Maven Central
+#     and NuGet. `pnpm package` builds it.
+#   * the fleet — 258 sibling Go modules — to cdktn-io/cdktn-aws-go. `scripts/build-fleet.mjs`
+#     packs it (sharded, because it is ~880 CPU-seconds), `scripts/assemble-go-dist.mjs` collects
+#     it into one dist/go, and `publib-golang` publishes it.
+#
+# The monolith carries NO Go target (scripts/monolith-manifest.mjs) and the fleet is never
+# published to npm. Neither half can accidentally become the other's source.
+#
+# FIRST RELEASE PUBLISHES ALL 258 Go MODULES. The changed-groups-only optimisation exists and is
+# unit-tested — `scripts/release.mjs` / `tools/aws2cdk/src/release-plan.ts` diff generated/hashes.json
+# between two refs and name exactly the modules whose content moved — but it is NOT wired into this
+# workflow. It cannot be: there is no previous release to diff against. Wiring it is a follow-up
+# for the second release onward (docs/m4-publishing.md §4, tag-growth policy), and it is a
+# deliberate not-yet, not an oversight.
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (no leading v), e.g. 0.1.0. Must equal package.json's version."
+        required: true
+        type: string
+      dry_run:
+        description: "Dry run: build, validate and print what would be published, publish nothing."
+        required: false
+        type: boolean
+        default: true
+
+# Never cancel a mid-flight publish: half a release is worse than a late one, and for the Go fleet
+# a partially-pushed tag set is what consumers would resolve against.
+concurrency:
+  group: release-${{ github.workflow }}
+  cancel-in-progress: false
+
+# Least privilege by default; every job below declares exactly what it needs. `contents: write` is
+# the GitHub Release job's alone, `id-token: write` the two OIDC publish jobs' alone.
+permissions: {}
+
+env:
+  # jsii holds the whole 2.18M-line program in memory; the monolith compile peaks around 7.2 GB RSS
+  # and the default 4 GB ceiling is not enough (docs/m2-metrics.md).
+  NODE_OPTIONS: --max-old-space-size=16384
+
+jobs:
+  # ------------------------------------------------------------------ the monolith: js/python/java/dotnet
+  build_monolith:
+    name: build @cdktn/aws (js, python, java, dotnet)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.version.outputs.value }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      # `inputs.version` reaches the script only through `env`, never interpolated into `run:`, so a
+      # dispatcher cannot inject shell syntax and run code on a release runner. It must also match a
+      # strict semver shape before it is written anywhere.
+      - name: Determine and validate version
+        id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          VERSION="$INPUT_VERSION"
+          if ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
+            echo "::error::invalid release version '$VERSION' (expected MAJOR.MINOR.PATCH[-prerelease], no leading v)"
+            exit 1
+          fi
+          # The fleet versioning scheme is this repository's own semver: @cdktn/aws, all 258 Go
+          # modules and the git tag move together, disconnected from the provider version
+          # (docs/m3-go.md § "Versioning and release"). package.json is where that number lives, and
+          # it is bumped in a reviewed PR — not by this workflow, which would otherwise be a push
+          # to main from a job holding publishing credentials.
+          DECLARED="$(node -p 'require("./package.json").version')"
+          if [ "$VERSION" != "$DECLARED" ]; then
+            echo "::error::dispatched version '$VERSION' != package.json version '$DECLARED'. Bump package.json in a PR first, merge it, then dispatch that same version."
+            exit 1
+          fi
+          echo "value=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false # release: never restore a cache into a release build
+      - name: Setup Python (jsii-pacmak python target)
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.x"
+      - name: Setup Java (jsii-pacmak java target)
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          distribution: corretto
+          java-version: "11"
+      - name: Setup .NET (jsii-pacmak dotnet target)
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: "8.x"
+
+      - run: pnpm install --frozen-lockfile
+
+      # release.yml never regenerates generated/ — it packages what is committed, which ci.yml
+      # already proved is what the pinned schema produces on this ref. No schema fetch here.
+      - name: pnpm package
+        env:
+          PACKAGE_VERSION: ${{ steps.version.outputs.value }}
+          PACMAK_TARGETS: js,python,java,dotnet
+        run: pnpm package
+
+      - name: what this build would publish
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          set -euo pipefail
+          echo "### @cdktn/aws $VERSION" >> "$GITHUB_STEP_SUMMARY"
+          ls -l dist/js dist/python dist/java dist/dotnet | tee -a "$GITHUB_STEP_SUMMARY"
+          cat dist/metrics.json >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist-monolith
+          path: dist
+          retention-days: 14
+          if-no-files-found: error
+
+  # ------------------------------------------------------------------ the fleet: 258 Go modules
+  build_fleet:
+    name: pack go shard ${{ matrix.shard }}/8
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        # Same size-balanced deterministic deal ci.yml uses; the whole fleet is ~880 CPU-seconds of
+        # pacmak, so it shards rather than serialises.
+        shard: [1, 2, 3, 4, 5, 6, 7, 8]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile
+
+      - name: jsii + jsii-pacmak --targets go, shard ${{ matrix.shard }} of 8
+        run: node scripts/build-fleet.mjs --shard ${{ matrix.shard }}/8
+
+      - name: collect this shard's modules
+        run: node scripts/assemble-go-dist.mjs --out dist/go --allow-partial
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist-go-shard-${{ matrix.shard }}
+          path: dist/go
+          retention-days: 14
+          if-no-files-found: error
+
+  # ------------------------------------------------------------------ one dist/go, gated
+  assemble_go:
+    name: assemble and gate the 258-module fleet
+    needs: build_fleet
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
+        with:
+          go-version: "1.25"
+          cache-dependency-path: tools/gosize/go.sum
+      - run: pnpm install --frozen-lockfile
+
+      # merge-multiple: the eight shards hold disjoint module directories by construction, and the
+      # verify step below fails if the union is not exactly the 258 in generated/hashes.json — so a
+      # shard that packed nothing cannot pass as a green release.
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          pattern: dist-go-shard-*
+          path: dist/go
+          merge-multiple: true
+
+      - name: every group present exactly once, and no root go.mod
+        run: node scripts/assemble-go-dist.mjs --out dist/go --verify
+
+      # pacmak emits no go.sum, and a tag without one is unverifiable by the checksum database.
+      # This is a required step, not tidiness (docs/m4-publishing.md §1(b)).
+      - name: go mod tidy + go build, every module
+        run: node scripts/go-tidy-build.mjs --root dist/go
+
+      - name: no cross-module imports in the packed Go
+        run: node scripts/check-go-module-isolation.mjs --root dist/go
+
+      # x/mod/zip.CheckDir — the same function `go mod download` runs, so this is the proxy's
+      # decision and not an estimate. A module over the cap can never be un-published.
+      - name: zip.CheckDir size gate, all 258
+        run: node scripts/check-go-size.mjs --root dist/go
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist-go
+          path: dist/go
+          retention-days: 14
+          if-no-files-found: error
+
+  # ------------------------------------------------------------------ GitHub Release (and the tag)
+  release_github:
+    name: Publish GitHub Release
+    needs: [build_monolith, assemble_go]
+    runs-on: ubuntu-latest
+    # The only job in this workflow that may write to this repository, and all it writes is the
+    # release and its tag. `gh release create` on a tag that does not exist creates it at the
+    # dispatched ref, which is how this repository's own semver becomes a git tag.
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-monolith
+          path: dist
+      - name: Create GitHub Release
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh release create "v$VERSION" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "v$VERSION" \
+            --generate-notes \
+            dist/js/*.tgz \
+            dist/python/*.whl \
+            dist/metrics.json
+      - name: DRY RUN — what would be released
+        if: ${{ inputs.dry_run }}
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          echo "would create GitHub Release v$VERSION (and the tag) with:"
+          ls -l dist/js/*.tgz dist/python/*.whl dist/metrics.json
+
+  # ------------------------------------------------------------------ npm (OIDC trusted publishing)
+  release_npm:
+    name: Publish to npm
+    needs: build_monolith
+    runs-on: ubuntu-latest
+    # No `environment:` — the npm Trusted Publisher for @cdktn/aws is registered with the
+    # Environment field left BLANK (docs/m4-publishing.md §3). Adding one here silently breaks the
+    # OIDC claim match.
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+          registry-url: "https://registry.npmjs.org"
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-monolith
+          path: dist
+      # npm Trusted Publishing (OIDC) needs npm >= 11.5.1 and the bundled npm may be older. Exact,
+      # reviewed pin — never a floating range in a job that holds a publishing identity.
+      - name: Ensure npm supports Trusted Publishing
+        run: npm install -g npm@11.19.1 && npm --version # zizmor: ignore[adhoc-packages] exact pin, reviewed
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        run: npm publish dist/js/*.tgz --provenance --access public
+      - name: DRY RUN — what would be published to npm
+        if: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          for tgz in dist/js/*.tgz; do
+            echo "would run: npm publish $tgz --provenance --access public"
+            tar -xzOf "$tgz" package/package.json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const p=JSON.parse(s);console.log(`  ${p.name}@${p.version}  targets: ${Object.keys(p.jsii.targets).join(",")}`);if(p.private)throw new Error("tarball is marked private — npm publish would refuse it");if(p.jsii.targets.go)throw new Error("monolith tarball carries a Go target — it must not");})'
+          done
+
+  # ------------------------------------------------------------------ PyPI (OIDC trusted publishing)
+  release_pypi:
+    name: Publish to PyPI
+    needs: build_monolith
+    runs-on: ubuntu-latest
+    # MUST stay `pypi`: the PyPI pending publisher for cdktn-aws is registered against
+    # repository cdktn-io/cdktn-aws, workflow release.yml, environment pypi, and the environment
+    # itself is created by cdktn-repository-manager's CustomConstructsStack. Rename either side and
+    # the OIDC claim stops matching.
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-monolith
+          path: dist
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        with:
+          packages-dir: dist/python
+          skip-existing: true
+      - name: DRY RUN — what would be published to PyPI
+        if: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          echo "would upload from dist/python via OIDC (environment: pypi):"
+          ls -l dist/python
+
+  # ------------------------------------------------------------------ Maven Central
+  release_maven:
+    name: Publish to Maven Central
+    needs: build_monolith
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # publib is an exact devDependency in pnpm-lock.yaml and is run from this repository's own
+      # install — never `npx …@latest`, which would resolve and execute an unreviewed version in a
+      # job that holds the Maven signing key. --ignore-scripts for the same reason.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          distribution: corretto
+          java-version: "11"
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-monolith
+          path: dist
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        env:
+          MAVEN_SERVER_ID: central-ossrh
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+          MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          MAVEN_GPG_PRIVATE_KEY_PASSPHRASE: ${{ secrets.MAVEN_GPG_PRIVATE_KEY_PASSPHRASE }}
+          MAVEN_OPTS: --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED
+        run: pnpm exec publib-maven dist/java
+      - name: DRY RUN — what would be published to Maven Central
+        if: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          echo "would run: pnpm exec publib-maven dist/java  (io.cdktn:cdktn-aws, server central-ossrh)"
+          find dist/java -name '*.pom' -o -name '*.jar' | head -20
+          du -sh dist/java
+
+  # ------------------------------------------------------------------ NuGet
+  release_nuget:
+    name: Publish to NuGet Gallery
+    needs: build_monolith
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # Same rule as the Maven job: locked, exact publib; no scripts.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-monolith
+          path: dist
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: pnpm exec publib-nuget dist/dotnet
+      - name: DRY RUN — what would be published to NuGet
+        if: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          echo "would run: pnpm exec publib-nuget dist/dotnet  (Io.Cdktn.Aws)"
+          ls -l dist/dotnet
+
+  # ------------------------------------------------------------------ Go (github.com/cdktn-io/cdktn-aws-go)
+  release_go:
+    name: Publish the fleet to cdktn-aws-go
+    needs: [build_monolith, assemble_go]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # Same rule as the Maven job: locked, exact publib; no scripts.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
+        with:
+          go-version: "1.25"
+          cache: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist-go
+          path: dist/go
+
+      # publib-golang reads every dist/go/<dir>/go.mod, derives the target repository from the
+      # module path (github.com/cdktn-io/cdktn-aws-go), clones it, syncs the tree, commits once and
+      # creates one `<dir>/v<version>` tag per module — the multi-module shape natively, the same
+      # one cdktn-provider-aws-go already publishes with (aws/v25.3.0 and friends). Nothing here
+      # loops in YAML.
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        env:
+          # gh-token, aliased GO_GITHUB_TOKEN by the repository manager's PublishingSecretSet — the
+          # same secret every provider repo already uses to push its companion -go repo.
+          GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
+          GIT_USER_NAME: team-cdk-terrain
+          GIT_USER_EMAIL: github-team-cdk-terrain@cdktn.io
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: pnpm exec publib-golang dist/go
+      - name: DRY RUN — what would be pushed to cdktn-aws-go
+        if: ${{ inputs.dry_run }}
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          # No credential, no clone: this prints the tag set publib-golang would create, from the
+          # same go.mod files it would read. Once cdktn-aws-go exists, `PUBLIB_DRYRUN=true
+          # pnpm exec publib-golang dist/go` is the deeper dry run — it clones and diffs for real.
+          node -e '
+            const fs = require("node:fs");
+            const dirs = fs.readdirSync("dist/go").filter((d) => fs.existsSync(`dist/go/${d}/go.mod`)).sort();
+            const version = process.env.VERSION;
+            console.log(`would run: pnpm exec publib-golang dist/go  (VERSION=${version})`);
+            console.log(`${dirs.length} modules, ${dirs.length} tags, e.g.:`);
+            for (const d of dirs.slice(0, 5)) console.log(`  ${d}/v${version}`);
+            console.log(`  … and ${dirs.length - 5} more`);
+            const repos = new Set(dirs.map((d) => fs.readFileSync(`dist/go/${d}/go.mod`, "utf8").match(/module (.*)/)[1].split("/").slice(0, 3).join("/")));
+            console.log(`target repository: ${[...repos].join(", ")}`);
+            if (repos.size !== 1) { console.error("more than one target repository in dist/go"); process.exit(1); }
+          '
