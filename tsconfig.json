@@ -12,5 +12,6 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["tools/*/src/**/*.ts"]
+  "include": ["tools/*/src/**/*.ts"],
+  "exclude": ["tools/aws2cdk/**"]
 }

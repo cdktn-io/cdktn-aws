@@ -1,0 +1,20 @@
+{
+  "name": "@cdktn-aws/aws2cdk",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "description": "aws2cdk — the grouped, namespaced-props binding generator for terraform-provider-aws",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "tsx bin/generate.ts",
+    "baseline": "tsx bin/baseline.ts"
+  },
+  "dependencies": {
+    "@cdktn/commons": "0.24.0",
+    "@cdktn/provider-schema": "0.24.0",
+    "camelcase": "^6.3.0",
+    "cdktn": "0.24.0",
+    "codemaker": "^1.117.0",
+    "constructs": "^10.7.0"
+  }
+}

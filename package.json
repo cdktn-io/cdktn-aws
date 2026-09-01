@@ -7,10 +7,16 @@
   "scripts": {
     "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
     "check:groups": "pnpm --filter @cdktn-aws/check-groups run start",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.10.2",
+    "jest": "^29.7.0",
+    "jsii": "~5.9.53",
+    "jsii-pacmak": "^1.140.0",
+    "ts-jest": "^29.4.12",
+    "tsx": "^4.23.13",
     "typescript": "^5.7.2"
   },
   "packageManager": "pnpm@11.17.0",
