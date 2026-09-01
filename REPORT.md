@@ -43,8 +43,10 @@ tree (`golang.org/x/mod/zip`, `MaxZipFile`):
 | `aws/v24.6.0` | 525,519,743 | **first failing**, 100.24 % |
 
 Growth is ~1–2 MB per upstream provider *minor*. There is no client-side workaround for v24.6.0 and
-after: the cap is enforced by the proxy and the sumdb, not by the consumer's toolchain, so no flag,
-vendor directory or private proxy on the user's side restores it. **Every future monolithic Go
+after: the cap is enforced by `golang.org/x/mod/zip`, which is vendored into `cmd/go`, so the proxy,
+the sumdb *and* the consumer's own toolchain all apply it — which is precisely why no flag, vendor
+directory, private proxy or `GOPRIVATE` direct fetch restores it (a `GOPRIVATE` direct-mode
+`go mod download` fails identically to the proxy path). **Every future monolithic Go
 release of this provider stays broken**, and the margin only goes one way. Issue #387 proposed a
 per-service module split as the structural fix; this PoC is that fix, taken seriously.
 
