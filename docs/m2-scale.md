@@ -15,8 +15,8 @@ Node 24, pnpm 11), from a clean `generated/`.
 | groups emitted | **258** (257 from `groups.json` + the synthetic `provider`) |
 | classes | 2,401 (1,711 resources, 679 data sources, 10 ephemeral, 1 provider) |
 | nested property types | 9,856 |
-| files written | **3,434** (2,660 `.ts` + 258 × `package.json`/`README.md`/`tsconfig.json` + `hashes.json`) |
-| bytes written | **84.7 MiB** (88,766,714 B), 2,179,155 lines of TypeScript |
+| files written | **3,435** — 3,434 package files (2,660 `.ts` + 774 manifests, i.e. 258 × `package.json`/`README.md`/`tsconfig.json`) plus the one `hashes.json` |
+| bytes written | **84.7 MiB** (88,805,906 B), 2,176,495 lines of TypeScript |
 | `pnpm generate` wall time | **2.7 – 3.2 s**, single process, default heap |
 | peak generator heap | under the default 4 GB ceiling — **no `--max-old-space-size` needed** |
 | `pnpm typecheck` (root + generator + 258 packages) | **85 s** wall, 258/258 OK, default heap |
@@ -53,16 +53,16 @@ not even reach the top ten, because its worst attribute trees are on the vendore
 
 | file | bytes | exports | lines |
 | --- | ---: | ---: | ---: |
-| `lex_v2_models/src/aws-lexv2-models-intent.ts` | **6.87 MiB** | **4,647** | 147,496 |
-| `waf/src/aws-wafv2-web-acl-rule.ts` | 3.80 MiB | 2,767 | 82,501 |
-| `elemental_medialive/src/aws-medialive-channel.ts` | 1.25 MiB | 663 | 32,790 |
-| `lex_v2_models/src/aws-lexv2-models-slot.ts` | 1.07 MiB | 702 | 22,461 |
-| `kinesis_firehose/src/aws-kinesis-firehose-delivery-stream.ts` | 0.79 MiB | 399 | 19,661 |
-| `security_hub/src/aws-securityhub-insight.ts` | 0.72 MiB | 516 | 18,733 |
-| `arc_region_switch/src/aws-arcregionswitch-plan.ts` | 0.71 MiB | 407 | 17,052 |
-| `sagemaker_ai/src/aws-sagemaker-hyper-parameter-tuning-job.ts` | 0.60 MiB | 357 | 14,140 |
-| `sagemaker_ai/src/aws-sagemaker-domain.ts` | 0.47 MiB | 280 | 11,301 |
-| `waf/src/aws-wafv2-web-acl-rule-group-association.ts` | 0.47 MiB | 327 | 10,257 |
+| `lex_v2_models/src/aws-lexv2-models-intent.ts` | **6.87 MiB** | **4,647** | 147,495 |
+| `waf/src/aws-wafv2-web-acl-rule.ts` | 3.80 MiB | 2,767 | 82,500 |
+| `elemental_medialive/src/aws-medialive-channel.ts` | 1.25 MiB | 663 | 32,789 |
+| `lex_v2_models/src/aws-lexv2-models-slot.ts` | 1.07 MiB | 702 | 22,460 |
+| `kinesis_firehose/src/aws-kinesis-firehose-delivery-stream.ts` | 0.79 MiB | 399 | 19,660 |
+| `security_hub/src/aws-securityhub-insight.ts` | 0.72 MiB | 516 | 18,732 |
+| `arc_region_switch/src/aws-arcregionswitch-plan.ts` | 0.71 MiB | 407 | 17,051 |
+| `sagemaker_ai/src/aws-sagemaker-hyper-parameter-tuning-job.ts` | 0.60 MiB | 357 | 14,139 |
+| `sagemaker_ai/src/aws-sagemaker-domain.ts` | 0.47 MiB | 280 | 11,300 |
+| `waf/src/aws-wafv2-web-acl-rule-group-association.ts` | 0.47 MiB | 327 | 10,256 |
 
 Distribution: **2** files over 2 MiB, **4** over 1 MiB, **8** over the vendored generator's old
 400-export sharding threshold. The M1 record's largest file was 85 exports; the tail here is three
