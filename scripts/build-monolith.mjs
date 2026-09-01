@@ -103,6 +103,14 @@ writeFileSync(
   ].join("\n"),
 );
 
+// The published tarball has to carry the licence it is distributed under and the attribution map
+// for the code vendored into the generator that wrote it — MPL-2.0 §3.1 is satisfied by the
+// recipient getting the text, and a package that omits it makes every consumer go looking. npm
+// includes LICENSE by default; NOTICE it does not, so both are copied in explicitly.
+for (const file of ["LICENSE", "NOTICE"]) {
+  cpSync(path.join(repoRoot, file), path.join(monolithDir, file));
+}
+
 // The manifest is emitted by scripts/monolith-manifest.mjs — one place, so the four permanent
 // registry names and the deliberately-absent `targets.go` block can be asserted by
 // tools/aws2cdk/test/monolith-manifest.test.ts without compiling anything.

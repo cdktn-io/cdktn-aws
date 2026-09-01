@@ -23,6 +23,7 @@
     "jsii": "node scripts/build-generated.mjs",
     "measure:dedup": "node --max-old-space-size=12288 scripts/measure-struct-dedup.mjs",
     "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
+    "package": "node scripts/package.mjs",
     "pacmak:python": "node scripts/build-monolith.mjs --pacmak python",
     "pacmak:go": "node scripts/build-generated.mjs --pacmak-go",
     "project:go": "node scripts/project-go-size.mjs",
