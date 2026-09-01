@@ -1,0 +1,955 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVerifiedpermissionsPolicyConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#policy_store_id AwsVerifiedpermissionsPolicy#policy_store_id}
+  */
+  readonly policyStoreId: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#region AwsVerifiedpermissionsPolicy#region}
+  */
+  readonly region?: string;
+  /**
+  * definition block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#definition AwsVerifiedpermissionsPolicy#definition}
+  */
+  readonly definition?: AwsVerifiedpermissionsPolicy.DefinitionProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy aws_verifiedpermissions_policy}
+*/
+export class AwsVerifiedpermissionsPolicy extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_verifiedpermissions_policy";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVerifiedpermissionsPolicy resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVerifiedpermissionsPolicy to import
+  * @param importFromId The id of the existing AwsVerifiedpermissionsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVerifiedpermissionsPolicy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedpermissions_policy", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy aws_verifiedpermissions_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVerifiedpermissionsPolicyConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVerifiedpermissionsPolicyConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_verifiedpermissions_policy',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._policyStoreId = config.policyStoreId;
+    this._region = config.region;
+    this._definition.internalValue = config.definition;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // created_date - computed: true, optional: false, required: false
+  public get createdDate() {
+    return this.getStringAttribute('created_date');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // policy_id - computed: true, optional: false, required: false
+  public get policyId() {
+    return this.getStringAttribute('policy_id');
+  }
+
+  // policy_store_id - computed: false, optional: false, required: true
+  private _policyStoreId?: string; 
+  public get policyStoreId() {
+    return this.getStringAttribute('policy_store_id');
+  }
+  public set policyStoreId(value: string) {
+    this._policyStoreId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyStoreIdInput() {
+    return this._policyStoreId;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // definition - computed: false, optional: true, required: false
+  private _definition = new AwsVerifiedpermissionsPolicy.DefinitionPropertyList(this, "definition", false);
+  public get definition() {
+    return this._definition;
+  }
+  public putDefinition(value: AwsVerifiedpermissionsPolicy.DefinitionProperty[] | cdktn.IResolvable) {
+    this._definition.internalValue = value;
+  }
+  public resetDefinition() {
+    this._definition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get definitionInput() {
+    return this._definition.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      policy_store_id: cdktn.stringToTerraform(this._policyStoreId),
+      region: cdktn.stringToTerraform(this._region),
+      definition: cdktn.listMapper(awsVerifiedpermissionsPolicyDefinitionPropertyToTerraform, true)(this._definition.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      policy_store_id: {
+        value: cdktn.stringToHclTerraform(this._policyStoreId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      definition: {
+        value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedpermissionsPolicy.DefinitionPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsVerifiedpermissionsPolicyStaticPropertyToTerraform(struct?: AwsVerifiedpermissionsPolicy.StaticProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    description: cdktn.stringToTerraform(struct!.description),
+    statement: cdktn.stringToTerraform(struct!.statement),
+  }
+}
+
+
+export function awsVerifiedpermissionsPolicyStaticPropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicy.StaticProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    description: {
+      value: cdktn.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    statement: {
+      value: cdktn.stringToHclTerraform(struct!.statement),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedpermissionsPolicyPrincipalPropertyToTerraform(struct?: AwsVerifiedpermissionsPolicy.PrincipalProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    entity_id: cdktn.stringToTerraform(struct!.entityId),
+    entity_type: cdktn.stringToTerraform(struct!.entityType),
+  }
+}
+
+
+export function awsVerifiedpermissionsPolicyPrincipalPropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicy.PrincipalProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    entity_id: {
+      value: cdktn.stringToHclTerraform(struct!.entityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    entity_type: {
+      value: cdktn.stringToHclTerraform(struct!.entityType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedpermissionsPolicyResourcePropertyToTerraform(struct?: AwsVerifiedpermissionsPolicy.ResourceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    entity_id: cdktn.stringToTerraform(struct!.entityId),
+    entity_type: cdktn.stringToTerraform(struct!.entityType),
+  }
+}
+
+
+export function awsVerifiedpermissionsPolicyResourcePropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicy.ResourceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    entity_id: {
+      value: cdktn.stringToHclTerraform(struct!.entityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    entity_type: {
+      value: cdktn.stringToHclTerraform(struct!.entityType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedpermissionsPolicyTemplateLinkedPropertyToTerraform(struct?: AwsVerifiedpermissionsPolicy.TemplateLinkedProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    policy_template_id: cdktn.stringToTerraform(struct!.policyTemplateId),
+    principal: cdktn.listMapper(awsVerifiedpermissionsPolicyPrincipalPropertyToTerraform, true)(struct!.principal),
+    resource: cdktn.listMapper(awsVerifiedpermissionsPolicyResourcePropertyToTerraform, true)(struct!.resource),
+  }
+}
+
+
+export function awsVerifiedpermissionsPolicyTemplateLinkedPropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicy.TemplateLinkedProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    policy_template_id: {
+      value: cdktn.stringToHclTerraform(struct!.policyTemplateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal: {
+      value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyPrincipalPropertyToHclTerraform, true)(struct!.principal),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PrincipalPropertyList",
+    },
+    resource: {
+      value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyResourcePropertyToHclTerraform, true)(struct!.resource),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ResourcePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedpermissionsPolicyDefinitionPropertyToTerraform(struct?: AwsVerifiedpermissionsPolicy.DefinitionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    static: cdktn.listMapper(awsVerifiedpermissionsPolicyStaticPropertyToTerraform, true)(struct!.static),
+    template_linked: cdktn.listMapper(awsVerifiedpermissionsPolicyTemplateLinkedPropertyToTerraform, true)(struct!.templateLinked),
+  }
+}
+
+
+export function awsVerifiedpermissionsPolicyDefinitionPropertyToHclTerraform(struct?: AwsVerifiedpermissionsPolicy.DefinitionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    static: {
+      value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyStaticPropertyToHclTerraform, true)(struct!.static),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StaticPropertyList",
+    },
+    template_linked: {
+      value: cdktn.listMapperHcl(awsVerifiedpermissionsPolicyTemplateLinkedPropertyToHclTerraform, true)(struct!.templateLinked),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TemplateLinkedPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsVerifiedpermissionsPolicy {
+export interface StaticProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#description AwsVerifiedpermissionsPolicy#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#statement AwsVerifiedpermissionsPolicy#statement}
+  */
+  readonly statement: string;
+}
+export class StaticPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StaticProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._statement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statement = this._statement;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StaticProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._statement = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._statement = value.statement;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // statement - computed: false, optional: false, required: true
+  private _statement?: string; 
+  public get statement() {
+    return this.getStringAttribute('statement');
+  }
+  public set statement(value: string) {
+    this._statement = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statementInput() {
+    return this._statement;
+  }
+}
+
+export class StaticPropertyList extends cdktn.ComplexList {
+  public internalValue? : StaticProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StaticPropertyOutputReference {
+    return new StaticPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PrincipalProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#entity_id AwsVerifiedpermissionsPolicy#entity_id}
+  */
+  readonly entityId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#entity_type AwsVerifiedpermissionsPolicy#entity_type}
+  */
+  readonly entityType: string;
+}
+export class PrincipalPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrincipalProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._entityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityId = this._entityId;
+    }
+    if (this._entityType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityType = this._entityType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrincipalProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._entityId = undefined;
+      this._entityType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._entityId = value.entityId;
+      this._entityType = value.entityType;
+    }
+  }
+
+  // entity_id - computed: false, optional: false, required: true
+  private _entityId?: string; 
+  public get entityId() {
+    return this.getStringAttribute('entity_id');
+  }
+  public set entityId(value: string) {
+    this._entityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityIdInput() {
+    return this._entityId;
+  }
+
+  // entity_type - computed: false, optional: false, required: true
+  private _entityType?: string; 
+  public get entityType() {
+    return this.getStringAttribute('entity_type');
+  }
+  public set entityType(value: string) {
+    this._entityType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityTypeInput() {
+    return this._entityType;
+  }
+}
+
+export class PrincipalPropertyList extends cdktn.ComplexList {
+  public internalValue? : PrincipalProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrincipalPropertyOutputReference {
+    return new PrincipalPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ResourceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#entity_id AwsVerifiedpermissionsPolicy#entity_id}
+  */
+  readonly entityId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#entity_type AwsVerifiedpermissionsPolicy#entity_type}
+  */
+  readonly entityType: string;
+}
+export class ResourcePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourceProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._entityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityId = this._entityId;
+    }
+    if (this._entityType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityType = this._entityType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._entityId = undefined;
+      this._entityType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._entityId = value.entityId;
+      this._entityType = value.entityType;
+    }
+  }
+
+  // entity_id - computed: false, optional: false, required: true
+  private _entityId?: string; 
+  public get entityId() {
+    return this.getStringAttribute('entity_id');
+  }
+  public set entityId(value: string) {
+    this._entityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityIdInput() {
+    return this._entityId;
+  }
+
+  // entity_type - computed: false, optional: false, required: true
+  private _entityType?: string; 
+  public get entityType() {
+    return this.getStringAttribute('entity_type');
+  }
+  public set entityType(value: string) {
+    this._entityType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityTypeInput() {
+    return this._entityType;
+  }
+}
+
+export class ResourcePropertyList extends cdktn.ComplexList {
+  public internalValue? : ResourceProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePropertyOutputReference {
+    return new ResourcePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TemplateLinkedProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#policy_template_id AwsVerifiedpermissionsPolicy#policy_template_id}
+  */
+  readonly policyTemplateId: string;
+  /**
+  * principal block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#principal AwsVerifiedpermissionsPolicy#principal}
+  */
+  readonly principal?: PrincipalProperty[] | cdktn.IResolvable;
+  /**
+  * resource block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#resource AwsVerifiedpermissionsPolicy#resource}
+  */
+  readonly resource?: ResourceProperty[] | cdktn.IResolvable;
+}
+export class TemplateLinkedPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TemplateLinkedProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._policyTemplateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyTemplateId = this._policyTemplateId;
+    }
+    if (this._principal?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principal = this._principal?.internalValue;
+    }
+    if (this._resource?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resource = this._resource?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TemplateLinkedProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._policyTemplateId = undefined;
+      this._principal.internalValue = undefined;
+      this._resource.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._policyTemplateId = value.policyTemplateId;
+      this._principal.internalValue = value.principal;
+      this._resource.internalValue = value.resource;
+    }
+  }
+
+  // policy_template_id - computed: false, optional: false, required: true
+  private _policyTemplateId?: string; 
+  public get policyTemplateId() {
+    return this.getStringAttribute('policy_template_id');
+  }
+  public set policyTemplateId(value: string) {
+    this._policyTemplateId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyTemplateIdInput() {
+    return this._policyTemplateId;
+  }
+
+  // principal - computed: false, optional: true, required: false
+  private _principal = new PrincipalPropertyList(this, "principal", false);
+  public get principal() {
+    return this._principal;
+  }
+  public putPrincipal(value: PrincipalProperty[] | cdktn.IResolvable) {
+    this._principal.internalValue = value;
+  }
+  public resetPrincipal() {
+    this._principal.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalInput() {
+    return this._principal.internalValue;
+  }
+
+  // resource - computed: false, optional: true, required: false
+  private _resource = new ResourcePropertyList(this, "resource", false);
+  public get resource() {
+    return this._resource;
+  }
+  public putResource(value: ResourceProperty[] | cdktn.IResolvable) {
+    this._resource.internalValue = value;
+  }
+  public resetResource() {
+    this._resource.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceInput() {
+    return this._resource.internalValue;
+  }
+}
+
+export class TemplateLinkedPropertyList extends cdktn.ComplexList {
+  public internalValue? : TemplateLinkedProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TemplateLinkedPropertyOutputReference {
+    return new TemplateLinkedPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DefinitionProperty {
+  /**
+  * static block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#static AwsVerifiedpermissionsPolicy#static}
+  */
+  readonly static?: StaticProperty[] | cdktn.IResolvable;
+  /**
+  * template_linked block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedpermissions_policy#template_linked AwsVerifiedpermissionsPolicy#template_linked}
+  */
+  readonly templateLinked?: TemplateLinkedProperty[] | cdktn.IResolvable;
+}
+export class DefinitionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DefinitionProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._static?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.static = this._static?.internalValue;
+    }
+    if (this._templateLinked?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.templateLinked = this._templateLinked?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DefinitionProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._static.internalValue = undefined;
+      this._templateLinked.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._static.internalValue = value.static;
+      this._templateLinked.internalValue = value.templateLinked;
+    }
+  }
+
+  // static - computed: false, optional: true, required: false
+  private _static = new StaticPropertyList(this, "static", false);
+  public get static() {
+    return this._static;
+  }
+  public putStatic(value: StaticProperty[] | cdktn.IResolvable) {
+    this._static.internalValue = value;
+  }
+  public resetStatic() {
+    this._static.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get staticInput() {
+    return this._static.internalValue;
+  }
+
+  // template_linked - computed: false, optional: true, required: false
+  private _templateLinked = new TemplateLinkedPropertyList(this, "template_linked", false);
+  public get templateLinked() {
+    return this._templateLinked;
+  }
+  public putTemplateLinked(value: TemplateLinkedProperty[] | cdktn.IResolvable) {
+    this._templateLinked.internalValue = value;
+  }
+  public resetTemplateLinked() {
+    this._templateLinked.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateLinkedInput() {
+    return this._templateLinked.internalValue;
+  }
+}
+
+export class DefinitionPropertyList extends cdktn.ComplexList {
+  public internalValue? : DefinitionProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DefinitionPropertyOutputReference {
+    return new DefinitionPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

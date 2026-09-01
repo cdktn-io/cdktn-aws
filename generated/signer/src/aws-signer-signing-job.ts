@@ -1,0 +1,989 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSignerSigningJobConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#id AwsSignerSigningJob#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#ignore_signing_job_failure AwsSignerSigningJob#ignore_signing_job_failure}
+  */
+  readonly ignoreSigningJobFailure?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#profile_name AwsSignerSigningJob#profile_name}
+  */
+  readonly profileName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#region AwsSignerSigningJob#region}
+  */
+  readonly region?: string;
+  /**
+  * destination block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#destination AwsSignerSigningJob#destination}
+  */
+  readonly destination: AwsSignerSigningJob.DestinationProperty;
+  /**
+  * source block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#source AwsSignerSigningJob#source}
+  */
+  readonly source: AwsSignerSigningJob.SourceProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job aws_signer_signing_job}
+*/
+export class AwsSignerSigningJob extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_signer_signing_job";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSignerSigningJob resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSignerSigningJob to import
+  * @param importFromId The id of the existing AwsSignerSigningJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSignerSigningJob to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_signer_signing_job", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job aws_signer_signing_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSignerSigningJobConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSignerSigningJobConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_signer_signing_job',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._ignoreSigningJobFailure = config.ignoreSigningJobFailure;
+    this._profileName = config.profileName;
+    this._region = config.region;
+    this._destination.internalValue = config.destination;
+    this._source.internalValue = config.source;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // completed_at - computed: true, optional: false, required: false
+  public get completedAt() {
+    return this.getStringAttribute('completed_at');
+  }
+
+  // created_at - computed: true, optional: false, required: false
+  public get createdAt() {
+    return this.getStringAttribute('created_at');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ignore_signing_job_failure - computed: false, optional: true, required: false
+  private _ignoreSigningJobFailure?: boolean | cdktn.IResolvable; 
+  public get ignoreSigningJobFailure() {
+    return this.getBooleanAttribute('ignore_signing_job_failure');
+  }
+  public set ignoreSigningJobFailure(value: boolean | cdktn.IResolvable) {
+    this._ignoreSigningJobFailure = value;
+  }
+  public resetIgnoreSigningJobFailure() {
+    this._ignoreSigningJobFailure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreSigningJobFailureInput() {
+    return this._ignoreSigningJobFailure;
+  }
+
+  // job_id - computed: true, optional: false, required: false
+  public get jobId() {
+    return this.getStringAttribute('job_id');
+  }
+
+  // job_invoker - computed: true, optional: false, required: false
+  public get jobInvoker() {
+    return this.getStringAttribute('job_invoker');
+  }
+
+  // job_owner - computed: true, optional: false, required: false
+  public get jobOwner() {
+    return this.getStringAttribute('job_owner');
+  }
+
+  // platform_display_name - computed: true, optional: false, required: false
+  public get platformDisplayName() {
+    return this.getStringAttribute('platform_display_name');
+  }
+
+  // platform_id - computed: true, optional: false, required: false
+  public get platformId() {
+    return this.getStringAttribute('platform_id');
+  }
+
+  // profile_name - computed: false, optional: false, required: true
+  private _profileName?: string; 
+  public get profileName() {
+    return this.getStringAttribute('profile_name');
+  }
+  public set profileName(value: string) {
+    this._profileName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileNameInput() {
+    return this._profileName;
+  }
+
+  // profile_version - computed: true, optional: false, required: false
+  public get profileVersion() {
+    return this.getStringAttribute('profile_version');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // requested_by - computed: true, optional: false, required: false
+  public get requestedBy() {
+    return this.getStringAttribute('requested_by');
+  }
+
+  // revocation_record - computed: true, optional: false, required: false
+  private _revocationRecord = new AwsSignerSigningJob.RevocationRecordPropertyList(this, "revocation_record", false);
+  public get revocationRecord() {
+    return this._revocationRecord;
+  }
+
+  // signature_expires_at - computed: true, optional: false, required: false
+  public get signatureExpiresAt() {
+    return this.getStringAttribute('signature_expires_at');
+  }
+
+  // signed_object - computed: true, optional: false, required: false
+  private _signedObject = new AwsSignerSigningJob.SignedObjectPropertyList(this, "signed_object", false);
+  public get signedObject() {
+    return this._signedObject;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // status_reason - computed: true, optional: false, required: false
+  public get statusReason() {
+    return this.getStringAttribute('status_reason');
+  }
+
+  // destination - computed: false, optional: false, required: true
+  private _destination = new AwsSignerSigningJob.DestinationPropertyOutputReference(this, "destination");
+  public get destination() {
+    return this._destination;
+  }
+  public putDestination(value: AwsSignerSigningJob.DestinationProperty) {
+    this._destination.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination.internalValue;
+  }
+
+  // source - computed: false, optional: false, required: true
+  private _source = new AwsSignerSigningJob.SourcePropertyOutputReference(this, "source");
+  public get source() {
+    return this._source;
+  }
+  public putSource(value: AwsSignerSigningJob.SourceProperty) {
+    this._source.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      ignore_signing_job_failure: cdktn.booleanToTerraform(this._ignoreSigningJobFailure),
+      profile_name: cdktn.stringToTerraform(this._profileName),
+      region: cdktn.stringToTerraform(this._region),
+      destination: awsSignerSigningJobDestinationPropertyToTerraform(this._destination.internalValue),
+      source: awsSignerSigningJobSourcePropertyToTerraform(this._source.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ignore_signing_job_failure: {
+        value: cdktn.booleanToHclTerraform(this._ignoreSigningJobFailure),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      profile_name: {
+        value: cdktn.stringToHclTerraform(this._profileName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination: {
+        value: awsSignerSigningJobDestinationPropertyToHclTerraform(this._destination.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSignerSigningJob.DestinationPropertyList",
+      },
+      source: {
+        value: awsSignerSigningJobSourcePropertyToHclTerraform(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSignerSigningJob.SourcePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSignerSigningJobRevocationRecordPropertyToTerraform(struct?: AwsSignerSigningJob.RevocationRecordProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsSignerSigningJobRevocationRecordPropertyToHclTerraform(struct?: AwsSignerSigningJob.RevocationRecordProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsSignerSigningJobSignedObjectS3PropertyToTerraform(struct?: AwsSignerSigningJob.SignedObjectS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsSignerSigningJobSignedObjectS3PropertyToHclTerraform(struct?: AwsSignerSigningJob.SignedObjectS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsSignerSigningJobSignedObjectPropertyToTerraform(struct?: AwsSignerSigningJob.SignedObjectProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsSignerSigningJobSignedObjectPropertyToHclTerraform(struct?: AwsSignerSigningJob.SignedObjectProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsSignerSigningJobDestinationS3PropertyToTerraform(struct?: AwsSignerSigningJob.DestinationS3PropertyOutputReference | AwsSignerSigningJob.DestinationS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+  }
+}
+
+
+export function awsSignerSigningJobDestinationS3PropertyToHclTerraform(struct?: AwsSignerSigningJob.DestinationS3PropertyOutputReference | AwsSignerSigningJob.DestinationS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSignerSigningJobDestinationPropertyToTerraform(struct?: AwsSignerSigningJob.DestinationPropertyOutputReference | AwsSignerSigningJob.DestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3: awsSignerSigningJobDestinationS3PropertyToTerraform(struct!.s3),
+  }
+}
+
+
+export function awsSignerSigningJobDestinationPropertyToHclTerraform(struct?: AwsSignerSigningJob.DestinationPropertyOutputReference | AwsSignerSigningJob.DestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3: {
+      value: awsSignerSigningJobDestinationS3PropertyToHclTerraform(struct!.s3),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DestinationS3PropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSignerSigningJobSourceS3PropertyToTerraform(struct?: AwsSignerSigningJob.SourceS3PropertyOutputReference | AwsSignerSigningJob.SourceS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    key: cdktn.stringToTerraform(struct!.key),
+    version: cdktn.stringToTerraform(struct!.version),
+  }
+}
+
+
+export function awsSignerSigningJobSourceS3PropertyToHclTerraform(struct?: AwsSignerSigningJob.SourceS3PropertyOutputReference | AwsSignerSigningJob.SourceS3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktn.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktn.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSignerSigningJobSourcePropertyToTerraform(struct?: AwsSignerSigningJob.SourcePropertyOutputReference | AwsSignerSigningJob.SourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3: awsSignerSigningJobSourceS3PropertyToTerraform(struct!.s3),
+  }
+}
+
+
+export function awsSignerSigningJobSourcePropertyToHclTerraform(struct?: AwsSignerSigningJob.SourcePropertyOutputReference | AwsSignerSigningJob.SourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3: {
+      value: awsSignerSigningJobSourceS3PropertyToHclTerraform(struct!.s3),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SourceS3PropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSignerSigningJob {
+export interface RevocationRecordProperty {
+}
+export class RevocationRecordPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RevocationRecordProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RevocationRecordProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // reason - computed: true, optional: false, required: false
+  public get reason() {
+    return this.getStringAttribute('reason');
+  }
+
+  // revoked_at - computed: true, optional: false, required: false
+  public get revokedAt() {
+    return this.getStringAttribute('revoked_at');
+  }
+
+  // revoked_by - computed: true, optional: false, required: false
+  public get revokedBy() {
+    return this.getStringAttribute('revoked_by');
+  }
+}
+
+export class RevocationRecordPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RevocationRecordPropertyOutputReference {
+    return new RevocationRecordPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SignedObjectS3Property {
+}
+export class SignedObjectS3PropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SignedObjectS3Property | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignedObjectS3Property | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+}
+
+export class SignedObjectS3PropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SignedObjectS3PropertyOutputReference {
+    return new SignedObjectS3PropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SignedObjectProperty {
+}
+export class SignedObjectPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SignedObjectProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignedObjectProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // s3 - computed: true, optional: false, required: false
+  private _s3 = new SignedObjectS3PropertyList(this, "s3", false);
+  public get s3() {
+    return this._s3;
+  }
+}
+
+export class SignedObjectPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SignedObjectPropertyOutputReference {
+    return new SignedObjectPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DestinationS3Property {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket AwsSignerSigningJob#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#prefix AwsSignerSigningJob#prefix}
+  */
+  readonly prefix?: string;
+}
+export class DestinationS3PropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DestinationS3Property | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DestinationS3Property | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._prefix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._prefix = value.prefix;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+}
+export interface DestinationProperty {
+  /**
+  * s3 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 AwsSignerSigningJob#s3}
+  */
+  readonly s3: DestinationS3Property;
+}
+export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DestinationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3 = this._s3?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DestinationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._s3.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._s3.internalValue = value.s3;
+    }
+  }
+
+  // s3 - computed: false, optional: false, required: true
+  private _s3 = new DestinationS3PropertyOutputReference(this, "s3");
+  public get s3() {
+    return this._s3;
+  }
+  public putS3(value: DestinationS3Property) {
+    this._s3.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3Input() {
+    return this._s3.internalValue;
+  }
+}
+export interface SourceS3Property {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#bucket AwsSignerSigningJob#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#key AwsSignerSigningJob#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#version AwsSignerSigningJob#version}
+  */
+  readonly version: string;
+}
+export class SourceS3PropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceS3Property | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceS3Property | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._key = undefined;
+      this._version = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._key = value.key;
+      this._version = value.version;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+export interface SourceProperty {
+  /**
+  * s3 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/signer_signing_job#s3 AwsSignerSigningJob#s3}
+  */
+  readonly s3: SourceS3Property;
+}
+export class SourcePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3 = this._s3?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._s3.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._s3.internalValue = value.s3;
+    }
+  }
+
+  // s3 - computed: false, optional: false, required: true
+  private _s3 = new SourceS3PropertyOutputReference(this, "s3");
+  public get s3() {
+    return this._s3;
+  }
+  public putS3(value: SourceS3Property) {
+    this._s3.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3Input() {
+    return this._s3.internalValue;
+  }
+}
+}

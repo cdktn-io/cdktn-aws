@@ -1,0 +1,460 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsNetworkmanagerDxGatewayAttachmentConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#core_network_id AwsNetworkmanagerDxGatewayAttachment#core_network_id}
+  */
+  readonly coreNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#direct_connect_gateway_arn AwsNetworkmanagerDxGatewayAttachment#direct_connect_gateway_arn}
+  */
+  readonly directConnectGatewayArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#edge_locations AwsNetworkmanagerDxGatewayAttachment#edge_locations}
+  */
+  readonly edgeLocations: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#routing_policy_label AwsNetworkmanagerDxGatewayAttachment#routing_policy_label}
+  */
+  readonly routingPolicyLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#tags AwsNetworkmanagerDxGatewayAttachment#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#timeouts AwsNetworkmanagerDxGatewayAttachment#timeouts}
+  */
+  readonly timeouts?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment aws_networkmanager_dx_gateway_attachment}
+*/
+export class AwsNetworkmanagerDxGatewayAttachment extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_networkmanager_dx_gateway_attachment";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsNetworkmanagerDxGatewayAttachment resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsNetworkmanagerDxGatewayAttachment to import
+  * @param importFromId The id of the existing AwsNetworkmanagerDxGatewayAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkmanagerDxGatewayAttachment to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_dx_gateway_attachment", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment aws_networkmanager_dx_gateway_attachment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsNetworkmanagerDxGatewayAttachmentConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsNetworkmanagerDxGatewayAttachmentConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_networkmanager_dx_gateway_attachment',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._coreNetworkId = config.coreNetworkId;
+    this._directConnectGatewayArn = config.directConnectGatewayArn;
+    this._edgeLocations = config.edgeLocations;
+    this._routingPolicyLabel = config.routingPolicyLabel;
+    this._tags = config.tags;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // attachment_policy_rule_number - computed: true, optional: false, required: false
+  public get attachmentPolicyRuleNumber() {
+    return this.getNumberAttribute('attachment_policy_rule_number');
+  }
+
+  // attachment_type - computed: true, optional: false, required: false
+  public get attachmentType() {
+    return this.getStringAttribute('attachment_type');
+  }
+
+  // core_network_arn - computed: true, optional: false, required: false
+  public get coreNetworkArn() {
+    return this.getStringAttribute('core_network_arn');
+  }
+
+  // core_network_id - computed: false, optional: false, required: true
+  private _coreNetworkId?: string; 
+  public get coreNetworkId() {
+    return this.getStringAttribute('core_network_id');
+  }
+  public set coreNetworkId(value: string) {
+    this._coreNetworkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coreNetworkIdInput() {
+    return this._coreNetworkId;
+  }
+
+  // direct_connect_gateway_arn - computed: false, optional: false, required: true
+  private _directConnectGatewayArn?: string; 
+  public get directConnectGatewayArn() {
+    return this.getStringAttribute('direct_connect_gateway_arn');
+  }
+  public set directConnectGatewayArn(value: string) {
+    this._directConnectGatewayArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directConnectGatewayArnInput() {
+    return this._directConnectGatewayArn;
+  }
+
+  // edge_locations - computed: false, optional: false, required: true
+  private _edgeLocations?: string[]; 
+  public get edgeLocations() {
+    return this.getListAttribute('edge_locations');
+  }
+  public set edgeLocations(value: string[]) {
+    this._edgeLocations = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeLocationsInput() {
+    return this._edgeLocations;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // owner_account_id - computed: true, optional: false, required: false
+  public get ownerAccountId() {
+    return this.getStringAttribute('owner_account_id');
+  }
+
+  // routing_policy_label - computed: false, optional: true, required: false
+  private _routingPolicyLabel?: string; 
+  public get routingPolicyLabel() {
+    return this.getStringAttribute('routing_policy_label');
+  }
+  public set routingPolicyLabel(value: string) {
+    this._routingPolicyLabel = value;
+  }
+  public resetRoutingPolicyLabel() {
+    this._routingPolicyLabel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingPolicyLabelInput() {
+    return this._routingPolicyLabel;
+  }
+
+  // segment_name - computed: true, optional: false, required: false
+  public get segmentName() {
+    return this.getStringAttribute('segment_name');
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsNetworkmanagerDxGatewayAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      core_network_id: cdktn.stringToTerraform(this._coreNetworkId),
+      direct_connect_gateway_arn: cdktn.stringToTerraform(this._directConnectGatewayArn),
+      edge_locations: cdktn.listMapper(cdktn.stringToTerraform, false)(this._edgeLocations),
+      routing_policy_label: cdktn.stringToTerraform(this._routingPolicyLabel),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      timeouts: awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      core_network_id: {
+        value: cdktn.stringToHclTerraform(this._coreNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      direct_connect_gateway_arn: {
+        value: cdktn.stringToHclTerraform(this._directConnectGatewayArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      edge_locations: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._edgeLocations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      routing_policy_label: {
+        value: cdktn.stringToHclTerraform(this._routingPolicyLabel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToTerraform(struct?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsNetworkmanagerDxGatewayAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsNetworkmanagerDxGatewayAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsNetworkmanagerDxGatewayAttachment {
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#create AwsNetworkmanagerDxGatewayAttachment#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#delete AwsNetworkmanagerDxGatewayAttachment#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_dx_gateway_attachment#update AwsNetworkmanagerDxGatewayAttachment#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

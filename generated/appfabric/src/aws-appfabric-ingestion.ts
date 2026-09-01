@@ -1,0 +1,258 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAppfabricIngestionConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app AwsAppfabricIngestion#app}
+  */
+  readonly app: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app_bundle_arn AwsAppfabricIngestion#app_bundle_arn}
+  */
+  readonly appBundleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#ingestion_type AwsAppfabricIngestion#ingestion_type}
+  */
+  readonly ingestionType: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#region AwsAppfabricIngestion#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tags AwsAppfabricIngestion#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tenant_id AwsAppfabricIngestion#tenant_id}
+  */
+  readonly tenantId: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion aws_appfabric_ingestion}
+*/
+export class AwsAppfabricIngestion extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_appfabric_ingestion";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAppfabricIngestion resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAppfabricIngestion to import
+  * @param importFromId The id of the existing AwsAppfabricIngestion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppfabricIngestion to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appfabric_ingestion", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion aws_appfabric_ingestion} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAppfabricIngestionConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAppfabricIngestionConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_appfabric_ingestion',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._app = config.app;
+    this._appBundleArn = config.appBundleArn;
+    this._ingestionType = config.ingestionType;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tenantId = config.tenantId;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // app - computed: false, optional: false, required: true
+  private _app?: string; 
+  public get app() {
+    return this.getStringAttribute('app');
+  }
+  public set app(value: string) {
+    this._app = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appInput() {
+    return this._app;
+  }
+
+  // app_bundle_arn - computed: false, optional: false, required: true
+  private _appBundleArn?: string; 
+  public get appBundleArn() {
+    return this.getStringAttribute('app_bundle_arn');
+  }
+  public set appBundleArn(value: string) {
+    this._appBundleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appBundleArnInput() {
+    return this._appBundleArn;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // ingestion_type - computed: false, optional: false, required: true
+  private _ingestionType?: string; 
+  public get ingestionType() {
+    return this.getStringAttribute('ingestion_type');
+  }
+  public set ingestionType(value: string) {
+    this._ingestionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingestionTypeInput() {
+    return this._ingestionType;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // tenant_id - computed: false, optional: false, required: true
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      app: cdktn.stringToTerraform(this._app),
+      app_bundle_arn: cdktn.stringToTerraform(this._appBundleArn),
+      ingestion_type: cdktn.stringToTerraform(this._ingestionType),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tenant_id: cdktn.stringToTerraform(this._tenantId),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app: {
+        value: cdktn.stringToHclTerraform(this._app),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      app_bundle_arn: {
+        value: cdktn.stringToHclTerraform(this._appBundleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ingestion_type: {
+        value: cdktn.stringToHclTerraform(this._ingestionType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tenant_id: {
+        value: cdktn.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

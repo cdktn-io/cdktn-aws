@@ -1,0 +1,425 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAppconfigEnvironmentConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#application_id AwsAppconfigEnvironment#application_id}
+  */
+  readonly applicationId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#description AwsAppconfigEnvironment#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#name AwsAppconfigEnvironment#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#region AwsAppconfigEnvironment#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#tags AwsAppconfigEnvironment#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * monitor block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#monitor AwsAppconfigEnvironment#monitor}
+  */
+  readonly monitor?: AwsAppconfigEnvironment.MonitorProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment aws_appconfig_environment}
+*/
+export class AwsAppconfigEnvironment extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_appconfig_environment";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAppconfigEnvironment resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAppconfigEnvironment to import
+  * @param importFromId The id of the existing AwsAppconfigEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppconfigEnvironment to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_environment", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment aws_appconfig_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAppconfigEnvironmentConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAppconfigEnvironmentConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_appconfig_environment',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._applicationId = config.applicationId;
+    this._description = config.description;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._monitor.internalValue = config.monitor;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // application_id - computed: false, optional: false, required: true
+  private _applicationId?: string; 
+  public get applicationId() {
+    return this.getStringAttribute('application_id');
+  }
+  public set applicationId(value: string) {
+    this._applicationId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationIdInput() {
+    return this._applicationId;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: true, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // environment_id - computed: true, optional: false, required: false
+  public get environmentId() {
+    return this.getStringAttribute('environment_id');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // monitor - computed: false, optional: true, required: false
+  private _monitor = new AwsAppconfigEnvironment.MonitorPropertyList(this, "monitor", true);
+  public get monitor() {
+    return this._monitor;
+  }
+  public putMonitor(value: AwsAppconfigEnvironment.MonitorProperty[] | cdktn.IResolvable) {
+    this._monitor.internalValue = value;
+  }
+  public resetMonitor() {
+    this._monitor.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitorInput() {
+    return this._monitor.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      application_id: cdktn.stringToTerraform(this._applicationId),
+      description: cdktn.stringToTerraform(this._description),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      monitor: cdktn.listMapper(awsAppconfigEnvironmentMonitorPropertyToTerraform, true)(this._monitor.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      application_id: {
+        value: cdktn.stringToHclTerraform(this._applicationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      monitor: {
+        value: cdktn.listMapperHcl(awsAppconfigEnvironmentMonitorPropertyToHclTerraform, true)(this._monitor.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsAppconfigEnvironment.MonitorPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAppconfigEnvironmentMonitorPropertyToTerraform(struct?: AwsAppconfigEnvironment.MonitorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    alarm_arn: cdktn.stringToTerraform(struct!.alarmArn),
+    alarm_role_arn: cdktn.stringToTerraform(struct!.alarmRoleArn),
+  }
+}
+
+
+export function awsAppconfigEnvironmentMonitorPropertyToHclTerraform(struct?: AwsAppconfigEnvironment.MonitorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    alarm_arn: {
+      value: cdktn.stringToHclTerraform(struct!.alarmArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    alarm_role_arn: {
+      value: cdktn.stringToHclTerraform(struct!.alarmRoleArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAppconfigEnvironment {
+export interface MonitorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_arn AwsAppconfigEnvironment#alarm_arn}
+  */
+  readonly alarmArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_role_arn AwsAppconfigEnvironment#alarm_role_arn}
+  */
+  readonly alarmRoleArn?: string;
+}
+export class MonitorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._alarmArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alarmArn = this._alarmArn;
+    }
+    if (this._alarmRoleArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alarmRoleArn = this._alarmRoleArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._alarmArn = undefined;
+      this._alarmRoleArn = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._alarmArn = value.alarmArn;
+      this._alarmRoleArn = value.alarmRoleArn;
+    }
+  }
+
+  // alarm_arn - computed: false, optional: false, required: true
+  private _alarmArn?: string; 
+  public get alarmArn() {
+    return this.getStringAttribute('alarm_arn');
+  }
+  public set alarmArn(value: string) {
+    this._alarmArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmArnInput() {
+    return this._alarmArn;
+  }
+
+  // alarm_role_arn - computed: false, optional: true, required: false
+  private _alarmRoleArn?: string; 
+  public get alarmRoleArn() {
+    return this.getStringAttribute('alarm_role_arn');
+  }
+  public set alarmRoleArn(value: string) {
+    this._alarmRoleArn = value;
+  }
+  public resetAlarmRoleArn() {
+    this._alarmRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmRoleArnInput() {
+    return this._alarmRoleArn;
+  }
+}
+
+export class MonitorPropertyList extends cdktn.ComplexList {
+  public internalValue? : MonitorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorPropertyOutputReference {
+    return new MonitorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

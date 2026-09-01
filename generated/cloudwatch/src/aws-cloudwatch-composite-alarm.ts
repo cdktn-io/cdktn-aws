@@ -1,0 +1,570 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCloudwatchCompositeAlarmConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_enabled AwsCloudwatchCompositeAlarm#actions_enabled}
+  */
+  readonly actionsEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_actions AwsCloudwatchCompositeAlarm#alarm_actions}
+  */
+  readonly alarmActions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_description AwsCloudwatchCompositeAlarm#alarm_description}
+  */
+  readonly alarmDescription?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_name AwsCloudwatchCompositeAlarm#alarm_name}
+  */
+  readonly alarmName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm_rule AwsCloudwatchCompositeAlarm#alarm_rule}
+  */
+  readonly alarmRule: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#id AwsCloudwatchCompositeAlarm#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#insufficient_data_actions AwsCloudwatchCompositeAlarm#insufficient_data_actions}
+  */
+  readonly insufficientDataActions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#ok_actions AwsCloudwatchCompositeAlarm#ok_actions}
+  */
+  readonly okActions?: string[];
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#region AwsCloudwatchCompositeAlarm#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags AwsCloudwatchCompositeAlarm#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#tags_all AwsCloudwatchCompositeAlarm#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * actions_suppressor block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#actions_suppressor AwsCloudwatchCompositeAlarm#actions_suppressor}
+  */
+  readonly actionsSuppressor?: AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm aws_cloudwatch_composite_alarm}
+*/
+export class AwsCloudwatchCompositeAlarm extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_cloudwatch_composite_alarm";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCloudwatchCompositeAlarm resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCloudwatchCompositeAlarm to import
+  * @param importFromId The id of the existing AwsCloudwatchCompositeAlarm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCloudwatchCompositeAlarm to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_composite_alarm", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm aws_cloudwatch_composite_alarm} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCloudwatchCompositeAlarmConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCloudwatchCompositeAlarmConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_cloudwatch_composite_alarm',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._actionsEnabled = config.actionsEnabled;
+    this._alarmActions = config.alarmActions;
+    this._alarmDescription = config.alarmDescription;
+    this._alarmName = config.alarmName;
+    this._alarmRule = config.alarmRule;
+    this._id = config.id;
+    this._insufficientDataActions = config.insufficientDataActions;
+    this._okActions = config.okActions;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._actionsSuppressor.internalValue = config.actionsSuppressor;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // actions_enabled - computed: false, optional: true, required: false
+  private _actionsEnabled?: boolean | cdktn.IResolvable; 
+  public get actionsEnabled() {
+    return this.getBooleanAttribute('actions_enabled');
+  }
+  public set actionsEnabled(value: boolean | cdktn.IResolvable) {
+    this._actionsEnabled = value;
+  }
+  public resetActionsEnabled() {
+    this._actionsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsEnabledInput() {
+    return this._actionsEnabled;
+  }
+
+  // alarm_actions - computed: false, optional: true, required: false
+  private _alarmActions?: string[]; 
+  public get alarmActions() {
+    return cdktn.Fn.tolist(this.getListAttribute('alarm_actions'));
+  }
+  public set alarmActions(value: string[]) {
+    this._alarmActions = value;
+  }
+  public resetAlarmActions() {
+    this._alarmActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmActionsInput() {
+    return this._alarmActions;
+  }
+
+  // alarm_description - computed: false, optional: true, required: false
+  private _alarmDescription?: string; 
+  public get alarmDescription() {
+    return this.getStringAttribute('alarm_description');
+  }
+  public set alarmDescription(value: string) {
+    this._alarmDescription = value;
+  }
+  public resetAlarmDescription() {
+    this._alarmDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmDescriptionInput() {
+    return this._alarmDescription;
+  }
+
+  // alarm_name - computed: false, optional: false, required: true
+  private _alarmName?: string; 
+  public get alarmName() {
+    return this.getStringAttribute('alarm_name');
+  }
+  public set alarmName(value: string) {
+    this._alarmName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmNameInput() {
+    return this._alarmName;
+  }
+
+  // alarm_rule - computed: false, optional: false, required: true
+  private _alarmRule?: string; 
+  public get alarmRule() {
+    return this.getStringAttribute('alarm_rule');
+  }
+  public set alarmRule(value: string) {
+    this._alarmRule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmRuleInput() {
+    return this._alarmRule;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // insufficient_data_actions - computed: false, optional: true, required: false
+  private _insufficientDataActions?: string[]; 
+  public get insufficientDataActions() {
+    return cdktn.Fn.tolist(this.getListAttribute('insufficient_data_actions'));
+  }
+  public set insufficientDataActions(value: string[]) {
+    this._insufficientDataActions = value;
+  }
+  public resetInsufficientDataActions() {
+    this._insufficientDataActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get insufficientDataActionsInput() {
+    return this._insufficientDataActions;
+  }
+
+  // ok_actions - computed: false, optional: true, required: false
+  private _okActions?: string[]; 
+  public get okActions() {
+    return cdktn.Fn.tolist(this.getListAttribute('ok_actions'));
+  }
+  public set okActions(value: string[]) {
+    this._okActions = value;
+  }
+  public resetOkActions() {
+    this._okActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get okActionsInput() {
+    return this._okActions;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // actions_suppressor - computed: false, optional: true, required: false
+  private _actionsSuppressor = new AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference(this, "actions_suppressor");
+  public get actionsSuppressor() {
+    return this._actionsSuppressor;
+  }
+  public putActionsSuppressor(value: AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty) {
+    this._actionsSuppressor.internalValue = value;
+  }
+  public resetActionsSuppressor() {
+    this._actionsSuppressor.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsSuppressorInput() {
+    return this._actionsSuppressor.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      actions_enabled: cdktn.booleanToTerraform(this._actionsEnabled),
+      alarm_actions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._alarmActions),
+      alarm_description: cdktn.stringToTerraform(this._alarmDescription),
+      alarm_name: cdktn.stringToTerraform(this._alarmName),
+      alarm_rule: cdktn.stringToTerraform(this._alarmRule),
+      id: cdktn.stringToTerraform(this._id),
+      insufficient_data_actions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._insufficientDataActions),
+      ok_actions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._okActions),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      actions_suppressor: awsCloudwatchCompositeAlarmActionsSuppressorPropertyToTerraform(this._actionsSuppressor.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      actions_enabled: {
+        value: cdktn.booleanToHclTerraform(this._actionsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      alarm_actions: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._alarmActions),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      alarm_description: {
+        value: cdktn.stringToHclTerraform(this._alarmDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alarm_name: {
+        value: cdktn.stringToHclTerraform(this._alarmName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alarm_rule: {
+        value: cdktn.stringToHclTerraform(this._alarmRule),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      insufficient_data_actions: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._insufficientDataActions),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      ok_actions: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._okActions),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      actions_suppressor: {
+        value: awsCloudwatchCompositeAlarmActionsSuppressorPropertyToHclTerraform(this._actionsSuppressor.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToTerraform(struct?: AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference | AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    alarm: cdktn.stringToTerraform(struct!.alarm),
+    extension_period: cdktn.numberToTerraform(struct!.extensionPeriod),
+    wait_period: cdktn.numberToTerraform(struct!.waitPeriod),
+  }
+}
+
+
+export function awsCloudwatchCompositeAlarmActionsSuppressorPropertyToHclTerraform(struct?: AwsCloudwatchCompositeAlarm.ActionsSuppressorPropertyOutputReference | AwsCloudwatchCompositeAlarm.ActionsSuppressorProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    alarm: {
+      value: cdktn.stringToHclTerraform(struct!.alarm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    extension_period: {
+      value: cdktn.numberToHclTerraform(struct!.extensionPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    wait_period: {
+      value: cdktn.numberToHclTerraform(struct!.waitPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCloudwatchCompositeAlarm {
+export interface ActionsSuppressorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#alarm AwsCloudwatchCompositeAlarm#alarm}
+  */
+  readonly alarm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#extension_period AwsCloudwatchCompositeAlarm#extension_period}
+  */
+  readonly extensionPeriod: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_composite_alarm#wait_period AwsCloudwatchCompositeAlarm#wait_period}
+  */
+  readonly waitPeriod: number;
+}
+export class ActionsSuppressorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ActionsSuppressorProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._alarm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alarm = this._alarm;
+    }
+    if (this._extensionPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.extensionPeriod = this._extensionPeriod;
+    }
+    if (this._waitPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.waitPeriod = this._waitPeriod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ActionsSuppressorProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._alarm = undefined;
+      this._extensionPeriod = undefined;
+      this._waitPeriod = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._alarm = value.alarm;
+      this._extensionPeriod = value.extensionPeriod;
+      this._waitPeriod = value.waitPeriod;
+    }
+  }
+
+  // alarm - computed: false, optional: false, required: true
+  private _alarm?: string; 
+  public get alarm() {
+    return this.getStringAttribute('alarm');
+  }
+  public set alarm(value: string) {
+    this._alarm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alarmInput() {
+    return this._alarm;
+  }
+
+  // extension_period - computed: false, optional: false, required: true
+  private _extensionPeriod?: number; 
+  public get extensionPeriod() {
+    return this.getNumberAttribute('extension_period');
+  }
+  public set extensionPeriod(value: number) {
+    this._extensionPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionPeriodInput() {
+    return this._extensionPeriod;
+  }
+
+  // wait_period - computed: false, optional: false, required: true
+  private _waitPeriod?: number; 
+  public get waitPeriod() {
+    return this.getNumberAttribute('wait_period');
+  }
+  public set waitPeriod(value: number) {
+    this._waitPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitPeriodInput() {
+    return this._waitPeriod;
+  }
+}
+}

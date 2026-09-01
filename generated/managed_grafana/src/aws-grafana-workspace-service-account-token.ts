@@ -1,0 +1,239 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsGrafanaWorkspaceServiceAccountTokenConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#name AwsGrafanaWorkspaceServiceAccountToken#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#region AwsGrafanaWorkspaceServiceAccountToken#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#seconds_to_live AwsGrafanaWorkspaceServiceAccountToken#seconds_to_live}
+  */
+  readonly secondsToLive: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#service_account_id AwsGrafanaWorkspaceServiceAccountToken#service_account_id}
+  */
+  readonly serviceAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#workspace_id AwsGrafanaWorkspaceServiceAccountToken#workspace_id}
+  */
+  readonly workspaceId: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token aws_grafana_workspace_service_account_token}
+*/
+export class AwsGrafanaWorkspaceServiceAccountToken extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_grafana_workspace_service_account_token";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsGrafanaWorkspaceServiceAccountToken resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsGrafanaWorkspaceServiceAccountToken to import
+  * @param importFromId The id of the existing AwsGrafanaWorkspaceServiceAccountToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGrafanaWorkspaceServiceAccountToken to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace_service_account_token", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token aws_grafana_workspace_service_account_token} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsGrafanaWorkspaceServiceAccountTokenConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsGrafanaWorkspaceServiceAccountTokenConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_grafana_workspace_service_account_token',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._name = config.name;
+    this._region = config.region;
+    this._secondsToLive = config.secondsToLive;
+    this._serviceAccountId = config.serviceAccountId;
+    this._workspaceId = config.workspaceId;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // created_at - computed: true, optional: false, required: false
+  public get createdAt() {
+    return this.getStringAttribute('created_at');
+  }
+
+  // expires_at - computed: true, optional: false, required: false
+  public get expiresAt() {
+    return this.getStringAttribute('expires_at');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // seconds_to_live - computed: false, optional: false, required: true
+  private _secondsToLive?: number; 
+  public get secondsToLive() {
+    return this.getNumberAttribute('seconds_to_live');
+  }
+  public set secondsToLive(value: number) {
+    this._secondsToLive = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsToLiveInput() {
+    return this._secondsToLive;
+  }
+
+  // service_account_id - computed: false, optional: false, required: true
+  private _serviceAccountId?: string; 
+  public get serviceAccountId() {
+    return this.getStringAttribute('service_account_id');
+  }
+  public set serviceAccountId(value: string) {
+    this._serviceAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountIdInput() {
+    return this._serviceAccountId;
+  }
+
+  // service_account_token_id - computed: true, optional: false, required: false
+  public get serviceAccountTokenId() {
+    return this.getStringAttribute('service_account_token_id');
+  }
+
+  // workspace_id - computed: false, optional: false, required: true
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      seconds_to_live: cdktn.numberToTerraform(this._secondsToLive),
+      service_account_id: cdktn.stringToTerraform(this._serviceAccountId),
+      workspace_id: cdktn.stringToTerraform(this._workspaceId),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      seconds_to_live: {
+        value: cdktn.numberToHclTerraform(this._secondsToLive),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      service_account_id: {
+        value: cdktn.stringToHclTerraform(this._serviceAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workspace_id: {
+        value: cdktn.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

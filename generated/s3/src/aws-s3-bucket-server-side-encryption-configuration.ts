@@ -1,0 +1,526 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsS3BucketServerSideEncryptionConfigurationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket AwsS3BucketServerSideEncryptionConfiguration#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#expected_bucket_owner AwsS3BucketServerSideEncryptionConfiguration#expected_bucket_owner}
+  */
+  readonly expectedBucketOwner?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#id AwsS3BucketServerSideEncryptionConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#region AwsS3BucketServerSideEncryptionConfiguration#region}
+  */
+  readonly region?: string;
+  /**
+  * rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#rule AwsS3BucketServerSideEncryptionConfiguration#rule}
+  */
+  readonly rule: AwsS3BucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration aws_s3_bucket_server_side_encryption_configuration}
+*/
+export class AwsS3BucketServerSideEncryptionConfiguration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_s3_bucket_server_side_encryption_configuration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsS3BucketServerSideEncryptionConfiguration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsS3BucketServerSideEncryptionConfiguration to import
+  * @param importFromId The id of the existing AwsS3BucketServerSideEncryptionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsS3BucketServerSideEncryptionConfiguration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_server_side_encryption_configuration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration aws_s3_bucket_server_side_encryption_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsS3BucketServerSideEncryptionConfigurationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsS3BucketServerSideEncryptionConfigurationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_s3_bucket_server_side_encryption_configuration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._bucket = config.bucket;
+    this._expectedBucketOwner = config.expectedBucketOwner;
+    this._id = config.id;
+    this._region = config.region;
+    this._rule.internalValue = config.rule;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // expected_bucket_owner - computed: false, optional: true, required: false
+  private _expectedBucketOwner?: string; 
+  public get expectedBucketOwner() {
+    return this.getStringAttribute('expected_bucket_owner');
+  }
+  public set expectedBucketOwner(value: string) {
+    this._expectedBucketOwner = value;
+  }
+  public resetExpectedBucketOwner() {
+    this._expectedBucketOwner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expectedBucketOwnerInput() {
+    return this._expectedBucketOwner;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // rule - computed: false, optional: false, required: true
+  private _rule = new AwsS3BucketServerSideEncryptionConfiguration.RulePropertyList(this, "rule", true);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: AwsS3BucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      bucket: cdktn.stringToTerraform(this._bucket),
+      expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      rule: cdktn.listMapper(awsS3BucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform, true)(this._rule.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktn.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      expected_bucket_owner: {
+        value: cdktn.stringToHclTerraform(this._expectedBucketOwner),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rule: {
+        value: cdktn.listMapperHcl(awsS3BucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsS3BucketServerSideEncryptionConfiguration.RulePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsS3BucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct?: AwsS3BucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | AwsS3BucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    kms_master_key_id: cdktn.stringToTerraform(struct!.kmsMasterKeyId),
+    sse_algorithm: cdktn.stringToTerraform(struct!.sseAlgorithm),
+  }
+}
+
+
+export function awsS3BucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct?: AwsS3BucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | AwsS3BucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    kms_master_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.kmsMasterKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sse_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.sseAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform(struct?: AwsS3BucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    blocked_encryption_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.blockedEncryptionTypes),
+    bucket_key_enabled: cdktn.booleanToTerraform(struct!.bucketKeyEnabled),
+    apply_server_side_encryption_by_default: awsS3BucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct!.applyServerSideEncryptionByDefault),
+  }
+}
+
+
+export function awsS3BucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform(struct?: AwsS3BucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    blocked_encryption_types: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.blockedEncryptionTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    bucket_key_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.bucketKeyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    apply_server_side_encryption_by_default: {
+      value: awsS3BucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct!.applyServerSideEncryptionByDefault),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApplyServerSideEncryptionByDefaultPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsS3BucketServerSideEncryptionConfiguration {
+export interface ApplyServerSideEncryptionByDefaultProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#kms_master_key_id AwsS3BucketServerSideEncryptionConfiguration#kms_master_key_id}
+  */
+  readonly kmsMasterKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#sse_algorithm AwsS3BucketServerSideEncryptionConfiguration#sse_algorithm}
+  */
+  readonly sseAlgorithm: string;
+}
+export class ApplyServerSideEncryptionByDefaultPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApplyServerSideEncryptionByDefaultProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsMasterKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsMasterKeyId = this._kmsMasterKeyId;
+    }
+    if (this._sseAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sseAlgorithm = this._sseAlgorithm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplyServerSideEncryptionByDefaultProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsMasterKeyId = undefined;
+      this._sseAlgorithm = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsMasterKeyId = value.kmsMasterKeyId;
+      this._sseAlgorithm = value.sseAlgorithm;
+    }
+  }
+
+  // kms_master_key_id - computed: true, optional: true, required: false
+  private _kmsMasterKeyId?: string; 
+  public get kmsMasterKeyId() {
+    return this.getStringAttribute('kms_master_key_id');
+  }
+  public set kmsMasterKeyId(value: string) {
+    this._kmsMasterKeyId = value;
+  }
+  public resetKmsMasterKeyId() {
+    this._kmsMasterKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsMasterKeyIdInput() {
+    return this._kmsMasterKeyId;
+  }
+
+  // sse_algorithm - computed: false, optional: false, required: true
+  private _sseAlgorithm?: string; 
+  public get sseAlgorithm() {
+    return this.getStringAttribute('sse_algorithm');
+  }
+  public set sseAlgorithm(value: string) {
+    this._sseAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sseAlgorithmInput() {
+    return this._sseAlgorithm;
+  }
+}
+export interface RuleProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#blocked_encryption_types AwsS3BucketServerSideEncryptionConfiguration#blocked_encryption_types}
+  */
+  readonly blockedEncryptionTypes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket_key_enabled AwsS3BucketServerSideEncryptionConfiguration#bucket_key_enabled}
+  */
+  readonly bucketKeyEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * apply_server_side_encryption_by_default block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#apply_server_side_encryption_by_default AwsS3BucketServerSideEncryptionConfiguration#apply_server_side_encryption_by_default}
+  */
+  readonly applyServerSideEncryptionByDefault?: ApplyServerSideEncryptionByDefaultProperty;
+}
+export class RulePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RuleProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._blockedEncryptionTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blockedEncryptionTypes = this._blockedEncryptionTypes;
+    }
+    if (this._bucketKeyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucketKeyEnabled = this._bucketKeyEnabled;
+    }
+    if (this._applyServerSideEncryptionByDefault?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applyServerSideEncryptionByDefault = this._applyServerSideEncryptionByDefault?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RuleProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._blockedEncryptionTypes = undefined;
+      this._bucketKeyEnabled = undefined;
+      this._applyServerSideEncryptionByDefault.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._blockedEncryptionTypes = value.blockedEncryptionTypes;
+      this._bucketKeyEnabled = value.bucketKeyEnabled;
+      this._applyServerSideEncryptionByDefault.internalValue = value.applyServerSideEncryptionByDefault;
+    }
+  }
+
+  // blocked_encryption_types - computed: true, optional: true, required: false
+  private _blockedEncryptionTypes?: string[]; 
+  public get blockedEncryptionTypes() {
+    return this.getListAttribute('blocked_encryption_types');
+  }
+  public set blockedEncryptionTypes(value: string[]) {
+    this._blockedEncryptionTypes = value;
+  }
+  public resetBlockedEncryptionTypes() {
+    this._blockedEncryptionTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blockedEncryptionTypesInput() {
+    return this._blockedEncryptionTypes;
+  }
+
+  // bucket_key_enabled - computed: true, optional: true, required: false
+  private _bucketKeyEnabled?: boolean | cdktn.IResolvable; 
+  public get bucketKeyEnabled() {
+    return this.getBooleanAttribute('bucket_key_enabled');
+  }
+  public set bucketKeyEnabled(value: boolean | cdktn.IResolvable) {
+    this._bucketKeyEnabled = value;
+  }
+  public resetBucketKeyEnabled() {
+    this._bucketKeyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketKeyEnabledInput() {
+    return this._bucketKeyEnabled;
+  }
+
+  // apply_server_side_encryption_by_default - computed: false, optional: true, required: false
+  private _applyServerSideEncryptionByDefault = new ApplyServerSideEncryptionByDefaultPropertyOutputReference(this, "apply_server_side_encryption_by_default");
+  public get applyServerSideEncryptionByDefault() {
+    return this._applyServerSideEncryptionByDefault;
+  }
+  public putApplyServerSideEncryptionByDefault(value: ApplyServerSideEncryptionByDefaultProperty) {
+    this._applyServerSideEncryptionByDefault.internalValue = value;
+  }
+  public resetApplyServerSideEncryptionByDefault() {
+    this._applyServerSideEncryptionByDefault.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applyServerSideEncryptionByDefaultInput() {
+    return this._applyServerSideEncryptionByDefault.internalValue;
+  }
+}
+
+export class RulePropertyList extends cdktn.ComplexList {
+  public internalValue? : RuleProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RulePropertyOutputReference {
+    return new RulePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

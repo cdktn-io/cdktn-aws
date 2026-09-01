@@ -1,0 +1,172 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsPaymentcryptographyKeyAliasConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#alias_name AwsPaymentcryptographyKeyAlias#alias_name}
+  */
+  readonly aliasName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#key_arn AwsPaymentcryptographyKeyAlias#key_arn}
+  */
+  readonly keyArn?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#region AwsPaymentcryptographyKeyAlias#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias aws_paymentcryptography_key_alias}
+*/
+export class AwsPaymentcryptographyKeyAlias extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_paymentcryptography_key_alias";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsPaymentcryptographyKeyAlias resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsPaymentcryptographyKeyAlias to import
+  * @param importFromId The id of the existing AwsPaymentcryptographyKeyAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPaymentcryptographyKeyAlias to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_paymentcryptography_key_alias", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key_alias aws_paymentcryptography_key_alias} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsPaymentcryptographyKeyAliasConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsPaymentcryptographyKeyAliasConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_paymentcryptography_key_alias',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._aliasName = config.aliasName;
+    this._keyArn = config.keyArn;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // alias_name - computed: false, optional: false, required: true
+  private _aliasName?: string; 
+  public get aliasName() {
+    return this.getStringAttribute('alias_name');
+  }
+  public set aliasName(value: string) {
+    this._aliasName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aliasNameInput() {
+    return this._aliasName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // key_arn - computed: false, optional: true, required: false
+  private _keyArn?: string; 
+  public get keyArn() {
+    return this.getStringAttribute('key_arn');
+  }
+  public set keyArn(value: string) {
+    this._keyArn = value;
+  }
+  public resetKeyArn() {
+    this._keyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyArnInput() {
+    return this._keyArn;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      alias_name: cdktn.stringToTerraform(this._aliasName),
+      key_arn: cdktn.stringToTerraform(this._keyArn),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alias_name: {
+        value: cdktn.stringToHclTerraform(this._aliasName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_arn: {
+        value: cdktn.stringToHclTerraform(this._keyArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

@@ -1,0 +1,251 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsEc2TransitGatewayRouteConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#blackhole AwsEc2TransitGatewayRoute#blackhole}
+  */
+  readonly blackhole?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#destination_cidr_block AwsEc2TransitGatewayRoute#destination_cidr_block}
+  */
+  readonly destinationCidrBlock: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#id AwsEc2TransitGatewayRoute#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#region AwsEc2TransitGatewayRoute#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_attachment_id AwsEc2TransitGatewayRoute#transit_gateway_attachment_id}
+  */
+  readonly transitGatewayAttachmentId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#transit_gateway_route_table_id AwsEc2TransitGatewayRoute#transit_gateway_route_table_id}
+  */
+  readonly transitGatewayRouteTableId: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route aws_ec2_transit_gateway_route}
+*/
+export class AwsEc2TransitGatewayRoute extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ec2_transit_gateway_route";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsEc2TransitGatewayRoute resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayRoute to import
+  * @param importFromId The id of the existing AwsEc2TransitGatewayRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayRoute to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_route", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_route aws_ec2_transit_gateway_route} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsEc2TransitGatewayRouteConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayRouteConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ec2_transit_gateway_route',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._blackhole = config.blackhole;
+    this._destinationCidrBlock = config.destinationCidrBlock;
+    this._id = config.id;
+    this._region = config.region;
+    this._transitGatewayAttachmentId = config.transitGatewayAttachmentId;
+    this._transitGatewayRouteTableId = config.transitGatewayRouteTableId;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // blackhole - computed: false, optional: true, required: false
+  private _blackhole?: boolean | cdktn.IResolvable; 
+  public get blackhole() {
+    return this.getBooleanAttribute('blackhole');
+  }
+  public set blackhole(value: boolean | cdktn.IResolvable) {
+    this._blackhole = value;
+  }
+  public resetBlackhole() {
+    this._blackhole = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blackholeInput() {
+    return this._blackhole;
+  }
+
+  // destination_cidr_block - computed: false, optional: false, required: true
+  private _destinationCidrBlock?: string; 
+  public get destinationCidrBlock() {
+    return this.getStringAttribute('destination_cidr_block');
+  }
+  public set destinationCidrBlock(value: string) {
+    this._destinationCidrBlock = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationCidrBlockInput() {
+    return this._destinationCidrBlock;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // transit_gateway_attachment_id - computed: false, optional: true, required: false
+  private _transitGatewayAttachmentId?: string; 
+  public get transitGatewayAttachmentId() {
+    return this.getStringAttribute('transit_gateway_attachment_id');
+  }
+  public set transitGatewayAttachmentId(value: string) {
+    this._transitGatewayAttachmentId = value;
+  }
+  public resetTransitGatewayAttachmentId() {
+    this._transitGatewayAttachmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitGatewayAttachmentIdInput() {
+    return this._transitGatewayAttachmentId;
+  }
+
+  // transit_gateway_route_table_id - computed: false, optional: false, required: true
+  private _transitGatewayRouteTableId?: string; 
+  public get transitGatewayRouteTableId() {
+    return this.getStringAttribute('transit_gateway_route_table_id');
+  }
+  public set transitGatewayRouteTableId(value: string) {
+    this._transitGatewayRouteTableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitGatewayRouteTableIdInput() {
+    return this._transitGatewayRouteTableId;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      blackhole: cdktn.booleanToTerraform(this._blackhole),
+      destination_cidr_block: cdktn.stringToTerraform(this._destinationCidrBlock),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      transit_gateway_attachment_id: cdktn.stringToTerraform(this._transitGatewayAttachmentId),
+      transit_gateway_route_table_id: cdktn.stringToTerraform(this._transitGatewayRouteTableId),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      blackhole: {
+        value: cdktn.booleanToHclTerraform(this._blackhole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      destination_cidr_block: {
+        value: cdktn.stringToHclTerraform(this._destinationCidrBlock),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      transit_gateway_attachment_id: {
+        value: cdktn.stringToHclTerraform(this._transitGatewayAttachmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      transit_gateway_route_table_id: {
+        value: cdktn.stringToHclTerraform(this._transitGatewayRouteTableId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

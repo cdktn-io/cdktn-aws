@@ -1,0 +1,839 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsTransferUserConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory AwsTransferUser#home_directory}
+  */
+  readonly homeDirectory?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_type AwsTransferUser#home_directory_type}
+  */
+  readonly homeDirectoryType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#id AwsTransferUser#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#policy AwsTransferUser#policy}
+  */
+  readonly policy?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#region AwsTransferUser#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#role AwsTransferUser#role}
+  */
+  readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#server_id AwsTransferUser#server_id}
+  */
+  readonly serverId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags AwsTransferUser#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags_all AwsTransferUser#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#user_name AwsTransferUser#user_name}
+  */
+  readonly userName: string;
+  /**
+  * home_directory_mappings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_mappings AwsTransferUser#home_directory_mappings}
+  */
+  readonly homeDirectoryMappings?: AwsTransferUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable;
+  /**
+  * posix_profile block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#posix_profile AwsTransferUser#posix_profile}
+  */
+  readonly posixProfile?: AwsTransferUser.PosixProfileProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#timeouts AwsTransferUser#timeouts}
+  */
+  readonly timeouts?: AwsTransferUser.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user aws_transfer_user}
+*/
+export class AwsTransferUser extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_transfer_user";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsTransferUser resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsTransferUser to import
+  * @param importFromId The id of the existing AwsTransferUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTransferUser to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_user", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user aws_transfer_user} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsTransferUserConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsTransferUserConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_transfer_user',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._homeDirectory = config.homeDirectory;
+    this._homeDirectoryType = config.homeDirectoryType;
+    this._id = config.id;
+    this._policy = config.policy;
+    this._region = config.region;
+    this._role = config.role;
+    this._serverId = config.serverId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._userName = config.userName;
+    this._homeDirectoryMappings.internalValue = config.homeDirectoryMappings;
+    this._posixProfile.internalValue = config.posixProfile;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // home_directory - computed: false, optional: true, required: false
+  private _homeDirectory?: string; 
+  public get homeDirectory() {
+    return this.getStringAttribute('home_directory');
+  }
+  public set homeDirectory(value: string) {
+    this._homeDirectory = value;
+  }
+  public resetHomeDirectory() {
+    this._homeDirectory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get homeDirectoryInput() {
+    return this._homeDirectory;
+  }
+
+  // home_directory_type - computed: false, optional: true, required: false
+  private _homeDirectoryType?: string; 
+  public get homeDirectoryType() {
+    return this.getStringAttribute('home_directory_type');
+  }
+  public set homeDirectoryType(value: string) {
+    this._homeDirectoryType = value;
+  }
+  public resetHomeDirectoryType() {
+    this._homeDirectoryType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get homeDirectoryTypeInput() {
+    return this._homeDirectoryType;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // policy - computed: false, optional: true, required: false
+  private _policy?: string; 
+  public get policy() {
+    return this.getStringAttribute('policy');
+  }
+  public set policy(value: string) {
+    this._policy = value;
+  }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // role - computed: false, optional: false, required: true
+  private _role?: string; 
+  public get role() {
+    return this.getStringAttribute('role');
+  }
+  public set role(value: string) {
+    this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role;
+  }
+
+  // server_id - computed: false, optional: false, required: true
+  private _serverId?: string; 
+  public get serverId() {
+    return this.getStringAttribute('server_id');
+  }
+  public set serverId(value: string) {
+    this._serverId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverIdInput() {
+    return this._serverId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // user_name - computed: false, optional: false, required: true
+  private _userName?: string; 
+  public get userName() {
+    return this.getStringAttribute('user_name');
+  }
+  public set userName(value: string) {
+    this._userName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userNameInput() {
+    return this._userName;
+  }
+
+  // home_directory_mappings - computed: false, optional: true, required: false
+  private _homeDirectoryMappings = new AwsTransferUser.HomeDirectoryMappingsPropertyList(this, "home_directory_mappings", false);
+  public get homeDirectoryMappings() {
+    return this._homeDirectoryMappings;
+  }
+  public putHomeDirectoryMappings(value: AwsTransferUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable) {
+    this._homeDirectoryMappings.internalValue = value;
+  }
+  public resetHomeDirectoryMappings() {
+    this._homeDirectoryMappings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get homeDirectoryMappingsInput() {
+    return this._homeDirectoryMappings.internalValue;
+  }
+
+  // posix_profile - computed: false, optional: true, required: false
+  private _posixProfile = new AwsTransferUser.PosixProfilePropertyOutputReference(this, "posix_profile");
+  public get posixProfile() {
+    return this._posixProfile;
+  }
+  public putPosixProfile(value: AwsTransferUser.PosixProfileProperty) {
+    this._posixProfile.internalValue = value;
+  }
+  public resetPosixProfile() {
+    this._posixProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get posixProfileInput() {
+    return this._posixProfile.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsTransferUser.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsTransferUser.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      home_directory: cdktn.stringToTerraform(this._homeDirectory),
+      home_directory_type: cdktn.stringToTerraform(this._homeDirectoryType),
+      id: cdktn.stringToTerraform(this._id),
+      policy: cdktn.stringToTerraform(this._policy),
+      region: cdktn.stringToTerraform(this._region),
+      role: cdktn.stringToTerraform(this._role),
+      server_id: cdktn.stringToTerraform(this._serverId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      user_name: cdktn.stringToTerraform(this._userName),
+      home_directory_mappings: cdktn.listMapper(awsTransferUserHomeDirectoryMappingsPropertyToTerraform, true)(this._homeDirectoryMappings.internalValue),
+      posix_profile: awsTransferUserPosixProfilePropertyToTerraform(this._posixProfile.internalValue),
+      timeouts: awsTransferUserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      home_directory: {
+        value: cdktn.stringToHclTerraform(this._homeDirectory),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      home_directory_type: {
+        value: cdktn.stringToHclTerraform(this._homeDirectoryType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy: {
+        value: cdktn.stringToHclTerraform(this._policy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktn.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      server_id: {
+        value: cdktn.stringToHclTerraform(this._serverId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      user_name: {
+        value: cdktn.stringToHclTerraform(this._userName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      home_directory_mappings: {
+        value: cdktn.listMapperHcl(awsTransferUserHomeDirectoryMappingsPropertyToHclTerraform, true)(this._homeDirectoryMappings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTransferUser.HomeDirectoryMappingsPropertyList",
+      },
+      posix_profile: {
+        value: awsTransferUserPosixProfilePropertyToHclTerraform(this._posixProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTransferUser.PosixProfilePropertyList",
+      },
+      timeouts: {
+        value: awsTransferUserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsTransferUser.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsTransferUserHomeDirectoryMappingsPropertyToTerraform(struct?: AwsTransferUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    entry: cdktn.stringToTerraform(struct!.entry),
+    target: cdktn.stringToTerraform(struct!.target),
+  }
+}
+
+
+export function awsTransferUserHomeDirectoryMappingsPropertyToHclTerraform(struct?: AwsTransferUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    entry: {
+      value: cdktn.stringToHclTerraform(struct!.entry),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target: {
+      value: cdktn.stringToHclTerraform(struct!.target),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferUserPosixProfilePropertyToTerraform(struct?: AwsTransferUser.PosixProfilePropertyOutputReference | AwsTransferUser.PosixProfileProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    gid: cdktn.numberToTerraform(struct!.gid),
+    secondary_gids: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.secondaryGids),
+    uid: cdktn.numberToTerraform(struct!.uid),
+  }
+}
+
+
+export function awsTransferUserPosixProfilePropertyToHclTerraform(struct?: AwsTransferUser.PosixProfilePropertyOutputReference | AwsTransferUser.PosixProfileProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    gid: {
+      value: cdktn.numberToHclTerraform(struct!.gid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    secondary_gids: {
+      value: cdktn.listMapperHcl(cdktn.numberToHclTerraform, false)(struct!.secondaryGids),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    uid: {
+      value: cdktn.numberToHclTerraform(struct!.uid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferUserTimeoutsPropertyToTerraform(struct?: AwsTransferUser.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsTransferUserTimeoutsPropertyToHclTerraform(struct?: AwsTransferUser.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsTransferUser {
+export interface HomeDirectoryMappingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#entry AwsTransferUser#entry}
+  */
+  readonly entry: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#target AwsTransferUser#target}
+  */
+  readonly target: string;
+}
+export class HomeDirectoryMappingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HomeDirectoryMappingsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._entry !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entry = this._entry;
+    }
+    if (this._target !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.target = this._target;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HomeDirectoryMappingsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._entry = undefined;
+      this._target = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._entry = value.entry;
+      this._target = value.target;
+    }
+  }
+
+  // entry - computed: false, optional: false, required: true
+  private _entry?: string; 
+  public get entry() {
+    return this.getStringAttribute('entry');
+  }
+  public set entry(value: string) {
+    this._entry = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entryInput() {
+    return this._entry;
+  }
+
+  // target - computed: false, optional: false, required: true
+  private _target?: string; 
+  public get target() {
+    return this.getStringAttribute('target');
+  }
+  public set target(value: string) {
+    this._target = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target;
+  }
+}
+
+export class HomeDirectoryMappingsPropertyList extends cdktn.ComplexList {
+  public internalValue? : HomeDirectoryMappingsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HomeDirectoryMappingsPropertyOutputReference {
+    return new HomeDirectoryMappingsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PosixProfileProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#gid AwsTransferUser#gid}
+  */
+  readonly gid: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#secondary_gids AwsTransferUser#secondary_gids}
+  */
+  readonly secondaryGids?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#uid AwsTransferUser#uid}
+  */
+  readonly uid: number;
+}
+export class PosixProfilePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PosixProfileProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._gid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gid = this._gid;
+    }
+    if (this._secondaryGids !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secondaryGids = this._secondaryGids;
+    }
+    if (this._uid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uid = this._uid;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PosixProfileProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._gid = undefined;
+      this._secondaryGids = undefined;
+      this._uid = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._gid = value.gid;
+      this._secondaryGids = value.secondaryGids;
+      this._uid = value.uid;
+    }
+  }
+
+  // gid - computed: false, optional: false, required: true
+  private _gid?: number; 
+  public get gid() {
+    return this.getNumberAttribute('gid');
+  }
+  public set gid(value: number) {
+    this._gid = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gidInput() {
+    return this._gid;
+  }
+
+  // secondary_gids - computed: false, optional: true, required: false
+  private _secondaryGids?: number[]; 
+  public get secondaryGids() {
+    return cdktn.Token.asNumberList(cdktn.Fn.tolist(this.getNumberListAttribute('secondary_gids')));
+  }
+  public set secondaryGids(value: number[]) {
+    this._secondaryGids = value;
+  }
+  public resetSecondaryGids() {
+    this._secondaryGids = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryGidsInput() {
+    return this._secondaryGids;
+  }
+
+  // uid - computed: false, optional: false, required: true
+  private _uid?: number; 
+  public get uid() {
+    return this.getNumberAttribute('uid');
+  }
+  public set uid(value: number) {
+    this._uid = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uidInput() {
+    return this._uid;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#delete AwsTransferUser#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._delete = value.delete;
+    }
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

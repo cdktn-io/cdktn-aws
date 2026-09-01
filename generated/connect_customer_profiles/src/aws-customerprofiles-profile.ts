@@ -1,0 +1,2293 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCustomerprofilesProfileConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#account_number AwsCustomerprofilesProfile#account_number}
+  */
+  readonly accountNumber?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#additional_information AwsCustomerprofilesProfile#additional_information}
+  */
+  readonly additionalInformation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#attributes AwsCustomerprofilesProfile#attributes}
+  */
+  readonly attributes?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#birth_date AwsCustomerprofilesProfile#birth_date}
+  */
+  readonly birthDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_email_address AwsCustomerprofilesProfile#business_email_address}
+  */
+  readonly businessEmailAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_name AwsCustomerprofilesProfile#business_name}
+  */
+  readonly businessName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#business_phone_number AwsCustomerprofilesProfile#business_phone_number}
+  */
+  readonly businessPhoneNumber?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#domain_name AwsCustomerprofilesProfile#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#email_address AwsCustomerprofilesProfile#email_address}
+  */
+  readonly emailAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#first_name AwsCustomerprofilesProfile#first_name}
+  */
+  readonly firstName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#gender_string AwsCustomerprofilesProfile#gender_string}
+  */
+  readonly genderString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#home_phone_number AwsCustomerprofilesProfile#home_phone_number}
+  */
+  readonly homePhoneNumber?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#id AwsCustomerprofilesProfile#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#last_name AwsCustomerprofilesProfile#last_name}
+  */
+  readonly lastName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#middle_name AwsCustomerprofilesProfile#middle_name}
+  */
+  readonly middleName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mobile_phone_number AwsCustomerprofilesProfile#mobile_phone_number}
+  */
+  readonly mobilePhoneNumber?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#party_type_string AwsCustomerprofilesProfile#party_type_string}
+  */
+  readonly partyTypeString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#personal_email_address AwsCustomerprofilesProfile#personal_email_address}
+  */
+  readonly personalEmailAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#phone_number AwsCustomerprofilesProfile#phone_number}
+  */
+  readonly phoneNumber?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#region AwsCustomerprofilesProfile#region}
+  */
+  readonly region?: string;
+  /**
+  * address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address AwsCustomerprofilesProfile#address}
+  */
+  readonly address?: AwsCustomerprofilesProfile.AddressProperty;
+  /**
+  * billing_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#billing_address AwsCustomerprofilesProfile#billing_address}
+  */
+  readonly billingAddress?: AwsCustomerprofilesProfile.BillingAddressProperty;
+  /**
+  * mailing_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#mailing_address AwsCustomerprofilesProfile#mailing_address}
+  */
+  readonly mailingAddress?: AwsCustomerprofilesProfile.MailingAddressProperty;
+  /**
+  * shipping_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#shipping_address AwsCustomerprofilesProfile#shipping_address}
+  */
+  readonly shippingAddress?: AwsCustomerprofilesProfile.ShippingAddressProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile aws_customerprofiles_profile}
+*/
+export class AwsCustomerprofilesProfile extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_customerprofiles_profile";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCustomerprofilesProfile resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCustomerprofilesProfile to import
+  * @param importFromId The id of the existing AwsCustomerprofilesProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomerprofilesProfile to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_customerprofiles_profile", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile aws_customerprofiles_profile} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCustomerprofilesProfileConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCustomerprofilesProfileConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_customerprofiles_profile',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._accountNumber = config.accountNumber;
+    this._additionalInformation = config.additionalInformation;
+    this._attributes = config.attributes;
+    this._birthDate = config.birthDate;
+    this._businessEmailAddress = config.businessEmailAddress;
+    this._businessName = config.businessName;
+    this._businessPhoneNumber = config.businessPhoneNumber;
+    this._domainName = config.domainName;
+    this._emailAddress = config.emailAddress;
+    this._firstName = config.firstName;
+    this._genderString = config.genderString;
+    this._homePhoneNumber = config.homePhoneNumber;
+    this._id = config.id;
+    this._lastName = config.lastName;
+    this._middleName = config.middleName;
+    this._mobilePhoneNumber = config.mobilePhoneNumber;
+    this._partyTypeString = config.partyTypeString;
+    this._personalEmailAddress = config.personalEmailAddress;
+    this._phoneNumber = config.phoneNumber;
+    this._region = config.region;
+    this._address.internalValue = config.address;
+    this._billingAddress.internalValue = config.billingAddress;
+    this._mailingAddress.internalValue = config.mailingAddress;
+    this._shippingAddress.internalValue = config.shippingAddress;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // account_number - computed: false, optional: true, required: false
+  private _accountNumber?: string; 
+  public get accountNumber() {
+    return this.getStringAttribute('account_number');
+  }
+  public set accountNumber(value: string) {
+    this._accountNumber = value;
+  }
+  public resetAccountNumber() {
+    this._accountNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNumberInput() {
+    return this._accountNumber;
+  }
+
+  // additional_information - computed: false, optional: true, required: false
+  private _additionalInformation?: string; 
+  public get additionalInformation() {
+    return this.getStringAttribute('additional_information');
+  }
+  public set additionalInformation(value: string) {
+    this._additionalInformation = value;
+  }
+  public resetAdditionalInformation() {
+    this._additionalInformation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalInformationInput() {
+    return this._additionalInformation;
+  }
+
+  // attributes - computed: false, optional: true, required: false
+  private _attributes?: { [key: string]: string }; 
+  public get attributes() {
+    return this.getStringMapAttribute('attributes');
+  }
+  public set attributes(value: { [key: string]: string }) {
+    this._attributes = value;
+  }
+  public resetAttributes() {
+    this._attributes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributesInput() {
+    return this._attributes;
+  }
+
+  // birth_date - computed: false, optional: true, required: false
+  private _birthDate?: string; 
+  public get birthDate() {
+    return this.getStringAttribute('birth_date');
+  }
+  public set birthDate(value: string) {
+    this._birthDate = value;
+  }
+  public resetBirthDate() {
+    this._birthDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get birthDateInput() {
+    return this._birthDate;
+  }
+
+  // business_email_address - computed: false, optional: true, required: false
+  private _businessEmailAddress?: string; 
+  public get businessEmailAddress() {
+    return this.getStringAttribute('business_email_address');
+  }
+  public set businessEmailAddress(value: string) {
+    this._businessEmailAddress = value;
+  }
+  public resetBusinessEmailAddress() {
+    this._businessEmailAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get businessEmailAddressInput() {
+    return this._businessEmailAddress;
+  }
+
+  // business_name - computed: false, optional: true, required: false
+  private _businessName?: string; 
+  public get businessName() {
+    return this.getStringAttribute('business_name');
+  }
+  public set businessName(value: string) {
+    this._businessName = value;
+  }
+  public resetBusinessName() {
+    this._businessName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get businessNameInput() {
+    return this._businessName;
+  }
+
+  // business_phone_number - computed: false, optional: true, required: false
+  private _businessPhoneNumber?: string; 
+  public get businessPhoneNumber() {
+    return this.getStringAttribute('business_phone_number');
+  }
+  public set businessPhoneNumber(value: string) {
+    this._businessPhoneNumber = value;
+  }
+  public resetBusinessPhoneNumber() {
+    this._businessPhoneNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get businessPhoneNumberInput() {
+    return this._businessPhoneNumber;
+  }
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName?: string; 
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName;
+  }
+
+  // email_address - computed: false, optional: true, required: false
+  private _emailAddress?: string; 
+  public get emailAddress() {
+    return this.getStringAttribute('email_address');
+  }
+  public set emailAddress(value: string) {
+    this._emailAddress = value;
+  }
+  public resetEmailAddress() {
+    this._emailAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressInput() {
+    return this._emailAddress;
+  }
+
+  // first_name - computed: false, optional: true, required: false
+  private _firstName?: string; 
+  public get firstName() {
+    return this.getStringAttribute('first_name');
+  }
+  public set firstName(value: string) {
+    this._firstName = value;
+  }
+  public resetFirstName() {
+    this._firstName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firstNameInput() {
+    return this._firstName;
+  }
+
+  // gender_string - computed: false, optional: true, required: false
+  private _genderString?: string; 
+  public get genderString() {
+    return this.getStringAttribute('gender_string');
+  }
+  public set genderString(value: string) {
+    this._genderString = value;
+  }
+  public resetGenderString() {
+    this._genderString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get genderStringInput() {
+    return this._genderString;
+  }
+
+  // home_phone_number - computed: false, optional: true, required: false
+  private _homePhoneNumber?: string; 
+  public get homePhoneNumber() {
+    return this.getStringAttribute('home_phone_number');
+  }
+  public set homePhoneNumber(value: string) {
+    this._homePhoneNumber = value;
+  }
+  public resetHomePhoneNumber() {
+    this._homePhoneNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get homePhoneNumberInput() {
+    return this._homePhoneNumber;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // last_name - computed: false, optional: true, required: false
+  private _lastName?: string; 
+  public get lastName() {
+    return this.getStringAttribute('last_name');
+  }
+  public set lastName(value: string) {
+    this._lastName = value;
+  }
+  public resetLastName() {
+    this._lastName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastNameInput() {
+    return this._lastName;
+  }
+
+  // middle_name - computed: false, optional: true, required: false
+  private _middleName?: string; 
+  public get middleName() {
+    return this.getStringAttribute('middle_name');
+  }
+  public set middleName(value: string) {
+    this._middleName = value;
+  }
+  public resetMiddleName() {
+    this._middleName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get middleNameInput() {
+    return this._middleName;
+  }
+
+  // mobile_phone_number - computed: false, optional: true, required: false
+  private _mobilePhoneNumber?: string; 
+  public get mobilePhoneNumber() {
+    return this.getStringAttribute('mobile_phone_number');
+  }
+  public set mobilePhoneNumber(value: string) {
+    this._mobilePhoneNumber = value;
+  }
+  public resetMobilePhoneNumber() {
+    this._mobilePhoneNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mobilePhoneNumberInput() {
+    return this._mobilePhoneNumber;
+  }
+
+  // party_type_string - computed: false, optional: true, required: false
+  private _partyTypeString?: string; 
+  public get partyTypeString() {
+    return this.getStringAttribute('party_type_string');
+  }
+  public set partyTypeString(value: string) {
+    this._partyTypeString = value;
+  }
+  public resetPartyTypeString() {
+    this._partyTypeString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partyTypeStringInput() {
+    return this._partyTypeString;
+  }
+
+  // personal_email_address - computed: false, optional: true, required: false
+  private _personalEmailAddress?: string; 
+  public get personalEmailAddress() {
+    return this.getStringAttribute('personal_email_address');
+  }
+  public set personalEmailAddress(value: string) {
+    this._personalEmailAddress = value;
+  }
+  public resetPersonalEmailAddress() {
+    this._personalEmailAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get personalEmailAddressInput() {
+    return this._personalEmailAddress;
+  }
+
+  // phone_number - computed: false, optional: true, required: false
+  private _phoneNumber?: string; 
+  public get phoneNumber() {
+    return this.getStringAttribute('phone_number');
+  }
+  public set phoneNumber(value: string) {
+    this._phoneNumber = value;
+  }
+  public resetPhoneNumber() {
+    this._phoneNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumberInput() {
+    return this._phoneNumber;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address = new AwsCustomerprofilesProfile.AddressPropertyOutputReference(this, "address");
+  public get address() {
+    return this._address;
+  }
+  public putAddress(value: AwsCustomerprofilesProfile.AddressProperty) {
+    this._address.internalValue = value;
+  }
+  public resetAddress() {
+    this._address.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address.internalValue;
+  }
+
+  // billing_address - computed: false, optional: true, required: false
+  private _billingAddress = new AwsCustomerprofilesProfile.BillingAddressPropertyOutputReference(this, "billing_address");
+  public get billingAddress() {
+    return this._billingAddress;
+  }
+  public putBillingAddress(value: AwsCustomerprofilesProfile.BillingAddressProperty) {
+    this._billingAddress.internalValue = value;
+  }
+  public resetBillingAddress() {
+    this._billingAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingAddressInput() {
+    return this._billingAddress.internalValue;
+  }
+
+  // mailing_address - computed: false, optional: true, required: false
+  private _mailingAddress = new AwsCustomerprofilesProfile.MailingAddressPropertyOutputReference(this, "mailing_address");
+  public get mailingAddress() {
+    return this._mailingAddress;
+  }
+  public putMailingAddress(value: AwsCustomerprofilesProfile.MailingAddressProperty) {
+    this._mailingAddress.internalValue = value;
+  }
+  public resetMailingAddress() {
+    this._mailingAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mailingAddressInput() {
+    return this._mailingAddress.internalValue;
+  }
+
+  // shipping_address - computed: false, optional: true, required: false
+  private _shippingAddress = new AwsCustomerprofilesProfile.ShippingAddressPropertyOutputReference(this, "shipping_address");
+  public get shippingAddress() {
+    return this._shippingAddress;
+  }
+  public putShippingAddress(value: AwsCustomerprofilesProfile.ShippingAddressProperty) {
+    this._shippingAddress.internalValue = value;
+  }
+  public resetShippingAddress() {
+    this._shippingAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shippingAddressInput() {
+    return this._shippingAddress.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      account_number: cdktn.stringToTerraform(this._accountNumber),
+      additional_information: cdktn.stringToTerraform(this._additionalInformation),
+      attributes: cdktn.hashMapper(cdktn.stringToTerraform)(this._attributes),
+      birth_date: cdktn.stringToTerraform(this._birthDate),
+      business_email_address: cdktn.stringToTerraform(this._businessEmailAddress),
+      business_name: cdktn.stringToTerraform(this._businessName),
+      business_phone_number: cdktn.stringToTerraform(this._businessPhoneNumber),
+      domain_name: cdktn.stringToTerraform(this._domainName),
+      email_address: cdktn.stringToTerraform(this._emailAddress),
+      first_name: cdktn.stringToTerraform(this._firstName),
+      gender_string: cdktn.stringToTerraform(this._genderString),
+      home_phone_number: cdktn.stringToTerraform(this._homePhoneNumber),
+      id: cdktn.stringToTerraform(this._id),
+      last_name: cdktn.stringToTerraform(this._lastName),
+      middle_name: cdktn.stringToTerraform(this._middleName),
+      mobile_phone_number: cdktn.stringToTerraform(this._mobilePhoneNumber),
+      party_type_string: cdktn.stringToTerraform(this._partyTypeString),
+      personal_email_address: cdktn.stringToTerraform(this._personalEmailAddress),
+      phone_number: cdktn.stringToTerraform(this._phoneNumber),
+      region: cdktn.stringToTerraform(this._region),
+      address: awsCustomerprofilesProfileAddressPropertyToTerraform(this._address.internalValue),
+      billing_address: awsCustomerprofilesProfileBillingAddressPropertyToTerraform(this._billingAddress.internalValue),
+      mailing_address: awsCustomerprofilesProfileMailingAddressPropertyToTerraform(this._mailingAddress.internalValue),
+      shipping_address: awsCustomerprofilesProfileShippingAddressPropertyToTerraform(this._shippingAddress.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_number: {
+        value: cdktn.stringToHclTerraform(this._accountNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      additional_information: {
+        value: cdktn.stringToHclTerraform(this._additionalInformation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      attributes: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._attributes),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      birth_date: {
+        value: cdktn.stringToHclTerraform(this._birthDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      business_email_address: {
+        value: cdktn.stringToHclTerraform(this._businessEmailAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      business_name: {
+        value: cdktn.stringToHclTerraform(this._businessName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      business_phone_number: {
+        value: cdktn.stringToHclTerraform(this._businessPhoneNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_name: {
+        value: cdktn.stringToHclTerraform(this._domainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      email_address: {
+        value: cdktn.stringToHclTerraform(this._emailAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      first_name: {
+        value: cdktn.stringToHclTerraform(this._firstName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gender_string: {
+        value: cdktn.stringToHclTerraform(this._genderString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      home_phone_number: {
+        value: cdktn.stringToHclTerraform(this._homePhoneNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      last_name: {
+        value: cdktn.stringToHclTerraform(this._lastName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      middle_name: {
+        value: cdktn.stringToHclTerraform(this._middleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_phone_number: {
+        value: cdktn.stringToHclTerraform(this._mobilePhoneNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      party_type_string: {
+        value: cdktn.stringToHclTerraform(this._partyTypeString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      personal_email_address: {
+        value: cdktn.stringToHclTerraform(this._personalEmailAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      phone_number: {
+        value: cdktn.stringToHclTerraform(this._phoneNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      address: {
+        value: awsCustomerprofilesProfileAddressPropertyToHclTerraform(this._address.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCustomerprofilesProfile.AddressPropertyList",
+      },
+      billing_address: {
+        value: awsCustomerprofilesProfileBillingAddressPropertyToHclTerraform(this._billingAddress.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCustomerprofilesProfile.BillingAddressPropertyList",
+      },
+      mailing_address: {
+        value: awsCustomerprofilesProfileMailingAddressPropertyToHclTerraform(this._mailingAddress.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCustomerprofilesProfile.MailingAddressPropertyList",
+      },
+      shipping_address: {
+        value: awsCustomerprofilesProfileShippingAddressPropertyToHclTerraform(this._shippingAddress.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCustomerprofilesProfile.ShippingAddressPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCustomerprofilesProfileAddressPropertyToTerraform(struct?: AwsCustomerprofilesProfile.AddressPropertyOutputReference | AwsCustomerprofilesProfile.AddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    address_1: cdktn.stringToTerraform(struct!.address1),
+    address_2: cdktn.stringToTerraform(struct!.address2),
+    address_3: cdktn.stringToTerraform(struct!.address3),
+    address_4: cdktn.stringToTerraform(struct!.address4),
+    city: cdktn.stringToTerraform(struct!.city),
+    country: cdktn.stringToTerraform(struct!.country),
+    county: cdktn.stringToTerraform(struct!.county),
+    postal_code: cdktn.stringToTerraform(struct!.postalCode),
+    province: cdktn.stringToTerraform(struct!.province),
+    state: cdktn.stringToTerraform(struct!.state),
+  }
+}
+
+
+export function awsCustomerprofilesProfileAddressPropertyToHclTerraform(struct?: AwsCustomerprofilesProfile.AddressPropertyOutputReference | AwsCustomerprofilesProfile.AddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    address_1: {
+      value: cdktn.stringToHclTerraform(struct!.address1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_2: {
+      value: cdktn.stringToHclTerraform(struct!.address2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_3: {
+      value: cdktn.stringToHclTerraform(struct!.address3),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_4: {
+      value: cdktn.stringToHclTerraform(struct!.address4),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    city: {
+      value: cdktn.stringToHclTerraform(struct!.city),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    county: {
+      value: cdktn.stringToHclTerraform(struct!.county),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktn.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktn.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCustomerprofilesProfileBillingAddressPropertyToTerraform(struct?: AwsCustomerprofilesProfile.BillingAddressPropertyOutputReference | AwsCustomerprofilesProfile.BillingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    address_1: cdktn.stringToTerraform(struct!.address1),
+    address_2: cdktn.stringToTerraform(struct!.address2),
+    address_3: cdktn.stringToTerraform(struct!.address3),
+    address_4: cdktn.stringToTerraform(struct!.address4),
+    city: cdktn.stringToTerraform(struct!.city),
+    country: cdktn.stringToTerraform(struct!.country),
+    county: cdktn.stringToTerraform(struct!.county),
+    postal_code: cdktn.stringToTerraform(struct!.postalCode),
+    province: cdktn.stringToTerraform(struct!.province),
+    state: cdktn.stringToTerraform(struct!.state),
+  }
+}
+
+
+export function awsCustomerprofilesProfileBillingAddressPropertyToHclTerraform(struct?: AwsCustomerprofilesProfile.BillingAddressPropertyOutputReference | AwsCustomerprofilesProfile.BillingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    address_1: {
+      value: cdktn.stringToHclTerraform(struct!.address1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_2: {
+      value: cdktn.stringToHclTerraform(struct!.address2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_3: {
+      value: cdktn.stringToHclTerraform(struct!.address3),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_4: {
+      value: cdktn.stringToHclTerraform(struct!.address4),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    city: {
+      value: cdktn.stringToHclTerraform(struct!.city),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    county: {
+      value: cdktn.stringToHclTerraform(struct!.county),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktn.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktn.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCustomerprofilesProfileMailingAddressPropertyToTerraform(struct?: AwsCustomerprofilesProfile.MailingAddressPropertyOutputReference | AwsCustomerprofilesProfile.MailingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    address_1: cdktn.stringToTerraform(struct!.address1),
+    address_2: cdktn.stringToTerraform(struct!.address2),
+    address_3: cdktn.stringToTerraform(struct!.address3),
+    address_4: cdktn.stringToTerraform(struct!.address4),
+    city: cdktn.stringToTerraform(struct!.city),
+    country: cdktn.stringToTerraform(struct!.country),
+    county: cdktn.stringToTerraform(struct!.county),
+    postal_code: cdktn.stringToTerraform(struct!.postalCode),
+    province: cdktn.stringToTerraform(struct!.province),
+    state: cdktn.stringToTerraform(struct!.state),
+  }
+}
+
+
+export function awsCustomerprofilesProfileMailingAddressPropertyToHclTerraform(struct?: AwsCustomerprofilesProfile.MailingAddressPropertyOutputReference | AwsCustomerprofilesProfile.MailingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    address_1: {
+      value: cdktn.stringToHclTerraform(struct!.address1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_2: {
+      value: cdktn.stringToHclTerraform(struct!.address2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_3: {
+      value: cdktn.stringToHclTerraform(struct!.address3),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_4: {
+      value: cdktn.stringToHclTerraform(struct!.address4),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    city: {
+      value: cdktn.stringToHclTerraform(struct!.city),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    county: {
+      value: cdktn.stringToHclTerraform(struct!.county),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktn.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktn.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCustomerprofilesProfileShippingAddressPropertyToTerraform(struct?: AwsCustomerprofilesProfile.ShippingAddressPropertyOutputReference | AwsCustomerprofilesProfile.ShippingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    address_1: cdktn.stringToTerraform(struct!.address1),
+    address_2: cdktn.stringToTerraform(struct!.address2),
+    address_3: cdktn.stringToTerraform(struct!.address3),
+    address_4: cdktn.stringToTerraform(struct!.address4),
+    city: cdktn.stringToTerraform(struct!.city),
+    country: cdktn.stringToTerraform(struct!.country),
+    county: cdktn.stringToTerraform(struct!.county),
+    postal_code: cdktn.stringToTerraform(struct!.postalCode),
+    province: cdktn.stringToTerraform(struct!.province),
+    state: cdktn.stringToTerraform(struct!.state),
+  }
+}
+
+
+export function awsCustomerprofilesProfileShippingAddressPropertyToHclTerraform(struct?: AwsCustomerprofilesProfile.ShippingAddressPropertyOutputReference | AwsCustomerprofilesProfile.ShippingAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    address_1: {
+      value: cdktn.stringToHclTerraform(struct!.address1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_2: {
+      value: cdktn.stringToHclTerraform(struct!.address2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_3: {
+      value: cdktn.stringToHclTerraform(struct!.address3),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_4: {
+      value: cdktn.stringToHclTerraform(struct!.address4),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    city: {
+      value: cdktn.stringToHclTerraform(struct!.city),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    county: {
+      value: cdktn.stringToHclTerraform(struct!.county),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktn.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktn.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCustomerprofilesProfile {
+export interface AddressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsCustomerprofilesProfile#address_1}
+  */
+  readonly address1?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsCustomerprofilesProfile#address_2}
+  */
+  readonly address2?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsCustomerprofilesProfile#address_3}
+  */
+  readonly address3?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsCustomerprofilesProfile#address_4}
+  */
+  readonly address4?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsCustomerprofilesProfile#city}
+  */
+  readonly city?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsCustomerprofilesProfile#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsCustomerprofilesProfile#county}
+  */
+  readonly county?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsCustomerprofilesProfile#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsCustomerprofilesProfile#province}
+  */
+  readonly province?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsCustomerprofilesProfile#state}
+  */
+  readonly state?: string;
+}
+export class AddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AddressProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address1 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address1 = this._address1;
+    }
+    if (this._address2 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address2 = this._address2;
+    }
+    if (this._address3 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address3 = this._address3;
+    }
+    if (this._address4 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address4 = this._address4;
+    }
+    if (this._city !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.city = this._city;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._county !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.county = this._county;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._province !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.province = this._province;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AddressProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address1 = undefined;
+      this._address2 = undefined;
+      this._address3 = undefined;
+      this._address4 = undefined;
+      this._city = undefined;
+      this._country = undefined;
+      this._county = undefined;
+      this._postalCode = undefined;
+      this._province = undefined;
+      this._state = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address1 = value.address1;
+      this._address2 = value.address2;
+      this._address3 = value.address3;
+      this._address4 = value.address4;
+      this._city = value.city;
+      this._country = value.country;
+      this._county = value.county;
+      this._postalCode = value.postalCode;
+      this._province = value.province;
+      this._state = value.state;
+    }
+  }
+
+  // address_1 - computed: false, optional: true, required: false
+  private _address1?: string; 
+  public get address1() {
+    return this.getStringAttribute('address_1');
+  }
+  public set address1(value: string) {
+    this._address1 = value;
+  }
+  public resetAddress1() {
+    this._address1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address1Input() {
+    return this._address1;
+  }
+
+  // address_2 - computed: false, optional: true, required: false
+  private _address2?: string; 
+  public get address2() {
+    return this.getStringAttribute('address_2');
+  }
+  public set address2(value: string) {
+    this._address2 = value;
+  }
+  public resetAddress2() {
+    this._address2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address2Input() {
+    return this._address2;
+  }
+
+  // address_3 - computed: false, optional: true, required: false
+  private _address3?: string; 
+  public get address3() {
+    return this.getStringAttribute('address_3');
+  }
+  public set address3(value: string) {
+    this._address3 = value;
+  }
+  public resetAddress3() {
+    this._address3 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address3Input() {
+    return this._address3;
+  }
+
+  // address_4 - computed: false, optional: true, required: false
+  private _address4?: string; 
+  public get address4() {
+    return this.getStringAttribute('address_4');
+  }
+  public set address4(value: string) {
+    this._address4 = value;
+  }
+  public resetAddress4() {
+    this._address4 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address4Input() {
+    return this._address4;
+  }
+
+  // city - computed: false, optional: true, required: false
+  private _city?: string; 
+  public get city() {
+    return this.getStringAttribute('city');
+  }
+  public set city(value: string) {
+    this._city = value;
+  }
+  public resetCity() {
+    this._city = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cityInput() {
+    return this._city;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // county - computed: false, optional: true, required: false
+  private _county?: string; 
+  public get county() {
+    return this.getStringAttribute('county');
+  }
+  public set county(value: string) {
+    this._county = value;
+  }
+  public resetCounty() {
+    this._county = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countyInput() {
+    return this._county;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+export interface BillingAddressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsCustomerprofilesProfile#address_1}
+  */
+  readonly address1?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsCustomerprofilesProfile#address_2}
+  */
+  readonly address2?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsCustomerprofilesProfile#address_3}
+  */
+  readonly address3?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsCustomerprofilesProfile#address_4}
+  */
+  readonly address4?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsCustomerprofilesProfile#city}
+  */
+  readonly city?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsCustomerprofilesProfile#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsCustomerprofilesProfile#county}
+  */
+  readonly county?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsCustomerprofilesProfile#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsCustomerprofilesProfile#province}
+  */
+  readonly province?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsCustomerprofilesProfile#state}
+  */
+  readonly state?: string;
+}
+export class BillingAddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BillingAddressProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address1 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address1 = this._address1;
+    }
+    if (this._address2 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address2 = this._address2;
+    }
+    if (this._address3 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address3 = this._address3;
+    }
+    if (this._address4 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address4 = this._address4;
+    }
+    if (this._city !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.city = this._city;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._county !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.county = this._county;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._province !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.province = this._province;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingAddressProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address1 = undefined;
+      this._address2 = undefined;
+      this._address3 = undefined;
+      this._address4 = undefined;
+      this._city = undefined;
+      this._country = undefined;
+      this._county = undefined;
+      this._postalCode = undefined;
+      this._province = undefined;
+      this._state = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address1 = value.address1;
+      this._address2 = value.address2;
+      this._address3 = value.address3;
+      this._address4 = value.address4;
+      this._city = value.city;
+      this._country = value.country;
+      this._county = value.county;
+      this._postalCode = value.postalCode;
+      this._province = value.province;
+      this._state = value.state;
+    }
+  }
+
+  // address_1 - computed: false, optional: true, required: false
+  private _address1?: string; 
+  public get address1() {
+    return this.getStringAttribute('address_1');
+  }
+  public set address1(value: string) {
+    this._address1 = value;
+  }
+  public resetAddress1() {
+    this._address1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address1Input() {
+    return this._address1;
+  }
+
+  // address_2 - computed: false, optional: true, required: false
+  private _address2?: string; 
+  public get address2() {
+    return this.getStringAttribute('address_2');
+  }
+  public set address2(value: string) {
+    this._address2 = value;
+  }
+  public resetAddress2() {
+    this._address2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address2Input() {
+    return this._address2;
+  }
+
+  // address_3 - computed: false, optional: true, required: false
+  private _address3?: string; 
+  public get address3() {
+    return this.getStringAttribute('address_3');
+  }
+  public set address3(value: string) {
+    this._address3 = value;
+  }
+  public resetAddress3() {
+    this._address3 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address3Input() {
+    return this._address3;
+  }
+
+  // address_4 - computed: false, optional: true, required: false
+  private _address4?: string; 
+  public get address4() {
+    return this.getStringAttribute('address_4');
+  }
+  public set address4(value: string) {
+    this._address4 = value;
+  }
+  public resetAddress4() {
+    this._address4 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address4Input() {
+    return this._address4;
+  }
+
+  // city - computed: false, optional: true, required: false
+  private _city?: string; 
+  public get city() {
+    return this.getStringAttribute('city');
+  }
+  public set city(value: string) {
+    this._city = value;
+  }
+  public resetCity() {
+    this._city = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cityInput() {
+    return this._city;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // county - computed: false, optional: true, required: false
+  private _county?: string; 
+  public get county() {
+    return this.getStringAttribute('county');
+  }
+  public set county(value: string) {
+    this._county = value;
+  }
+  public resetCounty() {
+    this._county = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countyInput() {
+    return this._county;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+export interface MailingAddressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsCustomerprofilesProfile#address_1}
+  */
+  readonly address1?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsCustomerprofilesProfile#address_2}
+  */
+  readonly address2?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsCustomerprofilesProfile#address_3}
+  */
+  readonly address3?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsCustomerprofilesProfile#address_4}
+  */
+  readonly address4?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsCustomerprofilesProfile#city}
+  */
+  readonly city?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsCustomerprofilesProfile#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsCustomerprofilesProfile#county}
+  */
+  readonly county?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsCustomerprofilesProfile#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsCustomerprofilesProfile#province}
+  */
+  readonly province?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsCustomerprofilesProfile#state}
+  */
+  readonly state?: string;
+}
+export class MailingAddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MailingAddressProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address1 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address1 = this._address1;
+    }
+    if (this._address2 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address2 = this._address2;
+    }
+    if (this._address3 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address3 = this._address3;
+    }
+    if (this._address4 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address4 = this._address4;
+    }
+    if (this._city !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.city = this._city;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._county !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.county = this._county;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._province !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.province = this._province;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MailingAddressProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address1 = undefined;
+      this._address2 = undefined;
+      this._address3 = undefined;
+      this._address4 = undefined;
+      this._city = undefined;
+      this._country = undefined;
+      this._county = undefined;
+      this._postalCode = undefined;
+      this._province = undefined;
+      this._state = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address1 = value.address1;
+      this._address2 = value.address2;
+      this._address3 = value.address3;
+      this._address4 = value.address4;
+      this._city = value.city;
+      this._country = value.country;
+      this._county = value.county;
+      this._postalCode = value.postalCode;
+      this._province = value.province;
+      this._state = value.state;
+    }
+  }
+
+  // address_1 - computed: false, optional: true, required: false
+  private _address1?: string; 
+  public get address1() {
+    return this.getStringAttribute('address_1');
+  }
+  public set address1(value: string) {
+    this._address1 = value;
+  }
+  public resetAddress1() {
+    this._address1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address1Input() {
+    return this._address1;
+  }
+
+  // address_2 - computed: false, optional: true, required: false
+  private _address2?: string; 
+  public get address2() {
+    return this.getStringAttribute('address_2');
+  }
+  public set address2(value: string) {
+    this._address2 = value;
+  }
+  public resetAddress2() {
+    this._address2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address2Input() {
+    return this._address2;
+  }
+
+  // address_3 - computed: false, optional: true, required: false
+  private _address3?: string; 
+  public get address3() {
+    return this.getStringAttribute('address_3');
+  }
+  public set address3(value: string) {
+    this._address3 = value;
+  }
+  public resetAddress3() {
+    this._address3 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address3Input() {
+    return this._address3;
+  }
+
+  // address_4 - computed: false, optional: true, required: false
+  private _address4?: string; 
+  public get address4() {
+    return this.getStringAttribute('address_4');
+  }
+  public set address4(value: string) {
+    this._address4 = value;
+  }
+  public resetAddress4() {
+    this._address4 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address4Input() {
+    return this._address4;
+  }
+
+  // city - computed: false, optional: true, required: false
+  private _city?: string; 
+  public get city() {
+    return this.getStringAttribute('city');
+  }
+  public set city(value: string) {
+    this._city = value;
+  }
+  public resetCity() {
+    this._city = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cityInput() {
+    return this._city;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // county - computed: false, optional: true, required: false
+  private _county?: string; 
+  public get county() {
+    return this.getStringAttribute('county');
+  }
+  public set county(value: string) {
+    this._county = value;
+  }
+  public resetCounty() {
+    this._county = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countyInput() {
+    return this._county;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+export interface ShippingAddressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_1 AwsCustomerprofilesProfile#address_1}
+  */
+  readonly address1?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_2 AwsCustomerprofilesProfile#address_2}
+  */
+  readonly address2?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_3 AwsCustomerprofilesProfile#address_3}
+  */
+  readonly address3?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#address_4 AwsCustomerprofilesProfile#address_4}
+  */
+  readonly address4?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#city AwsCustomerprofilesProfile#city}
+  */
+  readonly city?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#country AwsCustomerprofilesProfile#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#county AwsCustomerprofilesProfile#county}
+  */
+  readonly county?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#postal_code AwsCustomerprofilesProfile#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#province AwsCustomerprofilesProfile#province}
+  */
+  readonly province?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/customerprofiles_profile#state AwsCustomerprofilesProfile#state}
+  */
+  readonly state?: string;
+}
+export class ShippingAddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ShippingAddressProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address1 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address1 = this._address1;
+    }
+    if (this._address2 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address2 = this._address2;
+    }
+    if (this._address3 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address3 = this._address3;
+    }
+    if (this._address4 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address4 = this._address4;
+    }
+    if (this._city !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.city = this._city;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._county !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.county = this._county;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._province !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.province = this._province;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ShippingAddressProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._address1 = undefined;
+      this._address2 = undefined;
+      this._address3 = undefined;
+      this._address4 = undefined;
+      this._city = undefined;
+      this._country = undefined;
+      this._county = undefined;
+      this._postalCode = undefined;
+      this._province = undefined;
+      this._state = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._address1 = value.address1;
+      this._address2 = value.address2;
+      this._address3 = value.address3;
+      this._address4 = value.address4;
+      this._city = value.city;
+      this._country = value.country;
+      this._county = value.county;
+      this._postalCode = value.postalCode;
+      this._province = value.province;
+      this._state = value.state;
+    }
+  }
+
+  // address_1 - computed: false, optional: true, required: false
+  private _address1?: string; 
+  public get address1() {
+    return this.getStringAttribute('address_1');
+  }
+  public set address1(value: string) {
+    this._address1 = value;
+  }
+  public resetAddress1() {
+    this._address1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address1Input() {
+    return this._address1;
+  }
+
+  // address_2 - computed: false, optional: true, required: false
+  private _address2?: string; 
+  public get address2() {
+    return this.getStringAttribute('address_2');
+  }
+  public set address2(value: string) {
+    this._address2 = value;
+  }
+  public resetAddress2() {
+    this._address2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address2Input() {
+    return this._address2;
+  }
+
+  // address_3 - computed: false, optional: true, required: false
+  private _address3?: string; 
+  public get address3() {
+    return this.getStringAttribute('address_3');
+  }
+  public set address3(value: string) {
+    this._address3 = value;
+  }
+  public resetAddress3() {
+    this._address3 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address3Input() {
+    return this._address3;
+  }
+
+  // address_4 - computed: false, optional: true, required: false
+  private _address4?: string; 
+  public get address4() {
+    return this.getStringAttribute('address_4');
+  }
+  public set address4(value: string) {
+    this._address4 = value;
+  }
+  public resetAddress4() {
+    this._address4 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get address4Input() {
+    return this._address4;
+  }
+
+  // city - computed: false, optional: true, required: false
+  private _city?: string; 
+  public get city() {
+    return this.getStringAttribute('city');
+  }
+  public set city(value: string) {
+    this._city = value;
+  }
+  public resetCity() {
+    this._city = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cityInput() {
+    return this._city;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // county - computed: false, optional: true, required: false
+  private _county?: string; 
+  public get county() {
+    return this.getStringAttribute('county');
+  }
+  public set county(value: string) {
+    this._county = value;
+  }
+  public resetCounty() {
+    this._county = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countyInput() {
+    return this._county;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+}

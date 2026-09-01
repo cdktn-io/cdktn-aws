@@ -1,0 +1,511 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsRoute53RecoverycontrolconfigSafetyRuleConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#asserted_controls AwsRoute53RecoverycontrolconfigSafetyRule#asserted_controls}
+  */
+  readonly assertedControls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#control_panel_arn AwsRoute53RecoverycontrolconfigSafetyRule#control_panel_arn}
+  */
+  readonly controlPanelArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#gating_controls AwsRoute53RecoverycontrolconfigSafetyRule#gating_controls}
+  */
+  readonly gatingControls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#id AwsRoute53RecoverycontrolconfigSafetyRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#name AwsRoute53RecoverycontrolconfigSafetyRule#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags AwsRoute53RecoverycontrolconfigSafetyRule#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#tags_all AwsRoute53RecoverycontrolconfigSafetyRule#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#target_controls AwsRoute53RecoverycontrolconfigSafetyRule#target_controls}
+  */
+  readonly targetControls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#wait_period_ms AwsRoute53RecoverycontrolconfigSafetyRule#wait_period_ms}
+  */
+  readonly waitPeriodMs: number;
+  /**
+  * rule_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#rule_config AwsRoute53RecoverycontrolconfigSafetyRule#rule_config}
+  */
+  readonly ruleConfig: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule aws_route53recoverycontrolconfig_safety_rule}
+*/
+export class AwsRoute53RecoverycontrolconfigSafetyRule extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_route53recoverycontrolconfig_safety_rule";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsRoute53RecoverycontrolconfigSafetyRule resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsRoute53RecoverycontrolconfigSafetyRule to import
+  * @param importFromId The id of the existing AwsRoute53RecoverycontrolconfigSafetyRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRoute53RecoverycontrolconfigSafetyRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoverycontrolconfig_safety_rule", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule aws_route53recoverycontrolconfig_safety_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsRoute53RecoverycontrolconfigSafetyRuleConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsRoute53RecoverycontrolconfigSafetyRuleConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_route53recoverycontrolconfig_safety_rule',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._assertedControls = config.assertedControls;
+    this._controlPanelArn = config.controlPanelArn;
+    this._gatingControls = config.gatingControls;
+    this._id = config.id;
+    this._name = config.name;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._targetControls = config.targetControls;
+    this._waitPeriodMs = config.waitPeriodMs;
+    this._ruleConfig.internalValue = config.ruleConfig;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // asserted_controls - computed: false, optional: true, required: false
+  private _assertedControls?: string[]; 
+  public get assertedControls() {
+    return this.getListAttribute('asserted_controls');
+  }
+  public set assertedControls(value: string[]) {
+    this._assertedControls = value;
+  }
+  public resetAssertedControls() {
+    this._assertedControls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assertedControlsInput() {
+    return this._assertedControls;
+  }
+
+  // control_panel_arn - computed: false, optional: false, required: true
+  private _controlPanelArn?: string; 
+  public get controlPanelArn() {
+    return this.getStringAttribute('control_panel_arn');
+  }
+  public set controlPanelArn(value: string) {
+    this._controlPanelArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get controlPanelArnInput() {
+    return this._controlPanelArn;
+  }
+
+  // gating_controls - computed: false, optional: true, required: false
+  private _gatingControls?: string[]; 
+  public get gatingControls() {
+    return this.getListAttribute('gating_controls');
+  }
+  public set gatingControls(value: string[]) {
+    this._gatingControls = value;
+  }
+  public resetGatingControls() {
+    this._gatingControls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatingControlsInput() {
+    return this._gatingControls;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // target_controls - computed: false, optional: true, required: false
+  private _targetControls?: string[]; 
+  public get targetControls() {
+    return this.getListAttribute('target_controls');
+  }
+  public set targetControls(value: string[]) {
+    this._targetControls = value;
+  }
+  public resetTargetControls() {
+    this._targetControls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetControlsInput() {
+    return this._targetControls;
+  }
+
+  // wait_period_ms - computed: false, optional: false, required: true
+  private _waitPeriodMs?: number; 
+  public get waitPeriodMs() {
+    return this.getNumberAttribute('wait_period_ms');
+  }
+  public set waitPeriodMs(value: number) {
+    this._waitPeriodMs = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitPeriodMsInput() {
+    return this._waitPeriodMs;
+  }
+
+  // rule_config - computed: false, optional: false, required: true
+  private _ruleConfig = new AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference(this, "rule_config");
+  public get ruleConfig() {
+    return this._ruleConfig;
+  }
+  public putRuleConfig(value: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty) {
+    this._ruleConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleConfigInput() {
+    return this._ruleConfig.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      asserted_controls: cdktn.listMapper(cdktn.stringToTerraform, false)(this._assertedControls),
+      control_panel_arn: cdktn.stringToTerraform(this._controlPanelArn),
+      gating_controls: cdktn.listMapper(cdktn.stringToTerraform, false)(this._gatingControls),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      target_controls: cdktn.listMapper(cdktn.stringToTerraform, false)(this._targetControls),
+      wait_period_ms: cdktn.numberToTerraform(this._waitPeriodMs),
+      rule_config: awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToTerraform(this._ruleConfig.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      asserted_controls: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._assertedControls),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      control_panel_arn: {
+        value: cdktn.stringToHclTerraform(this._controlPanelArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gating_controls: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._gatingControls),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      target_controls: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._targetControls),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      wait_period_ms: {
+        value: cdktn.numberToHclTerraform(this._waitPeriodMs),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      rule_config: {
+        value: awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToHclTerraform(this._ruleConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToTerraform(struct?: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference | AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    inverted: cdktn.booleanToTerraform(struct!.inverted),
+    threshold: cdktn.numberToTerraform(struct!.threshold),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsRoute53RecoverycontrolconfigSafetyRuleRuleConfigPropertyToHclTerraform(struct?: AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigPropertyOutputReference | AwsRoute53RecoverycontrolconfigSafetyRule.RuleConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    inverted: {
+      value: cdktn.booleanToHclTerraform(struct!.inverted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    threshold: {
+      value: cdktn.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsRoute53RecoverycontrolconfigSafetyRule {
+export interface RuleConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#inverted AwsRoute53RecoverycontrolconfigSafetyRule#inverted}
+  */
+  readonly inverted: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#threshold AwsRoute53RecoverycontrolconfigSafetyRule#threshold}
+  */
+  readonly threshold: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoverycontrolconfig_safety_rule#type AwsRoute53RecoverycontrolconfigSafetyRule#type}
+  */
+  readonly type: string;
+}
+export class RuleConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RuleConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._inverted !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inverted = this._inverted;
+    }
+    if (this._threshold !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RuleConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._inverted = undefined;
+      this._threshold = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._inverted = value.inverted;
+      this._threshold = value.threshold;
+      this._type = value.type;
+    }
+  }
+
+  // inverted - computed: false, optional: false, required: true
+  private _inverted?: boolean | cdktn.IResolvable; 
+  public get inverted() {
+    return this.getBooleanAttribute('inverted');
+  }
+  public set inverted(value: boolean | cdktn.IResolvable) {
+    this._inverted = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertedInput() {
+    return this._inverted;
+  }
+
+  // threshold - computed: false, optional: false, required: true
+  private _threshold?: number; 
+  public get threshold() {
+    return this.getNumberAttribute('threshold');
+  }
+  public set threshold(value: number) {
+    this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+}

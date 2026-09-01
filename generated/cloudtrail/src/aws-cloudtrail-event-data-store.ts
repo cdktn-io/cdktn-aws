@@ -1,0 +1,1115 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCloudtrailEventDataStoreConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#billing_mode AwsCloudtrailEventDataStore#billing_mode}
+  */
+  readonly billingMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#id AwsCloudtrailEventDataStore#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#kms_key_id AwsCloudtrailEventDataStore#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#multi_region_enabled AwsCloudtrailEventDataStore#multi_region_enabled}
+  */
+  readonly multiRegionEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name AwsCloudtrailEventDataStore#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#organization_enabled AwsCloudtrailEventDataStore#organization_enabled}
+  */
+  readonly organizationEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#region AwsCloudtrailEventDataStore#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#retention_period AwsCloudtrailEventDataStore#retention_period}
+  */
+  readonly retentionPeriod?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#suspend AwsCloudtrailEventDataStore#suspend}
+  */
+  readonly suspend?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags AwsCloudtrailEventDataStore#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags_all AwsCloudtrailEventDataStore#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#termination_protection_enabled AwsCloudtrailEventDataStore#termination_protection_enabled}
+  */
+  readonly terminationProtectionEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * advanced_event_selector block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#advanced_event_selector AwsCloudtrailEventDataStore#advanced_event_selector}
+  */
+  readonly advancedEventSelector?: AwsCloudtrailEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#timeouts AwsCloudtrailEventDataStore#timeouts}
+  */
+  readonly timeouts?: AwsCloudtrailEventDataStore.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store aws_cloudtrail_event_data_store}
+*/
+export class AwsCloudtrailEventDataStore extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_cloudtrail_event_data_store";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCloudtrailEventDataStore resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCloudtrailEventDataStore to import
+  * @param importFromId The id of the existing AwsCloudtrailEventDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCloudtrailEventDataStore to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudtrail_event_data_store", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store aws_cloudtrail_event_data_store} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCloudtrailEventDataStoreConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCloudtrailEventDataStoreConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_cloudtrail_event_data_store',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._billingMode = config.billingMode;
+    this._id = config.id;
+    this._kmsKeyId = config.kmsKeyId;
+    this._multiRegionEnabled = config.multiRegionEnabled;
+    this._name = config.name;
+    this._organizationEnabled = config.organizationEnabled;
+    this._region = config.region;
+    this._retentionPeriod = config.retentionPeriod;
+    this._suspend = config.suspend;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._terminationProtectionEnabled = config.terminationProtectionEnabled;
+    this._advancedEventSelector.internalValue = config.advancedEventSelector;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // billing_mode - computed: false, optional: true, required: false
+  private _billingMode?: string; 
+  public get billingMode() {
+    return this.getStringAttribute('billing_mode');
+  }
+  public set billingMode(value: string) {
+    this._billingMode = value;
+  }
+  public resetBillingMode() {
+    this._billingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingModeInput() {
+    return this._billingMode;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_key_id - computed: false, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // multi_region_enabled - computed: false, optional: true, required: false
+  private _multiRegionEnabled?: boolean | cdktn.IResolvable; 
+  public get multiRegionEnabled() {
+    return this.getBooleanAttribute('multi_region_enabled');
+  }
+  public set multiRegionEnabled(value: boolean | cdktn.IResolvable) {
+    this._multiRegionEnabled = value;
+  }
+  public resetMultiRegionEnabled() {
+    this._multiRegionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiRegionEnabledInput() {
+    return this._multiRegionEnabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // organization_enabled - computed: false, optional: true, required: false
+  private _organizationEnabled?: boolean | cdktn.IResolvable; 
+  public get organizationEnabled() {
+    return this.getBooleanAttribute('organization_enabled');
+  }
+  public set organizationEnabled(value: boolean | cdktn.IResolvable) {
+    this._organizationEnabled = value;
+  }
+  public resetOrganizationEnabled() {
+    this._organizationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationEnabledInput() {
+    return this._organizationEnabled;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // retention_period - computed: false, optional: true, required: false
+  private _retentionPeriod?: number; 
+  public get retentionPeriod() {
+    return this.getNumberAttribute('retention_period');
+  }
+  public set retentionPeriod(value: number) {
+    this._retentionPeriod = value;
+  }
+  public resetRetentionPeriod() {
+    this._retentionPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPeriodInput() {
+    return this._retentionPeriod;
+  }
+
+  // suspend - computed: false, optional: true, required: false
+  private _suspend?: string; 
+  public get suspend() {
+    return this.getStringAttribute('suspend');
+  }
+  public set suspend(value: string) {
+    this._suspend = value;
+  }
+  public resetSuspend() {
+    this._suspend = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suspendInput() {
+    return this._suspend;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // termination_protection_enabled - computed: false, optional: true, required: false
+  private _terminationProtectionEnabled?: boolean | cdktn.IResolvable; 
+  public get terminationProtectionEnabled() {
+    return this.getBooleanAttribute('termination_protection_enabled');
+  }
+  public set terminationProtectionEnabled(value: boolean | cdktn.IResolvable) {
+    this._terminationProtectionEnabled = value;
+  }
+  public resetTerminationProtectionEnabled() {
+    this._terminationProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get terminationProtectionEnabledInput() {
+    return this._terminationProtectionEnabled;
+  }
+
+  // advanced_event_selector - computed: false, optional: true, required: false
+  private _advancedEventSelector = new AwsCloudtrailEventDataStore.AdvancedEventSelectorPropertyList(this, "advanced_event_selector", false);
+  public get advancedEventSelector() {
+    return this._advancedEventSelector;
+  }
+  public putAdvancedEventSelector(value: AwsCloudtrailEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable) {
+    this._advancedEventSelector.internalValue = value;
+  }
+  public resetAdvancedEventSelector() {
+    this._advancedEventSelector.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedEventSelectorInput() {
+    return this._advancedEventSelector.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsCloudtrailEventDataStore.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsCloudtrailEventDataStore.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      billing_mode: cdktn.stringToTerraform(this._billingMode),
+      id: cdktn.stringToTerraform(this._id),
+      kms_key_id: cdktn.stringToTerraform(this._kmsKeyId),
+      multi_region_enabled: cdktn.booleanToTerraform(this._multiRegionEnabled),
+      name: cdktn.stringToTerraform(this._name),
+      organization_enabled: cdktn.booleanToTerraform(this._organizationEnabled),
+      region: cdktn.stringToTerraform(this._region),
+      retention_period: cdktn.numberToTerraform(this._retentionPeriod),
+      suspend: cdktn.stringToTerraform(this._suspend),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      termination_protection_enabled: cdktn.booleanToTerraform(this._terminationProtectionEnabled),
+      advanced_event_selector: cdktn.listMapper(awsCloudtrailEventDataStoreAdvancedEventSelectorPropertyToTerraform, true)(this._advancedEventSelector.internalValue),
+      timeouts: awsCloudtrailEventDataStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      billing_mode: {
+        value: cdktn.stringToHclTerraform(this._billingMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_region_enabled: {
+        value: cdktn.booleanToHclTerraform(this._multiRegionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization_enabled: {
+        value: cdktn.booleanToHclTerraform(this._organizationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_period: {
+        value: cdktn.numberToHclTerraform(this._retentionPeriod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      suspend: {
+        value: cdktn.stringToHclTerraform(this._suspend),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      termination_protection_enabled: {
+        value: cdktn.booleanToHclTerraform(this._terminationProtectionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      advanced_event_selector: {
+        value: cdktn.listMapperHcl(awsCloudtrailEventDataStoreAdvancedEventSelectorPropertyToHclTerraform, true)(this._advancedEventSelector.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCloudtrailEventDataStore.AdvancedEventSelectorPropertyList",
+      },
+      timeouts: {
+        value: awsCloudtrailEventDataStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsCloudtrailEventDataStore.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCloudtrailEventDataStoreFieldSelectorPropertyToTerraform(struct?: AwsCloudtrailEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    ends_with: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.endsWith),
+    equals: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.equalTo),
+    field: cdktn.stringToTerraform(struct!.field),
+    not_ends_with: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.notEndsWith),
+    not_equals: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.notEquals),
+    not_starts_with: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.notStartsWith),
+    starts_with: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.startsWith),
+  }
+}
+
+
+export function awsCloudtrailEventDataStoreFieldSelectorPropertyToHclTerraform(struct?: AwsCloudtrailEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    ends_with: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.endsWith),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    equals: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.equalTo),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    field: {
+      value: cdktn.stringToHclTerraform(struct!.field),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    not_ends_with: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.notEndsWith),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    not_equals: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.notEquals),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    not_starts_with: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.notStartsWith),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    starts_with: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.startsWith),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudtrailEventDataStoreAdvancedEventSelectorPropertyToTerraform(struct?: AwsCloudtrailEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    field_selector: cdktn.listMapper(awsCloudtrailEventDataStoreFieldSelectorPropertyToTerraform, true)(struct!.fieldSelector),
+  }
+}
+
+
+export function awsCloudtrailEventDataStoreAdvancedEventSelectorPropertyToHclTerraform(struct?: AwsCloudtrailEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_selector: {
+      value: cdktn.listMapperHcl(awsCloudtrailEventDataStoreFieldSelectorPropertyToHclTerraform, true)(struct!.fieldSelector),
+      isBlock: true,
+      type: "set",
+      storageClassType: "FieldSelectorPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudtrailEventDataStoreTimeoutsPropertyToTerraform(struct?: AwsCloudtrailEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsCloudtrailEventDataStoreTimeoutsPropertyToHclTerraform(struct?: AwsCloudtrailEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCloudtrailEventDataStore {
+export interface FieldSelectorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#ends_with AwsCloudtrailEventDataStore#ends_with}
+  */
+  readonly endsWith?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#equals AwsCloudtrailEventDataStore#equals}
+  */
+  readonly equalTo?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field AwsCloudtrailEventDataStore#field}
+  */
+  readonly field?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_ends_with AwsCloudtrailEventDataStore#not_ends_with}
+  */
+  readonly notEndsWith?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_equals AwsCloudtrailEventDataStore#not_equals}
+  */
+  readonly notEquals?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_starts_with AwsCloudtrailEventDataStore#not_starts_with}
+  */
+  readonly notStartsWith?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#starts_with AwsCloudtrailEventDataStore#starts_with}
+  */
+  readonly startsWith?: string[];
+}
+export class FieldSelectorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FieldSelectorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endsWith !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endsWith = this._endsWith;
+    }
+    if (this._equals !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.equalTo = this._equals;
+    }
+    if (this._field !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.field = this._field;
+    }
+    if (this._notEndsWith !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notEndsWith = this._notEndsWith;
+    }
+    if (this._notEquals !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notEquals = this._notEquals;
+    }
+    if (this._notStartsWith !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notStartsWith = this._notStartsWith;
+    }
+    if (this._startsWith !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startsWith = this._startsWith;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FieldSelectorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._endsWith = undefined;
+      this._equals = undefined;
+      this._field = undefined;
+      this._notEndsWith = undefined;
+      this._notEquals = undefined;
+      this._notStartsWith = undefined;
+      this._startsWith = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._endsWith = value.endsWith;
+      this._equals = value.equalTo;
+      this._field = value.field;
+      this._notEndsWith = value.notEndsWith;
+      this._notEquals = value.notEquals;
+      this._notStartsWith = value.notStartsWith;
+      this._startsWith = value.startsWith;
+    }
+  }
+
+  // ends_with - computed: true, optional: true, required: false
+  private _endsWith?: string[]; 
+  public get endsWith() {
+    return this.getListAttribute('ends_with');
+  }
+  public set endsWith(value: string[]) {
+    this._endsWith = value;
+  }
+  public resetEndsWith() {
+    this._endsWith = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endsWithInput() {
+    return this._endsWith;
+  }
+
+  // equals - computed: true, optional: true, required: false
+  private _equals?: string[]; 
+  public get equalTo() {
+    return this.getListAttribute('equals');
+  }
+  public set equalTo(value: string[]) {
+    this._equals = value;
+  }
+  public resetEqualTo() {
+    this._equals = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get equalToInput() {
+    return this._equals;
+  }
+
+  // field - computed: true, optional: true, required: false
+  private _field?: string; 
+  public get field() {
+    return this.getStringAttribute('field');
+  }
+  public set field(value: string) {
+    this._field = value;
+  }
+  public resetField() {
+    this._field = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldInput() {
+    return this._field;
+  }
+
+  // not_ends_with - computed: true, optional: true, required: false
+  private _notEndsWith?: string[]; 
+  public get notEndsWith() {
+    return this.getListAttribute('not_ends_with');
+  }
+  public set notEndsWith(value: string[]) {
+    this._notEndsWith = value;
+  }
+  public resetNotEndsWith() {
+    this._notEndsWith = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notEndsWithInput() {
+    return this._notEndsWith;
+  }
+
+  // not_equals - computed: true, optional: true, required: false
+  private _notEquals?: string[]; 
+  public get notEquals() {
+    return this.getListAttribute('not_equals');
+  }
+  public set notEquals(value: string[]) {
+    this._notEquals = value;
+  }
+  public resetNotEquals() {
+    this._notEquals = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notEqualsInput() {
+    return this._notEquals;
+  }
+
+  // not_starts_with - computed: true, optional: true, required: false
+  private _notStartsWith?: string[]; 
+  public get notStartsWith() {
+    return this.getListAttribute('not_starts_with');
+  }
+  public set notStartsWith(value: string[]) {
+    this._notStartsWith = value;
+  }
+  public resetNotStartsWith() {
+    this._notStartsWith = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notStartsWithInput() {
+    return this._notStartsWith;
+  }
+
+  // starts_with - computed: true, optional: true, required: false
+  private _startsWith?: string[]; 
+  public get startsWith() {
+    return this.getListAttribute('starts_with');
+  }
+  public set startsWith(value: string[]) {
+    this._startsWith = value;
+  }
+  public resetStartsWith() {
+    this._startsWith = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startsWithInput() {
+    return this._startsWith;
+  }
+}
+
+export class FieldSelectorPropertyList extends cdktn.ComplexList {
+  public internalValue? : FieldSelectorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FieldSelectorPropertyOutputReference {
+    return new FieldSelectorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AdvancedEventSelectorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name AwsCloudtrailEventDataStore#name}
+  */
+  readonly name?: string;
+  /**
+  * field_selector block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field_selector AwsCloudtrailEventDataStore#field_selector}
+  */
+  readonly fieldSelector?: FieldSelectorProperty[] | cdktn.IResolvable;
+}
+export class AdvancedEventSelectorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AdvancedEventSelectorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._fieldSelector?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fieldSelector = this._fieldSelector?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AdvancedEventSelectorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._fieldSelector.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._fieldSelector.internalValue = value.fieldSelector;
+    }
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // field_selector - computed: false, optional: true, required: false
+  private _fieldSelector = new FieldSelectorPropertyList(this, "field_selector", true);
+  public get fieldSelector() {
+    return this._fieldSelector;
+  }
+  public putFieldSelector(value: FieldSelectorProperty[] | cdktn.IResolvable) {
+    this._fieldSelector.internalValue = value;
+  }
+  public resetFieldSelector() {
+    this._fieldSelector.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldSelectorInput() {
+    return this._fieldSelector.internalValue;
+  }
+}
+
+export class AdvancedEventSelectorPropertyList extends cdktn.ComplexList {
+  public internalValue? : AdvancedEventSelectorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AdvancedEventSelectorPropertyOutputReference {
+    return new AdvancedEventSelectorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#create AwsCloudtrailEventDataStore#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#delete AwsCloudtrailEventDataStore#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#update AwsCloudtrailEventDataStore#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

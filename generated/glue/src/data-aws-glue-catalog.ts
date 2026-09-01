@@ -1,0 +1,977 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface DataAwsGlueCatalogConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#name DataAwsGlueCatalog#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#region DataAwsGlueCatalog#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog aws_glue_catalog}
+*/
+export class DataAwsGlueCatalog extends cdktn.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_glue_catalog";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a DataAwsGlueCatalog resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAwsGlueCatalog to import
+  * @param importFromId The id of the existing DataAwsGlueCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsGlueCatalog to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog aws_glue_catalog} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAwsGlueCatalogConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAwsGlueCatalogConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_glue_catalog',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._name = config.name;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allow_full_table_external_data_access - computed: true, optional: false, required: false
+  public get allowFullTableExternalDataAccess() {
+    return this.getStringAttribute('allow_full_table_external_data_access');
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // catalog_id - computed: true, optional: false, required: false
+  public get catalogId() {
+    return this.getStringAttribute('catalog_id');
+  }
+
+  // catalog_properties - computed: true, optional: false, required: false
+  private _catalogProperties = new DataAwsGlueCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
+  public get catalogProperties() {
+    return this._catalogProperties;
+  }
+
+  // create_database_default_permissions - computed: true, optional: false, required: false
+  private _createDatabaseDefaultPermissions = new DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  public get createDatabaseDefaultPermissions() {
+    return this._createDatabaseDefaultPermissions;
+  }
+
+  // create_table_default_permissions - computed: true, optional: false, required: false
+  private _createTableDefaultPermissions = new DataAwsGlueCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  public get createTableDefaultPermissions() {
+    return this._createTableDefaultPermissions;
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
+  // federated_catalog - computed: true, optional: false, required: false
+  private _federatedCatalog = new DataAwsGlueCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
+  public get federatedCatalog() {
+    return this._federatedCatalog;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: true, optional: false, required: false
+  private _parameters = new cdktn.StringMap(this, "parameters");
+  public get parameters() {
+    return this._parameters;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktn.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
+  }
+
+  // target_redshift_catalog - computed: true, optional: false, required: false
+  private _targetRedshiftCatalog = new DataAwsGlueCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
+  public get targetRedshiftCatalog() {
+    return this._targetRedshiftCatalog;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.DataLakeAccessPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.DataLakeAccessPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.IcebergOptimizationPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.IcebergOptimizationPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogCatalogPropertiesPropertyToTerraform(struct?: DataAwsGlueCatalog.CatalogPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogCatalogPropertiesPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CatalogPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsGlueCatalog.CreateTableDefaultPermissionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogFederatedCatalogPropertyToTerraform(struct?: DataAwsGlueCatalog.FederatedCatalogProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogFederatedCatalogPropertyToHclTerraform(struct?: DataAwsGlueCatalog.FederatedCatalogProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: DataAwsGlueCatalog.TargetRedshiftCatalogProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsGlueCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: DataAwsGlueCatalog.TargetRedshiftCatalogProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export namespace DataAwsGlueCatalog {
+export interface DataLakeAccessPropertiesProperty {
+}
+export class DataLakeAccessPropertiesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLakeAccessPropertiesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLakeAccessPropertiesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // catalog_type - computed: true, optional: false, required: false
+  public get catalogType() {
+    return this.getStringAttribute('catalog_type');
+  }
+
+  // data_lake_access - computed: true, optional: false, required: false
+  public get dataLakeAccess() {
+    return this.getBooleanAttribute('data_lake_access');
+  }
+
+  // data_transfer_role - computed: true, optional: false, required: false
+  public get dataTransferRole() {
+    return this.getStringAttribute('data_transfer_role');
+  }
+
+  // kms_key - computed: true, optional: false, required: false
+  public get kmsKey() {
+    return this.getStringAttribute('kms_key');
+  }
+
+  // managed_workgroup_name - computed: true, optional: false, required: false
+  public get managedWorkgroupName() {
+    return this.getStringAttribute('managed_workgroup_name');
+  }
+
+  // managed_workgroup_status - computed: true, optional: false, required: false
+  public get managedWorkgroupStatus() {
+    return this.getStringAttribute('managed_workgroup_status');
+  }
+
+  // redshift_database_name - computed: true, optional: false, required: false
+  public get redshiftDatabaseName() {
+    return this.getStringAttribute('redshift_database_name');
+  }
+
+  // status_message - computed: true, optional: false, required: false
+  public get statusMessage() {
+    return this.getStringAttribute('status_message');
+  }
+}
+
+export class DataLakeAccessPropertiesPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLakeAccessPropertiesPropertyOutputReference {
+    return new DataLakeAccessPropertiesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface IcebergOptimizationPropertiesProperty {
+}
+export class IcebergOptimizationPropertiesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IcebergOptimizationPropertiesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IcebergOptimizationPropertiesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // compaction - computed: true, optional: false, required: false
+  private _compaction = new cdktn.StringMap(this, "compaction");
+  public get compaction() {
+    return this._compaction;
+  }
+
+  // orphan_file_deletion - computed: true, optional: false, required: false
+  private _orphanFileDeletion = new cdktn.StringMap(this, "orphan_file_deletion");
+  public get orphanFileDeletion() {
+    return this._orphanFileDeletion;
+  }
+
+  // retention - computed: true, optional: false, required: false
+  private _retention = new cdktn.StringMap(this, "retention");
+  public get retention() {
+    return this._retention;
+  }
+
+  // role_arn - computed: true, optional: false, required: false
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+}
+
+export class IcebergOptimizationPropertiesPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IcebergOptimizationPropertiesPropertyOutputReference {
+    return new IcebergOptimizationPropertiesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CatalogPropertiesProperty {
+}
+export class CatalogPropertiesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CatalogPropertiesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CatalogPropertiesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // custom_properties - computed: true, optional: false, required: false
+  private _customProperties = new cdktn.StringMap(this, "custom_properties");
+  public get customProperties() {
+    return this._customProperties;
+  }
+
+  // data_lake_access_properties - computed: true, optional: false, required: false
+  private _dataLakeAccessProperties = new DataLakeAccessPropertiesPropertyList(this, "data_lake_access_properties", false);
+  public get dataLakeAccessProperties() {
+    return this._dataLakeAccessProperties;
+  }
+
+  // iceberg_optimization_properties - computed: true, optional: false, required: false
+  private _icebergOptimizationProperties = new IcebergOptimizationPropertiesPropertyList(this, "iceberg_optimization_properties", false);
+  public get icebergOptimizationProperties() {
+    return this._icebergOptimizationProperties;
+  }
+}
+
+export class CatalogPropertiesPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CatalogPropertiesPropertyOutputReference {
+    return new CatalogPropertiesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CreateDatabaseDefaultPermissionsPrincipalProperty {
+}
+export class CreateDatabaseDefaultPermissionsPrincipalPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateDatabaseDefaultPermissionsPrincipalProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateDatabaseDefaultPermissionsPrincipalProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // data_lake_principal_identifier - computed: true, optional: false, required: false
+  public get dataLakePrincipalIdentifier() {
+    return this.getStringAttribute('data_lake_principal_identifier');
+  }
+}
+
+export class CreateDatabaseDefaultPermissionsPrincipalPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateDatabaseDefaultPermissionsPrincipalPropertyOutputReference {
+    return new CreateDatabaseDefaultPermissionsPrincipalPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CreateDatabaseDefaultPermissionsProperty {
+}
+export class CreateDatabaseDefaultPermissionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateDatabaseDefaultPermissionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateDatabaseDefaultPermissionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // permissions - computed: true, optional: false, required: false
+  public get permissions() {
+    return this.getListAttribute('permissions');
+  }
+
+  // principal - computed: true, optional: false, required: false
+  private _principal = new CreateDatabaseDefaultPermissionsPrincipalPropertyList(this, "principal", false);
+  public get principal() {
+    return this._principal;
+  }
+}
+
+export class CreateDatabaseDefaultPermissionsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateDatabaseDefaultPermissionsPropertyOutputReference {
+    return new CreateDatabaseDefaultPermissionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CreateTableDefaultPermissionsPrincipalProperty {
+}
+export class CreateTableDefaultPermissionsPrincipalPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateTableDefaultPermissionsPrincipalProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateTableDefaultPermissionsPrincipalProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // data_lake_principal_identifier - computed: true, optional: false, required: false
+  public get dataLakePrincipalIdentifier() {
+    return this.getStringAttribute('data_lake_principal_identifier');
+  }
+}
+
+export class CreateTableDefaultPermissionsPrincipalPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateTableDefaultPermissionsPrincipalPropertyOutputReference {
+    return new CreateTableDefaultPermissionsPrincipalPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CreateTableDefaultPermissionsProperty {
+}
+export class CreateTableDefaultPermissionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateTableDefaultPermissionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateTableDefaultPermissionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // permissions - computed: true, optional: false, required: false
+  public get permissions() {
+    return this.getListAttribute('permissions');
+  }
+
+  // principal - computed: true, optional: false, required: false
+  private _principal = new CreateTableDefaultPermissionsPrincipalPropertyList(this, "principal", false);
+  public get principal() {
+    return this._principal;
+  }
+}
+
+export class CreateTableDefaultPermissionsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateTableDefaultPermissionsPropertyOutputReference {
+    return new CreateTableDefaultPermissionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface FederatedCatalogProperty {
+}
+export class FederatedCatalogPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FederatedCatalogProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FederatedCatalogProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // connection_name - computed: true, optional: false, required: false
+  public get connectionName() {
+    return this.getStringAttribute('connection_name');
+  }
+
+  // connection_type - computed: true, optional: false, required: false
+  public get connectionType() {
+    return this.getStringAttribute('connection_type');
+  }
+
+  // identifier - computed: true, optional: false, required: false
+  public get identifier() {
+    return this.getStringAttribute('identifier');
+  }
+}
+
+export class FederatedCatalogPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FederatedCatalogPropertyOutputReference {
+    return new FederatedCatalogPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TargetRedshiftCatalogProperty {
+}
+export class TargetRedshiftCatalogPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TargetRedshiftCatalogProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TargetRedshiftCatalogProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // catalog_arn - computed: true, optional: false, required: false
+  public get catalogArn() {
+    return this.getStringAttribute('catalog_arn');
+  }
+}
+
+export class TargetRedshiftCatalogPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TargetRedshiftCatalogPropertyOutputReference {
+    return new TargetRedshiftCatalogPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

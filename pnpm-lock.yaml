@@ -33,7 +33,1312 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  generated/account_management:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/acm:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/acm_pca:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/amazon_q_business:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/amp:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/amplify:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/api_gateway:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/api_gateway_v2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/app_mesh:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/app_runner:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appconfig:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appfabric:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appflow:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appintegrations:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/application_auto_scaling:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appstream_2_0:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/appsync:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/arc_region_switch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/arc_zonal_shift:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/athena:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/audit_manager:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/auto_scaling:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/auto_scaling_plans:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/backup:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/batch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/bcm_data_exports:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/bedrock:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/bedrock_agentcore:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/bedrock_agents:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/billing:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ce:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/chatbot:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/chime:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/chime_sdk_media_pipelines:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/chime_sdk_voice:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/clean_rooms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloud9:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloud_control_api:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloud_map:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudformation:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudfront:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudfront_keyvaluestore:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudhsm:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudsearch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudtrail:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_application_insights:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_evidently:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_internet_monitor:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_logs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_network_monitor:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_networkflow_monitor:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_observability_admin:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_rum:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cloudwatch_synthetics:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codeartifact:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codebuild:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codecatalyst:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codecommit:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codeconnections:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codedeploy:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codeguru_profiler:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codeguru_reviewer:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codepipeline:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codestar_connections:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/codestar_notifications:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cognito_identity:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cognito_idp:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/comprehend:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/compute_optimizer:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/config:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/connect:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/connect_customer_profiles:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/control_tower:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cost_and_usage_report:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/cost_optimization_hub:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/data_exchange:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/data_pipeline:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/datasync:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/datazone:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/dax:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/detective:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/device_farm:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/devops_guru:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/direct_connect:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/directory_service:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/dlm:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/dms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/documentdb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/documentdb_elastic:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/drs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/dsql:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/dynamodb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ebs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ec2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ec2_image_builder:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ecr:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ecr_public:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ecs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/efs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/eks:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elastic_beanstalk:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elastic_transcoder:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elasticache:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elasticsearch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
   generated/elb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elb_classic:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elemental_mediaconvert:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elemental_medialive:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elemental_mediapackage:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elemental_mediapackage_version_2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/elemental_mediastore:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/emr:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/emr_containers:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/emr_serverless:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/end_user_messaging:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/end_user_messaging_sms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/eventbridge:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/eventbridge_pipes:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/eventbridge_scheduler:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/eventbridge_schemas:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/finspace:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/fis:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/fms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/fsx:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/gamelift:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/global_accelerator:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/glue:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/guardduty:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/iam:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/iam_access_analyzer:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/inspector:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/inspector_classic:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/invoicing:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/iot_core:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ivs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ivs_chat:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kendra:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/keyspaces:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kinesis:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kinesis_analytics:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kinesis_analytics_v2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kinesis_firehose:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kinesis_video:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/kms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/lake_formation:
     devDependencies:
       cdktn:
         specifier: 0.24.0
@@ -51,7 +1356,997 @@ importers:
         specifier: 10.7.0
         version: 10.7.0
 
+  generated/lambda_core:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/lambda_microvms:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/lex_model_building:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/lex_v2_models:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/license_manager:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/lightsail:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/location:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/macie:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/mainframe_modernization:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/managed_grafana:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/memorydb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/meta_data_sources:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/mq:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/msk:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/mskconnect:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/mwaa:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/neptune:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/neptune_analytics:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/network_firewall:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/network_manager:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/oam:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/opensearch:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/opensearch_serverless:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/oracle_database_aws:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/organizations:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/osis:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/outposts:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/outposts_ec2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/payment_cryptography_control_plane:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/polly:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/pricing_calculator:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
   generated/provider:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/qldb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/quicksight:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ram:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/rds:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/recycle_bin:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/redshift:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/redshift_data:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/redshift_serverless:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/rekognition:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/resilience_hub:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/resilience_hub_v2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/resource_explorer:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/resource_groups:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/resource_groups_tagging:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/roles_anywhere:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53_domains:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53_profiles:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53_recovery_control_config:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53_recovery_readiness:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/route_53_resolver:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_control:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_files:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_glacier:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_on_outposts:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_tables:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/s3_vectors:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sagemaker_ai:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/savings_plans:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/secrets_manager:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/security_hub:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/security_lake:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/serverlessrepo:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/service_catalog:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/service_catalog_appregistry:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/service_quotas:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ses:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ses_mail_manager:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sesv2:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sfn:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/shield:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/signer:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sns:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sqs:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ssm:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ssm_contacts:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ssm_incident_manager_incidents:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/ssm_quick_setup:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sso_admin:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sso_identity_store:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/storage_gateway:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/sts:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/swf:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/timestream_for_influxdb:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/timestream_query:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/timestream_write:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/transcribe:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/transfer_family:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/transit_gateway:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/user_experience_customization:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/user_notifications:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/user_notifications_contacts:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/verified_access:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/verified_permissions:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/vpc:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/vpc_ipam:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/vpc_lattice:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/vpn_client:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/vpn_site_to_site:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/waf:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/waf_classic:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/waf_classic_regional:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/wavelength:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/web_services_budgets:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/workmail:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/workspaces:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/workspaces_web:
+    devDependencies:
+      cdktn:
+        specifier: 0.24.0
+        version: 0.24.0(constructs@10.7.0)
+      constructs:
+        specifier: 10.7.0
+        version: 10.7.0
+
+  generated/x_ray:
     devDependencies:
       cdktn:
         specifier: 0.24.0

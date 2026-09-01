@@ -1,0 +1,195 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSagemakerModelPackageGroupPolicyConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy#id AwsSagemakerModelPackageGroupPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy#model_package_group_name AwsSagemakerModelPackageGroupPolicy#model_package_group_name}
+  */
+  readonly modelPackageGroupName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy#region AwsSagemakerModelPackageGroupPolicy#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy#resource_policy AwsSagemakerModelPackageGroupPolicy#resource_policy}
+  */
+  readonly resourcePolicy: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy aws_sagemaker_model_package_group_policy}
+*/
+export class AwsSagemakerModelPackageGroupPolicy extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_sagemaker_model_package_group_policy";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSagemakerModelPackageGroupPolicy resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSagemakerModelPackageGroupPolicy to import
+  * @param importFromId The id of the existing AwsSagemakerModelPackageGroupPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSagemakerModelPackageGroupPolicy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_model_package_group_policy", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_package_group_policy aws_sagemaker_model_package_group_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSagemakerModelPackageGroupPolicyConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSagemakerModelPackageGroupPolicyConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_sagemaker_model_package_group_policy',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._modelPackageGroupName = config.modelPackageGroupName;
+    this._region = config.region;
+    this._resourcePolicy = config.resourcePolicy;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // model_package_group_name - computed: false, optional: false, required: true
+  private _modelPackageGroupName?: string; 
+  public get modelPackageGroupName() {
+    return this.getStringAttribute('model_package_group_name');
+  }
+  public set modelPackageGroupName(value: string) {
+    this._modelPackageGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelPackageGroupNameInput() {
+    return this._modelPackageGroupName;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // resource_policy - computed: false, optional: false, required: true
+  private _resourcePolicy?: string; 
+  public get resourcePolicy() {
+    return this.getStringAttribute('resource_policy');
+  }
+  public set resourcePolicy(value: string) {
+    this._resourcePolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcePolicyInput() {
+    return this._resourcePolicy;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      model_package_group_name: cdktn.stringToTerraform(this._modelPackageGroupName),
+      region: cdktn.stringToTerraform(this._region),
+      resource_policy: cdktn.stringToTerraform(this._resourcePolicy),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      model_package_group_name: {
+        value: cdktn.stringToHclTerraform(this._modelPackageGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_policy: {
+        value: cdktn.stringToHclTerraform(this._resourcePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

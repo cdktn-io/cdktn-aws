@@ -1,0 +1,1385 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsElasticacheServerlessCacheConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#daily_snapshot_time AwsElasticacheServerlessCache#daily_snapshot_time}
+  */
+  readonly dailySnapshotTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#description AwsElasticacheServerlessCache#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#engine AwsElasticacheServerlessCache#engine}
+  */
+  readonly engine: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#kms_key_id AwsElasticacheServerlessCache#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#major_engine_version AwsElasticacheServerlessCache#major_engine_version}
+  */
+  readonly majorEngineVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#name AwsElasticacheServerlessCache#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#network_type AwsElasticacheServerlessCache#network_type}
+  */
+  readonly networkType?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#region AwsElasticacheServerlessCache#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#security_group_ids AwsElasticacheServerlessCache#security_group_ids}
+  */
+  readonly securityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_arns_to_restore AwsElasticacheServerlessCache#snapshot_arns_to_restore}
+  */
+  readonly snapshotArnsToRestore?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#snapshot_retention_limit AwsElasticacheServerlessCache#snapshot_retention_limit}
+  */
+  readonly snapshotRetentionLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#subnet_ids AwsElasticacheServerlessCache#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#tags AwsElasticacheServerlessCache#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#user_group_id AwsElasticacheServerlessCache#user_group_id}
+  */
+  readonly userGroupId?: string;
+  /**
+  * cache_usage_limits block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#cache_usage_limits AwsElasticacheServerlessCache#cache_usage_limits}
+  */
+  readonly cacheUsageLimits?: AwsElasticacheServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#timeouts AwsElasticacheServerlessCache#timeouts}
+  */
+  readonly timeouts?: AwsElasticacheServerlessCache.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache aws_elasticache_serverless_cache}
+*/
+export class AwsElasticacheServerlessCache extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_elasticache_serverless_cache";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsElasticacheServerlessCache resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsElasticacheServerlessCache to import
+  * @param importFromId The id of the existing AwsElasticacheServerlessCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsElasticacheServerlessCache to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_serverless_cache", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache aws_elasticache_serverless_cache} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsElasticacheServerlessCacheConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsElasticacheServerlessCacheConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_elasticache_serverless_cache',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._dailySnapshotTime = config.dailySnapshotTime;
+    this._description = config.description;
+    this._engine = config.engine;
+    this._kmsKeyId = config.kmsKeyId;
+    this._majorEngineVersion = config.majorEngineVersion;
+    this._name = config.name;
+    this._networkType = config.networkType;
+    this._region = config.region;
+    this._securityGroupIds = config.securityGroupIds;
+    this._snapshotArnsToRestore = config.snapshotArnsToRestore;
+    this._snapshotRetentionLimit = config.snapshotRetentionLimit;
+    this._subnetIds = config.subnetIds;
+    this._tags = config.tags;
+    this._userGroupId = config.userGroupId;
+    this._cacheUsageLimits.internalValue = config.cacheUsageLimits;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // daily_snapshot_time - computed: true, optional: true, required: false
+  private _dailySnapshotTime?: string; 
+  public get dailySnapshotTime() {
+    return this.getStringAttribute('daily_snapshot_time');
+  }
+  public set dailySnapshotTime(value: string) {
+    this._dailySnapshotTime = value;
+  }
+  public resetDailySnapshotTime() {
+    this._dailySnapshotTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailySnapshotTimeInput() {
+    return this._dailySnapshotTime;
+  }
+
+  // description - computed: true, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // endpoint - computed: true, optional: false, required: false
+  private _endpoint = new AwsElasticacheServerlessCache.EndpointPropertyList(this, "endpoint", false);
+  public get endpoint() {
+    return this._endpoint;
+  }
+
+  // engine - computed: false, optional: false, required: true
+  private _engine?: string; 
+  public get engine() {
+    return this.getStringAttribute('engine');
+  }
+  public set engine(value: string) {
+    this._engine = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineInput() {
+    return this._engine;
+  }
+
+  // full_engine_version - computed: true, optional: false, required: false
+  public get fullEngineVersion() {
+    return this.getStringAttribute('full_engine_version');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // kms_key_id - computed: false, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // major_engine_version - computed: true, optional: true, required: false
+  private _majorEngineVersion?: string; 
+  public get majorEngineVersion() {
+    return this.getStringAttribute('major_engine_version');
+  }
+  public set majorEngineVersion(value: string) {
+    this._majorEngineVersion = value;
+  }
+  public resetMajorEngineVersion() {
+    this._majorEngineVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get majorEngineVersionInput() {
+    return this._majorEngineVersion;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // network_type - computed: true, optional: true, required: false
+  private _networkType?: string; 
+  public get networkType() {
+    return this.getStringAttribute('network_type');
+  }
+  public set networkType(value: string) {
+    this._networkType = value;
+  }
+  public resetNetworkType() {
+    this._networkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTypeInput() {
+    return this._networkType;
+  }
+
+  // reader_endpoint - computed: true, optional: false, required: false
+  private _readerEndpoint = new AwsElasticacheServerlessCache.ReaderEndpointPropertyList(this, "reader_endpoint", false);
+  public get readerEndpoint() {
+    return this._readerEndpoint;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_group_ids - computed: true, optional: true, required: false
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  public resetSecurityGroupIds() {
+    this._securityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // snapshot_arns_to_restore - computed: false, optional: true, required: false
+  private _snapshotArnsToRestore?: string[]; 
+  public get snapshotArnsToRestore() {
+    return this.getListAttribute('snapshot_arns_to_restore');
+  }
+  public set snapshotArnsToRestore(value: string[]) {
+    this._snapshotArnsToRestore = value;
+  }
+  public resetSnapshotArnsToRestore() {
+    this._snapshotArnsToRestore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotArnsToRestoreInput() {
+    return this._snapshotArnsToRestore;
+  }
+
+  // snapshot_retention_limit - computed: true, optional: true, required: false
+  private _snapshotRetentionLimit?: number; 
+  public get snapshotRetentionLimit() {
+    return this.getNumberAttribute('snapshot_retention_limit');
+  }
+  public set snapshotRetentionLimit(value: number) {
+    this._snapshotRetentionLimit = value;
+  }
+  public resetSnapshotRetentionLimit() {
+    this._snapshotRetentionLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotRetentionLimitInput() {
+    return this._snapshotRetentionLimit;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // subnet_ids - computed: true, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // user_group_id - computed: false, optional: true, required: false
+  private _userGroupId?: string; 
+  public get userGroupId() {
+    return this.getStringAttribute('user_group_id');
+  }
+  public set userGroupId(value: string) {
+    this._userGroupId = value;
+  }
+  public resetUserGroupId() {
+    this._userGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userGroupIdInput() {
+    return this._userGroupId;
+  }
+
+  // cache_usage_limits - computed: false, optional: true, required: false
+  private _cacheUsageLimits = new AwsElasticacheServerlessCache.CacheUsageLimitsPropertyList(this, "cache_usage_limits", false);
+  public get cacheUsageLimits() {
+    return this._cacheUsageLimits;
+  }
+  public putCacheUsageLimits(value: AwsElasticacheServerlessCache.CacheUsageLimitsProperty[] | cdktn.IResolvable) {
+    this._cacheUsageLimits.internalValue = value;
+  }
+  public resetCacheUsageLimits() {
+    this._cacheUsageLimits.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheUsageLimitsInput() {
+    return this._cacheUsageLimits.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsElasticacheServerlessCache.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsElasticacheServerlessCache.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      daily_snapshot_time: cdktn.stringToTerraform(this._dailySnapshotTime),
+      description: cdktn.stringToTerraform(this._description),
+      engine: cdktn.stringToTerraform(this._engine),
+      kms_key_id: cdktn.stringToTerraform(this._kmsKeyId),
+      major_engine_version: cdktn.stringToTerraform(this._majorEngineVersion),
+      name: cdktn.stringToTerraform(this._name),
+      network_type: cdktn.stringToTerraform(this._networkType),
+      region: cdktn.stringToTerraform(this._region),
+      security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
+      snapshot_arns_to_restore: cdktn.listMapper(cdktn.stringToTerraform, false)(this._snapshotArnsToRestore),
+      snapshot_retention_limit: cdktn.numberToTerraform(this._snapshotRetentionLimit),
+      subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      user_group_id: cdktn.stringToTerraform(this._userGroupId),
+      cache_usage_limits: cdktn.listMapper(awsElasticacheServerlessCacheCacheUsageLimitsPropertyToTerraform, true)(this._cacheUsageLimits.internalValue),
+      timeouts: awsElasticacheServerlessCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      daily_snapshot_time: {
+        value: cdktn.stringToHclTerraform(this._dailySnapshotTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      engine: {
+        value: cdktn.stringToHclTerraform(this._engine),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      major_engine_version: {
+        value: cdktn.stringToHclTerraform(this._majorEngineVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_type: {
+        value: cdktn.stringToHclTerraform(this._networkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      snapshot_arns_to_restore: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._snapshotArnsToRestore),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      snapshot_retention_limit: {
+        value: cdktn.numberToHclTerraform(this._snapshotRetentionLimit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._subnetIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      user_group_id: {
+        value: cdktn.stringToHclTerraform(this._userGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cache_usage_limits: {
+        value: cdktn.listMapperHcl(awsElasticacheServerlessCacheCacheUsageLimitsPropertyToHclTerraform, true)(this._cacheUsageLimits.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsElasticacheServerlessCache.CacheUsageLimitsPropertyList",
+      },
+      timeouts: {
+        value: awsElasticacheServerlessCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsElasticacheServerlessCache.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsElasticacheServerlessCacheEndpointPropertyToTerraform(struct?: AwsElasticacheServerlessCache.EndpointProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsElasticacheServerlessCacheEndpointPropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.EndpointProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsElasticacheServerlessCacheReaderEndpointPropertyToTerraform(struct?: AwsElasticacheServerlessCache.ReaderEndpointProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsElasticacheServerlessCacheReaderEndpointPropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.ReaderEndpointProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsElasticacheServerlessCacheDataStoragePropertyToTerraform(struct?: AwsElasticacheServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    maximum: cdktn.numberToTerraform(struct!.maximum),
+    minimum: cdktn.numberToTerraform(struct!.minimum),
+    unit: cdktn.stringToTerraform(struct!.unit),
+  }
+}
+
+
+export function awsElasticacheServerlessCacheDataStoragePropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.DataStorageProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    maximum: {
+      value: cdktn.numberToHclTerraform(struct!.maximum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum: {
+      value: cdktn.numberToHclTerraform(struct!.minimum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    unit: {
+      value: cdktn.stringToHclTerraform(struct!.unit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElasticacheServerlessCacheEcpuPerSecondPropertyToTerraform(struct?: AwsElasticacheServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    maximum: cdktn.numberToTerraform(struct!.maximum),
+    minimum: cdktn.numberToTerraform(struct!.minimum),
+  }
+}
+
+
+export function awsElasticacheServerlessCacheEcpuPerSecondPropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.EcpuPerSecondProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    maximum: {
+      value: cdktn.numberToHclTerraform(struct!.maximum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum: {
+      value: cdktn.numberToHclTerraform(struct!.minimum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElasticacheServerlessCacheCacheUsageLimitsPropertyToTerraform(struct?: AwsElasticacheServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    data_storage: cdktn.listMapper(awsElasticacheServerlessCacheDataStoragePropertyToTerraform, true)(struct!.dataStorage),
+    ecpu_per_second: cdktn.listMapper(awsElasticacheServerlessCacheEcpuPerSecondPropertyToTerraform, true)(struct!.ecpuPerSecond),
+  }
+}
+
+
+export function awsElasticacheServerlessCacheCacheUsageLimitsPropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.CacheUsageLimitsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    data_storage: {
+      value: cdktn.listMapperHcl(awsElasticacheServerlessCacheDataStoragePropertyToHclTerraform, true)(struct!.dataStorage),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataStoragePropertyList",
+    },
+    ecpu_per_second: {
+      value: cdktn.listMapperHcl(awsElasticacheServerlessCacheEcpuPerSecondPropertyToHclTerraform, true)(struct!.ecpuPerSecond),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EcpuPerSecondPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElasticacheServerlessCacheTimeoutsPropertyToTerraform(struct?: AwsElasticacheServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsElasticacheServerlessCacheTimeoutsPropertyToHclTerraform(struct?: AwsElasticacheServerlessCache.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsElasticacheServerlessCache {
+export interface EndpointProperty {
+}
+export class EndpointPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EndpointProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // address - computed: true, optional: false, required: false
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+
+  // port - computed: true, optional: false, required: false
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+}
+
+export class EndpointPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EndpointPropertyOutputReference {
+    return new EndpointPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ReaderEndpointProperty {
+}
+export class ReaderEndpointPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ReaderEndpointProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReaderEndpointProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // address - computed: true, optional: false, required: false
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+
+  // port - computed: true, optional: false, required: false
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+}
+
+export class ReaderEndpointPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ReaderEndpointPropertyOutputReference {
+    return new ReaderEndpointPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataStorageProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum AwsElasticacheServerlessCache#maximum}
+  */
+  readonly maximum?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum AwsElasticacheServerlessCache#minimum}
+  */
+  readonly minimum?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#unit AwsElasticacheServerlessCache#unit}
+  */
+  readonly unit: string;
+}
+export class DataStoragePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataStorageProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maximum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximum = this._maximum;
+    }
+    if (this._minimum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimum = this._minimum;
+    }
+    if (this._unit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unit = this._unit;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataStorageProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._maximum = undefined;
+      this._minimum = undefined;
+      this._unit = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._maximum = value.maximum;
+      this._minimum = value.minimum;
+      this._unit = value.unit;
+    }
+  }
+
+  // maximum - computed: true, optional: true, required: false
+  private _maximum?: number; 
+  public get maximum() {
+    return this.getNumberAttribute('maximum');
+  }
+  public set maximum(value: number) {
+    this._maximum = value;
+  }
+  public resetMaximum() {
+    this._maximum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumInput() {
+    return this._maximum;
+  }
+
+  // minimum - computed: true, optional: true, required: false
+  private _minimum?: number; 
+  public get minimum() {
+    return this.getNumberAttribute('minimum');
+  }
+  public set minimum(value: number) {
+    this._minimum = value;
+  }
+  public resetMinimum() {
+    this._minimum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumInput() {
+    return this._minimum;
+  }
+
+  // unit - computed: false, optional: false, required: true
+  private _unit?: string; 
+  public get unit() {
+    return this.getStringAttribute('unit');
+  }
+  public set unit(value: string) {
+    this._unit = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unitInput() {
+    return this._unit;
+  }
+}
+
+export class DataStoragePropertyList extends cdktn.ComplexList {
+  public internalValue? : DataStorageProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataStoragePropertyOutputReference {
+    return new DataStoragePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EcpuPerSecondProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#maximum AwsElasticacheServerlessCache#maximum}
+  */
+  readonly maximum?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#minimum AwsElasticacheServerlessCache#minimum}
+  */
+  readonly minimum?: number;
+}
+export class EcpuPerSecondPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EcpuPerSecondProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maximum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximum = this._maximum;
+    }
+    if (this._minimum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimum = this._minimum;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EcpuPerSecondProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._maximum = undefined;
+      this._minimum = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._maximum = value.maximum;
+      this._minimum = value.minimum;
+    }
+  }
+
+  // maximum - computed: true, optional: true, required: false
+  private _maximum?: number; 
+  public get maximum() {
+    return this.getNumberAttribute('maximum');
+  }
+  public set maximum(value: number) {
+    this._maximum = value;
+  }
+  public resetMaximum() {
+    this._maximum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumInput() {
+    return this._maximum;
+  }
+
+  // minimum - computed: true, optional: true, required: false
+  private _minimum?: number; 
+  public get minimum() {
+    return this.getNumberAttribute('minimum');
+  }
+  public set minimum(value: number) {
+    this._minimum = value;
+  }
+  public resetMinimum() {
+    this._minimum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumInput() {
+    return this._minimum;
+  }
+}
+
+export class EcpuPerSecondPropertyList extends cdktn.ComplexList {
+  public internalValue? : EcpuPerSecondProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EcpuPerSecondPropertyOutputReference {
+    return new EcpuPerSecondPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CacheUsageLimitsProperty {
+  /**
+  * data_storage block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#data_storage AwsElasticacheServerlessCache#data_storage}
+  */
+  readonly dataStorage?: DataStorageProperty[] | cdktn.IResolvable;
+  /**
+  * ecpu_per_second block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#ecpu_per_second AwsElasticacheServerlessCache#ecpu_per_second}
+  */
+  readonly ecpuPerSecond?: EcpuPerSecondProperty[] | cdktn.IResolvable;
+}
+export class CacheUsageLimitsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CacheUsageLimitsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataStorage?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataStorage = this._dataStorage?.internalValue;
+    }
+    if (this._ecpuPerSecond?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ecpuPerSecond = this._ecpuPerSecond?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CacheUsageLimitsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataStorage.internalValue = undefined;
+      this._ecpuPerSecond.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataStorage.internalValue = value.dataStorage;
+      this._ecpuPerSecond.internalValue = value.ecpuPerSecond;
+    }
+  }
+
+  // data_storage - computed: false, optional: true, required: false
+  private _dataStorage = new DataStoragePropertyList(this, "data_storage", false);
+  public get dataStorage() {
+    return this._dataStorage;
+  }
+  public putDataStorage(value: DataStorageProperty[] | cdktn.IResolvable) {
+    this._dataStorage.internalValue = value;
+  }
+  public resetDataStorage() {
+    this._dataStorage.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataStorageInput() {
+    return this._dataStorage.internalValue;
+  }
+
+  // ecpu_per_second - computed: false, optional: true, required: false
+  private _ecpuPerSecond = new EcpuPerSecondPropertyList(this, "ecpu_per_second", false);
+  public get ecpuPerSecond() {
+    return this._ecpuPerSecond;
+  }
+  public putEcpuPerSecond(value: EcpuPerSecondProperty[] | cdktn.IResolvable) {
+    this._ecpuPerSecond.internalValue = value;
+  }
+  public resetEcpuPerSecond() {
+    this._ecpuPerSecond.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ecpuPerSecondInput() {
+    return this._ecpuPerSecond.internalValue;
+  }
+}
+
+export class CacheUsageLimitsPropertyList extends cdktn.ComplexList {
+  public internalValue? : CacheUsageLimitsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CacheUsageLimitsPropertyOutputReference {
+    return new CacheUsageLimitsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#create AwsElasticacheServerlessCache#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#delete AwsElasticacheServerlessCache#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_serverless_cache#update AwsElasticacheServerlessCache#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

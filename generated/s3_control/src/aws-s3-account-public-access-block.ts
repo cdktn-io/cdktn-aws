@@ -1,0 +1,255 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsS3AccountPublicAccessBlockConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#account_id AwsS3AccountPublicAccessBlock#account_id}
+  */
+  readonly accountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_acls AwsS3AccountPublicAccessBlock#block_public_acls}
+  */
+  readonly blockPublicAcls?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#block_public_policy AwsS3AccountPublicAccessBlock#block_public_policy}
+  */
+  readonly blockPublicPolicy?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#id AwsS3AccountPublicAccessBlock#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#ignore_public_acls AwsS3AccountPublicAccessBlock#ignore_public_acls}
+  */
+  readonly ignorePublicAcls?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#restrict_public_buckets AwsS3AccountPublicAccessBlock#restrict_public_buckets}
+  */
+  readonly restrictPublicBuckets?: boolean | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block aws_s3_account_public_access_block}
+*/
+export class AwsS3AccountPublicAccessBlock extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_s3_account_public_access_block";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsS3AccountPublicAccessBlock resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsS3AccountPublicAccessBlock to import
+  * @param importFromId The id of the existing AwsS3AccountPublicAccessBlock that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsS3AccountPublicAccessBlock to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_account_public_access_block", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_account_public_access_block aws_s3_account_public_access_block} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsS3AccountPublicAccessBlockConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsS3AccountPublicAccessBlockConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_s3_account_public_access_block',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._accountId = config.accountId;
+    this._blockPublicAcls = config.blockPublicAcls;
+    this._blockPublicPolicy = config.blockPublicPolicy;
+    this._id = config.id;
+    this._ignorePublicAcls = config.ignorePublicAcls;
+    this._restrictPublicBuckets = config.restrictPublicBuckets;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // account_id - computed: true, optional: true, required: false
+  private _accountId?: string; 
+  public get accountId() {
+    return this.getStringAttribute('account_id');
+  }
+  public set accountId(value: string) {
+    this._accountId = value;
+  }
+  public resetAccountId() {
+    this._accountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountIdInput() {
+    return this._accountId;
+  }
+
+  // block_public_acls - computed: false, optional: true, required: false
+  private _blockPublicAcls?: boolean | cdktn.IResolvable; 
+  public get blockPublicAcls() {
+    return this.getBooleanAttribute('block_public_acls');
+  }
+  public set blockPublicAcls(value: boolean | cdktn.IResolvable) {
+    this._blockPublicAcls = value;
+  }
+  public resetBlockPublicAcls() {
+    this._blockPublicAcls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blockPublicAclsInput() {
+    return this._blockPublicAcls;
+  }
+
+  // block_public_policy - computed: false, optional: true, required: false
+  private _blockPublicPolicy?: boolean | cdktn.IResolvable; 
+  public get blockPublicPolicy() {
+    return this.getBooleanAttribute('block_public_policy');
+  }
+  public set blockPublicPolicy(value: boolean | cdktn.IResolvable) {
+    this._blockPublicPolicy = value;
+  }
+  public resetBlockPublicPolicy() {
+    this._blockPublicPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blockPublicPolicyInput() {
+    return this._blockPublicPolicy;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ignore_public_acls - computed: false, optional: true, required: false
+  private _ignorePublicAcls?: boolean | cdktn.IResolvable; 
+  public get ignorePublicAcls() {
+    return this.getBooleanAttribute('ignore_public_acls');
+  }
+  public set ignorePublicAcls(value: boolean | cdktn.IResolvable) {
+    this._ignorePublicAcls = value;
+  }
+  public resetIgnorePublicAcls() {
+    this._ignorePublicAcls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignorePublicAclsInput() {
+    return this._ignorePublicAcls;
+  }
+
+  // restrict_public_buckets - computed: false, optional: true, required: false
+  private _restrictPublicBuckets?: boolean | cdktn.IResolvable; 
+  public get restrictPublicBuckets() {
+    return this.getBooleanAttribute('restrict_public_buckets');
+  }
+  public set restrictPublicBuckets(value: boolean | cdktn.IResolvable) {
+    this._restrictPublicBuckets = value;
+  }
+  public resetRestrictPublicBuckets() {
+    this._restrictPublicBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restrictPublicBucketsInput() {
+    return this._restrictPublicBuckets;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      account_id: cdktn.stringToTerraform(this._accountId),
+      block_public_acls: cdktn.booleanToTerraform(this._blockPublicAcls),
+      block_public_policy: cdktn.booleanToTerraform(this._blockPublicPolicy),
+      id: cdktn.stringToTerraform(this._id),
+      ignore_public_acls: cdktn.booleanToTerraform(this._ignorePublicAcls),
+      restrict_public_buckets: cdktn.booleanToTerraform(this._restrictPublicBuckets),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_id: {
+        value: cdktn.stringToHclTerraform(this._accountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      block_public_acls: {
+        value: cdktn.booleanToHclTerraform(this._blockPublicAcls),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      block_public_policy: {
+        value: cdktn.booleanToHclTerraform(this._blockPublicPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ignore_public_acls: {
+        value: cdktn.booleanToHclTerraform(this._ignorePublicAcls),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      restrict_public_buckets: {
+        value: cdktn.booleanToHclTerraform(this._restrictPublicBuckets),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

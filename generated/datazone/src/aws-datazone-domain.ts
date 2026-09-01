@@ -1,0 +1,701 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDatazoneDomainConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#description AwsDatazoneDomain#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_execution_role AwsDatazoneDomain#domain_execution_role}
+  */
+  readonly domainExecutionRole: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#domain_version AwsDatazoneDomain#domain_version}
+  */
+  readonly domainVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#kms_key_identifier AwsDatazoneDomain#kms_key_identifier}
+  */
+  readonly kmsKeyIdentifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#name AwsDatazoneDomain#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#region AwsDatazoneDomain#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#service_role AwsDatazoneDomain#service_role}
+  */
+  readonly serviceRole?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#skip_deletion_check AwsDatazoneDomain#skip_deletion_check}
+  */
+  readonly skipDeletionCheck?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#tags AwsDatazoneDomain#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * single_sign_on block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#single_sign_on AwsDatazoneDomain#single_sign_on}
+  */
+  readonly singleSignOn?: AwsDatazoneDomain.SingleSignOnProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#timeouts AwsDatazoneDomain#timeouts}
+  */
+  readonly timeouts?: AwsDatazoneDomain.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain aws_datazone_domain}
+*/
+export class AwsDatazoneDomain extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_datazone_domain";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDatazoneDomain resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDatazoneDomain to import
+  * @param importFromId The id of the existing AwsDatazoneDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDatazoneDomain to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_domain", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain aws_datazone_domain} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDatazoneDomainConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDatazoneDomainConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_datazone_domain',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._domainExecutionRole = config.domainExecutionRole;
+    this._domainVersion = config.domainVersion;
+    this._kmsKeyIdentifier = config.kmsKeyIdentifier;
+    this._name = config.name;
+    this._region = config.region;
+    this._serviceRole = config.serviceRole;
+    this._skipDeletionCheck = config.skipDeletionCheck;
+    this._tags = config.tags;
+    this._singleSignOn.internalValue = config.singleSignOn;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // domain_execution_role - computed: false, optional: false, required: true
+  private _domainExecutionRole?: string; 
+  public get domainExecutionRole() {
+    return this.getStringAttribute('domain_execution_role');
+  }
+  public set domainExecutionRole(value: string) {
+    this._domainExecutionRole = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainExecutionRoleInput() {
+    return this._domainExecutionRole;
+  }
+
+  // domain_version - computed: true, optional: true, required: false
+  private _domainVersion?: string; 
+  public get domainVersion() {
+    return this.getStringAttribute('domain_version');
+  }
+  public set domainVersion(value: string) {
+    this._domainVersion = value;
+  }
+  public resetDomainVersion() {
+    this._domainVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainVersionInput() {
+    return this._domainVersion;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // kms_key_identifier - computed: false, optional: true, required: false
+  private _kmsKeyIdentifier?: string; 
+  public get kmsKeyIdentifier() {
+    return this.getStringAttribute('kms_key_identifier');
+  }
+  public set kmsKeyIdentifier(value: string) {
+    this._kmsKeyIdentifier = value;
+  }
+  public resetKmsKeyIdentifier() {
+    this._kmsKeyIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdentifierInput() {
+    return this._kmsKeyIdentifier;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // portal_url - computed: true, optional: false, required: false
+  public get portalUrl() {
+    return this.getStringAttribute('portal_url');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // root_domain_unit_id - computed: true, optional: false, required: false
+  public get rootDomainUnitId() {
+    return this.getStringAttribute('root_domain_unit_id');
+  }
+
+  // service_role - computed: false, optional: true, required: false
+  private _serviceRole?: string; 
+  public get serviceRole() {
+    return this.getStringAttribute('service_role');
+  }
+  public set serviceRole(value: string) {
+    this._serviceRole = value;
+  }
+  public resetServiceRole() {
+    this._serviceRole = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRoleInput() {
+    return this._serviceRole;
+  }
+
+  // skip_deletion_check - computed: false, optional: true, required: false
+  private _skipDeletionCheck?: boolean | cdktn.IResolvable; 
+  public get skipDeletionCheck() {
+    return this.getBooleanAttribute('skip_deletion_check');
+  }
+  public set skipDeletionCheck(value: boolean | cdktn.IResolvable) {
+    this._skipDeletionCheck = value;
+  }
+  public resetSkipDeletionCheck() {
+    this._skipDeletionCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipDeletionCheckInput() {
+    return this._skipDeletionCheck;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // single_sign_on - computed: false, optional: true, required: false
+  private _singleSignOn = new AwsDatazoneDomain.SingleSignOnPropertyList(this, "single_sign_on", false);
+  public get singleSignOn() {
+    return this._singleSignOn;
+  }
+  public putSingleSignOn(value: AwsDatazoneDomain.SingleSignOnProperty[] | cdktn.IResolvable) {
+    this._singleSignOn.internalValue = value;
+  }
+  public resetSingleSignOn() {
+    this._singleSignOn.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singleSignOnInput() {
+    return this._singleSignOn.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDatazoneDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDatazoneDomain.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      domain_execution_role: cdktn.stringToTerraform(this._domainExecutionRole),
+      domain_version: cdktn.stringToTerraform(this._domainVersion),
+      kms_key_identifier: cdktn.stringToTerraform(this._kmsKeyIdentifier),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      service_role: cdktn.stringToTerraform(this._serviceRole),
+      skip_deletion_check: cdktn.booleanToTerraform(this._skipDeletionCheck),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      single_sign_on: cdktn.listMapper(awsDatazoneDomainSingleSignOnPropertyToTerraform, true)(this._singleSignOn.internalValue),
+      timeouts: awsDatazoneDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_execution_role: {
+        value: cdktn.stringToHclTerraform(this._domainExecutionRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_version: {
+        value: cdktn.stringToHclTerraform(this._domainVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_identifier: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_role: {
+        value: cdktn.stringToHclTerraform(this._serviceRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      skip_deletion_check: {
+        value: cdktn.booleanToHclTerraform(this._skipDeletionCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      single_sign_on: {
+        value: cdktn.listMapperHcl(awsDatazoneDomainSingleSignOnPropertyToHclTerraform, true)(this._singleSignOn.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDatazoneDomain.SingleSignOnPropertyList",
+      },
+      timeouts: {
+        value: awsDatazoneDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDatazoneDomain.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDatazoneDomainSingleSignOnPropertyToTerraform(struct?: AwsDatazoneDomain.SingleSignOnProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    type: cdktn.stringToTerraform(struct!.type),
+    user_assignment: cdktn.stringToTerraform(struct!.userAssignment),
+  }
+}
+
+
+export function awsDatazoneDomainSingleSignOnPropertyToHclTerraform(struct?: AwsDatazoneDomain.SingleSignOnProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_assignment: {
+      value: cdktn.stringToHclTerraform(struct!.userAssignment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDatazoneDomainTimeoutsPropertyToTerraform(struct?: AwsDatazoneDomain.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsDatazoneDomainTimeoutsPropertyToHclTerraform(struct?: AwsDatazoneDomain.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDatazoneDomain {
+export interface SingleSignOnProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#type AwsDatazoneDomain#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#user_assignment AwsDatazoneDomain#user_assignment}
+  */
+  readonly userAssignment?: string;
+}
+export class SingleSignOnPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SingleSignOnProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._userAssignment !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignment = this._userAssignment;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SingleSignOnProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+      this._userAssignment = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+      this._userAssignment = value.userAssignment;
+    }
+  }
+
+  // type - computed: true, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // user_assignment - computed: false, optional: true, required: false
+  private _userAssignment?: string; 
+  public get userAssignment() {
+    return this.getStringAttribute('user_assignment');
+  }
+  public set userAssignment(value: string) {
+    this._userAssignment = value;
+  }
+  public resetUserAssignment() {
+    this._userAssignment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignmentInput() {
+    return this._userAssignment;
+  }
+}
+
+export class SingleSignOnPropertyList extends cdktn.ComplexList {
+  public internalValue? : SingleSignOnProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SingleSignOnPropertyOutputReference {
+    return new SingleSignOnPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#create AwsDatazoneDomain#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_domain#delete AwsDatazoneDomain#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

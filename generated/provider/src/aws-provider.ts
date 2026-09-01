@@ -231,6 +231,7 @@ export interface AwsProviderConfig {
   readonly ignoreTags?: AwsProvider.IgnoreTagsProperty[] | cdktn.IResolvable;
 }
 
+import { AwsProviderFunctions } from './provider-functions';
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs aws}
 */
@@ -892,6 +893,21 @@ export class AwsProvider extends cdktn.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get ignoreTagsInput() {
     return this._ignoreTags;
+  }
+
+  // ==========================
+  // PROVIDER-DEFINED FUNCTIONS
+  // ==========================
+  private _functions?: AwsProviderFunctions;
+
+  /**
+  * Provider-defined functions of the aws provider.
+  */
+  public get functions(): AwsProviderFunctions {
+    if (!this._functions) {
+      this._functions = new AwsProviderFunctions(this.terraformResourceType);
+    }
+    return this._functions;
   }
 
   // =========

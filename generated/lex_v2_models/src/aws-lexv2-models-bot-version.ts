@@ -1,0 +1,500 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsLexv2ModelsBotVersionConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_id AwsLexv2ModelsBotVersion#bot_id}
+  */
+  readonly botId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_version AwsLexv2ModelsBotVersion#bot_version}
+  */
+  readonly botVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#description AwsLexv2ModelsBotVersion#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#locale_specification AwsLexv2ModelsBotVersion#locale_specification}
+  */
+  readonly localeSpecification: { [key: string]: AwsLexv2ModelsBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#region AwsLexv2ModelsBotVersion#region}
+  */
+  readonly region?: string;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#timeouts AwsLexv2ModelsBotVersion#timeouts}
+  */
+  readonly timeouts?: AwsLexv2ModelsBotVersion.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version aws_lexv2models_bot_version}
+*/
+export class AwsLexv2ModelsBotVersion extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_lexv2models_bot_version";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsLexv2ModelsBotVersion resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsLexv2ModelsBotVersion to import
+  * @param importFromId The id of the existing AwsLexv2ModelsBotVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLexv2ModelsBotVersion to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_bot_version", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version aws_lexv2models_bot_version} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsLexv2ModelsBotVersionConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsLexv2ModelsBotVersionConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_lexv2models_bot_version',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._botId = config.botId;
+    this._botVersion = config.botVersion;
+    this._description = config.description;
+    this._localeSpecification.internalValue = config.localeSpecification;
+    this._region = config.region;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // bot_id - computed: false, optional: false, required: true
+  private _botId?: string; 
+  public get botId() {
+    return this.getStringAttribute('bot_id');
+  }
+  public set botId(value: string) {
+    this._botId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get botIdInput() {
+    return this._botId;
+  }
+
+  // bot_version - computed: true, optional: true, required: false
+  private _botVersion?: string; 
+  public get botVersion() {
+    return this.getStringAttribute('bot_version');
+  }
+  public set botVersion(value: string) {
+    this._botVersion = value;
+  }
+  public resetBotVersion() {
+    this._botVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get botVersionInput() {
+    return this._botVersion;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // locale_specification - computed: false, optional: false, required: true
+  private _localeSpecification = new AwsLexv2ModelsBotVersion.LocaleSpecificationPropertyMap(this, "locale_specification");
+  public get localeSpecification() {
+    return this._localeSpecification;
+  }
+  public putLocaleSpecification(value: { [key: string]: AwsLexv2ModelsBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable) {
+    this._localeSpecification.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localeSpecificationInput() {
+    return this._localeSpecification.internalValue;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsLexv2ModelsBotVersion.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsLexv2ModelsBotVersion.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      bot_id: cdktn.stringToTerraform(this._botId),
+      bot_version: cdktn.stringToTerraform(this._botVersion),
+      description: cdktn.stringToTerraform(this._description),
+      locale_specification: cdktn.hashMapper(awsLexv2ModelsBotVersionLocaleSpecificationPropertyToTerraform)(this._localeSpecification.internalValue),
+      region: cdktn.stringToTerraform(this._region),
+      timeouts: awsLexv2ModelsBotVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bot_id: {
+        value: cdktn.stringToHclTerraform(this._botId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bot_version: {
+        value: cdktn.stringToHclTerraform(this._botVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      locale_specification: {
+        value: cdktn.hashMapperHcl(awsLexv2ModelsBotVersionLocaleSpecificationPropertyToHclTerraform)(this._localeSpecification.internalValue),
+        isBlock: true,
+        type: "map",
+        storageClassType: "AwsLexv2ModelsBotVersion.LocaleSpecificationPropertyMap",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: awsLexv2ModelsBotVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsLexv2ModelsBotVersion.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsLexv2ModelsBotVersionLocaleSpecificationPropertyToTerraform(struct?: AwsLexv2ModelsBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    source_bot_version: cdktn.stringToTerraform(struct!.sourceBotVersion),
+  }
+}
+
+
+export function awsLexv2ModelsBotVersionLocaleSpecificationPropertyToHclTerraform(struct?: AwsLexv2ModelsBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    source_bot_version: {
+      value: cdktn.stringToHclTerraform(struct!.sourceBotVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLexv2ModelsBotVersionTimeoutsPropertyToTerraform(struct?: AwsLexv2ModelsBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsLexv2ModelsBotVersionTimeoutsPropertyToHclTerraform(struct?: AwsLexv2ModelsBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsLexv2ModelsBotVersion {
+export interface LocaleSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#source_bot_version AwsLexv2ModelsBotVersion#source_bot_version}
+  */
+  readonly sourceBotVersion: string;
+}
+export class LocaleSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectKey the key of this item in the map
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectKey: string) {
+    super(terraformResource, terraformAttribute, false, complexObjectKey);
+  }
+
+  public get internalValue(): LocaleSpecificationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceBotVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceBotVersion = this._sourceBotVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LocaleSpecificationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._sourceBotVersion = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._sourceBotVersion = value.sourceBotVersion;
+    }
+  }
+
+  // source_bot_version - computed: false, optional: false, required: true
+  private _sourceBotVersion?: string; 
+  public get sourceBotVersion() {
+    return this.getStringAttribute('source_bot_version');
+  }
+  public set sourceBotVersion(value: string) {
+    this._sourceBotVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceBotVersionInput() {
+    return this._sourceBotVersion;
+  }
+}
+
+export class LocaleSpecificationPropertyMap extends cdktn.ComplexMap {
+  public internalValue? : { [key: string]: LocaleSpecificationProperty } | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute);
+  }
+
+  /**
+  * @param key the key of the item to return
+  */
+  public get(key: string): LocaleSpecificationPropertyOutputReference {
+    return new LocaleSpecificationPropertyOutputReference(this.terraformResource, this.terraformAttribute, key);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#create AwsLexv2ModelsBotVersion#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#delete AwsLexv2ModelsBotVersion#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

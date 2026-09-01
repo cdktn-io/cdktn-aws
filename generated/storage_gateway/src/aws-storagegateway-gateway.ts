@@ -1,0 +1,1305 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsStoragegatewayGatewayConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#activation_key AwsStoragegatewayGateway#activation_key}
+  */
+  readonly activationKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_download_rate_limit_in_bits_per_sec AwsStoragegatewayGateway#average_download_rate_limit_in_bits_per_sec}
+  */
+  readonly averageDownloadRateLimitInBitsPerSec?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#average_upload_rate_limit_in_bits_per_sec AwsStoragegatewayGateway#average_upload_rate_limit_in_bits_per_sec}
+  */
+  readonly averageUploadRateLimitInBitsPerSec?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#cloudwatch_log_group_arn AwsStoragegatewayGateway#cloudwatch_log_group_arn}
+  */
+  readonly cloudwatchLogGroupArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_ip_address AwsStoragegatewayGateway#gateway_ip_address}
+  */
+  readonly gatewayIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_name AwsStoragegatewayGateway#gateway_name}
+  */
+  readonly gatewayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_timezone AwsStoragegatewayGateway#gateway_timezone}
+  */
+  readonly gatewayTimezone: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_type AwsStoragegatewayGateway#gateway_type}
+  */
+  readonly gatewayType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#gateway_vpc_endpoint AwsStoragegatewayGateway#gateway_vpc_endpoint}
+  */
+  readonly gatewayVpcEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#id AwsStoragegatewayGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#medium_changer_type AwsStoragegatewayGateway#medium_changer_type}
+  */
+  readonly mediumChangerType?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#region AwsStoragegatewayGateway#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_file_share_visibility AwsStoragegatewayGateway#smb_file_share_visibility}
+  */
+  readonly smbFileShareVisibility?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_guest_password AwsStoragegatewayGateway#smb_guest_password}
+  */
+  readonly smbGuestPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_security_strategy AwsStoragegatewayGateway#smb_security_strategy}
+  */
+  readonly smbSecurityStrategy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags AwsStoragegatewayGateway#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tags_all AwsStoragegatewayGateway#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#tape_drive_type AwsStoragegatewayGateway#tape_drive_type}
+  */
+  readonly tapeDriveType?: string;
+  /**
+  * maintenance_start_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#maintenance_start_time AwsStoragegatewayGateway#maintenance_start_time}
+  */
+  readonly maintenanceStartTime?: AwsStoragegatewayGateway.MaintenanceStartTimeProperty;
+  /**
+  * smb_active_directory_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#smb_active_directory_settings AwsStoragegatewayGateway#smb_active_directory_settings}
+  */
+  readonly smbActiveDirectorySettings?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeouts AwsStoragegatewayGateway#timeouts}
+  */
+  readonly timeouts?: AwsStoragegatewayGateway.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway aws_storagegateway_gateway}
+*/
+export class AwsStoragegatewayGateway extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_storagegateway_gateway";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsStoragegatewayGateway resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsStoragegatewayGateway to import
+  * @param importFromId The id of the existing AwsStoragegatewayGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStoragegatewayGateway to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_gateway", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway aws_storagegateway_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsStoragegatewayGatewayConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsStoragegatewayGatewayConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_storagegateway_gateway',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._activationKey = config.activationKey;
+    this._averageDownloadRateLimitInBitsPerSec = config.averageDownloadRateLimitInBitsPerSec;
+    this._averageUploadRateLimitInBitsPerSec = config.averageUploadRateLimitInBitsPerSec;
+    this._cloudwatchLogGroupArn = config.cloudwatchLogGroupArn;
+    this._gatewayIpAddress = config.gatewayIpAddress;
+    this._gatewayName = config.gatewayName;
+    this._gatewayTimezone = config.gatewayTimezone;
+    this._gatewayType = config.gatewayType;
+    this._gatewayVpcEndpoint = config.gatewayVpcEndpoint;
+    this._id = config.id;
+    this._mediumChangerType = config.mediumChangerType;
+    this._region = config.region;
+    this._smbFileShareVisibility = config.smbFileShareVisibility;
+    this._smbGuestPassword = config.smbGuestPassword;
+    this._smbSecurityStrategy = config.smbSecurityStrategy;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._tapeDriveType = config.tapeDriveType;
+    this._maintenanceStartTime.internalValue = config.maintenanceStartTime;
+    this._smbActiveDirectorySettings.internalValue = config.smbActiveDirectorySettings;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // activation_key - computed: true, optional: true, required: false
+  private _activationKey?: string; 
+  public get activationKey() {
+    return this.getStringAttribute('activation_key');
+  }
+  public set activationKey(value: string) {
+    this._activationKey = value;
+  }
+  public resetActivationKey() {
+    this._activationKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activationKeyInput() {
+    return this._activationKey;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // average_download_rate_limit_in_bits_per_sec - computed: false, optional: true, required: false
+  private _averageDownloadRateLimitInBitsPerSec?: number; 
+  public get averageDownloadRateLimitInBitsPerSec() {
+    return this.getNumberAttribute('average_download_rate_limit_in_bits_per_sec');
+  }
+  public set averageDownloadRateLimitInBitsPerSec(value: number) {
+    this._averageDownloadRateLimitInBitsPerSec = value;
+  }
+  public resetAverageDownloadRateLimitInBitsPerSec() {
+    this._averageDownloadRateLimitInBitsPerSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get averageDownloadRateLimitInBitsPerSecInput() {
+    return this._averageDownloadRateLimitInBitsPerSec;
+  }
+
+  // average_upload_rate_limit_in_bits_per_sec - computed: false, optional: true, required: false
+  private _averageUploadRateLimitInBitsPerSec?: number; 
+  public get averageUploadRateLimitInBitsPerSec() {
+    return this.getNumberAttribute('average_upload_rate_limit_in_bits_per_sec');
+  }
+  public set averageUploadRateLimitInBitsPerSec(value: number) {
+    this._averageUploadRateLimitInBitsPerSec = value;
+  }
+  public resetAverageUploadRateLimitInBitsPerSec() {
+    this._averageUploadRateLimitInBitsPerSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get averageUploadRateLimitInBitsPerSecInput() {
+    return this._averageUploadRateLimitInBitsPerSec;
+  }
+
+  // cloudwatch_log_group_arn - computed: false, optional: true, required: false
+  private _cloudwatchLogGroupArn?: string; 
+  public get cloudwatchLogGroupArn() {
+    return this.getStringAttribute('cloudwatch_log_group_arn');
+  }
+  public set cloudwatchLogGroupArn(value: string) {
+    this._cloudwatchLogGroupArn = value;
+  }
+  public resetCloudwatchLogGroupArn() {
+    this._cloudwatchLogGroupArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchLogGroupArnInput() {
+    return this._cloudwatchLogGroupArn;
+  }
+
+  // ec2_instance_id - computed: true, optional: false, required: false
+  public get ec2InstanceId() {
+    return this.getStringAttribute('ec2_instance_id');
+  }
+
+  // endpoint_type - computed: true, optional: false, required: false
+  public get endpointType() {
+    return this.getStringAttribute('endpoint_type');
+  }
+
+  // gateway_id - computed: true, optional: false, required: false
+  public get gatewayId() {
+    return this.getStringAttribute('gateway_id');
+  }
+
+  // gateway_ip_address - computed: true, optional: true, required: false
+  private _gatewayIpAddress?: string; 
+  public get gatewayIpAddress() {
+    return this.getStringAttribute('gateway_ip_address');
+  }
+  public set gatewayIpAddress(value: string) {
+    this._gatewayIpAddress = value;
+  }
+  public resetGatewayIpAddress() {
+    this._gatewayIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayIpAddressInput() {
+    return this._gatewayIpAddress;
+  }
+
+  // gateway_name - computed: false, optional: false, required: true
+  private _gatewayName?: string; 
+  public get gatewayName() {
+    return this.getStringAttribute('gateway_name');
+  }
+  public set gatewayName(value: string) {
+    this._gatewayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayNameInput() {
+    return this._gatewayName;
+  }
+
+  // gateway_network_interface - computed: true, optional: false, required: false
+  private _gatewayNetworkInterface = new AwsStoragegatewayGateway.GatewayNetworkInterfacePropertyList(this, "gateway_network_interface", false);
+  public get gatewayNetworkInterface() {
+    return this._gatewayNetworkInterface;
+  }
+
+  // gateway_timezone - computed: false, optional: false, required: true
+  private _gatewayTimezone?: string; 
+  public get gatewayTimezone() {
+    return this.getStringAttribute('gateway_timezone');
+  }
+  public set gatewayTimezone(value: string) {
+    this._gatewayTimezone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayTimezoneInput() {
+    return this._gatewayTimezone;
+  }
+
+  // gateway_type - computed: false, optional: true, required: false
+  private _gatewayType?: string; 
+  public get gatewayType() {
+    return this.getStringAttribute('gateway_type');
+  }
+  public set gatewayType(value: string) {
+    this._gatewayType = value;
+  }
+  public resetGatewayType() {
+    this._gatewayType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayTypeInput() {
+    return this._gatewayType;
+  }
+
+  // gateway_vpc_endpoint - computed: false, optional: true, required: false
+  private _gatewayVpcEndpoint?: string; 
+  public get gatewayVpcEndpoint() {
+    return this.getStringAttribute('gateway_vpc_endpoint');
+  }
+  public set gatewayVpcEndpoint(value: string) {
+    this._gatewayVpcEndpoint = value;
+  }
+  public resetGatewayVpcEndpoint() {
+    this._gatewayVpcEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayVpcEndpointInput() {
+    return this._gatewayVpcEndpoint;
+  }
+
+  // host_environment - computed: true, optional: false, required: false
+  public get hostEnvironment() {
+    return this.getStringAttribute('host_environment');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // medium_changer_type - computed: false, optional: true, required: false
+  private _mediumChangerType?: string; 
+  public get mediumChangerType() {
+    return this.getStringAttribute('medium_changer_type');
+  }
+  public set mediumChangerType(value: string) {
+    this._mediumChangerType = value;
+  }
+  public resetMediumChangerType() {
+    this._mediumChangerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mediumChangerTypeInput() {
+    return this._mediumChangerType;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // smb_file_share_visibility - computed: false, optional: true, required: false
+  private _smbFileShareVisibility?: boolean | cdktn.IResolvable; 
+  public get smbFileShareVisibility() {
+    return this.getBooleanAttribute('smb_file_share_visibility');
+  }
+  public set smbFileShareVisibility(value: boolean | cdktn.IResolvable) {
+    this._smbFileShareVisibility = value;
+  }
+  public resetSmbFileShareVisibility() {
+    this._smbFileShareVisibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbFileShareVisibilityInput() {
+    return this._smbFileShareVisibility;
+  }
+
+  // smb_guest_password - computed: false, optional: true, required: false
+  private _smbGuestPassword?: string; 
+  public get smbGuestPassword() {
+    return this.getStringAttribute('smb_guest_password');
+  }
+  public set smbGuestPassword(value: string) {
+    this._smbGuestPassword = value;
+  }
+  public resetSmbGuestPassword() {
+    this._smbGuestPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbGuestPasswordInput() {
+    return this._smbGuestPassword;
+  }
+
+  // smb_security_strategy - computed: true, optional: true, required: false
+  private _smbSecurityStrategy?: string; 
+  public get smbSecurityStrategy() {
+    return this.getStringAttribute('smb_security_strategy');
+  }
+  public set smbSecurityStrategy(value: string) {
+    this._smbSecurityStrategy = value;
+  }
+  public resetSmbSecurityStrategy() {
+    this._smbSecurityStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbSecurityStrategyInput() {
+    return this._smbSecurityStrategy;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // tape_drive_type - computed: false, optional: true, required: false
+  private _tapeDriveType?: string; 
+  public get tapeDriveType() {
+    return this.getStringAttribute('tape_drive_type');
+  }
+  public set tapeDriveType(value: string) {
+    this._tapeDriveType = value;
+  }
+  public resetTapeDriveType() {
+    this._tapeDriveType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tapeDriveTypeInput() {
+    return this._tapeDriveType;
+  }
+
+  // maintenance_start_time - computed: false, optional: true, required: false
+  private _maintenanceStartTime = new AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference(this, "maintenance_start_time");
+  public get maintenanceStartTime() {
+    return this._maintenanceStartTime;
+  }
+  public putMaintenanceStartTime(value: AwsStoragegatewayGateway.MaintenanceStartTimeProperty) {
+    this._maintenanceStartTime.internalValue = value;
+  }
+  public resetMaintenanceStartTime() {
+    this._maintenanceStartTime.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceStartTimeInput() {
+    return this._maintenanceStartTime.internalValue;
+  }
+
+  // smb_active_directory_settings - computed: false, optional: true, required: false
+  private _smbActiveDirectorySettings = new AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference(this, "smb_active_directory_settings");
+  public get smbActiveDirectorySettings() {
+    return this._smbActiveDirectorySettings;
+  }
+  public putSmbActiveDirectorySettings(value: AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty) {
+    this._smbActiveDirectorySettings.internalValue = value;
+  }
+  public resetSmbActiveDirectorySettings() {
+    this._smbActiveDirectorySettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbActiveDirectorySettingsInput() {
+    return this._smbActiveDirectorySettings.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsStoragegatewayGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsStoragegatewayGateway.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      activation_key: cdktn.stringToTerraform(this._activationKey),
+      average_download_rate_limit_in_bits_per_sec: cdktn.numberToTerraform(this._averageDownloadRateLimitInBitsPerSec),
+      average_upload_rate_limit_in_bits_per_sec: cdktn.numberToTerraform(this._averageUploadRateLimitInBitsPerSec),
+      cloudwatch_log_group_arn: cdktn.stringToTerraform(this._cloudwatchLogGroupArn),
+      gateway_ip_address: cdktn.stringToTerraform(this._gatewayIpAddress),
+      gateway_name: cdktn.stringToTerraform(this._gatewayName),
+      gateway_timezone: cdktn.stringToTerraform(this._gatewayTimezone),
+      gateway_type: cdktn.stringToTerraform(this._gatewayType),
+      gateway_vpc_endpoint: cdktn.stringToTerraform(this._gatewayVpcEndpoint),
+      id: cdktn.stringToTerraform(this._id),
+      medium_changer_type: cdktn.stringToTerraform(this._mediumChangerType),
+      region: cdktn.stringToTerraform(this._region),
+      smb_file_share_visibility: cdktn.booleanToTerraform(this._smbFileShareVisibility),
+      smb_guest_password: cdktn.stringToTerraform(this._smbGuestPassword),
+      smb_security_strategy: cdktn.stringToTerraform(this._smbSecurityStrategy),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      tape_drive_type: cdktn.stringToTerraform(this._tapeDriveType),
+      maintenance_start_time: awsStoragegatewayGatewayMaintenanceStartTimePropertyToTerraform(this._maintenanceStartTime.internalValue),
+      smb_active_directory_settings: awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToTerraform(this._smbActiveDirectorySettings.internalValue),
+      timeouts: awsStoragegatewayGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      activation_key: {
+        value: cdktn.stringToHclTerraform(this._activationKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      average_download_rate_limit_in_bits_per_sec: {
+        value: cdktn.numberToHclTerraform(this._averageDownloadRateLimitInBitsPerSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      average_upload_rate_limit_in_bits_per_sec: {
+        value: cdktn.numberToHclTerraform(this._averageUploadRateLimitInBitsPerSec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      cloudwatch_log_group_arn: {
+        value: cdktn.stringToHclTerraform(this._cloudwatchLogGroupArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_ip_address: {
+        value: cdktn.stringToHclTerraform(this._gatewayIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_name: {
+        value: cdktn.stringToHclTerraform(this._gatewayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_timezone: {
+        value: cdktn.stringToHclTerraform(this._gatewayTimezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_type: {
+        value: cdktn.stringToHclTerraform(this._gatewayType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_vpc_endpoint: {
+        value: cdktn.stringToHclTerraform(this._gatewayVpcEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      medium_changer_type: {
+        value: cdktn.stringToHclTerraform(this._mediumChangerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      smb_file_share_visibility: {
+        value: cdktn.booleanToHclTerraform(this._smbFileShareVisibility),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      smb_guest_password: {
+        value: cdktn.stringToHclTerraform(this._smbGuestPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      smb_security_strategy: {
+        value: cdktn.stringToHclTerraform(this._smbSecurityStrategy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tape_drive_type: {
+        value: cdktn.stringToHclTerraform(this._tapeDriveType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maintenance_start_time: {
+        value: awsStoragegatewayGatewayMaintenanceStartTimePropertyToHclTerraform(this._maintenanceStartTime.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsStoragegatewayGateway.MaintenanceStartTimePropertyList",
+      },
+      smb_active_directory_settings: {
+        value: awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(this._smbActiveDirectorySettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyList",
+      },
+      timeouts: {
+        value: awsStoragegatewayGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsStoragegatewayGateway.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToTerraform(struct?: AwsStoragegatewayGateway.GatewayNetworkInterfaceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsStoragegatewayGatewayGatewayNetworkInterfacePropertyToHclTerraform(struct?: AwsStoragegatewayGateway.GatewayNetworkInterfaceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToTerraform(struct?: AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference | AwsStoragegatewayGateway.MaintenanceStartTimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    day_of_month: cdktn.stringToTerraform(struct!.dayOfMonth),
+    day_of_week: cdktn.stringToTerraform(struct!.dayOfWeek),
+    hour_of_day: cdktn.numberToTerraform(struct!.hourOfDay),
+    minute_of_hour: cdktn.numberToTerraform(struct!.minuteOfHour),
+  }
+}
+
+
+export function awsStoragegatewayGatewayMaintenanceStartTimePropertyToHclTerraform(struct?: AwsStoragegatewayGateway.MaintenanceStartTimePropertyOutputReference | AwsStoragegatewayGateway.MaintenanceStartTimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    day_of_month: {
+      value: cdktn.stringToHclTerraform(struct!.dayOfMonth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    day_of_week: {
+      value: cdktn.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hour_of_day: {
+      value: cdktn.numberToHclTerraform(struct!.hourOfDay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minute_of_hour: {
+      value: cdktn.numberToHclTerraform(struct!.minuteOfHour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToTerraform(struct?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference | AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    domain_controllers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.domainControllers),
+    domain_name: cdktn.stringToTerraform(struct!.domainName),
+    organizational_unit: cdktn.stringToTerraform(struct!.organizationalUnit),
+    password: cdktn.stringToTerraform(struct!.password),
+    timeout_in_seconds: cdktn.numberToTerraform(struct!.timeoutInSeconds),
+    username: cdktn.stringToTerraform(struct!.username),
+  }
+}
+
+
+export function awsStoragegatewayGatewaySmbActiveDirectorySettingsPropertyToHclTerraform(struct?: AwsStoragegatewayGateway.SmbActiveDirectorySettingsPropertyOutputReference | AwsStoragegatewayGateway.SmbActiveDirectorySettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    domain_controllers: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.domainControllers),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    domain_name: {
+      value: cdktn.stringToHclTerraform(struct!.domainName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit: {
+      value: cdktn.stringToHclTerraform(struct!.organizationalUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktn.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timeout_in_seconds: {
+      value: cdktn.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    username: {
+      value: cdktn.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsStoragegatewayGatewayTimeoutsPropertyToTerraform(struct?: AwsStoragegatewayGateway.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+  }
+}
+
+
+export function awsStoragegatewayGatewayTimeoutsPropertyToHclTerraform(struct?: AwsStoragegatewayGateway.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsStoragegatewayGateway {
+export interface GatewayNetworkInterfaceProperty {
+}
+export class GatewayNetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GatewayNetworkInterfaceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GatewayNetworkInterfaceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // ipv4_address - computed: true, optional: false, required: false
+  public get ipv4Address() {
+    return this.getStringAttribute('ipv4_address');
+  }
+}
+
+export class GatewayNetworkInterfacePropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GatewayNetworkInterfacePropertyOutputReference {
+    return new GatewayNetworkInterfacePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MaintenanceStartTimeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_month AwsStoragegatewayGateway#day_of_month}
+  */
+  readonly dayOfMonth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#day_of_week AwsStoragegatewayGateway#day_of_week}
+  */
+  readonly dayOfWeek?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#hour_of_day AwsStoragegatewayGateway#hour_of_day}
+  */
+  readonly hourOfDay: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#minute_of_hour AwsStoragegatewayGateway#minute_of_hour}
+  */
+  readonly minuteOfHour?: number;
+}
+export class MaintenanceStartTimePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MaintenanceStartTimeProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dayOfMonth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dayOfMonth = this._dayOfMonth;
+    }
+    if (this._dayOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._hourOfDay !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourOfDay = this._hourOfDay;
+    }
+    if (this._minuteOfHour !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minuteOfHour = this._minuteOfHour;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceStartTimeProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dayOfMonth = undefined;
+      this._dayOfWeek = undefined;
+      this._hourOfDay = undefined;
+      this._minuteOfHour = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dayOfMonth = value.dayOfMonth;
+      this._dayOfWeek = value.dayOfWeek;
+      this._hourOfDay = value.hourOfDay;
+      this._minuteOfHour = value.minuteOfHour;
+    }
+  }
+
+  // day_of_month - computed: false, optional: true, required: false
+  private _dayOfMonth?: string; 
+  public get dayOfMonth() {
+    return this.getStringAttribute('day_of_month');
+  }
+  public set dayOfMonth(value: string) {
+    this._dayOfMonth = value;
+  }
+  public resetDayOfMonth() {
+    this._dayOfMonth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfMonthInput() {
+    return this._dayOfMonth;
+  }
+
+  // day_of_week - computed: false, optional: true, required: false
+  private _dayOfWeek?: string; 
+  public get dayOfWeek() {
+    return this.getStringAttribute('day_of_week');
+  }
+  public set dayOfWeek(value: string) {
+    this._dayOfWeek = value;
+  }
+  public resetDayOfWeek() {
+    this._dayOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfWeekInput() {
+    return this._dayOfWeek;
+  }
+
+  // hour_of_day - computed: false, optional: false, required: true
+  private _hourOfDay?: number; 
+  public get hourOfDay() {
+    return this.getNumberAttribute('hour_of_day');
+  }
+  public set hourOfDay(value: number) {
+    this._hourOfDay = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourOfDayInput() {
+    return this._hourOfDay;
+  }
+
+  // minute_of_hour - computed: false, optional: true, required: false
+  private _minuteOfHour?: number; 
+  public get minuteOfHour() {
+    return this.getNumberAttribute('minute_of_hour');
+  }
+  public set minuteOfHour(value: number) {
+    this._minuteOfHour = value;
+  }
+  public resetMinuteOfHour() {
+    this._minuteOfHour = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minuteOfHourInput() {
+    return this._minuteOfHour;
+  }
+}
+export interface SmbActiveDirectorySettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_controllers AwsStoragegatewayGateway#domain_controllers}
+  */
+  readonly domainControllers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#domain_name AwsStoragegatewayGateway#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#organizational_unit AwsStoragegatewayGateway#organizational_unit}
+  */
+  readonly organizationalUnit?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#password AwsStoragegatewayGateway#password}
+  */
+  readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#timeout_in_seconds AwsStoragegatewayGateway#timeout_in_seconds}
+  */
+  readonly timeoutInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#username AwsStoragegatewayGateway#username}
+  */
+  readonly username: string;
+}
+export class SmbActiveDirectorySettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SmbActiveDirectorySettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._domainControllers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.domainControllers = this._domainControllers;
+    }
+    if (this._domainName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.domainName = this._domainName;
+    }
+    if (this._organizationalUnit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.organizationalUnit = this._organizationalUnit;
+    }
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._timeoutInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeoutInSeconds = this._timeoutInSeconds;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SmbActiveDirectorySettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._domainControllers = undefined;
+      this._domainName = undefined;
+      this._organizationalUnit = undefined;
+      this._password = undefined;
+      this._timeoutInSeconds = undefined;
+      this._username = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._domainControllers = value.domainControllers;
+      this._domainName = value.domainName;
+      this._organizationalUnit = value.organizationalUnit;
+      this._password = value.password;
+      this._timeoutInSeconds = value.timeoutInSeconds;
+      this._username = value.username;
+    }
+  }
+
+  // active_directory_status - computed: true, optional: false, required: false
+  public get activeDirectoryStatus() {
+    return this.getStringAttribute('active_directory_status');
+  }
+
+  // domain_controllers - computed: false, optional: true, required: false
+  private _domainControllers?: string[]; 
+  public get domainControllers() {
+    return cdktn.Fn.tolist(this.getListAttribute('domain_controllers'));
+  }
+  public set domainControllers(value: string[]) {
+    this._domainControllers = value;
+  }
+  public resetDomainControllers() {
+    this._domainControllers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainControllersInput() {
+    return this._domainControllers;
+  }
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName?: string; 
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName;
+  }
+
+  // organizational_unit - computed: false, optional: true, required: false
+  private _organizationalUnit?: string; 
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+  public set organizationalUnit(value: string) {
+    this._organizationalUnit = value;
+  }
+  public resetOrganizationalUnit() {
+    this._organizationalUnit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitInput() {
+    return this._organizationalUnit;
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // timeout_in_seconds - computed: false, optional: true, required: false
+  private _timeoutInSeconds?: number; 
+  public get timeoutInSeconds() {
+    return this.getNumberAttribute('timeout_in_seconds');
+  }
+  public set timeoutInSeconds(value: number) {
+    this._timeoutInSeconds = value;
+  }
+  public resetTimeoutInSeconds() {
+    this._timeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInSecondsInput() {
+    return this._timeoutInSeconds;
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_gateway#create AwsStoragegatewayGateway#create}
+  */
+  readonly create?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+}
+}

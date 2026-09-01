@@ -1,0 +1,1022 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDmsReplicationInstanceConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allocated_storage AwsDmsReplicationInstance#allocated_storage}
+  */
+  readonly allocatedStorage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#allow_major_version_upgrade AwsDmsReplicationInstance#allow_major_version_upgrade}
+  */
+  readonly allowMajorVersionUpgrade?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#apply_immediately AwsDmsReplicationInstance#apply_immediately}
+  */
+  readonly applyImmediately?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#auto_minor_version_upgrade AwsDmsReplicationInstance#auto_minor_version_upgrade}
+  */
+  readonly autoMinorVersionUpgrade?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#availability_zone AwsDmsReplicationInstance#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#dns_name_servers AwsDmsReplicationInstance#dns_name_servers}
+  */
+  readonly dnsNameServers?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#engine_version AwsDmsReplicationInstance#engine_version}
+  */
+  readonly engineVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#id AwsDmsReplicationInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kms_key_arn AwsDmsReplicationInstance#kms_key_arn}
+  */
+  readonly kmsKeyArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#multi_az AwsDmsReplicationInstance#multi_az}
+  */
+  readonly multiAz?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#network_type AwsDmsReplicationInstance#network_type}
+  */
+  readonly networkType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#preferred_maintenance_window AwsDmsReplicationInstance#preferred_maintenance_window}
+  */
+  readonly preferredMaintenanceWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#publicly_accessible AwsDmsReplicationInstance#publicly_accessible}
+  */
+  readonly publiclyAccessible?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#region AwsDmsReplicationInstance#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_class AwsDmsReplicationInstance#replication_instance_class}
+  */
+  readonly replicationInstanceClass: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_instance_id AwsDmsReplicationInstance#replication_instance_id}
+  */
+  readonly replicationInstanceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#replication_subnet_group_id AwsDmsReplicationInstance#replication_subnet_group_id}
+  */
+  readonly replicationSubnetGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags AwsDmsReplicationInstance#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#tags_all AwsDmsReplicationInstance#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#vpc_security_group_ids AwsDmsReplicationInstance#vpc_security_group_ids}
+  */
+  readonly vpcSecurityGroupIds?: string[];
+  /**
+  * kerberos_authentication_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#kerberos_authentication_settings AwsDmsReplicationInstance#kerberos_authentication_settings}
+  */
+  readonly kerberosAuthenticationSettings?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#timeouts AwsDmsReplicationInstance#timeouts}
+  */
+  readonly timeouts?: AwsDmsReplicationInstance.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance aws_dms_replication_instance}
+*/
+export class AwsDmsReplicationInstance extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_dms_replication_instance";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDmsReplicationInstance resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDmsReplicationInstance to import
+  * @param importFromId The id of the existing AwsDmsReplicationInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDmsReplicationInstance to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_replication_instance", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance aws_dms_replication_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDmsReplicationInstanceConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDmsReplicationInstanceConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_dms_replication_instance',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allocatedStorage = config.allocatedStorage;
+    this._allowMajorVersionUpgrade = config.allowMajorVersionUpgrade;
+    this._applyImmediately = config.applyImmediately;
+    this._autoMinorVersionUpgrade = config.autoMinorVersionUpgrade;
+    this._availabilityZone = config.availabilityZone;
+    this._dnsNameServers = config.dnsNameServers;
+    this._engineVersion = config.engineVersion;
+    this._id = config.id;
+    this._kmsKeyArn = config.kmsKeyArn;
+    this._multiAz = config.multiAz;
+    this._networkType = config.networkType;
+    this._preferredMaintenanceWindow = config.preferredMaintenanceWindow;
+    this._publiclyAccessible = config.publiclyAccessible;
+    this._region = config.region;
+    this._replicationInstanceClass = config.replicationInstanceClass;
+    this._replicationInstanceId = config.replicationInstanceId;
+    this._replicationSubnetGroupId = config.replicationSubnetGroupId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._vpcSecurityGroupIds = config.vpcSecurityGroupIds;
+    this._kerberosAuthenticationSettings.internalValue = config.kerberosAuthenticationSettings;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allocated_storage - computed: true, optional: true, required: false
+  private _allocatedStorage?: number; 
+  public get allocatedStorage() {
+    return this.getNumberAttribute('allocated_storage');
+  }
+  public set allocatedStorage(value: number) {
+    this._allocatedStorage = value;
+  }
+  public resetAllocatedStorage() {
+    this._allocatedStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocatedStorageInput() {
+    return this._allocatedStorage;
+  }
+
+  // allow_major_version_upgrade - computed: false, optional: true, required: false
+  private _allowMajorVersionUpgrade?: boolean | cdktn.IResolvable; 
+  public get allowMajorVersionUpgrade() {
+    return this.getBooleanAttribute('allow_major_version_upgrade');
+  }
+  public set allowMajorVersionUpgrade(value: boolean | cdktn.IResolvable) {
+    this._allowMajorVersionUpgrade = value;
+  }
+  public resetAllowMajorVersionUpgrade() {
+    this._allowMajorVersionUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowMajorVersionUpgradeInput() {
+    return this._allowMajorVersionUpgrade;
+  }
+
+  // apply_immediately - computed: false, optional: true, required: false
+  private _applyImmediately?: boolean | cdktn.IResolvable; 
+  public get applyImmediately() {
+    return this.getBooleanAttribute('apply_immediately');
+  }
+  public set applyImmediately(value: boolean | cdktn.IResolvable) {
+    this._applyImmediately = value;
+  }
+  public resetApplyImmediately() {
+    this._applyImmediately = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applyImmediatelyInput() {
+    return this._applyImmediately;
+  }
+
+  // auto_minor_version_upgrade - computed: true, optional: true, required: false
+  private _autoMinorVersionUpgrade?: boolean | cdktn.IResolvable; 
+  public get autoMinorVersionUpgrade() {
+    return this.getBooleanAttribute('auto_minor_version_upgrade');
+  }
+  public set autoMinorVersionUpgrade(value: boolean | cdktn.IResolvable) {
+    this._autoMinorVersionUpgrade = value;
+  }
+  public resetAutoMinorVersionUpgrade() {
+    this._autoMinorVersionUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoMinorVersionUpgradeInput() {
+    return this._autoMinorVersionUpgrade;
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // dns_name_servers - computed: false, optional: true, required: false
+  private _dnsNameServers?: string; 
+  public get dnsNameServers() {
+    return this.getStringAttribute('dns_name_servers');
+  }
+  public set dnsNameServers(value: string) {
+    this._dnsNameServers = value;
+  }
+  public resetDnsNameServers() {
+    this._dnsNameServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNameServersInput() {
+    return this._dnsNameServers;
+  }
+
+  // engine_version - computed: true, optional: true, required: false
+  private _engineVersion?: string; 
+  public get engineVersion() {
+    return this.getStringAttribute('engine_version');
+  }
+  public set engineVersion(value: string) {
+    this._engineVersion = value;
+  }
+  public resetEngineVersion() {
+    this._engineVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineVersionInput() {
+    return this._engineVersion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_key_arn - computed: true, optional: true, required: false
+  private _kmsKeyArn?: string; 
+  public get kmsKeyArn() {
+    return this.getStringAttribute('kms_key_arn');
+  }
+  public set kmsKeyArn(value: string) {
+    this._kmsKeyArn = value;
+  }
+  public resetKmsKeyArn() {
+    this._kmsKeyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyArnInput() {
+    return this._kmsKeyArn;
+  }
+
+  // multi_az - computed: true, optional: true, required: false
+  private _multiAz?: boolean | cdktn.IResolvable; 
+  public get multiAz() {
+    return this.getBooleanAttribute('multi_az');
+  }
+  public set multiAz(value: boolean | cdktn.IResolvable) {
+    this._multiAz = value;
+  }
+  public resetMultiAz() {
+    this._multiAz = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiAzInput() {
+    return this._multiAz;
+  }
+
+  // network_type - computed: true, optional: true, required: false
+  private _networkType?: string; 
+  public get networkType() {
+    return this.getStringAttribute('network_type');
+  }
+  public set networkType(value: string) {
+    this._networkType = value;
+  }
+  public resetNetworkType() {
+    this._networkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTypeInput() {
+    return this._networkType;
+  }
+
+  // preferred_maintenance_window - computed: true, optional: true, required: false
+  private _preferredMaintenanceWindow?: string; 
+  public get preferredMaintenanceWindow() {
+    return this.getStringAttribute('preferred_maintenance_window');
+  }
+  public set preferredMaintenanceWindow(value: string) {
+    this._preferredMaintenanceWindow = value;
+  }
+  public resetPreferredMaintenanceWindow() {
+    this._preferredMaintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredMaintenanceWindowInput() {
+    return this._preferredMaintenanceWindow;
+  }
+
+  // publicly_accessible - computed: true, optional: true, required: false
+  private _publiclyAccessible?: boolean | cdktn.IResolvable; 
+  public get publiclyAccessible() {
+    return this.getBooleanAttribute('publicly_accessible');
+  }
+  public set publiclyAccessible(value: boolean | cdktn.IResolvable) {
+    this._publiclyAccessible = value;
+  }
+  public resetPubliclyAccessible() {
+    this._publiclyAccessible = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publiclyAccessibleInput() {
+    return this._publiclyAccessible;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // replication_instance_arn - computed: true, optional: false, required: false
+  public get replicationInstanceArn() {
+    return this.getStringAttribute('replication_instance_arn');
+  }
+
+  // replication_instance_class - computed: false, optional: false, required: true
+  private _replicationInstanceClass?: string; 
+  public get replicationInstanceClass() {
+    return this.getStringAttribute('replication_instance_class');
+  }
+  public set replicationInstanceClass(value: string) {
+    this._replicationInstanceClass = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationInstanceClassInput() {
+    return this._replicationInstanceClass;
+  }
+
+  // replication_instance_id - computed: false, optional: false, required: true
+  private _replicationInstanceId?: string; 
+  public get replicationInstanceId() {
+    return this.getStringAttribute('replication_instance_id');
+  }
+  public set replicationInstanceId(value: string) {
+    this._replicationInstanceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationInstanceIdInput() {
+    return this._replicationInstanceId;
+  }
+
+  // replication_instance_private_ips - computed: true, optional: false, required: false
+  public get replicationInstancePrivateIps() {
+    return this.getListAttribute('replication_instance_private_ips');
+  }
+
+  // replication_instance_public_ips - computed: true, optional: false, required: false
+  public get replicationInstancePublicIps() {
+    return this.getListAttribute('replication_instance_public_ips');
+  }
+
+  // replication_subnet_group_id - computed: true, optional: true, required: false
+  private _replicationSubnetGroupId?: string; 
+  public get replicationSubnetGroupId() {
+    return this.getStringAttribute('replication_subnet_group_id');
+  }
+  public set replicationSubnetGroupId(value: string) {
+    this._replicationSubnetGroupId = value;
+  }
+  public resetReplicationSubnetGroupId() {
+    this._replicationSubnetGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationSubnetGroupIdInput() {
+    return this._replicationSubnetGroupId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_security_group_ids - computed: true, optional: true, required: false
+  private _vpcSecurityGroupIds?: string[]; 
+  public get vpcSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_ids'));
+  }
+  public set vpcSecurityGroupIds(value: string[]) {
+    this._vpcSecurityGroupIds = value;
+  }
+  public resetVpcSecurityGroupIds() {
+    this._vpcSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupIdsInput() {
+    return this._vpcSecurityGroupIds;
+  }
+
+  // kerberos_authentication_settings - computed: false, optional: true, required: false
+  private _kerberosAuthenticationSettings = new AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference(this, "kerberos_authentication_settings");
+  public get kerberosAuthenticationSettings() {
+    return this._kerberosAuthenticationSettings;
+  }
+  public putKerberosAuthenticationSettings(value: AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty) {
+    this._kerberosAuthenticationSettings.internalValue = value;
+  }
+  public resetKerberosAuthenticationSettings() {
+    this._kerberosAuthenticationSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberosAuthenticationSettingsInput() {
+    return this._kerberosAuthenticationSettings.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDmsReplicationInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDmsReplicationInstance.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allocated_storage: cdktn.numberToTerraform(this._allocatedStorage),
+      allow_major_version_upgrade: cdktn.booleanToTerraform(this._allowMajorVersionUpgrade),
+      apply_immediately: cdktn.booleanToTerraform(this._applyImmediately),
+      auto_minor_version_upgrade: cdktn.booleanToTerraform(this._autoMinorVersionUpgrade),
+      availability_zone: cdktn.stringToTerraform(this._availabilityZone),
+      dns_name_servers: cdktn.stringToTerraform(this._dnsNameServers),
+      engine_version: cdktn.stringToTerraform(this._engineVersion),
+      id: cdktn.stringToTerraform(this._id),
+      kms_key_arn: cdktn.stringToTerraform(this._kmsKeyArn),
+      multi_az: cdktn.booleanToTerraform(this._multiAz),
+      network_type: cdktn.stringToTerraform(this._networkType),
+      preferred_maintenance_window: cdktn.stringToTerraform(this._preferredMaintenanceWindow),
+      publicly_accessible: cdktn.booleanToTerraform(this._publiclyAccessible),
+      region: cdktn.stringToTerraform(this._region),
+      replication_instance_class: cdktn.stringToTerraform(this._replicationInstanceClass),
+      replication_instance_id: cdktn.stringToTerraform(this._replicationInstanceId),
+      replication_subnet_group_id: cdktn.stringToTerraform(this._replicationSubnetGroupId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
+      kerberos_authentication_settings: awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(this._kerberosAuthenticationSettings.internalValue),
+      timeouts: awsDmsReplicationInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allocated_storage: {
+        value: cdktn.numberToHclTerraform(this._allocatedStorage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      allow_major_version_upgrade: {
+        value: cdktn.booleanToHclTerraform(this._allowMajorVersionUpgrade),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      apply_immediately: {
+        value: cdktn.booleanToHclTerraform(this._applyImmediately),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      auto_minor_version_upgrade: {
+        value: cdktn.booleanToHclTerraform(this._autoMinorVersionUpgrade),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      availability_zone: {
+        value: cdktn.stringToHclTerraform(this._availabilityZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dns_name_servers: {
+        value: cdktn.stringToHclTerraform(this._dnsNameServers),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      engine_version: {
+        value: cdktn.stringToHclTerraform(this._engineVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_arn: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_az: {
+        value: cdktn.booleanToHclTerraform(this._multiAz),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      network_type: {
+        value: cdktn.stringToHclTerraform(this._networkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preferred_maintenance_window: {
+        value: cdktn.stringToHclTerraform(this._preferredMaintenanceWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      publicly_accessible: {
+        value: cdktn.booleanToHclTerraform(this._publiclyAccessible),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_instance_class: {
+        value: cdktn.stringToHclTerraform(this._replicationInstanceClass),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_instance_id: {
+        value: cdktn.stringToHclTerraform(this._replicationInstanceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_subnet_group_id: {
+        value: cdktn.stringToHclTerraform(this._replicationSubnetGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSecurityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      kerberos_authentication_settings: {
+        value: awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(this._kerberosAuthenticationSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyList",
+      },
+      timeouts: {
+        value: awsDmsReplicationInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDmsReplicationInstance.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToTerraform(struct?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    key_cache_secret_iam_arn: cdktn.stringToTerraform(struct!.keyCacheSecretIamArn),
+    key_cache_secret_id: cdktn.stringToTerraform(struct!.keyCacheSecretId),
+    krb5_file_contents: cdktn.stringToTerraform(struct!.krb5FileContents),
+  }
+}
+
+
+export function awsDmsReplicationInstanceKerberosAuthenticationSettingsPropertyToHclTerraform(struct?: AwsDmsReplicationInstance.KerberosAuthenticationSettingsPropertyOutputReference | AwsDmsReplicationInstance.KerberosAuthenticationSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    key_cache_secret_iam_arn: {
+      value: cdktn.stringToHclTerraform(struct!.keyCacheSecretIamArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_cache_secret_id: {
+      value: cdktn.stringToHclTerraform(struct!.keyCacheSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    krb5_file_contents: {
+      value: cdktn.stringToHclTerraform(struct!.krb5FileContents),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDmsReplicationInstanceTimeoutsPropertyToTerraform(struct?: AwsDmsReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDmsReplicationInstanceTimeoutsPropertyToHclTerraform(struct?: AwsDmsReplicationInstance.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDmsReplicationInstance {
+export interface KerberosAuthenticationSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_iam_arn AwsDmsReplicationInstance#key_cache_secret_iam_arn}
+  */
+  readonly keyCacheSecretIamArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#key_cache_secret_id AwsDmsReplicationInstance#key_cache_secret_id}
+  */
+  readonly keyCacheSecretId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#krb5_file_contents AwsDmsReplicationInstance#krb5_file_contents}
+  */
+  readonly krb5FileContents: string;
+}
+export class KerberosAuthenticationSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KerberosAuthenticationSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyCacheSecretIamArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyCacheSecretIamArn = this._keyCacheSecretIamArn;
+    }
+    if (this._keyCacheSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyCacheSecretId = this._keyCacheSecretId;
+    }
+    if (this._krb5FileContents !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.krb5FileContents = this._krb5FileContents;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KerberosAuthenticationSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyCacheSecretIamArn = undefined;
+      this._keyCacheSecretId = undefined;
+      this._krb5FileContents = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyCacheSecretIamArn = value.keyCacheSecretIamArn;
+      this._keyCacheSecretId = value.keyCacheSecretId;
+      this._krb5FileContents = value.krb5FileContents;
+    }
+  }
+
+  // key_cache_secret_iam_arn - computed: false, optional: false, required: true
+  private _keyCacheSecretIamArn?: string; 
+  public get keyCacheSecretIamArn() {
+    return this.getStringAttribute('key_cache_secret_iam_arn');
+  }
+  public set keyCacheSecretIamArn(value: string) {
+    this._keyCacheSecretIamArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyCacheSecretIamArnInput() {
+    return this._keyCacheSecretIamArn;
+  }
+
+  // key_cache_secret_id - computed: false, optional: false, required: true
+  private _keyCacheSecretId?: string; 
+  public get keyCacheSecretId() {
+    return this.getStringAttribute('key_cache_secret_id');
+  }
+  public set keyCacheSecretId(value: string) {
+    this._keyCacheSecretId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyCacheSecretIdInput() {
+    return this._keyCacheSecretId;
+  }
+
+  // krb5_file_contents - computed: false, optional: false, required: true
+  private _krb5FileContents?: string; 
+  public get krb5FileContents() {
+    return this.getStringAttribute('krb5_file_contents');
+  }
+  public set krb5FileContents(value: string) {
+    this._krb5FileContents = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get krb5FileContentsInput() {
+    return this._krb5FileContents;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#create AwsDmsReplicationInstance#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#delete AwsDmsReplicationInstance#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_instance#update AwsDmsReplicationInstance#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

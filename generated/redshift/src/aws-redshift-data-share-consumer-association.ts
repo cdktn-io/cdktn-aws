@@ -1,0 +1,266 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsRedshiftDataShareConsumerAssociationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#allow_writes AwsRedshiftDataShareConsumerAssociation#allow_writes}
+  */
+  readonly allowWrites?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#associate_entire_account AwsRedshiftDataShareConsumerAssociation#associate_entire_account}
+  */
+  readonly associateEntireAccount?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_arn AwsRedshiftDataShareConsumerAssociation#consumer_arn}
+  */
+  readonly consumerArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_region AwsRedshiftDataShareConsumerAssociation#consumer_region}
+  */
+  readonly consumerRegion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#data_share_arn AwsRedshiftDataShareConsumerAssociation#data_share_arn}
+  */
+  readonly dataShareArn: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#region AwsRedshiftDataShareConsumerAssociation#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association aws_redshift_data_share_consumer_association}
+*/
+export class AwsRedshiftDataShareConsumerAssociation extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_redshift_data_share_consumer_association";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsRedshiftDataShareConsumerAssociation resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsRedshiftDataShareConsumerAssociation to import
+  * @param importFromId The id of the existing AwsRedshiftDataShareConsumerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRedshiftDataShareConsumerAssociation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_data_share_consumer_association", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association aws_redshift_data_share_consumer_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsRedshiftDataShareConsumerAssociationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsRedshiftDataShareConsumerAssociationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_redshift_data_share_consumer_association',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allowWrites = config.allowWrites;
+    this._associateEntireAccount = config.associateEntireAccount;
+    this._consumerArn = config.consumerArn;
+    this._consumerRegion = config.consumerRegion;
+    this._dataShareArn = config.dataShareArn;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allow_writes - computed: false, optional: true, required: false
+  private _allowWrites?: boolean | cdktn.IResolvable; 
+  public get allowWrites() {
+    return this.getBooleanAttribute('allow_writes');
+  }
+  public set allowWrites(value: boolean | cdktn.IResolvable) {
+    this._allowWrites = value;
+  }
+  public resetAllowWrites() {
+    this._allowWrites = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowWritesInput() {
+    return this._allowWrites;
+  }
+
+  // associate_entire_account - computed: false, optional: true, required: false
+  private _associateEntireAccount?: boolean | cdktn.IResolvable; 
+  public get associateEntireAccount() {
+    return this.getBooleanAttribute('associate_entire_account');
+  }
+  public set associateEntireAccount(value: boolean | cdktn.IResolvable) {
+    this._associateEntireAccount = value;
+  }
+  public resetAssociateEntireAccount() {
+    this._associateEntireAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get associateEntireAccountInput() {
+    return this._associateEntireAccount;
+  }
+
+  // consumer_arn - computed: false, optional: true, required: false
+  private _consumerArn?: string; 
+  public get consumerArn() {
+    return this.getStringAttribute('consumer_arn');
+  }
+  public set consumerArn(value: string) {
+    this._consumerArn = value;
+  }
+  public resetConsumerArn() {
+    this._consumerArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerArnInput() {
+    return this._consumerArn;
+  }
+
+  // consumer_region - computed: false, optional: true, required: false
+  private _consumerRegion?: string; 
+  public get consumerRegion() {
+    return this.getStringAttribute('consumer_region');
+  }
+  public set consumerRegion(value: string) {
+    this._consumerRegion = value;
+  }
+  public resetConsumerRegion() {
+    this._consumerRegion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerRegionInput() {
+    return this._consumerRegion;
+  }
+
+  // data_share_arn - computed: false, optional: false, required: true
+  private _dataShareArn?: string; 
+  public get dataShareArn() {
+    return this.getStringAttribute('data_share_arn');
+  }
+  public set dataShareArn(value: string) {
+    this._dataShareArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataShareArnInput() {
+    return this._dataShareArn;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // managed_by - computed: true, optional: false, required: false
+  public get managedBy() {
+    return this.getStringAttribute('managed_by');
+  }
+
+  // producer_arn - computed: true, optional: false, required: false
+  public get producerArn() {
+    return this.getStringAttribute('producer_arn');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allow_writes: cdktn.booleanToTerraform(this._allowWrites),
+      associate_entire_account: cdktn.booleanToTerraform(this._associateEntireAccount),
+      consumer_arn: cdktn.stringToTerraform(this._consumerArn),
+      consumer_region: cdktn.stringToTerraform(this._consumerRegion),
+      data_share_arn: cdktn.stringToTerraform(this._dataShareArn),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_writes: {
+        value: cdktn.booleanToHclTerraform(this._allowWrites),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      associate_entire_account: {
+        value: cdktn.booleanToHclTerraform(this._associateEntireAccount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      consumer_arn: {
+        value: cdktn.stringToHclTerraform(this._consumerArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      consumer_region: {
+        value: cdktn.stringToHclTerraform(this._consumerRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_share_arn: {
+        value: cdktn.stringToHclTerraform(this._dataShareArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

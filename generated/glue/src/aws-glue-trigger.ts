@@ -1,0 +1,1558 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsGlueTriggerConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#description AwsGlueTrigger#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#enabled AwsGlueTrigger#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#id AwsGlueTrigger#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#name AwsGlueTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#region AwsGlueTrigger#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#schedule AwsGlueTrigger#schedule}
+  */
+  readonly schedule?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#start_on_creation AwsGlueTrigger#start_on_creation}
+  */
+  readonly startOnCreation?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags AwsGlueTrigger#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#tags_all AwsGlueTrigger#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#type AwsGlueTrigger#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#workflow_name AwsGlueTrigger#workflow_name}
+  */
+  readonly workflowName?: string;
+  /**
+  * actions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#actions AwsGlueTrigger#actions}
+  */
+  readonly actions: AwsGlueTrigger.ActionsProperty[] | cdktn.IResolvable;
+  /**
+  * event_batching_condition block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#event_batching_condition AwsGlueTrigger#event_batching_condition}
+  */
+  readonly eventBatchingCondition?: AwsGlueTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable;
+  /**
+  * predicate block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#predicate AwsGlueTrigger#predicate}
+  */
+  readonly predicate?: AwsGlueTrigger.PredicateProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeouts AwsGlueTrigger#timeouts}
+  */
+  readonly timeouts?: AwsGlueTrigger.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger aws_glue_trigger}
+*/
+export class AwsGlueTrigger extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_glue_trigger";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsGlueTrigger resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsGlueTrigger to import
+  * @param importFromId The id of the existing AwsGlueTrigger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlueTrigger to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_trigger", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger aws_glue_trigger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsGlueTriggerConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsGlueTriggerConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_glue_trigger',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._enabled = config.enabled;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._schedule = config.schedule;
+    this._startOnCreation = config.startOnCreation;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._type = config.type;
+    this._workflowName = config.workflowName;
+    this._actions.internalValue = config.actions;
+    this._eventBatchingCondition.internalValue = config.eventBatchingCondition;
+    this._predicate.internalValue = config.predicate;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // schedule - computed: false, optional: true, required: false
+  private _schedule?: string; 
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+  public set schedule(value: string) {
+    this._schedule = value;
+  }
+  public resetSchedule() {
+    this._schedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule;
+  }
+
+  // start_on_creation - computed: false, optional: true, required: false
+  private _startOnCreation?: boolean | cdktn.IResolvable; 
+  public get startOnCreation() {
+    return this.getBooleanAttribute('start_on_creation');
+  }
+  public set startOnCreation(value: boolean | cdktn.IResolvable) {
+    this._startOnCreation = value;
+  }
+  public resetStartOnCreation() {
+    this._startOnCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startOnCreationInput() {
+    return this._startOnCreation;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // workflow_name - computed: false, optional: true, required: false
+  private _workflowName?: string; 
+  public get workflowName() {
+    return this.getStringAttribute('workflow_name');
+  }
+  public set workflowName(value: string) {
+    this._workflowName = value;
+  }
+  public resetWorkflowName() {
+    this._workflowName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workflowNameInput() {
+    return this._workflowName;
+  }
+
+  // actions - computed: false, optional: false, required: true
+  private _actions = new AwsGlueTrigger.ActionsPropertyList(this, "actions", false);
+  public get actions() {
+    return this._actions;
+  }
+  public putActions(value: AwsGlueTrigger.ActionsProperty[] | cdktn.IResolvable) {
+    this._actions.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions.internalValue;
+  }
+
+  // event_batching_condition - computed: false, optional: true, required: false
+  private _eventBatchingCondition = new AwsGlueTrigger.EventBatchingConditionPropertyList(this, "event_batching_condition", false);
+  public get eventBatchingCondition() {
+    return this._eventBatchingCondition;
+  }
+  public putEventBatchingCondition(value: AwsGlueTrigger.EventBatchingConditionProperty[] | cdktn.IResolvable) {
+    this._eventBatchingCondition.internalValue = value;
+  }
+  public resetEventBatchingCondition() {
+    this._eventBatchingCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventBatchingConditionInput() {
+    return this._eventBatchingCondition.internalValue;
+  }
+
+  // predicate - computed: false, optional: true, required: false
+  private _predicate = new AwsGlueTrigger.PredicatePropertyOutputReference(this, "predicate");
+  public get predicate() {
+    return this._predicate;
+  }
+  public putPredicate(value: AwsGlueTrigger.PredicateProperty) {
+    this._predicate.internalValue = value;
+  }
+  public resetPredicate() {
+    this._predicate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get predicateInput() {
+    return this._predicate.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsGlueTrigger.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsGlueTrigger.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      enabled: cdktn.booleanToTerraform(this._enabled),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      schedule: cdktn.stringToTerraform(this._schedule),
+      start_on_creation: cdktn.booleanToTerraform(this._startOnCreation),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      type: cdktn.stringToTerraform(this._type),
+      workflow_name: cdktn.stringToTerraform(this._workflowName),
+      actions: cdktn.listMapper(awsGlueTriggerActionsPropertyToTerraform, true)(this._actions.internalValue),
+      event_batching_condition: cdktn.listMapper(awsGlueTriggerEventBatchingConditionPropertyToTerraform, true)(this._eventBatchingCondition.internalValue),
+      predicate: awsGlueTriggerPredicatePropertyToTerraform(this._predicate.internalValue),
+      timeouts: awsGlueTriggerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktn.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      schedule: {
+        value: cdktn.stringToHclTerraform(this._schedule),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_on_creation: {
+        value: cdktn.booleanToHclTerraform(this._startOnCreation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workflow_name: {
+        value: cdktn.stringToHclTerraform(this._workflowName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      actions: {
+        value: cdktn.listMapperHcl(awsGlueTriggerActionsPropertyToHclTerraform, true)(this._actions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueTrigger.ActionsPropertyList",
+      },
+      event_batching_condition: {
+        value: cdktn.listMapperHcl(awsGlueTriggerEventBatchingConditionPropertyToHclTerraform, true)(this._eventBatchingCondition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueTrigger.EventBatchingConditionPropertyList",
+      },
+      predicate: {
+        value: awsGlueTriggerPredicatePropertyToHclTerraform(this._predicate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueTrigger.PredicatePropertyList",
+      },
+      timeouts: {
+        value: awsGlueTriggerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsGlueTrigger.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsGlueTriggerNotificationPropertyPropertyToTerraform(struct?: AwsGlueTrigger.NotificationPropertyPropertyOutputReference | AwsGlueTrigger.NotificationPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    notify_delay_after: cdktn.numberToTerraform(struct!.notifyDelayAfter),
+  }
+}
+
+
+export function awsGlueTriggerNotificationPropertyPropertyToHclTerraform(struct?: AwsGlueTrigger.NotificationPropertyPropertyOutputReference | AwsGlueTrigger.NotificationPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    notify_delay_after: {
+      value: cdktn.numberToHclTerraform(struct!.notifyDelayAfter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueTriggerActionsPropertyToTerraform(struct?: AwsGlueTrigger.ActionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    arguments: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.arguments),
+    crawler_name: cdktn.stringToTerraform(struct!.crawlerName),
+    job_name: cdktn.stringToTerraform(struct!.jobName),
+    security_configuration: cdktn.stringToTerraform(struct!.securityConfiguration),
+    timeout: cdktn.numberToTerraform(struct!.timeout),
+    notification_property: awsGlueTriggerNotificationPropertyPropertyToTerraform(struct!.notificationProperty),
+  }
+}
+
+
+export function awsGlueTriggerActionsPropertyToHclTerraform(struct?: AwsGlueTrigger.ActionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    arguments: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.arguments),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    crawler_name: {
+      value: cdktn.stringToHclTerraform(struct!.crawlerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    job_name: {
+      value: cdktn.stringToHclTerraform(struct!.jobName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    security_configuration: {
+      value: cdktn.stringToHclTerraform(struct!.securityConfiguration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timeout: {
+      value: cdktn.numberToHclTerraform(struct!.timeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    notification_property: {
+      value: awsGlueTriggerNotificationPropertyPropertyToHclTerraform(struct!.notificationProperty),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotificationPropertyPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueTriggerEventBatchingConditionPropertyToTerraform(struct?: AwsGlueTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    batch_size: cdktn.numberToTerraform(struct!.batchSize),
+    batch_window: cdktn.numberToTerraform(struct!.batchWindow),
+  }
+}
+
+
+export function awsGlueTriggerEventBatchingConditionPropertyToHclTerraform(struct?: AwsGlueTrigger.EventBatchingConditionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    batch_size: {
+      value: cdktn.numberToHclTerraform(struct!.batchSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    batch_window: {
+      value: cdktn.numberToHclTerraform(struct!.batchWindow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueTriggerConditionsPropertyToTerraform(struct?: AwsGlueTrigger.ConditionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    crawl_state: cdktn.stringToTerraform(struct!.crawlState),
+    crawler_name: cdktn.stringToTerraform(struct!.crawlerName),
+    job_name: cdktn.stringToTerraform(struct!.jobName),
+    logical_operator: cdktn.stringToTerraform(struct!.logicalOperator),
+    state: cdktn.stringToTerraform(struct!.state),
+  }
+}
+
+
+export function awsGlueTriggerConditionsPropertyToHclTerraform(struct?: AwsGlueTrigger.ConditionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    crawl_state: {
+      value: cdktn.stringToHclTerraform(struct!.crawlState),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    crawler_name: {
+      value: cdktn.stringToHclTerraform(struct!.crawlerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    job_name: {
+      value: cdktn.stringToHclTerraform(struct!.jobName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    logical_operator: {
+      value: cdktn.stringToHclTerraform(struct!.logicalOperator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueTriggerPredicatePropertyToTerraform(struct?: AwsGlueTrigger.PredicatePropertyOutputReference | AwsGlueTrigger.PredicateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    logical: cdktn.stringToTerraform(struct!.logical),
+    conditions: cdktn.listMapper(awsGlueTriggerConditionsPropertyToTerraform, true)(struct!.conditions),
+  }
+}
+
+
+export function awsGlueTriggerPredicatePropertyToHclTerraform(struct?: AwsGlueTrigger.PredicatePropertyOutputReference | AwsGlueTrigger.PredicateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    logical: {
+      value: cdktn.stringToHclTerraform(struct!.logical),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conditions: {
+      value: cdktn.listMapperHcl(awsGlueTriggerConditionsPropertyToHclTerraform, true)(struct!.conditions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConditionsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueTriggerTimeoutsPropertyToTerraform(struct?: AwsGlueTrigger.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsGlueTriggerTimeoutsPropertyToHclTerraform(struct?: AwsGlueTrigger.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsGlueTrigger {
+export interface NotificationPropertyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notify_delay_after AwsGlueTrigger#notify_delay_after}
+  */
+  readonly notifyDelayAfter?: number;
+}
+export class NotificationPropertyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NotificationPropertyProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._notifyDelayAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notifyDelayAfter = this._notifyDelayAfter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationPropertyProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._notifyDelayAfter = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._notifyDelayAfter = value.notifyDelayAfter;
+    }
+  }
+
+  // notify_delay_after - computed: false, optional: true, required: false
+  private _notifyDelayAfter?: number; 
+  public get notifyDelayAfter() {
+    return this.getNumberAttribute('notify_delay_after');
+  }
+  public set notifyDelayAfter(value: number) {
+    this._notifyDelayAfter = value;
+  }
+  public resetNotifyDelayAfter() {
+    this._notifyDelayAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notifyDelayAfterInput() {
+    return this._notifyDelayAfter;
+  }
+}
+export interface ActionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#arguments AwsGlueTrigger#arguments}
+  */
+  readonly arguments?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name AwsGlueTrigger#crawler_name}
+  */
+  readonly crawlerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name AwsGlueTrigger#job_name}
+  */
+  readonly jobName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#security_configuration AwsGlueTrigger#security_configuration}
+  */
+  readonly securityConfiguration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#timeout AwsGlueTrigger#timeout}
+  */
+  readonly timeout?: number;
+  /**
+  * notification_property block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#notification_property AwsGlueTrigger#notification_property}
+  */
+  readonly notificationProperty?: NotificationPropertyProperty;
+}
+export class ActionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ActionsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._arguments !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.arguments = this._arguments;
+    }
+    if (this._crawlerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crawlerName = this._crawlerName;
+    }
+    if (this._jobName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jobName = this._jobName;
+    }
+    if (this._securityConfiguration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityConfiguration = this._securityConfiguration;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    if (this._notificationProperty?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationProperty = this._notificationProperty?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ActionsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._arguments = undefined;
+      this._crawlerName = undefined;
+      this._jobName = undefined;
+      this._securityConfiguration = undefined;
+      this._timeout = undefined;
+      this._notificationProperty.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._arguments = value.arguments;
+      this._crawlerName = value.crawlerName;
+      this._jobName = value.jobName;
+      this._securityConfiguration = value.securityConfiguration;
+      this._timeout = value.timeout;
+      this._notificationProperty.internalValue = value.notificationProperty;
+    }
+  }
+
+  // arguments - computed: false, optional: true, required: false
+  private _arguments?: { [key: string]: string }; 
+  public get arguments() {
+    return this.getStringMapAttribute('arguments');
+  }
+  public set arguments(value: { [key: string]: string }) {
+    this._arguments = value;
+  }
+  public resetArguments() {
+    this._arguments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argumentsInput() {
+    return this._arguments;
+  }
+
+  // crawler_name - computed: false, optional: true, required: false
+  private _crawlerName?: string; 
+  public get crawlerName() {
+    return this.getStringAttribute('crawler_name');
+  }
+  public set crawlerName(value: string) {
+    this._crawlerName = value;
+  }
+  public resetCrawlerName() {
+    this._crawlerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crawlerNameInput() {
+    return this._crawlerName;
+  }
+
+  // job_name - computed: false, optional: true, required: false
+  private _jobName?: string; 
+  public get jobName() {
+    return this.getStringAttribute('job_name');
+  }
+  public set jobName(value: string) {
+    this._jobName = value;
+  }
+  public resetJobName() {
+    this._jobName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobNameInput() {
+    return this._jobName;
+  }
+
+  // security_configuration - computed: false, optional: true, required: false
+  private _securityConfiguration?: string; 
+  public get securityConfiguration() {
+    return this.getStringAttribute('security_configuration');
+  }
+  public set securityConfiguration(value: string) {
+    this._securityConfiguration = value;
+  }
+  public resetSecurityConfiguration() {
+    this._securityConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityConfigurationInput() {
+    return this._securityConfiguration;
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: number; 
+  public get timeout() {
+    return this.getNumberAttribute('timeout');
+  }
+  public set timeout(value: number) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+
+  // notification_property - computed: false, optional: true, required: false
+  private _notificationProperty = new NotificationPropertyPropertyOutputReference(this, "notification_property");
+  public get notificationProperty() {
+    return this._notificationProperty;
+  }
+  public putNotificationProperty(value: NotificationPropertyProperty) {
+    this._notificationProperty.internalValue = value;
+  }
+  public resetNotificationProperty() {
+    this._notificationProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationPropertyInput() {
+    return this._notificationProperty.internalValue;
+  }
+}
+
+export class ActionsPropertyList extends cdktn.ComplexList {
+  public internalValue? : ActionsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ActionsPropertyOutputReference {
+    return new ActionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EventBatchingConditionProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_size AwsGlueTrigger#batch_size}
+  */
+  readonly batchSize: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#batch_window AwsGlueTrigger#batch_window}
+  */
+  readonly batchWindow?: number;
+}
+export class EventBatchingConditionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventBatchingConditionProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._batchSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchSize = this._batchSize;
+    }
+    if (this._batchWindow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchWindow = this._batchWindow;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventBatchingConditionProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._batchSize = undefined;
+      this._batchWindow = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._batchSize = value.batchSize;
+      this._batchWindow = value.batchWindow;
+    }
+  }
+
+  // batch_size - computed: false, optional: false, required: true
+  private _batchSize?: number; 
+  public get batchSize() {
+    return this.getNumberAttribute('batch_size');
+  }
+  public set batchSize(value: number) {
+    this._batchSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchSizeInput() {
+    return this._batchSize;
+  }
+
+  // batch_window - computed: false, optional: true, required: false
+  private _batchWindow?: number; 
+  public get batchWindow() {
+    return this.getNumberAttribute('batch_window');
+  }
+  public set batchWindow(value: number) {
+    this._batchWindow = value;
+  }
+  public resetBatchWindow() {
+    this._batchWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchWindowInput() {
+    return this._batchWindow;
+  }
+}
+
+export class EventBatchingConditionPropertyList extends cdktn.ComplexList {
+  public internalValue? : EventBatchingConditionProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventBatchingConditionPropertyOutputReference {
+    return new EventBatchingConditionPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ConditionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawl_state AwsGlueTrigger#crawl_state}
+  */
+  readonly crawlState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#crawler_name AwsGlueTrigger#crawler_name}
+  */
+  readonly crawlerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#job_name AwsGlueTrigger#job_name}
+  */
+  readonly jobName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical_operator AwsGlueTrigger#logical_operator}
+  */
+  readonly logicalOperator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#state AwsGlueTrigger#state}
+  */
+  readonly state?: string;
+}
+export class ConditionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConditionsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._crawlState !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crawlState = this._crawlState;
+    }
+    if (this._crawlerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crawlerName = this._crawlerName;
+    }
+    if (this._jobName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jobName = this._jobName;
+    }
+    if (this._logicalOperator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logicalOperator = this._logicalOperator;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConditionsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._crawlState = undefined;
+      this._crawlerName = undefined;
+      this._jobName = undefined;
+      this._logicalOperator = undefined;
+      this._state = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._crawlState = value.crawlState;
+      this._crawlerName = value.crawlerName;
+      this._jobName = value.jobName;
+      this._logicalOperator = value.logicalOperator;
+      this._state = value.state;
+    }
+  }
+
+  // crawl_state - computed: false, optional: true, required: false
+  private _crawlState?: string; 
+  public get crawlState() {
+    return this.getStringAttribute('crawl_state');
+  }
+  public set crawlState(value: string) {
+    this._crawlState = value;
+  }
+  public resetCrawlState() {
+    this._crawlState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crawlStateInput() {
+    return this._crawlState;
+  }
+
+  // crawler_name - computed: false, optional: true, required: false
+  private _crawlerName?: string; 
+  public get crawlerName() {
+    return this.getStringAttribute('crawler_name');
+  }
+  public set crawlerName(value: string) {
+    this._crawlerName = value;
+  }
+  public resetCrawlerName() {
+    this._crawlerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crawlerNameInput() {
+    return this._crawlerName;
+  }
+
+  // job_name - computed: false, optional: true, required: false
+  private _jobName?: string; 
+  public get jobName() {
+    return this.getStringAttribute('job_name');
+  }
+  public set jobName(value: string) {
+    this._jobName = value;
+  }
+  public resetJobName() {
+    this._jobName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobNameInput() {
+    return this._jobName;
+  }
+
+  // logical_operator - computed: false, optional: true, required: false
+  private _logicalOperator?: string; 
+  public get logicalOperator() {
+    return this.getStringAttribute('logical_operator');
+  }
+  public set logicalOperator(value: string) {
+    this._logicalOperator = value;
+  }
+  public resetLogicalOperator() {
+    this._logicalOperator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicalOperatorInput() {
+    return this._logicalOperator;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+
+export class ConditionsPropertyList extends cdktn.ComplexList {
+  public internalValue? : ConditionsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConditionsPropertyOutputReference {
+    return new ConditionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PredicateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#logical AwsGlueTrigger#logical}
+  */
+  readonly logical?: string;
+  /**
+  * conditions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#conditions AwsGlueTrigger#conditions}
+  */
+  readonly conditions: ConditionsProperty[] | cdktn.IResolvable;
+}
+export class PredicatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PredicateProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logical !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logical = this._logical;
+    }
+    if (this._conditions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditions = this._conditions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PredicateProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logical = undefined;
+      this._conditions.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logical = value.logical;
+      this._conditions.internalValue = value.conditions;
+    }
+  }
+
+  // logical - computed: false, optional: true, required: false
+  private _logical?: string; 
+  public get logical() {
+    return this.getStringAttribute('logical');
+  }
+  public set logical(value: string) {
+    this._logical = value;
+  }
+  public resetLogical() {
+    this._logical = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicalInput() {
+    return this._logical;
+  }
+
+  // conditions - computed: false, optional: false, required: true
+  private _conditions = new ConditionsPropertyList(this, "conditions", false);
+  public get conditions() {
+    return this._conditions;
+  }
+  public putConditions(value: ConditionsProperty[] | cdktn.IResolvable) {
+    this._conditions.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionsInput() {
+    return this._conditions.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#create AwsGlueTrigger#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#delete AwsGlueTrigger#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_trigger#update AwsGlueTrigger#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

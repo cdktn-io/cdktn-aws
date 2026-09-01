@@ -1,0 +1,617 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsIamRoleConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#assume_role_policy AwsIamRole#assume_role_policy}
+  */
+  readonly assumeRolePolicy: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#description AwsIamRole#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#force_detach_policies AwsIamRole#force_detach_policies}
+  */
+  readonly forceDetachPolicies?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#id AwsIamRole#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#managed_policy_arns AwsIamRole#managed_policy_arns}
+  */
+  readonly managedPolicyArns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#max_session_duration AwsIamRole#max_session_duration}
+  */
+  readonly maxSessionDuration?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name AwsIamRole#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name_prefix AwsIamRole#name_prefix}
+  */
+  readonly namePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#path AwsIamRole#path}
+  */
+  readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#permissions_boundary AwsIamRole#permissions_boundary}
+  */
+  readonly permissionsBoundary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags AwsIamRole#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#tags_all AwsIamRole#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * inline_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#inline_policy AwsIamRole#inline_policy}
+  */
+  readonly inlinePolicy?: AwsIamRole.InlinePolicyProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role aws_iam_role}
+*/
+export class AwsIamRole extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_iam_role";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsIamRole resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsIamRole to import
+  * @param importFromId The id of the existing AwsIamRole that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIamRole to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_role", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role aws_iam_role} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsIamRoleConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsIamRoleConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_iam_role',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._assumeRolePolicy = config.assumeRolePolicy;
+    this._description = config.description;
+    this._forceDetachPolicies = config.forceDetachPolicies;
+    this._id = config.id;
+    this._managedPolicyArns = config.managedPolicyArns;
+    this._maxSessionDuration = config.maxSessionDuration;
+    this._name = config.name;
+    this._namePrefix = config.namePrefix;
+    this._path = config.path;
+    this._permissionsBoundary = config.permissionsBoundary;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._inlinePolicy.internalValue = config.inlinePolicy;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // assume_role_policy - computed: false, optional: false, required: true
+  private _assumeRolePolicy?: string; 
+  public get assumeRolePolicy() {
+    return this.getStringAttribute('assume_role_policy');
+  }
+  public set assumeRolePolicy(value: string) {
+    this._assumeRolePolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assumeRolePolicyInput() {
+    return this._assumeRolePolicy;
+  }
+
+  // create_date - computed: true, optional: false, required: false
+  public get createDate() {
+    return this.getStringAttribute('create_date');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // force_detach_policies - computed: false, optional: true, required: false
+  private _forceDetachPolicies?: boolean | cdktn.IResolvable; 
+  public get forceDetachPolicies() {
+    return this.getBooleanAttribute('force_detach_policies');
+  }
+  public set forceDetachPolicies(value: boolean | cdktn.IResolvable) {
+    this._forceDetachPolicies = value;
+  }
+  public resetForceDetachPolicies() {
+    this._forceDetachPolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDetachPoliciesInput() {
+    return this._forceDetachPolicies;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // managed_policy_arns - computed: true, optional: true, required: false
+  private _managedPolicyArns?: string[]; 
+  public get managedPolicyArns() {
+    return cdktn.Fn.tolist(this.getListAttribute('managed_policy_arns'));
+  }
+  public set managedPolicyArns(value: string[]) {
+    this._managedPolicyArns = value;
+  }
+  public resetManagedPolicyArns() {
+    this._managedPolicyArns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedPolicyArnsInput() {
+    return this._managedPolicyArns;
+  }
+
+  // max_session_duration - computed: false, optional: true, required: false
+  private _maxSessionDuration?: number; 
+  public get maxSessionDuration() {
+    return this.getNumberAttribute('max_session_duration');
+  }
+  public set maxSessionDuration(value: number) {
+    this._maxSessionDuration = value;
+  }
+  public resetMaxSessionDuration() {
+    this._maxSessionDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSessionDurationInput() {
+    return this._maxSessionDuration;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // name_prefix - computed: true, optional: true, required: false
+  private _namePrefix?: string; 
+  public get namePrefix() {
+    return this.getStringAttribute('name_prefix');
+  }
+  public set namePrefix(value: string) {
+    this._namePrefix = value;
+  }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // permissions_boundary - computed: false, optional: true, required: false
+  private _permissionsBoundary?: string; 
+  public get permissionsBoundary() {
+    return this.getStringAttribute('permissions_boundary');
+  }
+  public set permissionsBoundary(value: string) {
+    this._permissionsBoundary = value;
+  }
+  public resetPermissionsBoundary() {
+    this._permissionsBoundary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsBoundaryInput() {
+    return this._permissionsBoundary;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // unique_id - computed: true, optional: false, required: false
+  public get uniqueId() {
+    return this.getStringAttribute('unique_id');
+  }
+
+  // inline_policy - computed: false, optional: true, required: false
+  private _inlinePolicy = new AwsIamRole.InlinePolicyPropertyList(this, "inline_policy", true);
+  public get inlinePolicy() {
+    return this._inlinePolicy;
+  }
+  public putInlinePolicy(value: AwsIamRole.InlinePolicyProperty[] | cdktn.IResolvable) {
+    this._inlinePolicy.internalValue = value;
+  }
+  public resetInlinePolicy() {
+    this._inlinePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inlinePolicyInput() {
+    return this._inlinePolicy.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      assume_role_policy: cdktn.stringToTerraform(this._assumeRolePolicy),
+      description: cdktn.stringToTerraform(this._description),
+      force_detach_policies: cdktn.booleanToTerraform(this._forceDetachPolicies),
+      id: cdktn.stringToTerraform(this._id),
+      managed_policy_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(this._managedPolicyArns),
+      max_session_duration: cdktn.numberToTerraform(this._maxSessionDuration),
+      name: cdktn.stringToTerraform(this._name),
+      name_prefix: cdktn.stringToTerraform(this._namePrefix),
+      path: cdktn.stringToTerraform(this._path),
+      permissions_boundary: cdktn.stringToTerraform(this._permissionsBoundary),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      inline_policy: cdktn.listMapper(awsIamRoleInlinePolicyPropertyToTerraform, true)(this._inlinePolicy.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      assume_role_policy: {
+        value: cdktn.stringToHclTerraform(this._assumeRolePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      force_detach_policies: {
+        value: cdktn.booleanToHclTerraform(this._forceDetachPolicies),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_policy_arns: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._managedPolicyArns),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      max_session_duration: {
+        value: cdktn.numberToHclTerraform(this._maxSessionDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name_prefix: {
+        value: cdktn.stringToHclTerraform(this._namePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      path: {
+        value: cdktn.stringToHclTerraform(this._path),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      permissions_boundary: {
+        value: cdktn.stringToHclTerraform(this._permissionsBoundary),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      inline_policy: {
+        value: cdktn.listMapperHcl(awsIamRoleInlinePolicyPropertyToHclTerraform, true)(this._inlinePolicy.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsIamRole.InlinePolicyPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsIamRoleInlinePolicyPropertyToTerraform(struct?: AwsIamRole.InlinePolicyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    policy: cdktn.stringToTerraform(struct!.policy),
+  }
+}
+
+
+export function awsIamRoleInlinePolicyPropertyToHclTerraform(struct?: AwsIamRole.InlinePolicyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy: {
+      value: cdktn.stringToHclTerraform(struct!.policy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsIamRole {
+export interface InlinePolicyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#name AwsIamRole#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_role#policy AwsIamRole#policy}
+  */
+  readonly policy?: string;
+}
+export class InlinePolicyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): InlinePolicyProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._policy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policy = this._policy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InlinePolicyProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._policy = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._policy = value.policy;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // policy - computed: false, optional: true, required: false
+  private _policy?: string; 
+  public get policy() {
+    return this.getStringAttribute('policy');
+  }
+  public set policy(value: string) {
+    this._policy = value;
+  }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy;
+  }
+}
+
+export class InlinePolicyPropertyList extends cdktn.ComplexList {
+  public internalValue? : InlinePolicyProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): InlinePolicyPropertyOutputReference {
+    return new InlinePolicyPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

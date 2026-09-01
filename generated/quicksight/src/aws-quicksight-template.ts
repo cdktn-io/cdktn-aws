@@ -1,0 +1,1218 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsQuicksightTemplateConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#aws_account_id AwsQuicksightTemplate#aws_account_id}
+  */
+  readonly awsAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#id AwsQuicksightTemplate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#name AwsQuicksightTemplate#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#region AwsQuicksightTemplate#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags AwsQuicksightTemplate#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags_all AwsQuicksightTemplate#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#template_id AwsQuicksightTemplate#template_id}
+  */
+  readonly templateId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#version_description AwsQuicksightTemplate#version_description}
+  */
+  readonly versionDescription: string;
+  /**
+  * definition block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#definition AwsQuicksightTemplate#definition}
+  */
+  readonly definition?: any;
+  /**
+  * permissions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#permissions AwsQuicksightTemplate#permissions}
+  */
+  readonly permissions?: AwsQuicksightTemplate.PermissionsProperty[] | cdktn.IResolvable;
+  /**
+  * source_entity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_entity AwsQuicksightTemplate#source_entity}
+  */
+  readonly sourceEntity?: AwsQuicksightTemplate.SourceEntityProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#timeouts AwsQuicksightTemplate#timeouts}
+  */
+  readonly timeouts?: AwsQuicksightTemplate.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template aws_quicksight_template}
+*/
+export class AwsQuicksightTemplate extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_quicksight_template";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsQuicksightTemplate resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsQuicksightTemplate to import
+  * @param importFromId The id of the existing AwsQuicksightTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsQuicksightTemplate to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_template", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template aws_quicksight_template} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsQuicksightTemplateConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsQuicksightTemplateConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_quicksight_template',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._awsAccountId = config.awsAccountId;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._templateId = config.templateId;
+    this._versionDescription = config.versionDescription;
+    this._definition = config.definition;
+    this._permissions.internalValue = config.permissions;
+    this._sourceEntity.internalValue = config.sourceEntity;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // aws_account_id - computed: true, optional: true, required: false
+  private _awsAccountId?: string; 
+  public get awsAccountId() {
+    return this.getStringAttribute('aws_account_id');
+  }
+  public set awsAccountId(value: string) {
+    this._awsAccountId = value;
+  }
+  public resetAwsAccountId() {
+    this._awsAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsAccountIdInput() {
+    return this._awsAccountId;
+  }
+
+  // created_time - computed: true, optional: false, required: false
+  public get createdTime() {
+    return this.getStringAttribute('created_time');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // last_updated_time - computed: true, optional: false, required: false
+  public get lastUpdatedTime() {
+    return this.getStringAttribute('last_updated_time');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // source_entity_arn - computed: true, optional: false, required: false
+  public get sourceEntityArn() {
+    return this.getStringAttribute('source_entity_arn');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // template_id - computed: false, optional: false, required: true
+  private _templateId?: string; 
+  public get templateId() {
+    return this.getStringAttribute('template_id');
+  }
+  public set templateId(value: string) {
+    this._templateId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateIdInput() {
+    return this._templateId;
+  }
+
+  // version_description - computed: false, optional: false, required: true
+  private _versionDescription?: string; 
+  public get versionDescription() {
+    return this.getStringAttribute('version_description');
+  }
+  public set versionDescription(value: string) {
+    this._versionDescription = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionDescriptionInput() {
+    return this._versionDescription;
+  }
+
+  // version_number - computed: true, optional: false, required: false
+  public get versionNumber() {
+    return this.getNumberAttribute('version_number');
+  }
+
+  // definition - computed: false, optional: true, required: false
+  private _definition?: any; 
+  public get definition() {
+    return this.interpolationForAttribute('definition');
+  }
+  public set definition(value: any) {
+    this._definition = value;
+  }
+  public resetDefinition() {
+    this._definition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get definitionInput() {
+    return this._definition;
+  }
+
+  // permissions - computed: false, optional: true, required: false
+  private _permissions = new AwsQuicksightTemplate.PermissionsPropertyList(this, "permissions", true);
+  public get permissions() {
+    return this._permissions;
+  }
+  public putPermissions(value: AwsQuicksightTemplate.PermissionsProperty[] | cdktn.IResolvable) {
+    this._permissions.internalValue = value;
+  }
+  public resetPermissions() {
+    this._permissions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions.internalValue;
+  }
+
+  // source_entity - computed: false, optional: true, required: false
+  private _sourceEntity = new AwsQuicksightTemplate.SourceEntityPropertyOutputReference(this, "source_entity");
+  public get sourceEntity() {
+    return this._sourceEntity;
+  }
+  public putSourceEntity(value: AwsQuicksightTemplate.SourceEntityProperty) {
+    this._sourceEntity.internalValue = value;
+  }
+  public resetSourceEntity() {
+    this._sourceEntity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceEntityInput() {
+    return this._sourceEntity.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsQuicksightTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsQuicksightTemplate.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      aws_account_id: cdktn.stringToTerraform(this._awsAccountId),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      template_id: cdktn.stringToTerraform(this._templateId),
+      version_description: cdktn.stringToTerraform(this._versionDescription),
+      definition: cdktn.anyToTerraform(this._definition),
+      permissions: cdktn.listMapper(awsQuicksightTemplatePermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      source_entity: awsQuicksightTemplateSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
+      timeouts: awsQuicksightTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      aws_account_id: {
+        value: cdktn.stringToHclTerraform(this._awsAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      template_id: {
+        value: cdktn.stringToHclTerraform(this._templateId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_description: {
+        value: cdktn.stringToHclTerraform(this._versionDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      definition: {
+        value: cdktn.anyToHclTerraform(this._definition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "any",
+      },
+      permissions: {
+        value: cdktn.listMapperHcl(awsQuicksightTemplatePermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsQuicksightTemplate.PermissionsPropertyList",
+      },
+      source_entity: {
+        value: awsQuicksightTemplateSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsQuicksightTemplate.SourceEntityPropertyList",
+      },
+      timeouts: {
+        value: awsQuicksightTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsQuicksightTemplate.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsQuicksightTemplatePermissionsPropertyToTerraform(struct?: AwsQuicksightTemplate.PermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    actions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.actions),
+    principal: cdktn.stringToTerraform(struct!.principal),
+  }
+}
+
+
+export function awsQuicksightTemplatePermissionsPropertyToHclTerraform(struct?: AwsQuicksightTemplate.PermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    actions: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.actions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    principal: {
+      value: cdktn.stringToHclTerraform(struct!.principal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsQuicksightTemplateDataSetReferencesPropertyToTerraform(struct?: AwsQuicksightTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    data_set_arn: cdktn.stringToTerraform(struct!.dataSetArn),
+    data_set_placeholder: cdktn.stringToTerraform(struct!.dataSetPlaceholder),
+  }
+}
+
+
+export function awsQuicksightTemplateDataSetReferencesPropertyToHclTerraform(struct?: AwsQuicksightTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    data_set_arn: {
+      value: cdktn.stringToHclTerraform(struct!.dataSetArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_set_placeholder: {
+      value: cdktn.stringToHclTerraform(struct!.dataSetPlaceholder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsQuicksightTemplateSourceAnalysisPropertyToTerraform(struct?: AwsQuicksightTemplate.SourceAnalysisPropertyOutputReference | AwsQuicksightTemplate.SourceAnalysisProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    arn: cdktn.stringToTerraform(struct!.arn),
+    data_set_references: cdktn.listMapper(awsQuicksightTemplateDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
+  }
+}
+
+
+export function awsQuicksightTemplateSourceAnalysisPropertyToHclTerraform(struct?: AwsQuicksightTemplate.SourceAnalysisPropertyOutputReference | AwsQuicksightTemplate.SourceAnalysisProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    arn: {
+      value: cdktn.stringToHclTerraform(struct!.arn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_set_references: {
+      value: cdktn.listMapperHcl(awsQuicksightTemplateDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataSetReferencesPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsQuicksightTemplateSourceTemplatePropertyToTerraform(struct?: AwsQuicksightTemplate.SourceTemplatePropertyOutputReference | AwsQuicksightTemplate.SourceTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    arn: cdktn.stringToTerraform(struct!.arn),
+  }
+}
+
+
+export function awsQuicksightTemplateSourceTemplatePropertyToHclTerraform(struct?: AwsQuicksightTemplate.SourceTemplatePropertyOutputReference | AwsQuicksightTemplate.SourceTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    arn: {
+      value: cdktn.stringToHclTerraform(struct!.arn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsQuicksightTemplateSourceEntityPropertyToTerraform(struct?: AwsQuicksightTemplate.SourceEntityPropertyOutputReference | AwsQuicksightTemplate.SourceEntityProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    source_analysis: awsQuicksightTemplateSourceAnalysisPropertyToTerraform(struct!.sourceAnalysis),
+    source_template: awsQuicksightTemplateSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
+  }
+}
+
+
+export function awsQuicksightTemplateSourceEntityPropertyToHclTerraform(struct?: AwsQuicksightTemplate.SourceEntityPropertyOutputReference | AwsQuicksightTemplate.SourceEntityProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    source_analysis: {
+      value: awsQuicksightTemplateSourceAnalysisPropertyToHclTerraform(struct!.sourceAnalysis),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SourceAnalysisPropertyList",
+    },
+    source_template: {
+      value: awsQuicksightTemplateSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SourceTemplatePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsQuicksightTemplateTimeoutsPropertyToTerraform(struct?: AwsQuicksightTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsQuicksightTemplateTimeoutsPropertyToHclTerraform(struct?: AwsQuicksightTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsQuicksightTemplate {
+export interface PermissionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#actions AwsQuicksightTemplate#actions}
+  */
+  readonly actions: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#principal AwsQuicksightTemplate#principal}
+  */
+  readonly principal: string;
+}
+export class PermissionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PermissionsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actions = this._actions;
+    }
+    if (this._principal !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principal = this._principal;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PermissionsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._actions = undefined;
+      this._principal = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._actions = value.actions;
+      this._principal = value.principal;
+    }
+  }
+
+  // actions - computed: false, optional: false, required: true
+  private _actions?: string[]; 
+  public get actions() {
+    return cdktn.Fn.tolist(this.getListAttribute('actions'));
+  }
+  public set actions(value: string[]) {
+    this._actions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions;
+  }
+
+  // principal - computed: false, optional: false, required: true
+  private _principal?: string; 
+  public get principal() {
+    return this.getStringAttribute('principal');
+  }
+  public set principal(value: string) {
+    this._principal = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalInput() {
+    return this._principal;
+  }
+}
+
+export class PermissionsPropertyList extends cdktn.ComplexList {
+  public internalValue? : PermissionsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PermissionsPropertyOutputReference {
+    return new PermissionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataSetReferencesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_arn AwsQuicksightTemplate#data_set_arn}
+  */
+  readonly dataSetArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_placeholder AwsQuicksightTemplate#data_set_placeholder}
+  */
+  readonly dataSetPlaceholder: string;
+}
+export class DataSetReferencesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataSetReferencesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataSetArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataSetArn = this._dataSetArn;
+    }
+    if (this._dataSetPlaceholder !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataSetPlaceholder = this._dataSetPlaceholder;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataSetReferencesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataSetArn = undefined;
+      this._dataSetPlaceholder = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataSetArn = value.dataSetArn;
+      this._dataSetPlaceholder = value.dataSetPlaceholder;
+    }
+  }
+
+  // data_set_arn - computed: false, optional: false, required: true
+  private _dataSetArn?: string; 
+  public get dataSetArn() {
+    return this.getStringAttribute('data_set_arn');
+  }
+  public set dataSetArn(value: string) {
+    this._dataSetArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataSetArnInput() {
+    return this._dataSetArn;
+  }
+
+  // data_set_placeholder - computed: false, optional: false, required: true
+  private _dataSetPlaceholder?: string; 
+  public get dataSetPlaceholder() {
+    return this.getStringAttribute('data_set_placeholder');
+  }
+  public set dataSetPlaceholder(value: string) {
+    this._dataSetPlaceholder = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataSetPlaceholderInput() {
+    return this._dataSetPlaceholder;
+  }
+}
+
+export class DataSetReferencesPropertyList extends cdktn.ComplexList {
+  public internalValue? : DataSetReferencesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataSetReferencesPropertyOutputReference {
+    return new DataSetReferencesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SourceAnalysisProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn AwsQuicksightTemplate#arn}
+  */
+  readonly arn: string;
+  /**
+  * data_set_references block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_references AwsQuicksightTemplate#data_set_references}
+  */
+  readonly dataSetReferences: DataSetReferencesProperty[] | cdktn.IResolvable;
+}
+export class SourceAnalysisPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceAnalysisProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._arn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.arn = this._arn;
+    }
+    if (this._dataSetReferences?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataSetReferences = this._dataSetReferences?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceAnalysisProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._arn = undefined;
+      this._dataSetReferences.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._arn = value.arn;
+      this._dataSetReferences.internalValue = value.dataSetReferences;
+    }
+  }
+
+  // arn - computed: false, optional: false, required: true
+  private _arn?: string; 
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+  public set arn(value: string) {
+    this._arn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get arnInput() {
+    return this._arn;
+  }
+
+  // data_set_references - computed: false, optional: false, required: true
+  private _dataSetReferences = new DataSetReferencesPropertyList(this, "data_set_references", false);
+  public get dataSetReferences() {
+    return this._dataSetReferences;
+  }
+  public putDataSetReferences(value: DataSetReferencesProperty[] | cdktn.IResolvable) {
+    this._dataSetReferences.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataSetReferencesInput() {
+    return this._dataSetReferences.internalValue;
+  }
+}
+export interface SourceTemplateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn AwsQuicksightTemplate#arn}
+  */
+  readonly arn: string;
+}
+export class SourceTemplatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceTemplateProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._arn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.arn = this._arn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceTemplateProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._arn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._arn = value.arn;
+    }
+  }
+
+  // arn - computed: false, optional: false, required: true
+  private _arn?: string; 
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+  public set arn(value: string) {
+    this._arn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get arnInput() {
+    return this._arn;
+  }
+}
+export interface SourceEntityProperty {
+  /**
+  * source_analysis block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_analysis AwsQuicksightTemplate#source_analysis}
+  */
+  readonly sourceAnalysis?: SourceAnalysisProperty;
+  /**
+  * source_template block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_template AwsQuicksightTemplate#source_template}
+  */
+  readonly sourceTemplate?: SourceTemplateProperty;
+}
+export class SourceEntityPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceEntityProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceAnalysis?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceAnalysis = this._sourceAnalysis?.internalValue;
+    }
+    if (this._sourceTemplate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceTemplate = this._sourceTemplate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceEntityProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sourceAnalysis.internalValue = undefined;
+      this._sourceTemplate.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sourceAnalysis.internalValue = value.sourceAnalysis;
+      this._sourceTemplate.internalValue = value.sourceTemplate;
+    }
+  }
+
+  // source_analysis - computed: false, optional: true, required: false
+  private _sourceAnalysis = new SourceAnalysisPropertyOutputReference(this, "source_analysis");
+  public get sourceAnalysis() {
+    return this._sourceAnalysis;
+  }
+  public putSourceAnalysis(value: SourceAnalysisProperty) {
+    this._sourceAnalysis.internalValue = value;
+  }
+  public resetSourceAnalysis() {
+    this._sourceAnalysis.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceAnalysisInput() {
+    return this._sourceAnalysis.internalValue;
+  }
+
+  // source_template - computed: false, optional: true, required: false
+  private _sourceTemplate = new SourceTemplatePropertyOutputReference(this, "source_template");
+  public get sourceTemplate() {
+    return this._sourceTemplate;
+  }
+  public putSourceTemplate(value: SourceTemplateProperty) {
+    this._sourceTemplate.internalValue = value;
+  }
+  public resetSourceTemplate() {
+    this._sourceTemplate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTemplateInput() {
+    return this._sourceTemplate.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#create AwsQuicksightTemplate#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#delete AwsQuicksightTemplate#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#update AwsQuicksightTemplate#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

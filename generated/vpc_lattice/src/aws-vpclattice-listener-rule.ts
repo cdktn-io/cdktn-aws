@@ -1,0 +1,1787 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVpclatticeListenerRuleConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#id AwsVpclatticeListenerRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#listener_identifier AwsVpclatticeListenerRule#listener_identifier}
+  */
+  readonly listenerIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name AwsVpclatticeListenerRule#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#priority AwsVpclatticeListenerRule#priority}
+  */
+  readonly priority: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#region AwsVpclatticeListenerRule#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#service_identifier AwsVpclatticeListenerRule#service_identifier}
+  */
+  readonly serviceIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags AwsVpclatticeListenerRule#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#tags_all AwsVpclatticeListenerRule#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * action block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#action AwsVpclatticeListenerRule#action}
+  */
+  readonly action: AwsVpclatticeListenerRule.ActionProperty;
+  /**
+  * match block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  */
+  readonly match: AwsVpclatticeListenerRule.MatchProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#timeouts AwsVpclatticeListenerRule#timeouts}
+  */
+  readonly timeouts?: AwsVpclatticeListenerRule.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule aws_vpclattice_listener_rule}
+*/
+export class AwsVpclatticeListenerRule extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_vpclattice_listener_rule";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVpclatticeListenerRule resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVpclatticeListenerRule to import
+  * @param importFromId The id of the existing AwsVpclatticeListenerRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpclatticeListenerRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_listener_rule", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule aws_vpclattice_listener_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVpclatticeListenerRuleConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVpclatticeListenerRuleConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_vpclattice_listener_rule',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._listenerIdentifier = config.listenerIdentifier;
+    this._name = config.name;
+    this._priority = config.priority;
+    this._region = config.region;
+    this._serviceIdentifier = config.serviceIdentifier;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._action.internalValue = config.action;
+    this._match.internalValue = config.match;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // listener_identifier - computed: false, optional: false, required: true
+  private _listenerIdentifier?: string; 
+  public get listenerIdentifier() {
+    return this.getStringAttribute('listener_identifier');
+  }
+  public set listenerIdentifier(value: string) {
+    this._listenerIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listenerIdentifierInput() {
+    return this._listenerIdentifier;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // rule_id - computed: true, optional: false, required: false
+  public get ruleId() {
+    return this.getStringAttribute('rule_id');
+  }
+
+  // service_identifier - computed: false, optional: false, required: true
+  private _serviceIdentifier?: string; 
+  public get serviceIdentifier() {
+    return this.getStringAttribute('service_identifier');
+  }
+  public set serviceIdentifier(value: string) {
+    this._serviceIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceIdentifierInput() {
+    return this._serviceIdentifier;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action = new AwsVpclatticeListenerRule.ActionPropertyOutputReference(this, "action");
+  public get action() {
+    return this._action;
+  }
+  public putAction(value: AwsVpclatticeListenerRule.ActionProperty) {
+    this._action.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action.internalValue;
+  }
+
+  // match - computed: false, optional: false, required: true
+  private _match = new AwsVpclatticeListenerRule.MatchPropertyOutputReference(this, "match");
+  public get match() {
+    return this._match;
+  }
+  public putMatch(value: AwsVpclatticeListenerRule.MatchProperty) {
+    this._match.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchInput() {
+    return this._match.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsVpclatticeListenerRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsVpclatticeListenerRule.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      listener_identifier: cdktn.stringToTerraform(this._listenerIdentifier),
+      name: cdktn.stringToTerraform(this._name),
+      priority: cdktn.numberToTerraform(this._priority),
+      region: cdktn.stringToTerraform(this._region),
+      service_identifier: cdktn.stringToTerraform(this._serviceIdentifier),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      action: awsVpclatticeListenerRuleActionPropertyToTerraform(this._action.internalValue),
+      match: awsVpclatticeListenerRuleMatchPropertyToTerraform(this._match.internalValue),
+      timeouts: awsVpclatticeListenerRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      listener_identifier: {
+        value: cdktn.stringToHclTerraform(this._listenerIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktn.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_identifier: {
+        value: cdktn.stringToHclTerraform(this._serviceIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      action: {
+        value: awsVpclatticeListenerRuleActionPropertyToHclTerraform(this._action.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVpclatticeListenerRule.ActionPropertyList",
+      },
+      match: {
+        value: awsVpclatticeListenerRuleMatchPropertyToHclTerraform(this._match.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVpclatticeListenerRule.MatchPropertyList",
+      },
+      timeouts: {
+        value: awsVpclatticeListenerRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsVpclatticeListenerRule.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsVpclatticeListenerRuleFixedResponsePropertyToTerraform(struct?: AwsVpclatticeListenerRule.FixedResponsePropertyOutputReference | AwsVpclatticeListenerRule.FixedResponseProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status_code: cdktn.numberToTerraform(struct!.statusCode),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleFixedResponsePropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.FixedResponsePropertyOutputReference | AwsVpclatticeListenerRule.FixedResponseProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status_code: {
+      value: cdktn.numberToHclTerraform(struct!.statusCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleTargetGroupsPropertyToTerraform(struct?: AwsVpclatticeListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    target_group_identifier: cdktn.stringToTerraform(struct!.targetGroupIdentifier),
+    weight: cdktn.numberToTerraform(struct!.weight),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleTargetGroupsPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.TargetGroupsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    target_group_identifier: {
+      value: cdktn.stringToHclTerraform(struct!.targetGroupIdentifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    weight: {
+      value: cdktn.numberToHclTerraform(struct!.weight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleForwardPropertyToTerraform(struct?: AwsVpclatticeListenerRule.ForwardPropertyOutputReference | AwsVpclatticeListenerRule.ForwardProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    target_groups: cdktn.listMapper(awsVpclatticeListenerRuleTargetGroupsPropertyToTerraform, true)(struct!.targetGroups),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleForwardPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.ForwardPropertyOutputReference | AwsVpclatticeListenerRule.ForwardProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    target_groups: {
+      value: cdktn.listMapperHcl(awsVpclatticeListenerRuleTargetGroupsPropertyToHclTerraform, true)(struct!.targetGroups),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TargetGroupsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleActionPropertyToTerraform(struct?: AwsVpclatticeListenerRule.ActionPropertyOutputReference | AwsVpclatticeListenerRule.ActionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    fixed_response: awsVpclatticeListenerRuleFixedResponsePropertyToTerraform(struct!.fixedResponse),
+    forward: awsVpclatticeListenerRuleForwardPropertyToTerraform(struct!.forward),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleActionPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.ActionPropertyOutputReference | AwsVpclatticeListenerRule.ActionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    fixed_response: {
+      value: awsVpclatticeListenerRuleFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FixedResponsePropertyList",
+    },
+    forward: {
+      value: awsVpclatticeListenerRuleForwardPropertyToHclTerraform(struct!.forward),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ForwardPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    contains: cdktn.stringToTerraform(struct!.contains),
+    exact: cdktn.stringToTerraform(struct!.exact),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchHeaderMatchesMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    contains: {
+      value: cdktn.stringToHclTerraform(struct!.contains),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    exact: {
+      value: cdktn.stringToHclTerraform(struct!.exact),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleHeaderMatchesPropertyToTerraform(struct?: AwsVpclatticeListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    case_sensitive: cdktn.booleanToTerraform(struct!.caseSensitive),
+    name: cdktn.stringToTerraform(struct!.name),
+    match: awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToTerraform(struct!.match),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.HeaderMatchesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    case_sensitive: {
+      value: cdktn.booleanToHclTerraform(struct!.caseSensitive),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    match: {
+      value: awsVpclatticeListenerRuleMatchHttpMatchHeaderMatchesMatchPropertyToHclTerraform(struct!.match),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MatchHttpMatchHeaderMatchesMatchPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    exact: cdktn.stringToTerraform(struct!.exact),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchHttpMatchPathMatchMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    exact: {
+      value: cdktn.stringToHclTerraform(struct!.exact),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRulePathMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.PathMatchPropertyOutputReference | AwsVpclatticeListenerRule.PathMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    case_sensitive: cdktn.booleanToTerraform(struct!.caseSensitive),
+    match: awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToTerraform(struct!.match),
+  }
+}
+
+
+export function awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.PathMatchPropertyOutputReference | AwsVpclatticeListenerRule.PathMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    case_sensitive: {
+      value: cdktn.booleanToHclTerraform(struct!.caseSensitive),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    match: {
+      value: awsVpclatticeListenerRuleMatchHttpMatchPathMatchMatchPropertyToHclTerraform(struct!.match),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MatchHttpMatchPathMatchMatchPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleHttpMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.HttpMatchPropertyOutputReference | AwsVpclatticeListenerRule.HttpMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    method: cdktn.stringToTerraform(struct!.method),
+    header_matches: cdktn.listMapper(awsVpclatticeListenerRuleHeaderMatchesPropertyToTerraform, true)(struct!.headerMatches),
+    path_match: awsVpclatticeListenerRulePathMatchPropertyToTerraform(struct!.pathMatch),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.HttpMatchPropertyOutputReference | AwsVpclatticeListenerRule.HttpMatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    method: {
+      value: cdktn.stringToHclTerraform(struct!.method),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header_matches: {
+      value: cdktn.listMapperHcl(awsVpclatticeListenerRuleHeaderMatchesPropertyToHclTerraform, true)(struct!.headerMatches),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HeaderMatchesPropertyList",
+    },
+    path_match: {
+      value: awsVpclatticeListenerRulePathMatchPropertyToHclTerraform(struct!.pathMatch),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PathMatchPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleMatchPropertyToTerraform(struct?: AwsVpclatticeListenerRule.MatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    http_match: awsVpclatticeListenerRuleHttpMatchPropertyToTerraform(struct!.httpMatch),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleMatchPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.MatchPropertyOutputReference | AwsVpclatticeListenerRule.MatchProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    http_match: {
+      value: awsVpclatticeListenerRuleHttpMatchPropertyToHclTerraform(struct!.httpMatch),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HttpMatchPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeListenerRuleTimeoutsPropertyToTerraform(struct?: AwsVpclatticeListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsVpclatticeListenerRuleTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeListenerRule.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsVpclatticeListenerRule {
+export interface FixedResponseProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#status_code AwsVpclatticeListenerRule#status_code}
+  */
+  readonly statusCode: number;
+}
+export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): FixedResponseProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._statusCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statusCode = this._statusCode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FixedResponseProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._statusCode = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._statusCode = value.statusCode;
+    }
+  }
+
+  // status_code - computed: false, optional: false, required: true
+  private _statusCode?: number; 
+  public get statusCode() {
+    return this.getNumberAttribute('status_code');
+  }
+  public set statusCode(value: number) {
+    this._statusCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeInput() {
+    return this._statusCode;
+  }
+}
+export interface TargetGroupsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_group_identifier AwsVpclatticeListenerRule#target_group_identifier}
+  */
+  readonly targetGroupIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#weight AwsVpclatticeListenerRule#weight}
+  */
+  readonly weight?: number;
+}
+export class TargetGroupsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TargetGroupsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetGroupIdentifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetGroupIdentifier = this._targetGroupIdentifier;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TargetGroupsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._targetGroupIdentifier = undefined;
+      this._weight = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._targetGroupIdentifier = value.targetGroupIdentifier;
+      this._weight = value.weight;
+    }
+  }
+
+  // target_group_identifier - computed: false, optional: false, required: true
+  private _targetGroupIdentifier?: string; 
+  public get targetGroupIdentifier() {
+    return this.getStringAttribute('target_group_identifier');
+  }
+  public set targetGroupIdentifier(value: string) {
+    this._targetGroupIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetGroupIdentifierInput() {
+    return this._targetGroupIdentifier;
+  }
+
+  // weight - computed: false, optional: true, required: false
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+}
+
+export class TargetGroupsPropertyList extends cdktn.ComplexList {
+  public internalValue? : TargetGroupsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TargetGroupsPropertyOutputReference {
+    return new TargetGroupsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ForwardProperty {
+  /**
+  * target_groups block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#target_groups AwsVpclatticeListenerRule#target_groups}
+  */
+  readonly targetGroups: TargetGroupsProperty[] | cdktn.IResolvable;
+}
+export class ForwardPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ForwardProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetGroups?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetGroups = this._targetGroups?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ForwardProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._targetGroups.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._targetGroups.internalValue = value.targetGroups;
+    }
+  }
+
+  // target_groups - computed: false, optional: false, required: true
+  private _targetGroups = new TargetGroupsPropertyList(this, "target_groups", false);
+  public get targetGroups() {
+    return this._targetGroups;
+  }
+  public putTargetGroups(value: TargetGroupsProperty[] | cdktn.IResolvable) {
+    this._targetGroups.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetGroupsInput() {
+    return this._targetGroups.internalValue;
+  }
+}
+export interface ActionProperty {
+  /**
+  * fixed_response block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#fixed_response AwsVpclatticeListenerRule#fixed_response}
+  */
+  readonly fixedResponse?: FixedResponseProperty;
+  /**
+  * forward block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#forward AwsVpclatticeListenerRule#forward}
+  */
+  readonly forward?: ForwardProperty;
+}
+export class ActionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ActionProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fixedResponse?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fixedResponse = this._fixedResponse?.internalValue;
+    }
+    if (this._forward?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forward = this._forward?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ActionProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._fixedResponse.internalValue = undefined;
+      this._forward.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._fixedResponse.internalValue = value.fixedResponse;
+      this._forward.internalValue = value.forward;
+    }
+  }
+
+  // fixed_response - computed: false, optional: true, required: false
+  private _fixedResponse = new FixedResponsePropertyOutputReference(this, "fixed_response");
+  public get fixedResponse() {
+    return this._fixedResponse;
+  }
+  public putFixedResponse(value: FixedResponseProperty) {
+    this._fixedResponse.internalValue = value;
+  }
+  public resetFixedResponse() {
+    this._fixedResponse.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedResponseInput() {
+    return this._fixedResponse.internalValue;
+  }
+
+  // forward - computed: false, optional: true, required: false
+  private _forward = new ForwardPropertyOutputReference(this, "forward");
+  public get forward() {
+    return this._forward;
+  }
+  public putForward(value: ForwardProperty) {
+    this._forward.internalValue = value;
+  }
+  public resetForward() {
+    this._forward.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardInput() {
+    return this._forward.internalValue;
+  }
+}
+export interface MatchHttpMatchHeaderMatchesMatchProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#contains AwsVpclatticeListenerRule#contains}
+  */
+  readonly contains?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact AwsVpclatticeListenerRule#exact}
+  */
+  readonly exact?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix AwsVpclatticeListenerRule#prefix}
+  */
+  readonly prefix?: string;
+}
+export class MatchHttpMatchHeaderMatchesMatchPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MatchHttpMatchHeaderMatchesMatchProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._contains !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contains = this._contains;
+    }
+    if (this._exact !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exact = this._exact;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MatchHttpMatchHeaderMatchesMatchProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._contains = undefined;
+      this._exact = undefined;
+      this._prefix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._contains = value.contains;
+      this._exact = value.exact;
+      this._prefix = value.prefix;
+    }
+  }
+
+  // contains - computed: false, optional: true, required: false
+  private _contains?: string; 
+  public get contains() {
+    return this.getStringAttribute('contains');
+  }
+  public set contains(value: string) {
+    this._contains = value;
+  }
+  public resetContains() {
+    this._contains = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containsInput() {
+    return this._contains;
+  }
+
+  // exact - computed: false, optional: true, required: false
+  private _exact?: string; 
+  public get exact() {
+    return this.getStringAttribute('exact');
+  }
+  public set exact(value: string) {
+    this._exact = value;
+  }
+  public resetExact() {
+    this._exact = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactInput() {
+    return this._exact;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+}
+export interface HeaderMatchesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive AwsVpclatticeListenerRule#case_sensitive}
+  */
+  readonly caseSensitive?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#name AwsVpclatticeListenerRule#name}
+  */
+  readonly name: string;
+  /**
+  * match block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  */
+  readonly match: MatchHttpMatchHeaderMatchesMatchProperty;
+}
+export class HeaderMatchesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HeaderMatchesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caseSensitive !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caseSensitive = this._caseSensitive;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._match?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.match = this._match?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HeaderMatchesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._caseSensitive = undefined;
+      this._name = undefined;
+      this._match.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._caseSensitive = value.caseSensitive;
+      this._name = value.name;
+      this._match.internalValue = value.match;
+    }
+  }
+
+  // case_sensitive - computed: false, optional: true, required: false
+  private _caseSensitive?: boolean | cdktn.IResolvable; 
+  public get caseSensitive() {
+    return this.getBooleanAttribute('case_sensitive');
+  }
+  public set caseSensitive(value: boolean | cdktn.IResolvable) {
+    this._caseSensitive = value;
+  }
+  public resetCaseSensitive() {
+    this._caseSensitive = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caseSensitiveInput() {
+    return this._caseSensitive;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // match - computed: false, optional: false, required: true
+  private _match = new MatchHttpMatchHeaderMatchesMatchPropertyOutputReference(this, "match");
+  public get match() {
+    return this._match;
+  }
+  public putMatch(value: MatchHttpMatchHeaderMatchesMatchProperty) {
+    this._match.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchInput() {
+    return this._match.internalValue;
+  }
+}
+
+export class HeaderMatchesPropertyList extends cdktn.ComplexList {
+  public internalValue? : HeaderMatchesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HeaderMatchesPropertyOutputReference {
+    return new HeaderMatchesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MatchHttpMatchPathMatchMatchProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#exact AwsVpclatticeListenerRule#exact}
+  */
+  readonly exact?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#prefix AwsVpclatticeListenerRule#prefix}
+  */
+  readonly prefix?: string;
+}
+export class MatchHttpMatchPathMatchMatchPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MatchHttpMatchPathMatchMatchProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exact !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exact = this._exact;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MatchHttpMatchPathMatchMatchProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._exact = undefined;
+      this._prefix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._exact = value.exact;
+      this._prefix = value.prefix;
+    }
+  }
+
+  // exact - computed: false, optional: true, required: false
+  private _exact?: string; 
+  public get exact() {
+    return this.getStringAttribute('exact');
+  }
+  public set exact(value: string) {
+    this._exact = value;
+  }
+  public resetExact() {
+    this._exact = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactInput() {
+    return this._exact;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+}
+export interface PathMatchProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#case_sensitive AwsVpclatticeListenerRule#case_sensitive}
+  */
+  readonly caseSensitive?: boolean | cdktn.IResolvable;
+  /**
+  * match block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#match AwsVpclatticeListenerRule#match}
+  */
+  readonly match: MatchHttpMatchPathMatchMatchProperty;
+}
+export class PathMatchPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PathMatchProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caseSensitive !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caseSensitive = this._caseSensitive;
+    }
+    if (this._match?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.match = this._match?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PathMatchProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._caseSensitive = undefined;
+      this._match.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._caseSensitive = value.caseSensitive;
+      this._match.internalValue = value.match;
+    }
+  }
+
+  // case_sensitive - computed: false, optional: true, required: false
+  private _caseSensitive?: boolean | cdktn.IResolvable; 
+  public get caseSensitive() {
+    return this.getBooleanAttribute('case_sensitive');
+  }
+  public set caseSensitive(value: boolean | cdktn.IResolvable) {
+    this._caseSensitive = value;
+  }
+  public resetCaseSensitive() {
+    this._caseSensitive = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caseSensitiveInput() {
+    return this._caseSensitive;
+  }
+
+  // match - computed: false, optional: false, required: true
+  private _match = new MatchHttpMatchPathMatchMatchPropertyOutputReference(this, "match");
+  public get match() {
+    return this._match;
+  }
+  public putMatch(value: MatchHttpMatchPathMatchMatchProperty) {
+    this._match.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchInput() {
+    return this._match.internalValue;
+  }
+}
+export interface HttpMatchProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#method AwsVpclatticeListenerRule#method}
+  */
+  readonly method?: string;
+  /**
+  * header_matches block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#header_matches AwsVpclatticeListenerRule#header_matches}
+  */
+  readonly headerMatches?: HeaderMatchesProperty[] | cdktn.IResolvable;
+  /**
+  * path_match block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#path_match AwsVpclatticeListenerRule#path_match}
+  */
+  readonly pathMatch?: PathMatchProperty;
+}
+export class HttpMatchPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HttpMatchProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._headerMatches?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerMatches = this._headerMatches?.internalValue;
+    }
+    if (this._pathMatch?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathMatch = this._pathMatch?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HttpMatchProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._method = undefined;
+      this._headerMatches.internalValue = undefined;
+      this._pathMatch.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._method = value.method;
+      this._headerMatches.internalValue = value.headerMatches;
+      this._pathMatch.internalValue = value.pathMatch;
+    }
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string; 
+  public get method() {
+    return this.getStringAttribute('method');
+  }
+  public set method(value: string) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // header_matches - computed: false, optional: true, required: false
+  private _headerMatches = new HeaderMatchesPropertyList(this, "header_matches", false);
+  public get headerMatches() {
+    return this._headerMatches;
+  }
+  public putHeaderMatches(value: HeaderMatchesProperty[] | cdktn.IResolvable) {
+    this._headerMatches.internalValue = value;
+  }
+  public resetHeaderMatches() {
+    this._headerMatches.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerMatchesInput() {
+    return this._headerMatches.internalValue;
+  }
+
+  // path_match - computed: false, optional: true, required: false
+  private _pathMatch = new PathMatchPropertyOutputReference(this, "path_match");
+  public get pathMatch() {
+    return this._pathMatch;
+  }
+  public putPathMatch(value: PathMatchProperty) {
+    this._pathMatch.internalValue = value;
+  }
+  public resetPathMatch() {
+    this._pathMatch.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathMatchInput() {
+    return this._pathMatch.internalValue;
+  }
+}
+export interface MatchProperty {
+  /**
+  * http_match block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#http_match AwsVpclatticeListenerRule#http_match}
+  */
+  readonly httpMatch: HttpMatchProperty;
+}
+export class MatchPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MatchProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._httpMatch?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpMatch = this._httpMatch?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MatchProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._httpMatch.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._httpMatch.internalValue = value.httpMatch;
+    }
+  }
+
+  // http_match - computed: false, optional: false, required: true
+  private _httpMatch = new HttpMatchPropertyOutputReference(this, "http_match");
+  public get httpMatch() {
+    return this._httpMatch;
+  }
+  public putHttpMatch(value: HttpMatchProperty) {
+    this._httpMatch.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpMatchInput() {
+    return this._httpMatch.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#create AwsVpclatticeListenerRule#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#delete AwsVpclatticeListenerRule#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_listener_rule#update AwsVpclatticeListenerRule#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

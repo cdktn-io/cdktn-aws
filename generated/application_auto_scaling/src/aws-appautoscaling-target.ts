@@ -1,0 +1,542 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAppautoscalingTargetConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#id AwsAppautoscalingTarget#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#max_capacity AwsAppautoscalingTarget#max_capacity}
+  */
+  readonly maxCapacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#min_capacity AwsAppautoscalingTarget#min_capacity}
+  */
+  readonly minCapacity: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#region AwsAppautoscalingTarget#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#resource_id AwsAppautoscalingTarget#resource_id}
+  */
+  readonly resourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#role_arn AwsAppautoscalingTarget#role_arn}
+  */
+  readonly roleArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scalable_dimension AwsAppautoscalingTarget#scalable_dimension}
+  */
+  readonly scalableDimension: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#service_namespace AwsAppautoscalingTarget#service_namespace}
+  */
+  readonly serviceNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags AwsAppautoscalingTarget#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#tags_all AwsAppautoscalingTarget#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * suspended_state block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#suspended_state AwsAppautoscalingTarget#suspended_state}
+  */
+  readonly suspendedState?: AwsAppautoscalingTarget.SuspendedStateProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target aws_appautoscaling_target}
+*/
+export class AwsAppautoscalingTarget extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_appautoscaling_target";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAppautoscalingTarget resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAppautoscalingTarget to import
+  * @param importFromId The id of the existing AwsAppautoscalingTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppautoscalingTarget to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appautoscaling_target", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target aws_appautoscaling_target} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAppautoscalingTargetConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAppautoscalingTargetConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_appautoscaling_target',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._maxCapacity = config.maxCapacity;
+    this._minCapacity = config.minCapacity;
+    this._region = config.region;
+    this._resourceId = config.resourceId;
+    this._roleArn = config.roleArn;
+    this._scalableDimension = config.scalableDimension;
+    this._serviceNamespace = config.serviceNamespace;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._suspendedState.internalValue = config.suspendedState;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // max_capacity - computed: false, optional: false, required: true
+  private _maxCapacity?: number; 
+  public get maxCapacity() {
+    return this.getNumberAttribute('max_capacity');
+  }
+  public set maxCapacity(value: number) {
+    this._maxCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityInput() {
+    return this._maxCapacity;
+  }
+
+  // min_capacity - computed: false, optional: false, required: true
+  private _minCapacity?: number; 
+  public get minCapacity() {
+    return this.getNumberAttribute('min_capacity');
+  }
+  public set minCapacity(value: number) {
+    this._minCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCapacityInput() {
+    return this._minCapacity;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+
+  // role_arn - computed: true, optional: true, required: false
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  public resetRoleArn() {
+    this._roleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // scalable_dimension - computed: false, optional: false, required: true
+  private _scalableDimension?: string; 
+  public get scalableDimension() {
+    return this.getStringAttribute('scalable_dimension');
+  }
+  public set scalableDimension(value: string) {
+    this._scalableDimension = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalableDimensionInput() {
+    return this._scalableDimension;
+  }
+
+  // service_namespace - computed: false, optional: false, required: true
+  private _serviceNamespace?: string; 
+  public get serviceNamespace() {
+    return this.getStringAttribute('service_namespace');
+  }
+  public set serviceNamespace(value: string) {
+    this._serviceNamespace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNamespaceInput() {
+    return this._serviceNamespace;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // suspended_state - computed: false, optional: true, required: false
+  private _suspendedState = new AwsAppautoscalingTarget.SuspendedStatePropertyOutputReference(this, "suspended_state");
+  public get suspendedState() {
+    return this._suspendedState;
+  }
+  public putSuspendedState(value: AwsAppautoscalingTarget.SuspendedStateProperty) {
+    this._suspendedState.internalValue = value;
+  }
+  public resetSuspendedState() {
+    this._suspendedState.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suspendedStateInput() {
+    return this._suspendedState.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      max_capacity: cdktn.numberToTerraform(this._maxCapacity),
+      min_capacity: cdktn.numberToTerraform(this._minCapacity),
+      region: cdktn.stringToTerraform(this._region),
+      resource_id: cdktn.stringToTerraform(this._resourceId),
+      role_arn: cdktn.stringToTerraform(this._roleArn),
+      scalable_dimension: cdktn.stringToTerraform(this._scalableDimension),
+      service_namespace: cdktn.stringToTerraform(this._serviceNamespace),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      suspended_state: awsAppautoscalingTargetSuspendedStatePropertyToTerraform(this._suspendedState.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_capacity: {
+        value: cdktn.numberToHclTerraform(this._maxCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_capacity: {
+        value: cdktn.numberToHclTerraform(this._minCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_id: {
+        value: cdktn.stringToHclTerraform(this._resourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_arn: {
+        value: cdktn.stringToHclTerraform(this._roleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scalable_dimension: {
+        value: cdktn.stringToHclTerraform(this._scalableDimension),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_namespace: {
+        value: cdktn.stringToHclTerraform(this._serviceNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      suspended_state: {
+        value: awsAppautoscalingTargetSuspendedStatePropertyToHclTerraform(this._suspendedState.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAppautoscalingTarget.SuspendedStatePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAppautoscalingTargetSuspendedStatePropertyToTerraform(struct?: AwsAppautoscalingTarget.SuspendedStatePropertyOutputReference | AwsAppautoscalingTarget.SuspendedStateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    dynamic_scaling_in_suspended: cdktn.booleanToTerraform(struct!.dynamicScalingInSuspended),
+    dynamic_scaling_out_suspended: cdktn.booleanToTerraform(struct!.dynamicScalingOutSuspended),
+    scheduled_scaling_suspended: cdktn.booleanToTerraform(struct!.scheduledScalingSuspended),
+  }
+}
+
+
+export function awsAppautoscalingTargetSuspendedStatePropertyToHclTerraform(struct?: AwsAppautoscalingTarget.SuspendedStatePropertyOutputReference | AwsAppautoscalingTarget.SuspendedStateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    dynamic_scaling_in_suspended: {
+      value: cdktn.booleanToHclTerraform(struct!.dynamicScalingInSuspended),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_scaling_out_suspended: {
+      value: cdktn.booleanToHclTerraform(struct!.dynamicScalingOutSuspended),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scheduled_scaling_suspended: {
+      value: cdktn.booleanToHclTerraform(struct!.scheduledScalingSuspended),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAppautoscalingTarget {
+export interface SuspendedStateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_in_suspended AwsAppautoscalingTarget#dynamic_scaling_in_suspended}
+  */
+  readonly dynamicScalingInSuspended?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#dynamic_scaling_out_suspended AwsAppautoscalingTarget#dynamic_scaling_out_suspended}
+  */
+  readonly dynamicScalingOutSuspended?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appautoscaling_target#scheduled_scaling_suspended AwsAppautoscalingTarget#scheduled_scaling_suspended}
+  */
+  readonly scheduledScalingSuspended?: boolean | cdktn.IResolvable;
+}
+export class SuspendedStatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SuspendedStateProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dynamicScalingInSuspended !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicScalingInSuspended = this._dynamicScalingInSuspended;
+    }
+    if (this._dynamicScalingOutSuspended !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicScalingOutSuspended = this._dynamicScalingOutSuspended;
+    }
+    if (this._scheduledScalingSuspended !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduledScalingSuspended = this._scheduledScalingSuspended;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SuspendedStateProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dynamicScalingInSuspended = undefined;
+      this._dynamicScalingOutSuspended = undefined;
+      this._scheduledScalingSuspended = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dynamicScalingInSuspended = value.dynamicScalingInSuspended;
+      this._dynamicScalingOutSuspended = value.dynamicScalingOutSuspended;
+      this._scheduledScalingSuspended = value.scheduledScalingSuspended;
+    }
+  }
+
+  // dynamic_scaling_in_suspended - computed: false, optional: true, required: false
+  private _dynamicScalingInSuspended?: boolean | cdktn.IResolvable; 
+  public get dynamicScalingInSuspended() {
+    return this.getBooleanAttribute('dynamic_scaling_in_suspended');
+  }
+  public set dynamicScalingInSuspended(value: boolean | cdktn.IResolvable) {
+    this._dynamicScalingInSuspended = value;
+  }
+  public resetDynamicScalingInSuspended() {
+    this._dynamicScalingInSuspended = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicScalingInSuspendedInput() {
+    return this._dynamicScalingInSuspended;
+  }
+
+  // dynamic_scaling_out_suspended - computed: false, optional: true, required: false
+  private _dynamicScalingOutSuspended?: boolean | cdktn.IResolvable; 
+  public get dynamicScalingOutSuspended() {
+    return this.getBooleanAttribute('dynamic_scaling_out_suspended');
+  }
+  public set dynamicScalingOutSuspended(value: boolean | cdktn.IResolvable) {
+    this._dynamicScalingOutSuspended = value;
+  }
+  public resetDynamicScalingOutSuspended() {
+    this._dynamicScalingOutSuspended = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicScalingOutSuspendedInput() {
+    return this._dynamicScalingOutSuspended;
+  }
+
+  // scheduled_scaling_suspended - computed: false, optional: true, required: false
+  private _scheduledScalingSuspended?: boolean | cdktn.IResolvable; 
+  public get scheduledScalingSuspended() {
+    return this.getBooleanAttribute('scheduled_scaling_suspended');
+  }
+  public set scheduledScalingSuspended(value: boolean | cdktn.IResolvable) {
+    this._scheduledScalingSuspended = value;
+  }
+  public resetScheduledScalingSuspended() {
+    this._scheduledScalingSuspended = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduledScalingSuspendedInput() {
+    return this._scheduledScalingSuspended;
+  }
+}
+}

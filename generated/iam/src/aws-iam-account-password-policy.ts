@@ -1,0 +1,372 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsIamAccountPasswordPolicyConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#allow_users_to_change_password AwsIamAccountPasswordPolicy#allow_users_to_change_password}
+  */
+  readonly allowUsersToChangePassword?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#hard_expiry AwsIamAccountPasswordPolicy#hard_expiry}
+  */
+  readonly hardExpiry?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#id AwsIamAccountPasswordPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#max_password_age AwsIamAccountPasswordPolicy#max_password_age}
+  */
+  readonly maxPasswordAge?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#minimum_password_length AwsIamAccountPasswordPolicy#minimum_password_length}
+  */
+  readonly minimumPasswordLength?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#password_reuse_prevention AwsIamAccountPasswordPolicy#password_reuse_prevention}
+  */
+  readonly passwordReusePrevention?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_lowercase_characters AwsIamAccountPasswordPolicy#require_lowercase_characters}
+  */
+  readonly requireLowercaseCharacters?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_numbers AwsIamAccountPasswordPolicy#require_numbers}
+  */
+  readonly requireNumbers?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_symbols AwsIamAccountPasswordPolicy#require_symbols}
+  */
+  readonly requireSymbols?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_uppercase_characters AwsIamAccountPasswordPolicy#require_uppercase_characters}
+  */
+  readonly requireUppercaseCharacters?: boolean | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy aws_iam_account_password_policy}
+*/
+export class AwsIamAccountPasswordPolicy extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_iam_account_password_policy";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsIamAccountPasswordPolicy resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsIamAccountPasswordPolicy to import
+  * @param importFromId The id of the existing AwsIamAccountPasswordPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIamAccountPasswordPolicy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_account_password_policy", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy aws_iam_account_password_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsIamAccountPasswordPolicyConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsIamAccountPasswordPolicyConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_iam_account_password_policy',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allowUsersToChangePassword = config.allowUsersToChangePassword;
+    this._hardExpiry = config.hardExpiry;
+    this._id = config.id;
+    this._maxPasswordAge = config.maxPasswordAge;
+    this._minimumPasswordLength = config.minimumPasswordLength;
+    this._passwordReusePrevention = config.passwordReusePrevention;
+    this._requireLowercaseCharacters = config.requireLowercaseCharacters;
+    this._requireNumbers = config.requireNumbers;
+    this._requireSymbols = config.requireSymbols;
+    this._requireUppercaseCharacters = config.requireUppercaseCharacters;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allow_users_to_change_password - computed: false, optional: true, required: false
+  private _allowUsersToChangePassword?: boolean | cdktn.IResolvable; 
+  public get allowUsersToChangePassword() {
+    return this.getBooleanAttribute('allow_users_to_change_password');
+  }
+  public set allowUsersToChangePassword(value: boolean | cdktn.IResolvable) {
+    this._allowUsersToChangePassword = value;
+  }
+  public resetAllowUsersToChangePassword() {
+    this._allowUsersToChangePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowUsersToChangePasswordInput() {
+    return this._allowUsersToChangePassword;
+  }
+
+  // expire_passwords - computed: true, optional: false, required: false
+  public get expirePasswords() {
+    return this.getBooleanAttribute('expire_passwords');
+  }
+
+  // hard_expiry - computed: true, optional: true, required: false
+  private _hardExpiry?: boolean | cdktn.IResolvable; 
+  public get hardExpiry() {
+    return this.getBooleanAttribute('hard_expiry');
+  }
+  public set hardExpiry(value: boolean | cdktn.IResolvable) {
+    this._hardExpiry = value;
+  }
+  public resetHardExpiry() {
+    this._hardExpiry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hardExpiryInput() {
+    return this._hardExpiry;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // max_password_age - computed: true, optional: true, required: false
+  private _maxPasswordAge?: number; 
+  public get maxPasswordAge() {
+    return this.getNumberAttribute('max_password_age');
+  }
+  public set maxPasswordAge(value: number) {
+    this._maxPasswordAge = value;
+  }
+  public resetMaxPasswordAge() {
+    this._maxPasswordAge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPasswordAgeInput() {
+    return this._maxPasswordAge;
+  }
+
+  // minimum_password_length - computed: false, optional: true, required: false
+  private _minimumPasswordLength?: number; 
+  public get minimumPasswordLength() {
+    return this.getNumberAttribute('minimum_password_length');
+  }
+  public set minimumPasswordLength(value: number) {
+    this._minimumPasswordLength = value;
+  }
+  public resetMinimumPasswordLength() {
+    this._minimumPasswordLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumPasswordLengthInput() {
+    return this._minimumPasswordLength;
+  }
+
+  // password_reuse_prevention - computed: true, optional: true, required: false
+  private _passwordReusePrevention?: number; 
+  public get passwordReusePrevention() {
+    return this.getNumberAttribute('password_reuse_prevention');
+  }
+  public set passwordReusePrevention(value: number) {
+    this._passwordReusePrevention = value;
+  }
+  public resetPasswordReusePrevention() {
+    this._passwordReusePrevention = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordReusePreventionInput() {
+    return this._passwordReusePrevention;
+  }
+
+  // require_lowercase_characters - computed: true, optional: true, required: false
+  private _requireLowercaseCharacters?: boolean | cdktn.IResolvable; 
+  public get requireLowercaseCharacters() {
+    return this.getBooleanAttribute('require_lowercase_characters');
+  }
+  public set requireLowercaseCharacters(value: boolean | cdktn.IResolvable) {
+    this._requireLowercaseCharacters = value;
+  }
+  public resetRequireLowercaseCharacters() {
+    this._requireLowercaseCharacters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireLowercaseCharactersInput() {
+    return this._requireLowercaseCharacters;
+  }
+
+  // require_numbers - computed: true, optional: true, required: false
+  private _requireNumbers?: boolean | cdktn.IResolvable; 
+  public get requireNumbers() {
+    return this.getBooleanAttribute('require_numbers');
+  }
+  public set requireNumbers(value: boolean | cdktn.IResolvable) {
+    this._requireNumbers = value;
+  }
+  public resetRequireNumbers() {
+    this._requireNumbers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireNumbersInput() {
+    return this._requireNumbers;
+  }
+
+  // require_symbols - computed: true, optional: true, required: false
+  private _requireSymbols?: boolean | cdktn.IResolvable; 
+  public get requireSymbols() {
+    return this.getBooleanAttribute('require_symbols');
+  }
+  public set requireSymbols(value: boolean | cdktn.IResolvable) {
+    this._requireSymbols = value;
+  }
+  public resetRequireSymbols() {
+    this._requireSymbols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireSymbolsInput() {
+    return this._requireSymbols;
+  }
+
+  // require_uppercase_characters - computed: true, optional: true, required: false
+  private _requireUppercaseCharacters?: boolean | cdktn.IResolvable; 
+  public get requireUppercaseCharacters() {
+    return this.getBooleanAttribute('require_uppercase_characters');
+  }
+  public set requireUppercaseCharacters(value: boolean | cdktn.IResolvable) {
+    this._requireUppercaseCharacters = value;
+  }
+  public resetRequireUppercaseCharacters() {
+    this._requireUppercaseCharacters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireUppercaseCharactersInput() {
+    return this._requireUppercaseCharacters;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allow_users_to_change_password: cdktn.booleanToTerraform(this._allowUsersToChangePassword),
+      hard_expiry: cdktn.booleanToTerraform(this._hardExpiry),
+      id: cdktn.stringToTerraform(this._id),
+      max_password_age: cdktn.numberToTerraform(this._maxPasswordAge),
+      minimum_password_length: cdktn.numberToTerraform(this._minimumPasswordLength),
+      password_reuse_prevention: cdktn.numberToTerraform(this._passwordReusePrevention),
+      require_lowercase_characters: cdktn.booleanToTerraform(this._requireLowercaseCharacters),
+      require_numbers: cdktn.booleanToTerraform(this._requireNumbers),
+      require_symbols: cdktn.booleanToTerraform(this._requireSymbols),
+      require_uppercase_characters: cdktn.booleanToTerraform(this._requireUppercaseCharacters),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_users_to_change_password: {
+        value: cdktn.booleanToHclTerraform(this._allowUsersToChangePassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      hard_expiry: {
+        value: cdktn.booleanToHclTerraform(this._hardExpiry),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_password_age: {
+        value: cdktn.numberToHclTerraform(this._maxPasswordAge),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      minimum_password_length: {
+        value: cdktn.numberToHclTerraform(this._minimumPasswordLength),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      password_reuse_prevention: {
+        value: cdktn.numberToHclTerraform(this._passwordReusePrevention),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      require_lowercase_characters: {
+        value: cdktn.booleanToHclTerraform(this._requireLowercaseCharacters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      require_numbers: {
+        value: cdktn.booleanToHclTerraform(this._requireNumbers),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      require_symbols: {
+        value: cdktn.booleanToHclTerraform(this._requireSymbols),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      require_uppercase_characters: {
+        value: cdktn.booleanToHclTerraform(this._requireUppercaseCharacters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

@@ -1,0 +1,246 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApiGatewayAccountConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account#cloudwatch_role_arn AwsApiGatewayAccount#cloudwatch_role_arn}
+  */
+  readonly cloudwatchRoleArn?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account#region AwsApiGatewayAccount#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account aws_api_gateway_account}
+*/
+export class AwsApiGatewayAccount extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_api_gateway_account";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApiGatewayAccount resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApiGatewayAccount to import
+  * @param importFromId The id of the existing AwsApiGatewayAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiGatewayAccount to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_account", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_account aws_api_gateway_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApiGatewayAccountConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsApiGatewayAccountConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_api_gateway_account',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._cloudwatchRoleArn = config.cloudwatchRoleArn;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // api_key_version - computed: true, optional: false, required: false
+  public get apiKeyVersion() {
+    return this.getStringAttribute('api_key_version');
+  }
+
+  // cloudwatch_role_arn - computed: true, optional: true, required: false
+  private _cloudwatchRoleArn?: string; 
+  public get cloudwatchRoleArn() {
+    return this.getStringAttribute('cloudwatch_role_arn');
+  }
+  public set cloudwatchRoleArn(value: string) {
+    this._cloudwatchRoleArn = value;
+  }
+  public resetCloudwatchRoleArn() {
+    this._cloudwatchRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchRoleArnInput() {
+    return this._cloudwatchRoleArn;
+  }
+
+  // features - computed: true, optional: false, required: false
+  public get features() {
+    return cdktn.Fn.tolist(this.getListAttribute('features'));
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // throttle_settings - computed: true, optional: false, required: false
+  private _throttleSettings = new AwsApiGatewayAccount.ThrottleSettingsPropertyList(this, "throttle_settings", false);
+  public get throttleSettings() {
+    return this._throttleSettings;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cloudwatch_role_arn: cdktn.stringToTerraform(this._cloudwatchRoleArn),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cloudwatch_role_arn: {
+        value: cdktn.stringToHclTerraform(this._cloudwatchRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsApiGatewayAccountThrottleSettingsPropertyToTerraform(struct?: AwsApiGatewayAccount.ThrottleSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsApiGatewayAccountThrottleSettingsPropertyToHclTerraform(struct?: AwsApiGatewayAccount.ThrottleSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export namespace AwsApiGatewayAccount {
+export interface ThrottleSettingsProperty {
+}
+export class ThrottleSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ThrottleSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ThrottleSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // burst_limit - computed: true, optional: false, required: false
+  public get burstLimit() {
+    return this.getNumberAttribute('burst_limit');
+  }
+
+  // rate_limit - computed: true, optional: false, required: false
+  public get rateLimit() {
+    return this.getNumberAttribute('rate_limit');
+  }
+}
+
+export class ThrottleSettingsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ThrottleSettingsPropertyOutputReference {
+    return new ThrottleSettingsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

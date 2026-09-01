@@ -1,0 +1,945 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCleanroomsCollaborationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#analytics_engine AwsCleanroomsCollaboration#analytics_engine}
+  */
+  readonly analyticsEngine?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_display_name AwsCleanroomsCollaboration#creator_display_name}
+  */
+  readonly creatorDisplayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#creator_member_abilities AwsCleanroomsCollaboration#creator_member_abilities}
+  */
+  readonly creatorMemberAbilities: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#description AwsCleanroomsCollaboration#description}
+  */
+  readonly description: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#name AwsCleanroomsCollaboration#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#query_log_status AwsCleanroomsCollaboration#query_log_status}
+  */
+  readonly queryLogStatus: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#region AwsCleanroomsCollaboration#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags AwsCleanroomsCollaboration#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#tags_all AwsCleanroomsCollaboration#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * data_encryption_metadata block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#data_encryption_metadata AwsCleanroomsCollaboration#data_encryption_metadata}
+  */
+  readonly dataEncryptionMetadata?: AwsCleanroomsCollaboration.DataEncryptionMetadataProperty;
+  /**
+  * member block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member AwsCleanroomsCollaboration#member}
+  */
+  readonly member?: AwsCleanroomsCollaboration.MemberProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#timeouts AwsCleanroomsCollaboration#timeouts}
+  */
+  readonly timeouts?: AwsCleanroomsCollaboration.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration aws_cleanrooms_collaboration}
+*/
+export class AwsCleanroomsCollaboration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_cleanrooms_collaboration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCleanroomsCollaboration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCleanroomsCollaboration to import
+  * @param importFromId The id of the existing AwsCleanroomsCollaboration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCleanroomsCollaboration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cleanrooms_collaboration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration aws_cleanrooms_collaboration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCleanroomsCollaborationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCleanroomsCollaborationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_cleanrooms_collaboration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._analyticsEngine = config.analyticsEngine;
+    this._creatorDisplayName = config.creatorDisplayName;
+    this._creatorMemberAbilities = config.creatorMemberAbilities;
+    this._description = config.description;
+    this._name = config.name;
+    this._queryLogStatus = config.queryLogStatus;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._dataEncryptionMetadata.internalValue = config.dataEncryptionMetadata;
+    this._member.internalValue = config.member;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // analytics_engine - computed: false, optional: true, required: false
+  private _analyticsEngine?: string; 
+  public get analyticsEngine() {
+    return this.getStringAttribute('analytics_engine');
+  }
+  public set analyticsEngine(value: string) {
+    this._analyticsEngine = value;
+  }
+  public resetAnalyticsEngine() {
+    this._analyticsEngine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analyticsEngineInput() {
+    return this._analyticsEngine;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // creator_display_name - computed: false, optional: false, required: true
+  private _creatorDisplayName?: string; 
+  public get creatorDisplayName() {
+    return this.getStringAttribute('creator_display_name');
+  }
+  public set creatorDisplayName(value: string) {
+    this._creatorDisplayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get creatorDisplayNameInput() {
+    return this._creatorDisplayName;
+  }
+
+  // creator_member_abilities - computed: false, optional: false, required: true
+  private _creatorMemberAbilities?: string[]; 
+  public get creatorMemberAbilities() {
+    return this.getListAttribute('creator_member_abilities');
+  }
+  public set creatorMemberAbilities(value: string[]) {
+    this._creatorMemberAbilities = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get creatorMemberAbilitiesInput() {
+    return this._creatorMemberAbilities;
+  }
+
+  // description - computed: false, optional: false, required: true
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // query_log_status - computed: false, optional: false, required: true
+  private _queryLogStatus?: string; 
+  public get queryLogStatus() {
+    return this.getStringAttribute('query_log_status');
+  }
+  public set queryLogStatus(value: string) {
+    this._queryLogStatus = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryLogStatusInput() {
+    return this._queryLogStatus;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // data_encryption_metadata - computed: false, optional: true, required: false
+  private _dataEncryptionMetadata = new AwsCleanroomsCollaboration.DataEncryptionMetadataPropertyOutputReference(this, "data_encryption_metadata");
+  public get dataEncryptionMetadata() {
+    return this._dataEncryptionMetadata;
+  }
+  public putDataEncryptionMetadata(value: AwsCleanroomsCollaboration.DataEncryptionMetadataProperty) {
+    this._dataEncryptionMetadata.internalValue = value;
+  }
+  public resetDataEncryptionMetadata() {
+    this._dataEncryptionMetadata.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataEncryptionMetadataInput() {
+    return this._dataEncryptionMetadata.internalValue;
+  }
+
+  // member - computed: false, optional: true, required: false
+  private _member = new AwsCleanroomsCollaboration.MemberPropertyList(this, "member", true);
+  public get member() {
+    return this._member;
+  }
+  public putMember(value: AwsCleanroomsCollaboration.MemberProperty[] | cdktn.IResolvable) {
+    this._member.internalValue = value;
+  }
+  public resetMember() {
+    this._member.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberInput() {
+    return this._member.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsCleanroomsCollaboration.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsCleanroomsCollaboration.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      analytics_engine: cdktn.stringToTerraform(this._analyticsEngine),
+      creator_display_name: cdktn.stringToTerraform(this._creatorDisplayName),
+      creator_member_abilities: cdktn.listMapper(cdktn.stringToTerraform, false)(this._creatorMemberAbilities),
+      description: cdktn.stringToTerraform(this._description),
+      name: cdktn.stringToTerraform(this._name),
+      query_log_status: cdktn.stringToTerraform(this._queryLogStatus),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      data_encryption_metadata: awsCleanroomsCollaborationDataEncryptionMetadataPropertyToTerraform(this._dataEncryptionMetadata.internalValue),
+      member: cdktn.listMapper(awsCleanroomsCollaborationMemberPropertyToTerraform, true)(this._member.internalValue),
+      timeouts: awsCleanroomsCollaborationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      analytics_engine: {
+        value: cdktn.stringToHclTerraform(this._analyticsEngine),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      creator_display_name: {
+        value: cdktn.stringToHclTerraform(this._creatorDisplayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      creator_member_abilities: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._creatorMemberAbilities),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_log_status: {
+        value: cdktn.stringToHclTerraform(this._queryLogStatus),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      data_encryption_metadata: {
+        value: awsCleanroomsCollaborationDataEncryptionMetadataPropertyToHclTerraform(this._dataEncryptionMetadata.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCleanroomsCollaboration.DataEncryptionMetadataPropertyList",
+      },
+      member: {
+        value: cdktn.listMapperHcl(awsCleanroomsCollaborationMemberPropertyToHclTerraform, true)(this._member.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsCleanroomsCollaboration.MemberPropertyList",
+      },
+      timeouts: {
+        value: awsCleanroomsCollaborationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsCleanroomsCollaboration.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCleanroomsCollaborationDataEncryptionMetadataPropertyToTerraform(struct?: AwsCleanroomsCollaboration.DataEncryptionMetadataPropertyOutputReference | AwsCleanroomsCollaboration.DataEncryptionMetadataProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    allow_clear_text: cdktn.booleanToTerraform(struct!.allowClearText),
+    allow_duplicates: cdktn.booleanToTerraform(struct!.allowDuplicates),
+    allow_joins_on_columns_with_different_names: cdktn.booleanToTerraform(struct!.allowJoinsOnColumnsWithDifferentNames),
+    preserve_nulls: cdktn.booleanToTerraform(struct!.preserveNulls),
+  }
+}
+
+
+export function awsCleanroomsCollaborationDataEncryptionMetadataPropertyToHclTerraform(struct?: AwsCleanroomsCollaboration.DataEncryptionMetadataPropertyOutputReference | AwsCleanroomsCollaboration.DataEncryptionMetadataProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    allow_clear_text: {
+      value: cdktn.booleanToHclTerraform(struct!.allowClearText),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    allow_duplicates: {
+      value: cdktn.booleanToHclTerraform(struct!.allowDuplicates),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    allow_joins_on_columns_with_different_names: {
+      value: cdktn.booleanToHclTerraform(struct!.allowJoinsOnColumnsWithDifferentNames),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    preserve_nulls: {
+      value: cdktn.booleanToHclTerraform(struct!.preserveNulls),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCleanroomsCollaborationMemberPropertyToTerraform(struct?: AwsCleanroomsCollaboration.MemberProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    account_id: cdktn.stringToTerraform(struct!.accountId),
+    display_name: cdktn.stringToTerraform(struct!.displayName),
+    member_abilities: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.memberAbilities),
+  }
+}
+
+
+export function awsCleanroomsCollaborationMemberPropertyToHclTerraform(struct?: AwsCleanroomsCollaboration.MemberProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    account_id: {
+      value: cdktn.stringToHclTerraform(struct!.accountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    display_name: {
+      value: cdktn.stringToHclTerraform(struct!.displayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    member_abilities: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.memberAbilities),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCleanroomsCollaborationTimeoutsPropertyToTerraform(struct?: AwsCleanroomsCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsCleanroomsCollaborationTimeoutsPropertyToHclTerraform(struct?: AwsCleanroomsCollaboration.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCleanroomsCollaboration {
+export interface DataEncryptionMetadataProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_clear_text AwsCleanroomsCollaboration#allow_clear_text}
+  */
+  readonly allowClearText: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_duplicates AwsCleanroomsCollaboration#allow_duplicates}
+  */
+  readonly allowDuplicates: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#allow_joins_on_columns_with_different_names AwsCleanroomsCollaboration#allow_joins_on_columns_with_different_names}
+  */
+  readonly allowJoinsOnColumnsWithDifferentNames: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#preserve_nulls AwsCleanroomsCollaboration#preserve_nulls}
+  */
+  readonly preserveNulls: boolean | cdktn.IResolvable;
+}
+export class DataEncryptionMetadataPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataEncryptionMetadataProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowClearText !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowClearText = this._allowClearText;
+    }
+    if (this._allowDuplicates !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowDuplicates = this._allowDuplicates;
+    }
+    if (this._allowJoinsOnColumnsWithDifferentNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowJoinsOnColumnsWithDifferentNames = this._allowJoinsOnColumnsWithDifferentNames;
+    }
+    if (this._preserveNulls !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preserveNulls = this._preserveNulls;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataEncryptionMetadataProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowClearText = undefined;
+      this._allowDuplicates = undefined;
+      this._allowJoinsOnColumnsWithDifferentNames = undefined;
+      this._preserveNulls = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowClearText = value.allowClearText;
+      this._allowDuplicates = value.allowDuplicates;
+      this._allowJoinsOnColumnsWithDifferentNames = value.allowJoinsOnColumnsWithDifferentNames;
+      this._preserveNulls = value.preserveNulls;
+    }
+  }
+
+  // allow_clear_text - computed: false, optional: false, required: true
+  private _allowClearText?: boolean | cdktn.IResolvable; 
+  public get allowClearText() {
+    return this.getBooleanAttribute('allow_clear_text');
+  }
+  public set allowClearText(value: boolean | cdktn.IResolvable) {
+    this._allowClearText = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowClearTextInput() {
+    return this._allowClearText;
+  }
+
+  // allow_duplicates - computed: false, optional: false, required: true
+  private _allowDuplicates?: boolean | cdktn.IResolvable; 
+  public get allowDuplicates() {
+    return this.getBooleanAttribute('allow_duplicates');
+  }
+  public set allowDuplicates(value: boolean | cdktn.IResolvable) {
+    this._allowDuplicates = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowDuplicatesInput() {
+    return this._allowDuplicates;
+  }
+
+  // allow_joins_on_columns_with_different_names - computed: false, optional: false, required: true
+  private _allowJoinsOnColumnsWithDifferentNames?: boolean | cdktn.IResolvable; 
+  public get allowJoinsOnColumnsWithDifferentNames() {
+    return this.getBooleanAttribute('allow_joins_on_columns_with_different_names');
+  }
+  public set allowJoinsOnColumnsWithDifferentNames(value: boolean | cdktn.IResolvable) {
+    this._allowJoinsOnColumnsWithDifferentNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowJoinsOnColumnsWithDifferentNamesInput() {
+    return this._allowJoinsOnColumnsWithDifferentNames;
+  }
+
+  // preserve_nulls - computed: false, optional: false, required: true
+  private _preserveNulls?: boolean | cdktn.IResolvable; 
+  public get preserveNulls() {
+    return this.getBooleanAttribute('preserve_nulls');
+  }
+  public set preserveNulls(value: boolean | cdktn.IResolvable) {
+    this._preserveNulls = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preserveNullsInput() {
+    return this._preserveNulls;
+  }
+}
+export interface MemberProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#account_id AwsCleanroomsCollaboration#account_id}
+  */
+  readonly accountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#display_name AwsCleanroomsCollaboration#display_name}
+  */
+  readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#member_abilities AwsCleanroomsCollaboration#member_abilities}
+  */
+  readonly memberAbilities: string[];
+}
+export class MemberPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MemberProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountId = this._accountId;
+    }
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    if (this._memberAbilities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memberAbilities = this._memberAbilities;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemberProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accountId = undefined;
+      this._displayName = undefined;
+      this._memberAbilities = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accountId = value.accountId;
+      this._displayName = value.displayName;
+      this._memberAbilities = value.memberAbilities;
+    }
+  }
+
+  // account_id - computed: false, optional: false, required: true
+  private _accountId?: string; 
+  public get accountId() {
+    return this.getStringAttribute('account_id');
+  }
+  public set accountId(value: string) {
+    this._accountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountIdInput() {
+    return this._accountId;
+  }
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // member_abilities - computed: false, optional: false, required: true
+  private _memberAbilities?: string[]; 
+  public get memberAbilities() {
+    return this.getListAttribute('member_abilities');
+  }
+  public set memberAbilities(value: string[]) {
+    this._memberAbilities = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberAbilitiesInput() {
+    return this._memberAbilities;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+}
+
+export class MemberPropertyList extends cdktn.ComplexList {
+  public internalValue? : MemberProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MemberPropertyOutputReference {
+    return new MemberPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#create AwsCleanroomsCollaboration#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#delete AwsCleanroomsCollaboration#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cleanrooms_collaboration#update AwsCleanroomsCollaboration#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

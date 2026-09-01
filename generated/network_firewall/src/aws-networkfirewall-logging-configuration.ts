@@ -1,0 +1,484 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsNetworkfirewallLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#enable_monitoring_dashboard AwsNetworkfirewallLoggingConfiguration#enable_monitoring_dashboard}
+  */
+  readonly enableMonitoringDashboard?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#firewall_arn AwsNetworkfirewallLoggingConfiguration#firewall_arn}
+  */
+  readonly firewallArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#id AwsNetworkfirewallLoggingConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#region AwsNetworkfirewallLoggingConfiguration#region}
+  */
+  readonly region?: string;
+  /**
+  * logging_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#logging_configuration AwsNetworkfirewallLoggingConfiguration#logging_configuration}
+  */
+  readonly loggingConfiguration: AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration aws_networkfirewall_logging_configuration}
+*/
+export class AwsNetworkfirewallLoggingConfiguration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_networkfirewall_logging_configuration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsNetworkfirewallLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsNetworkfirewallLoggingConfiguration to import
+  * @param importFromId The id of the existing AwsNetworkfirewallLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkfirewallLoggingConfiguration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_logging_configuration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration aws_networkfirewall_logging_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsNetworkfirewallLoggingConfigurationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsNetworkfirewallLoggingConfigurationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_networkfirewall_logging_configuration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._enableMonitoringDashboard = config.enableMonitoringDashboard;
+    this._firewallArn = config.firewallArn;
+    this._id = config.id;
+    this._region = config.region;
+    this._loggingConfiguration.internalValue = config.loggingConfiguration;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // enable_monitoring_dashboard - computed: true, optional: true, required: false
+  private _enableMonitoringDashboard?: boolean | cdktn.IResolvable; 
+  public get enableMonitoringDashboard() {
+    return this.getBooleanAttribute('enable_monitoring_dashboard');
+  }
+  public set enableMonitoringDashboard(value: boolean | cdktn.IResolvable) {
+    this._enableMonitoringDashboard = value;
+  }
+  public resetEnableMonitoringDashboard() {
+    this._enableMonitoringDashboard = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableMonitoringDashboardInput() {
+    return this._enableMonitoringDashboard;
+  }
+
+  // firewall_arn - computed: false, optional: false, required: true
+  private _firewallArn?: string; 
+  public get firewallArn() {
+    return this.getStringAttribute('firewall_arn');
+  }
+  public set firewallArn(value: string) {
+    this._firewallArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firewallArnInput() {
+    return this._firewallArn;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // logging_configuration - computed: false, optional: false, required: true
+  private _loggingConfiguration = new AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationPropertyOutputReference(this, "logging_configuration");
+  public get loggingConfiguration() {
+    return this._loggingConfiguration;
+  }
+  public putLoggingConfiguration(value: AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationProperty) {
+    this._loggingConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingConfigurationInput() {
+    return this._loggingConfiguration.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      enable_monitoring_dashboard: cdktn.booleanToTerraform(this._enableMonitoringDashboard),
+      firewall_arn: cdktn.stringToTerraform(this._firewallArn),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      logging_configuration: awsNetworkfirewallLoggingConfigurationLoggingConfigurationPropertyToTerraform(this._loggingConfiguration.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enable_monitoring_dashboard: {
+        value: cdktn.booleanToHclTerraform(this._enableMonitoringDashboard),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      firewall_arn: {
+        value: cdktn.stringToHclTerraform(this._firewallArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logging_configuration: {
+        value: awsNetworkfirewallLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(this._loggingConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsNetworkfirewallLoggingConfigurationLogDestinationConfigPropertyToTerraform(struct?: AwsNetworkfirewallLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    log_destination: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.logDestination),
+    log_destination_type: cdktn.stringToTerraform(struct!.logDestinationType),
+    log_type: cdktn.stringToTerraform(struct!.logType),
+  }
+}
+
+
+export function awsNetworkfirewallLoggingConfigurationLogDestinationConfigPropertyToHclTerraform(struct?: AwsNetworkfirewallLoggingConfiguration.LogDestinationConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    log_destination: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.logDestination),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    log_destination_type: {
+      value: cdktn.stringToHclTerraform(struct!.logDestinationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    log_type: {
+      value: cdktn.stringToHclTerraform(struct!.logType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsNetworkfirewallLoggingConfigurationLoggingConfigurationPropertyToTerraform(struct?: AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationPropertyOutputReference | AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    log_destination_config: cdktn.listMapper(awsNetworkfirewallLoggingConfigurationLogDestinationConfigPropertyToTerraform, true)(struct!.logDestinationConfig),
+  }
+}
+
+
+export function awsNetworkfirewallLoggingConfigurationLoggingConfigurationPropertyToHclTerraform(struct?: AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationPropertyOutputReference | AwsNetworkfirewallLoggingConfiguration.LoggingConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    log_destination_config: {
+      value: cdktn.listMapperHcl(awsNetworkfirewallLoggingConfigurationLogDestinationConfigPropertyToHclTerraform, true)(struct!.logDestinationConfig),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LogDestinationConfigPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsNetworkfirewallLoggingConfiguration {
+export interface LogDestinationConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination AwsNetworkfirewallLoggingConfiguration#log_destination}
+  */
+  readonly logDestination: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_type AwsNetworkfirewallLoggingConfiguration#log_destination_type}
+  */
+  readonly logDestinationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_type AwsNetworkfirewallLoggingConfiguration#log_type}
+  */
+  readonly logType: string;
+}
+export class LogDestinationConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogDestinationConfigProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logDestination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logDestination = this._logDestination;
+    }
+    if (this._logDestinationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logDestinationType = this._logDestinationType;
+    }
+    if (this._logType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logType = this._logType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogDestinationConfigProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._logDestination = undefined;
+      this._logDestinationType = undefined;
+      this._logType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._logDestination = value.logDestination;
+      this._logDestinationType = value.logDestinationType;
+      this._logType = value.logType;
+    }
+  }
+
+  // log_destination - computed: false, optional: false, required: true
+  private _logDestination?: { [key: string]: string }; 
+  public get logDestination() {
+    return this.getStringMapAttribute('log_destination');
+  }
+  public set logDestination(value: { [key: string]: string }) {
+    this._logDestination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDestinationInput() {
+    return this._logDestination;
+  }
+
+  // log_destination_type - computed: false, optional: false, required: true
+  private _logDestinationType?: string; 
+  public get logDestinationType() {
+    return this.getStringAttribute('log_destination_type');
+  }
+  public set logDestinationType(value: string) {
+    this._logDestinationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDestinationTypeInput() {
+    return this._logDestinationType;
+  }
+
+  // log_type - computed: false, optional: false, required: true
+  private _logType?: string; 
+  public get logType() {
+    return this.getStringAttribute('log_type');
+  }
+  public set logType(value: string) {
+    this._logType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logTypeInput() {
+    return this._logType;
+  }
+}
+
+export class LogDestinationConfigPropertyList extends cdktn.ComplexList {
+  public internalValue? : LogDestinationConfigProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogDestinationConfigPropertyOutputReference {
+    return new LogDestinationConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LoggingConfigurationProperty {
+  /**
+  * log_destination_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_logging_configuration#log_destination_config AwsNetworkfirewallLoggingConfiguration#log_destination_config}
+  */
+  readonly logDestinationConfig: LogDestinationConfigProperty[] | cdktn.IResolvable;
+}
+export class LoggingConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LoggingConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logDestinationConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logDestinationConfig = this._logDestinationConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logDestinationConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logDestinationConfig.internalValue = value.logDestinationConfig;
+    }
+  }
+
+  // log_destination_config - computed: false, optional: false, required: true
+  private _logDestinationConfig = new LogDestinationConfigPropertyList(this, "log_destination_config", true);
+  public get logDestinationConfig() {
+    return this._logDestinationConfig;
+  }
+  public putLogDestinationConfig(value: LogDestinationConfigProperty[] | cdktn.IResolvable) {
+    this._logDestinationConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDestinationConfigInput() {
+    return this._logDestinationConfig.internalValue;
+  }
+}
+}

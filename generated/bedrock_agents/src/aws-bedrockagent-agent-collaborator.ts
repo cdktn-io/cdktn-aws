@@ -1,0 +1,625 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsBedrockagentAgentCollaboratorConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#agent_id AwsBedrockagentAgentCollaborator#agent_id}
+  */
+  readonly agentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#agent_version AwsBedrockagentAgentCollaborator#agent_version}
+  */
+  readonly agentVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#collaboration_instruction AwsBedrockagentAgentCollaborator#collaboration_instruction}
+  */
+  readonly collaborationInstruction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#collaborator_name AwsBedrockagentAgentCollaborator#collaborator_name}
+  */
+  readonly collaboratorName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#prepare_agent AwsBedrockagentAgentCollaborator#prepare_agent}
+  */
+  readonly prepareAgent?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#region AwsBedrockagentAgentCollaborator#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#relay_conversation_history AwsBedrockagentAgentCollaborator#relay_conversation_history}
+  */
+  readonly relayConversationHistory?: string;
+  /**
+  * agent_descriptor block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#agent_descriptor AwsBedrockagentAgentCollaborator#agent_descriptor}
+  */
+  readonly agentDescriptor?: AwsBedrockagentAgentCollaborator.AgentDescriptorProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#timeouts AwsBedrockagentAgentCollaborator#timeouts}
+  */
+  readonly timeouts?: AwsBedrockagentAgentCollaborator.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator aws_bedrockagent_agent_collaborator}
+*/
+export class AwsBedrockagentAgentCollaborator extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_bedrockagent_agent_collaborator";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsBedrockagentAgentCollaborator resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsBedrockagentAgentCollaborator to import
+  * @param importFromId The id of the existing AwsBedrockagentAgentCollaborator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBedrockagentAgentCollaborator to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent_collaborator", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator aws_bedrockagent_agent_collaborator} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsBedrockagentAgentCollaboratorConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsBedrockagentAgentCollaboratorConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_bedrockagent_agent_collaborator',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._agentId = config.agentId;
+    this._agentVersion = config.agentVersion;
+    this._collaborationInstruction = config.collaborationInstruction;
+    this._collaboratorName = config.collaboratorName;
+    this._prepareAgent = config.prepareAgent;
+    this._region = config.region;
+    this._relayConversationHistory = config.relayConversationHistory;
+    this._agentDescriptor.internalValue = config.agentDescriptor;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // agent_id - computed: false, optional: false, required: true
+  private _agentId?: string; 
+  public get agentId() {
+    return this.getStringAttribute('agent_id');
+  }
+  public set agentId(value: string) {
+    this._agentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get agentIdInput() {
+    return this._agentId;
+  }
+
+  // agent_version - computed: true, optional: true, required: false
+  private _agentVersion?: string; 
+  public get agentVersion() {
+    return this.getStringAttribute('agent_version');
+  }
+  public set agentVersion(value: string) {
+    this._agentVersion = value;
+  }
+  public resetAgentVersion() {
+    this._agentVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get agentVersionInput() {
+    return this._agentVersion;
+  }
+
+  // collaboration_instruction - computed: false, optional: false, required: true
+  private _collaborationInstruction?: string; 
+  public get collaborationInstruction() {
+    return this.getStringAttribute('collaboration_instruction');
+  }
+  public set collaborationInstruction(value: string) {
+    this._collaborationInstruction = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get collaborationInstructionInput() {
+    return this._collaborationInstruction;
+  }
+
+  // collaborator_id - computed: true, optional: false, required: false
+  public get collaboratorId() {
+    return this.getStringAttribute('collaborator_id');
+  }
+
+  // collaborator_name - computed: false, optional: false, required: true
+  private _collaboratorName?: string; 
+  public get collaboratorName() {
+    return this.getStringAttribute('collaborator_name');
+  }
+  public set collaboratorName(value: string) {
+    this._collaboratorName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get collaboratorNameInput() {
+    return this._collaboratorName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // prepare_agent - computed: true, optional: true, required: false
+  private _prepareAgent?: boolean | cdktn.IResolvable; 
+  public get prepareAgent() {
+    return this.getBooleanAttribute('prepare_agent');
+  }
+  public set prepareAgent(value: boolean | cdktn.IResolvable) {
+    this._prepareAgent = value;
+  }
+  public resetPrepareAgent() {
+    this._prepareAgent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prepareAgentInput() {
+    return this._prepareAgent;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // relay_conversation_history - computed: true, optional: true, required: false
+  private _relayConversationHistory?: string; 
+  public get relayConversationHistory() {
+    return this.getStringAttribute('relay_conversation_history');
+  }
+  public set relayConversationHistory(value: string) {
+    this._relayConversationHistory = value;
+  }
+  public resetRelayConversationHistory() {
+    this._relayConversationHistory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relayConversationHistoryInput() {
+    return this._relayConversationHistory;
+  }
+
+  // agent_descriptor - computed: false, optional: true, required: false
+  private _agentDescriptor = new AwsBedrockagentAgentCollaborator.AgentDescriptorPropertyList(this, "agent_descriptor", false);
+  public get agentDescriptor() {
+    return this._agentDescriptor;
+  }
+  public putAgentDescriptor(value: AwsBedrockagentAgentCollaborator.AgentDescriptorProperty[] | cdktn.IResolvable) {
+    this._agentDescriptor.internalValue = value;
+  }
+  public resetAgentDescriptor() {
+    this._agentDescriptor.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get agentDescriptorInput() {
+    return this._agentDescriptor.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsBedrockagentAgentCollaborator.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsBedrockagentAgentCollaborator.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      agent_id: cdktn.stringToTerraform(this._agentId),
+      agent_version: cdktn.stringToTerraform(this._agentVersion),
+      collaboration_instruction: cdktn.stringToTerraform(this._collaborationInstruction),
+      collaborator_name: cdktn.stringToTerraform(this._collaboratorName),
+      prepare_agent: cdktn.booleanToTerraform(this._prepareAgent),
+      region: cdktn.stringToTerraform(this._region),
+      relay_conversation_history: cdktn.stringToTerraform(this._relayConversationHistory),
+      agent_descriptor: cdktn.listMapper(awsBedrockagentAgentCollaboratorAgentDescriptorPropertyToTerraform, true)(this._agentDescriptor.internalValue),
+      timeouts: awsBedrockagentAgentCollaboratorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      agent_id: {
+        value: cdktn.stringToHclTerraform(this._agentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      agent_version: {
+        value: cdktn.stringToHclTerraform(this._agentVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      collaboration_instruction: {
+        value: cdktn.stringToHclTerraform(this._collaborationInstruction),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      collaborator_name: {
+        value: cdktn.stringToHclTerraform(this._collaboratorName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      prepare_agent: {
+        value: cdktn.booleanToHclTerraform(this._prepareAgent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      relay_conversation_history: {
+        value: cdktn.stringToHclTerraform(this._relayConversationHistory),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      agent_descriptor: {
+        value: cdktn.listMapperHcl(awsBedrockagentAgentCollaboratorAgentDescriptorPropertyToHclTerraform, true)(this._agentDescriptor.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsBedrockagentAgentCollaborator.AgentDescriptorPropertyList",
+      },
+      timeouts: {
+        value: awsBedrockagentAgentCollaboratorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsBedrockagentAgentCollaborator.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsBedrockagentAgentCollaboratorAgentDescriptorPropertyToTerraform(struct?: AwsBedrockagentAgentCollaborator.AgentDescriptorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    alias_arn: cdktn.stringToTerraform(struct!.aliasArn),
+  }
+}
+
+
+export function awsBedrockagentAgentCollaboratorAgentDescriptorPropertyToHclTerraform(struct?: AwsBedrockagentAgentCollaborator.AgentDescriptorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    alias_arn: {
+      value: cdktn.stringToHclTerraform(struct!.aliasArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentAgentCollaboratorTimeoutsPropertyToTerraform(struct?: AwsBedrockagentAgentCollaborator.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsBedrockagentAgentCollaboratorTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentAgentCollaborator.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsBedrockagentAgentCollaborator {
+export interface AgentDescriptorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#alias_arn AwsBedrockagentAgentCollaborator#alias_arn}
+  */
+  readonly aliasArn: string;
+}
+export class AgentDescriptorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AgentDescriptorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._aliasArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.aliasArn = this._aliasArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AgentDescriptorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._aliasArn = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._aliasArn = value.aliasArn;
+    }
+  }
+
+  // alias_arn - computed: false, optional: false, required: true
+  private _aliasArn?: string; 
+  public get aliasArn() {
+    return this.getStringAttribute('alias_arn');
+  }
+  public set aliasArn(value: string) {
+    this._aliasArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aliasArnInput() {
+    return this._aliasArn;
+  }
+}
+
+export class AgentDescriptorPropertyList extends cdktn.ComplexList {
+  public internalValue? : AgentDescriptorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AgentDescriptorPropertyOutputReference {
+    return new AgentDescriptorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#create AwsBedrockagentAgentCollaborator#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#delete AwsBedrockagentAgentCollaborator#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent_collaborator#update AwsBedrockagentAgentCollaborator#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

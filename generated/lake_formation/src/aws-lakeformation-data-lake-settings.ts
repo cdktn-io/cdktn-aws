@@ -1,0 +1,758 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsLakeformationDataLakeSettingsConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#admins AwsLakeformationDataLakeSettings#admins}
+  */
+  readonly admins?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_external_data_filtering AwsLakeformationDataLakeSettings#allow_external_data_filtering}
+  */
+  readonly allowExternalDataFiltering?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#allow_full_table_external_data_access AwsLakeformationDataLakeSettings#allow_full_table_external_data_access}
+  */
+  readonly allowFullTableExternalDataAccess?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#authorized_session_tag_value_list AwsLakeformationDataLakeSettings#authorized_session_tag_value_list}
+  */
+  readonly authorizedSessionTagValueList?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#catalog_id AwsLakeformationDataLakeSettings#catalog_id}
+  */
+  readonly catalogId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#external_data_filtering_allow_list AwsLakeformationDataLakeSettings#external_data_filtering_allow_list}
+  */
+  readonly externalDataFilteringAllowList?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#id AwsLakeformationDataLakeSettings#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#parameters AwsLakeformationDataLakeSettings#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#read_only_admins AwsLakeformationDataLakeSettings#read_only_admins}
+  */
+  readonly readOnlyAdmins?: string[];
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#region AwsLakeformationDataLakeSettings#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#trusted_resource_owners AwsLakeformationDataLakeSettings#trusted_resource_owners}
+  */
+  readonly trustedResourceOwners?: string[];
+  /**
+  * create_database_default_permissions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_database_default_permissions AwsLakeformationDataLakeSettings#create_database_default_permissions}
+  */
+  readonly createDatabaseDefaultPermissions?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable;
+  /**
+  * create_table_default_permissions block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#create_table_default_permissions AwsLakeformationDataLakeSettings#create_table_default_permissions}
+  */
+  readonly createTableDefaultPermissions?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings aws_lakeformation_data_lake_settings}
+*/
+export class AwsLakeformationDataLakeSettings extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_lakeformation_data_lake_settings";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsLakeformationDataLakeSettings resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsLakeformationDataLakeSettings to import
+  * @param importFromId The id of the existing AwsLakeformationDataLakeSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLakeformationDataLakeSettings to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_data_lake_settings", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings aws_lakeformation_data_lake_settings} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsLakeformationDataLakeSettingsConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsLakeformationDataLakeSettingsConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_lakeformation_data_lake_settings',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._admins = config.admins;
+    this._allowExternalDataFiltering = config.allowExternalDataFiltering;
+    this._allowFullTableExternalDataAccess = config.allowFullTableExternalDataAccess;
+    this._authorizedSessionTagValueList = config.authorizedSessionTagValueList;
+    this._catalogId = config.catalogId;
+    this._externalDataFilteringAllowList = config.externalDataFilteringAllowList;
+    this._id = config.id;
+    this._parameters = config.parameters;
+    this._readOnlyAdmins = config.readOnlyAdmins;
+    this._region = config.region;
+    this._trustedResourceOwners = config.trustedResourceOwners;
+    this._createDatabaseDefaultPermissions.internalValue = config.createDatabaseDefaultPermissions;
+    this._createTableDefaultPermissions.internalValue = config.createTableDefaultPermissions;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // admins - computed: true, optional: true, required: false
+  private _admins?: string[]; 
+  public get admins() {
+    return cdktn.Fn.tolist(this.getListAttribute('admins'));
+  }
+  public set admins(value: string[]) {
+    this._admins = value;
+  }
+  public resetAdmins() {
+    this._admins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminsInput() {
+    return this._admins;
+  }
+
+  // allow_external_data_filtering - computed: false, optional: true, required: false
+  private _allowExternalDataFiltering?: boolean | cdktn.IResolvable; 
+  public get allowExternalDataFiltering() {
+    return this.getBooleanAttribute('allow_external_data_filtering');
+  }
+  public set allowExternalDataFiltering(value: boolean | cdktn.IResolvable) {
+    this._allowExternalDataFiltering = value;
+  }
+  public resetAllowExternalDataFiltering() {
+    this._allowExternalDataFiltering = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowExternalDataFilteringInput() {
+    return this._allowExternalDataFiltering;
+  }
+
+  // allow_full_table_external_data_access - computed: false, optional: true, required: false
+  private _allowFullTableExternalDataAccess?: boolean | cdktn.IResolvable; 
+  public get allowFullTableExternalDataAccess() {
+    return this.getBooleanAttribute('allow_full_table_external_data_access');
+  }
+  public set allowFullTableExternalDataAccess(value: boolean | cdktn.IResolvable) {
+    this._allowFullTableExternalDataAccess = value;
+  }
+  public resetAllowFullTableExternalDataAccess() {
+    this._allowFullTableExternalDataAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowFullTableExternalDataAccessInput() {
+    return this._allowFullTableExternalDataAccess;
+  }
+
+  // authorized_session_tag_value_list - computed: true, optional: true, required: false
+  private _authorizedSessionTagValueList?: string[]; 
+  public get authorizedSessionTagValueList() {
+    return this.getListAttribute('authorized_session_tag_value_list');
+  }
+  public set authorizedSessionTagValueList(value: string[]) {
+    this._authorizedSessionTagValueList = value;
+  }
+  public resetAuthorizedSessionTagValueList() {
+    this._authorizedSessionTagValueList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizedSessionTagValueListInput() {
+    return this._authorizedSessionTagValueList;
+  }
+
+  // catalog_id - computed: false, optional: true, required: false
+  private _catalogId?: string; 
+  public get catalogId() {
+    return this.getStringAttribute('catalog_id');
+  }
+  public set catalogId(value: string) {
+    this._catalogId = value;
+  }
+  public resetCatalogId() {
+    this._catalogId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get catalogIdInput() {
+    return this._catalogId;
+  }
+
+  // external_data_filtering_allow_list - computed: true, optional: true, required: false
+  private _externalDataFilteringAllowList?: string[]; 
+  public get externalDataFilteringAllowList() {
+    return cdktn.Fn.tolist(this.getListAttribute('external_data_filtering_allow_list'));
+  }
+  public set externalDataFilteringAllowList(value: string[]) {
+    this._externalDataFilteringAllowList = value;
+  }
+  public resetExternalDataFilteringAllowList() {
+    this._externalDataFilteringAllowList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalDataFilteringAllowListInput() {
+    return this._externalDataFilteringAllowList;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // parameters - computed: true, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // read_only_admins - computed: true, optional: true, required: false
+  private _readOnlyAdmins?: string[]; 
+  public get readOnlyAdmins() {
+    return cdktn.Fn.tolist(this.getListAttribute('read_only_admins'));
+  }
+  public set readOnlyAdmins(value: string[]) {
+    this._readOnlyAdmins = value;
+  }
+  public resetReadOnlyAdmins() {
+    this._readOnlyAdmins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyAdminsInput() {
+    return this._readOnlyAdmins;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // trusted_resource_owners - computed: true, optional: true, required: false
+  private _trustedResourceOwners?: string[]; 
+  public get trustedResourceOwners() {
+    return this.getListAttribute('trusted_resource_owners');
+  }
+  public set trustedResourceOwners(value: string[]) {
+    this._trustedResourceOwners = value;
+  }
+  public resetTrustedResourceOwners() {
+    this._trustedResourceOwners = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedResourceOwnersInput() {
+    return this._trustedResourceOwners;
+  }
+
+  // create_database_default_permissions - computed: false, optional: true, required: false
+  private _createDatabaseDefaultPermissions = new AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  public get createDatabaseDefaultPermissions() {
+    return this._createDatabaseDefaultPermissions;
+  }
+  public putCreateDatabaseDefaultPermissions(value: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable) {
+    this._createDatabaseDefaultPermissions.internalValue = value;
+  }
+  public resetCreateDatabaseDefaultPermissions() {
+    this._createDatabaseDefaultPermissions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createDatabaseDefaultPermissionsInput() {
+    return this._createDatabaseDefaultPermissions.internalValue;
+  }
+
+  // create_table_default_permissions - computed: false, optional: true, required: false
+  private _createTableDefaultPermissions = new AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  public get createTableDefaultPermissions() {
+    return this._createTableDefaultPermissions;
+  }
+  public putCreateTableDefaultPermissions(value: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable) {
+    this._createTableDefaultPermissions.internalValue = value;
+  }
+  public resetCreateTableDefaultPermissions() {
+    this._createTableDefaultPermissions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createTableDefaultPermissionsInput() {
+    return this._createTableDefaultPermissions.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      admins: cdktn.listMapper(cdktn.stringToTerraform, false)(this._admins),
+      allow_external_data_filtering: cdktn.booleanToTerraform(this._allowExternalDataFiltering),
+      allow_full_table_external_data_access: cdktn.booleanToTerraform(this._allowFullTableExternalDataAccess),
+      authorized_session_tag_value_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._authorizedSessionTagValueList),
+      catalog_id: cdktn.stringToTerraform(this._catalogId),
+      external_data_filtering_allow_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._externalDataFilteringAllowList),
+      id: cdktn.stringToTerraform(this._id),
+      parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._parameters),
+      read_only_admins: cdktn.listMapper(cdktn.stringToTerraform, false)(this._readOnlyAdmins),
+      region: cdktn.stringToTerraform(this._region),
+      trusted_resource_owners: cdktn.listMapper(cdktn.stringToTerraform, false)(this._trustedResourceOwners),
+      create_database_default_permissions: cdktn.listMapper(awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+      create_table_default_permissions: cdktn.listMapper(awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform, true)(this._createTableDefaultPermissions.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admins: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._admins),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      allow_external_data_filtering: {
+        value: cdktn.booleanToHclTerraform(this._allowExternalDataFiltering),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      allow_full_table_external_data_access: {
+        value: cdktn.booleanToHclTerraform(this._allowFullTableExternalDataAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      authorized_session_tag_value_list: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._authorizedSessionTagValueList),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      catalog_id: {
+        value: cdktn.stringToHclTerraform(this._catalogId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      external_data_filtering_allow_list: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._externalDataFilteringAllowList),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      read_only_admins: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._readOnlyAdmins),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trusted_resource_owners: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._trustedResourceOwners),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      create_database_default_permissions: {
+        value: cdktn.listMapperHcl(awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform, true)(this._createDatabaseDefaultPermissions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsPropertyList",
+      },
+      create_table_default_permissions: {
+        value: cdktn.listMapperHcl(awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform, true)(this._createTableDefaultPermissions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    permissions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.permissions),
+    principal: cdktn.stringToTerraform(struct!.principal),
+  }
+}
+
+
+export function awsLakeformationDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: AwsLakeformationDataLakeSettings.CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    permissions: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.permissions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    principal: {
+      value: cdktn.stringToHclTerraform(struct!.principal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToTerraform(struct?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    permissions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.permissions),
+    principal: cdktn.stringToTerraform(struct!.principal),
+  }
+}
+
+
+export function awsLakeformationDataLakeSettingsCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: AwsLakeformationDataLakeSettings.CreateTableDefaultPermissionsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    permissions: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.permissions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    principal: {
+      value: cdktn.stringToHclTerraform(struct!.principal),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsLakeformationDataLakeSettings {
+export interface CreateDatabaseDefaultPermissionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions AwsLakeformationDataLakeSettings#permissions}
+  */
+  readonly permissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal AwsLakeformationDataLakeSettings#principal}
+  */
+  readonly principal?: string;
+}
+export class CreateDatabaseDefaultPermissionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._permissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions;
+    }
+    if (this._principal !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principal = this._principal;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateDatabaseDefaultPermissionsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._permissions = undefined;
+      this._principal = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._permissions = value.permissions;
+      this._principal = value.principal;
+    }
+  }
+
+  // permissions - computed: true, optional: true, required: false
+  private _permissions?: string[]; 
+  public get permissions() {
+    return cdktn.Fn.tolist(this.getListAttribute('permissions'));
+  }
+  public set permissions(value: string[]) {
+    this._permissions = value;
+  }
+  public resetPermissions() {
+    this._permissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions;
+  }
+
+  // principal - computed: true, optional: true, required: false
+  private _principal?: string; 
+  public get principal() {
+    return this.getStringAttribute('principal');
+  }
+  public set principal(value: string) {
+    this._principal = value;
+  }
+  public resetPrincipal() {
+    this._principal = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalInput() {
+    return this._principal;
+  }
+}
+
+export class CreateDatabaseDefaultPermissionsPropertyList extends cdktn.ComplexList {
+  public internalValue? : CreateDatabaseDefaultPermissionsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateDatabaseDefaultPermissionsPropertyOutputReference {
+    return new CreateDatabaseDefaultPermissionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CreateTableDefaultPermissionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#permissions AwsLakeformationDataLakeSettings#permissions}
+  */
+  readonly permissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_data_lake_settings#principal AwsLakeformationDataLakeSettings#principal}
+  */
+  readonly principal?: string;
+}
+export class CreateTableDefaultPermissionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CreateTableDefaultPermissionsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._permissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions;
+    }
+    if (this._principal !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principal = this._principal;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreateTableDefaultPermissionsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._permissions = undefined;
+      this._principal = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._permissions = value.permissions;
+      this._principal = value.principal;
+    }
+  }
+
+  // permissions - computed: true, optional: true, required: false
+  private _permissions?: string[]; 
+  public get permissions() {
+    return cdktn.Fn.tolist(this.getListAttribute('permissions'));
+  }
+  public set permissions(value: string[]) {
+    this._permissions = value;
+  }
+  public resetPermissions() {
+    this._permissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions;
+  }
+
+  // principal - computed: true, optional: true, required: false
+  private _principal?: string; 
+  public get principal() {
+    return this.getStringAttribute('principal');
+  }
+  public set principal(value: string) {
+    this._principal = value;
+  }
+  public resetPrincipal() {
+    this._principal = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalInput() {
+    return this._principal;
+  }
+}
+
+export class CreateTableDefaultPermissionsPropertyList extends cdktn.ComplexList {
+  public internalValue? : CreateTableDefaultPermissionsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CreateTableDefaultPermissionsPropertyOutputReference {
+    return new CreateTableDefaultPermissionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

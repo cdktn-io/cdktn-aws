@@ -1,0 +1,1459 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsGlueJobConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#connections AwsGlueJob#connections}
+  */
+  readonly connections?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#default_arguments AwsGlueJob#default_arguments}
+  */
+  readonly defaultArguments?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#description AwsGlueJob#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#execution_class AwsGlueJob#execution_class}
+  */
+  readonly executionClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#glue_version AwsGlueJob#glue_version}
+  */
+  readonly glueVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#id AwsGlueJob#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#job_mode AwsGlueJob#job_mode}
+  */
+  readonly jobMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#job_run_queuing_enabled AwsGlueJob#job_run_queuing_enabled}
+  */
+  readonly jobRunQueuingEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#maintenance_window AwsGlueJob#maintenance_window}
+  */
+  readonly maintenanceWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#max_capacity AwsGlueJob#max_capacity}
+  */
+  readonly maxCapacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#max_retries AwsGlueJob#max_retries}
+  */
+  readonly maxRetries?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#name AwsGlueJob#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#non_overridable_arguments AwsGlueJob#non_overridable_arguments}
+  */
+  readonly nonOverridableArguments?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#number_of_workers AwsGlueJob#number_of_workers}
+  */
+  readonly numberOfWorkers?: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#region AwsGlueJob#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#role_arn AwsGlueJob#role_arn}
+  */
+  readonly roleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#security_configuration AwsGlueJob#security_configuration}
+  */
+  readonly securityConfiguration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#tags AwsGlueJob#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#tags_all AwsGlueJob#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#timeout AwsGlueJob#timeout}
+  */
+  readonly timeout?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#worker_type AwsGlueJob#worker_type}
+  */
+  readonly workerType?: string;
+  /**
+  * command block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#command AwsGlueJob#command}
+  */
+  readonly command: AwsGlueJob.CommandProperty;
+  /**
+  * execution_property block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#execution_property AwsGlueJob#execution_property}
+  */
+  readonly executionProperty?: AwsGlueJob.ExecutionPropertyProperty;
+  /**
+  * notification_property block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#notification_property AwsGlueJob#notification_property}
+  */
+  readonly notificationProperty?: AwsGlueJob.NotificationPropertyProperty;
+  /**
+  * source_control_details block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#source_control_details AwsGlueJob#source_control_details}
+  */
+  readonly sourceControlDetails?: AwsGlueJob.SourceControlDetailsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job aws_glue_job}
+*/
+export class AwsGlueJob extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_glue_job";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsGlueJob resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsGlueJob to import
+  * @param importFromId The id of the existing AwsGlueJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlueJob to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_job", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job aws_glue_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsGlueJobConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsGlueJobConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_glue_job',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._connections = config.connections;
+    this._defaultArguments = config.defaultArguments;
+    this._description = config.description;
+    this._executionClass = config.executionClass;
+    this._glueVersion = config.glueVersion;
+    this._id = config.id;
+    this._jobMode = config.jobMode;
+    this._jobRunQueuingEnabled = config.jobRunQueuingEnabled;
+    this._maintenanceWindow = config.maintenanceWindow;
+    this._maxCapacity = config.maxCapacity;
+    this._maxRetries = config.maxRetries;
+    this._name = config.name;
+    this._nonOverridableArguments = config.nonOverridableArguments;
+    this._numberOfWorkers = config.numberOfWorkers;
+    this._region = config.region;
+    this._roleArn = config.roleArn;
+    this._securityConfiguration = config.securityConfiguration;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._timeout = config.timeout;
+    this._workerType = config.workerType;
+    this._command.internalValue = config.command;
+    this._executionProperty.internalValue = config.executionProperty;
+    this._notificationProperty.internalValue = config.notificationProperty;
+    this._sourceControlDetails.internalValue = config.sourceControlDetails;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // connections - computed: false, optional: true, required: false
+  private _connections?: string[]; 
+  public get connections() {
+    return this.getListAttribute('connections');
+  }
+  public set connections(value: string[]) {
+    this._connections = value;
+  }
+  public resetConnections() {
+    this._connections = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionsInput() {
+    return this._connections;
+  }
+
+  // default_arguments - computed: false, optional: true, required: false
+  private _defaultArguments?: { [key: string]: string }; 
+  public get defaultArguments() {
+    return this.getStringMapAttribute('default_arguments');
+  }
+  public set defaultArguments(value: { [key: string]: string }) {
+    this._defaultArguments = value;
+  }
+  public resetDefaultArguments() {
+    this._defaultArguments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultArgumentsInput() {
+    return this._defaultArguments;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // execution_class - computed: false, optional: true, required: false
+  private _executionClass?: string; 
+  public get executionClass() {
+    return this.getStringAttribute('execution_class');
+  }
+  public set executionClass(value: string) {
+    this._executionClass = value;
+  }
+  public resetExecutionClass() {
+    this._executionClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionClassInput() {
+    return this._executionClass;
+  }
+
+  // glue_version - computed: true, optional: true, required: false
+  private _glueVersion?: string; 
+  public get glueVersion() {
+    return this.getStringAttribute('glue_version');
+  }
+  public set glueVersion(value: string) {
+    this._glueVersion = value;
+  }
+  public resetGlueVersion() {
+    this._glueVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get glueVersionInput() {
+    return this._glueVersion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // job_mode - computed: true, optional: true, required: false
+  private _jobMode?: string; 
+  public get jobMode() {
+    return this.getStringAttribute('job_mode');
+  }
+  public set jobMode(value: string) {
+    this._jobMode = value;
+  }
+  public resetJobMode() {
+    this._jobMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobModeInput() {
+    return this._jobMode;
+  }
+
+  // job_run_queuing_enabled - computed: false, optional: true, required: false
+  private _jobRunQueuingEnabled?: boolean | cdktn.IResolvable; 
+  public get jobRunQueuingEnabled() {
+    return this.getBooleanAttribute('job_run_queuing_enabled');
+  }
+  public set jobRunQueuingEnabled(value: boolean | cdktn.IResolvable) {
+    this._jobRunQueuingEnabled = value;
+  }
+  public resetJobRunQueuingEnabled() {
+    this._jobRunQueuingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobRunQueuingEnabledInput() {
+    return this._jobRunQueuingEnabled;
+  }
+
+  // maintenance_window - computed: false, optional: true, required: false
+  private _maintenanceWindow?: string; 
+  public get maintenanceWindow() {
+    return this.getStringAttribute('maintenance_window');
+  }
+  public set maintenanceWindow(value: string) {
+    this._maintenanceWindow = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow;
+  }
+
+  // max_capacity - computed: true, optional: true, required: false
+  private _maxCapacity?: number; 
+  public get maxCapacity() {
+    return this.getNumberAttribute('max_capacity');
+  }
+  public set maxCapacity(value: number) {
+    this._maxCapacity = value;
+  }
+  public resetMaxCapacity() {
+    this._maxCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityInput() {
+    return this._maxCapacity;
+  }
+
+  // max_retries - computed: false, optional: true, required: false
+  private _maxRetries?: number; 
+  public get maxRetries() {
+    return this.getNumberAttribute('max_retries');
+  }
+  public set maxRetries(value: number) {
+    this._maxRetries = value;
+  }
+  public resetMaxRetries() {
+    this._maxRetries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRetriesInput() {
+    return this._maxRetries;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // non_overridable_arguments - computed: false, optional: true, required: false
+  private _nonOverridableArguments?: { [key: string]: string }; 
+  public get nonOverridableArguments() {
+    return this.getStringMapAttribute('non_overridable_arguments');
+  }
+  public set nonOverridableArguments(value: { [key: string]: string }) {
+    this._nonOverridableArguments = value;
+  }
+  public resetNonOverridableArguments() {
+    this._nonOverridableArguments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonOverridableArgumentsInput() {
+    return this._nonOverridableArguments;
+  }
+
+  // number_of_workers - computed: true, optional: true, required: false
+  private _numberOfWorkers?: number; 
+  public get numberOfWorkers() {
+    return this.getNumberAttribute('number_of_workers');
+  }
+  public set numberOfWorkers(value: number) {
+    this._numberOfWorkers = value;
+  }
+  public resetNumberOfWorkers() {
+    this._numberOfWorkers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numberOfWorkersInput() {
+    return this._numberOfWorkers;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // role_arn - computed: false, optional: false, required: true
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // security_configuration - computed: false, optional: true, required: false
+  private _securityConfiguration?: string; 
+  public get securityConfiguration() {
+    return this.getStringAttribute('security_configuration');
+  }
+  public set securityConfiguration(value: string) {
+    this._securityConfiguration = value;
+  }
+  public resetSecurityConfiguration() {
+    this._securityConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityConfigurationInput() {
+    return this._securityConfiguration;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // timeout - computed: true, optional: true, required: false
+  private _timeout?: number; 
+  public get timeout() {
+    return this.getNumberAttribute('timeout');
+  }
+  public set timeout(value: number) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+
+  // worker_type - computed: true, optional: true, required: false
+  private _workerType?: string; 
+  public get workerType() {
+    return this.getStringAttribute('worker_type');
+  }
+  public set workerType(value: string) {
+    this._workerType = value;
+  }
+  public resetWorkerType() {
+    this._workerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workerTypeInput() {
+    return this._workerType;
+  }
+
+  // command - computed: false, optional: false, required: true
+  private _command = new AwsGlueJob.CommandPropertyOutputReference(this, "command");
+  public get command() {
+    return this._command;
+  }
+  public putCommand(value: AwsGlueJob.CommandProperty) {
+    this._command.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commandInput() {
+    return this._command.internalValue;
+  }
+
+  // execution_property - computed: false, optional: true, required: false
+  private _executionProperty = new AwsGlueJob.ExecutionPropertyPropertyOutputReference(this, "execution_property");
+  public get executionProperty() {
+    return this._executionProperty;
+  }
+  public putExecutionProperty(value: AwsGlueJob.ExecutionPropertyProperty) {
+    this._executionProperty.internalValue = value;
+  }
+  public resetExecutionProperty() {
+    this._executionProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionPropertyInput() {
+    return this._executionProperty.internalValue;
+  }
+
+  // notification_property - computed: false, optional: true, required: false
+  private _notificationProperty = new AwsGlueJob.NotificationPropertyPropertyOutputReference(this, "notification_property");
+  public get notificationProperty() {
+    return this._notificationProperty;
+  }
+  public putNotificationProperty(value: AwsGlueJob.NotificationPropertyProperty) {
+    this._notificationProperty.internalValue = value;
+  }
+  public resetNotificationProperty() {
+    this._notificationProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationPropertyInput() {
+    return this._notificationProperty.internalValue;
+  }
+
+  // source_control_details - computed: false, optional: true, required: false
+  private _sourceControlDetails = new AwsGlueJob.SourceControlDetailsPropertyOutputReference(this, "source_control_details");
+  public get sourceControlDetails() {
+    return this._sourceControlDetails;
+  }
+  public putSourceControlDetails(value: AwsGlueJob.SourceControlDetailsProperty) {
+    this._sourceControlDetails.internalValue = value;
+  }
+  public resetSourceControlDetails() {
+    this._sourceControlDetails.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceControlDetailsInput() {
+    return this._sourceControlDetails.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      connections: cdktn.listMapper(cdktn.stringToTerraform, false)(this._connections),
+      default_arguments: cdktn.hashMapper(cdktn.stringToTerraform)(this._defaultArguments),
+      description: cdktn.stringToTerraform(this._description),
+      execution_class: cdktn.stringToTerraform(this._executionClass),
+      glue_version: cdktn.stringToTerraform(this._glueVersion),
+      id: cdktn.stringToTerraform(this._id),
+      job_mode: cdktn.stringToTerraform(this._jobMode),
+      job_run_queuing_enabled: cdktn.booleanToTerraform(this._jobRunQueuingEnabled),
+      maintenance_window: cdktn.stringToTerraform(this._maintenanceWindow),
+      max_capacity: cdktn.numberToTerraform(this._maxCapacity),
+      max_retries: cdktn.numberToTerraform(this._maxRetries),
+      name: cdktn.stringToTerraform(this._name),
+      non_overridable_arguments: cdktn.hashMapper(cdktn.stringToTerraform)(this._nonOverridableArguments),
+      number_of_workers: cdktn.numberToTerraform(this._numberOfWorkers),
+      region: cdktn.stringToTerraform(this._region),
+      role_arn: cdktn.stringToTerraform(this._roleArn),
+      security_configuration: cdktn.stringToTerraform(this._securityConfiguration),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      timeout: cdktn.numberToTerraform(this._timeout),
+      worker_type: cdktn.stringToTerraform(this._workerType),
+      command: awsGlueJobCommandPropertyToTerraform(this._command.internalValue),
+      execution_property: awsGlueJobExecutionPropertyPropertyToTerraform(this._executionProperty.internalValue),
+      notification_property: awsGlueJobNotificationPropertyPropertyToTerraform(this._notificationProperty.internalValue),
+      source_control_details: awsGlueJobSourceControlDetailsPropertyToTerraform(this._sourceControlDetails.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      connections: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._connections),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      default_arguments: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._defaultArguments),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      execution_class: {
+        value: cdktn.stringToHclTerraform(this._executionClass),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      glue_version: {
+        value: cdktn.stringToHclTerraform(this._glueVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      job_mode: {
+        value: cdktn.stringToHclTerraform(this._jobMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      job_run_queuing_enabled: {
+        value: cdktn.booleanToHclTerraform(this._jobRunQueuingEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      maintenance_window: {
+        value: cdktn.stringToHclTerraform(this._maintenanceWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_capacity: {
+        value: cdktn.numberToHclTerraform(this._maxCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_retries: {
+        value: cdktn.numberToHclTerraform(this._maxRetries),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      non_overridable_arguments: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._nonOverridableArguments),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      number_of_workers: {
+        value: cdktn.numberToHclTerraform(this._numberOfWorkers),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_arn: {
+        value: cdktn.stringToHclTerraform(this._roleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_configuration: {
+        value: cdktn.stringToHclTerraform(this._securityConfiguration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeout: {
+        value: cdktn.numberToHclTerraform(this._timeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      worker_type: {
+        value: cdktn.stringToHclTerraform(this._workerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      command: {
+        value: awsGlueJobCommandPropertyToHclTerraform(this._command.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueJob.CommandPropertyList",
+      },
+      execution_property: {
+        value: awsGlueJobExecutionPropertyPropertyToHclTerraform(this._executionProperty.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueJob.ExecutionPropertyPropertyList",
+      },
+      notification_property: {
+        value: awsGlueJobNotificationPropertyPropertyToHclTerraform(this._notificationProperty.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueJob.NotificationPropertyPropertyList",
+      },
+      source_control_details: {
+        value: awsGlueJobSourceControlDetailsPropertyToHclTerraform(this._sourceControlDetails.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsGlueJob.SourceControlDetailsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsGlueJobCommandPropertyToTerraform(struct?: AwsGlueJob.CommandPropertyOutputReference | AwsGlueJob.CommandProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    python_version: cdktn.stringToTerraform(struct!.pythonVersion),
+    runtime: cdktn.stringToTerraform(struct!.runtime),
+    script_location: cdktn.stringToTerraform(struct!.scriptLocation),
+  }
+}
+
+
+export function awsGlueJobCommandPropertyToHclTerraform(struct?: AwsGlueJob.CommandPropertyOutputReference | AwsGlueJob.CommandProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    python_version: {
+      value: cdktn.stringToHclTerraform(struct!.pythonVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    runtime: {
+      value: cdktn.stringToHclTerraform(struct!.runtime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    script_location: {
+      value: cdktn.stringToHclTerraform(struct!.scriptLocation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueJobExecutionPropertyPropertyToTerraform(struct?: AwsGlueJob.ExecutionPropertyPropertyOutputReference | AwsGlueJob.ExecutionPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_concurrent_runs: cdktn.numberToTerraform(struct!.maxConcurrentRuns),
+  }
+}
+
+
+export function awsGlueJobExecutionPropertyPropertyToHclTerraform(struct?: AwsGlueJob.ExecutionPropertyPropertyOutputReference | AwsGlueJob.ExecutionPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_concurrent_runs: {
+      value: cdktn.numberToHclTerraform(struct!.maxConcurrentRuns),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueJobNotificationPropertyPropertyToTerraform(struct?: AwsGlueJob.NotificationPropertyPropertyOutputReference | AwsGlueJob.NotificationPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    notify_delay_after: cdktn.numberToTerraform(struct!.notifyDelayAfter),
+  }
+}
+
+
+export function awsGlueJobNotificationPropertyPropertyToHclTerraform(struct?: AwsGlueJob.NotificationPropertyPropertyOutputReference | AwsGlueJob.NotificationPropertyProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    notify_delay_after: {
+      value: cdktn.numberToHclTerraform(struct!.notifyDelayAfter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsGlueJobSourceControlDetailsPropertyToTerraform(struct?: AwsGlueJob.SourceControlDetailsPropertyOutputReference | AwsGlueJob.SourceControlDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    auth_strategy: cdktn.stringToTerraform(struct!.authStrategy),
+    auth_token: cdktn.stringToTerraform(struct!.authToken),
+    branch: cdktn.stringToTerraform(struct!.branch),
+    folder: cdktn.stringToTerraform(struct!.folder),
+    last_commit_id: cdktn.stringToTerraform(struct!.lastCommitId),
+    owner: cdktn.stringToTerraform(struct!.owner),
+    provider: cdktn.stringToTerraform(struct!.provider),
+    repository: cdktn.stringToTerraform(struct!.repository),
+  }
+}
+
+
+export function awsGlueJobSourceControlDetailsPropertyToHclTerraform(struct?: AwsGlueJob.SourceControlDetailsPropertyOutputReference | AwsGlueJob.SourceControlDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    auth_strategy: {
+      value: cdktn.stringToHclTerraform(struct!.authStrategy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    auth_token: {
+      value: cdktn.stringToHclTerraform(struct!.authToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    branch: {
+      value: cdktn.stringToHclTerraform(struct!.branch),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    folder: {
+      value: cdktn.stringToHclTerraform(struct!.folder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last_commit_id: {
+      value: cdktn.stringToHclTerraform(struct!.lastCommitId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    owner: {
+      value: cdktn.stringToHclTerraform(struct!.owner),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    provider: {
+      value: cdktn.stringToHclTerraform(struct!.provider),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    repository: {
+      value: cdktn.stringToHclTerraform(struct!.repository),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsGlueJob {
+export interface CommandProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#name AwsGlueJob#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#python_version AwsGlueJob#python_version}
+  */
+  readonly pythonVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#runtime AwsGlueJob#runtime}
+  */
+  readonly runtime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#script_location AwsGlueJob#script_location}
+  */
+  readonly scriptLocation: string;
+}
+export class CommandPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CommandProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._pythonVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pythonVersion = this._pythonVersion;
+    }
+    if (this._runtime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runtime = this._runtime;
+    }
+    if (this._scriptLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scriptLocation = this._scriptLocation;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CommandProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._pythonVersion = undefined;
+      this._runtime = undefined;
+      this._scriptLocation = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._pythonVersion = value.pythonVersion;
+      this._runtime = value.runtime;
+      this._scriptLocation = value.scriptLocation;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // python_version - computed: true, optional: true, required: false
+  private _pythonVersion?: string; 
+  public get pythonVersion() {
+    return this.getStringAttribute('python_version');
+  }
+  public set pythonVersion(value: string) {
+    this._pythonVersion = value;
+  }
+  public resetPythonVersion() {
+    this._pythonVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pythonVersionInput() {
+    return this._pythonVersion;
+  }
+
+  // runtime - computed: true, optional: true, required: false
+  private _runtime?: string; 
+  public get runtime() {
+    return this.getStringAttribute('runtime');
+  }
+  public set runtime(value: string) {
+    this._runtime = value;
+  }
+  public resetRuntime() {
+    this._runtime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runtimeInput() {
+    return this._runtime;
+  }
+
+  // script_location - computed: false, optional: false, required: true
+  private _scriptLocation?: string; 
+  public get scriptLocation() {
+    return this.getStringAttribute('script_location');
+  }
+  public set scriptLocation(value: string) {
+    this._scriptLocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptLocationInput() {
+    return this._scriptLocation;
+  }
+}
+export interface ExecutionPropertyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#max_concurrent_runs AwsGlueJob#max_concurrent_runs}
+  */
+  readonly maxConcurrentRuns?: number;
+}
+export class ExecutionPropertyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ExecutionPropertyProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxConcurrentRuns !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentRuns = this._maxConcurrentRuns;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ExecutionPropertyProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxConcurrentRuns = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxConcurrentRuns = value.maxConcurrentRuns;
+    }
+  }
+
+  // max_concurrent_runs - computed: false, optional: true, required: false
+  private _maxConcurrentRuns?: number; 
+  public get maxConcurrentRuns() {
+    return this.getNumberAttribute('max_concurrent_runs');
+  }
+  public set maxConcurrentRuns(value: number) {
+    this._maxConcurrentRuns = value;
+  }
+  public resetMaxConcurrentRuns() {
+    this._maxConcurrentRuns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrentRunsInput() {
+    return this._maxConcurrentRuns;
+  }
+}
+export interface NotificationPropertyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#notify_delay_after AwsGlueJob#notify_delay_after}
+  */
+  readonly notifyDelayAfter?: number;
+}
+export class NotificationPropertyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NotificationPropertyProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._notifyDelayAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notifyDelayAfter = this._notifyDelayAfter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationPropertyProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._notifyDelayAfter = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._notifyDelayAfter = value.notifyDelayAfter;
+    }
+  }
+
+  // notify_delay_after - computed: false, optional: true, required: false
+  private _notifyDelayAfter?: number; 
+  public get notifyDelayAfter() {
+    return this.getNumberAttribute('notify_delay_after');
+  }
+  public set notifyDelayAfter(value: number) {
+    this._notifyDelayAfter = value;
+  }
+  public resetNotifyDelayAfter() {
+    this._notifyDelayAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notifyDelayAfterInput() {
+    return this._notifyDelayAfter;
+  }
+}
+export interface SourceControlDetailsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#auth_strategy AwsGlueJob#auth_strategy}
+  */
+  readonly authStrategy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#auth_token AwsGlueJob#auth_token}
+  */
+  readonly authToken?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#branch AwsGlueJob#branch}
+  */
+  readonly branch?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#folder AwsGlueJob#folder}
+  */
+  readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#last_commit_id AwsGlueJob#last_commit_id}
+  */
+  readonly lastCommitId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#owner AwsGlueJob#owner}
+  */
+  readonly owner?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#provider AwsGlueJob#provider}
+  */
+  readonly provider?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_job#repository AwsGlueJob#repository}
+  */
+  readonly repository?: string;
+}
+export class SourceControlDetailsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceControlDetailsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._authStrategy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authStrategy = this._authStrategy;
+    }
+    if (this._authToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authToken = this._authToken;
+    }
+    if (this._branch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.branch = this._branch;
+    }
+    if (this._folder !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.folder = this._folder;
+    }
+    if (this._lastCommitId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lastCommitId = this._lastCommitId;
+    }
+    if (this._owner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.owner = this._owner;
+    }
+    if (this._provider !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.provider = this._provider;
+    }
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceControlDetailsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._authStrategy = undefined;
+      this._authToken = undefined;
+      this._branch = undefined;
+      this._folder = undefined;
+      this._lastCommitId = undefined;
+      this._owner = undefined;
+      this._provider = undefined;
+      this._repository = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._authStrategy = value.authStrategy;
+      this._authToken = value.authToken;
+      this._branch = value.branch;
+      this._folder = value.folder;
+      this._lastCommitId = value.lastCommitId;
+      this._owner = value.owner;
+      this._provider = value.provider;
+      this._repository = value.repository;
+    }
+  }
+
+  // auth_strategy - computed: false, optional: true, required: false
+  private _authStrategy?: string; 
+  public get authStrategy() {
+    return this.getStringAttribute('auth_strategy');
+  }
+  public set authStrategy(value: string) {
+    this._authStrategy = value;
+  }
+  public resetAuthStrategy() {
+    this._authStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authStrategyInput() {
+    return this._authStrategy;
+  }
+
+  // auth_token - computed: false, optional: true, required: false
+  private _authToken?: string; 
+  public get authToken() {
+    return this.getStringAttribute('auth_token');
+  }
+  public set authToken(value: string) {
+    this._authToken = value;
+  }
+  public resetAuthToken() {
+    this._authToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenInput() {
+    return this._authToken;
+  }
+
+  // branch - computed: false, optional: true, required: false
+  private _branch?: string; 
+  public get branch() {
+    return this.getStringAttribute('branch');
+  }
+  public set branch(value: string) {
+    this._branch = value;
+  }
+  public resetBranch() {
+    this._branch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchInput() {
+    return this._branch;
+  }
+
+  // folder - computed: false, optional: true, required: false
+  private _folder?: string; 
+  public get folder() {
+    return this.getStringAttribute('folder');
+  }
+  public set folder(value: string) {
+    this._folder = value;
+  }
+  public resetFolder() {
+    this._folder = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder;
+  }
+
+  // last_commit_id - computed: false, optional: true, required: false
+  private _lastCommitId?: string; 
+  public get lastCommitId() {
+    return this.getStringAttribute('last_commit_id');
+  }
+  public set lastCommitId(value: string) {
+    this._lastCommitId = value;
+  }
+  public resetLastCommitId() {
+    this._lastCommitId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastCommitIdInput() {
+    return this._lastCommitId;
+  }
+
+  // owner - computed: false, optional: true, required: false
+  private _owner?: string; 
+  public get owner() {
+    return this.getStringAttribute('owner');
+  }
+  public set owner(value: string) {
+    this._owner = value;
+  }
+  public resetOwner() {
+    this._owner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ownerInput() {
+    return this._owner;
+  }
+
+  // provider - computed: false, optional: true, required: false
+  private _provider?: string; 
+  public get provider() {
+    return this.getStringAttribute('provider');
+  }
+  public set provider(value: string) {
+    this._provider = value;
+  }
+  public resetProvider() {
+    this._provider = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get providerInput() {
+    return this._provider;
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  public resetRepository() {
+    this._repository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+}
+}

@@ -1,0 +1,1667 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAcmpcaCertificateAuthorityConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsAcmpcaCertificateAuthority#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#id AwsAcmpcaCertificateAuthority#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_storage_security_standard AwsAcmpcaCertificateAuthority#key_storage_security_standard}
+  */
+  readonly keyStorageSecurityStandard?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#permanent_deletion_time_in_days AwsAcmpcaCertificateAuthority#permanent_deletion_time_in_days}
+  */
+  readonly permanentDeletionTimeInDays?: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#region AwsAcmpcaCertificateAuthority#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags AwsAcmpcaCertificateAuthority#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#tags_all AwsAcmpcaCertificateAuthority#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#type AwsAcmpcaCertificateAuthority#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#usage_mode AwsAcmpcaCertificateAuthority#usage_mode}
+  */
+  readonly usageMode?: string;
+  /**
+  * certificate_authority_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#certificate_authority_configuration AwsAcmpcaCertificateAuthority#certificate_authority_configuration}
+  */
+  readonly certificateAuthorityConfiguration: AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationProperty;
+  /**
+  * revocation_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#revocation_configuration AwsAcmpcaCertificateAuthority#revocation_configuration}
+  */
+  readonly revocationConfiguration?: AwsAcmpcaCertificateAuthority.RevocationConfigurationProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#timeouts AwsAcmpcaCertificateAuthority#timeouts}
+  */
+  readonly timeouts?: AwsAcmpcaCertificateAuthority.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority aws_acmpca_certificate_authority}
+*/
+export class AwsAcmpcaCertificateAuthority extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_acmpca_certificate_authority";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAcmpcaCertificateAuthority resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAcmpcaCertificateAuthority to import
+  * @param importFromId The id of the existing AwsAcmpcaCertificateAuthority that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAcmpcaCertificateAuthority to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate_authority", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority aws_acmpca_certificate_authority} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAcmpcaCertificateAuthorityConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAcmpcaCertificateAuthorityConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_acmpca_certificate_authority',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._enabled = config.enabled;
+    this._id = config.id;
+    this._keyStorageSecurityStandard = config.keyStorageSecurityStandard;
+    this._permanentDeletionTimeInDays = config.permanentDeletionTimeInDays;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._type = config.type;
+    this._usageMode = config.usageMode;
+    this._certificateAuthorityConfiguration.internalValue = config.certificateAuthorityConfiguration;
+    this._revocationConfiguration.internalValue = config.revocationConfiguration;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // certificate - computed: true, optional: false, required: false
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+
+  // certificate_chain - computed: true, optional: false, required: false
+  public get certificateChain() {
+    return this.getStringAttribute('certificate_chain');
+  }
+
+  // certificate_signing_request - computed: true, optional: false, required: false
+  public get certificateSigningRequest() {
+    return this.getStringAttribute('certificate_signing_request');
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // key_storage_security_standard - computed: true, optional: true, required: false
+  private _keyStorageSecurityStandard?: string; 
+  public get keyStorageSecurityStandard() {
+    return this.getStringAttribute('key_storage_security_standard');
+  }
+  public set keyStorageSecurityStandard(value: string) {
+    this._keyStorageSecurityStandard = value;
+  }
+  public resetKeyStorageSecurityStandard() {
+    this._keyStorageSecurityStandard = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyStorageSecurityStandardInput() {
+    return this._keyStorageSecurityStandard;
+  }
+
+  // not_after - computed: true, optional: false, required: false
+  public get notAfter() {
+    return this.getStringAttribute('not_after');
+  }
+
+  // not_before - computed: true, optional: false, required: false
+  public get notBefore() {
+    return this.getStringAttribute('not_before');
+  }
+
+  // permanent_deletion_time_in_days - computed: false, optional: true, required: false
+  private _permanentDeletionTimeInDays?: number; 
+  public get permanentDeletionTimeInDays() {
+    return this.getNumberAttribute('permanent_deletion_time_in_days');
+  }
+  public set permanentDeletionTimeInDays(value: number) {
+    this._permanentDeletionTimeInDays = value;
+  }
+  public resetPermanentDeletionTimeInDays() {
+    this._permanentDeletionTimeInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permanentDeletionTimeInDaysInput() {
+    return this._permanentDeletionTimeInDays;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // serial - computed: true, optional: false, required: false
+  public get serial() {
+    return this.getStringAttribute('serial');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // usage_mode - computed: true, optional: true, required: false
+  private _usageMode?: string; 
+  public get usageMode() {
+    return this.getStringAttribute('usage_mode');
+  }
+  public set usageMode(value: string) {
+    this._usageMode = value;
+  }
+  public resetUsageMode() {
+    this._usageMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usageModeInput() {
+    return this._usageMode;
+  }
+
+  // certificate_authority_configuration - computed: false, optional: false, required: true
+  private _certificateAuthorityConfiguration = new AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference(this, "certificate_authority_configuration");
+  public get certificateAuthorityConfiguration() {
+    return this._certificateAuthorityConfiguration;
+  }
+  public putCertificateAuthorityConfiguration(value: AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationProperty) {
+    this._certificateAuthorityConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateAuthorityConfigurationInput() {
+    return this._certificateAuthorityConfiguration.internalValue;
+  }
+
+  // revocation_configuration - computed: false, optional: true, required: false
+  private _revocationConfiguration = new AwsAcmpcaCertificateAuthority.RevocationConfigurationPropertyOutputReference(this, "revocation_configuration");
+  public get revocationConfiguration() {
+    return this._revocationConfiguration;
+  }
+  public putRevocationConfiguration(value: AwsAcmpcaCertificateAuthority.RevocationConfigurationProperty) {
+    this._revocationConfiguration.internalValue = value;
+  }
+  public resetRevocationConfiguration() {
+    this._revocationConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revocationConfigurationInput() {
+    return this._revocationConfiguration.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsAcmpcaCertificateAuthority.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsAcmpcaCertificateAuthority.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      enabled: cdktn.booleanToTerraform(this._enabled),
+      id: cdktn.stringToTerraform(this._id),
+      key_storage_security_standard: cdktn.stringToTerraform(this._keyStorageSecurityStandard),
+      permanent_deletion_time_in_days: cdktn.numberToTerraform(this._permanentDeletionTimeInDays),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      type: cdktn.stringToTerraform(this._type),
+      usage_mode: cdktn.stringToTerraform(this._usageMode),
+      certificate_authority_configuration: awsAcmpcaCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(this._certificateAuthorityConfiguration.internalValue),
+      revocation_configuration: awsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToTerraform(this._revocationConfiguration.internalValue),
+      timeouts: awsAcmpcaCertificateAuthorityTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enabled: {
+        value: cdktn.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_storage_security_standard: {
+        value: cdktn.stringToHclTerraform(this._keyStorageSecurityStandard),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      permanent_deletion_time_in_days: {
+        value: cdktn.numberToHclTerraform(this._permanentDeletionTimeInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      usage_mode: {
+        value: cdktn.stringToHclTerraform(this._usageMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_authority_configuration: {
+        value: awsAcmpcaCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(this._certificateAuthorityConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationPropertyList",
+      },
+      revocation_configuration: {
+        value: awsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(this._revocationConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAcmpcaCertificateAuthority.RevocationConfigurationPropertyList",
+      },
+      timeouts: {
+        value: awsAcmpcaCertificateAuthorityTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsAcmpcaCertificateAuthority.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAcmpcaCertificateAuthoritySubjectPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.SubjectPropertyOutputReference | AwsAcmpcaCertificateAuthority.SubjectProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    common_name: cdktn.stringToTerraform(struct!.commonName),
+    country: cdktn.stringToTerraform(struct!.country),
+    distinguished_name_qualifier: cdktn.stringToTerraform(struct!.distinguishedNameQualifier),
+    generation_qualifier: cdktn.stringToTerraform(struct!.generationQualifier),
+    given_name: cdktn.stringToTerraform(struct!.givenName),
+    initials: cdktn.stringToTerraform(struct!.initials),
+    locality: cdktn.stringToTerraform(struct!.locality),
+    organization: cdktn.stringToTerraform(struct!.organization),
+    organizational_unit: cdktn.stringToTerraform(struct!.organizationalUnit),
+    pseudonym: cdktn.stringToTerraform(struct!.pseudonym),
+    state: cdktn.stringToTerraform(struct!.state),
+    surname: cdktn.stringToTerraform(struct!.surname),
+    title: cdktn.stringToTerraform(struct!.title),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthoritySubjectPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.SubjectPropertyOutputReference | AwsAcmpcaCertificateAuthority.SubjectProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    common_name: {
+      value: cdktn.stringToHclTerraform(struct!.commonName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    distinguished_name_qualifier: {
+      value: cdktn.stringToHclTerraform(struct!.distinguishedNameQualifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    generation_qualifier: {
+      value: cdktn.stringToHclTerraform(struct!.generationQualifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    given_name: {
+      value: cdktn.stringToHclTerraform(struct!.givenName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    initials: {
+      value: cdktn.stringToHclTerraform(struct!.initials),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktn.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organization: {
+      value: cdktn.stringToHclTerraform(struct!.organization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit: {
+      value: cdktn.stringToHclTerraform(struct!.organizationalUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pseudonym: {
+      value: cdktn.stringToHclTerraform(struct!.pseudonym),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktn.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    surname: {
+      value: cdktn.stringToHclTerraform(struct!.surname),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    title: {
+      value: cdktn.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAcmpcaCertificateAuthorityCertificateAuthorityConfigurationPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    key_algorithm: cdktn.stringToTerraform(struct!.keyAlgorithm),
+    signing_algorithm: cdktn.stringToTerraform(struct!.signingAlgorithm),
+    subject: awsAcmpcaCertificateAuthoritySubjectPropertyToTerraform(struct!.subject),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthorityCertificateAuthorityConfigurationPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.CertificateAuthorityConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    key_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.keyAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    signing_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.signingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subject: {
+      value: awsAcmpcaCertificateAuthoritySubjectPropertyToHclTerraform(struct!.subject),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SubjectPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAcmpcaCertificateAuthorityCrlConfigurationPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.CrlConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.CrlConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    custom_cname: cdktn.stringToTerraform(struct!.customCname),
+    custom_path: cdktn.stringToTerraform(struct!.customPath),
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    expiration_in_days: cdktn.numberToTerraform(struct!.expirationInDays),
+    s3_bucket_name: cdktn.stringToTerraform(struct!.s3BucketName),
+    s3_object_acl: cdktn.stringToTerraform(struct!.s3ObjectAcl),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.CrlConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.CrlConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    custom_cname: {
+      value: cdktn.stringToHclTerraform(struct!.customCname),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_path: {
+      value: cdktn.stringToHclTerraform(struct!.customPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    expiration_in_days: {
+      value: cdktn.numberToHclTerraform(struct!.expirationInDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    s3_bucket_name: {
+      value: cdktn.stringToHclTerraform(struct!.s3BucketName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_object_acl: {
+      value: cdktn.stringToHclTerraform(struct!.s3ObjectAcl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAcmpcaCertificateAuthorityOcspConfigurationPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.OcspConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.OcspConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    ocsp_custom_cname: cdktn.stringToTerraform(struct!.ocspCustomCname),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.OcspConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.OcspConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ocsp_custom_cname: {
+      value: cdktn.stringToHclTerraform(struct!.ocspCustomCname),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.RevocationConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.RevocationConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    crl_configuration: awsAcmpcaCertificateAuthorityCrlConfigurationPropertyToTerraform(struct!.crlConfiguration),
+    ocsp_configuration: awsAcmpcaCertificateAuthorityOcspConfigurationPropertyToTerraform(struct!.ocspConfiguration),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthorityRevocationConfigurationPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.RevocationConfigurationPropertyOutputReference | AwsAcmpcaCertificateAuthority.RevocationConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    crl_configuration: {
+      value: awsAcmpcaCertificateAuthorityCrlConfigurationPropertyToHclTerraform(struct!.crlConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CrlConfigurationPropertyList",
+    },
+    ocsp_configuration: {
+      value: awsAcmpcaCertificateAuthorityOcspConfigurationPropertyToHclTerraform(struct!.ocspConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OcspConfigurationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAcmpcaCertificateAuthorityTimeoutsPropertyToTerraform(struct?: AwsAcmpcaCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+  }
+}
+
+
+export function awsAcmpcaCertificateAuthorityTimeoutsPropertyToHclTerraform(struct?: AwsAcmpcaCertificateAuthority.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAcmpcaCertificateAuthority {
+export interface SubjectProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#common_name AwsAcmpcaCertificateAuthority#common_name}
+  */
+  readonly commonName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#country AwsAcmpcaCertificateAuthority#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#distinguished_name_qualifier AwsAcmpcaCertificateAuthority#distinguished_name_qualifier}
+  */
+  readonly distinguishedNameQualifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#generation_qualifier AwsAcmpcaCertificateAuthority#generation_qualifier}
+  */
+  readonly generationQualifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#given_name AwsAcmpcaCertificateAuthority#given_name}
+  */
+  readonly givenName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#initials AwsAcmpcaCertificateAuthority#initials}
+  */
+  readonly initials?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#locality AwsAcmpcaCertificateAuthority#locality}
+  */
+  readonly locality?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organization AwsAcmpcaCertificateAuthority#organization}
+  */
+  readonly organization?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#organizational_unit AwsAcmpcaCertificateAuthority#organizational_unit}
+  */
+  readonly organizationalUnit?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#pseudonym AwsAcmpcaCertificateAuthority#pseudonym}
+  */
+  readonly pseudonym?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#state AwsAcmpcaCertificateAuthority#state}
+  */
+  readonly state?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#surname AwsAcmpcaCertificateAuthority#surname}
+  */
+  readonly surname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#title AwsAcmpcaCertificateAuthority#title}
+  */
+  readonly title?: string;
+}
+export class SubjectPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SubjectProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._commonName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.commonName = this._commonName;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._distinguishedNameQualifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.distinguishedNameQualifier = this._distinguishedNameQualifier;
+    }
+    if (this._generationQualifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.generationQualifier = this._generationQualifier;
+    }
+    if (this._givenName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.givenName = this._givenName;
+    }
+    if (this._initials !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.initials = this._initials;
+    }
+    if (this._locality !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.locality = this._locality;
+    }
+    if (this._organization !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.organization = this._organization;
+    }
+    if (this._organizationalUnit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.organizationalUnit = this._organizationalUnit;
+    }
+    if (this._pseudonym !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pseudonym = this._pseudonym;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    if (this._surname !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.surname = this._surname;
+    }
+    if (this._title !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SubjectProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._commonName = undefined;
+      this._country = undefined;
+      this._distinguishedNameQualifier = undefined;
+      this._generationQualifier = undefined;
+      this._givenName = undefined;
+      this._initials = undefined;
+      this._locality = undefined;
+      this._organization = undefined;
+      this._organizationalUnit = undefined;
+      this._pseudonym = undefined;
+      this._state = undefined;
+      this._surname = undefined;
+      this._title = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._commonName = value.commonName;
+      this._country = value.country;
+      this._distinguishedNameQualifier = value.distinguishedNameQualifier;
+      this._generationQualifier = value.generationQualifier;
+      this._givenName = value.givenName;
+      this._initials = value.initials;
+      this._locality = value.locality;
+      this._organization = value.organization;
+      this._organizationalUnit = value.organizationalUnit;
+      this._pseudonym = value.pseudonym;
+      this._state = value.state;
+      this._surname = value.surname;
+      this._title = value.title;
+    }
+  }
+
+  // common_name - computed: false, optional: true, required: false
+  private _commonName?: string; 
+  public get commonName() {
+    return this.getStringAttribute('common_name');
+  }
+  public set commonName(value: string) {
+    this._commonName = value;
+  }
+  public resetCommonName() {
+    this._commonName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commonNameInput() {
+    return this._commonName;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // distinguished_name_qualifier - computed: false, optional: true, required: false
+  private _distinguishedNameQualifier?: string; 
+  public get distinguishedNameQualifier() {
+    return this.getStringAttribute('distinguished_name_qualifier');
+  }
+  public set distinguishedNameQualifier(value: string) {
+    this._distinguishedNameQualifier = value;
+  }
+  public resetDistinguishedNameQualifier() {
+    this._distinguishedNameQualifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get distinguishedNameQualifierInput() {
+    return this._distinguishedNameQualifier;
+  }
+
+  // generation_qualifier - computed: false, optional: true, required: false
+  private _generationQualifier?: string; 
+  public get generationQualifier() {
+    return this.getStringAttribute('generation_qualifier');
+  }
+  public set generationQualifier(value: string) {
+    this._generationQualifier = value;
+  }
+  public resetGenerationQualifier() {
+    this._generationQualifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get generationQualifierInput() {
+    return this._generationQualifier;
+  }
+
+  // given_name - computed: false, optional: true, required: false
+  private _givenName?: string; 
+  public get givenName() {
+    return this.getStringAttribute('given_name');
+  }
+  public set givenName(value: string) {
+    this._givenName = value;
+  }
+  public resetGivenName() {
+    this._givenName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get givenNameInput() {
+    return this._givenName;
+  }
+
+  // initials - computed: false, optional: true, required: false
+  private _initials?: string; 
+  public get initials() {
+    return this.getStringAttribute('initials');
+  }
+  public set initials(value: string) {
+    this._initials = value;
+  }
+  public resetInitials() {
+    this._initials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initialsInput() {
+    return this._initials;
+  }
+
+  // locality - computed: false, optional: true, required: false
+  private _locality?: string; 
+  public get locality() {
+    return this.getStringAttribute('locality');
+  }
+  public set locality(value: string) {
+    this._locality = value;
+  }
+  public resetLocality() {
+    this._locality = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityInput() {
+    return this._locality;
+  }
+
+  // organization - computed: false, optional: true, required: false
+  private _organization?: string; 
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+  public set organization(value: string) {
+    this._organization = value;
+  }
+  public resetOrganization() {
+    this._organization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization;
+  }
+
+  // organizational_unit - computed: false, optional: true, required: false
+  private _organizationalUnit?: string; 
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+  public set organizationalUnit(value: string) {
+    this._organizationalUnit = value;
+  }
+  public resetOrganizationalUnit() {
+    this._organizationalUnit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitInput() {
+    return this._organizationalUnit;
+  }
+
+  // pseudonym - computed: false, optional: true, required: false
+  private _pseudonym?: string; 
+  public get pseudonym() {
+    return this.getStringAttribute('pseudonym');
+  }
+  public set pseudonym(value: string) {
+    this._pseudonym = value;
+  }
+  public resetPseudonym() {
+    this._pseudonym = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pseudonymInput() {
+    return this._pseudonym;
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+
+  // surname - computed: false, optional: true, required: false
+  private _surname?: string; 
+  public get surname() {
+    return this.getStringAttribute('surname');
+  }
+  public set surname(value: string) {
+    this._surname = value;
+  }
+  public resetSurname() {
+    this._surname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get surnameInput() {
+    return this._surname;
+  }
+
+  // title - computed: false, optional: true, required: false
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title;
+  }
+}
+export interface CertificateAuthorityConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#key_algorithm AwsAcmpcaCertificateAuthority#key_algorithm}
+  */
+  readonly keyAlgorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#signing_algorithm AwsAcmpcaCertificateAuthority#signing_algorithm}
+  */
+  readonly signingAlgorithm: string;
+  /**
+  * subject block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#subject AwsAcmpcaCertificateAuthority#subject}
+  */
+  readonly subject: SubjectProperty;
+}
+export class CertificateAuthorityConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CertificateAuthorityConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyAlgorithm = this._keyAlgorithm;
+    }
+    if (this._signingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signingAlgorithm = this._signingAlgorithm;
+    }
+    if (this._subject?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subject = this._subject?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateAuthorityConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyAlgorithm = undefined;
+      this._signingAlgorithm = undefined;
+      this._subject.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyAlgorithm = value.keyAlgorithm;
+      this._signingAlgorithm = value.signingAlgorithm;
+      this._subject.internalValue = value.subject;
+    }
+  }
+
+  // key_algorithm - computed: false, optional: false, required: true
+  private _keyAlgorithm?: string; 
+  public get keyAlgorithm() {
+    return this.getStringAttribute('key_algorithm');
+  }
+  public set keyAlgorithm(value: string) {
+    this._keyAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyAlgorithmInput() {
+    return this._keyAlgorithm;
+  }
+
+  // signing_algorithm - computed: false, optional: false, required: true
+  private _signingAlgorithm?: string; 
+  public get signingAlgorithm() {
+    return this.getStringAttribute('signing_algorithm');
+  }
+  public set signingAlgorithm(value: string) {
+    this._signingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signingAlgorithmInput() {
+    return this._signingAlgorithm;
+  }
+
+  // subject - computed: false, optional: false, required: true
+  private _subject = new SubjectPropertyOutputReference(this, "subject");
+  public get subject() {
+    return this._subject;
+  }
+  public putSubject(value: SubjectProperty) {
+    this._subject.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectInput() {
+    return this._subject.internalValue;
+  }
+}
+export interface CrlConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_cname AwsAcmpcaCertificateAuthority#custom_cname}
+  */
+  readonly customCname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#custom_path AwsAcmpcaCertificateAuthority#custom_path}
+  */
+  readonly customPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsAcmpcaCertificateAuthority#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#expiration_in_days AwsAcmpcaCertificateAuthority#expiration_in_days}
+  */
+  readonly expirationInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_bucket_name AwsAcmpcaCertificateAuthority#s3_bucket_name}
+  */
+  readonly s3BucketName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#s3_object_acl AwsAcmpcaCertificateAuthority#s3_object_acl}
+  */
+  readonly s3ObjectAcl?: string;
+}
+export class CrlConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CrlConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customCname !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customCname = this._customCname;
+    }
+    if (this._customPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customPath = this._customPath;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._expirationInDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expirationInDays = this._expirationInDays;
+    }
+    if (this._s3BucketName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3BucketName = this._s3BucketName;
+    }
+    if (this._s3ObjectAcl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3ObjectAcl = this._s3ObjectAcl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CrlConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customCname = undefined;
+      this._customPath = undefined;
+      this._enabled = undefined;
+      this._expirationInDays = undefined;
+      this._s3BucketName = undefined;
+      this._s3ObjectAcl = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customCname = value.customCname;
+      this._customPath = value.customPath;
+      this._enabled = value.enabled;
+      this._expirationInDays = value.expirationInDays;
+      this._s3BucketName = value.s3BucketName;
+      this._s3ObjectAcl = value.s3ObjectAcl;
+    }
+  }
+
+  // custom_cname - computed: false, optional: true, required: false
+  private _customCname?: string; 
+  public get customCname() {
+    return this.getStringAttribute('custom_cname');
+  }
+  public set customCname(value: string) {
+    this._customCname = value;
+  }
+  public resetCustomCname() {
+    this._customCname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customCnameInput() {
+    return this._customCname;
+  }
+
+  // custom_path - computed: false, optional: true, required: false
+  private _customPath?: string; 
+  public get customPath() {
+    return this.getStringAttribute('custom_path');
+  }
+  public set customPath(value: string) {
+    this._customPath = value;
+  }
+  public resetCustomPath() {
+    this._customPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPathInput() {
+    return this._customPath;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // expiration_in_days - computed: false, optional: true, required: false
+  private _expirationInDays?: number; 
+  public get expirationInDays() {
+    return this.getNumberAttribute('expiration_in_days');
+  }
+  public set expirationInDays(value: number) {
+    this._expirationInDays = value;
+  }
+  public resetExpirationInDays() {
+    this._expirationInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationInDaysInput() {
+    return this._expirationInDays;
+  }
+
+  // s3_bucket_name - computed: false, optional: true, required: false
+  private _s3BucketName?: string; 
+  public get s3BucketName() {
+    return this.getStringAttribute('s3_bucket_name');
+  }
+  public set s3BucketName(value: string) {
+    this._s3BucketName = value;
+  }
+  public resetS3BucketName() {
+    this._s3BucketName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3BucketNameInput() {
+    return this._s3BucketName;
+  }
+
+  // s3_object_acl - computed: true, optional: true, required: false
+  private _s3ObjectAcl?: string; 
+  public get s3ObjectAcl() {
+    return this.getStringAttribute('s3_object_acl');
+  }
+  public set s3ObjectAcl(value: string) {
+    this._s3ObjectAcl = value;
+  }
+  public resetS3ObjectAcl() {
+    this._s3ObjectAcl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3ObjectAclInput() {
+    return this._s3ObjectAcl;
+  }
+}
+export interface OcspConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#enabled AwsAcmpcaCertificateAuthority#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_custom_cname AwsAcmpcaCertificateAuthority#ocsp_custom_cname}
+  */
+  readonly ocspCustomCname?: string;
+}
+export class OcspConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OcspConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._ocspCustomCname !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ocspCustomCname = this._ocspCustomCname;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OcspConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._ocspCustomCname = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._ocspCustomCname = value.ocspCustomCname;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // ocsp_custom_cname - computed: false, optional: true, required: false
+  private _ocspCustomCname?: string; 
+  public get ocspCustomCname() {
+    return this.getStringAttribute('ocsp_custom_cname');
+  }
+  public set ocspCustomCname(value: string) {
+    this._ocspCustomCname = value;
+  }
+  public resetOcspCustomCname() {
+    this._ocspCustomCname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ocspCustomCnameInput() {
+    return this._ocspCustomCname;
+  }
+}
+export interface RevocationConfigurationProperty {
+  /**
+  * crl_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#crl_configuration AwsAcmpcaCertificateAuthority#crl_configuration}
+  */
+  readonly crlConfiguration?: CrlConfigurationProperty;
+  /**
+  * ocsp_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#ocsp_configuration AwsAcmpcaCertificateAuthority#ocsp_configuration}
+  */
+  readonly ocspConfiguration?: OcspConfigurationProperty;
+}
+export class RevocationConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RevocationConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._crlConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crlConfiguration = this._crlConfiguration?.internalValue;
+    }
+    if (this._ocspConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ocspConfiguration = this._ocspConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RevocationConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._crlConfiguration.internalValue = undefined;
+      this._ocspConfiguration.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._crlConfiguration.internalValue = value.crlConfiguration;
+      this._ocspConfiguration.internalValue = value.ocspConfiguration;
+    }
+  }
+
+  // crl_configuration - computed: false, optional: true, required: false
+  private _crlConfiguration = new CrlConfigurationPropertyOutputReference(this, "crl_configuration");
+  public get crlConfiguration() {
+    return this._crlConfiguration;
+  }
+  public putCrlConfiguration(value: CrlConfigurationProperty) {
+    this._crlConfiguration.internalValue = value;
+  }
+  public resetCrlConfiguration() {
+    this._crlConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crlConfigurationInput() {
+    return this._crlConfiguration.internalValue;
+  }
+
+  // ocsp_configuration - computed: false, optional: true, required: false
+  private _ocspConfiguration = new OcspConfigurationPropertyOutputReference(this, "ocsp_configuration");
+  public get ocspConfiguration() {
+    return this._ocspConfiguration;
+  }
+  public putOcspConfiguration(value: OcspConfigurationProperty) {
+    this._ocspConfiguration.internalValue = value;
+  }
+  public resetOcspConfiguration() {
+    this._ocspConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ocspConfigurationInput() {
+    return this._ocspConfiguration.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate_authority#create AwsAcmpcaCertificateAuthority#create}
+  */
+  readonly create?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+}
+}

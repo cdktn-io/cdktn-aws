@@ -1,0 +1,1740 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsComprehendEntityRecognizerConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_access_role_arn AwsComprehendEntityRecognizer#data_access_role_arn}
+  */
+  readonly dataAccessRoleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#id AwsComprehendEntityRecognizer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#language_code AwsComprehendEntityRecognizer#language_code}
+  */
+  readonly languageCode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#model_kms_key_id AwsComprehendEntityRecognizer#model_kms_key_id}
+  */
+  readonly modelKmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#name AwsComprehendEntityRecognizer#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#region AwsComprehendEntityRecognizer#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags AwsComprehendEntityRecognizer#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#tags_all AwsComprehendEntityRecognizer#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name AwsComprehendEntityRecognizer#version_name}
+  */
+  readonly versionName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#version_name_prefix AwsComprehendEntityRecognizer#version_name_prefix}
+  */
+  readonly versionNamePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#volume_kms_key_id AwsComprehendEntityRecognizer#volume_kms_key_id}
+  */
+  readonly volumeKmsKeyId?: string;
+  /**
+  * input_data_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_data_config AwsComprehendEntityRecognizer#input_data_config}
+  */
+  readonly inputDataConfig: AwsComprehendEntityRecognizer.InputDataConfigProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#timeouts AwsComprehendEntityRecognizer#timeouts}
+  */
+  readonly timeouts?: AwsComprehendEntityRecognizer.TimeoutsProperty;
+  /**
+  * vpc_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#vpc_config AwsComprehendEntityRecognizer#vpc_config}
+  */
+  readonly vpcConfig?: AwsComprehendEntityRecognizer.VpcConfigProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer aws_comprehend_entity_recognizer}
+*/
+export class AwsComprehendEntityRecognizer extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_comprehend_entity_recognizer";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsComprehendEntityRecognizer resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsComprehendEntityRecognizer to import
+  * @param importFromId The id of the existing AwsComprehendEntityRecognizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsComprehendEntityRecognizer to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_comprehend_entity_recognizer", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer aws_comprehend_entity_recognizer} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsComprehendEntityRecognizerConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsComprehendEntityRecognizerConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_comprehend_entity_recognizer',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._dataAccessRoleArn = config.dataAccessRoleArn;
+    this._id = config.id;
+    this._languageCode = config.languageCode;
+    this._modelKmsKeyId = config.modelKmsKeyId;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._versionName = config.versionName;
+    this._versionNamePrefix = config.versionNamePrefix;
+    this._volumeKmsKeyId = config.volumeKmsKeyId;
+    this._inputDataConfig.internalValue = config.inputDataConfig;
+    this._timeouts.internalValue = config.timeouts;
+    this._vpcConfig.internalValue = config.vpcConfig;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // data_access_role_arn - computed: false, optional: false, required: true
+  private _dataAccessRoleArn?: string; 
+  public get dataAccessRoleArn() {
+    return this.getStringAttribute('data_access_role_arn');
+  }
+  public set dataAccessRoleArn(value: string) {
+    this._dataAccessRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataAccessRoleArnInput() {
+    return this._dataAccessRoleArn;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // language_code - computed: false, optional: false, required: true
+  private _languageCode?: string; 
+  public get languageCode() {
+    return this.getStringAttribute('language_code');
+  }
+  public set languageCode(value: string) {
+    this._languageCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get languageCodeInput() {
+    return this._languageCode;
+  }
+
+  // model_kms_key_id - computed: false, optional: true, required: false
+  private _modelKmsKeyId?: string; 
+  public get modelKmsKeyId() {
+    return this.getStringAttribute('model_kms_key_id');
+  }
+  public set modelKmsKeyId(value: string) {
+    this._modelKmsKeyId = value;
+  }
+  public resetModelKmsKeyId() {
+    this._modelKmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelKmsKeyIdInput() {
+    return this._modelKmsKeyId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // version_name - computed: true, optional: true, required: false
+  private _versionName?: string; 
+  public get versionName() {
+    return this.getStringAttribute('version_name');
+  }
+  public set versionName(value: string) {
+    this._versionName = value;
+  }
+  public resetVersionName() {
+    this._versionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionNameInput() {
+    return this._versionName;
+  }
+
+  // version_name_prefix - computed: true, optional: true, required: false
+  private _versionNamePrefix?: string; 
+  public get versionNamePrefix() {
+    return this.getStringAttribute('version_name_prefix');
+  }
+  public set versionNamePrefix(value: string) {
+    this._versionNamePrefix = value;
+  }
+  public resetVersionNamePrefix() {
+    this._versionNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionNamePrefixInput() {
+    return this._versionNamePrefix;
+  }
+
+  // volume_kms_key_id - computed: false, optional: true, required: false
+  private _volumeKmsKeyId?: string; 
+  public get volumeKmsKeyId() {
+    return this.getStringAttribute('volume_kms_key_id');
+  }
+  public set volumeKmsKeyId(value: string) {
+    this._volumeKmsKeyId = value;
+  }
+  public resetVolumeKmsKeyId() {
+    this._volumeKmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeKmsKeyIdInput() {
+    return this._volumeKmsKeyId;
+  }
+
+  // input_data_config - computed: false, optional: false, required: true
+  private _inputDataConfig = new AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference(this, "input_data_config");
+  public get inputDataConfig() {
+    return this._inputDataConfig;
+  }
+  public putInputDataConfig(value: AwsComprehendEntityRecognizer.InputDataConfigProperty) {
+    this._inputDataConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputDataConfigInput() {
+    return this._inputDataConfig.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsComprehendEntityRecognizer.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsComprehendEntityRecognizer.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // vpc_config - computed: false, optional: true, required: false
+  private _vpcConfig = new AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference(this, "vpc_config");
+  public get vpcConfig() {
+    return this._vpcConfig;
+  }
+  public putVpcConfig(value: AwsComprehendEntityRecognizer.VpcConfigProperty) {
+    this._vpcConfig.internalValue = value;
+  }
+  public resetVpcConfig() {
+    this._vpcConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcConfigInput() {
+    return this._vpcConfig.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      data_access_role_arn: cdktn.stringToTerraform(this._dataAccessRoleArn),
+      id: cdktn.stringToTerraform(this._id),
+      language_code: cdktn.stringToTerraform(this._languageCode),
+      model_kms_key_id: cdktn.stringToTerraform(this._modelKmsKeyId),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      version_name: cdktn.stringToTerraform(this._versionName),
+      version_name_prefix: cdktn.stringToTerraform(this._versionNamePrefix),
+      volume_kms_key_id: cdktn.stringToTerraform(this._volumeKmsKeyId),
+      input_data_config: awsComprehendEntityRecognizerInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
+      timeouts: awsComprehendEntityRecognizerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: awsComprehendEntityRecognizerVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      data_access_role_arn: {
+        value: cdktn.stringToHclTerraform(this._dataAccessRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      language_code: {
+        value: cdktn.stringToHclTerraform(this._languageCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      model_kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._modelKmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version_name: {
+        value: cdktn.stringToHclTerraform(this._versionName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_name_prefix: {
+        value: cdktn.stringToHclTerraform(this._versionNamePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      volume_kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._volumeKmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input_data_config: {
+        value: awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsComprehendEntityRecognizer.InputDataConfigPropertyList",
+      },
+      timeouts: {
+        value: awsComprehendEntityRecognizerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsComprehendEntityRecognizer.TimeoutsProperty",
+      },
+      vpc_config: {
+        value: awsComprehendEntityRecognizerVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsComprehendEntityRecognizer.VpcConfigPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsComprehendEntityRecognizerAnnotationsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.AnnotationsPropertyOutputReference | AwsComprehendEntityRecognizer.AnnotationsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+    test_s3_uri: cdktn.stringToTerraform(struct!.testS3Uri),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerAnnotationsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.AnnotationsPropertyOutputReference | AwsComprehendEntityRecognizer.AnnotationsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    test_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.testS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    annotation_data_s3_uri: cdktn.stringToTerraform(struct!.annotationDataS3Uri),
+    attribute_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.attributeNames),
+    document_type: cdktn.stringToTerraform(struct!.documentType),
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+    source_documents_s3_uri: cdktn.stringToTerraform(struct!.sourceDocumentsS3Uri),
+    split: cdktn.stringToTerraform(struct!.split),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerAugmentedManifestsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.AugmentedManifestsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    annotation_data_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.annotationDataS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    attribute_names: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.attributeNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    document_type: {
+      value: cdktn.stringToHclTerraform(struct!.documentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_documents_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.sourceDocumentsS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    split: {
+      value: cdktn.stringToHclTerraform(struct!.split),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerDocumentsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.DocumentsPropertyOutputReference | AwsComprehendEntityRecognizer.DocumentsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    input_format: cdktn.stringToTerraform(struct!.inputFormat),
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+    test_s3_uri: cdktn.stringToTerraform(struct!.testS3Uri),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerDocumentsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.DocumentsPropertyOutputReference | AwsComprehendEntityRecognizer.DocumentsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    input_format: {
+      value: cdktn.stringToHclTerraform(struct!.inputFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    test_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.testS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerEntityListPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.EntityListPropertyOutputReference | AwsComprehendEntityRecognizer.EntityListProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerEntityListPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.EntityListPropertyOutputReference | AwsComprehendEntityRecognizer.EntityListProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerEntityTypesPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerEntityTypesPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.EntityTypesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerInputDataConfigPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference | AwsComprehendEntityRecognizer.InputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    data_format: cdktn.stringToTerraform(struct!.dataFormat),
+    annotations: awsComprehendEntityRecognizerAnnotationsPropertyToTerraform(struct!.annotations),
+    augmented_manifests: cdktn.listMapper(awsComprehendEntityRecognizerAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
+    documents: awsComprehendEntityRecognizerDocumentsPropertyToTerraform(struct!.documents),
+    entity_list: awsComprehendEntityRecognizerEntityListPropertyToTerraform(struct!.entityList),
+    entity_types: cdktn.listMapper(awsComprehendEntityRecognizerEntityTypesPropertyToTerraform, true)(struct!.entityTypes),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerInputDataConfigPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.InputDataConfigPropertyOutputReference | AwsComprehendEntityRecognizer.InputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    data_format: {
+      value: cdktn.stringToHclTerraform(struct!.dataFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    annotations: {
+      value: awsComprehendEntityRecognizerAnnotationsPropertyToHclTerraform(struct!.annotations),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AnnotationsPropertyList",
+    },
+    augmented_manifests: {
+      value: cdktn.listMapperHcl(awsComprehendEntityRecognizerAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
+      isBlock: true,
+      type: "set",
+      storageClassType: "AugmentedManifestsPropertyList",
+    },
+    documents: {
+      value: awsComprehendEntityRecognizerDocumentsPropertyToHclTerraform(struct!.documents),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DocumentsPropertyList",
+    },
+    entity_list: {
+      value: awsComprehendEntityRecognizerEntityListPropertyToHclTerraform(struct!.entityList),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EntityListPropertyList",
+    },
+    entity_types: {
+      value: cdktn.listMapperHcl(awsComprehendEntityRecognizerEntityTypesPropertyToHclTerraform, true)(struct!.entityTypes),
+      isBlock: true,
+      type: "set",
+      storageClassType: "EntityTypesPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerTimeoutsPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerTimeoutsPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendEntityRecognizerVpcConfigPropertyToTerraform(struct?: AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference | AwsComprehendEntityRecognizer.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroupIds),
+    subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnets),
+  }
+}
+
+
+export function awsComprehendEntityRecognizerVpcConfigPropertyToHclTerraform(struct?: AwsComprehendEntityRecognizer.VpcConfigPropertyOutputReference | AwsComprehendEntityRecognizer.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    security_group_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.securityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnets: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnets),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsComprehendEntityRecognizer {
+export interface AnnotationsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  */
+  readonly s3Uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri AwsComprehendEntityRecognizer#test_s3_uri}
+  */
+  readonly testS3Uri?: string;
+}
+export class AnnotationsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AnnotationsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    if (this._testS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.testS3Uri = this._testS3Uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AnnotationsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._s3Uri = undefined;
+      this._testS3Uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._s3Uri = value.s3Uri;
+      this._testS3Uri = value.testS3Uri;
+    }
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+
+  // test_s3_uri - computed: false, optional: true, required: false
+  private _testS3Uri?: string; 
+  public get testS3Uri() {
+    return this.getStringAttribute('test_s3_uri');
+  }
+  public set testS3Uri(value: string) {
+    this._testS3Uri = value;
+  }
+  public resetTestS3Uri() {
+    this._testS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testS3UriInput() {
+    return this._testS3Uri;
+  }
+}
+export interface AugmentedManifestsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotation_data_s3_uri AwsComprehendEntityRecognizer#annotation_data_s3_uri}
+  */
+  readonly annotationDataS3Uri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#attribute_names AwsComprehendEntityRecognizer#attribute_names}
+  */
+  readonly attributeNames: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#document_type AwsComprehendEntityRecognizer#document_type}
+  */
+  readonly documentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  */
+  readonly s3Uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#source_documents_s3_uri AwsComprehendEntityRecognizer#source_documents_s3_uri}
+  */
+  readonly sourceDocumentsS3Uri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#split AwsComprehendEntityRecognizer#split}
+  */
+  readonly split?: string;
+}
+export class AugmentedManifestsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AugmentedManifestsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._annotationDataS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.annotationDataS3Uri = this._annotationDataS3Uri;
+    }
+    if (this._attributeNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.attributeNames = this._attributeNames;
+    }
+    if (this._documentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentType = this._documentType;
+    }
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    if (this._sourceDocumentsS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceDocumentsS3Uri = this._sourceDocumentsS3Uri;
+    }
+    if (this._split !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.split = this._split;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AugmentedManifestsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._annotationDataS3Uri = undefined;
+      this._attributeNames = undefined;
+      this._documentType = undefined;
+      this._s3Uri = undefined;
+      this._sourceDocumentsS3Uri = undefined;
+      this._split = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._annotationDataS3Uri = value.annotationDataS3Uri;
+      this._attributeNames = value.attributeNames;
+      this._documentType = value.documentType;
+      this._s3Uri = value.s3Uri;
+      this._sourceDocumentsS3Uri = value.sourceDocumentsS3Uri;
+      this._split = value.split;
+    }
+  }
+
+  // annotation_data_s3_uri - computed: false, optional: true, required: false
+  private _annotationDataS3Uri?: string; 
+  public get annotationDataS3Uri() {
+    return this.getStringAttribute('annotation_data_s3_uri');
+  }
+  public set annotationDataS3Uri(value: string) {
+    this._annotationDataS3Uri = value;
+  }
+  public resetAnnotationDataS3Uri() {
+    this._annotationDataS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationDataS3UriInput() {
+    return this._annotationDataS3Uri;
+  }
+
+  // attribute_names - computed: false, optional: false, required: true
+  private _attributeNames?: string[]; 
+  public get attributeNames() {
+    return this.getListAttribute('attribute_names');
+  }
+  public set attributeNames(value: string[]) {
+    this._attributeNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributeNamesInput() {
+    return this._attributeNames;
+  }
+
+  // document_type - computed: false, optional: true, required: false
+  private _documentType?: string; 
+  public get documentType() {
+    return this.getStringAttribute('document_type');
+  }
+  public set documentType(value: string) {
+    this._documentType = value;
+  }
+  public resetDocumentType() {
+    this._documentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentTypeInput() {
+    return this._documentType;
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+
+  // source_documents_s3_uri - computed: false, optional: true, required: false
+  private _sourceDocumentsS3Uri?: string; 
+  public get sourceDocumentsS3Uri() {
+    return this.getStringAttribute('source_documents_s3_uri');
+  }
+  public set sourceDocumentsS3Uri(value: string) {
+    this._sourceDocumentsS3Uri = value;
+  }
+  public resetSourceDocumentsS3Uri() {
+    this._sourceDocumentsS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDocumentsS3UriInput() {
+    return this._sourceDocumentsS3Uri;
+  }
+
+  // split - computed: false, optional: true, required: false
+  private _split?: string; 
+  public get split() {
+    return this.getStringAttribute('split');
+  }
+  public set split(value: string) {
+    this._split = value;
+  }
+  public resetSplit() {
+    this._split = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get splitInput() {
+    return this._split;
+  }
+}
+
+export class AugmentedManifestsPropertyList extends cdktn.ComplexList {
+  public internalValue? : AugmentedManifestsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AugmentedManifestsPropertyOutputReference {
+    return new AugmentedManifestsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DocumentsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#input_format AwsComprehendEntityRecognizer#input_format}
+  */
+  readonly inputFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  */
+  readonly s3Uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#test_s3_uri AwsComprehendEntityRecognizer#test_s3_uri}
+  */
+  readonly testS3Uri?: string;
+}
+export class DocumentsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DocumentsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._inputFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inputFormat = this._inputFormat;
+    }
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    if (this._testS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.testS3Uri = this._testS3Uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DocumentsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._inputFormat = undefined;
+      this._s3Uri = undefined;
+      this._testS3Uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._inputFormat = value.inputFormat;
+      this._s3Uri = value.s3Uri;
+      this._testS3Uri = value.testS3Uri;
+    }
+  }
+
+  // input_format - computed: false, optional: true, required: false
+  private _inputFormat?: string; 
+  public get inputFormat() {
+    return this.getStringAttribute('input_format');
+  }
+  public set inputFormat(value: string) {
+    this._inputFormat = value;
+  }
+  public resetInputFormat() {
+    this._inputFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputFormatInput() {
+    return this._inputFormat;
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+
+  // test_s3_uri - computed: false, optional: true, required: false
+  private _testS3Uri?: string; 
+  public get testS3Uri() {
+    return this.getStringAttribute('test_s3_uri');
+  }
+  public set testS3Uri(value: string) {
+    this._testS3Uri = value;
+  }
+  public resetTestS3Uri() {
+    this._testS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testS3UriInput() {
+    return this._testS3Uri;
+  }
+}
+export interface EntityListProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#s3_uri AwsComprehendEntityRecognizer#s3_uri}
+  */
+  readonly s3Uri: string;
+}
+export class EntityListPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EntityListProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EntityListProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._s3Uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._s3Uri = value.s3Uri;
+    }
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+}
+export interface EntityTypesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#type AwsComprehendEntityRecognizer#type}
+  */
+  readonly type: string;
+}
+export class EntityTypesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EntityTypesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EntityTypesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class EntityTypesPropertyList extends cdktn.ComplexList {
+  public internalValue? : EntityTypesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EntityTypesPropertyOutputReference {
+    return new EntityTypesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface InputDataConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#data_format AwsComprehendEntityRecognizer#data_format}
+  */
+  readonly dataFormat?: string;
+  /**
+  * annotations block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#annotations AwsComprehendEntityRecognizer#annotations}
+  */
+  readonly annotations?: AnnotationsProperty;
+  /**
+  * augmented_manifests block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#augmented_manifests AwsComprehendEntityRecognizer#augmented_manifests}
+  */
+  readonly augmentedManifests?: AugmentedManifestsProperty[] | cdktn.IResolvable;
+  /**
+  * documents block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#documents AwsComprehendEntityRecognizer#documents}
+  */
+  readonly documents?: DocumentsProperty;
+  /**
+  * entity_list block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_list AwsComprehendEntityRecognizer#entity_list}
+  */
+  readonly entityList?: EntityListProperty;
+  /**
+  * entity_types block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#entity_types AwsComprehendEntityRecognizer#entity_types}
+  */
+  readonly entityTypes: EntityTypesProperty[] | cdktn.IResolvable;
+}
+export class InputDataConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): InputDataConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataFormat = this._dataFormat;
+    }
+    if (this._annotations?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.annotations = this._annotations?.internalValue;
+    }
+    if (this._augmentedManifests?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.augmentedManifests = this._augmentedManifests?.internalValue;
+    }
+    if (this._documents?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documents = this._documents?.internalValue;
+    }
+    if (this._entityList?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityList = this._entityList?.internalValue;
+    }
+    if (this._entityTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityTypes = this._entityTypes?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InputDataConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dataFormat = undefined;
+      this._annotations.internalValue = undefined;
+      this._augmentedManifests.internalValue = undefined;
+      this._documents.internalValue = undefined;
+      this._entityList.internalValue = undefined;
+      this._entityTypes.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dataFormat = value.dataFormat;
+      this._annotations.internalValue = value.annotations;
+      this._augmentedManifests.internalValue = value.augmentedManifests;
+      this._documents.internalValue = value.documents;
+      this._entityList.internalValue = value.entityList;
+      this._entityTypes.internalValue = value.entityTypes;
+    }
+  }
+
+  // data_format - computed: false, optional: true, required: false
+  private _dataFormat?: string; 
+  public get dataFormat() {
+    return this.getStringAttribute('data_format');
+  }
+  public set dataFormat(value: string) {
+    this._dataFormat = value;
+  }
+  public resetDataFormat() {
+    this._dataFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFormatInput() {
+    return this._dataFormat;
+  }
+
+  // annotations - computed: false, optional: true, required: false
+  private _annotations = new AnnotationsPropertyOutputReference(this, "annotations");
+  public get annotations() {
+    return this._annotations;
+  }
+  public putAnnotations(value: AnnotationsProperty) {
+    this._annotations.internalValue = value;
+  }
+  public resetAnnotations() {
+    this._annotations.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsInput() {
+    return this._annotations.internalValue;
+  }
+
+  // augmented_manifests - computed: false, optional: true, required: false
+  private _augmentedManifests = new AugmentedManifestsPropertyList(this, "augmented_manifests", true);
+  public get augmentedManifests() {
+    return this._augmentedManifests;
+  }
+  public putAugmentedManifests(value: AugmentedManifestsProperty[] | cdktn.IResolvable) {
+    this._augmentedManifests.internalValue = value;
+  }
+  public resetAugmentedManifests() {
+    this._augmentedManifests.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get augmentedManifestsInput() {
+    return this._augmentedManifests.internalValue;
+  }
+
+  // documents - computed: false, optional: true, required: false
+  private _documents = new DocumentsPropertyOutputReference(this, "documents");
+  public get documents() {
+    return this._documents;
+  }
+  public putDocuments(value: DocumentsProperty) {
+    this._documents.internalValue = value;
+  }
+  public resetDocuments() {
+    this._documents.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentsInput() {
+    return this._documents.internalValue;
+  }
+
+  // entity_list - computed: false, optional: true, required: false
+  private _entityList = new EntityListPropertyOutputReference(this, "entity_list");
+  public get entityList() {
+    return this._entityList;
+  }
+  public putEntityList(value: EntityListProperty) {
+    this._entityList.internalValue = value;
+  }
+  public resetEntityList() {
+    this._entityList.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityListInput() {
+    return this._entityList.internalValue;
+  }
+
+  // entity_types - computed: false, optional: false, required: true
+  private _entityTypes = new EntityTypesPropertyList(this, "entity_types", true);
+  public get entityTypes() {
+    return this._entityTypes;
+  }
+  public putEntityTypes(value: EntityTypesProperty[] | cdktn.IResolvable) {
+    this._entityTypes.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityTypesInput() {
+    return this._entityTypes.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#create AwsComprehendEntityRecognizer#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#delete AwsComprehendEntityRecognizer#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#update AwsComprehendEntityRecognizer#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+export interface VpcConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#security_group_ids AwsComprehendEntityRecognizer#security_group_ids}
+  */
+  readonly securityGroupIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_entity_recognizer#subnets AwsComprehendEntityRecognizer#subnets}
+  */
+  readonly subnets: string[];
+}
+export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._securityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroupIds = this._securityGroupIds;
+    }
+    if (this._subnets !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnets = this._subnets;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._securityGroupIds = undefined;
+      this._subnets = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._securityGroupIds = value.securityGroupIds;
+      this._subnets = value.subnets;
+    }
+  }
+
+  // security_group_ids - computed: false, optional: false, required: true
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // subnets - computed: false, optional: false, required: true
+  private _subnets?: string[]; 
+  public get subnets() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnets'));
+  }
+  public set subnets(value: string[]) {
+    this._subnets = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetsInput() {
+    return this._subnets;
+  }
+}
+}

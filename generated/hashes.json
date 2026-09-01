@@ -1,0 +1,1296 @@
+{
+  "algorithm": "sha256",
+  "pinnedProviderVersion": "6.62.0",
+  "groups": {
+    "account_management": {
+      "hash": "3a9b49e4c3122fb4c69d681b880712556322a06777af773b74c639009d7de07f",
+      "files": 9,
+      "bytes": 63412
+    },
+    "acm": {
+      "hash": "7346f3f6edfca8e01c4be6f35e24269772b055af5bc56507a9c48faf256f89ad",
+      "files": 7,
+      "bytes": 68051
+    },
+    "acm_pca": {
+      "hash": "c0eefa1dba515760123d5027efda06a56a40ac3c3c4a16e0b69cd5c489ac6a00",
+      "files": 11,
+      "bytes": 136493
+    },
+    "amazon_q_business": {
+      "hash": "5eeefd16023df1fed1ee6c1aaa3e3fef83623f07130c11d32afc1145a77acb83",
+      "files": 5,
+      "bytes": 33573
+    },
+    "amp": {
+      "hash": "40827c33bfab7bc11c014edc47b54a0ca7b0d0e91a3a89d071b89088740f134b",
+      "files": 16,
+      "bytes": 278897
+    },
+    "amplify": {
+      "hash": "f85113b2086b791bda4ffafd4def334b057cde98435f01bb443cc6450debbacb",
+      "files": 9,
+      "bytes": 133095
+    },
+    "api_gateway": {
+      "hash": "2d5a061cb1967dfe864975d99bd6d079f9581788144095d5cf640f0c4dcab648",
+      "files": 40,
+      "bytes": 521100
+    },
+    "api_gateway_v2": {
+      "hash": "6e78b28251b3bb65f517863796de326b4a9f32042c18989c509a26b96472a977",
+      "files": 21,
+      "bytes": 339437
+    },
+    "app_mesh": {
+      "hash": "918e033ec3d6990eccd62c82113fe34f62f85be3b800d6400e6bf6701ac90855",
+      "files": 18,
+      "bytes": 1864994
+    },
+    "app_runner": {
+      "hash": "70adb5af2f7170e8624105bb0377c812e2ef758881b63ba12896ec8728c4cb80",
+      "files": 14,
+      "bytes": 210740
+    },
+    "appconfig": {
+      "hash": "92665716677c7fb7f318a65352bc82ff9a1c2cee23c119cfeba63ad0aa2f90a6",
+      "files": 17,
+      "bytes": 177608
+    },
+    "appfabric": {
+      "hash": "bf35594aad00fe33e5519159bbe76f57dcb074d416b70a906eb6b940b33add14",
+      "files": 9,
+      "bytes": 140873
+    },
+    "appflow": {
+      "hash": "1f2996cb5006101836db85265d2476823a2d4075e7e6a16b5930e768cd20c56b",
+      "files": 6,
+      "bytes": 763753
+    },
+    "appintegrations": {
+      "hash": "e5d74f09bf7d670ccf481c96457a6088f212ca640071a3258c4484cbd91237a0",
+      "files": 7,
+      "bytes": 47548
+    },
+    "application_auto_scaling": {
+      "hash": "fd0151e4c7cde3b29f1834edbe7a14b0e5ba97e5353d3c04de728996c86c32e5",
+      "files": 7,
+      "bytes": 287724
+    },
+    "appstream_2_0": {
+      "hash": "b1d50e3efec965596d64009a65c76a493272c68e6b74832c9c1b05baa3617486",
+      "files": 12,
+      "bytes": 202153
+    },
+    "appsync": {
+      "hash": "f03753317bbce67491474829db7631460093a792189ff81daa8785aa730c9502",
+      "files": 16,
+      "bytes": 440911
+    },
+    "arc_region_switch": {
+      "hash": "096b6fa67f9499330bc66f38c61023a7310f5cf419a37be1e7abbfa42da3f51d",
+      "files": 7,
+      "bytes": 764040
+    },
+    "arc_zonal_shift": {
+      "hash": "22c4d8729c9c11f0e490a914a00dfa88bbdef19a653375d75e1a8704449fea01",
+      "files": 6,
+      "bytes": 34516
+    },
+    "athena": {
+      "hash": "c5ae48d368db203903929e103ab277744b3537cf5b41bd6b12e7dedb73fad4b6",
+      "files": 11,
+      "bytes": 194477
+    },
+    "audit_manager": {
+      "hash": "52d9a8ad5d8391f854e73692375e2a55a126d123c9d6c3ec14ec12eb7daaaecf",
+      "files": 14,
+      "bytes": 167191
+    },
+    "auto_scaling": {
+      "hash": "a3ef7dd6d7d817921b792b2af2dee66172a82335be475bf62d7b5dfea896f14e",
+      "files": 16,
+      "bytes": 772620
+    },
+    "auto_scaling_plans": {
+      "hash": "7b9a7d1725f63018024276af9a6dc89594046d7468f24b51169e188c823c84d3",
+      "files": 5,
+      "bytes": 87039
+    },
+    "backup": {
+      "hash": "86823d9cf297cdb9a73345b42ced9019da5897ee152b0c8d4ca6549d42832e0a",
+      "files": 22,
+      "bytes": 385552
+    },
+    "batch": {
+      "hash": "baad0bee0360377a7ae738fb02dd31285cb0c38a86c9a8649983cd2b53b96f35",
+      "files": 12,
+      "bytes": 489505
+    },
+    "bcm_data_exports": {
+      "hash": "d2fa359d6c1cb5d40c69fcbe883220eb65d09a381e3159e93d1c9a989027b519",
+      "files": 5,
+      "bytes": 56883
+    },
+    "bedrock": {
+      "hash": "1bd22328cda9d5a27814d55ed13c35a106d41ae6f4c59441e8c5c26339b399da",
+      "files": 21,
+      "bytes": 684757
+    },
+    "bedrock_agentcore": {
+      "hash": "4f5c117a17b858c3bc49553798f30634caca81f24411c6af8419f3b73f8b9406",
+      "files": 25,
+      "bytes": 2326521
+    },
+    "bedrock_agents": {
+      "hash": "d0a56349eae72efa318d41af82e8d4fba7f3fac5572a4820404fc47940bd3d3b",
+      "files": 14,
+      "bytes": 1568332
+    },
+    "billing": {
+      "hash": "8d702809d17c7ffd6047b794a74a309b5d9ea7f39e195103b64aca30901f1fc9",
+      "files": 7,
+      "bytes": 56411
+    },
+    "ce": {
+      "hash": "fdff87335fcb3da4a4ef2f49d82200e06ce69e1f97ed87d26ec7341536268894",
+      "files": 10,
+      "bytes": 801510
+    },
+    "chatbot": {
+      "hash": "b420bce0b88b5f88d5efec0103c9cb4efda15fcc2cbd08284b919e25e52fe9e8",
+      "files": 7,
+      "bytes": 55552
+    },
+    "chime": {
+      "hash": "820d6bf6e153f0c31d50d33aee8e0400e0b5d9f692e51e94e6e1c64307d69099",
+      "files": 11,
+      "bytes": 96084
+    },
+    "chime_sdk_media_pipelines": {
+      "hash": "5c5229dbfd4a5fc837eaea46fed287e4c36ce8dddb113a8188ed18fc29812973",
+      "files": 5,
+      "bytes": 149323
+    },
+    "chime_sdk_voice": {
+      "hash": "c26731207de8873aba66597b86f11a31bae8453d02933357e4778694e6f97cf9",
+      "files": 8,
+      "bytes": 64258
+    },
+    "clean_rooms": {
+      "hash": "80f5475c9923036cf295e6471abb36708e1f2c0fc1bbfc6ab8921e0f834a4f07",
+      "files": 7,
+      "bytes": 103697
+    },
+    "cloud9": {
+      "hash": "0839a7538149579cdb9deb00eff137edd25e8eb5e0e96b034d5ba9bd5f949409",
+      "files": 6,
+      "bytes": 26338
+    },
+    "cloud_control_api": {
+      "hash": "9f80e5f9cc9e2bd9c8e38ef4d7ea1f34af4e3b5626eb37a1807b68443cb3bc18",
+      "files": 6,
+      "bytes": 29051
+    },
+    "cloud_map": {
+      "hash": "7f2de34131d7a46b0c57e88a33173d52302c15de79f7c3c2619f8e3cdabf9ded",
+      "files": 12,
+      "bytes": 117943
+    },
+    "cloudformation": {
+      "hash": "f9628b921eb4c9cb53e5a6f67aa1e1cee5f25c12dfc90079e5f9255fa7ad5374",
+      "files": 12,
+      "bytes": 212953
+    },
+    "cloudfront": {
+      "hash": "0ebd067c071b922900625fea5e453d266288bda35104bc19c59b804e02651790",
+      "files": 38,
+      "bytes": 1320474
+    },
+    "cloudfront_keyvaluestore": {
+      "hash": "6d618c463f81515f154c890951352196fcac865a4ddb99d166fd75662deebbfe",
+      "files": 6,
+      "bytes": 22394
+    },
+    "cloudhsm": {
+      "hash": "259f73cf1223021e4ec4b678c81048af460312c8aec104e660a4cf42aa7c23de",
+      "files": 7,
+      "bytes": 52118
+    },
+    "cloudsearch": {
+      "hash": "c389b44dd2b2f1208a87158e8bda37fa0318ae9bbc945aecbb5630eb428e99ce",
+      "files": 6,
+      "bytes": 59753
+    },
+    "cloudtrail": {
+      "hash": "eef46c5049207cd6a7e9535884c9f817479da42831a144aca51502ada1f99c8e",
+      "files": 8,
+      "bytes": 117143
+    },
+    "cloudwatch": {
+      "hash": "6f2374c35b9f0e96c35f33a21a026a6e341c0a96902796385a5cbb518c593274",
+      "files": 13,
+      "bytes": 212528
+    },
+    "cloudwatch_application_insights": {
+      "hash": "48ae189fe6ff49b562dcf5330c06e7dd099ca989cb9ed5c82ef97fb30387833c",
+      "files": 5,
+      "bytes": 18144
+    },
+    "cloudwatch_evidently": {
+      "hash": "90bc1648b96bcda18719506755451e8b5df9b03db842ff9c359e161d027102c5",
+      "files": 8,
+      "bytes": 143605
+    },
+    "cloudwatch_internet_monitor": {
+      "hash": "ffd073ffe139cab8e9242aab9833a89f0b0642610b8f25a41f70873a4d8a8587",
+      "files": 5,
+      "bytes": 33157
+    },
+    "cloudwatch_logs": {
+      "hash": "09759236286e2bdcf815b38e2ad37f317a3c64dc6b27eac7d1695b5344f9faf8",
+      "files": 26,
+      "bytes": 506317
+    },
+    "cloudwatch_network_monitor": {
+      "hash": "591ba988fff5248d126deae172d3ea4be744d4f2fcab445d93f25b8fae4e2788",
+      "files": 6,
+      "bytes": 22085
+    },
+    "cloudwatch_networkflow_monitor": {
+      "hash": "6fcced98e03434d1d8fad83ca808841081d249160a400f7e5af95258c0f8709f",
+      "files": 6,
+      "bytes": 62916
+    },
+    "cloudwatch_observability_admin": {
+      "hash": "b4aff71abe072a33be120483a40d6ba769bf8b47656d99d26f7ba3a1161353f5",
+      "files": 12,
+      "bytes": 486624
+    },
+    "cloudwatch_rum": {
+      "hash": "aa4e275825ad07a91e4aead38b93ac4234dcfe54f223b12b16ccfe855462ca6f",
+      "files": 6,
+      "bytes": 42350
+    },
+    "cloudwatch_synthetics": {
+      "hash": "b58359cba9eaf7711669bac53b0f89f6238fefc971e691855704150712369b32",
+      "files": 9,
+      "bytes": 95553
+    },
+    "codeartifact": {
+      "hash": "1b17e52af1258b55126775521a8fb3e0ef75bb7f4684db88f72693f98045ec06",
+      "files": 10,
+      "bytes": 75203
+    },
+    "codebuild": {
+      "hash": "1589e6c075e0edee3837a64c76a885a133e9f8cd51134e1c07a0f5ed1e3c3432",
+      "files": 11,
+      "bytes": 356387
+    },
+    "codecatalyst": {
+      "hash": "3e881aeabdb77ccd93262a525297babbd0a4a3c63bf6ea9a0c8bd7069d2acb0a",
+      "files": 8,
+      "bytes": 91792
+    },
+    "codecommit": {
+      "hash": "eb00bf0e77fd976e28482c3e12b9646842e45228552e9dfb0c32519dc0b356d8",
+      "files": 10,
+      "bytes": 63674
+    },
+    "codeconnections": {
+      "hash": "a08747bbfb8f570c218fa2fcdbfd555988368c44ce73918fbd7bf418b171b8bc",
+      "files": 6,
+      "bytes": 44390
+    },
+    "codedeploy": {
+      "hash": "63e222578e0853e6b59b7e553384fa0fd132078bfa3709c357ebc340c6029c31",
+      "files": 7,
+      "bytes": 192837
+    },
+    "codeguru_profiler": {
+      "hash": "38a94ae56464feeda76170779c547cee836a245073a7217f17a41fac7c663d01",
+      "files": 6,
+      "bytes": 34472
+    },
+    "codeguru_reviewer": {
+      "hash": "d14a24e7ef7495944b296d1e211db4d23f1ff2d6b6987c9c36aba4917a279690",
+      "files": 5,
+      "bytes": 58953
+    },
+    "codepipeline": {
+      "hash": "a83917481fac29ac163ec78a76aa2387bc3fcab6f8fe95f8731407c77336d5fb",
+      "files": 7,
+      "bytes": 310243
+    },
+    "codestar_connections": {
+      "hash": "e0b56b00221a66a02301d8a88a8bc7b5446d4f74432f0b7084b06f9280ef0195",
+      "files": 7,
+      "bytes": 45612
+    },
+    "codestar_notifications": {
+      "hash": "13a284144897e3da836c11e80f13a4b9793a28ef0b64cacd9aac7077c7ebcfd8",
+      "files": 5,
+      "bytes": 22193
+    },
+    "cognito_identity": {
+      "hash": "ce6876676706e7d9a8c1509591e3c9d49c17748d3e1c6c70946e81f8b5d210c2",
+      "files": 9,
+      "bytes": 85747
+    },
+    "cognito_idp": {
+      "hash": "43b26f5e0e73f82db14d93cc8e37bab88e7fbcd7189e417d0b688b660cf7ad54",
+      "files": 24,
+      "bytes": 639252
+    },
+    "comprehend": {
+      "hash": "708c90e95f445ca972cada60eb536122b072c56cffff90b4e904d492c037c25d",
+      "files": 6,
+      "bytes": 123691
+    },
+    "compute_optimizer": {
+      "hash": "78ab59856f4f96edd7aab4def9ea5a9085999dcbe96b69052fc05ef45c61358f",
+      "files": 6,
+      "bytes": 63249
+    },
+    "config": {
+      "hash": "be775a0efb08c4d36fe974315779ae6ec3d75bfee760b975ad95db5012606fe5",
+      "files": 17,
+      "bytes": 305857
+    },
+    "connect": {
+      "hash": "765279858e86022916165a85382731cefeeb001b5379d83f0e98f56aba9ea722",
+      "files": 37,
+      "bytes": 656593
+    },
+    "connect_customer_profiles": {
+      "hash": "83a074587c17465095185f614f939df3552400b324999d9bb6db4bc3924a2bf1",
+      "files": 6,
+      "bytes": 172431
+    },
+    "control_tower": {
+      "hash": "8518fb915bf7fe324905e8d78cc90463aac95eb8e7efb3df874e3b902daf6f63",
+      "files": 8,
+      "bytes": 73889
+    },
+    "cost_and_usage_report": {
+      "hash": "c2c2fcef5184daaafb2fc4c1eeba7688047f1b8fc93bafdbc85490b994819d2d",
+      "files": 6,
+      "bytes": 27527
+    },
+    "cost_optimization_hub": {
+      "hash": "bab83e72c9912ea2ed9f615646133984d5b826e95638b28b1514c82bf7e97b12",
+      "files": 6,
+      "bytes": 13754
+    },
+    "data_exchange": {
+      "hash": "a370c637bbfb9c02322994782a777e73312b149e385d059b6b5898202bec864f",
+      "files": 8,
+      "bytes": 123711
+    },
+    "data_pipeline": {
+      "hash": "481c7133ca67018955fe271b454a9c04b1f12805f098ede407312a8ce73815f0",
+      "files": 8,
+      "bytes": 87796
+    },
+    "datasync": {
+      "hash": "ca8f212de7145d75842c8568670a1a550872a63ab439250c0f1226c6732ca64a",
+      "files": 17,
+      "bytes": 318878
+    },
+    "datazone": {
+      "hash": "d56f127371e35d363c183ebc5ef6baab897384f950b86e8119421ed293e1db02",
+      "files": 16,
+      "bytes": 237446
+    },
+    "dax": {
+      "hash": "02085d1a59b859d91f902c294f91daf6d9a35106d46e052ac2bc264110d307b7",
+      "files": 7,
+      "bytes": 59479
+    },
+    "detective": {
+      "hash": "ac48db3a2fd669e740e9e42b07ac30dd1a92a2d0e9760cdc3caac6e46fcd4aed",
+      "files": 9,
+      "bytes": 42377
+    },
+    "device_farm": {
+      "hash": "237b2f4f68ceeab70cad895e37c7627b8fdb18ccf12a33e04ac07a80900640a8",
+      "files": 10,
+      "bytes": 90019
+    },
+    "devops_guru": {
+      "hash": "085be43ba8dff118fb94abf5f11a1809d19bc7b44d95d403fbed25cc544c1975",
+      "files": 10,
+      "bytes": 109379
+    },
+    "direct_connect": {
+      "hash": "c84bc97a54d78e3743684cc3246cd6a7dba64d79fa7cf8928378cfff8d43feef",
+      "files": 28,
+      "bytes": 353492
+    },
+    "directory_service": {
+      "hash": "56aefa1786c7a9b1282a06306087ff23e7f961a5666a88ba5c53584016c3ae3f",
+      "files": 13,
+      "bytes": 170428
+    },
+    "dlm": {
+      "hash": "e3b9dd37d8670f44109a5a376293ad896f8a7b923c4560dd34a22feca03e113a",
+      "files": 5,
+      "bytes": 173055
+    },
+    "dms": {
+      "hash": "d9bf093c74abd843d93aaa97419912eee3b53497d34da264203610df749a9381",
+      "files": 17,
+      "bytes": 516026
+    },
+    "documentdb": {
+      "hash": "6f7ba610d350401e7b4af704703186958a06eb20642e8a6765e019b24a12280c",
+      "files": 13,
+      "bytes": 214462
+    },
+    "documentdb_elastic": {
+      "hash": "bfa40de54be33ed8f01a9ae84a8bd031b382a05bb5733f339481884f493391a2",
+      "files": 5,
+      "bytes": 29046
+    },
+    "drs": {
+      "hash": "4dd609590976ba06f34fbf165a162d6420ea7e216e9b21125c420152e9cd22e8",
+      "files": 5,
+      "bytes": 42024
+    },
+    "dsql": {
+      "hash": "06d69f966dc9f8507460f210611916fc67b77485ad1894aa329db33b1ea12b0f",
+      "files": 7,
+      "bytes": 56830
+    },
+    "dynamodb": {
+      "hash": "24a136d924d95bc2a33e896375eb427cada47c5caa1d1eabc17403cb04693296",
+      "files": 18,
+      "bytes": 396208
+    },
+    "ebs": {
+      "hash": "471c41d5443d6963237ce0c673c3764a0fcfb31f134ebc46676a7bf87aed2d72",
+      "files": 21,
+      "bytes": 293023
+    },
+    "ec2": {
+      "hash": "237eb8b100d5670e6021cf79b34ab6789df5c901be2a784a7df899869afb0e26",
+      "files": 56,
+      "bytes": 2109551
+    },
+    "ec2_image_builder": {
+      "hash": "00f6858e1be44cac91532d2fd781db1ebe79702c72c932cd5a84d5fee19fe3b1",
+      "files": 26,
+      "bytes": 774680
+    },
+    "ecr": {
+      "hash": "d97220330f2ba82480437943d5aa3edef7bc7c38eece69880d8e3a903b65ca51",
+      "files": 23,
+      "bytes": 271653
+    },
+    "ecr_public": {
+      "hash": "d8be4dc30f4ebf3c08e93b92dfc98b42bf399b6d6f4e3e0ba4c39687d500c5e1",
+      "files": 9,
+      "bytes": 63482
+    },
+    "ecs": {
+      "hash": "f7c00a7fb226e49e94bcf7729cad13673216cafb8e46d8ae68208a24047563dd",
+      "files": 21,
+      "bytes": 1139907
+    },
+    "efs": {
+      "hash": "6f770a5083efee721da79ccd672cec2c0ed78602d27939bd19376b4e4960d1a9",
+      "files": 14,
+      "bytes": 172522
+    },
+    "eks": {
+      "hash": "dbe50643de4f229d2b0b4995cc5e30aff6e8522361485926c651b197aaa80d05",
+      "files": 24,
+      "bytes": 876521
+    },
+    "elastic_beanstalk": {
+      "hash": "3567c8e213598da4600cce833ee51a638460925fed9cf75a0f5a6a902c628813",
+      "files": 11,
+      "bytes": 112039
+    },
+    "elastic_transcoder": {
+      "hash": "49f491ef4745b594409a6f43d6099d44d4434026f4cc8b1479a3f17dc66b5a49",
+      "files": 6,
+      "bytes": 123616
+    },
+    "elasticache": {
+      "hash": "5e98a39931aabdbc69581bd643481dc655fb3b3539a0b6a29bc7729aaa276f96",
+      "files": 22,
+      "bytes": 442520
+    },
+    "elasticsearch": {
+      "hash": "f7cbc72c9f2d7dc5110164053590e8f68e7b917b265cc2e12fc341bace70851a",
+      "files": 9,
+      "bytes": 256766
+    },
+    "elb": {
+      "hash": "6cc7183ff1d9f8914a843a1196cf76a8b5943e0b3db047576f61af8b5252db34",
+      "files": 28,
+      "bytes": 1369041
+    },
+    "elb_classic": {
+      "hash": "4c0d87061696d1e91ba7bdaad026f79c5ec46e0da663817750e0a1d702843a32",
+      "files": 16,
+      "bytes": 169273
+    },
+    "elemental_mediaconvert": {
+      "hash": "b47593235b02831b3fe856b1890bafee0eee50b264f648a21c009556204858c9",
+      "files": 6,
+      "bytes": 28510
+    },
+    "elemental_medialive": {
+      "hash": "d517259ab764501ecebd453a9ac5ef612a4fe5744075aa230e48ed1ba8ebba8e",
+      "files": 10,
+      "bytes": 1473399
+    },
+    "elemental_mediapackage": {
+      "hash": "df43dba1a59dbb130054ce7c7fcc6ea62f4901c597b119b49814a951ca4f7bdc",
+      "files": 5,
+      "bytes": 18546
+    },
+    "elemental_mediapackage_version_2": {
+      "hash": "6c6b3508747df6c938c46f56f93b73e7bfe68fd852906ae5cceb2dc792163498",
+      "files": 5,
+      "bytes": 10292
+    },
+    "elemental_mediastore": {
+      "hash": "80befba493d6003bb0410f541b4f5fd81654ae7231b7ac034a83df6c3ab0d323",
+      "files": 6,
+      "bytes": 18453
+    },
+    "emr": {
+      "hash": "c7f614aaf6f470c8f1636c92a2a52a5055056b6693d2158c4e4f665071be6a0b",
+      "files": 14,
+      "bytes": 422678
+    },
+    "emr_containers": {
+      "hash": "86e2bf641bcfb9fb97c8caee984609acae30d742aee5d6e8d8840019da9d28ac",
+      "files": 7,
+      "bytes": 121993
+    },
+    "emr_serverless": {
+      "hash": "b5ca7a55c0156b5792156a3a92ab712ce73d757c93617e1b55078b4cbf6c0920",
+      "files": 5,
+      "bytes": 125325
+    },
+    "end_user_messaging": {
+      "hash": "79390ab78a904aca56900950cb9f31a6a62fed1d457555d0ed70a035e76004c3",
+      "files": 16,
+      "bytes": 174194
+    },
+    "end_user_messaging_sms": {
+      "hash": "9779c71ea75164ec09184eeaef93e54ebddb32846df3debed8951fa71be52527",
+      "files": 12,
+      "bytes": 138177
+    },
+    "eventbridge": {
+      "hash": "da9796385a30b8e72cb84469756b98c08e0c01f0c88bf181cf2801b3f410eb7c",
+      "files": 17,
+      "bytes": 407309
+    },
+    "eventbridge_pipes": {
+      "hash": "7d2f6876a29dc14af35c1b33eccd8018510551cfc2b864191739e2a42c5fe22f",
+      "files": 5,
+      "bytes": 405594
+    },
+    "eventbridge_scheduler": {
+      "hash": "dba2a3a7d82724479aa31590abad97296d07f03c3c7097ec25d2ac84784e3db9",
+      "files": 6,
+      "bytes": 129158
+    },
+    "eventbridge_schemas": {
+      "hash": "5481da0a9b259e9ad987a9ade3a69201fa7decf75b857550a8eecb2abcf74f5c",
+      "files": 8,
+      "bytes": 40525
+    },
+    "finspace": {
+      "hash": "b4382cc404a22d39f78cf4b3104d68660ead43c0d6f2e2f2938c0dfaee31cfa0",
+      "files": 11,
+      "bytes": 269874
+    },
+    "fis": {
+      "hash": "931d29a64bb28958d94666ceba68ba5751dd5d96a78f8e947a007e0caa9c9c02",
+      "files": 7,
+      "bytes": 132539
+    },
+    "fms": {
+      "hash": "524195c926daa479ba374e4e51157ba22f9c138f43e7788f45f82d88548c9c9c",
+      "files": 7,
+      "bytes": 150849
+    },
+    "fsx": {
+      "hash": "955a599ea18d35c8969d867865b34ff6b7f5b1d67d9d31f31d7e0ae2ee78fe42",
+      "files": 21,
+      "bytes": 720664
+    },
+    "gamelift": {
+      "hash": "e97d8a4e61958de1ab4626f56bdad276151c12cc5408f7606024f4b4ce7ffac4",
+      "files": 10,
+      "bytes": 177456
+    },
+    "global_accelerator": {
+      "hash": "3e1fb0a5efb17a62cf71a563f1b9e8a6985e00612197697c516fc872f69a06a8",
+      "files": 13,
+      "bytes": 210626
+    },
+    "glue": {
+      "hash": "992b7d2dd08e7f7266687405acf1388e873ba3b8fa1db22f62e375a7f1e679d8",
+      "files": 31,
+      "bytes": 1148458
+    },
+    "guardduty": {
+      "hash": "7fc9a8c7333edfcac192b0fce667e6e8c1b61d33a9343d20ad549461d3784090",
+      "files": 19,
+      "bytes": 276214
+    },
+    "iam": {
+      "hash": "4b931bd26b5cf2baf865bc0b52ebdb4262c912a5f14f6ba96995e40ee1009d5f",
+      "files": 59,
+      "bytes": 490812
+    },
+    "iam_access_analyzer": {
+      "hash": "71e44e2b79a37ef33f76f329b8dc80f90d5f41a4fe24b308360246276ba95a3c",
+      "files": 6,
+      "bytes": 64986
+    },
+    "inspector": {
+      "hash": "2c0556c815c160b1d22b6235d55e62f2aed6510cad15068b6ff1a67ddf8058a5",
+      "files": 9,
+      "bytes": 463492
+    },
+    "inspector_classic": {
+      "hash": "4789ac2b6257564e76d63ad9525378ede4917385515aaab7e279eb39c2805a05",
+      "files": 8,
+      "bytes": 41266
+    },
+    "invoicing": {
+      "hash": "738c12ccad0ed0ff687d7acc72fe9d189dc77c8c438e0520dc753fb6e1fc31d6",
+      "files": 5,
+      "bytes": 25470
+    },
+    "iot_core": {
+      "hash": "f9548021bc60931e7cb019b7f4db8c6498ff55a428c4485ed3b38899b232ad52",
+      "files": 25,
+      "bytes": 692088
+    },
+    "ivs": {
+      "hash": "e7cbc1131be8e22a760e3f3386645745650dcd442b4c6bd502aea0fefbdc8ffa",
+      "files": 8,
+      "bytes": 74155
+    },
+    "ivs_chat": {
+      "hash": "9ac936027a85914f3cc53a65906d08303c29e13e8b658bf31449a63081408e5f",
+      "files": 6,
+      "bytes": 59780
+    },
+    "kendra": {
+      "hash": "a0bea686c80d1d8054693e4dc48463c672cf0f128458115db6dbfe7b0f3c6411",
+      "files": 15,
+      "bytes": 495695
+    },
+    "keyspaces": {
+      "hash": "af0c97bcbcfe67c39c0b8c401d29db759353b16aa886222d5bc0797013aab3d5",
+      "files": 6,
+      "bytes": 98427
+    },
+    "kinesis": {
+      "hash": "007e6469a37b79e40d701c598bfb173dcb53aa440c751ca4cdcfa7989ceda071",
+      "files": 10,
+      "bytes": 83937
+    },
+    "kinesis_analytics": {
+      "hash": "14cbf567502e9d20517efe15b81edf0242044b03527173ac1b9026a7f4fe86f2",
+      "files": 5,
+      "bytes": 163031
+    },
+    "kinesis_analytics_v2": {
+      "hash": "3cba6cf9d18d54dc9143015b9e6a50da34d187dc54af138f9b73425b6ee63fce",
+      "files": 6,
+      "bytes": 298888
+    },
+    "kinesis_firehose": {
+      "hash": "051b1dabf2b1a3c539137832441bcaaeaf0dbdab3da6675174853865b7e87c37",
+      "files": 6,
+      "bytes": 835471
+    },
+    "kinesis_video": {
+      "hash": "1585d8a9aad52f245135a94917e8a22ac499e439a669a2bd24362a928843bf4d",
+      "files": 5,
+      "bytes": 21624
+    },
+    "kms": {
+      "hash": "fb7786a0ff6cbce39a85732eb4f9ebdac454787a671b50cf7161a91f5ac3601d",
+      "files": 21,
+      "bytes": 252471
+    },
+    "lake_formation": {
+      "hash": "236023f7d847b8a7df3935e32f85ef3eaca0f792ffc6a56ef7a51acf829d4d3d",
+      "files": 17,
+      "bytes": 466066
+    },
+    "lambda": {
+      "hash": "cccd094c50b83f43851d3c925a844026f4141c8d2e591555c404c72b25cfec27",
+      "files": 27,
+      "bytes": 644469
+    },
+    "lambda_core": {
+      "hash": "3a8235e9b8a98a9b153a66c8b27420d28e22aa1d7b5bccba335b582d36c16524",
+      "files": 5,
+      "bytes": 32066
+    },
+    "lambda_microvms": {
+      "hash": "7819804dfdf3e2e41c8d0dd8867892e672f5e1fb1d48cc27d7f5ddbdfc3b80af",
+      "files": 5,
+      "bytes": 36891
+    },
+    "lex_model_building": {
+      "hash": "4145e7f65b8ea332eebd4985cc201c85afe66fce2a2bca950b45374d9f2ff45b",
+      "files": 12,
+      "bytes": 277101
+    },
+    "lex_v2_models": {
+      "hash": "4d4094f3a4ac2ded3ffa7aa3b50e984e63351bfd90cc47f21ad9eb71a2812d81",
+      "files": 10,
+      "bytes": 8489042
+    },
+    "license_manager": {
+      "hash": "484846e988fa6bb844aeee815a3d65c7b535c92a7de6f33ca0c1e5c274abdc16",
+      "files": 11,
+      "bytes": 104892
+    },
+    "lightsail": {
+      "hash": "ed074e850f17cfc14f306bbb9fbf123951efaa6f287306f55e006ce40e3b1ebc",
+      "files": 27,
+      "bytes": 376004
+    },
+    "location": {
+      "hash": "952660aadc9b961b967cfb8a83d8bb76790db9c061974e99ebd3b8f50ba102cd",
+      "files": 17,
+      "bytes": 155260
+    },
+    "macie": {
+      "hash": "a29c3582eaebebed35be04ba3ebce9bf9849a7c5475735bb408bd779b31c478d",
+      "files": 13,
+      "bytes": 291737
+    },
+    "mainframe_modernization": {
+      "hash": "324906eb0789ad12b6a59ecb72b2c17565499d18eed60f637e4cfc4f59421aef",
+      "files": 7,
+      "bytes": 94240
+    },
+    "managed_grafana": {
+      "hash": "a66591de4aa8658fd04fb3748beb7929a8d910c5ff612a5f8629b80ddcd58d11",
+      "files": 12,
+      "bytes": 134063
+    },
+    "memorydb": {
+      "hash": "eb4764f1528b7403ce447e30449872cdeefaa1b8133bec67bb6273d4a85814d8",
+      "files": 17,
+      "bytes": 233458
+    },
+    "meta_data_sources": {
+      "hash": "14c5620155877438fe40408ca54031fab17b5044d81d3c34ce4f157b2a8bad2f",
+      "files": 12,
+      "bytes": 58994
+    },
+    "mq": {
+      "hash": "73a709ec414256563c0f89abbfaa1b0458f2f860beca7f9c5754de751dc32f85",
+      "files": 9,
+      "bytes": 172827
+    },
+    "msk": {
+      "hash": "27530b9982d044491d8752f0d4a8b94eba618079c4a6d9c0c1affb778735969e",
+      "files": 20,
+      "bytes": 425367
+    },
+    "mskconnect": {
+      "hash": "61656e2c29b5ec47a0aab0e94bd9d5f6ac7ca8b95d5adadde1b9566e71b1293a",
+      "files": 10,
+      "bytes": 176943
+    },
+    "mwaa": {
+      "hash": "21b62c755a440dde44550223aff3f3f40633ba6ad43a57e8dd256bf1694ed8ca",
+      "files": 5,
+      "bytes": 87125
+    },
+    "neptune": {
+      "hash": "ca6d2ef625e81a69b58a0a53495f4f032797afddde5bbccdf806df4747f96022",
+      "files": 15,
+      "bytes": 245330
+    },
+    "neptune_analytics": {
+      "hash": "ad8fecc04f97fd1d13af9679d87ce41493dd2291dca8aeefd8bea3e09f6c0bca",
+      "files": 6,
+      "bytes": 47003
+    },
+    "network_firewall": {
+      "hash": "24ecd490e308fae8d7232a2f269b955e66e33a0cef806ee28972ee6f97dcabf0",
+      "files": 16,
+      "bytes": 633579
+    },
+    "network_manager": {
+      "hash": "3993e6b2b0e834f9c16bfdb9769e206eba9f5af6362f68f28d754ce3d5e79c16",
+      "files": 37,
+      "bytes": 670918
+    },
+    "oam": {
+      "hash": "78ed7a6cbeb01977384823ecac974bcdde299152093b813677ddb5bad1ff1aff",
+      "files": 11,
+      "bytes": 97163
+    },
+    "opensearch": {
+      "hash": "409b5222b807cef312e85c3ef97bfbe26a95c4772eec34fbb65ed750979702d7",
+      "files": 15,
+      "bytes": 494420
+    },
+    "opensearch_serverless": {
+      "hash": "e3abdd6e61af0cc0d984fed324135a47c5f86ebe8f79d77ad3a3ec17813d0fd8",
+      "files": 19,
+      "bytes": 222531
+    },
+    "oracle_database_aws": {
+      "hash": "d2e5266e9349e3365904d01a97fe9d49169a2bf25b699e4711205f5c23514a90",
+      "files": 27,
+      "bytes": 531041
+    },
+    "organizations": {
+      "hash": "009ff56f56907d4c3b9d2739818956fe84860d7e881db152c56d5107e43c92f5",
+      "files": 27,
+      "bytes": 230825
+    },
+    "osis": {
+      "hash": "f3555de76efa0c62665f767c5f03bd43d20402ad8c0557c2a70ff2116de58b78",
+      "files": 7,
+      "bytes": 79636
+    },
+    "outposts": {
+      "hash": "aba73eda5228d0345db400ae444f850aa77f440b81e6d3faa352a0583c389458",
+      "files": 13,
+      "bytes": 95483
+    },
+    "outposts_ec2": {
+      "hash": "caab21dd05453ce5863f34af591bfd7d42a256c2f761f2571836597016d5f4e7",
+      "files": 19,
+      "bytes": 247894
+    },
+    "payment_cryptography_control_plane": {
+      "hash": "9ecc5dbc4b0bba0f56b03cbc37b4de9e00d468347c5380d7112572238bd6b281",
+      "files": 6,
+      "bytes": 50335
+    },
+    "polly": {
+      "hash": "0069d9300150806c67341d280bba1f5e0cb41cd1ca199b1cf7c31f2b9c1238b0",
+      "files": 5,
+      "bytes": 15652
+    },
+    "pricing_calculator": {
+      "hash": "39ed0a1e1b7f70e007e70ec2b0f532ebae21edf6d427548a5b8d869016fe7435",
+      "files": 5,
+      "bytes": 14325
+    },
+    "provider": {
+      "hash": "c1cbcc5a027dd4232107dbb09c37b17111698904be52aa6048580cff12d0f54d",
+      "files": 6,
+      "bytes": 217819
+    },
+    "qldb": {
+      "hash": "dbabc61385a73b57a2c9b74947eefb50d41d8ecf8a3335d2d131f0b5dbf29667",
+      "files": 7,
+      "bytes": 49981
+    },
+    "quicksight": {
+      "hash": "bb5a0fa1068856c8f5d8c94a38914be80d58582c82c20af32bc8e7e162e5e420",
+      "files": 34,
+      "bytes": 1271972
+    },
+    "ram": {
+      "hash": "f2df53377ed44c3adbc6ec497e5bfaeed02d9a40716210813d2d91f46e392085",
+      "files": 12,
+      "bytes": 96493
+    },
+    "rds": {
+      "hash": "1afcf3a9a0b00c29984d005583b853ad6a3903ba9f556e1c8d703121a9151cac",
+      "files": 50,
+      "bytes": 1030926
+    },
+    "recycle_bin": {
+      "hash": "235429d2700829c486c4a9071bf529d764b6f0278368da7069392ae6705896a9",
+      "files": 5,
+      "bytes": 46657
+    },
+    "redshift": {
+      "hash": "a13a82551f0faadbadfee592547160c6920f7a17dbf99affb4e2e2eaf2e4ef0c",
+      "files": 35,
+      "bytes": 488157
+    },
+    "redshift_data": {
+      "hash": "e0e0d4bab636aaea80dffe32976d058d57a86fd4b0f0c4661dd4c4c5bebc9ca4",
+      "files": 5,
+      "bytes": 26863
+    },
+    "redshift_serverless": {
+      "hash": "f51af16f0062b584de0d27f845adaf7d95d9d94093445c23558ef811826f5212",
+      "files": 14,
+      "bytes": 164032
+    },
+    "rekognition": {
+      "hash": "e9d504df868fa9c92b883b2dd43c69195a9658475833da3921fa99c65f856a24",
+      "files": 7,
+      "bytes": 129081
+    },
+    "resilience_hub": {
+      "hash": "c172e13e59b640b9ac0eb34c65eb004e8b2f1023c87084017b3c1d3f1835f9fa",
+      "files": 5,
+      "bytes": 52177
+    },
+    "resilience_hub_v2": {
+      "hash": "6cfad03637deadbd875bd62c2579d3681b2a6dc5d16fabd269f590013dd2ef28",
+      "files": 14,
+      "bytes": 177641
+    },
+    "resource_explorer": {
+      "hash": "33430bd2deef3f8dc39146173ed4c28e0097088a93464a83583502a6636950c6",
+      "files": 7,
+      "bytes": 54522
+    },
+    "resource_groups": {
+      "hash": "12dc2738d51f8fad79cf9cbc7967ea0a55885ba232435964f66ac3c83e943c33",
+      "files": 6,
+      "bytes": 48573
+    },
+    "resource_groups_tagging": {
+      "hash": "df877c8c1d2626cbf9deb4540d420a3ab00af67703af5c751fc3693e1fad5525",
+      "files": 6,
+      "bytes": 36760
+    },
+    "roles_anywhere": {
+      "hash": "57d59340d40b34ca78e3bf03fd0b4048455a8d6ee9eec1e48a9d46f0dcc18e43",
+      "files": 6,
+      "bytes": 45512
+    },
+    "route_53": {
+      "hash": "fea1fca3af588750a448d41d31c181bbf7de2383f7963b29d6ef97ca9ee4f931",
+      "files": 23,
+      "bytes": 424570
+    },
+    "route_53_domains": {
+      "hash": "633d7871d3326d3c1b0ba866f8ab3ff2f35b88376a8df962fdd051a19657f8b0",
+      "files": 7,
+      "bytes": 260736
+    },
+    "route_53_profiles": {
+      "hash": "4db77e93d69b3132f8e75d3f071415770d6fb6cfcfe56d78449601a201ef1080",
+      "files": 9,
+      "bytes": 66434
+    },
+    "route_53_recovery_control_config": {
+      "hash": "24f1daf2b0f0a42ef72ba17d0a62e6e94689975d6ca70be42b304a49f50a21b4",
+      "files": 8,
+      "bytes": 52050
+    },
+    "route_53_recovery_readiness": {
+      "hash": "13e28f279fd3b1d4a9bd7cac9c875de26c2d22eb575489e396adfd9298e7551d",
+      "files": 8,
+      "bytes": 87461
+    },
+    "route_53_resolver": {
+      "hash": "8b9e51aaf3eca3c9dd44fdc89dede18c34e3726bed73cc833d3a5c181a4a87fd",
+      "files": 25,
+      "bytes": 272735
+    },
+    "s3": {
+      "hash": "6e7bb1f53d04474b7659b64a3201963a2ee4f3f8517d4aa1f643c5a3ee08ecce",
+      "files": 42,
+      "bytes": 1149929
+    },
+    "s3_control": {
+      "hash": "e7ea548ab03ccda8d2cd47e8a385a62a2338ea51f71dc5a1e8b361991ad978dd",
+      "files": 26,
+      "bytes": 561159
+    },
+    "s3_files": {
+      "hash": "4216afa36dcf4d90ffdaa548d71af054ef05ffb08000cd0f34e8fa6dabd16f62",
+      "files": 13,
+      "bytes": 150288
+    },
+    "s3_glacier": {
+      "hash": "5a110a9c1e6f5b14fa0430277e9abbd7327e7de8bf31e771202d4182ac111940",
+      "files": 6,
+      "bytes": 26354
+    },
+    "s3_on_outposts": {
+      "hash": "627096d3b398750b6e58d0b8c60ddf8ee3268743df5d5b73aecc45df5f947242",
+      "files": 5,
+      "bytes": 16574
+    },
+    "s3_tables": {
+      "hash": "b395be835455602243b40fb0901f82a9314adbe8b65164ddf8a3eba457d68bfd",
+      "files": 11,
+      "bytes": 154606
+    },
+    "s3_vectors": {
+      "hash": "afbfd8c8f0035936ed0d31c153e5c0b77c8a7f8e9982d48834873b3ce5e2a0b5",
+      "files": 7,
+      "bytes": 48604
+    },
+    "sagemaker_ai": {
+      "hash": "1baad3baa1f663be5d60712089ba764fa4b63f4027d46b637eeed1fcd63b685b",
+      "files": 43,
+      "bytes": 3688248
+    },
+    "savings_plans": {
+      "hash": "6b10a357fe817f51bcb28285d8eb3d1f6bacd8146e66e92591e07c6059f2dd60",
+      "files": 7,
+      "bytes": 56210
+    },
+    "secrets_manager": {
+      "hash": "ba6578eec984a48b848225b9024a294a399c2650facef0961936ba178417e108",
+      "files": 17,
+      "bytes": 173810
+    },
+    "security_hub": {
+      "hash": "79223a03567878220d825adac9339896a8e7fe16c1846d29e2940c2ca0835b79",
+      "files": 27,
+      "bytes": 1447622
+    },
+    "security_lake": {
+      "hash": "65103a0b4afc817fc2763d4fa140e1abd50cc598b3ce83c7d5945651c91fca86",
+      "files": 9,
+      "bytes": 183839
+    },
+    "serverlessrepo": {
+      "hash": "92a7393bee4a181b0f20e36635181f265229ab318deb005482c0e909f1fd405c",
+      "files": 6,
+      "bytes": 32168
+    },
+    "service_catalog": {
+      "hash": "8b2b9f19c535ccc03364a365b877773118655f6ead1538781396a0554988d97b",
+      "files": 23,
+      "bytes": 384481
+    },
+    "service_catalog_appregistry": {
+      "hash": "f130e3cccdf10713d1b35740eda6f2181d238b89cb56b1a6a91be515ca4c902e",
+      "files": 10,
+      "bytes": 49423
+    },
+    "service_quotas": {
+      "hash": "77cbc7953ac39c45998281f07e7422065e542e6fbb044ff11e6a6e2d670bf6a7",
+      "files": 11,
+      "bytes": 75849
+    },
+    "ses": {
+      "hash": "2f7a6cd42f084ac958d9fe985195a7f2a9ea27d668e2fce75fb5ace5464e73ec",
+      "files": 21,
+      "bytes": 230581
+    },
+    "ses_mail_manager": {
+      "hash": "0ec90d34d49b24c9a74c8418d4894078d6d8a7cda1dc46defc2ee70376ddabf4",
+      "files": 8,
+      "bytes": 537407
+    },
+    "sesv2": {
+      "hash": "3c9c94ba5bf94366fd219ff9e8482d9841a2833d147dd845a17f9606a02f87e7",
+      "files": 22,
+      "bytes": 318956
+    },
+    "sfn": {
+      "hash": "ddfd776f06bb5c7c6f6b2fe1c09c758ebc85ba9e58793097531bf4a0b1cd86df",
+      "files": 11,
+      "bytes": 111838
+    },
+    "shield": {
+      "hash": "ea37ad935d0a1cac407b9db79263d7bf1e7284ccdf852cf986776027e6c7c5bb",
+      "files": 13,
+      "bytes": 90632
+    },
+    "signer": {
+      "hash": "5da943aa171be60e92eb3084c9fae5c789b7c9de5747aa4004db750ab8751106",
+      "files": 9,
+      "bytes": 120931
+    },
+    "sns": {
+      "hash": "4f2f95c9ba1ccf0bd017d3e8beb7bed78aa930d3f23173f9087d31cec82d8e8e",
+      "files": 11,
+      "bytes": 115541
+    },
+    "sqs": {
+      "hash": "f4443f678f623b649355402d1bc835c8eb227e5c552fe88e934f2a27800e1978",
+      "files": 10,
+      "bytes": 70525
+    },
+    "ssm": {
+      "hash": "4814a2f0204585176f641365302435beec5900d3e6415880f62bfb88079fdaa0",
+      "files": 24,
+      "bytes": 408397
+    },
+    "ssm_contacts": {
+      "hash": "45646ced0992f27a530e55505a60bb1326b3fd923346019d50778bf364d6af53",
+      "files": 12,
+      "bytes": 208210
+    },
+    "ssm_incident_manager_incidents": {
+      "hash": "5712f0e64989fa966ff97e09d880bc47ddb174380e273d55ee751550ec6259eb",
+      "files": 8,
+      "bytes": 136313
+    },
+    "ssm_quick_setup": {
+      "hash": "4ed3e13a44e5d94a6ed0e434a057e391870b96d2310cd7a48a9f97ed3dda0885",
+      "files": 5,
+      "bytes": 33918
+    },
+    "sso_admin": {
+      "hash": "407c87b4043c85a6f8e936c9be91af39c1d28bd716c0c1452fb4cbaa28e0d335",
+      "files": 26,
+      "bytes": 323198
+    },
+    "sso_identity_store": {
+      "hash": "7c631fd36a371094f53d957d81f4d7281c3e8311e179bdf16a17e1b6401921c2",
+      "files": 12,
+      "bytes": 198157
+    },
+    "storage_gateway": {
+      "hash": "21b9019c8fdd1d39d71f6933d5dcdb5c777a5d0cb7f1db6a0bfab999024cb1af",
+      "files": 15,
+      "bytes": 246757
+    },
+    "sts": {
+      "hash": "db5556583df861b9d2293ccdcc3977236f7a17b8e27dbd051787e51b74ceb8ef",
+      "files": 6,
+      "bytes": 14168
+    },
+    "swf": {
+      "hash": "40c0d3c269d63837cad86c9622152a3fb7534d1c6b880b6b1a5d001562346fd7",
+      "files": 5,
+      "bytes": 13766
+    },
+    "timestream_for_influxdb": {
+      "hash": "bde3023d9c64ac48e0a374e5d16441efd9707baf803a67d360e0847fa5ee5e39",
+      "files": 6,
+      "bytes": 110656
+    },
+    "timestream_query": {
+      "hash": "0ebbb1acde5d52629437af1dca3443c666346c2b9623838896e1d4692fdb05e5",
+      "files": 5,
+      "bytes": 222575
+    },
+    "timestream_write": {
+      "hash": "e673c970929600f46da57f661749d14b7e8fd16da889732c89823b78271386ca",
+      "files": 8,
+      "bytes": 91243
+    },
+    "transcribe": {
+      "hash": "ff9044a0ea939673aa789c9be658d280c8462800a5989e6585b2962c04c08373",
+      "files": 8,
+      "bytes": 72580
+    },
+    "transfer_family": {
+      "hash": "38e90aa19532482c1d9fdce944a927fb8001ff3a3cda963241e51c0a63234d6d",
+      "files": 19,
+      "bytes": 482529
+    },
+    "transit_gateway": {
+      "hash": "0b381b0a07bf5a4b1a5bd70e0f73bfa2faf14abe4864c665336e64dfc0e4961f",
+      "files": 43,
+      "bytes": 662418
+    },
+    "user_experience_customization": {
+      "hash": "dcccf674f75895d84dade6cf77513aaf863d952d35eea2c7e61f0981f0471e28",
+      "files": 6,
+      "bytes": 12328
+    },
+    "user_notifications": {
+      "hash": "fffa67fd81642262cc16b946a82055dd8d81cc472463d9ed8fe841c9fc992d32",
+      "files": 12,
+      "bytes": 65883
+    },
+    "user_notifications_contacts": {
+      "hash": "80a64a3439151477ffa05dff162fbe29213b2234b948cc6200569ff887418cfb",
+      "files": 5,
+      "bytes": 9041
+    },
+    "verified_access": {
+      "hash": "0978031f809f91f8013eb039e46f351f68d99215db39c90dc10005d606fa5ab0",
+      "files": 10,
+      "bytes": 219819
+    },
+    "verified_permissions": {
+      "hash": "07d54a5e6368861deef49a911fdbb68ed4da0f79635780ab504f576706fd2023",
+      "files": 10,
+      "bytes": 149637
+    },
+    "vpc": {
+      "hash": "d92f07769191e9b6f22513ec8bc8f8b5f333f4ef134c1f5ea23cbbf72011bb24",
+      "files": 100,
+      "bytes": 2734151
+    },
+    "vpc_ipam": {
+      "hash": "25915c348c0bbe9962a19de833ab8f379fb4fe4d6ce25896acad88416bd12fac",
+      "files": 19,
+      "bytes": 286524
+    },
+    "vpc_lattice": {
+      "hash": "a7410c0c3ddb3460ee9bd4b9b9c268e3b24344c46d7b3318d990c39bbdf5baaf",
+      "files": 25,
+      "bytes": 460597
+    },
+    "vpn_client": {
+      "hash": "ba40849afce818a341f644f85b6f3fd772c6cfd5174ffc89d2bef7526fc75a63",
+      "files": 9,
+      "bytes": 161041
+    },
+    "vpn_site_to_site": {
+      "hash": "d2ae1c2d8268c802c709c6a024d585d7bc54fe683539865e55c97bef32ff6fa5",
+      "files": 14,
+      "bytes": 237433
+    },
+    "waf": {
+      "hash": "cd74233e0a9b8a54957398fe4877d70fb707d8f54992af8d9de6dc114bc9e537",
+      "files": 18,
+      "bytes": 5080387
+    },
+    "waf_classic": {
+      "hash": "b416eb4b7566c51e0b833b061a125c4390ee13557121df2eaf6116f928805e4b",
+      "files": 21,
+      "bytes": 244787
+    },
+    "waf_classic_regional": {
+      "hash": "4fdbdc61f8c1d38d4249b9ed0d6900710015601873a84a0ca6d0f052f533928e",
+      "files": 22,
+      "bytes": 282048
+    },
+    "wavelength": {
+      "hash": "7b6c72d7c12597021358e2de1a79a5cb79afbce470526c042ede2786fea7e45e",
+      "files": 5,
+      "bytes": 10876
+    },
+    "web_services_budgets": {
+      "hash": "829381713c392f727b451dc06c0e27fe30430ed095f78640ed5d1c02466b5fe1",
+      "files": 7,
+      "bytes": 491423
+    },
+    "workmail": {
+      "hash": "ab2473a9d2a7567d75be51346e4882a091e593ded4cfd1e47a94821db0d8cc01",
+      "files": 9,
+      "bytes": 72513
+    },
+    "workspaces": {
+      "hash": "caf7fd0673e98b54f5f308630ca38116015077f8c22e6c205327dbd69ee82e0b",
+      "files": 13,
+      "bytes": 266955
+    },
+    "workspaces_web": {
+      "hash": "5b71f152180548e30abf95cf38d6c925863e7142e48865070a2643d621629827",
+      "files": 22,
+      "bytes": 281401
+    },
+    "x_ray": {
+      "hash": "8bcca1adc334f6a1276573a0b9f7b8d9066fefe5ebab7d67647376d0e33fc4b2",
+      "files": 10,
+      "bytes": 80080
+    }
+  }
+}

@@ -1,0 +1,948 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDbOptionGroupConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#engine_name AwsDbOptionGroup#engine_name}
+  */
+  readonly engineName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#id AwsDbOptionGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#major_engine_version AwsDbOptionGroup#major_engine_version}
+  */
+  readonly majorEngineVersion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name AwsDbOptionGroup#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name_prefix AwsDbOptionGroup#name_prefix}
+  */
+  readonly namePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_group_description AwsDbOptionGroup#option_group_description}
+  */
+  readonly optionGroupDescription?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#region AwsDbOptionGroup#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#skip_destroy AwsDbOptionGroup#skip_destroy}
+  */
+  readonly skipDestroy?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags AwsDbOptionGroup#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#tags_all AwsDbOptionGroup#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * option block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option AwsDbOptionGroup#option}
+  */
+  readonly option?: AwsDbOptionGroup.OptionProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#timeouts AwsDbOptionGroup#timeouts}
+  */
+  readonly timeouts?: AwsDbOptionGroup.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group aws_db_option_group}
+*/
+export class AwsDbOptionGroup extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_db_option_group";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDbOptionGroup resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDbOptionGroup to import
+  * @param importFromId The id of the existing AwsDbOptionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbOptionGroup to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_option_group", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group aws_db_option_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDbOptionGroupConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDbOptionGroupConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_db_option_group',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._engineName = config.engineName;
+    this._id = config.id;
+    this._majorEngineVersion = config.majorEngineVersion;
+    this._name = config.name;
+    this._namePrefix = config.namePrefix;
+    this._optionGroupDescription = config.optionGroupDescription;
+    this._region = config.region;
+    this._skipDestroy = config.skipDestroy;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._option.internalValue = config.option;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // engine_name - computed: false, optional: false, required: true
+  private _engineName?: string; 
+  public get engineName() {
+    return this.getStringAttribute('engine_name');
+  }
+  public set engineName(value: string) {
+    this._engineName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineNameInput() {
+    return this._engineName;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // major_engine_version - computed: false, optional: false, required: true
+  private _majorEngineVersion?: string; 
+  public get majorEngineVersion() {
+    return this.getStringAttribute('major_engine_version');
+  }
+  public set majorEngineVersion(value: string) {
+    this._majorEngineVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get majorEngineVersionInput() {
+    return this._majorEngineVersion;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // name_prefix - computed: true, optional: true, required: false
+  private _namePrefix?: string; 
+  public get namePrefix() {
+    return this.getStringAttribute('name_prefix');
+  }
+  public set namePrefix(value: string) {
+    this._namePrefix = value;
+  }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix;
+  }
+
+  // option_group_description - computed: false, optional: true, required: false
+  private _optionGroupDescription?: string; 
+  public get optionGroupDescription() {
+    return this.getStringAttribute('option_group_description');
+  }
+  public set optionGroupDescription(value: string) {
+    this._optionGroupDescription = value;
+  }
+  public resetOptionGroupDescription() {
+    this._optionGroupDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionGroupDescriptionInput() {
+    return this._optionGroupDescription;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // skip_destroy - computed: false, optional: true, required: false
+  private _skipDestroy?: boolean | cdktn.IResolvable; 
+  public get skipDestroy() {
+    return this.getBooleanAttribute('skip_destroy');
+  }
+  public set skipDestroy(value: boolean | cdktn.IResolvable) {
+    this._skipDestroy = value;
+  }
+  public resetSkipDestroy() {
+    this._skipDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipDestroyInput() {
+    return this._skipDestroy;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // option - computed: false, optional: true, required: false
+  private _option = new AwsDbOptionGroup.OptionPropertyList(this, "option", true);
+  public get option() {
+    return this._option;
+  }
+  public putOption(value: AwsDbOptionGroup.OptionProperty[] | cdktn.IResolvable) {
+    this._option.internalValue = value;
+  }
+  public resetOption() {
+    this._option.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionInput() {
+    return this._option.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDbOptionGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDbOptionGroup.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      engine_name: cdktn.stringToTerraform(this._engineName),
+      id: cdktn.stringToTerraform(this._id),
+      major_engine_version: cdktn.stringToTerraform(this._majorEngineVersion),
+      name: cdktn.stringToTerraform(this._name),
+      name_prefix: cdktn.stringToTerraform(this._namePrefix),
+      option_group_description: cdktn.stringToTerraform(this._optionGroupDescription),
+      region: cdktn.stringToTerraform(this._region),
+      skip_destroy: cdktn.booleanToTerraform(this._skipDestroy),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      option: cdktn.listMapper(awsDbOptionGroupOptionPropertyToTerraform, true)(this._option.internalValue),
+      timeouts: awsDbOptionGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      engine_name: {
+        value: cdktn.stringToHclTerraform(this._engineName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      major_engine_version: {
+        value: cdktn.stringToHclTerraform(this._majorEngineVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name_prefix: {
+        value: cdktn.stringToHclTerraform(this._namePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      option_group_description: {
+        value: cdktn.stringToHclTerraform(this._optionGroupDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      skip_destroy: {
+        value: cdktn.booleanToHclTerraform(this._skipDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      option: {
+        value: cdktn.listMapperHcl(awsDbOptionGroupOptionPropertyToHclTerraform, true)(this._option.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDbOptionGroup.OptionPropertyList",
+      },
+      timeouts: {
+        value: awsDbOptionGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDbOptionGroup.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDbOptionGroupOptionSettingsPropertyToTerraform(struct?: AwsDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsDbOptionGroupOptionSettingsPropertyToHclTerraform(struct?: AwsDbOptionGroup.OptionSettingsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDbOptionGroupOptionPropertyToTerraform(struct?: AwsDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    db_security_group_memberships: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dbSecurityGroupMemberships),
+    option_name: cdktn.stringToTerraform(struct!.optionName),
+    port: cdktn.numberToTerraform(struct!.port),
+    version: cdktn.stringToTerraform(struct!.version),
+    vpc_security_group_memberships: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.vpcSecurityGroupMemberships),
+    option_settings: cdktn.listMapper(awsDbOptionGroupOptionSettingsPropertyToTerraform, true)(struct!.optionSettings),
+  }
+}
+
+
+export function awsDbOptionGroupOptionPropertyToHclTerraform(struct?: AwsDbOptionGroup.OptionProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    db_security_group_memberships: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.dbSecurityGroupMemberships),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    option_name: {
+      value: cdktn.stringToHclTerraform(struct!.optionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktn.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    version: {
+      value: cdktn.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vpc_security_group_memberships: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.vpcSecurityGroupMemberships),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    option_settings: {
+      value: cdktn.listMapperHcl(awsDbOptionGroupOptionSettingsPropertyToHclTerraform, true)(struct!.optionSettings),
+      isBlock: true,
+      type: "set",
+      storageClassType: "OptionSettingsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDbOptionGroupTimeoutsPropertyToTerraform(struct?: AwsDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsDbOptionGroupTimeoutsPropertyToHclTerraform(struct?: AwsDbOptionGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDbOptionGroup {
+export interface OptionSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#name AwsDbOptionGroup#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#value AwsDbOptionGroup#value}
+  */
+  readonly value: string;
+}
+export class OptionSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OptionSettingsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OptionSettingsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class OptionSettingsPropertyList extends cdktn.ComplexList {
+  public internalValue? : OptionSettingsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OptionSettingsPropertyOutputReference {
+    return new OptionSettingsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface OptionProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#db_security_group_memberships AwsDbOptionGroup#db_security_group_memberships}
+  */
+  readonly dbSecurityGroupMemberships?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_name AwsDbOptionGroup#option_name}
+  */
+  readonly optionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#port AwsDbOptionGroup#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#version AwsDbOptionGroup#version}
+  */
+  readonly version?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#vpc_security_group_memberships AwsDbOptionGroup#vpc_security_group_memberships}
+  */
+  readonly vpcSecurityGroupMemberships?: string[];
+  /**
+  * option_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#option_settings AwsDbOptionGroup#option_settings}
+  */
+  readonly optionSettings?: OptionSettingsProperty[] | cdktn.IResolvable;
+}
+export class OptionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OptionProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dbSecurityGroupMemberships !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dbSecurityGroupMemberships = this._dbSecurityGroupMemberships;
+    }
+    if (this._optionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.optionName = this._optionName;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._vpcSecurityGroupMemberships !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcSecurityGroupMemberships = this._vpcSecurityGroupMemberships;
+    }
+    if (this._optionSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.optionSettings = this._optionSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OptionProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dbSecurityGroupMemberships = undefined;
+      this._optionName = undefined;
+      this._port = undefined;
+      this._version = undefined;
+      this._vpcSecurityGroupMemberships = undefined;
+      this._optionSettings.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dbSecurityGroupMemberships = value.dbSecurityGroupMemberships;
+      this._optionName = value.optionName;
+      this._port = value.port;
+      this._version = value.version;
+      this._vpcSecurityGroupMemberships = value.vpcSecurityGroupMemberships;
+      this._optionSettings.internalValue = value.optionSettings;
+    }
+  }
+
+  // db_security_group_memberships - computed: false, optional: true, required: false
+  private _dbSecurityGroupMemberships?: string[]; 
+  public get dbSecurityGroupMemberships() {
+    return cdktn.Fn.tolist(this.getListAttribute('db_security_group_memberships'));
+  }
+  public set dbSecurityGroupMemberships(value: string[]) {
+    this._dbSecurityGroupMemberships = value;
+  }
+  public resetDbSecurityGroupMemberships() {
+    this._dbSecurityGroupMemberships = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbSecurityGroupMembershipsInput() {
+    return this._dbSecurityGroupMemberships;
+  }
+
+  // option_name - computed: false, optional: false, required: true
+  private _optionName?: string; 
+  public get optionName() {
+    return this.getStringAttribute('option_name');
+  }
+  public set optionName(value: string) {
+    this._optionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionNameInput() {
+    return this._optionName;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // vpc_security_group_memberships - computed: false, optional: true, required: false
+  private _vpcSecurityGroupMemberships?: string[]; 
+  public get vpcSecurityGroupMemberships() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_memberships'));
+  }
+  public set vpcSecurityGroupMemberships(value: string[]) {
+    this._vpcSecurityGroupMemberships = value;
+  }
+  public resetVpcSecurityGroupMemberships() {
+    this._vpcSecurityGroupMemberships = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupMembershipsInput() {
+    return this._vpcSecurityGroupMemberships;
+  }
+
+  // option_settings - computed: false, optional: true, required: false
+  private _optionSettings = new OptionSettingsPropertyList(this, "option_settings", true);
+  public get optionSettings() {
+    return this._optionSettings;
+  }
+  public putOptionSettings(value: OptionSettingsProperty[] | cdktn.IResolvable) {
+    this._optionSettings.internalValue = value;
+  }
+  public resetOptionSettings() {
+    this._optionSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionSettingsInput() {
+    return this._optionSettings.internalValue;
+  }
+}
+
+export class OptionPropertyList extends cdktn.ComplexList {
+  public internalValue? : OptionProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OptionPropertyOutputReference {
+    return new OptionPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_option_group#delete AwsDbOptionGroup#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._delete = value.delete;
+    }
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

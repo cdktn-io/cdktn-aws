@@ -1,0 +1,857 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsFinspaceKxDataviewConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#auto_update AwsFinspaceKxDataview#auto_update}
+  */
+  readonly autoUpdate: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#availability_zone_id AwsFinspaceKxDataview#availability_zone_id}
+  */
+  readonly availabilityZoneId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#az_mode AwsFinspaceKxDataview#az_mode}
+  */
+  readonly azMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#changeset_id AwsFinspaceKxDataview#changeset_id}
+  */
+  readonly changesetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#database_name AwsFinspaceKxDataview#database_name}
+  */
+  readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#description AwsFinspaceKxDataview#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#environment_id AwsFinspaceKxDataview#environment_id}
+  */
+  readonly environmentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#id AwsFinspaceKxDataview#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#name AwsFinspaceKxDataview#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#read_write AwsFinspaceKxDataview#read_write}
+  */
+  readonly readWrite?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#region AwsFinspaceKxDataview#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags AwsFinspaceKxDataview#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#tags_all AwsFinspaceKxDataview#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * segment_configurations block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#segment_configurations AwsFinspaceKxDataview#segment_configurations}
+  */
+  readonly segmentConfigurations?: AwsFinspaceKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#timeouts AwsFinspaceKxDataview#timeouts}
+  */
+  readonly timeouts?: AwsFinspaceKxDataview.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview aws_finspace_kx_dataview}
+*/
+export class AwsFinspaceKxDataview extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_finspace_kx_dataview";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsFinspaceKxDataview resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsFinspaceKxDataview to import
+  * @param importFromId The id of the existing AwsFinspaceKxDataview that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFinspaceKxDataview to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_dataview", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview aws_finspace_kx_dataview} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsFinspaceKxDataviewConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsFinspaceKxDataviewConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_finspace_kx_dataview',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._autoUpdate = config.autoUpdate;
+    this._availabilityZoneId = config.availabilityZoneId;
+    this._azMode = config.azMode;
+    this._changesetId = config.changesetId;
+    this._databaseName = config.databaseName;
+    this._description = config.description;
+    this._environmentId = config.environmentId;
+    this._id = config.id;
+    this._name = config.name;
+    this._readWrite = config.readWrite;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._segmentConfigurations.internalValue = config.segmentConfigurations;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // auto_update - computed: false, optional: false, required: true
+  private _autoUpdate?: boolean | cdktn.IResolvable; 
+  public get autoUpdate() {
+    return this.getBooleanAttribute('auto_update');
+  }
+  public set autoUpdate(value: boolean | cdktn.IResolvable) {
+    this._autoUpdate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpdateInput() {
+    return this._autoUpdate;
+  }
+
+  // availability_zone_id - computed: false, optional: true, required: false
+  private _availabilityZoneId?: string; 
+  public get availabilityZoneId() {
+    return this.getStringAttribute('availability_zone_id');
+  }
+  public set availabilityZoneId(value: string) {
+    this._availabilityZoneId = value;
+  }
+  public resetAvailabilityZoneId() {
+    this._availabilityZoneId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneIdInput() {
+    return this._availabilityZoneId;
+  }
+
+  // az_mode - computed: false, optional: false, required: true
+  private _azMode?: string; 
+  public get azMode() {
+    return this.getStringAttribute('az_mode');
+  }
+  public set azMode(value: string) {
+    this._azMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azModeInput() {
+    return this._azMode;
+  }
+
+  // changeset_id - computed: false, optional: true, required: false
+  private _changesetId?: string; 
+  public get changesetId() {
+    return this.getStringAttribute('changeset_id');
+  }
+  public set changesetId(value: string) {
+    this._changesetId = value;
+  }
+  public resetChangesetId() {
+    this._changesetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get changesetIdInput() {
+    return this._changesetId;
+  }
+
+  // created_timestamp - computed: true, optional: false, required: false
+  public get createdTimestamp() {
+    return this.getStringAttribute('created_timestamp');
+  }
+
+  // database_name - computed: false, optional: false, required: true
+  private _databaseName?: string; 
+  public get databaseName() {
+    return this.getStringAttribute('database_name');
+  }
+  public set databaseName(value: string) {
+    this._databaseName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // environment_id - computed: false, optional: false, required: true
+  private _environmentId?: string; 
+  public get environmentId() {
+    return this.getStringAttribute('environment_id');
+  }
+  public set environmentId(value: string) {
+    this._environmentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentIdInput() {
+    return this._environmentId;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // last_modified_timestamp - computed: true, optional: false, required: false
+  public get lastModifiedTimestamp() {
+    return this.getStringAttribute('last_modified_timestamp');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // read_write - computed: false, optional: true, required: false
+  private _readWrite?: boolean | cdktn.IResolvable; 
+  public get readWrite() {
+    return this.getBooleanAttribute('read_write');
+  }
+  public set readWrite(value: boolean | cdktn.IResolvable) {
+    this._readWrite = value;
+  }
+  public resetReadWrite() {
+    this._readWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readWriteInput() {
+    return this._readWrite;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // segment_configurations - computed: false, optional: true, required: false
+  private _segmentConfigurations = new AwsFinspaceKxDataview.SegmentConfigurationsPropertyList(this, "segment_configurations", false);
+  public get segmentConfigurations() {
+    return this._segmentConfigurations;
+  }
+  public putSegmentConfigurations(value: AwsFinspaceKxDataview.SegmentConfigurationsProperty[] | cdktn.IResolvable) {
+    this._segmentConfigurations.internalValue = value;
+  }
+  public resetSegmentConfigurations() {
+    this._segmentConfigurations.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get segmentConfigurationsInput() {
+    return this._segmentConfigurations.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsFinspaceKxDataview.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsFinspaceKxDataview.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      auto_update: cdktn.booleanToTerraform(this._autoUpdate),
+      availability_zone_id: cdktn.stringToTerraform(this._availabilityZoneId),
+      az_mode: cdktn.stringToTerraform(this._azMode),
+      changeset_id: cdktn.stringToTerraform(this._changesetId),
+      database_name: cdktn.stringToTerraform(this._databaseName),
+      description: cdktn.stringToTerraform(this._description),
+      environment_id: cdktn.stringToTerraform(this._environmentId),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      read_write: cdktn.booleanToTerraform(this._readWrite),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      segment_configurations: cdktn.listMapper(awsFinspaceKxDataviewSegmentConfigurationsPropertyToTerraform, true)(this._segmentConfigurations.internalValue),
+      timeouts: awsFinspaceKxDataviewTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_update: {
+        value: cdktn.booleanToHclTerraform(this._autoUpdate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      availability_zone_id: {
+        value: cdktn.stringToHclTerraform(this._availabilityZoneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      az_mode: {
+        value: cdktn.stringToHclTerraform(this._azMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      changeset_id: {
+        value: cdktn.stringToHclTerraform(this._changesetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_name: {
+        value: cdktn.stringToHclTerraform(this._databaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      environment_id: {
+        value: cdktn.stringToHclTerraform(this._environmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      read_write: {
+        value: cdktn.booleanToHclTerraform(this._readWrite),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      segment_configurations: {
+        value: cdktn.listMapperHcl(awsFinspaceKxDataviewSegmentConfigurationsPropertyToHclTerraform, true)(this._segmentConfigurations.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsFinspaceKxDataview.SegmentConfigurationsPropertyList",
+      },
+      timeouts: {
+        value: awsFinspaceKxDataviewTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsFinspaceKxDataview.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsFinspaceKxDataviewSegmentConfigurationsPropertyToTerraform(struct?: AwsFinspaceKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    db_paths: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dbPaths),
+    on_demand: cdktn.booleanToTerraform(struct!.onDemand),
+    volume_name: cdktn.stringToTerraform(struct!.volumeName),
+  }
+}
+
+
+export function awsFinspaceKxDataviewSegmentConfigurationsPropertyToHclTerraform(struct?: AwsFinspaceKxDataview.SegmentConfigurationsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    db_paths: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.dbPaths),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    on_demand: {
+      value: cdktn.booleanToHclTerraform(struct!.onDemand),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    volume_name: {
+      value: cdktn.stringToHclTerraform(struct!.volumeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsFinspaceKxDataviewTimeoutsPropertyToTerraform(struct?: AwsFinspaceKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsFinspaceKxDataviewTimeoutsPropertyToHclTerraform(struct?: AwsFinspaceKxDataview.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsFinspaceKxDataview {
+export interface SegmentConfigurationsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#db_paths AwsFinspaceKxDataview#db_paths}
+  */
+  readonly dbPaths: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#on_demand AwsFinspaceKxDataview#on_demand}
+  */
+  readonly onDemand?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#volume_name AwsFinspaceKxDataview#volume_name}
+  */
+  readonly volumeName: string;
+}
+export class SegmentConfigurationsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SegmentConfigurationsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dbPaths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dbPaths = this._dbPaths;
+    }
+    if (this._onDemand !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.onDemand = this._onDemand;
+    }
+    if (this._volumeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeName = this._volumeName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SegmentConfigurationsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dbPaths = undefined;
+      this._onDemand = undefined;
+      this._volumeName = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dbPaths = value.dbPaths;
+      this._onDemand = value.onDemand;
+      this._volumeName = value.volumeName;
+    }
+  }
+
+  // db_paths - computed: false, optional: false, required: true
+  private _dbPaths?: string[]; 
+  public get dbPaths() {
+    return this.getListAttribute('db_paths');
+  }
+  public set dbPaths(value: string[]) {
+    this._dbPaths = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbPathsInput() {
+    return this._dbPaths;
+  }
+
+  // on_demand - computed: false, optional: true, required: false
+  private _onDemand?: boolean | cdktn.IResolvable; 
+  public get onDemand() {
+    return this.getBooleanAttribute('on_demand');
+  }
+  public set onDemand(value: boolean | cdktn.IResolvable) {
+    this._onDemand = value;
+  }
+  public resetOnDemand() {
+    this._onDemand = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDemandInput() {
+    return this._onDemand;
+  }
+
+  // volume_name - computed: false, optional: false, required: true
+  private _volumeName?: string; 
+  public get volumeName() {
+    return this.getStringAttribute('volume_name');
+  }
+  public set volumeName(value: string) {
+    this._volumeName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeNameInput() {
+    return this._volumeName;
+  }
+}
+
+export class SegmentConfigurationsPropertyList extends cdktn.ComplexList {
+  public internalValue? : SegmentConfigurationsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SegmentConfigurationsPropertyOutputReference {
+    return new SegmentConfigurationsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#create AwsFinspaceKxDataview#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#delete AwsFinspaceKxDataview#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_dataview#update AwsFinspaceKxDataview#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

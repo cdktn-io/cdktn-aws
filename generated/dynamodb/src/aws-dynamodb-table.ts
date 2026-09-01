@@ -1,0 +1,3782 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDynamodbTableConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#billing_mode AwsDynamodbTable#billing_mode}
+  */
+  readonly billingMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#deletion_protection_enabled AwsDynamodbTable#deletion_protection_enabled}
+  */
+  readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#hash_key AwsDynamodbTable#hash_key}
+  */
+  readonly hashKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#id AwsDynamodbTable#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#name AwsDynamodbTable#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#range_key AwsDynamodbTable#range_key}
+  */
+  readonly rangeKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#read_capacity AwsDynamodbTable#read_capacity}
+  */
+  readonly readCapacity?: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#region AwsDynamodbTable#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#restore_backup_arn AwsDynamodbTable#restore_backup_arn}
+  */
+  readonly restoreBackupArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#restore_date_time AwsDynamodbTable#restore_date_time}
+  */
+  readonly restoreDateTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#restore_source_name AwsDynamodbTable#restore_source_name}
+  */
+  readonly restoreSourceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#restore_source_table_arn AwsDynamodbTable#restore_source_table_arn}
+  */
+  readonly restoreSourceTableArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#restore_to_latest_time AwsDynamodbTable#restore_to_latest_time}
+  */
+  readonly restoreToLatestTime?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#stream_enabled AwsDynamodbTable#stream_enabled}
+  */
+  readonly streamEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#stream_view_type AwsDynamodbTable#stream_view_type}
+  */
+  readonly streamViewType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#table_class AwsDynamodbTable#table_class}
+  */
+  readonly tableClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#tags AwsDynamodbTable#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#tags_all AwsDynamodbTable#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#write_capacity AwsDynamodbTable#write_capacity}
+  */
+  readonly writeCapacity?: number;
+  /**
+  * attribute block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#attribute AwsDynamodbTable#attribute}
+  */
+  readonly attribute?: AwsDynamodbTable.AttributeProperty[] | cdktn.IResolvable;
+  /**
+  * global_secondary_index block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#global_secondary_index AwsDynamodbTable#global_secondary_index}
+  */
+  readonly globalSecondaryIndex?: AwsDynamodbTable.GlobalSecondaryIndexProperty[] | cdktn.IResolvable;
+  /**
+  * global_table_witness block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#global_table_witness AwsDynamodbTable#global_table_witness}
+  */
+  readonly globalTableWitness?: AwsDynamodbTable.GlobalTableWitnessProperty;
+  /**
+  * import_table block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#import_table AwsDynamodbTable#import_table}
+  */
+  readonly importTable?: AwsDynamodbTable.ImportTableProperty;
+  /**
+  * local_secondary_index block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#local_secondary_index AwsDynamodbTable#local_secondary_index}
+  */
+  readonly localSecondaryIndex?: AwsDynamodbTable.LocalSecondaryIndexProperty[] | cdktn.IResolvable;
+  /**
+  * on_demand_throughput block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#on_demand_throughput AwsDynamodbTable#on_demand_throughput}
+  */
+  readonly onDemandThroughput?: AwsDynamodbTable.OnDemandThroughputProperty;
+  /**
+  * point_in_time_recovery block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#point_in_time_recovery AwsDynamodbTable#point_in_time_recovery}
+  */
+  readonly pointInTimeRecovery?: AwsDynamodbTable.PointInTimeRecoveryProperty;
+  /**
+  * replica block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#replica AwsDynamodbTable#replica}
+  */
+  readonly replica?: AwsDynamodbTable.ReplicaProperty[] | cdktn.IResolvable;
+  /**
+  * server_side_encryption block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#server_side_encryption AwsDynamodbTable#server_side_encryption}
+  */
+  readonly serverSideEncryption?: AwsDynamodbTable.ServerSideEncryptionProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#timeouts AwsDynamodbTable#timeouts}
+  */
+  readonly timeouts?: AwsDynamodbTable.TimeoutsProperty;
+  /**
+  * ttl block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#ttl AwsDynamodbTable#ttl}
+  */
+  readonly ttl?: AwsDynamodbTable.TtlProperty;
+  /**
+  * warm_throughput block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#warm_throughput AwsDynamodbTable#warm_throughput}
+  */
+  readonly warmThroughput?: AwsDynamodbTable.WarmThroughputProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table aws_dynamodb_table}
+*/
+export class AwsDynamodbTable extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_dynamodb_table";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDynamodbTable resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDynamodbTable to import
+  * @param importFromId The id of the existing AwsDynamodbTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDynamodbTable to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_table", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table aws_dynamodb_table} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDynamodbTableConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDynamodbTableConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_dynamodb_table',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._billingMode = config.billingMode;
+    this._deletionProtectionEnabled = config.deletionProtectionEnabled;
+    this._hashKey = config.hashKey;
+    this._id = config.id;
+    this._name = config.name;
+    this._rangeKey = config.rangeKey;
+    this._readCapacity = config.readCapacity;
+    this._region = config.region;
+    this._restoreBackupArn = config.restoreBackupArn;
+    this._restoreDateTime = config.restoreDateTime;
+    this._restoreSourceName = config.restoreSourceName;
+    this._restoreSourceTableArn = config.restoreSourceTableArn;
+    this._restoreToLatestTime = config.restoreToLatestTime;
+    this._streamEnabled = config.streamEnabled;
+    this._streamViewType = config.streamViewType;
+    this._tableClass = config.tableClass;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._writeCapacity = config.writeCapacity;
+    this._attribute.internalValue = config.attribute;
+    this._globalSecondaryIndex.internalValue = config.globalSecondaryIndex;
+    this._globalTableWitness.internalValue = config.globalTableWitness;
+    this._importTable.internalValue = config.importTable;
+    this._localSecondaryIndex.internalValue = config.localSecondaryIndex;
+    this._onDemandThroughput.internalValue = config.onDemandThroughput;
+    this._pointInTimeRecovery.internalValue = config.pointInTimeRecovery;
+    this._replica.internalValue = config.replica;
+    this._serverSideEncryption.internalValue = config.serverSideEncryption;
+    this._timeouts.internalValue = config.timeouts;
+    this._ttl.internalValue = config.ttl;
+    this._warmThroughput.internalValue = config.warmThroughput;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // billing_mode - computed: false, optional: true, required: false
+  private _billingMode?: string; 
+  public get billingMode() {
+    return this.getStringAttribute('billing_mode');
+  }
+  public set billingMode(value: string) {
+    this._billingMode = value;
+  }
+  public resetBillingMode() {
+    this._billingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingModeInput() {
+    return this._billingMode;
+  }
+
+  // deletion_protection_enabled - computed: false, optional: true, required: false
+  private _deletionProtectionEnabled?: boolean | cdktn.IResolvable; 
+  public get deletionProtectionEnabled() {
+    return this.getBooleanAttribute('deletion_protection_enabled');
+  }
+  public set deletionProtectionEnabled(value: boolean | cdktn.IResolvable) {
+    this._deletionProtectionEnabled = value;
+  }
+  public resetDeletionProtectionEnabled() {
+    this._deletionProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionEnabledInput() {
+    return this._deletionProtectionEnabled;
+  }
+
+  // hash_key - computed: true, optional: true, required: false
+  private _hashKey?: string; 
+  public get hashKey() {
+    return this.getStringAttribute('hash_key');
+  }
+  public set hashKey(value: string) {
+    this._hashKey = value;
+  }
+  public resetHashKey() {
+    this._hashKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hashKeyInput() {
+    return this._hashKey;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // range_key - computed: false, optional: true, required: false
+  private _rangeKey?: string; 
+  public get rangeKey() {
+    return this.getStringAttribute('range_key');
+  }
+  public set rangeKey(value: string) {
+    this._rangeKey = value;
+  }
+  public resetRangeKey() {
+    this._rangeKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeKeyInput() {
+    return this._rangeKey;
+  }
+
+  // read_capacity - computed: true, optional: true, required: false
+  private _readCapacity?: number; 
+  public get readCapacity() {
+    return this.getNumberAttribute('read_capacity');
+  }
+  public set readCapacity(value: number) {
+    this._readCapacity = value;
+  }
+  public resetReadCapacity() {
+    this._readCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readCapacityInput() {
+    return this._readCapacity;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // restore_backup_arn - computed: false, optional: true, required: false
+  private _restoreBackupArn?: string; 
+  public get restoreBackupArn() {
+    return this.getStringAttribute('restore_backup_arn');
+  }
+  public set restoreBackupArn(value: string) {
+    this._restoreBackupArn = value;
+  }
+  public resetRestoreBackupArn() {
+    this._restoreBackupArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreBackupArnInput() {
+    return this._restoreBackupArn;
+  }
+
+  // restore_date_time - computed: false, optional: true, required: false
+  private _restoreDateTime?: string; 
+  public get restoreDateTime() {
+    return this.getStringAttribute('restore_date_time');
+  }
+  public set restoreDateTime(value: string) {
+    this._restoreDateTime = value;
+  }
+  public resetRestoreDateTime() {
+    this._restoreDateTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreDateTimeInput() {
+    return this._restoreDateTime;
+  }
+
+  // restore_source_name - computed: false, optional: true, required: false
+  private _restoreSourceName?: string; 
+  public get restoreSourceName() {
+    return this.getStringAttribute('restore_source_name');
+  }
+  public set restoreSourceName(value: string) {
+    this._restoreSourceName = value;
+  }
+  public resetRestoreSourceName() {
+    this._restoreSourceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreSourceNameInput() {
+    return this._restoreSourceName;
+  }
+
+  // restore_source_table_arn - computed: false, optional: true, required: false
+  private _restoreSourceTableArn?: string; 
+  public get restoreSourceTableArn() {
+    return this.getStringAttribute('restore_source_table_arn');
+  }
+  public set restoreSourceTableArn(value: string) {
+    this._restoreSourceTableArn = value;
+  }
+  public resetRestoreSourceTableArn() {
+    this._restoreSourceTableArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreSourceTableArnInput() {
+    return this._restoreSourceTableArn;
+  }
+
+  // restore_to_latest_time - computed: false, optional: true, required: false
+  private _restoreToLatestTime?: boolean | cdktn.IResolvable; 
+  public get restoreToLatestTime() {
+    return this.getBooleanAttribute('restore_to_latest_time');
+  }
+  public set restoreToLatestTime(value: boolean | cdktn.IResolvable) {
+    this._restoreToLatestTime = value;
+  }
+  public resetRestoreToLatestTime() {
+    this._restoreToLatestTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreToLatestTimeInput() {
+    return this._restoreToLatestTime;
+  }
+
+  // stream_arn - computed: true, optional: false, required: false
+  public get streamArn() {
+    return this.getStringAttribute('stream_arn');
+  }
+
+  // stream_enabled - computed: false, optional: true, required: false
+  private _streamEnabled?: boolean | cdktn.IResolvable; 
+  public get streamEnabled() {
+    return this.getBooleanAttribute('stream_enabled');
+  }
+  public set streamEnabled(value: boolean | cdktn.IResolvable) {
+    this._streamEnabled = value;
+  }
+  public resetStreamEnabled() {
+    this._streamEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamEnabledInput() {
+    return this._streamEnabled;
+  }
+
+  // stream_label - computed: true, optional: false, required: false
+  public get streamLabel() {
+    return this.getStringAttribute('stream_label');
+  }
+
+  // stream_view_type - computed: true, optional: true, required: false
+  private _streamViewType?: string; 
+  public get streamViewType() {
+    return this.getStringAttribute('stream_view_type');
+  }
+  public set streamViewType(value: string) {
+    this._streamViewType = value;
+  }
+  public resetStreamViewType() {
+    this._streamViewType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamViewTypeInput() {
+    return this._streamViewType;
+  }
+
+  // table_class - computed: false, optional: true, required: false
+  private _tableClass?: string; 
+  public get tableClass() {
+    return this.getStringAttribute('table_class');
+  }
+  public set tableClass(value: string) {
+    this._tableClass = value;
+  }
+  public resetTableClass() {
+    this._tableClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableClassInput() {
+    return this._tableClass;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // write_capacity - computed: true, optional: true, required: false
+  private _writeCapacity?: number; 
+  public get writeCapacity() {
+    return this.getNumberAttribute('write_capacity');
+  }
+  public set writeCapacity(value: number) {
+    this._writeCapacity = value;
+  }
+  public resetWriteCapacity() {
+    this._writeCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeCapacityInput() {
+    return this._writeCapacity;
+  }
+
+  // attribute - computed: false, optional: true, required: false
+  private _attribute = new AwsDynamodbTable.AttributePropertyList(this, "attribute", true);
+  public get attribute() {
+    return this._attribute;
+  }
+  public putAttribute(value: AwsDynamodbTable.AttributeProperty[] | cdktn.IResolvable) {
+    this._attribute.internalValue = value;
+  }
+  public resetAttribute() {
+    this._attribute.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributeInput() {
+    return this._attribute.internalValue;
+  }
+
+  // global_secondary_index - computed: false, optional: true, required: false
+  private _globalSecondaryIndex = new AwsDynamodbTable.GlobalSecondaryIndexPropertyList(this, "global_secondary_index", true);
+  public get globalSecondaryIndex() {
+    return this._globalSecondaryIndex;
+  }
+  public putGlobalSecondaryIndex(value: AwsDynamodbTable.GlobalSecondaryIndexProperty[] | cdktn.IResolvable) {
+    this._globalSecondaryIndex.internalValue = value;
+  }
+  public resetGlobalSecondaryIndex() {
+    this._globalSecondaryIndex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalSecondaryIndexInput() {
+    return this._globalSecondaryIndex.internalValue;
+  }
+
+  // global_table_witness - computed: false, optional: true, required: false
+  private _globalTableWitness = new AwsDynamodbTable.GlobalTableWitnessPropertyOutputReference(this, "global_table_witness");
+  public get globalTableWitness() {
+    return this._globalTableWitness;
+  }
+  public putGlobalTableWitness(value: AwsDynamodbTable.GlobalTableWitnessProperty) {
+    this._globalTableWitness.internalValue = value;
+  }
+  public resetGlobalTableWitness() {
+    this._globalTableWitness.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalTableWitnessInput() {
+    return this._globalTableWitness.internalValue;
+  }
+
+  // import_table - computed: false, optional: true, required: false
+  private _importTable = new AwsDynamodbTable.ImportTablePropertyOutputReference(this, "import_table");
+  public get importTable() {
+    return this._importTable;
+  }
+  public putImportTable(value: AwsDynamodbTable.ImportTableProperty) {
+    this._importTable.internalValue = value;
+  }
+  public resetImportTable() {
+    this._importTable.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importTableInput() {
+    return this._importTable.internalValue;
+  }
+
+  // local_secondary_index - computed: false, optional: true, required: false
+  private _localSecondaryIndex = new AwsDynamodbTable.LocalSecondaryIndexPropertyList(this, "local_secondary_index", true);
+  public get localSecondaryIndex() {
+    return this._localSecondaryIndex;
+  }
+  public putLocalSecondaryIndex(value: AwsDynamodbTable.LocalSecondaryIndexProperty[] | cdktn.IResolvable) {
+    this._localSecondaryIndex.internalValue = value;
+  }
+  public resetLocalSecondaryIndex() {
+    this._localSecondaryIndex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localSecondaryIndexInput() {
+    return this._localSecondaryIndex.internalValue;
+  }
+
+  // on_demand_throughput - computed: false, optional: true, required: false
+  private _onDemandThroughput = new AwsDynamodbTable.OnDemandThroughputPropertyOutputReference(this, "on_demand_throughput");
+  public get onDemandThroughput() {
+    return this._onDemandThroughput;
+  }
+  public putOnDemandThroughput(value: AwsDynamodbTable.OnDemandThroughputProperty) {
+    this._onDemandThroughput.internalValue = value;
+  }
+  public resetOnDemandThroughput() {
+    this._onDemandThroughput.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDemandThroughputInput() {
+    return this._onDemandThroughput.internalValue;
+  }
+
+  // point_in_time_recovery - computed: false, optional: true, required: false
+  private _pointInTimeRecovery = new AwsDynamodbTable.PointInTimeRecoveryPropertyOutputReference(this, "point_in_time_recovery");
+  public get pointInTimeRecovery() {
+    return this._pointInTimeRecovery;
+  }
+  public putPointInTimeRecovery(value: AwsDynamodbTable.PointInTimeRecoveryProperty) {
+    this._pointInTimeRecovery.internalValue = value;
+  }
+  public resetPointInTimeRecovery() {
+    this._pointInTimeRecovery.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pointInTimeRecoveryInput() {
+    return this._pointInTimeRecovery.internalValue;
+  }
+
+  // replica - computed: false, optional: true, required: false
+  private _replica = new AwsDynamodbTable.ReplicaPropertyList(this, "replica", true);
+  public get replica() {
+    return this._replica;
+  }
+  public putReplica(value: AwsDynamodbTable.ReplicaProperty[] | cdktn.IResolvable) {
+    this._replica.internalValue = value;
+  }
+  public resetReplica() {
+    this._replica.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaInput() {
+    return this._replica.internalValue;
+  }
+
+  // server_side_encryption - computed: false, optional: true, required: false
+  private _serverSideEncryption = new AwsDynamodbTable.ServerSideEncryptionPropertyOutputReference(this, "server_side_encryption");
+  public get serverSideEncryption() {
+    return this._serverSideEncryption;
+  }
+  public putServerSideEncryption(value: AwsDynamodbTable.ServerSideEncryptionProperty) {
+    this._serverSideEncryption.internalValue = value;
+  }
+  public resetServerSideEncryption() {
+    this._serverSideEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverSideEncryptionInput() {
+    return this._serverSideEncryption.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDynamodbTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDynamodbTable.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // ttl - computed: false, optional: true, required: false
+  private _ttl = new AwsDynamodbTable.TtlPropertyOutputReference(this, "ttl");
+  public get ttl() {
+    return this._ttl;
+  }
+  public putTtl(value: AwsDynamodbTable.TtlProperty) {
+    this._ttl.internalValue = value;
+  }
+  public resetTtl() {
+    this._ttl.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl.internalValue;
+  }
+
+  // warm_throughput - computed: false, optional: true, required: false
+  private _warmThroughput = new AwsDynamodbTable.WarmThroughputPropertyOutputReference(this, "warm_throughput");
+  public get warmThroughput() {
+    return this._warmThroughput;
+  }
+  public putWarmThroughput(value: AwsDynamodbTable.WarmThroughputProperty) {
+    this._warmThroughput.internalValue = value;
+  }
+  public resetWarmThroughput() {
+    this._warmThroughput.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get warmThroughputInput() {
+    return this._warmThroughput.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      billing_mode: cdktn.stringToTerraform(this._billingMode),
+      deletion_protection_enabled: cdktn.booleanToTerraform(this._deletionProtectionEnabled),
+      hash_key: cdktn.stringToTerraform(this._hashKey),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      range_key: cdktn.stringToTerraform(this._rangeKey),
+      read_capacity: cdktn.numberToTerraform(this._readCapacity),
+      region: cdktn.stringToTerraform(this._region),
+      restore_backup_arn: cdktn.stringToTerraform(this._restoreBackupArn),
+      restore_date_time: cdktn.stringToTerraform(this._restoreDateTime),
+      restore_source_name: cdktn.stringToTerraform(this._restoreSourceName),
+      restore_source_table_arn: cdktn.stringToTerraform(this._restoreSourceTableArn),
+      restore_to_latest_time: cdktn.booleanToTerraform(this._restoreToLatestTime),
+      stream_enabled: cdktn.booleanToTerraform(this._streamEnabled),
+      stream_view_type: cdktn.stringToTerraform(this._streamViewType),
+      table_class: cdktn.stringToTerraform(this._tableClass),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      write_capacity: cdktn.numberToTerraform(this._writeCapacity),
+      attribute: cdktn.listMapper(awsDynamodbTableAttributePropertyToTerraform, true)(this._attribute.internalValue),
+      global_secondary_index: cdktn.listMapper(awsDynamodbTableGlobalSecondaryIndexPropertyToTerraform, true)(this._globalSecondaryIndex.internalValue),
+      global_table_witness: awsDynamodbTableGlobalTableWitnessPropertyToTerraform(this._globalTableWitness.internalValue),
+      import_table: awsDynamodbTableImportTablePropertyToTerraform(this._importTable.internalValue),
+      local_secondary_index: cdktn.listMapper(awsDynamodbTableLocalSecondaryIndexPropertyToTerraform, true)(this._localSecondaryIndex.internalValue),
+      on_demand_throughput: awsDynamodbTableOnDemandThroughputPropertyToTerraform(this._onDemandThroughput.internalValue),
+      point_in_time_recovery: awsDynamodbTablePointInTimeRecoveryPropertyToTerraform(this._pointInTimeRecovery.internalValue),
+      replica: cdktn.listMapper(awsDynamodbTableReplicaPropertyToTerraform, true)(this._replica.internalValue),
+      server_side_encryption: awsDynamodbTableServerSideEncryptionPropertyToTerraform(this._serverSideEncryption.internalValue),
+      timeouts: awsDynamodbTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ttl: awsDynamodbTableTtlPropertyToTerraform(this._ttl.internalValue),
+      warm_throughput: awsDynamodbTableWarmThroughputPropertyToTerraform(this._warmThroughput.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      billing_mode: {
+        value: cdktn.stringToHclTerraform(this._billingMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deletion_protection_enabled: {
+        value: cdktn.booleanToHclTerraform(this._deletionProtectionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      hash_key: {
+        value: cdktn.stringToHclTerraform(this._hashKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      range_key: {
+        value: cdktn.stringToHclTerraform(this._rangeKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      read_capacity: {
+        value: cdktn.numberToHclTerraform(this._readCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_backup_arn: {
+        value: cdktn.stringToHclTerraform(this._restoreBackupArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_date_time: {
+        value: cdktn.stringToHclTerraform(this._restoreDateTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_source_name: {
+        value: cdktn.stringToHclTerraform(this._restoreSourceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_source_table_arn: {
+        value: cdktn.stringToHclTerraform(this._restoreSourceTableArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_to_latest_time: {
+        value: cdktn.booleanToHclTerraform(this._restoreToLatestTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      stream_enabled: {
+        value: cdktn.booleanToHclTerraform(this._streamEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      stream_view_type: {
+        value: cdktn.stringToHclTerraform(this._streamViewType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      table_class: {
+        value: cdktn.stringToHclTerraform(this._tableClass),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      write_capacity: {
+        value: cdktn.numberToHclTerraform(this._writeCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      attribute: {
+        value: cdktn.listMapperHcl(awsDynamodbTableAttributePropertyToHclTerraform, true)(this._attribute.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDynamodbTable.AttributePropertyList",
+      },
+      global_secondary_index: {
+        value: cdktn.listMapperHcl(awsDynamodbTableGlobalSecondaryIndexPropertyToHclTerraform, true)(this._globalSecondaryIndex.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDynamodbTable.GlobalSecondaryIndexPropertyList",
+      },
+      global_table_witness: {
+        value: awsDynamodbTableGlobalTableWitnessPropertyToHclTerraform(this._globalTableWitness.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.GlobalTableWitnessPropertyList",
+      },
+      import_table: {
+        value: awsDynamodbTableImportTablePropertyToHclTerraform(this._importTable.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.ImportTablePropertyList",
+      },
+      local_secondary_index: {
+        value: cdktn.listMapperHcl(awsDynamodbTableLocalSecondaryIndexPropertyToHclTerraform, true)(this._localSecondaryIndex.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDynamodbTable.LocalSecondaryIndexPropertyList",
+      },
+      on_demand_throughput: {
+        value: awsDynamodbTableOnDemandThroughputPropertyToHclTerraform(this._onDemandThroughput.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.OnDemandThroughputPropertyList",
+      },
+      point_in_time_recovery: {
+        value: awsDynamodbTablePointInTimeRecoveryPropertyToHclTerraform(this._pointInTimeRecovery.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.PointInTimeRecoveryPropertyList",
+      },
+      replica: {
+        value: cdktn.listMapperHcl(awsDynamodbTableReplicaPropertyToHclTerraform, true)(this._replica.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDynamodbTable.ReplicaPropertyList",
+      },
+      server_side_encryption: {
+        value: awsDynamodbTableServerSideEncryptionPropertyToHclTerraform(this._serverSideEncryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.ServerSideEncryptionPropertyList",
+      },
+      timeouts: {
+        value: awsDynamodbTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDynamodbTable.TimeoutsProperty",
+      },
+      ttl: {
+        value: awsDynamodbTableTtlPropertyToHclTerraform(this._ttl.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.TtlPropertyList",
+      },
+      warm_throughput: {
+        value: awsDynamodbTableWarmThroughputPropertyToHclTerraform(this._warmThroughput.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDynamodbTable.WarmThroughputPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDynamodbTableAttributePropertyToTerraform(struct?: AwsDynamodbTable.AttributeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsDynamodbTableAttributePropertyToHclTerraform(struct?: AwsDynamodbTable.AttributeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableKeySchemaPropertyToTerraform(struct?: AwsDynamodbTable.KeySchemaProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    attribute_name: cdktn.stringToTerraform(struct!.attributeName),
+    key_type: cdktn.stringToTerraform(struct!.keyType),
+  }
+}
+
+
+export function awsDynamodbTableKeySchemaPropertyToHclTerraform(struct?: AwsDynamodbTable.KeySchemaProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    attribute_name: {
+      value: cdktn.stringToHclTerraform(struct!.attributeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_type: {
+      value: cdktn.stringToHclTerraform(struct!.keyType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexOnDemandThroughputPropertyOutputReference | AwsDynamodbTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_read_request_units: cdktn.numberToTerraform(struct!.maxReadRequestUnits),
+    max_write_request_units: cdktn.numberToTerraform(struct!.maxWriteRequestUnits),
+  }
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexOnDemandThroughputPropertyOutputReference | AwsDynamodbTable.GlobalSecondaryIndexOnDemandThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_read_request_units: {
+      value: cdktn.numberToHclTerraform(struct!.maxReadRequestUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_write_request_units: {
+      value: cdktn.numberToHclTerraform(struct!.maxWriteRequestUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexWarmThroughputPropertyOutputReference | AwsDynamodbTable.GlobalSecondaryIndexWarmThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    read_units_per_second: cdktn.numberToTerraform(struct!.readUnitsPerSecond),
+    write_units_per_second: cdktn.numberToTerraform(struct!.writeUnitsPerSecond),
+  }
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexWarmThroughputPropertyOutputReference | AwsDynamodbTable.GlobalSecondaryIndexWarmThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    read_units_per_second: {
+      value: cdktn.numberToHclTerraform(struct!.readUnitsPerSecond),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    write_units_per_second: {
+      value: cdktn.numberToHclTerraform(struct!.writeUnitsPerSecond),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexPropertyToTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    hash_key: cdktn.stringToTerraform(struct!.hashKey),
+    name: cdktn.stringToTerraform(struct!.name),
+    non_key_attributes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.nonKeyAttributes),
+    projection_type: cdktn.stringToTerraform(struct!.projectionType),
+    range_key: cdktn.stringToTerraform(struct!.rangeKey),
+    read_capacity: cdktn.numberToTerraform(struct!.readCapacity),
+    write_capacity: cdktn.numberToTerraform(struct!.writeCapacity),
+    key_schema: cdktn.listMapper(awsDynamodbTableKeySchemaPropertyToTerraform, true)(struct!.keySchema),
+    on_demand_throughput: awsDynamodbTableGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct!.onDemandThroughput),
+    warm_throughput: awsDynamodbTableGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct!.warmThroughput),
+  }
+}
+
+
+export function awsDynamodbTableGlobalSecondaryIndexPropertyToHclTerraform(struct?: AwsDynamodbTable.GlobalSecondaryIndexProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    hash_key: {
+      value: cdktn.stringToHclTerraform(struct!.hashKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    non_key_attributes: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.nonKeyAttributes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    projection_type: {
+      value: cdktn.stringToHclTerraform(struct!.projectionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range_key: {
+      value: cdktn.stringToHclTerraform(struct!.rangeKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_capacity: {
+      value: cdktn.numberToHclTerraform(struct!.readCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    write_capacity: {
+      value: cdktn.numberToHclTerraform(struct!.writeCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    key_schema: {
+      value: cdktn.listMapperHcl(awsDynamodbTableKeySchemaPropertyToHclTerraform, true)(struct!.keySchema),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeySchemaPropertyList",
+    },
+    on_demand_throughput: {
+      value: awsDynamodbTableGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct!.onDemandThroughput),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GlobalSecondaryIndexOnDemandThroughputPropertyList",
+    },
+    warm_throughput: {
+      value: awsDynamodbTableGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct!.warmThroughput),
+      isBlock: true,
+      type: "list",
+      storageClassType: "GlobalSecondaryIndexWarmThroughputPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableGlobalTableWitnessPropertyToTerraform(struct?: AwsDynamodbTable.GlobalTableWitnessPropertyOutputReference | AwsDynamodbTable.GlobalTableWitnessProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    region_name: cdktn.stringToTerraform(struct!.regionName),
+  }
+}
+
+
+export function awsDynamodbTableGlobalTableWitnessPropertyToHclTerraform(struct?: AwsDynamodbTable.GlobalTableWitnessPropertyOutputReference | AwsDynamodbTable.GlobalTableWitnessProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    region_name: {
+      value: cdktn.stringToHclTerraform(struct!.regionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableCsvPropertyToTerraform(struct?: AwsDynamodbTable.CsvPropertyOutputReference | AwsDynamodbTable.CsvProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delimiter: cdktn.stringToTerraform(struct!.delimiter),
+    header_list: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.headerList),
+  }
+}
+
+
+export function awsDynamodbTableCsvPropertyToHclTerraform(struct?: AwsDynamodbTable.CsvPropertyOutputReference | AwsDynamodbTable.CsvProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delimiter: {
+      value: cdktn.stringToHclTerraform(struct!.delimiter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header_list: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.headerList),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableInputFormatOptionsPropertyToTerraform(struct?: AwsDynamodbTable.InputFormatOptionsPropertyOutputReference | AwsDynamodbTable.InputFormatOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    csv: awsDynamodbTableCsvPropertyToTerraform(struct!.csv),
+  }
+}
+
+
+export function awsDynamodbTableInputFormatOptionsPropertyToHclTerraform(struct?: AwsDynamodbTable.InputFormatOptionsPropertyOutputReference | AwsDynamodbTable.InputFormatOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    csv: {
+      value: awsDynamodbTableCsvPropertyToHclTerraform(struct!.csv),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CsvPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableS3BucketSourcePropertyToTerraform(struct?: AwsDynamodbTable.S3BucketSourcePropertyOutputReference | AwsDynamodbTable.S3BucketSourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    bucket_owner: cdktn.stringToTerraform(struct!.bucketOwner),
+    key_prefix: cdktn.stringToTerraform(struct!.keyPrefix),
+  }
+}
+
+
+export function awsDynamodbTableS3BucketSourcePropertyToHclTerraform(struct?: AwsDynamodbTable.S3BucketSourcePropertyOutputReference | AwsDynamodbTable.S3BucketSourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bucket_owner: {
+      value: cdktn.stringToHclTerraform(struct!.bucketOwner),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_prefix: {
+      value: cdktn.stringToHclTerraform(struct!.keyPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableImportTablePropertyToTerraform(struct?: AwsDynamodbTable.ImportTablePropertyOutputReference | AwsDynamodbTable.ImportTableProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    input_compression_type: cdktn.stringToTerraform(struct!.inputCompressionType),
+    input_format: cdktn.stringToTerraform(struct!.inputFormat),
+    input_format_options: awsDynamodbTableInputFormatOptionsPropertyToTerraform(struct!.inputFormatOptions),
+    s3_bucket_source: awsDynamodbTableS3BucketSourcePropertyToTerraform(struct!.s3BucketSource),
+  }
+}
+
+
+export function awsDynamodbTableImportTablePropertyToHclTerraform(struct?: AwsDynamodbTable.ImportTablePropertyOutputReference | AwsDynamodbTable.ImportTableProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    input_compression_type: {
+      value: cdktn.stringToHclTerraform(struct!.inputCompressionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    input_format: {
+      value: cdktn.stringToHclTerraform(struct!.inputFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    input_format_options: {
+      value: awsDynamodbTableInputFormatOptionsPropertyToHclTerraform(struct!.inputFormatOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "InputFormatOptionsPropertyList",
+    },
+    s3_bucket_source: {
+      value: awsDynamodbTableS3BucketSourcePropertyToHclTerraform(struct!.s3BucketSource),
+      isBlock: true,
+      type: "list",
+      storageClassType: "S3BucketSourcePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableLocalSecondaryIndexPropertyToTerraform(struct?: AwsDynamodbTable.LocalSecondaryIndexProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    non_key_attributes: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.nonKeyAttributes),
+    projection_type: cdktn.stringToTerraform(struct!.projectionType),
+    range_key: cdktn.stringToTerraform(struct!.rangeKey),
+  }
+}
+
+
+export function awsDynamodbTableLocalSecondaryIndexPropertyToHclTerraform(struct?: AwsDynamodbTable.LocalSecondaryIndexProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    non_key_attributes: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.nonKeyAttributes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    projection_type: {
+      value: cdktn.stringToHclTerraform(struct!.projectionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range_key: {
+      value: cdktn.stringToHclTerraform(struct!.rangeKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableOnDemandThroughputPropertyToTerraform(struct?: AwsDynamodbTable.OnDemandThroughputPropertyOutputReference | AwsDynamodbTable.OnDemandThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_read_request_units: cdktn.numberToTerraform(struct!.maxReadRequestUnits),
+    max_write_request_units: cdktn.numberToTerraform(struct!.maxWriteRequestUnits),
+  }
+}
+
+
+export function awsDynamodbTableOnDemandThroughputPropertyToHclTerraform(struct?: AwsDynamodbTable.OnDemandThroughputPropertyOutputReference | AwsDynamodbTable.OnDemandThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_read_request_units: {
+      value: cdktn.numberToHclTerraform(struct!.maxReadRequestUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_write_request_units: {
+      value: cdktn.numberToHclTerraform(struct!.maxWriteRequestUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTablePointInTimeRecoveryPropertyToTerraform(struct?: AwsDynamodbTable.PointInTimeRecoveryPropertyOutputReference | AwsDynamodbTable.PointInTimeRecoveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    recovery_period_in_days: cdktn.numberToTerraform(struct!.recoveryPeriodInDays),
+  }
+}
+
+
+export function awsDynamodbTablePointInTimeRecoveryPropertyToHclTerraform(struct?: AwsDynamodbTable.PointInTimeRecoveryPropertyOutputReference | AwsDynamodbTable.PointInTimeRecoveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recovery_period_in_days: {
+      value: cdktn.numberToHclTerraform(struct!.recoveryPeriodInDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableReplicaPropertyToTerraform(struct?: AwsDynamodbTable.ReplicaProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    consistency_mode: cdktn.stringToTerraform(struct!.consistencyMode),
+    deletion_protection_enabled: cdktn.booleanToTerraform(struct!.deletionProtectionEnabled),
+    kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
+    point_in_time_recovery: cdktn.booleanToTerraform(struct!.pointInTimeRecovery),
+    propagate_tags: cdktn.booleanToTerraform(struct!.propagateTags),
+    region_name: cdktn.stringToTerraform(struct!.regionName),
+  }
+}
+
+
+export function awsDynamodbTableReplicaPropertyToHclTerraform(struct?: AwsDynamodbTable.ReplicaProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    consistency_mode: {
+      value: cdktn.stringToHclTerraform(struct!.consistencyMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    deletion_protection_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.deletionProtectionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kms_key_arn: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    point_in_time_recovery: {
+      value: cdktn.booleanToHclTerraform(struct!.pointInTimeRecovery),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    propagate_tags: {
+      value: cdktn.booleanToHclTerraform(struct!.propagateTags),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    region_name: {
+      value: cdktn.stringToHclTerraform(struct!.regionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableServerSideEncryptionPropertyToTerraform(struct?: AwsDynamodbTable.ServerSideEncryptionPropertyOutputReference | AwsDynamodbTable.ServerSideEncryptionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
+  }
+}
+
+
+export function awsDynamodbTableServerSideEncryptionPropertyToHclTerraform(struct?: AwsDynamodbTable.ServerSideEncryptionPropertyOutputReference | AwsDynamodbTable.ServerSideEncryptionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kms_key_arn: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableTimeoutsPropertyToTerraform(struct?: AwsDynamodbTable.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDynamodbTableTimeoutsPropertyToHclTerraform(struct?: AwsDynamodbTable.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableTtlPropertyToTerraform(struct?: AwsDynamodbTable.TtlPropertyOutputReference | AwsDynamodbTable.TtlProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    attribute_name: cdktn.stringToTerraform(struct!.attributeName),
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+  }
+}
+
+
+export function awsDynamodbTableTtlPropertyToHclTerraform(struct?: AwsDynamodbTable.TtlPropertyOutputReference | AwsDynamodbTable.TtlProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    attribute_name: {
+      value: cdktn.stringToHclTerraform(struct!.attributeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDynamodbTableWarmThroughputPropertyToTerraform(struct?: AwsDynamodbTable.WarmThroughputPropertyOutputReference | AwsDynamodbTable.WarmThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    read_units_per_second: cdktn.numberToTerraform(struct!.readUnitsPerSecond),
+    write_units_per_second: cdktn.numberToTerraform(struct!.writeUnitsPerSecond),
+  }
+}
+
+
+export function awsDynamodbTableWarmThroughputPropertyToHclTerraform(struct?: AwsDynamodbTable.WarmThroughputPropertyOutputReference | AwsDynamodbTable.WarmThroughputProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    read_units_per_second: {
+      value: cdktn.numberToHclTerraform(struct!.readUnitsPerSecond),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    write_units_per_second: {
+      value: cdktn.numberToHclTerraform(struct!.writeUnitsPerSecond),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDynamodbTable {
+export interface AttributeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#name AwsDynamodbTable#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#type AwsDynamodbTable#type}
+  */
+  readonly type: string;
+}
+export class AttributePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AttributeProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AttributeProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class AttributePropertyList extends cdktn.ComplexList {
+  public internalValue? : AttributeProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AttributePropertyOutputReference {
+    return new AttributePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface KeySchemaProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#attribute_name AwsDynamodbTable#attribute_name}
+  */
+  readonly attributeName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#key_type AwsDynamodbTable#key_type}
+  */
+  readonly keyType: string;
+}
+export class KeySchemaPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KeySchemaProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._attributeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.attributeName = this._attributeName;
+    }
+    if (this._keyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyType = this._keyType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeySchemaProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._attributeName = undefined;
+      this._keyType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._attributeName = value.attributeName;
+      this._keyType = value.keyType;
+    }
+  }
+
+  // attribute_name - computed: false, optional: false, required: true
+  private _attributeName?: string; 
+  public get attributeName() {
+    return this.getStringAttribute('attribute_name');
+  }
+  public set attributeName(value: string) {
+    this._attributeName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributeNameInput() {
+    return this._attributeName;
+  }
+
+  // key_type - computed: false, optional: false, required: true
+  private _keyType?: string; 
+  public get keyType() {
+    return this.getStringAttribute('key_type');
+  }
+  public set keyType(value: string) {
+    this._keyType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyTypeInput() {
+    return this._keyType;
+  }
+}
+
+export class KeySchemaPropertyList extends cdktn.ComplexList {
+  public internalValue? : KeySchemaProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KeySchemaPropertyOutputReference {
+    return new KeySchemaPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface GlobalSecondaryIndexOnDemandThroughputProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#max_read_request_units AwsDynamodbTable#max_read_request_units}
+  */
+  readonly maxReadRequestUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#max_write_request_units AwsDynamodbTable#max_write_request_units}
+  */
+  readonly maxWriteRequestUnits?: number;
+}
+export class GlobalSecondaryIndexOnDemandThroughputPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GlobalSecondaryIndexOnDemandThroughputProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxReadRequestUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxReadRequestUnits = this._maxReadRequestUnits;
+    }
+    if (this._maxWriteRequestUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxWriteRequestUnits = this._maxWriteRequestUnits;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GlobalSecondaryIndexOnDemandThroughputProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxReadRequestUnits = undefined;
+      this._maxWriteRequestUnits = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxReadRequestUnits = value.maxReadRequestUnits;
+      this._maxWriteRequestUnits = value.maxWriteRequestUnits;
+    }
+  }
+
+  // max_read_request_units - computed: true, optional: true, required: false
+  private _maxReadRequestUnits?: number; 
+  public get maxReadRequestUnits() {
+    return this.getNumberAttribute('max_read_request_units');
+  }
+  public set maxReadRequestUnits(value: number) {
+    this._maxReadRequestUnits = value;
+  }
+  public resetMaxReadRequestUnits() {
+    this._maxReadRequestUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxReadRequestUnitsInput() {
+    return this._maxReadRequestUnits;
+  }
+
+  // max_write_request_units - computed: true, optional: true, required: false
+  private _maxWriteRequestUnits?: number; 
+  public get maxWriteRequestUnits() {
+    return this.getNumberAttribute('max_write_request_units');
+  }
+  public set maxWriteRequestUnits(value: number) {
+    this._maxWriteRequestUnits = value;
+  }
+  public resetMaxWriteRequestUnits() {
+    this._maxWriteRequestUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWriteRequestUnitsInput() {
+    return this._maxWriteRequestUnits;
+  }
+}
+export interface GlobalSecondaryIndexWarmThroughputProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#read_units_per_second AwsDynamodbTable#read_units_per_second}
+  */
+  readonly readUnitsPerSecond?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#write_units_per_second AwsDynamodbTable#write_units_per_second}
+  */
+  readonly writeUnitsPerSecond?: number;
+}
+export class GlobalSecondaryIndexWarmThroughputPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GlobalSecondaryIndexWarmThroughputProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._readUnitsPerSecond !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readUnitsPerSecond = this._readUnitsPerSecond;
+    }
+    if (this._writeUnitsPerSecond !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.writeUnitsPerSecond = this._writeUnitsPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GlobalSecondaryIndexWarmThroughputProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._readUnitsPerSecond = undefined;
+      this._writeUnitsPerSecond = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._readUnitsPerSecond = value.readUnitsPerSecond;
+      this._writeUnitsPerSecond = value.writeUnitsPerSecond;
+    }
+  }
+
+  // read_units_per_second - computed: true, optional: true, required: false
+  private _readUnitsPerSecond?: number; 
+  public get readUnitsPerSecond() {
+    return this.getNumberAttribute('read_units_per_second');
+  }
+  public set readUnitsPerSecond(value: number) {
+    this._readUnitsPerSecond = value;
+  }
+  public resetReadUnitsPerSecond() {
+    this._readUnitsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readUnitsPerSecondInput() {
+    return this._readUnitsPerSecond;
+  }
+
+  // write_units_per_second - computed: true, optional: true, required: false
+  private _writeUnitsPerSecond?: number; 
+  public get writeUnitsPerSecond() {
+    return this.getNumberAttribute('write_units_per_second');
+  }
+  public set writeUnitsPerSecond(value: number) {
+    this._writeUnitsPerSecond = value;
+  }
+  public resetWriteUnitsPerSecond() {
+    this._writeUnitsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeUnitsPerSecondInput() {
+    return this._writeUnitsPerSecond;
+  }
+}
+export interface GlobalSecondaryIndexProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#hash_key AwsDynamodbTable#hash_key}
+  */
+  readonly hashKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#name AwsDynamodbTable#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#non_key_attributes AwsDynamodbTable#non_key_attributes}
+  */
+  readonly nonKeyAttributes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#projection_type AwsDynamodbTable#projection_type}
+  */
+  readonly projectionType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#range_key AwsDynamodbTable#range_key}
+  */
+  readonly rangeKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#read_capacity AwsDynamodbTable#read_capacity}
+  */
+  readonly readCapacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#write_capacity AwsDynamodbTable#write_capacity}
+  */
+  readonly writeCapacity?: number;
+  /**
+  * key_schema block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#key_schema AwsDynamodbTable#key_schema}
+  */
+  readonly keySchema?: KeySchemaProperty[] | cdktn.IResolvable;
+  /**
+  * on_demand_throughput block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#on_demand_throughput AwsDynamodbTable#on_demand_throughput}
+  */
+  readonly onDemandThroughput?: GlobalSecondaryIndexOnDemandThroughputProperty;
+  /**
+  * warm_throughput block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#warm_throughput AwsDynamodbTable#warm_throughput}
+  */
+  readonly warmThroughput?: GlobalSecondaryIndexWarmThroughputProperty;
+}
+export class GlobalSecondaryIndexPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GlobalSecondaryIndexProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hashKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hashKey = this._hashKey;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._nonKeyAttributes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nonKeyAttributes = this._nonKeyAttributes;
+    }
+    if (this._projectionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectionType = this._projectionType;
+    }
+    if (this._rangeKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rangeKey = this._rangeKey;
+    }
+    if (this._readCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readCapacity = this._readCapacity;
+    }
+    if (this._writeCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.writeCapacity = this._writeCapacity;
+    }
+    if (this._keySchema?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keySchema = this._keySchema?.internalValue;
+    }
+    if (this._onDemandThroughput?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.onDemandThroughput = this._onDemandThroughput?.internalValue;
+    }
+    if (this._warmThroughput?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.warmThroughput = this._warmThroughput?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GlobalSecondaryIndexProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._hashKey = undefined;
+      this._name = undefined;
+      this._nonKeyAttributes = undefined;
+      this._projectionType = undefined;
+      this._rangeKey = undefined;
+      this._readCapacity = undefined;
+      this._writeCapacity = undefined;
+      this._keySchema.internalValue = undefined;
+      this._onDemandThroughput.internalValue = undefined;
+      this._warmThroughput.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._hashKey = value.hashKey;
+      this._name = value.name;
+      this._nonKeyAttributes = value.nonKeyAttributes;
+      this._projectionType = value.projectionType;
+      this._rangeKey = value.rangeKey;
+      this._readCapacity = value.readCapacity;
+      this._writeCapacity = value.writeCapacity;
+      this._keySchema.internalValue = value.keySchema;
+      this._onDemandThroughput.internalValue = value.onDemandThroughput;
+      this._warmThroughput.internalValue = value.warmThroughput;
+    }
+  }
+
+  // hash_key - computed: true, optional: true, required: false
+  private _hashKey?: string; 
+  public get hashKey() {
+    return this.getStringAttribute('hash_key');
+  }
+  public set hashKey(value: string) {
+    this._hashKey = value;
+  }
+  public resetHashKey() {
+    this._hashKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hashKeyInput() {
+    return this._hashKey;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // non_key_attributes - computed: false, optional: true, required: false
+  private _nonKeyAttributes?: string[]; 
+  public get nonKeyAttributes() {
+    return cdktn.Fn.tolist(this.getListAttribute('non_key_attributes'));
+  }
+  public set nonKeyAttributes(value: string[]) {
+    this._nonKeyAttributes = value;
+  }
+  public resetNonKeyAttributes() {
+    this._nonKeyAttributes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonKeyAttributesInput() {
+    return this._nonKeyAttributes;
+  }
+
+  // projection_type - computed: false, optional: false, required: true
+  private _projectionType?: string; 
+  public get projectionType() {
+    return this.getStringAttribute('projection_type');
+  }
+  public set projectionType(value: string) {
+    this._projectionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectionTypeInput() {
+    return this._projectionType;
+  }
+
+  // range_key - computed: false, optional: true, required: false
+  private _rangeKey?: string; 
+  public get rangeKey() {
+    return this.getStringAttribute('range_key');
+  }
+  public set rangeKey(value: string) {
+    this._rangeKey = value;
+  }
+  public resetRangeKey() {
+    this._rangeKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeKeyInput() {
+    return this._rangeKey;
+  }
+
+  // read_capacity - computed: true, optional: true, required: false
+  private _readCapacity?: number; 
+  public get readCapacity() {
+    return this.getNumberAttribute('read_capacity');
+  }
+  public set readCapacity(value: number) {
+    this._readCapacity = value;
+  }
+  public resetReadCapacity() {
+    this._readCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readCapacityInput() {
+    return this._readCapacity;
+  }
+
+  // write_capacity - computed: true, optional: true, required: false
+  private _writeCapacity?: number; 
+  public get writeCapacity() {
+    return this.getNumberAttribute('write_capacity');
+  }
+  public set writeCapacity(value: number) {
+    this._writeCapacity = value;
+  }
+  public resetWriteCapacity() {
+    this._writeCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeCapacityInput() {
+    return this._writeCapacity;
+  }
+
+  // key_schema - computed: false, optional: true, required: false
+  private _keySchema = new KeySchemaPropertyList(this, "key_schema", false);
+  public get keySchema() {
+    return this._keySchema;
+  }
+  public putKeySchema(value: KeySchemaProperty[] | cdktn.IResolvable) {
+    this._keySchema.internalValue = value;
+  }
+  public resetKeySchema() {
+    this._keySchema.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keySchemaInput() {
+    return this._keySchema.internalValue;
+  }
+
+  // on_demand_throughput - computed: false, optional: true, required: false
+  private _onDemandThroughput = new GlobalSecondaryIndexOnDemandThroughputPropertyOutputReference(this, "on_demand_throughput");
+  public get onDemandThroughput() {
+    return this._onDemandThroughput;
+  }
+  public putOnDemandThroughput(value: GlobalSecondaryIndexOnDemandThroughputProperty) {
+    this._onDemandThroughput.internalValue = value;
+  }
+  public resetOnDemandThroughput() {
+    this._onDemandThroughput.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDemandThroughputInput() {
+    return this._onDemandThroughput.internalValue;
+  }
+
+  // warm_throughput - computed: false, optional: true, required: false
+  private _warmThroughput = new GlobalSecondaryIndexWarmThroughputPropertyOutputReference(this, "warm_throughput");
+  public get warmThroughput() {
+    return this._warmThroughput;
+  }
+  public putWarmThroughput(value: GlobalSecondaryIndexWarmThroughputProperty) {
+    this._warmThroughput.internalValue = value;
+  }
+  public resetWarmThroughput() {
+    this._warmThroughput.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get warmThroughputInput() {
+    return this._warmThroughput.internalValue;
+  }
+}
+
+export class GlobalSecondaryIndexPropertyList extends cdktn.ComplexList {
+  public internalValue? : GlobalSecondaryIndexProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GlobalSecondaryIndexPropertyOutputReference {
+    return new GlobalSecondaryIndexPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface GlobalTableWitnessProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#region_name AwsDynamodbTable#region_name}
+  */
+  readonly regionName?: string;
+}
+export class GlobalTableWitnessPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): GlobalTableWitnessProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._regionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regionName = this._regionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GlobalTableWitnessProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._regionName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._regionName = value.regionName;
+    }
+  }
+
+  // region_name - computed: true, optional: true, required: false
+  private _regionName?: string; 
+  public get regionName() {
+    return this.getStringAttribute('region_name');
+  }
+  public set regionName(value: string) {
+    this._regionName = value;
+  }
+  public resetRegionName() {
+    this._regionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionNameInput() {
+    return this._regionName;
+  }
+}
+export interface CsvProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#delimiter AwsDynamodbTable#delimiter}
+  */
+  readonly delimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#header_list AwsDynamodbTable#header_list}
+  */
+  readonly headerList?: string[];
+}
+export class CsvPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CsvProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._delimiter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delimiter = this._delimiter;
+    }
+    if (this._headerList !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerList = this._headerList;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CsvProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._delimiter = undefined;
+      this._headerList = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._delimiter = value.delimiter;
+      this._headerList = value.headerList;
+    }
+  }
+
+  // delimiter - computed: false, optional: true, required: false
+  private _delimiter?: string; 
+  public get delimiter() {
+    return this.getStringAttribute('delimiter');
+  }
+  public set delimiter(value: string) {
+    this._delimiter = value;
+  }
+  public resetDelimiter() {
+    this._delimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delimiterInput() {
+    return this._delimiter;
+  }
+
+  // header_list - computed: false, optional: true, required: false
+  private _headerList?: string[]; 
+  public get headerList() {
+    return cdktn.Fn.tolist(this.getListAttribute('header_list'));
+  }
+  public set headerList(value: string[]) {
+    this._headerList = value;
+  }
+  public resetHeaderList() {
+    this._headerList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerListInput() {
+    return this._headerList;
+  }
+}
+export interface InputFormatOptionsProperty {
+  /**
+  * csv block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#csv AwsDynamodbTable#csv}
+  */
+  readonly csv?: CsvProperty;
+}
+export class InputFormatOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): InputFormatOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._csv?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.csv = this._csv?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InputFormatOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._csv.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._csv.internalValue = value.csv;
+    }
+  }
+
+  // csv - computed: false, optional: true, required: false
+  private _csv = new CsvPropertyOutputReference(this, "csv");
+  public get csv() {
+    return this._csv;
+  }
+  public putCsv(value: CsvProperty) {
+    this._csv.internalValue = value;
+  }
+  public resetCsv() {
+    this._csv.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get csvInput() {
+    return this._csv.internalValue;
+  }
+}
+export interface S3BucketSourceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#bucket AwsDynamodbTable#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#bucket_owner AwsDynamodbTable#bucket_owner}
+  */
+  readonly bucketOwner?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#key_prefix AwsDynamodbTable#key_prefix}
+  */
+  readonly keyPrefix?: string;
+}
+export class S3BucketSourcePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): S3BucketSourceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._bucketOwner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucketOwner = this._bucketOwner;
+    }
+    if (this._keyPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyPrefix = this._keyPrefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: S3BucketSourceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._bucketOwner = undefined;
+      this._keyPrefix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._bucketOwner = value.bucketOwner;
+      this._keyPrefix = value.keyPrefix;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // bucket_owner - computed: false, optional: true, required: false
+  private _bucketOwner?: string; 
+  public get bucketOwner() {
+    return this.getStringAttribute('bucket_owner');
+  }
+  public set bucketOwner(value: string) {
+    this._bucketOwner = value;
+  }
+  public resetBucketOwner() {
+    this._bucketOwner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketOwnerInput() {
+    return this._bucketOwner;
+  }
+
+  // key_prefix - computed: false, optional: true, required: false
+  private _keyPrefix?: string; 
+  public get keyPrefix() {
+    return this.getStringAttribute('key_prefix');
+  }
+  public set keyPrefix(value: string) {
+    this._keyPrefix = value;
+  }
+  public resetKeyPrefix() {
+    this._keyPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyPrefixInput() {
+    return this._keyPrefix;
+  }
+}
+export interface ImportTableProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#input_compression_type AwsDynamodbTable#input_compression_type}
+  */
+  readonly inputCompressionType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#input_format AwsDynamodbTable#input_format}
+  */
+  readonly inputFormat: string;
+  /**
+  * input_format_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#input_format_options AwsDynamodbTable#input_format_options}
+  */
+  readonly inputFormatOptions?: InputFormatOptionsProperty;
+  /**
+  * s3_bucket_source block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#s3_bucket_source AwsDynamodbTable#s3_bucket_source}
+  */
+  readonly s3BucketSource: S3BucketSourceProperty;
+}
+export class ImportTablePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ImportTableProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._inputCompressionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inputCompressionType = this._inputCompressionType;
+    }
+    if (this._inputFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inputFormat = this._inputFormat;
+    }
+    if (this._inputFormatOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inputFormatOptions = this._inputFormatOptions?.internalValue;
+    }
+    if (this._s3BucketSource?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3BucketSource = this._s3BucketSource?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ImportTableProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._inputCompressionType = undefined;
+      this._inputFormat = undefined;
+      this._inputFormatOptions.internalValue = undefined;
+      this._s3BucketSource.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._inputCompressionType = value.inputCompressionType;
+      this._inputFormat = value.inputFormat;
+      this._inputFormatOptions.internalValue = value.inputFormatOptions;
+      this._s3BucketSource.internalValue = value.s3BucketSource;
+    }
+  }
+
+  // input_compression_type - computed: false, optional: true, required: false
+  private _inputCompressionType?: string; 
+  public get inputCompressionType() {
+    return this.getStringAttribute('input_compression_type');
+  }
+  public set inputCompressionType(value: string) {
+    this._inputCompressionType = value;
+  }
+  public resetInputCompressionType() {
+    this._inputCompressionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputCompressionTypeInput() {
+    return this._inputCompressionType;
+  }
+
+  // input_format - computed: false, optional: false, required: true
+  private _inputFormat?: string; 
+  public get inputFormat() {
+    return this.getStringAttribute('input_format');
+  }
+  public set inputFormat(value: string) {
+    this._inputFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputFormatInput() {
+    return this._inputFormat;
+  }
+
+  // input_format_options - computed: false, optional: true, required: false
+  private _inputFormatOptions = new InputFormatOptionsPropertyOutputReference(this, "input_format_options");
+  public get inputFormatOptions() {
+    return this._inputFormatOptions;
+  }
+  public putInputFormatOptions(value: InputFormatOptionsProperty) {
+    this._inputFormatOptions.internalValue = value;
+  }
+  public resetInputFormatOptions() {
+    this._inputFormatOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputFormatOptionsInput() {
+    return this._inputFormatOptions.internalValue;
+  }
+
+  // s3_bucket_source - computed: false, optional: false, required: true
+  private _s3BucketSource = new S3BucketSourcePropertyOutputReference(this, "s3_bucket_source");
+  public get s3BucketSource() {
+    return this._s3BucketSource;
+  }
+  public putS3BucketSource(value: S3BucketSourceProperty) {
+    this._s3BucketSource.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3BucketSourceInput() {
+    return this._s3BucketSource.internalValue;
+  }
+}
+export interface LocalSecondaryIndexProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#name AwsDynamodbTable#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#non_key_attributes AwsDynamodbTable#non_key_attributes}
+  */
+  readonly nonKeyAttributes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#projection_type AwsDynamodbTable#projection_type}
+  */
+  readonly projectionType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#range_key AwsDynamodbTable#range_key}
+  */
+  readonly rangeKey: string;
+}
+export class LocalSecondaryIndexPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LocalSecondaryIndexProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._nonKeyAttributes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nonKeyAttributes = this._nonKeyAttributes;
+    }
+    if (this._projectionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectionType = this._projectionType;
+    }
+    if (this._rangeKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rangeKey = this._rangeKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LocalSecondaryIndexProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._nonKeyAttributes = undefined;
+      this._projectionType = undefined;
+      this._rangeKey = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._nonKeyAttributes = value.nonKeyAttributes;
+      this._projectionType = value.projectionType;
+      this._rangeKey = value.rangeKey;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // non_key_attributes - computed: false, optional: true, required: false
+  private _nonKeyAttributes?: string[]; 
+  public get nonKeyAttributes() {
+    return this.getListAttribute('non_key_attributes');
+  }
+  public set nonKeyAttributes(value: string[]) {
+    this._nonKeyAttributes = value;
+  }
+  public resetNonKeyAttributes() {
+    this._nonKeyAttributes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonKeyAttributesInput() {
+    return this._nonKeyAttributes;
+  }
+
+  // projection_type - computed: false, optional: false, required: true
+  private _projectionType?: string; 
+  public get projectionType() {
+    return this.getStringAttribute('projection_type');
+  }
+  public set projectionType(value: string) {
+    this._projectionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectionTypeInput() {
+    return this._projectionType;
+  }
+
+  // range_key - computed: false, optional: false, required: true
+  private _rangeKey?: string; 
+  public get rangeKey() {
+    return this.getStringAttribute('range_key');
+  }
+  public set rangeKey(value: string) {
+    this._rangeKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeKeyInput() {
+    return this._rangeKey;
+  }
+}
+
+export class LocalSecondaryIndexPropertyList extends cdktn.ComplexList {
+  public internalValue? : LocalSecondaryIndexProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LocalSecondaryIndexPropertyOutputReference {
+    return new LocalSecondaryIndexPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface OnDemandThroughputProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#max_read_request_units AwsDynamodbTable#max_read_request_units}
+  */
+  readonly maxReadRequestUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#max_write_request_units AwsDynamodbTable#max_write_request_units}
+  */
+  readonly maxWriteRequestUnits?: number;
+}
+export class OnDemandThroughputPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OnDemandThroughputProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxReadRequestUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxReadRequestUnits = this._maxReadRequestUnits;
+    }
+    if (this._maxWriteRequestUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxWriteRequestUnits = this._maxWriteRequestUnits;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OnDemandThroughputProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxReadRequestUnits = undefined;
+      this._maxWriteRequestUnits = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxReadRequestUnits = value.maxReadRequestUnits;
+      this._maxWriteRequestUnits = value.maxWriteRequestUnits;
+    }
+  }
+
+  // max_read_request_units - computed: true, optional: true, required: false
+  private _maxReadRequestUnits?: number; 
+  public get maxReadRequestUnits() {
+    return this.getNumberAttribute('max_read_request_units');
+  }
+  public set maxReadRequestUnits(value: number) {
+    this._maxReadRequestUnits = value;
+  }
+  public resetMaxReadRequestUnits() {
+    this._maxReadRequestUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxReadRequestUnitsInput() {
+    return this._maxReadRequestUnits;
+  }
+
+  // max_write_request_units - computed: true, optional: true, required: false
+  private _maxWriteRequestUnits?: number; 
+  public get maxWriteRequestUnits() {
+    return this.getNumberAttribute('max_write_request_units');
+  }
+  public set maxWriteRequestUnits(value: number) {
+    this._maxWriteRequestUnits = value;
+  }
+  public resetMaxWriteRequestUnits() {
+    this._maxWriteRequestUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWriteRequestUnitsInput() {
+    return this._maxWriteRequestUnits;
+  }
+}
+export interface PointInTimeRecoveryProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#enabled AwsDynamodbTable#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#recovery_period_in_days AwsDynamodbTable#recovery_period_in_days}
+  */
+  readonly recoveryPeriodInDays?: number;
+}
+export class PointInTimeRecoveryPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PointInTimeRecoveryProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._recoveryPeriodInDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recoveryPeriodInDays = this._recoveryPeriodInDays;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointInTimeRecoveryProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._recoveryPeriodInDays = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._recoveryPeriodInDays = value.recoveryPeriodInDays;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // recovery_period_in_days - computed: true, optional: true, required: false
+  private _recoveryPeriodInDays?: number; 
+  public get recoveryPeriodInDays() {
+    return this.getNumberAttribute('recovery_period_in_days');
+  }
+  public set recoveryPeriodInDays(value: number) {
+    this._recoveryPeriodInDays = value;
+  }
+  public resetRecoveryPeriodInDays() {
+    this._recoveryPeriodInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryPeriodInDaysInput() {
+    return this._recoveryPeriodInDays;
+  }
+}
+export interface ReplicaProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#consistency_mode AwsDynamodbTable#consistency_mode}
+  */
+  readonly consistencyMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#deletion_protection_enabled AwsDynamodbTable#deletion_protection_enabled}
+  */
+  readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#kms_key_arn AwsDynamodbTable#kms_key_arn}
+  */
+  readonly kmsKeyArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#point_in_time_recovery AwsDynamodbTable#point_in_time_recovery}
+  */
+  readonly pointInTimeRecovery?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#propagate_tags AwsDynamodbTable#propagate_tags}
+  */
+  readonly propagateTags?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#region_name AwsDynamodbTable#region_name}
+  */
+  readonly regionName: string;
+}
+export class ReplicaPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ReplicaProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consistencyMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consistencyMode = this._consistencyMode;
+    }
+    if (this._deletionProtectionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deletionProtectionEnabled = this._deletionProtectionEnabled;
+    }
+    if (this._kmsKeyArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyArn = this._kmsKeyArn;
+    }
+    if (this._pointInTimeRecovery !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pointInTimeRecovery = this._pointInTimeRecovery;
+    }
+    if (this._propagateTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.propagateTags = this._propagateTags;
+    }
+    if (this._regionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regionName = this._regionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReplicaProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._consistencyMode = undefined;
+      this._deletionProtectionEnabled = undefined;
+      this._kmsKeyArn = undefined;
+      this._pointInTimeRecovery = undefined;
+      this._propagateTags = undefined;
+      this._regionName = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._consistencyMode = value.consistencyMode;
+      this._deletionProtectionEnabled = value.deletionProtectionEnabled;
+      this._kmsKeyArn = value.kmsKeyArn;
+      this._pointInTimeRecovery = value.pointInTimeRecovery;
+      this._propagateTags = value.propagateTags;
+      this._regionName = value.regionName;
+    }
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // consistency_mode - computed: false, optional: true, required: false
+  private _consistencyMode?: string; 
+  public get consistencyMode() {
+    return this.getStringAttribute('consistency_mode');
+  }
+  public set consistencyMode(value: string) {
+    this._consistencyMode = value;
+  }
+  public resetConsistencyMode() {
+    this._consistencyMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consistencyModeInput() {
+    return this._consistencyMode;
+  }
+
+  // deletion_protection_enabled - computed: true, optional: true, required: false
+  private _deletionProtectionEnabled?: boolean | cdktn.IResolvable; 
+  public get deletionProtectionEnabled() {
+    return this.getBooleanAttribute('deletion_protection_enabled');
+  }
+  public set deletionProtectionEnabled(value: boolean | cdktn.IResolvable) {
+    this._deletionProtectionEnabled = value;
+  }
+  public resetDeletionProtectionEnabled() {
+    this._deletionProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionEnabledInput() {
+    return this._deletionProtectionEnabled;
+  }
+
+  // kms_key_arn - computed: true, optional: true, required: false
+  private _kmsKeyArn?: string; 
+  public get kmsKeyArn() {
+    return this.getStringAttribute('kms_key_arn');
+  }
+  public set kmsKeyArn(value: string) {
+    this._kmsKeyArn = value;
+  }
+  public resetKmsKeyArn() {
+    this._kmsKeyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyArnInput() {
+    return this._kmsKeyArn;
+  }
+
+  // point_in_time_recovery - computed: false, optional: true, required: false
+  private _pointInTimeRecovery?: boolean | cdktn.IResolvable; 
+  public get pointInTimeRecovery() {
+    return this.getBooleanAttribute('point_in_time_recovery');
+  }
+  public set pointInTimeRecovery(value: boolean | cdktn.IResolvable) {
+    this._pointInTimeRecovery = value;
+  }
+  public resetPointInTimeRecovery() {
+    this._pointInTimeRecovery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pointInTimeRecoveryInput() {
+    return this._pointInTimeRecovery;
+  }
+
+  // propagate_tags - computed: false, optional: true, required: false
+  private _propagateTags?: boolean | cdktn.IResolvable; 
+  public get propagateTags() {
+    return this.getBooleanAttribute('propagate_tags');
+  }
+  public set propagateTags(value: boolean | cdktn.IResolvable) {
+    this._propagateTags = value;
+  }
+  public resetPropagateTags() {
+    this._propagateTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propagateTagsInput() {
+    return this._propagateTags;
+  }
+
+  // region_name - computed: false, optional: false, required: true
+  private _regionName?: string; 
+  public get regionName() {
+    return this.getStringAttribute('region_name');
+  }
+  public set regionName(value: string) {
+    this._regionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionNameInput() {
+    return this._regionName;
+  }
+
+  // stream_arn - computed: true, optional: false, required: false
+  public get streamArn() {
+    return this.getStringAttribute('stream_arn');
+  }
+
+  // stream_label - computed: true, optional: false, required: false
+  public get streamLabel() {
+    return this.getStringAttribute('stream_label');
+  }
+}
+
+export class ReplicaPropertyList extends cdktn.ComplexList {
+  public internalValue? : ReplicaProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ReplicaPropertyOutputReference {
+    return new ReplicaPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ServerSideEncryptionProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#enabled AwsDynamodbTable#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#kms_key_arn AwsDynamodbTable#kms_key_arn}
+  */
+  readonly kmsKeyArn?: string;
+}
+export class ServerSideEncryptionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServerSideEncryptionProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._kmsKeyArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyArn = this._kmsKeyArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServerSideEncryptionProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._kmsKeyArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._kmsKeyArn = value.kmsKeyArn;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // kms_key_arn - computed: true, optional: true, required: false
+  private _kmsKeyArn?: string; 
+  public get kmsKeyArn() {
+    return this.getStringAttribute('kms_key_arn');
+  }
+  public set kmsKeyArn(value: string) {
+    this._kmsKeyArn = value;
+  }
+  public resetKmsKeyArn() {
+    this._kmsKeyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyArnInput() {
+    return this._kmsKeyArn;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#create AwsDynamodbTable#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#delete AwsDynamodbTable#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#update AwsDynamodbTable#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+export interface TtlProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#attribute_name AwsDynamodbTable#attribute_name}
+  */
+  readonly attributeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#enabled AwsDynamodbTable#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+}
+export class TtlPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TtlProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._attributeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.attributeName = this._attributeName;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TtlProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._attributeName = undefined;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._attributeName = value.attributeName;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // attribute_name - computed: false, optional: true, required: false
+  private _attributeName?: string; 
+  public get attributeName() {
+    return this.getStringAttribute('attribute_name');
+  }
+  public set attributeName(value: string) {
+    this._attributeName = value;
+  }
+  public resetAttributeName() {
+    this._attributeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributeNameInput() {
+    return this._attributeName;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+export interface WarmThroughputProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#read_units_per_second AwsDynamodbTable#read_units_per_second}
+  */
+  readonly readUnitsPerSecond?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table#write_units_per_second AwsDynamodbTable#write_units_per_second}
+  */
+  readonly writeUnitsPerSecond?: number;
+}
+export class WarmThroughputPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WarmThroughputProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._readUnitsPerSecond !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readUnitsPerSecond = this._readUnitsPerSecond;
+    }
+    if (this._writeUnitsPerSecond !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.writeUnitsPerSecond = this._writeUnitsPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WarmThroughputProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._readUnitsPerSecond = undefined;
+      this._writeUnitsPerSecond = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._readUnitsPerSecond = value.readUnitsPerSecond;
+      this._writeUnitsPerSecond = value.writeUnitsPerSecond;
+    }
+  }
+
+  // read_units_per_second - computed: true, optional: true, required: false
+  private _readUnitsPerSecond?: number; 
+  public get readUnitsPerSecond() {
+    return this.getNumberAttribute('read_units_per_second');
+  }
+  public set readUnitsPerSecond(value: number) {
+    this._readUnitsPerSecond = value;
+  }
+  public resetReadUnitsPerSecond() {
+    this._readUnitsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readUnitsPerSecondInput() {
+    return this._readUnitsPerSecond;
+  }
+
+  // write_units_per_second - computed: true, optional: true, required: false
+  private _writeUnitsPerSecond?: number; 
+  public get writeUnitsPerSecond() {
+    return this.getNumberAttribute('write_units_per_second');
+  }
+  public set writeUnitsPerSecond(value: number) {
+    this._writeUnitsPerSecond = value;
+  }
+  public resetWriteUnitsPerSecond() {
+    this._writeUnitsPerSecond = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeUnitsPerSecondInput() {
+    return this._writeUnitsPerSecond;
+  }
+}
+}

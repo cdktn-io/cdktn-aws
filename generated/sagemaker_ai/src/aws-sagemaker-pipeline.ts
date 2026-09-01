@@ -1,0 +1,628 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSagemakerPipelineConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#id AwsSagemakerPipeline#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition AwsSagemakerPipeline#pipeline_definition}
+  */
+  readonly pipelineDefinition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_description AwsSagemakerPipeline#pipeline_description}
+  */
+  readonly pipelineDescription?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_display_name AwsSagemakerPipeline#pipeline_display_name}
+  */
+  readonly pipelineDisplayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_name AwsSagemakerPipeline#pipeline_name}
+  */
+  readonly pipelineName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#region AwsSagemakerPipeline#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#role_arn AwsSagemakerPipeline#role_arn}
+  */
+  readonly roleArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags AwsSagemakerPipeline#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#tags_all AwsSagemakerPipeline#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * parallelism_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#parallelism_configuration AwsSagemakerPipeline#parallelism_configuration}
+  */
+  readonly parallelismConfiguration?: AwsSagemakerPipeline.ParallelismConfigurationProperty;
+  /**
+  * pipeline_definition_s3_location block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#pipeline_definition_s3_location AwsSagemakerPipeline#pipeline_definition_s3_location}
+  */
+  readonly pipelineDefinitionS3Location?: AwsSagemakerPipeline.PipelineDefinitionS3LocationProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline aws_sagemaker_pipeline}
+*/
+export class AwsSagemakerPipeline extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_sagemaker_pipeline";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSagemakerPipeline resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSagemakerPipeline to import
+  * @param importFromId The id of the existing AwsSagemakerPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSagemakerPipeline to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_pipeline", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline aws_sagemaker_pipeline} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSagemakerPipelineConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSagemakerPipelineConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_sagemaker_pipeline',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._pipelineDefinition = config.pipelineDefinition;
+    this._pipelineDescription = config.pipelineDescription;
+    this._pipelineDisplayName = config.pipelineDisplayName;
+    this._pipelineName = config.pipelineName;
+    this._region = config.region;
+    this._roleArn = config.roleArn;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._parallelismConfiguration.internalValue = config.parallelismConfiguration;
+    this._pipelineDefinitionS3Location.internalValue = config.pipelineDefinitionS3Location;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // pipeline_definition - computed: false, optional: true, required: false
+  private _pipelineDefinition?: string; 
+  public get pipelineDefinition() {
+    return this.getStringAttribute('pipeline_definition');
+  }
+  public set pipelineDefinition(value: string) {
+    this._pipelineDefinition = value;
+  }
+  public resetPipelineDefinition() {
+    this._pipelineDefinition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineDefinitionInput() {
+    return this._pipelineDefinition;
+  }
+
+  // pipeline_description - computed: false, optional: true, required: false
+  private _pipelineDescription?: string; 
+  public get pipelineDescription() {
+    return this.getStringAttribute('pipeline_description');
+  }
+  public set pipelineDescription(value: string) {
+    this._pipelineDescription = value;
+  }
+  public resetPipelineDescription() {
+    this._pipelineDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineDescriptionInput() {
+    return this._pipelineDescription;
+  }
+
+  // pipeline_display_name - computed: false, optional: false, required: true
+  private _pipelineDisplayName?: string; 
+  public get pipelineDisplayName() {
+    return this.getStringAttribute('pipeline_display_name');
+  }
+  public set pipelineDisplayName(value: string) {
+    this._pipelineDisplayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineDisplayNameInput() {
+    return this._pipelineDisplayName;
+  }
+
+  // pipeline_name - computed: false, optional: false, required: true
+  private _pipelineName?: string; 
+  public get pipelineName() {
+    return this.getStringAttribute('pipeline_name');
+  }
+  public set pipelineName(value: string) {
+    this._pipelineName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineNameInput() {
+    return this._pipelineName;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // role_arn - computed: false, optional: true, required: false
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  public resetRoleArn() {
+    this._roleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // parallelism_configuration - computed: false, optional: true, required: false
+  private _parallelismConfiguration = new AwsSagemakerPipeline.ParallelismConfigurationPropertyOutputReference(this, "parallelism_configuration");
+  public get parallelismConfiguration() {
+    return this._parallelismConfiguration;
+  }
+  public putParallelismConfiguration(value: AwsSagemakerPipeline.ParallelismConfigurationProperty) {
+    this._parallelismConfiguration.internalValue = value;
+  }
+  public resetParallelismConfiguration() {
+    this._parallelismConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parallelismConfigurationInput() {
+    return this._parallelismConfiguration.internalValue;
+  }
+
+  // pipeline_definition_s3_location - computed: false, optional: true, required: false
+  private _pipelineDefinitionS3Location = new AwsSagemakerPipeline.PipelineDefinitionS3LocationPropertyOutputReference(this, "pipeline_definition_s3_location");
+  public get pipelineDefinitionS3Location() {
+    return this._pipelineDefinitionS3Location;
+  }
+  public putPipelineDefinitionS3Location(value: AwsSagemakerPipeline.PipelineDefinitionS3LocationProperty) {
+    this._pipelineDefinitionS3Location.internalValue = value;
+  }
+  public resetPipelineDefinitionS3Location() {
+    this._pipelineDefinitionS3Location.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineDefinitionS3LocationInput() {
+    return this._pipelineDefinitionS3Location.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      pipeline_definition: cdktn.stringToTerraform(this._pipelineDefinition),
+      pipeline_description: cdktn.stringToTerraform(this._pipelineDescription),
+      pipeline_display_name: cdktn.stringToTerraform(this._pipelineDisplayName),
+      pipeline_name: cdktn.stringToTerraform(this._pipelineName),
+      region: cdktn.stringToTerraform(this._region),
+      role_arn: cdktn.stringToTerraform(this._roleArn),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      parallelism_configuration: awsSagemakerPipelineParallelismConfigurationPropertyToTerraform(this._parallelismConfiguration.internalValue),
+      pipeline_definition_s3_location: awsSagemakerPipelinePipelineDefinitionS3LocationPropertyToTerraform(this._pipelineDefinitionS3Location.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_definition: {
+        value: cdktn.stringToHclTerraform(this._pipelineDefinition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_description: {
+        value: cdktn.stringToHclTerraform(this._pipelineDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_display_name: {
+        value: cdktn.stringToHclTerraform(this._pipelineDisplayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_name: {
+        value: cdktn.stringToHclTerraform(this._pipelineName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_arn: {
+        value: cdktn.stringToHclTerraform(this._roleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      parallelism_configuration: {
+        value: awsSagemakerPipelineParallelismConfigurationPropertyToHclTerraform(this._parallelismConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSagemakerPipeline.ParallelismConfigurationPropertyList",
+      },
+      pipeline_definition_s3_location: {
+        value: awsSagemakerPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(this._pipelineDefinitionS3Location.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSagemakerPipeline.PipelineDefinitionS3LocationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSagemakerPipelineParallelismConfigurationPropertyToTerraform(struct?: AwsSagemakerPipeline.ParallelismConfigurationPropertyOutputReference | AwsSagemakerPipeline.ParallelismConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_parallel_execution_steps: cdktn.numberToTerraform(struct!.maxParallelExecutionSteps),
+  }
+}
+
+
+export function awsSagemakerPipelineParallelismConfigurationPropertyToHclTerraform(struct?: AwsSagemakerPipeline.ParallelismConfigurationPropertyOutputReference | AwsSagemakerPipeline.ParallelismConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_parallel_execution_steps: {
+      value: cdktn.numberToHclTerraform(struct!.maxParallelExecutionSteps),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSagemakerPipelinePipelineDefinitionS3LocationPropertyToTerraform(struct?: AwsSagemakerPipeline.PipelineDefinitionS3LocationPropertyOutputReference | AwsSagemakerPipeline.PipelineDefinitionS3LocationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    object_key: cdktn.stringToTerraform(struct!.objectKey),
+    version_id: cdktn.stringToTerraform(struct!.versionId),
+  }
+}
+
+
+export function awsSagemakerPipelinePipelineDefinitionS3LocationPropertyToHclTerraform(struct?: AwsSagemakerPipeline.PipelineDefinitionS3LocationPropertyOutputReference | AwsSagemakerPipeline.PipelineDefinitionS3LocationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_key: {
+      value: cdktn.stringToHclTerraform(struct!.objectKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version_id: {
+      value: cdktn.stringToHclTerraform(struct!.versionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSagemakerPipeline {
+export interface ParallelismConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#max_parallel_execution_steps AwsSagemakerPipeline#max_parallel_execution_steps}
+  */
+  readonly maxParallelExecutionSteps: number;
+}
+export class ParallelismConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ParallelismConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxParallelExecutionSteps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxParallelExecutionSteps = this._maxParallelExecutionSteps;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ParallelismConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxParallelExecutionSteps = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxParallelExecutionSteps = value.maxParallelExecutionSteps;
+    }
+  }
+
+  // max_parallel_execution_steps - computed: false, optional: false, required: true
+  private _maxParallelExecutionSteps?: number; 
+  public get maxParallelExecutionSteps() {
+    return this.getNumberAttribute('max_parallel_execution_steps');
+  }
+  public set maxParallelExecutionSteps(value: number) {
+    this._maxParallelExecutionSteps = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxParallelExecutionStepsInput() {
+    return this._maxParallelExecutionSteps;
+  }
+}
+export interface PipelineDefinitionS3LocationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#bucket AwsSagemakerPipeline#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#object_key AwsSagemakerPipeline#object_key}
+  */
+  readonly objectKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_pipeline#version_id AwsSagemakerPipeline#version_id}
+  */
+  readonly versionId?: string;
+}
+export class PipelineDefinitionS3LocationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PipelineDefinitionS3LocationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._objectKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.objectKey = this._objectKey;
+    }
+    if (this._versionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.versionId = this._versionId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PipelineDefinitionS3LocationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._objectKey = undefined;
+      this._versionId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._objectKey = value.objectKey;
+      this._versionId = value.versionId;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // object_key - computed: false, optional: false, required: true
+  private _objectKey?: string; 
+  public get objectKey() {
+    return this.getStringAttribute('object_key');
+  }
+  public set objectKey(value: string) {
+    this._objectKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectKeyInput() {
+    return this._objectKey;
+  }
+
+  // version_id - computed: false, optional: true, required: false
+  private _versionId?: string; 
+  public get versionId() {
+    return this.getStringAttribute('version_id');
+  }
+  public set versionId(value: string) {
+    this._versionId = value;
+  }
+  public resetVersionId() {
+    this._versionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionIdInput() {
+    return this._versionId;
+  }
+}
+}

@@ -1,0 +1,2307 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsS3BucketReplicationConfigurationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket AwsS3BucketReplicationConfiguration#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id AwsS3BucketReplicationConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#region AwsS3BucketReplicationConfiguration#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#role AwsS3BucketReplicationConfiguration#role}
+  */
+  readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#token AwsS3BucketReplicationConfiguration#token}
+  */
+  readonly token?: string;
+  /**
+  * rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#rule AwsS3BucketReplicationConfiguration#rule}
+  */
+  readonly rule: AwsS3BucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration aws_s3_bucket_replication_configuration}
+*/
+export class AwsS3BucketReplicationConfiguration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_s3_bucket_replication_configuration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsS3BucketReplicationConfiguration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsS3BucketReplicationConfiguration to import
+  * @param importFromId The id of the existing AwsS3BucketReplicationConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsS3BucketReplicationConfiguration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_replication_configuration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration aws_s3_bucket_replication_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsS3BucketReplicationConfigurationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsS3BucketReplicationConfigurationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_s3_bucket_replication_configuration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._bucket = config.bucket;
+    this._id = config.id;
+    this._region = config.region;
+    this._role = config.role;
+    this._token = config.token;
+    this._rule.internalValue = config.rule;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // role - computed: false, optional: false, required: true
+  private _role?: string; 
+  public get role() {
+    return this.getStringAttribute('role');
+  }
+  public set role(value: string) {
+    this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role;
+  }
+
+  // token - computed: false, optional: true, required: false
+  private _token?: string; 
+  public get token() {
+    return this.getStringAttribute('token');
+  }
+  public set token(value: string) {
+    this._token = value;
+  }
+  public resetToken() {
+    this._token = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenInput() {
+    return this._token;
+  }
+
+  // rule - computed: false, optional: false, required: true
+  private _rule = new AwsS3BucketReplicationConfiguration.RulePropertyList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: AwsS3BucketReplicationConfiguration.RuleProperty[] | cdktn.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      bucket: cdktn.stringToTerraform(this._bucket),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      role: cdktn.stringToTerraform(this._role),
+      token: cdktn.stringToTerraform(this._token),
+      rule: cdktn.listMapper(awsS3BucketReplicationConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bucket: {
+        value: cdktn.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role: {
+        value: cdktn.stringToHclTerraform(this._role),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      token: {
+        value: cdktn.stringToHclTerraform(this._token),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rule: {
+        value: cdktn.listMapperHcl(awsS3BucketReplicationConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsS3BucketReplicationConfiguration.RulePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | AwsS3BucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.DeleteMarkerReplicationPropertyOutputReference | AwsS3BucketReplicationConfiguration.DeleteMarkerReplicationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | AwsS3BucketReplicationConfiguration.AccessControlTranslationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    owner: cdktn.stringToTerraform(struct!.owner),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.AccessControlTranslationPropertyOutputReference | AwsS3BucketReplicationConfiguration.AccessControlTranslationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    owner: {
+      value: cdktn.stringToHclTerraform(struct!.owner),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | AwsS3BucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    replica_kms_key_id: cdktn.stringToTerraform(struct!.replicaKmsKeyId),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.EncryptionConfigurationPropertyOutputReference | AwsS3BucketReplicationConfiguration.EncryptionConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    replica_kms_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.replicaKmsKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationEventThresholdPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.EventThresholdPropertyOutputReference | AwsS3BucketReplicationConfiguration.EventThresholdProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    minutes: cdktn.numberToTerraform(struct!.minutes),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.EventThresholdPropertyOutputReference | AwsS3BucketReplicationConfiguration.EventThresholdProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    minutes: {
+      value: cdktn.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationMetricsPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.MetricsPropertyOutputReference | AwsS3BucketReplicationConfiguration.MetricsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+    event_threshold: awsS3BucketReplicationConfigurationEventThresholdPropertyToTerraform(struct!.eventThreshold),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationMetricsPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.MetricsPropertyOutputReference | AwsS3BucketReplicationConfiguration.MetricsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_threshold: {
+      value: awsS3BucketReplicationConfigurationEventThresholdPropertyToHclTerraform(struct!.eventThreshold),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EventThresholdPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationTimePropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.TimePropertyOutputReference | AwsS3BucketReplicationConfiguration.TimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    minutes: cdktn.numberToTerraform(struct!.minutes),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationTimePropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.TimePropertyOutputReference | AwsS3BucketReplicationConfiguration.TimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    minutes: {
+      value: cdktn.numberToHclTerraform(struct!.minutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationReplicationTimePropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.ReplicationTimePropertyOutputReference | AwsS3BucketReplicationConfiguration.ReplicationTimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+    time: awsS3BucketReplicationConfigurationTimePropertyToTerraform(struct!.time),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.ReplicationTimePropertyOutputReference | AwsS3BucketReplicationConfiguration.ReplicationTimeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time: {
+      value: awsS3BucketReplicationConfigurationTimePropertyToHclTerraform(struct!.time),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TimePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationDestinationPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.DestinationPropertyOutputReference | AwsS3BucketReplicationConfiguration.DestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    account: cdktn.stringToTerraform(struct!.account),
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    storage_class: cdktn.stringToTerraform(struct!.storageClass),
+    access_control_translation: awsS3BucketReplicationConfigurationAccessControlTranslationPropertyToTerraform(struct!.accessControlTranslation),
+    encryption_configuration: awsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToTerraform(struct!.encryptionConfiguration),
+    metrics: awsS3BucketReplicationConfigurationMetricsPropertyToTerraform(struct!.metrics),
+    replication_time: awsS3BucketReplicationConfigurationReplicationTimePropertyToTerraform(struct!.replicationTime),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationDestinationPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.DestinationPropertyOutputReference | AwsS3BucketReplicationConfiguration.DestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    account: {
+      value: cdktn.stringToHclTerraform(struct!.account),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_class: {
+      value: cdktn.stringToHclTerraform(struct!.storageClass),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    access_control_translation: {
+      value: awsS3BucketReplicationConfigurationAccessControlTranslationPropertyToHclTerraform(struct!.accessControlTranslation),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AccessControlTranslationPropertyList",
+    },
+    encryption_configuration: {
+      value: awsS3BucketReplicationConfigurationEncryptionConfigurationPropertyToHclTerraform(struct!.encryptionConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EncryptionConfigurationPropertyList",
+    },
+    metrics: {
+      value: awsS3BucketReplicationConfigurationMetricsPropertyToHclTerraform(struct!.metrics),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MetricsPropertyList",
+    },
+    replication_time: {
+      value: awsS3BucketReplicationConfigurationReplicationTimePropertyToHclTerraform(struct!.replicationTime),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ReplicationTimePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | AwsS3BucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.ExistingObjectReplicationPropertyOutputReference | AwsS3BucketReplicationConfiguration.ExistingObjectReplicationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationAndPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.AndPropertyOutputReference | AwsS3BucketReplicationConfiguration.AndProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+    tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationAndPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.AndPropertyOutputReference | AwsS3BucketReplicationConfiguration.AndProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationTagPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.TagPropertyOutputReference | AwsS3BucketReplicationConfiguration.TagProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    key: cdktn.stringToTerraform(struct!.key),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationTagPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.TagPropertyOutputReference | AwsS3BucketReplicationConfiguration.TagProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    key: {
+      value: cdktn.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationFilterPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.FilterPropertyOutputReference | AwsS3BucketReplicationConfiguration.FilterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+    and: awsS3BucketReplicationConfigurationAndPropertyToTerraform(struct!.and),
+    tag: awsS3BucketReplicationConfigurationTagPropertyToTerraform(struct!.tag),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationFilterPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.FilterPropertyOutputReference | AwsS3BucketReplicationConfiguration.FilterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    and: {
+      value: awsS3BucketReplicationConfigurationAndPropertyToHclTerraform(struct!.and),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AndPropertyList",
+    },
+    tag: {
+      value: awsS3BucketReplicationConfigurationTagPropertyToHclTerraform(struct!.tag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TagPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | AwsS3BucketReplicationConfiguration.ReplicaModificationsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.ReplicaModificationsPropertyOutputReference | AwsS3BucketReplicationConfiguration.ReplicaModificationsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | AwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    status: cdktn.stringToTerraform(struct!.status),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsPropertyOutputReference | AwsS3BucketReplicationConfiguration.SseKmsEncryptedObjectsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | AwsS3BucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    replica_modifications: awsS3BucketReplicationConfigurationReplicaModificationsPropertyToTerraform(struct!.replicaModifications),
+    sse_kms_encrypted_objects: awsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToTerraform(struct!.sseKmsEncryptedObjects),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.SourceSelectionCriteriaPropertyOutputReference | AwsS3BucketReplicationConfiguration.SourceSelectionCriteriaProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    replica_modifications: {
+      value: awsS3BucketReplicationConfigurationReplicaModificationsPropertyToHclTerraform(struct!.replicaModifications),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ReplicaModificationsPropertyList",
+    },
+    sse_kms_encrypted_objects: {
+      value: awsS3BucketReplicationConfigurationSseKmsEncryptedObjectsPropertyToHclTerraform(struct!.sseKmsEncryptedObjects),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SseKmsEncryptedObjectsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsS3BucketReplicationConfigurationRulePropertyToTerraform(struct?: AwsS3BucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    id: cdktn.stringToTerraform(struct!.id),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+    priority: cdktn.numberToTerraform(struct!.priority),
+    status: cdktn.stringToTerraform(struct!.status),
+    delete_marker_replication: awsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToTerraform(struct!.deleteMarkerReplication),
+    destination: awsS3BucketReplicationConfigurationDestinationPropertyToTerraform(struct!.destination),
+    existing_object_replication: awsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToTerraform(struct!.existingObjectReplication),
+    filter: awsS3BucketReplicationConfigurationFilterPropertyToTerraform(struct!.filter),
+    source_selection_criteria: awsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToTerraform(struct!.sourceSelectionCriteria),
+  }
+}
+
+
+export function awsS3BucketReplicationConfigurationRulePropertyToHclTerraform(struct?: AwsS3BucketReplicationConfiguration.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    id: {
+      value: cdktn.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktn.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete_marker_replication: {
+      value: awsS3BucketReplicationConfigurationDeleteMarkerReplicationPropertyToHclTerraform(struct!.deleteMarkerReplication),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DeleteMarkerReplicationPropertyList",
+    },
+    destination: {
+      value: awsS3BucketReplicationConfigurationDestinationPropertyToHclTerraform(struct!.destination),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DestinationPropertyList",
+    },
+    existing_object_replication: {
+      value: awsS3BucketReplicationConfigurationExistingObjectReplicationPropertyToHclTerraform(struct!.existingObjectReplication),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ExistingObjectReplicationPropertyList",
+    },
+    filter: {
+      value: awsS3BucketReplicationConfigurationFilterPropertyToHclTerraform(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FilterPropertyList",
+    },
+    source_selection_criteria: {
+      value: awsS3BucketReplicationConfigurationSourceSelectionCriteriaPropertyToHclTerraform(struct!.sourceSelectionCriteria),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SourceSelectionCriteriaPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsS3BucketReplicationConfiguration {
+export interface DeleteMarkerReplicationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+}
+export class DeleteMarkerReplicationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DeleteMarkerReplicationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeleteMarkerReplicationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+}
+export interface AccessControlTranslationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#owner AwsS3BucketReplicationConfiguration#owner}
+  */
+  readonly owner: string;
+}
+export class AccessControlTranslationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AccessControlTranslationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._owner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.owner = this._owner;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessControlTranslationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._owner = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._owner = value.owner;
+    }
+  }
+
+  // owner - computed: false, optional: false, required: true
+  private _owner?: string; 
+  public get owner() {
+    return this.getStringAttribute('owner');
+  }
+  public set owner(value: string) {
+    this._owner = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ownerInput() {
+    return this._owner;
+  }
+}
+export interface EncryptionConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_kms_key_id AwsS3BucketReplicationConfiguration#replica_kms_key_id}
+  */
+  readonly replicaKmsKeyId: string;
+}
+export class EncryptionConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EncryptionConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._replicaKmsKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaKmsKeyId = this._replicaKmsKeyId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EncryptionConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._replicaKmsKeyId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._replicaKmsKeyId = value.replicaKmsKeyId;
+    }
+  }
+
+  // replica_kms_key_id - computed: false, optional: false, required: true
+  private _replicaKmsKeyId?: string; 
+  public get replicaKmsKeyId() {
+    return this.getStringAttribute('replica_kms_key_id');
+  }
+  public set replicaKmsKeyId(value: string) {
+    this._replicaKmsKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaKmsKeyIdInput() {
+    return this._replicaKmsKeyId;
+  }
+}
+export interface EventThresholdProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes AwsS3BucketReplicationConfiguration#minutes}
+  */
+  readonly minutes: number;
+}
+export class EventThresholdPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EventThresholdProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventThresholdProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._minutes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._minutes = value.minutes;
+    }
+  }
+
+  // minutes - computed: false, optional: false, required: true
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+}
+export interface MetricsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+  /**
+  * event_threshold block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#event_threshold AwsS3BucketReplicationConfiguration#event_threshold}
+  */
+  readonly eventThreshold?: EventThresholdProperty;
+}
+export class MetricsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MetricsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    if (this._eventThreshold?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventThreshold = this._eventThreshold?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MetricsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+      this._eventThreshold.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+      this._eventThreshold.internalValue = value.eventThreshold;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+
+  // event_threshold - computed: false, optional: true, required: false
+  private _eventThreshold = new EventThresholdPropertyOutputReference(this, "event_threshold");
+  public get eventThreshold() {
+    return this._eventThreshold;
+  }
+  public putEventThreshold(value: EventThresholdProperty) {
+    this._eventThreshold.internalValue = value;
+  }
+  public resetEventThreshold() {
+    this._eventThreshold.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventThresholdInput() {
+    return this._eventThreshold.internalValue;
+  }
+}
+export interface TimeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#minutes AwsS3BucketReplicationConfiguration#minutes}
+  */
+  readonly minutes: number;
+}
+export class TimePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TimeProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._minutes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._minutes = value.minutes;
+    }
+  }
+
+  // minutes - computed: false, optional: false, required: true
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+}
+export interface ReplicationTimeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+  /**
+  * time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#time AwsS3BucketReplicationConfiguration#time}
+  */
+  readonly time: TimeProperty;
+}
+export class ReplicationTimePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ReplicationTimeProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    if (this._time?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.time = this._time?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReplicationTimeProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+      this._time.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+      this._time.internalValue = value.time;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+
+  // time - computed: false, optional: false, required: true
+  private _time = new TimePropertyOutputReference(this, "time");
+  public get time() {
+    return this._time;
+  }
+  public putTime(value: TimeProperty) {
+    this._time.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeInput() {
+    return this._time.internalValue;
+  }
+}
+export interface DestinationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#account AwsS3BucketReplicationConfiguration#account}
+  */
+  readonly account?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#bucket AwsS3BucketReplicationConfiguration#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#storage_class AwsS3BucketReplicationConfiguration#storage_class}
+  */
+  readonly storageClass?: string;
+  /**
+  * access_control_translation block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#access_control_translation AwsS3BucketReplicationConfiguration#access_control_translation}
+  */
+  readonly accessControlTranslation?: AccessControlTranslationProperty;
+  /**
+  * encryption_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#encryption_configuration AwsS3BucketReplicationConfiguration#encryption_configuration}
+  */
+  readonly encryptionConfiguration?: EncryptionConfigurationProperty;
+  /**
+  * metrics block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#metrics AwsS3BucketReplicationConfiguration#metrics}
+  */
+  readonly metrics?: MetricsProperty;
+  /**
+  * replication_time block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replication_time AwsS3BucketReplicationConfiguration#replication_time}
+  */
+  readonly replicationTime?: ReplicationTimeProperty;
+}
+export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DestinationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._account !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.account = this._account;
+    }
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._storageClass !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageClass = this._storageClass;
+    }
+    if (this._accessControlTranslation?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessControlTranslation = this._accessControlTranslation?.internalValue;
+    }
+    if (this._encryptionConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionConfiguration = this._encryptionConfiguration?.internalValue;
+    }
+    if (this._metrics?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metrics = this._metrics?.internalValue;
+    }
+    if (this._replicationTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicationTime = this._replicationTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DestinationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._account = undefined;
+      this._bucket = undefined;
+      this._storageClass = undefined;
+      this._accessControlTranslation.internalValue = undefined;
+      this._encryptionConfiguration.internalValue = undefined;
+      this._metrics.internalValue = undefined;
+      this._replicationTime.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._account = value.account;
+      this._bucket = value.bucket;
+      this._storageClass = value.storageClass;
+      this._accessControlTranslation.internalValue = value.accessControlTranslation;
+      this._encryptionConfiguration.internalValue = value.encryptionConfiguration;
+      this._metrics.internalValue = value.metrics;
+      this._replicationTime.internalValue = value.replicationTime;
+    }
+  }
+
+  // account - computed: false, optional: true, required: false
+  private _account?: string; 
+  public get account() {
+    return this.getStringAttribute('account');
+  }
+  public set account(value: string) {
+    this._account = value;
+  }
+  public resetAccount() {
+    this._account = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountInput() {
+    return this._account;
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // storage_class - computed: false, optional: true, required: false
+  private _storageClass?: string; 
+  public get storageClass() {
+    return this.getStringAttribute('storage_class');
+  }
+  public set storageClass(value: string) {
+    this._storageClass = value;
+  }
+  public resetStorageClass() {
+    this._storageClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageClassInput() {
+    return this._storageClass;
+  }
+
+  // access_control_translation - computed: false, optional: true, required: false
+  private _accessControlTranslation = new AccessControlTranslationPropertyOutputReference(this, "access_control_translation");
+  public get accessControlTranslation() {
+    return this._accessControlTranslation;
+  }
+  public putAccessControlTranslation(value: AccessControlTranslationProperty) {
+    this._accessControlTranslation.internalValue = value;
+  }
+  public resetAccessControlTranslation() {
+    this._accessControlTranslation.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessControlTranslationInput() {
+    return this._accessControlTranslation.internalValue;
+  }
+
+  // encryption_configuration - computed: false, optional: true, required: false
+  private _encryptionConfiguration = new EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  public get encryptionConfiguration() {
+    return this._encryptionConfiguration;
+  }
+  public putEncryptionConfiguration(value: EncryptionConfigurationProperty) {
+    this._encryptionConfiguration.internalValue = value;
+  }
+  public resetEncryptionConfiguration() {
+    this._encryptionConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionConfigurationInput() {
+    return this._encryptionConfiguration.internalValue;
+  }
+
+  // metrics - computed: false, optional: true, required: false
+  private _metrics = new MetricsPropertyOutputReference(this, "metrics");
+  public get metrics() {
+    return this._metrics;
+  }
+  public putMetrics(value: MetricsProperty) {
+    this._metrics.internalValue = value;
+  }
+  public resetMetrics() {
+    this._metrics.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricsInput() {
+    return this._metrics.internalValue;
+  }
+
+  // replication_time - computed: false, optional: true, required: false
+  private _replicationTime = new ReplicationTimePropertyOutputReference(this, "replication_time");
+  public get replicationTime() {
+    return this._replicationTime;
+  }
+  public putReplicationTime(value: ReplicationTimeProperty) {
+    this._replicationTime.internalValue = value;
+  }
+  public resetReplicationTime() {
+    this._replicationTime.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationTimeInput() {
+    return this._replicationTime.internalValue;
+  }
+}
+export interface ExistingObjectReplicationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+}
+export class ExistingObjectReplicationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ExistingObjectReplicationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ExistingObjectReplicationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+}
+export interface AndProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsS3BucketReplicationConfiguration#prefix}
+  */
+  readonly prefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tags AwsS3BucketReplicationConfiguration#tags}
+  */
+  readonly tags?: { [key: string]: string };
+}
+export class AndPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AndProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AndProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._prefix = undefined;
+      this._tags = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._prefix = value.prefix;
+      this._tags = value.tags;
+    }
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+}
+export interface TagProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#key AwsS3BucketReplicationConfiguration#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#value AwsS3BucketReplicationConfiguration#value}
+  */
+  readonly value: string;
+}
+export class TagPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TagProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TagProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+export interface FilterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsS3BucketReplicationConfiguration#prefix}
+  */
+  readonly prefix?: string;
+  /**
+  * and block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#and AwsS3BucketReplicationConfiguration#and}
+  */
+  readonly and?: AndProperty;
+  /**
+  * tag block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#tag AwsS3BucketReplicationConfiguration#tag}
+  */
+  readonly tag?: TagProperty;
+}
+export class FilterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): FilterProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._and?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.and = this._and?.internalValue;
+    }
+    if (this._tag?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilterProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._prefix = undefined;
+      this._and.internalValue = undefined;
+      this._tag.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._prefix = value.prefix;
+      this._and.internalValue = value.and;
+      this._tag.internalValue = value.tag;
+    }
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // and - computed: false, optional: true, required: false
+  private _and = new AndPropertyOutputReference(this, "and");
+  public get and() {
+    return this._and;
+  }
+  public putAnd(value: AndProperty) {
+    this._and.internalValue = value;
+  }
+  public resetAnd() {
+    this._and.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get andInput() {
+    return this._and.internalValue;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag = new TagPropertyOutputReference(this, "tag");
+  public get tag() {
+    return this._tag;
+  }
+  public putTag(value: TagProperty) {
+    this._tag.internalValue = value;
+  }
+  public resetTag() {
+    this._tag.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag.internalValue;
+  }
+}
+export interface ReplicaModificationsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+}
+export class ReplicaModificationsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ReplicaModificationsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReplicaModificationsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+}
+export interface SseKmsEncryptedObjectsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+}
+export class SseKmsEncryptedObjectsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SseKmsEncryptedObjectsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SseKmsEncryptedObjectsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._status = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._status = value.status;
+    }
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+}
+export interface SourceSelectionCriteriaProperty {
+  /**
+  * replica_modifications block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#replica_modifications AwsS3BucketReplicationConfiguration#replica_modifications}
+  */
+  readonly replicaModifications?: ReplicaModificationsProperty;
+  /**
+  * sse_kms_encrypted_objects block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#sse_kms_encrypted_objects AwsS3BucketReplicationConfiguration#sse_kms_encrypted_objects}
+  */
+  readonly sseKmsEncryptedObjects?: SseKmsEncryptedObjectsProperty;
+}
+export class SourceSelectionCriteriaPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SourceSelectionCriteriaProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._replicaModifications?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaModifications = this._replicaModifications?.internalValue;
+    }
+    if (this._sseKmsEncryptedObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sseKmsEncryptedObjects = this._sseKmsEncryptedObjects?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceSelectionCriteriaProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._replicaModifications.internalValue = undefined;
+      this._sseKmsEncryptedObjects.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._replicaModifications.internalValue = value.replicaModifications;
+      this._sseKmsEncryptedObjects.internalValue = value.sseKmsEncryptedObjects;
+    }
+  }
+
+  // replica_modifications - computed: false, optional: true, required: false
+  private _replicaModifications = new ReplicaModificationsPropertyOutputReference(this, "replica_modifications");
+  public get replicaModifications() {
+    return this._replicaModifications;
+  }
+  public putReplicaModifications(value: ReplicaModificationsProperty) {
+    this._replicaModifications.internalValue = value;
+  }
+  public resetReplicaModifications() {
+    this._replicaModifications.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaModificationsInput() {
+    return this._replicaModifications.internalValue;
+  }
+
+  // sse_kms_encrypted_objects - computed: false, optional: true, required: false
+  private _sseKmsEncryptedObjects = new SseKmsEncryptedObjectsPropertyOutputReference(this, "sse_kms_encrypted_objects");
+  public get sseKmsEncryptedObjects() {
+    return this._sseKmsEncryptedObjects;
+  }
+  public putSseKmsEncryptedObjects(value: SseKmsEncryptedObjectsProperty) {
+    this._sseKmsEncryptedObjects.internalValue = value;
+  }
+  public resetSseKmsEncryptedObjects() {
+    this._sseKmsEncryptedObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sseKmsEncryptedObjectsInput() {
+    return this._sseKmsEncryptedObjects.internalValue;
+  }
+}
+export interface RuleProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#id AwsS3BucketReplicationConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#prefix AwsS3BucketReplicationConfiguration#prefix}
+  */
+  readonly prefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#priority AwsS3BucketReplicationConfiguration#priority}
+  */
+  readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#status AwsS3BucketReplicationConfiguration#status}
+  */
+  readonly status: string;
+  /**
+  * delete_marker_replication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#delete_marker_replication AwsS3BucketReplicationConfiguration#delete_marker_replication}
+  */
+  readonly deleteMarkerReplication?: DeleteMarkerReplicationProperty;
+  /**
+  * destination block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#destination AwsS3BucketReplicationConfiguration#destination}
+  */
+  readonly destination: DestinationProperty;
+  /**
+  * existing_object_replication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#existing_object_replication AwsS3BucketReplicationConfiguration#existing_object_replication}
+  */
+  readonly existingObjectReplication?: ExistingObjectReplicationProperty;
+  /**
+  * filter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#filter AwsS3BucketReplicationConfiguration#filter}
+  */
+  readonly filter?: FilterProperty;
+  /**
+  * source_selection_criteria block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_replication_configuration#source_selection_criteria AwsS3BucketReplicationConfiguration#source_selection_criteria}
+  */
+  readonly sourceSelectionCriteria?: SourceSelectionCriteriaProperty;
+}
+export class RulePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RuleProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    if (this._deleteMarkerReplication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteMarkerReplication = this._deleteMarkerReplication?.internalValue;
+    }
+    if (this._destination?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destination = this._destination?.internalValue;
+    }
+    if (this._existingObjectReplication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.existingObjectReplication = this._existingObjectReplication?.internalValue;
+    }
+    if (this._filter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter?.internalValue;
+    }
+    if (this._sourceSelectionCriteria?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSelectionCriteria = this._sourceSelectionCriteria?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RuleProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._prefix = undefined;
+      this._priority = undefined;
+      this._status = undefined;
+      this._deleteMarkerReplication.internalValue = undefined;
+      this._destination.internalValue = undefined;
+      this._existingObjectReplication.internalValue = undefined;
+      this._filter.internalValue = undefined;
+      this._sourceSelectionCriteria.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._prefix = value.prefix;
+      this._priority = value.priority;
+      this._status = value.status;
+      this._deleteMarkerReplication.internalValue = value.deleteMarkerReplication;
+      this._destination.internalValue = value.destination;
+      this._existingObjectReplication.internalValue = value.existingObjectReplication;
+      this._filter.internalValue = value.filter;
+      this._sourceSelectionCriteria.internalValue = value.sourceSelectionCriteria;
+    }
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // status - computed: false, optional: false, required: true
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+
+  // delete_marker_replication - computed: false, optional: true, required: false
+  private _deleteMarkerReplication = new DeleteMarkerReplicationPropertyOutputReference(this, "delete_marker_replication");
+  public get deleteMarkerReplication() {
+    return this._deleteMarkerReplication;
+  }
+  public putDeleteMarkerReplication(value: DeleteMarkerReplicationProperty) {
+    this._deleteMarkerReplication.internalValue = value;
+  }
+  public resetDeleteMarkerReplication() {
+    this._deleteMarkerReplication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteMarkerReplicationInput() {
+    return this._deleteMarkerReplication.internalValue;
+  }
+
+  // destination - computed: false, optional: false, required: true
+  private _destination = new DestinationPropertyOutputReference(this, "destination");
+  public get destination() {
+    return this._destination;
+  }
+  public putDestination(value: DestinationProperty) {
+    this._destination.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination.internalValue;
+  }
+
+  // existing_object_replication - computed: false, optional: true, required: false
+  private _existingObjectReplication = new ExistingObjectReplicationPropertyOutputReference(this, "existing_object_replication");
+  public get existingObjectReplication() {
+    return this._existingObjectReplication;
+  }
+  public putExistingObjectReplication(value: ExistingObjectReplicationProperty) {
+    this._existingObjectReplication.internalValue = value;
+  }
+  public resetExistingObjectReplication() {
+    this._existingObjectReplication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get existingObjectReplicationInput() {
+    return this._existingObjectReplication.internalValue;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter = new FilterPropertyOutputReference(this, "filter");
+  public get filter() {
+    return this._filter;
+  }
+  public putFilter(value: FilterProperty) {
+    this._filter.internalValue = value;
+  }
+  public resetFilter() {
+    this._filter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter.internalValue;
+  }
+
+  // source_selection_criteria - computed: false, optional: true, required: false
+  private _sourceSelectionCriteria = new SourceSelectionCriteriaPropertyOutputReference(this, "source_selection_criteria");
+  public get sourceSelectionCriteria() {
+    return this._sourceSelectionCriteria;
+  }
+  public putSourceSelectionCriteria(value: SourceSelectionCriteriaProperty) {
+    this._sourceSelectionCriteria.internalValue = value;
+  }
+  public resetSourceSelectionCriteria() {
+    this._sourceSelectionCriteria.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSelectionCriteriaInput() {
+    return this._sourceSelectionCriteria.internalValue;
+  }
+}
+
+export class RulePropertyList extends cdktn.ComplexList {
+  public internalValue? : RuleProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RulePropertyOutputReference {
+    return new RulePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

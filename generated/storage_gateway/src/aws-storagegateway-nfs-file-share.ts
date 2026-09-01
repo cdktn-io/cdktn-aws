@@ -1,0 +1,1200 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsStoragegatewayNfsFileShareConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#audit_destination_arn AwsStoragegatewayNfsFileShare#audit_destination_arn}
+  */
+  readonly auditDestinationArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#bucket_region AwsStoragegatewayNfsFileShare#bucket_region}
+  */
+  readonly bucketRegion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#client_list AwsStoragegatewayNfsFileShare#client_list}
+  */
+  readonly clientList: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#default_storage_class AwsStoragegatewayNfsFileShare#default_storage_class}
+  */
+  readonly defaultStorageClass?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_share_name AwsStoragegatewayNfsFileShare#file_share_name}
+  */
+  readonly fileShareName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#gateway_arn AwsStoragegatewayNfsFileShare#gateway_arn}
+  */
+  readonly gatewayArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#guess_mime_type_enabled AwsStoragegatewayNfsFileShare#guess_mime_type_enabled}
+  */
+  readonly guessMimeTypeEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#id AwsStoragegatewayNfsFileShare#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_encrypted AwsStoragegatewayNfsFileShare#kms_encrypted}
+  */
+  readonly kmsEncrypted?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#kms_key_arn AwsStoragegatewayNfsFileShare#kms_key_arn}
+  */
+  readonly kmsKeyArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#location_arn AwsStoragegatewayNfsFileShare#location_arn}
+  */
+  readonly locationArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#notification_policy AwsStoragegatewayNfsFileShare#notification_policy}
+  */
+  readonly notificationPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#object_acl AwsStoragegatewayNfsFileShare#object_acl}
+  */
+  readonly objectAcl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#read_only AwsStoragegatewayNfsFileShare#read_only}
+  */
+  readonly readOnly?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#region AwsStoragegatewayNfsFileShare#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#requester_pays AwsStoragegatewayNfsFileShare#requester_pays}
+  */
+  readonly requesterPays?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#role_arn AwsStoragegatewayNfsFileShare#role_arn}
+  */
+  readonly roleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#squash AwsStoragegatewayNfsFileShare#squash}
+  */
+  readonly squash?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags AwsStoragegatewayNfsFileShare#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#tags_all AwsStoragegatewayNfsFileShare#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#vpc_endpoint_dns_name AwsStoragegatewayNfsFileShare#vpc_endpoint_dns_name}
+  */
+  readonly vpcEndpointDnsName?: string;
+  /**
+  * cache_attributes block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_attributes AwsStoragegatewayNfsFileShare#cache_attributes}
+  */
+  readonly cacheAttributes?: AwsStoragegatewayNfsFileShare.CacheAttributesProperty;
+  /**
+  * nfs_file_share_defaults block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#nfs_file_share_defaults AwsStoragegatewayNfsFileShare#nfs_file_share_defaults}
+  */
+  readonly nfsFileShareDefaults?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#timeouts AwsStoragegatewayNfsFileShare#timeouts}
+  */
+  readonly timeouts?: AwsStoragegatewayNfsFileShare.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share aws_storagegateway_nfs_file_share}
+*/
+export class AwsStoragegatewayNfsFileShare extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_storagegateway_nfs_file_share";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsStoragegatewayNfsFileShare resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsStoragegatewayNfsFileShare to import
+  * @param importFromId The id of the existing AwsStoragegatewayNfsFileShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStoragegatewayNfsFileShare to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_nfs_file_share", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share aws_storagegateway_nfs_file_share} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsStoragegatewayNfsFileShareConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsStoragegatewayNfsFileShareConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_storagegateway_nfs_file_share',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._auditDestinationArn = config.auditDestinationArn;
+    this._bucketRegion = config.bucketRegion;
+    this._clientList = config.clientList;
+    this._defaultStorageClass = config.defaultStorageClass;
+    this._fileShareName = config.fileShareName;
+    this._gatewayArn = config.gatewayArn;
+    this._guessMimeTypeEnabled = config.guessMimeTypeEnabled;
+    this._id = config.id;
+    this._kmsEncrypted = config.kmsEncrypted;
+    this._kmsKeyArn = config.kmsKeyArn;
+    this._locationArn = config.locationArn;
+    this._notificationPolicy = config.notificationPolicy;
+    this._objectAcl = config.objectAcl;
+    this._readOnly = config.readOnly;
+    this._region = config.region;
+    this._requesterPays = config.requesterPays;
+    this._roleArn = config.roleArn;
+    this._squash = config.squash;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._vpcEndpointDnsName = config.vpcEndpointDnsName;
+    this._cacheAttributes.internalValue = config.cacheAttributes;
+    this._nfsFileShareDefaults.internalValue = config.nfsFileShareDefaults;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // audit_destination_arn - computed: false, optional: true, required: false
+  private _auditDestinationArn?: string; 
+  public get auditDestinationArn() {
+    return this.getStringAttribute('audit_destination_arn');
+  }
+  public set auditDestinationArn(value: string) {
+    this._auditDestinationArn = value;
+  }
+  public resetAuditDestinationArn() {
+    this._auditDestinationArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auditDestinationArnInput() {
+    return this._auditDestinationArn;
+  }
+
+  // bucket_region - computed: false, optional: true, required: false
+  private _bucketRegion?: string; 
+  public get bucketRegion() {
+    return this.getStringAttribute('bucket_region');
+  }
+  public set bucketRegion(value: string) {
+    this._bucketRegion = value;
+  }
+  public resetBucketRegion() {
+    this._bucketRegion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketRegionInput() {
+    return this._bucketRegion;
+  }
+
+  // client_list - computed: false, optional: false, required: true
+  private _clientList?: string[]; 
+  public get clientList() {
+    return cdktn.Fn.tolist(this.getListAttribute('client_list'));
+  }
+  public set clientList(value: string[]) {
+    this._clientList = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientListInput() {
+    return this._clientList;
+  }
+
+  // default_storage_class - computed: false, optional: true, required: false
+  private _defaultStorageClass?: string; 
+  public get defaultStorageClass() {
+    return this.getStringAttribute('default_storage_class');
+  }
+  public set defaultStorageClass(value: string) {
+    this._defaultStorageClass = value;
+  }
+  public resetDefaultStorageClass() {
+    this._defaultStorageClass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultStorageClassInput() {
+    return this._defaultStorageClass;
+  }
+
+  // file_share_name - computed: true, optional: true, required: false
+  private _fileShareName?: string; 
+  public get fileShareName() {
+    return this.getStringAttribute('file_share_name');
+  }
+  public set fileShareName(value: string) {
+    this._fileShareName = value;
+  }
+  public resetFileShareName() {
+    this._fileShareName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileShareNameInput() {
+    return this._fileShareName;
+  }
+
+  // fileshare_id - computed: true, optional: false, required: false
+  public get fileshareId() {
+    return this.getStringAttribute('fileshare_id');
+  }
+
+  // gateway_arn - computed: false, optional: false, required: true
+  private _gatewayArn?: string; 
+  public get gatewayArn() {
+    return this.getStringAttribute('gateway_arn');
+  }
+  public set gatewayArn(value: string) {
+    this._gatewayArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayArnInput() {
+    return this._gatewayArn;
+  }
+
+  // guess_mime_type_enabled - computed: false, optional: true, required: false
+  private _guessMimeTypeEnabled?: boolean | cdktn.IResolvable; 
+  public get guessMimeTypeEnabled() {
+    return this.getBooleanAttribute('guess_mime_type_enabled');
+  }
+  public set guessMimeTypeEnabled(value: boolean | cdktn.IResolvable) {
+    this._guessMimeTypeEnabled = value;
+  }
+  public resetGuessMimeTypeEnabled() {
+    this._guessMimeTypeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get guessMimeTypeEnabledInput() {
+    return this._guessMimeTypeEnabled;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_encrypted - computed: false, optional: true, required: false
+  private _kmsEncrypted?: boolean | cdktn.IResolvable; 
+  public get kmsEncrypted() {
+    return this.getBooleanAttribute('kms_encrypted');
+  }
+  public set kmsEncrypted(value: boolean | cdktn.IResolvable) {
+    this._kmsEncrypted = value;
+  }
+  public resetKmsEncrypted() {
+    this._kmsEncrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsEncryptedInput() {
+    return this._kmsEncrypted;
+  }
+
+  // kms_key_arn - computed: false, optional: true, required: false
+  private _kmsKeyArn?: string; 
+  public get kmsKeyArn() {
+    return this.getStringAttribute('kms_key_arn');
+  }
+  public set kmsKeyArn(value: string) {
+    this._kmsKeyArn = value;
+  }
+  public resetKmsKeyArn() {
+    this._kmsKeyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyArnInput() {
+    return this._kmsKeyArn;
+  }
+
+  // location_arn - computed: false, optional: false, required: true
+  private _locationArn?: string; 
+  public get locationArn() {
+    return this.getStringAttribute('location_arn');
+  }
+  public set locationArn(value: string) {
+    this._locationArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationArnInput() {
+    return this._locationArn;
+  }
+
+  // notification_policy - computed: false, optional: true, required: false
+  private _notificationPolicy?: string; 
+  public get notificationPolicy() {
+    return this.getStringAttribute('notification_policy');
+  }
+  public set notificationPolicy(value: string) {
+    this._notificationPolicy = value;
+  }
+  public resetNotificationPolicy() {
+    this._notificationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationPolicyInput() {
+    return this._notificationPolicy;
+  }
+
+  // object_acl - computed: false, optional: true, required: false
+  private _objectAcl?: string; 
+  public get objectAcl() {
+    return this.getStringAttribute('object_acl');
+  }
+  public set objectAcl(value: string) {
+    this._objectAcl = value;
+  }
+  public resetObjectAcl() {
+    this._objectAcl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectAclInput() {
+    return this._objectAcl;
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+
+  // read_only - computed: false, optional: true, required: false
+  private _readOnly?: boolean | cdktn.IResolvable; 
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+  public set readOnly(value: boolean | cdktn.IResolvable) {
+    this._readOnly = value;
+  }
+  public resetReadOnly() {
+    this._readOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyInput() {
+    return this._readOnly;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // requester_pays - computed: false, optional: true, required: false
+  private _requesterPays?: boolean | cdktn.IResolvable; 
+  public get requesterPays() {
+    return this.getBooleanAttribute('requester_pays');
+  }
+  public set requesterPays(value: boolean | cdktn.IResolvable) {
+    this._requesterPays = value;
+  }
+  public resetRequesterPays() {
+    this._requesterPays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requesterPaysInput() {
+    return this._requesterPays;
+  }
+
+  // role_arn - computed: false, optional: false, required: true
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // squash - computed: false, optional: true, required: false
+  private _squash?: string; 
+  public get squash() {
+    return this.getStringAttribute('squash');
+  }
+  public set squash(value: string) {
+    this._squash = value;
+  }
+  public resetSquash() {
+    this._squash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get squashInput() {
+    return this._squash;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_endpoint_dns_name - computed: false, optional: true, required: false
+  private _vpcEndpointDnsName?: string; 
+  public get vpcEndpointDnsName() {
+    return this.getStringAttribute('vpc_endpoint_dns_name');
+  }
+  public set vpcEndpointDnsName(value: string) {
+    this._vpcEndpointDnsName = value;
+  }
+  public resetVpcEndpointDnsName() {
+    this._vpcEndpointDnsName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcEndpointDnsNameInput() {
+    return this._vpcEndpointDnsName;
+  }
+
+  // cache_attributes - computed: false, optional: true, required: false
+  private _cacheAttributes = new AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference(this, "cache_attributes");
+  public get cacheAttributes() {
+    return this._cacheAttributes;
+  }
+  public putCacheAttributes(value: AwsStoragegatewayNfsFileShare.CacheAttributesProperty) {
+    this._cacheAttributes.internalValue = value;
+  }
+  public resetCacheAttributes() {
+    this._cacheAttributes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheAttributesInput() {
+    return this._cacheAttributes.internalValue;
+  }
+
+  // nfs_file_share_defaults - computed: false, optional: true, required: false
+  private _nfsFileShareDefaults = new AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference(this, "nfs_file_share_defaults");
+  public get nfsFileShareDefaults() {
+    return this._nfsFileShareDefaults;
+  }
+  public putNfsFileShareDefaults(value: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty) {
+    this._nfsFileShareDefaults.internalValue = value;
+  }
+  public resetNfsFileShareDefaults() {
+    this._nfsFileShareDefaults.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsFileShareDefaultsInput() {
+    return this._nfsFileShareDefaults.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsStoragegatewayNfsFileShare.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsStoragegatewayNfsFileShare.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      audit_destination_arn: cdktn.stringToTerraform(this._auditDestinationArn),
+      bucket_region: cdktn.stringToTerraform(this._bucketRegion),
+      client_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._clientList),
+      default_storage_class: cdktn.stringToTerraform(this._defaultStorageClass),
+      file_share_name: cdktn.stringToTerraform(this._fileShareName),
+      gateway_arn: cdktn.stringToTerraform(this._gatewayArn),
+      guess_mime_type_enabled: cdktn.booleanToTerraform(this._guessMimeTypeEnabled),
+      id: cdktn.stringToTerraform(this._id),
+      kms_encrypted: cdktn.booleanToTerraform(this._kmsEncrypted),
+      kms_key_arn: cdktn.stringToTerraform(this._kmsKeyArn),
+      location_arn: cdktn.stringToTerraform(this._locationArn),
+      notification_policy: cdktn.stringToTerraform(this._notificationPolicy),
+      object_acl: cdktn.stringToTerraform(this._objectAcl),
+      read_only: cdktn.booleanToTerraform(this._readOnly),
+      region: cdktn.stringToTerraform(this._region),
+      requester_pays: cdktn.booleanToTerraform(this._requesterPays),
+      role_arn: cdktn.stringToTerraform(this._roleArn),
+      squash: cdktn.stringToTerraform(this._squash),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      vpc_endpoint_dns_name: cdktn.stringToTerraform(this._vpcEndpointDnsName),
+      cache_attributes: awsStoragegatewayNfsFileShareCacheAttributesPropertyToTerraform(this._cacheAttributes.internalValue),
+      nfs_file_share_defaults: awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToTerraform(this._nfsFileShareDefaults.internalValue),
+      timeouts: awsStoragegatewayNfsFileShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      audit_destination_arn: {
+        value: cdktn.stringToHclTerraform(this._auditDestinationArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bucket_region: {
+        value: cdktn.stringToHclTerraform(this._bucketRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_list: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._clientList),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      default_storage_class: {
+        value: cdktn.stringToHclTerraform(this._defaultStorageClass),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      file_share_name: {
+        value: cdktn.stringToHclTerraform(this._fileShareName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_arn: {
+        value: cdktn.stringToHclTerraform(this._gatewayArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      guess_mime_type_enabled: {
+        value: cdktn.booleanToHclTerraform(this._guessMimeTypeEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_encrypted: {
+        value: cdktn.booleanToHclTerraform(this._kmsEncrypted),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      kms_key_arn: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location_arn: {
+        value: cdktn.stringToHclTerraform(this._locationArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notification_policy: {
+        value: cdktn.stringToHclTerraform(this._notificationPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      object_acl: {
+        value: cdktn.stringToHclTerraform(this._objectAcl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      read_only: {
+        value: cdktn.booleanToHclTerraform(this._readOnly),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      requester_pays: {
+        value: cdktn.booleanToHclTerraform(this._requesterPays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      role_arn: {
+        value: cdktn.stringToHclTerraform(this._roleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      squash: {
+        value: cdktn.stringToHclTerraform(this._squash),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_endpoint_dns_name: {
+        value: cdktn.stringToHclTerraform(this._vpcEndpointDnsName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cache_attributes: {
+        value: awsStoragegatewayNfsFileShareCacheAttributesPropertyToHclTerraform(this._cacheAttributes.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsStoragegatewayNfsFileShare.CacheAttributesPropertyList",
+      },
+      nfs_file_share_defaults: {
+        value: awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(this._nfsFileShareDefaults.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyList",
+      },
+      timeouts: {
+        value: awsStoragegatewayNfsFileShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsStoragegatewayNfsFileShare.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference | AwsStoragegatewayNfsFileShare.CacheAttributesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cache_stale_timeout_in_seconds: cdktn.numberToTerraform(struct!.cacheStaleTimeoutInSeconds),
+  }
+}
+
+
+export function awsStoragegatewayNfsFileShareCacheAttributesPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.CacheAttributesPropertyOutputReference | AwsStoragegatewayNfsFileShare.CacheAttributesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cache_stale_timeout_in_seconds: {
+      value: cdktn.numberToHclTerraform(struct!.cacheStaleTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    directory_mode: cdktn.stringToTerraform(struct!.directoryMode),
+    file_mode: cdktn.stringToTerraform(struct!.fileMode),
+    group_id: cdktn.stringToTerraform(struct!.groupId),
+    owner_id: cdktn.stringToTerraform(struct!.ownerId),
+  }
+}
+
+
+export function awsStoragegatewayNfsFileShareNfsFileShareDefaultsPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsPropertyOutputReference | AwsStoragegatewayNfsFileShare.NfsFileShareDefaultsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    directory_mode: {
+      value: cdktn.stringToHclTerraform(struct!.directoryMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    file_mode: {
+      value: cdktn.stringToHclTerraform(struct!.fileMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    group_id: {
+      value: cdktn.stringToHclTerraform(struct!.groupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    owner_id: {
+      value: cdktn.stringToHclTerraform(struct!.ownerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsStoragegatewayNfsFileShareTimeoutsPropertyToTerraform(struct?: AwsStoragegatewayNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsStoragegatewayNfsFileShareTimeoutsPropertyToHclTerraform(struct?: AwsStoragegatewayNfsFileShare.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsStoragegatewayNfsFileShare {
+export interface CacheAttributesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#cache_stale_timeout_in_seconds AwsStoragegatewayNfsFileShare#cache_stale_timeout_in_seconds}
+  */
+  readonly cacheStaleTimeoutInSeconds?: number;
+}
+export class CacheAttributesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CacheAttributesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cacheStaleTimeoutInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cacheStaleTimeoutInSeconds = this._cacheStaleTimeoutInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CacheAttributesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cacheStaleTimeoutInSeconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cacheStaleTimeoutInSeconds = value.cacheStaleTimeoutInSeconds;
+    }
+  }
+
+  // cache_stale_timeout_in_seconds - computed: false, optional: true, required: false
+  private _cacheStaleTimeoutInSeconds?: number; 
+  public get cacheStaleTimeoutInSeconds() {
+    return this.getNumberAttribute('cache_stale_timeout_in_seconds');
+  }
+  public set cacheStaleTimeoutInSeconds(value: number) {
+    this._cacheStaleTimeoutInSeconds = value;
+  }
+  public resetCacheStaleTimeoutInSeconds() {
+    this._cacheStaleTimeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheStaleTimeoutInSecondsInput() {
+    return this._cacheStaleTimeoutInSeconds;
+  }
+}
+export interface NfsFileShareDefaultsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#directory_mode AwsStoragegatewayNfsFileShare#directory_mode}
+  */
+  readonly directoryMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#file_mode AwsStoragegatewayNfsFileShare#file_mode}
+  */
+  readonly fileMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#group_id AwsStoragegatewayNfsFileShare#group_id}
+  */
+  readonly groupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#owner_id AwsStoragegatewayNfsFileShare#owner_id}
+  */
+  readonly ownerId?: string;
+}
+export class NfsFileShareDefaultsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NfsFileShareDefaultsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._directoryMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.directoryMode = this._directoryMode;
+    }
+    if (this._fileMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fileMode = this._fileMode;
+    }
+    if (this._groupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupId = this._groupId;
+    }
+    if (this._ownerId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ownerId = this._ownerId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NfsFileShareDefaultsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._directoryMode = undefined;
+      this._fileMode = undefined;
+      this._groupId = undefined;
+      this._ownerId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._directoryMode = value.directoryMode;
+      this._fileMode = value.fileMode;
+      this._groupId = value.groupId;
+      this._ownerId = value.ownerId;
+    }
+  }
+
+  // directory_mode - computed: false, optional: true, required: false
+  private _directoryMode?: string; 
+  public get directoryMode() {
+    return this.getStringAttribute('directory_mode');
+  }
+  public set directoryMode(value: string) {
+    this._directoryMode = value;
+  }
+  public resetDirectoryMode() {
+    this._directoryMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryModeInput() {
+    return this._directoryMode;
+  }
+
+  // file_mode - computed: false, optional: true, required: false
+  private _fileMode?: string; 
+  public get fileMode() {
+    return this.getStringAttribute('file_mode');
+  }
+  public set fileMode(value: string) {
+    this._fileMode = value;
+  }
+  public resetFileMode() {
+    this._fileMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileModeInput() {
+    return this._fileMode;
+  }
+
+  // group_id - computed: false, optional: true, required: false
+  private _groupId?: string; 
+  public get groupId() {
+    return this.getStringAttribute('group_id');
+  }
+  public set groupId(value: string) {
+    this._groupId = value;
+  }
+  public resetGroupId() {
+    this._groupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIdInput() {
+    return this._groupId;
+  }
+
+  // owner_id - computed: false, optional: true, required: false
+  private _ownerId?: string; 
+  public get ownerId() {
+    return this.getStringAttribute('owner_id');
+  }
+  public set ownerId(value: string) {
+    this._ownerId = value;
+  }
+  public resetOwnerId() {
+    this._ownerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ownerIdInput() {
+    return this._ownerId;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#create AwsStoragegatewayNfsFileShare#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#delete AwsStoragegatewayNfsFileShare#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_nfs_file_share#update AwsStoragegatewayNfsFileShare#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

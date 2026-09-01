@@ -1,0 +1,399 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApplicationinsightsApplicationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_config_enabled AwsApplicationinsightsApplication#auto_config_enabled}
+  */
+  readonly autoConfigEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_create AwsApplicationinsightsApplication#auto_create}
+  */
+  readonly autoCreate?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#cwe_monitor_enabled AwsApplicationinsightsApplication#cwe_monitor_enabled}
+  */
+  readonly cweMonitorEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#grouping_type AwsApplicationinsightsApplication#grouping_type}
+  */
+  readonly groupingType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#id AwsApplicationinsightsApplication#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_center_enabled AwsApplicationinsightsApplication#ops_center_enabled}
+  */
+  readonly opsCenterEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_item_sns_topic_arn AwsApplicationinsightsApplication#ops_item_sns_topic_arn}
+  */
+  readonly opsItemSnsTopicArn?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#region AwsApplicationinsightsApplication#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#resource_group_name AwsApplicationinsightsApplication#resource_group_name}
+  */
+  readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags AwsApplicationinsightsApplication#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags_all AwsApplicationinsightsApplication#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application aws_applicationinsights_application}
+*/
+export class AwsApplicationinsightsApplication extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_applicationinsights_application";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApplicationinsightsApplication resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApplicationinsightsApplication to import
+  * @param importFromId The id of the existing AwsApplicationinsightsApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApplicationinsightsApplication to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_applicationinsights_application", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application aws_applicationinsights_application} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApplicationinsightsApplicationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsApplicationinsightsApplicationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_applicationinsights_application',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._autoConfigEnabled = config.autoConfigEnabled;
+    this._autoCreate = config.autoCreate;
+    this._cweMonitorEnabled = config.cweMonitorEnabled;
+    this._groupingType = config.groupingType;
+    this._id = config.id;
+    this._opsCenterEnabled = config.opsCenterEnabled;
+    this._opsItemSnsTopicArn = config.opsItemSnsTopicArn;
+    this._region = config.region;
+    this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // auto_config_enabled - computed: false, optional: true, required: false
+  private _autoConfigEnabled?: boolean | cdktn.IResolvable; 
+  public get autoConfigEnabled() {
+    return this.getBooleanAttribute('auto_config_enabled');
+  }
+  public set autoConfigEnabled(value: boolean | cdktn.IResolvable) {
+    this._autoConfigEnabled = value;
+  }
+  public resetAutoConfigEnabled() {
+    this._autoConfigEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoConfigEnabledInput() {
+    return this._autoConfigEnabled;
+  }
+
+  // auto_create - computed: false, optional: true, required: false
+  private _autoCreate?: boolean | cdktn.IResolvable; 
+  public get autoCreate() {
+    return this.getBooleanAttribute('auto_create');
+  }
+  public set autoCreate(value: boolean | cdktn.IResolvable) {
+    this._autoCreate = value;
+  }
+  public resetAutoCreate() {
+    this._autoCreate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoCreateInput() {
+    return this._autoCreate;
+  }
+
+  // cwe_monitor_enabled - computed: false, optional: true, required: false
+  private _cweMonitorEnabled?: boolean | cdktn.IResolvable; 
+  public get cweMonitorEnabled() {
+    return this.getBooleanAttribute('cwe_monitor_enabled');
+  }
+  public set cweMonitorEnabled(value: boolean | cdktn.IResolvable) {
+    this._cweMonitorEnabled = value;
+  }
+  public resetCweMonitorEnabled() {
+    this._cweMonitorEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cweMonitorEnabledInput() {
+    return this._cweMonitorEnabled;
+  }
+
+  // grouping_type - computed: false, optional: true, required: false
+  private _groupingType?: string; 
+  public get groupingType() {
+    return this.getStringAttribute('grouping_type');
+  }
+  public set groupingType(value: string) {
+    this._groupingType = value;
+  }
+  public resetGroupingType() {
+    this._groupingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupingTypeInput() {
+    return this._groupingType;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ops_center_enabled - computed: false, optional: true, required: false
+  private _opsCenterEnabled?: boolean | cdktn.IResolvable; 
+  public get opsCenterEnabled() {
+    return this.getBooleanAttribute('ops_center_enabled');
+  }
+  public set opsCenterEnabled(value: boolean | cdktn.IResolvable) {
+    this._opsCenterEnabled = value;
+  }
+  public resetOpsCenterEnabled() {
+    this._opsCenterEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get opsCenterEnabledInput() {
+    return this._opsCenterEnabled;
+  }
+
+  // ops_item_sns_topic_arn - computed: false, optional: true, required: false
+  private _opsItemSnsTopicArn?: string; 
+  public get opsItemSnsTopicArn() {
+    return this.getStringAttribute('ops_item_sns_topic_arn');
+  }
+  public set opsItemSnsTopicArn(value: string) {
+    this._opsItemSnsTopicArn = value;
+  }
+  public resetOpsItemSnsTopicArn() {
+    this._opsItemSnsTopicArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get opsItemSnsTopicArnInput() {
+    return this._opsItemSnsTopicArn;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName?: string; 
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      auto_config_enabled: cdktn.booleanToTerraform(this._autoConfigEnabled),
+      auto_create: cdktn.booleanToTerraform(this._autoCreate),
+      cwe_monitor_enabled: cdktn.booleanToTerraform(this._cweMonitorEnabled),
+      grouping_type: cdktn.stringToTerraform(this._groupingType),
+      id: cdktn.stringToTerraform(this._id),
+      ops_center_enabled: cdktn.booleanToTerraform(this._opsCenterEnabled),
+      ops_item_sns_topic_arn: cdktn.stringToTerraform(this._opsItemSnsTopicArn),
+      region: cdktn.stringToTerraform(this._region),
+      resource_group_name: cdktn.stringToTerraform(this._resourceGroupName),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_config_enabled: {
+        value: cdktn.booleanToHclTerraform(this._autoConfigEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      auto_create: {
+        value: cdktn.booleanToHclTerraform(this._autoCreate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cwe_monitor_enabled: {
+        value: cdktn.booleanToHclTerraform(this._cweMonitorEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      grouping_type: {
+        value: cdktn.stringToHclTerraform(this._groupingType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ops_center_enabled: {
+        value: cdktn.booleanToHclTerraform(this._opsCenterEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ops_item_sns_topic_arn: {
+        value: cdktn.stringToHclTerraform(this._opsItemSnsTopicArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktn.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

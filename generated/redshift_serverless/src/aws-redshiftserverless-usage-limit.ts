@@ -1,0 +1,281 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsRedshiftserverlessUsageLimitConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#amount AwsRedshiftserverlessUsageLimit#amount}
+  */
+  readonly amount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#breach_action AwsRedshiftserverlessUsageLimit#breach_action}
+  */
+  readonly breachAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#id AwsRedshiftserverlessUsageLimit#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#period AwsRedshiftserverlessUsageLimit#period}
+  */
+  readonly period?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#region AwsRedshiftserverlessUsageLimit#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#resource_arn AwsRedshiftserverlessUsageLimit#resource_arn}
+  */
+  readonly resourceArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#usage_type AwsRedshiftserverlessUsageLimit#usage_type}
+  */
+  readonly usageType: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit aws_redshiftserverless_usage_limit}
+*/
+export class AwsRedshiftserverlessUsageLimit extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_redshiftserverless_usage_limit";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsRedshiftserverlessUsageLimit resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsRedshiftserverlessUsageLimit to import
+  * @param importFromId The id of the existing AwsRedshiftserverlessUsageLimit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRedshiftserverlessUsageLimit to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_usage_limit", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_usage_limit aws_redshiftserverless_usage_limit} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsRedshiftserverlessUsageLimitConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsRedshiftserverlessUsageLimitConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_redshiftserverless_usage_limit',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._amount = config.amount;
+    this._breachAction = config.breachAction;
+    this._id = config.id;
+    this._period = config.period;
+    this._region = config.region;
+    this._resourceArn = config.resourceArn;
+    this._usageType = config.usageType;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // amount - computed: false, optional: false, required: true
+  private _amount?: number; 
+  public get amount() {
+    return this.getNumberAttribute('amount');
+  }
+  public set amount(value: number) {
+    this._amount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get amountInput() {
+    return this._amount;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // breach_action - computed: false, optional: true, required: false
+  private _breachAction?: string; 
+  public get breachAction() {
+    return this.getStringAttribute('breach_action');
+  }
+  public set breachAction(value: string) {
+    this._breachAction = value;
+  }
+  public resetBreachAction() {
+    this._breachAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get breachActionInput() {
+    return this._breachAction;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // period - computed: false, optional: true, required: false
+  private _period?: string; 
+  public get period() {
+    return this.getStringAttribute('period');
+  }
+  public set period(value: string) {
+    this._period = value;
+  }
+  public resetPeriod() {
+    this._period = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodInput() {
+    return this._period;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // resource_arn - computed: false, optional: false, required: true
+  private _resourceArn?: string; 
+  public get resourceArn() {
+    return this.getStringAttribute('resource_arn');
+  }
+  public set resourceArn(value: string) {
+    this._resourceArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceArnInput() {
+    return this._resourceArn;
+  }
+
+  // usage_type - computed: false, optional: false, required: true
+  private _usageType?: string; 
+  public get usageType() {
+    return this.getStringAttribute('usage_type');
+  }
+  public set usageType(value: string) {
+    this._usageType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usageTypeInput() {
+    return this._usageType;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      amount: cdktn.numberToTerraform(this._amount),
+      breach_action: cdktn.stringToTerraform(this._breachAction),
+      id: cdktn.stringToTerraform(this._id),
+      period: cdktn.stringToTerraform(this._period),
+      region: cdktn.stringToTerraform(this._region),
+      resource_arn: cdktn.stringToTerraform(this._resourceArn),
+      usage_type: cdktn.stringToTerraform(this._usageType),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      amount: {
+        value: cdktn.numberToHclTerraform(this._amount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      breach_action: {
+        value: cdktn.stringToHclTerraform(this._breachAction),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      period: {
+        value: cdktn.stringToHclTerraform(this._period),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_arn: {
+        value: cdktn.stringToHclTerraform(this._resourceArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      usage_type: {
+        value: cdktn.stringToHclTerraform(this._usageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

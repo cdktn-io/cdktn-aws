@@ -1,0 +1,1449 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsEcsTaskSetConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#cluster AwsEcsTaskSet#cluster}
+  */
+  readonly cluster: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#external_id AwsEcsTaskSet#external_id}
+  */
+  readonly externalId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#force_delete AwsEcsTaskSet#force_delete}
+  */
+  readonly forceDelete?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#id AwsEcsTaskSet#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#launch_type AwsEcsTaskSet#launch_type}
+  */
+  readonly launchType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#platform_version AwsEcsTaskSet#platform_version}
+  */
+  readonly platformVersion?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#region AwsEcsTaskSet#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service AwsEcsTaskSet#service}
+  */
+  readonly service: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags AwsEcsTaskSet#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags_all AwsEcsTaskSet#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#task_definition AwsEcsTaskSet#task_definition}
+  */
+  readonly taskDefinition: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable AwsEcsTaskSet#wait_until_stable}
+  */
+  readonly waitUntilStable?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable_timeout AwsEcsTaskSet#wait_until_stable_timeout}
+  */
+  readonly waitUntilStableTimeout?: string;
+  /**
+  * capacity_provider_strategy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider_strategy AwsEcsTaskSet#capacity_provider_strategy}
+  */
+  readonly capacityProviderStrategy?: AwsEcsTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
+  /**
+  * load_balancer block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer AwsEcsTaskSet#load_balancer}
+  */
+  readonly loadBalancer?: AwsEcsTaskSet.LoadBalancerProperty[] | cdktn.IResolvable;
+  /**
+  * network_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#network_configuration AwsEcsTaskSet#network_configuration}
+  */
+  readonly networkConfiguration?: AwsEcsTaskSet.NetworkConfigurationProperty;
+  /**
+  * scale block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#scale AwsEcsTaskSet#scale}
+  */
+  readonly scale?: AwsEcsTaskSet.ScaleProperty;
+  /**
+  * service_registries block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service_registries AwsEcsTaskSet#service_registries}
+  */
+  readonly serviceRegistries?: AwsEcsTaskSet.ServiceRegistriesProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set aws_ecs_task_set}
+*/
+export class AwsEcsTaskSet extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ecs_task_set";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsEcsTaskSet resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsEcsTaskSet to import
+  * @param importFromId The id of the existing AwsEcsTaskSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEcsTaskSet to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_task_set", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set aws_ecs_task_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsEcsTaskSetConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsEcsTaskSetConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ecs_task_set',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._cluster = config.cluster;
+    this._externalId = config.externalId;
+    this._forceDelete = config.forceDelete;
+    this._id = config.id;
+    this._launchType = config.launchType;
+    this._platformVersion = config.platformVersion;
+    this._region = config.region;
+    this._service = config.service;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._taskDefinition = config.taskDefinition;
+    this._waitUntilStable = config.waitUntilStable;
+    this._waitUntilStableTimeout = config.waitUntilStableTimeout;
+    this._capacityProviderStrategy.internalValue = config.capacityProviderStrategy;
+    this._loadBalancer.internalValue = config.loadBalancer;
+    this._networkConfiguration.internalValue = config.networkConfiguration;
+    this._scale.internalValue = config.scale;
+    this._serviceRegistries.internalValue = config.serviceRegistries;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // cluster - computed: false, optional: false, required: true
+  private _cluster?: string; 
+  public get cluster() {
+    return this.getStringAttribute('cluster');
+  }
+  public set cluster(value: string) {
+    this._cluster = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterInput() {
+    return this._cluster;
+  }
+
+  // external_id - computed: true, optional: true, required: false
+  private _externalId?: string; 
+  public get externalId() {
+    return this.getStringAttribute('external_id');
+  }
+  public set externalId(value: string) {
+    this._externalId = value;
+  }
+  public resetExternalId() {
+    this._externalId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalIdInput() {
+    return this._externalId;
+  }
+
+  // force_delete - computed: false, optional: true, required: false
+  private _forceDelete?: boolean | cdktn.IResolvable; 
+  public get forceDelete() {
+    return this.getBooleanAttribute('force_delete');
+  }
+  public set forceDelete(value: boolean | cdktn.IResolvable) {
+    this._forceDelete = value;
+  }
+  public resetForceDelete() {
+    this._forceDelete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDeleteInput() {
+    return this._forceDelete;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // launch_type - computed: true, optional: true, required: false
+  private _launchType?: string; 
+  public get launchType() {
+    return this.getStringAttribute('launch_type');
+  }
+  public set launchType(value: string) {
+    this._launchType = value;
+  }
+  public resetLaunchType() {
+    this._launchType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get launchTypeInput() {
+    return this._launchType;
+  }
+
+  // platform_version - computed: true, optional: true, required: false
+  private _platformVersion?: string; 
+  public get platformVersion() {
+    return this.getStringAttribute('platform_version');
+  }
+  public set platformVersion(value: string) {
+    this._platformVersion = value;
+  }
+  public resetPlatformVersion() {
+    this._platformVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformVersionInput() {
+    return this._platformVersion;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+
+  // stability_status - computed: true, optional: false, required: false
+  public get stabilityStatus() {
+    return this.getStringAttribute('stability_status');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // task_definition - computed: false, optional: false, required: true
+  private _taskDefinition?: string; 
+  public get taskDefinition() {
+    return this.getStringAttribute('task_definition');
+  }
+  public set taskDefinition(value: string) {
+    this._taskDefinition = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskDefinitionInput() {
+    return this._taskDefinition;
+  }
+
+  // task_set_id - computed: true, optional: false, required: false
+  public get taskSetId() {
+    return this.getStringAttribute('task_set_id');
+  }
+
+  // wait_until_stable - computed: false, optional: true, required: false
+  private _waitUntilStable?: boolean | cdktn.IResolvable; 
+  public get waitUntilStable() {
+    return this.getBooleanAttribute('wait_until_stable');
+  }
+  public set waitUntilStable(value: boolean | cdktn.IResolvable) {
+    this._waitUntilStable = value;
+  }
+  public resetWaitUntilStable() {
+    this._waitUntilStable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitUntilStableInput() {
+    return this._waitUntilStable;
+  }
+
+  // wait_until_stable_timeout - computed: false, optional: true, required: false
+  private _waitUntilStableTimeout?: string; 
+  public get waitUntilStableTimeout() {
+    return this.getStringAttribute('wait_until_stable_timeout');
+  }
+  public set waitUntilStableTimeout(value: string) {
+    this._waitUntilStableTimeout = value;
+  }
+  public resetWaitUntilStableTimeout() {
+    this._waitUntilStableTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitUntilStableTimeoutInput() {
+    return this._waitUntilStableTimeout;
+  }
+
+  // capacity_provider_strategy - computed: false, optional: true, required: false
+  private _capacityProviderStrategy = new AwsEcsTaskSet.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
+  public get capacityProviderStrategy() {
+    return this._capacityProviderStrategy;
+  }
+  public putCapacityProviderStrategy(value: AwsEcsTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
+    this._capacityProviderStrategy.internalValue = value;
+  }
+  public resetCapacityProviderStrategy() {
+    this._capacityProviderStrategy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityProviderStrategyInput() {
+    return this._capacityProviderStrategy.internalValue;
+  }
+
+  // load_balancer - computed: false, optional: true, required: false
+  private _loadBalancer = new AwsEcsTaskSet.LoadBalancerPropertyList(this, "load_balancer", true);
+  public get loadBalancer() {
+    return this._loadBalancer;
+  }
+  public putLoadBalancer(value: AwsEcsTaskSet.LoadBalancerProperty[] | cdktn.IResolvable) {
+    this._loadBalancer.internalValue = value;
+  }
+  public resetLoadBalancer() {
+    this._loadBalancer.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerInput() {
+    return this._loadBalancer.internalValue;
+  }
+
+  // network_configuration - computed: false, optional: true, required: false
+  private _networkConfiguration = new AwsEcsTaskSet.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  public get networkConfiguration() {
+    return this._networkConfiguration;
+  }
+  public putNetworkConfiguration(value: AwsEcsTaskSet.NetworkConfigurationProperty) {
+    this._networkConfiguration.internalValue = value;
+  }
+  public resetNetworkConfiguration() {
+    this._networkConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkConfigurationInput() {
+    return this._networkConfiguration.internalValue;
+  }
+
+  // scale - computed: false, optional: true, required: false
+  private _scale = new AwsEcsTaskSet.ScalePropertyOutputReference(this, "scale");
+  public get scale() {
+    return this._scale;
+  }
+  public putScale(value: AwsEcsTaskSet.ScaleProperty) {
+    this._scale.internalValue = value;
+  }
+  public resetScale() {
+    this._scale.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleInput() {
+    return this._scale.internalValue;
+  }
+
+  // service_registries - computed: false, optional: true, required: false
+  private _serviceRegistries = new AwsEcsTaskSet.ServiceRegistriesPropertyOutputReference(this, "service_registries");
+  public get serviceRegistries() {
+    return this._serviceRegistries;
+  }
+  public putServiceRegistries(value: AwsEcsTaskSet.ServiceRegistriesProperty) {
+    this._serviceRegistries.internalValue = value;
+  }
+  public resetServiceRegistries() {
+    this._serviceRegistries.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRegistriesInput() {
+    return this._serviceRegistries.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cluster: cdktn.stringToTerraform(this._cluster),
+      external_id: cdktn.stringToTerraform(this._externalId),
+      force_delete: cdktn.booleanToTerraform(this._forceDelete),
+      id: cdktn.stringToTerraform(this._id),
+      launch_type: cdktn.stringToTerraform(this._launchType),
+      platform_version: cdktn.stringToTerraform(this._platformVersion),
+      region: cdktn.stringToTerraform(this._region),
+      service: cdktn.stringToTerraform(this._service),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      task_definition: cdktn.stringToTerraform(this._taskDefinition),
+      wait_until_stable: cdktn.booleanToTerraform(this._waitUntilStable),
+      wait_until_stable_timeout: cdktn.stringToTerraform(this._waitUntilStableTimeout),
+      capacity_provider_strategy: cdktn.listMapper(awsEcsTaskSetCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
+      load_balancer: cdktn.listMapper(awsEcsTaskSetLoadBalancerPropertyToTerraform, true)(this._loadBalancer.internalValue),
+      network_configuration: awsEcsTaskSetNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      scale: awsEcsTaskSetScalePropertyToTerraform(this._scale.internalValue),
+      service_registries: awsEcsTaskSetServiceRegistriesPropertyToTerraform(this._serviceRegistries.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster: {
+        value: cdktn.stringToHclTerraform(this._cluster),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      external_id: {
+        value: cdktn.stringToHclTerraform(this._externalId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      force_delete: {
+        value: cdktn.booleanToHclTerraform(this._forceDelete),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      launch_type: {
+        value: cdktn.stringToHclTerraform(this._launchType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      platform_version: {
+        value: cdktn.stringToHclTerraform(this._platformVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service: {
+        value: cdktn.stringToHclTerraform(this._service),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      task_definition: {
+        value: cdktn.stringToHclTerraform(this._taskDefinition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wait_until_stable: {
+        value: cdktn.booleanToHclTerraform(this._waitUntilStable),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      wait_until_stable_timeout: {
+        value: cdktn.stringToHclTerraform(this._waitUntilStableTimeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      capacity_provider_strategy: {
+        value: cdktn.listMapperHcl(awsEcsTaskSetCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsEcsTaskSet.CapacityProviderStrategyPropertyList",
+      },
+      load_balancer: {
+        value: cdktn.listMapperHcl(awsEcsTaskSetLoadBalancerPropertyToHclTerraform, true)(this._loadBalancer.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsEcsTaskSet.LoadBalancerPropertyList",
+      },
+      network_configuration: {
+        value: awsEcsTaskSetNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEcsTaskSet.NetworkConfigurationPropertyList",
+      },
+      scale: {
+        value: awsEcsTaskSetScalePropertyToHclTerraform(this._scale.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEcsTaskSet.ScalePropertyList",
+      },
+      service_registries: {
+        value: awsEcsTaskSetServiceRegistriesPropertyToHclTerraform(this._serviceRegistries.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEcsTaskSet.ServiceRegistriesPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsEcsTaskSetCapacityProviderStrategyPropertyToTerraform(struct?: AwsEcsTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    base: cdktn.numberToTerraform(struct!.base),
+    capacity_provider: cdktn.stringToTerraform(struct!.capacityProvider),
+    weight: cdktn.numberToTerraform(struct!.weight),
+  }
+}
+
+
+export function awsEcsTaskSetCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsEcsTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    base: {
+      value: cdktn.numberToHclTerraform(struct!.base),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    capacity_provider: {
+      value: cdktn.stringToHclTerraform(struct!.capacityProvider),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    weight: {
+      value: cdktn.numberToHclTerraform(struct!.weight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEcsTaskSetLoadBalancerPropertyToTerraform(struct?: AwsEcsTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    container_name: cdktn.stringToTerraform(struct!.containerName),
+    container_port: cdktn.numberToTerraform(struct!.containerPort),
+    load_balancer_name: cdktn.stringToTerraform(struct!.loadBalancerName),
+    target_group_arn: cdktn.stringToTerraform(struct!.targetGroupArn),
+  }
+}
+
+
+export function awsEcsTaskSetLoadBalancerPropertyToHclTerraform(struct?: AwsEcsTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    container_name: {
+      value: cdktn.stringToHclTerraform(struct!.containerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    container_port: {
+      value: cdktn.numberToHclTerraform(struct!.containerPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    load_balancer_name: {
+      value: cdktn.stringToHclTerraform(struct!.loadBalancerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_group_arn: {
+      value: cdktn.stringToHclTerraform(struct!.targetGroupArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEcsTaskSetNetworkConfigurationPropertyToTerraform(struct?: AwsEcsTaskSet.NetworkConfigurationPropertyOutputReference | AwsEcsTaskSet.NetworkConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    assign_public_ip: cdktn.booleanToTerraform(struct!.assignPublicIp),
+    security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroups),
+    subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnets),
+  }
+}
+
+
+export function awsEcsTaskSetNetworkConfigurationPropertyToHclTerraform(struct?: AwsEcsTaskSet.NetworkConfigurationPropertyOutputReference | AwsEcsTaskSet.NetworkConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    assign_public_ip: {
+      value: cdktn.booleanToHclTerraform(struct!.assignPublicIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    security_groups: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.securityGroups),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnets: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnets),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEcsTaskSetScalePropertyToTerraform(struct?: AwsEcsTaskSet.ScalePropertyOutputReference | AwsEcsTaskSet.ScaleProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    unit: cdktn.stringToTerraform(struct!.unit),
+    value: cdktn.numberToTerraform(struct!.value),
+  }
+}
+
+
+export function awsEcsTaskSetScalePropertyToHclTerraform(struct?: AwsEcsTaskSet.ScalePropertyOutputReference | AwsEcsTaskSet.ScaleProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    unit: {
+      value: cdktn.stringToHclTerraform(struct!.unit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.numberToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEcsTaskSetServiceRegistriesPropertyToTerraform(struct?: AwsEcsTaskSet.ServiceRegistriesPropertyOutputReference | AwsEcsTaskSet.ServiceRegistriesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    container_name: cdktn.stringToTerraform(struct!.containerName),
+    container_port: cdktn.numberToTerraform(struct!.containerPort),
+    port: cdktn.numberToTerraform(struct!.port),
+    registry_arn: cdktn.stringToTerraform(struct!.registryArn),
+  }
+}
+
+
+export function awsEcsTaskSetServiceRegistriesPropertyToHclTerraform(struct?: AwsEcsTaskSet.ServiceRegistriesPropertyOutputReference | AwsEcsTaskSet.ServiceRegistriesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    container_name: {
+      value: cdktn.stringToHclTerraform(struct!.containerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    container_port: {
+      value: cdktn.numberToHclTerraform(struct!.containerPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port: {
+      value: cdktn.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    registry_arn: {
+      value: cdktn.stringToHclTerraform(struct!.registryArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsEcsTaskSet {
+export interface CapacityProviderStrategyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#base AwsEcsTaskSet#base}
+  */
+  readonly base?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider AwsEcsTaskSet#capacity_provider}
+  */
+  readonly capacityProvider: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#weight AwsEcsTaskSet#weight}
+  */
+  readonly weight: number;
+}
+export class CapacityProviderStrategyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CapacityProviderStrategyProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._base !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.base = this._base;
+    }
+    if (this._capacityProvider !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityProvider = this._capacityProvider;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CapacityProviderStrategyProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._base = undefined;
+      this._capacityProvider = undefined;
+      this._weight = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._base = value.base;
+      this._capacityProvider = value.capacityProvider;
+      this._weight = value.weight;
+    }
+  }
+
+  // base - computed: false, optional: true, required: false
+  private _base?: number; 
+  public get base() {
+    return this.getNumberAttribute('base');
+  }
+  public set base(value: number) {
+    this._base = value;
+  }
+  public resetBase() {
+    this._base = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseInput() {
+    return this._base;
+  }
+
+  // capacity_provider - computed: false, optional: false, required: true
+  private _capacityProvider?: string; 
+  public get capacityProvider() {
+    return this.getStringAttribute('capacity_provider');
+  }
+  public set capacityProvider(value: string) {
+    this._capacityProvider = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityProviderInput() {
+    return this._capacityProvider;
+  }
+
+  // weight - computed: false, optional: false, required: true
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+}
+
+export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
+  public internalValue? : CapacityProviderStrategyProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CapacityProviderStrategyPropertyOutputReference {
+    return new CapacityProviderStrategyPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LoadBalancerProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name AwsEcsTaskSet#container_name}
+  */
+  readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port AwsEcsTaskSet#container_port}
+  */
+  readonly containerPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer_name AwsEcsTaskSet#load_balancer_name}
+  */
+  readonly loadBalancerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#target_group_arn AwsEcsTaskSet#target_group_arn}
+  */
+  readonly targetGroupArn?: string;
+}
+export class LoadBalancerPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LoadBalancerProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._containerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerName = this._containerName;
+    }
+    if (this._containerPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerPort = this._containerPort;
+    }
+    if (this._loadBalancerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancerName = this._loadBalancerName;
+    }
+    if (this._targetGroupArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetGroupArn = this._targetGroupArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoadBalancerProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._containerName = undefined;
+      this._containerPort = undefined;
+      this._loadBalancerName = undefined;
+      this._targetGroupArn = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._containerName = value.containerName;
+      this._containerPort = value.containerPort;
+      this._loadBalancerName = value.loadBalancerName;
+      this._targetGroupArn = value.targetGroupArn;
+    }
+  }
+
+  // container_name - computed: false, optional: false, required: true
+  private _containerName?: string; 
+  public get containerName() {
+    return this.getStringAttribute('container_name');
+  }
+  public set containerName(value: string) {
+    this._containerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerNameInput() {
+    return this._containerName;
+  }
+
+  // container_port - computed: false, optional: true, required: false
+  private _containerPort?: number; 
+  public get containerPort() {
+    return this.getNumberAttribute('container_port');
+  }
+  public set containerPort(value: number) {
+    this._containerPort = value;
+  }
+  public resetContainerPort() {
+    this._containerPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerPortInput() {
+    return this._containerPort;
+  }
+
+  // load_balancer_name - computed: false, optional: true, required: false
+  private _loadBalancerName?: string; 
+  public get loadBalancerName() {
+    return this.getStringAttribute('load_balancer_name');
+  }
+  public set loadBalancerName(value: string) {
+    this._loadBalancerName = value;
+  }
+  public resetLoadBalancerName() {
+    this._loadBalancerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerNameInput() {
+    return this._loadBalancerName;
+  }
+
+  // target_group_arn - computed: false, optional: true, required: false
+  private _targetGroupArn?: string; 
+  public get targetGroupArn() {
+    return this.getStringAttribute('target_group_arn');
+  }
+  public set targetGroupArn(value: string) {
+    this._targetGroupArn = value;
+  }
+  public resetTargetGroupArn() {
+    this._targetGroupArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetGroupArnInput() {
+    return this._targetGroupArn;
+  }
+}
+
+export class LoadBalancerPropertyList extends cdktn.ComplexList {
+  public internalValue? : LoadBalancerProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LoadBalancerPropertyOutputReference {
+    return new LoadBalancerPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NetworkConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#assign_public_ip AwsEcsTaskSet#assign_public_ip}
+  */
+  readonly assignPublicIp?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#security_groups AwsEcsTaskSet#security_groups}
+  */
+  readonly securityGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#subnets AwsEcsTaskSet#subnets}
+  */
+  readonly subnets: string[];
+}
+export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._assignPublicIp !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.assignPublicIp = this._assignPublicIp;
+    }
+    if (this._securityGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroups = this._securityGroups;
+    }
+    if (this._subnets !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnets = this._subnets;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._assignPublicIp = undefined;
+      this._securityGroups = undefined;
+      this._subnets = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._assignPublicIp = value.assignPublicIp;
+      this._securityGroups = value.securityGroups;
+      this._subnets = value.subnets;
+    }
+  }
+
+  // assign_public_ip - computed: false, optional: true, required: false
+  private _assignPublicIp?: boolean | cdktn.IResolvable; 
+  public get assignPublicIp() {
+    return this.getBooleanAttribute('assign_public_ip');
+  }
+  public set assignPublicIp(value: boolean | cdktn.IResolvable) {
+    this._assignPublicIp = value;
+  }
+  public resetAssignPublicIp() {
+    this._assignPublicIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assignPublicIpInput() {
+    return this._assignPublicIp;
+  }
+
+  // security_groups - computed: false, optional: true, required: false
+  private _securityGroups?: string[]; 
+  public get securityGroups() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_groups'));
+  }
+  public set securityGroups(value: string[]) {
+    this._securityGroups = value;
+  }
+  public resetSecurityGroups() {
+    this._securityGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupsInput() {
+    return this._securityGroups;
+  }
+
+  // subnets - computed: false, optional: false, required: true
+  private _subnets?: string[]; 
+  public get subnets() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnets'));
+  }
+  public set subnets(value: string[]) {
+    this._subnets = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetsInput() {
+    return this._subnets;
+  }
+}
+export interface ScaleProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#unit AwsEcsTaskSet#unit}
+  */
+  readonly unit?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#value AwsEcsTaskSet#value}
+  */
+  readonly value?: number;
+}
+export class ScalePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ScaleProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._unit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unit = this._unit;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ScaleProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._unit = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._unit = value.unit;
+      this._value = value.value;
+    }
+  }
+
+  // unit - computed: false, optional: true, required: false
+  private _unit?: string; 
+  public get unit() {
+    return this.getStringAttribute('unit');
+  }
+  public set unit(value: string) {
+    this._unit = value;
+  }
+  public resetUnit() {
+    this._unit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unitInput() {
+    return this._unit;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+export interface ServiceRegistriesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name AwsEcsTaskSet#container_name}
+  */
+  readonly containerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port AwsEcsTaskSet#container_port}
+  */
+  readonly containerPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#port AwsEcsTaskSet#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#registry_arn AwsEcsTaskSet#registry_arn}
+  */
+  readonly registryArn: string;
+}
+export class ServiceRegistriesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServiceRegistriesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._containerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerName = this._containerName;
+    }
+    if (this._containerPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerPort = this._containerPort;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._registryArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.registryArn = this._registryArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceRegistriesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._containerName = undefined;
+      this._containerPort = undefined;
+      this._port = undefined;
+      this._registryArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._containerName = value.containerName;
+      this._containerPort = value.containerPort;
+      this._port = value.port;
+      this._registryArn = value.registryArn;
+    }
+  }
+
+  // container_name - computed: false, optional: true, required: false
+  private _containerName?: string; 
+  public get containerName() {
+    return this.getStringAttribute('container_name');
+  }
+  public set containerName(value: string) {
+    this._containerName = value;
+  }
+  public resetContainerName() {
+    this._containerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerNameInput() {
+    return this._containerName;
+  }
+
+  // container_port - computed: false, optional: true, required: false
+  private _containerPort?: number; 
+  public get containerPort() {
+    return this.getNumberAttribute('container_port');
+  }
+  public set containerPort(value: number) {
+    this._containerPort = value;
+  }
+  public resetContainerPort() {
+    this._containerPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerPortInput() {
+    return this._containerPort;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // registry_arn - computed: false, optional: false, required: true
+  private _registryArn?: string; 
+  public get registryArn() {
+    return this.getStringAttribute('registry_arn');
+  }
+  public set registryArn(value: string) {
+    this._registryArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registryArnInput() {
+    return this._registryArn;
+  }
+}
+}

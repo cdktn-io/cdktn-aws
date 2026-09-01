@@ -1,0 +1,1857 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsLightsailDistributionConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * The bundle ID to use for the distribution.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#bundle_id AwsLightsailDistribution#bundle_id}
+  */
+  readonly bundleId: string;
+  /**
+  * The name of the SSL/TLS certificate attached to the distribution, if any.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#certificate_name AwsLightsailDistribution#certificate_name}
+  */
+  readonly certificateName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#id AwsLightsailDistribution#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * The IP address type of the distribution.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#ip_address_type AwsLightsailDistribution#ip_address_type}
+  */
+  readonly ipAddressType?: string;
+  /**
+  * Indicates whether the distribution is enabled.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#is_enabled AwsLightsailDistribution#is_enabled}
+  */
+  readonly isEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * The name of the distribution.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name AwsLightsailDistribution#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region AwsLightsailDistribution#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags AwsLightsailDistribution#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#tags_all AwsLightsailDistribution#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * cache_behavior block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior AwsLightsailDistribution#cache_behavior}
+  */
+  readonly cacheBehavior?: AwsLightsailDistribution.CacheBehaviorProperty[] | cdktn.IResolvable;
+  /**
+  * cache_behavior_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cache_behavior_settings AwsLightsailDistribution#cache_behavior_settings}
+  */
+  readonly cacheBehaviorSettings?: AwsLightsailDistribution.CacheBehaviorSettingsProperty;
+  /**
+  * default_cache_behavior block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_cache_behavior AwsLightsailDistribution#default_cache_behavior}
+  */
+  readonly defaultCacheBehavior: AwsLightsailDistribution.DefaultCacheBehaviorProperty;
+  /**
+  * origin block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#origin AwsLightsailDistribution#origin}
+  */
+  readonly origin: AwsLightsailDistribution.OriginProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#timeouts AwsLightsailDistribution#timeouts}
+  */
+  readonly timeouts?: AwsLightsailDistribution.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution aws_lightsail_distribution}
+*/
+export class AwsLightsailDistribution extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_lightsail_distribution";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsLightsailDistribution resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsLightsailDistribution to import
+  * @param importFromId The id of the existing AwsLightsailDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLightsailDistribution to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_distribution", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution aws_lightsail_distribution} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsLightsailDistributionConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsLightsailDistributionConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_lightsail_distribution',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._bundleId = config.bundleId;
+    this._certificateName = config.certificateName;
+    this._id = config.id;
+    this._ipAddressType = config.ipAddressType;
+    this._isEnabled = config.isEnabled;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._cacheBehavior.internalValue = config.cacheBehavior;
+    this._cacheBehaviorSettings.internalValue = config.cacheBehaviorSettings;
+    this._defaultCacheBehavior.internalValue = config.defaultCacheBehavior;
+    this._origin.internalValue = config.origin;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // alternative_domain_names - computed: true, optional: false, required: false
+  public get alternativeDomainNames() {
+    return this.getListAttribute('alternative_domain_names');
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // bundle_id - computed: false, optional: false, required: true
+  private _bundleId?: string; 
+  public get bundleId() {
+    return this.getStringAttribute('bundle_id');
+  }
+  public set bundleId(value: string) {
+    this._bundleId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bundleIdInput() {
+    return this._bundleId;
+  }
+
+  // certificate_name - computed: false, optional: true, required: false
+  private _certificateName?: string; 
+  public get certificateName() {
+    return this.getStringAttribute('certificate_name');
+  }
+  public set certificateName(value: string) {
+    this._certificateName = value;
+  }
+  public resetCertificateName() {
+    this._certificateName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateNameInput() {
+    return this._certificateName;
+  }
+
+  // created_at - computed: true, optional: false, required: false
+  public get createdAt() {
+    return this.getStringAttribute('created_at');
+  }
+
+  // domain_name - computed: true, optional: false, required: false
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ip_address_type - computed: false, optional: true, required: false
+  private _ipAddressType?: string; 
+  public get ipAddressType() {
+    return this.getStringAttribute('ip_address_type');
+  }
+  public set ipAddressType(value: string) {
+    this._ipAddressType = value;
+  }
+  public resetIpAddressType() {
+    this._ipAddressType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressTypeInput() {
+    return this._ipAddressType;
+  }
+
+  // is_enabled - computed: false, optional: true, required: false
+  private _isEnabled?: boolean | cdktn.IResolvable; 
+  public get isEnabled() {
+    return this.getBooleanAttribute('is_enabled');
+  }
+  public set isEnabled(value: boolean | cdktn.IResolvable) {
+    this._isEnabled = value;
+  }
+  public resetIsEnabled() {
+    this._isEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isEnabledInput() {
+    return this._isEnabled;
+  }
+
+  // location - computed: true, optional: false, required: false
+  private _location = new AwsLightsailDistribution.LocationPropertyList(this, "location", false);
+  public get location() {
+    return this._location;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // origin_public_dns - computed: true, optional: false, required: false
+  public get originPublicDns() {
+    return this.getStringAttribute('origin_public_dns');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // resource_type - computed: true, optional: false, required: false
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // support_code - computed: true, optional: false, required: false
+  public get supportCode() {
+    return this.getStringAttribute('support_code');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // cache_behavior - computed: false, optional: true, required: false
+  private _cacheBehavior = new AwsLightsailDistribution.CacheBehaviorPropertyList(this, "cache_behavior", true);
+  public get cacheBehavior() {
+    return this._cacheBehavior;
+  }
+  public putCacheBehavior(value: AwsLightsailDistribution.CacheBehaviorProperty[] | cdktn.IResolvable) {
+    this._cacheBehavior.internalValue = value;
+  }
+  public resetCacheBehavior() {
+    this._cacheBehavior.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheBehaviorInput() {
+    return this._cacheBehavior.internalValue;
+  }
+
+  // cache_behavior_settings - computed: false, optional: true, required: false
+  private _cacheBehaviorSettings = new AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference(this, "cache_behavior_settings");
+  public get cacheBehaviorSettings() {
+    return this._cacheBehaviorSettings;
+  }
+  public putCacheBehaviorSettings(value: AwsLightsailDistribution.CacheBehaviorSettingsProperty) {
+    this._cacheBehaviorSettings.internalValue = value;
+  }
+  public resetCacheBehaviorSettings() {
+    this._cacheBehaviorSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheBehaviorSettingsInput() {
+    return this._cacheBehaviorSettings.internalValue;
+  }
+
+  // default_cache_behavior - computed: false, optional: false, required: true
+  private _defaultCacheBehavior = new AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference(this, "default_cache_behavior");
+  public get defaultCacheBehavior() {
+    return this._defaultCacheBehavior;
+  }
+  public putDefaultCacheBehavior(value: AwsLightsailDistribution.DefaultCacheBehaviorProperty) {
+    this._defaultCacheBehavior.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultCacheBehaviorInput() {
+    return this._defaultCacheBehavior.internalValue;
+  }
+
+  // origin - computed: false, optional: false, required: true
+  private _origin = new AwsLightsailDistribution.OriginPropertyOutputReference(this, "origin");
+  public get origin() {
+    return this._origin;
+  }
+  public putOrigin(value: AwsLightsailDistribution.OriginProperty) {
+    this._origin.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originInput() {
+    return this._origin.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsLightsailDistribution.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsLightsailDistribution.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      bundle_id: cdktn.stringToTerraform(this._bundleId),
+      certificate_name: cdktn.stringToTerraform(this._certificateName),
+      id: cdktn.stringToTerraform(this._id),
+      ip_address_type: cdktn.stringToTerraform(this._ipAddressType),
+      is_enabled: cdktn.booleanToTerraform(this._isEnabled),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      cache_behavior: cdktn.listMapper(awsLightsailDistributionCacheBehaviorPropertyToTerraform, true)(this._cacheBehavior.internalValue),
+      cache_behavior_settings: awsLightsailDistributionCacheBehaviorSettingsPropertyToTerraform(this._cacheBehaviorSettings.internalValue),
+      default_cache_behavior: awsLightsailDistributionDefaultCacheBehaviorPropertyToTerraform(this._defaultCacheBehavior.internalValue),
+      origin: awsLightsailDistributionOriginPropertyToTerraform(this._origin.internalValue),
+      timeouts: awsLightsailDistributionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bundle_id: {
+        value: cdktn.stringToHclTerraform(this._bundleId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_name: {
+        value: cdktn.stringToHclTerraform(this._certificateName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_address_type: {
+        value: cdktn.stringToHclTerraform(this._ipAddressType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_enabled: {
+        value: cdktn.booleanToHclTerraform(this._isEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      cache_behavior: {
+        value: cdktn.listMapperHcl(awsLightsailDistributionCacheBehaviorPropertyToHclTerraform, true)(this._cacheBehavior.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsLightsailDistribution.CacheBehaviorPropertyList",
+      },
+      cache_behavior_settings: {
+        value: awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraform(this._cacheBehaviorSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsLightsailDistribution.CacheBehaviorSettingsPropertyList",
+      },
+      default_cache_behavior: {
+        value: awsLightsailDistributionDefaultCacheBehaviorPropertyToHclTerraform(this._defaultCacheBehavior.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsLightsailDistribution.DefaultCacheBehaviorPropertyList",
+      },
+      origin: {
+        value: awsLightsailDistributionOriginPropertyToHclTerraform(this._origin.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsLightsailDistribution.OriginPropertyList",
+      },
+      timeouts: {
+        value: awsLightsailDistributionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsLightsailDistribution.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsLightsailDistributionLocationPropertyToTerraform(struct?: AwsLightsailDistribution.LocationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsLightsailDistributionLocationPropertyToHclTerraform(struct?: AwsLightsailDistribution.LocationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsLightsailDistributionCacheBehaviorPropertyToTerraform(struct?: AwsLightsailDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    behavior: cdktn.stringToTerraform(struct!.behavior),
+    path: cdktn.stringToTerraform(struct!.path),
+  }
+}
+
+
+export function awsLightsailDistributionCacheBehaviorPropertyToHclTerraform(struct?: AwsLightsailDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    behavior: {
+      value: cdktn.stringToHclTerraform(struct!.behavior),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionForwardedCookiesPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedCookiesPropertyOutputReference | AwsLightsailDistribution.ForwardedCookiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cookies_allow_list: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.cookiesAllowList),
+    option: cdktn.stringToTerraform(struct!.option),
+  }
+}
+
+
+export function awsLightsailDistributionForwardedCookiesPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedCookiesPropertyOutputReference | AwsLightsailDistribution.ForwardedCookiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cookies_allow_list: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.cookiesAllowList),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    option: {
+      value: cdktn.stringToHclTerraform(struct!.option),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionForwardedHeadersPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedHeadersPropertyOutputReference | AwsLightsailDistribution.ForwardedHeadersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    headers_allow_list: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.headersAllowList),
+    option: cdktn.stringToTerraform(struct!.option),
+  }
+}
+
+
+export function awsLightsailDistributionForwardedHeadersPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedHeadersPropertyOutputReference | AwsLightsailDistribution.ForwardedHeadersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    headers_allow_list: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.headersAllowList),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    option: {
+      value: cdktn.stringToHclTerraform(struct!.option),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionForwardedQueryStringsPropertyToTerraform(struct?: AwsLightsailDistribution.ForwardedQueryStringsPropertyOutputReference | AwsLightsailDistribution.ForwardedQueryStringsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    option: cdktn.booleanToTerraform(struct!.option),
+    query_strings_allowed_list: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.queryStringsAllowedList),
+  }
+}
+
+
+export function awsLightsailDistributionForwardedQueryStringsPropertyToHclTerraform(struct?: AwsLightsailDistribution.ForwardedQueryStringsPropertyOutputReference | AwsLightsailDistribution.ForwardedQueryStringsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    option: {
+      value: cdktn.booleanToHclTerraform(struct!.option),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    query_strings_allowed_list: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.queryStringsAllowedList),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionCacheBehaviorSettingsPropertyToTerraform(struct?: AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference | AwsLightsailDistribution.CacheBehaviorSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    allowed_http_methods: cdktn.stringToTerraform(struct!.allowedHttpMethods),
+    cached_http_methods: cdktn.stringToTerraform(struct!.cachedHttpMethods),
+    default_ttl: cdktn.numberToTerraform(struct!.defaultTtl),
+    maximum_ttl: cdktn.numberToTerraform(struct!.maximumTtl),
+    minimum_ttl: cdktn.numberToTerraform(struct!.minimumTtl),
+    forwarded_cookies: awsLightsailDistributionForwardedCookiesPropertyToTerraform(struct!.forwardedCookies),
+    forwarded_headers: awsLightsailDistributionForwardedHeadersPropertyToTerraform(struct!.forwardedHeaders),
+    forwarded_query_strings: awsLightsailDistributionForwardedQueryStringsPropertyToTerraform(struct!.forwardedQueryStrings),
+  }
+}
+
+
+export function awsLightsailDistributionCacheBehaviorSettingsPropertyToHclTerraform(struct?: AwsLightsailDistribution.CacheBehaviorSettingsPropertyOutputReference | AwsLightsailDistribution.CacheBehaviorSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    allowed_http_methods: {
+      value: cdktn.stringToHclTerraform(struct!.allowedHttpMethods),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cached_http_methods: {
+      value: cdktn.stringToHclTerraform(struct!.cachedHttpMethods),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_ttl: {
+      value: cdktn.numberToHclTerraform(struct!.defaultTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    maximum_ttl: {
+      value: cdktn.numberToHclTerraform(struct!.maximumTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum_ttl: {
+      value: cdktn.numberToHclTerraform(struct!.minimumTtl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    forwarded_cookies: {
+      value: awsLightsailDistributionForwardedCookiesPropertyToHclTerraform(struct!.forwardedCookies),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ForwardedCookiesPropertyList",
+    },
+    forwarded_headers: {
+      value: awsLightsailDistributionForwardedHeadersPropertyToHclTerraform(struct!.forwardedHeaders),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ForwardedHeadersPropertyList",
+    },
+    forwarded_query_strings: {
+      value: awsLightsailDistributionForwardedQueryStringsPropertyToHclTerraform(struct!.forwardedQueryStrings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ForwardedQueryStringsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsLightsailDistribution.DefaultCacheBehaviorProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    behavior: cdktn.stringToTerraform(struct!.behavior),
+  }
+}
+
+
+export function awsLightsailDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: AwsLightsailDistribution.DefaultCacheBehaviorPropertyOutputReference | AwsLightsailDistribution.DefaultCacheBehaviorProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    behavior: {
+      value: cdktn.stringToHclTerraform(struct!.behavior),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionOriginPropertyToTerraform(struct?: AwsLightsailDistribution.OriginPropertyOutputReference | AwsLightsailDistribution.OriginProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    protocol_policy: cdktn.stringToTerraform(struct!.protocolPolicy),
+    region_name: cdktn.stringToTerraform(struct!.regionName),
+  }
+}
+
+
+export function awsLightsailDistributionOriginPropertyToHclTerraform(struct?: AwsLightsailDistribution.OriginPropertyOutputReference | AwsLightsailDistribution.OriginProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol_policy: {
+      value: cdktn.stringToHclTerraform(struct!.protocolPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    region_name: {
+      value: cdktn.stringToHclTerraform(struct!.regionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsLightsailDistributionTimeoutsPropertyToTerraform(struct?: AwsLightsailDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsLightsailDistributionTimeoutsPropertyToHclTerraform(struct?: AwsLightsailDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsLightsailDistribution {
+export interface LocationProperty {
+}
+export class LocationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LocationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LocationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // availability_zone - computed: true, optional: false, required: false
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+
+  // region_name - computed: true, optional: false, required: false
+  public get regionName() {
+    return this.getStringAttribute('region_name');
+  }
+}
+
+export class LocationPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LocationPropertyOutputReference {
+    return new LocationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CacheBehaviorProperty {
+  /**
+  * The cache behavior for the specified path.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior AwsLightsailDistribution#behavior}
+  */
+  readonly behavior: string;
+  /**
+  * The path to a directory or file to cached, or not cache. Use an asterisk symbol to specify wildcard directories (path/to/assets/*), and file types (*.html, *jpg, *js). Directories and file paths are case-sensitive.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#path AwsLightsailDistribution#path}
+  */
+  readonly path: string;
+}
+export class CacheBehaviorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CacheBehaviorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._behavior !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CacheBehaviorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._behavior = undefined;
+      this._path = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._behavior = value.behavior;
+      this._path = value.path;
+    }
+  }
+
+  // behavior - computed: false, optional: false, required: true
+  private _behavior?: string; 
+  public get behavior() {
+    return this.getStringAttribute('behavior');
+  }
+  public set behavior(value: string) {
+    this._behavior = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get behaviorInput() {
+    return this._behavior;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CacheBehaviorPropertyList extends cdktn.ComplexList {
+  public internalValue? : CacheBehaviorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CacheBehaviorPropertyOutputReference {
+    return new CacheBehaviorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ForwardedCookiesProperty {
+  /**
+  * The specific cookies to forward to your distribution's origin.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cookies_allow_list AwsLightsailDistribution#cookies_allow_list}
+  */
+  readonly cookiesAllowList?: string[];
+  /**
+  * Specifies which cookies to forward to the distribution's origin for a cache behavior: all, none, or allow-list to forward only the cookies specified in the cookiesAllowList parameter.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  */
+  readonly option?: string;
+}
+export class ForwardedCookiesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ForwardedCookiesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cookiesAllowList !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cookiesAllowList = this._cookiesAllowList;
+    }
+    if (this._option !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.option = this._option;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ForwardedCookiesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cookiesAllowList = undefined;
+      this._option = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cookiesAllowList = value.cookiesAllowList;
+      this._option = value.option;
+    }
+  }
+
+  // cookies_allow_list - computed: false, optional: true, required: false
+  private _cookiesAllowList?: string[]; 
+  public get cookiesAllowList() {
+    return cdktn.Fn.tolist(this.getListAttribute('cookies_allow_list'));
+  }
+  public set cookiesAllowList(value: string[]) {
+    this._cookiesAllowList = value;
+  }
+  public resetCookiesAllowList() {
+    this._cookiesAllowList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cookiesAllowListInput() {
+    return this._cookiesAllowList;
+  }
+
+  // option - computed: false, optional: true, required: false
+  private _option?: string; 
+  public get option() {
+    return this.getStringAttribute('option');
+  }
+  public set option(value: string) {
+    this._option = value;
+  }
+  public resetOption() {
+    this._option = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionInput() {
+    return this._option;
+  }
+}
+export interface ForwardedHeadersProperty {
+  /**
+  * The specific headers to forward to your distribution's origin.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#headers_allow_list AwsLightsailDistribution#headers_allow_list}
+  */
+  readonly headersAllowList?: string[];
+  /**
+  * The headers that you want your distribution to forward to your origin and base caching on.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  */
+  readonly option?: string;
+}
+export class ForwardedHeadersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ForwardedHeadersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headersAllowList !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headersAllowList = this._headersAllowList;
+    }
+    if (this._option !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.option = this._option;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ForwardedHeadersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._headersAllowList = undefined;
+      this._option = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._headersAllowList = value.headersAllowList;
+      this._option = value.option;
+    }
+  }
+
+  // headers_allow_list - computed: false, optional: true, required: false
+  private _headersAllowList?: string[]; 
+  public get headersAllowList() {
+    return cdktn.Fn.tolist(this.getListAttribute('headers_allow_list'));
+  }
+  public set headersAllowList(value: string[]) {
+    this._headersAllowList = value;
+  }
+  public resetHeadersAllowList() {
+    this._headersAllowList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersAllowListInput() {
+    return this._headersAllowList;
+  }
+
+  // option - computed: false, optional: true, required: false
+  private _option?: string; 
+  public get option() {
+    return this.getStringAttribute('option');
+  }
+  public set option(value: string) {
+    this._option = value;
+  }
+  public resetOption() {
+    this._option = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionInput() {
+    return this._option;
+  }
+}
+export interface ForwardedQueryStringsProperty {
+  /**
+  * Indicates whether the distribution forwards and caches based on query strings.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#option AwsLightsailDistribution#option}
+  */
+  readonly option?: boolean | cdktn.IResolvable;
+  /**
+  * The specific query strings that the distribution forwards to the origin.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#query_strings_allowed_list AwsLightsailDistribution#query_strings_allowed_list}
+  */
+  readonly queryStringsAllowedList?: string[];
+}
+export class ForwardedQueryStringsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ForwardedQueryStringsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._option !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.option = this._option;
+    }
+    if (this._queryStringsAllowedList !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryStringsAllowedList = this._queryStringsAllowedList;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ForwardedQueryStringsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._option = undefined;
+      this._queryStringsAllowedList = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._option = value.option;
+      this._queryStringsAllowedList = value.queryStringsAllowedList;
+    }
+  }
+
+  // option - computed: false, optional: true, required: false
+  private _option?: boolean | cdktn.IResolvable; 
+  public get option() {
+    return this.getBooleanAttribute('option');
+  }
+  public set option(value: boolean | cdktn.IResolvable) {
+    this._option = value;
+  }
+  public resetOption() {
+    this._option = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionInput() {
+    return this._option;
+  }
+
+  // query_strings_allowed_list - computed: false, optional: true, required: false
+  private _queryStringsAllowedList?: string[]; 
+  public get queryStringsAllowedList() {
+    return cdktn.Fn.tolist(this.getListAttribute('query_strings_allowed_list'));
+  }
+  public set queryStringsAllowedList(value: string[]) {
+    this._queryStringsAllowedList = value;
+  }
+  public resetQueryStringsAllowedList() {
+    this._queryStringsAllowedList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringsAllowedListInput() {
+    return this._queryStringsAllowedList;
+  }
+}
+export interface CacheBehaviorSettingsProperty {
+  /**
+  * The HTTP methods that are processed and forwarded to the distribution's origin.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#allowed_http_methods AwsLightsailDistribution#allowed_http_methods}
+  */
+  readonly allowedHttpMethods?: string;
+  /**
+  * The HTTP method responses that are cached by your distribution.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#cached_http_methods AwsLightsailDistribution#cached_http_methods}
+  */
+  readonly cachedHttpMethods?: string;
+  /**
+  * The default amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the content has been updated.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#default_ttl AwsLightsailDistribution#default_ttl}
+  */
+  readonly defaultTtl?: number;
+  /**
+  * The maximum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#maximum_ttl AwsLightsailDistribution#maximum_ttl}
+  */
+  readonly maximumTtl?: number;
+  /**
+  * The minimum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#minimum_ttl AwsLightsailDistribution#minimum_ttl}
+  */
+  readonly minimumTtl?: number;
+  /**
+  * forwarded_cookies block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_cookies AwsLightsailDistribution#forwarded_cookies}
+  */
+  readonly forwardedCookies?: ForwardedCookiesProperty;
+  /**
+  * forwarded_headers block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_headers AwsLightsailDistribution#forwarded_headers}
+  */
+  readonly forwardedHeaders?: ForwardedHeadersProperty;
+  /**
+  * forwarded_query_strings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#forwarded_query_strings AwsLightsailDistribution#forwarded_query_strings}
+  */
+  readonly forwardedQueryStrings?: ForwardedQueryStringsProperty;
+}
+export class CacheBehaviorSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CacheBehaviorSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedHttpMethods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedHttpMethods = this._allowedHttpMethods;
+    }
+    if (this._cachedHttpMethods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cachedHttpMethods = this._cachedHttpMethods;
+    }
+    if (this._defaultTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultTtl = this._defaultTtl;
+    }
+    if (this._maximumTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximumTtl = this._maximumTtl;
+    }
+    if (this._minimumTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimumTtl = this._minimumTtl;
+    }
+    if (this._forwardedCookies?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardedCookies = this._forwardedCookies?.internalValue;
+    }
+    if (this._forwardedHeaders?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardedHeaders = this._forwardedHeaders?.internalValue;
+    }
+    if (this._forwardedQueryStrings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardedQueryStrings = this._forwardedQueryStrings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CacheBehaviorSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedHttpMethods = undefined;
+      this._cachedHttpMethods = undefined;
+      this._defaultTtl = undefined;
+      this._maximumTtl = undefined;
+      this._minimumTtl = undefined;
+      this._forwardedCookies.internalValue = undefined;
+      this._forwardedHeaders.internalValue = undefined;
+      this._forwardedQueryStrings.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedHttpMethods = value.allowedHttpMethods;
+      this._cachedHttpMethods = value.cachedHttpMethods;
+      this._defaultTtl = value.defaultTtl;
+      this._maximumTtl = value.maximumTtl;
+      this._minimumTtl = value.minimumTtl;
+      this._forwardedCookies.internalValue = value.forwardedCookies;
+      this._forwardedHeaders.internalValue = value.forwardedHeaders;
+      this._forwardedQueryStrings.internalValue = value.forwardedQueryStrings;
+    }
+  }
+
+  // allowed_http_methods - computed: false, optional: true, required: false
+  private _allowedHttpMethods?: string; 
+  public get allowedHttpMethods() {
+    return this.getStringAttribute('allowed_http_methods');
+  }
+  public set allowedHttpMethods(value: string) {
+    this._allowedHttpMethods = value;
+  }
+  public resetAllowedHttpMethods() {
+    this._allowedHttpMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedHttpMethodsInput() {
+    return this._allowedHttpMethods;
+  }
+
+  // cached_http_methods - computed: false, optional: true, required: false
+  private _cachedHttpMethods?: string; 
+  public get cachedHttpMethods() {
+    return this.getStringAttribute('cached_http_methods');
+  }
+  public set cachedHttpMethods(value: string) {
+    this._cachedHttpMethods = value;
+  }
+  public resetCachedHttpMethods() {
+    this._cachedHttpMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachedHttpMethodsInput() {
+    return this._cachedHttpMethods;
+  }
+
+  // default_ttl - computed: false, optional: true, required: false
+  private _defaultTtl?: number; 
+  public get defaultTtl() {
+    return this.getNumberAttribute('default_ttl');
+  }
+  public set defaultTtl(value: number) {
+    this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl;
+  }
+
+  // maximum_ttl - computed: false, optional: true, required: false
+  private _maximumTtl?: number; 
+  public get maximumTtl() {
+    return this.getNumberAttribute('maximum_ttl');
+  }
+  public set maximumTtl(value: number) {
+    this._maximumTtl = value;
+  }
+  public resetMaximumTtl() {
+    this._maximumTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumTtlInput() {
+    return this._maximumTtl;
+  }
+
+  // minimum_ttl - computed: false, optional: true, required: false
+  private _minimumTtl?: number; 
+  public get minimumTtl() {
+    return this.getNumberAttribute('minimum_ttl');
+  }
+  public set minimumTtl(value: number) {
+    this._minimumTtl = value;
+  }
+  public resetMinimumTtl() {
+    this._minimumTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumTtlInput() {
+    return this._minimumTtl;
+  }
+
+  // forwarded_cookies - computed: false, optional: true, required: false
+  private _forwardedCookies = new ForwardedCookiesPropertyOutputReference(this, "forwarded_cookies");
+  public get forwardedCookies() {
+    return this._forwardedCookies;
+  }
+  public putForwardedCookies(value: ForwardedCookiesProperty) {
+    this._forwardedCookies.internalValue = value;
+  }
+  public resetForwardedCookies() {
+    this._forwardedCookies.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardedCookiesInput() {
+    return this._forwardedCookies.internalValue;
+  }
+
+  // forwarded_headers - computed: false, optional: true, required: false
+  private _forwardedHeaders = new ForwardedHeadersPropertyOutputReference(this, "forwarded_headers");
+  public get forwardedHeaders() {
+    return this._forwardedHeaders;
+  }
+  public putForwardedHeaders(value: ForwardedHeadersProperty) {
+    this._forwardedHeaders.internalValue = value;
+  }
+  public resetForwardedHeaders() {
+    this._forwardedHeaders.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardedHeadersInput() {
+    return this._forwardedHeaders.internalValue;
+  }
+
+  // forwarded_query_strings - computed: false, optional: true, required: false
+  private _forwardedQueryStrings = new ForwardedQueryStringsPropertyOutputReference(this, "forwarded_query_strings");
+  public get forwardedQueryStrings() {
+    return this._forwardedQueryStrings;
+  }
+  public putForwardedQueryStrings(value: ForwardedQueryStringsProperty) {
+    this._forwardedQueryStrings.internalValue = value;
+  }
+  public resetForwardedQueryStrings() {
+    this._forwardedQueryStrings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardedQueryStringsInput() {
+    return this._forwardedQueryStrings.internalValue;
+  }
+}
+export interface DefaultCacheBehaviorProperty {
+  /**
+  * The cache behavior of the distribution.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#behavior AwsLightsailDistribution#behavior}
+  */
+  readonly behavior: string;
+}
+export class DefaultCacheBehaviorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DefaultCacheBehaviorProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._behavior !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DefaultCacheBehaviorProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._behavior = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._behavior = value.behavior;
+    }
+  }
+
+  // behavior - computed: false, optional: false, required: true
+  private _behavior?: string; 
+  public get behavior() {
+    return this.getStringAttribute('behavior');
+  }
+  public set behavior(value: string) {
+    this._behavior = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get behaviorInput() {
+    return this._behavior;
+  }
+}
+export interface OriginProperty {
+  /**
+  * The name of the origin resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#name AwsLightsailDistribution#name}
+  */
+  readonly name: string;
+  /**
+  * The protocol that your Amazon Lightsail distribution uses when establishing a connection with your origin to pull content.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#protocol_policy AwsLightsailDistribution#protocol_policy}
+  */
+  readonly protocolPolicy?: string;
+  /**
+  * The AWS Region name of the origin resource.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#region_name AwsLightsailDistribution#region_name}
+  */
+  readonly regionName: string;
+}
+export class OriginPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OriginProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._protocolPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocolPolicy = this._protocolPolicy;
+    }
+    if (this._regionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regionName = this._regionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OriginProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._protocolPolicy = undefined;
+      this._regionName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._protocolPolicy = value.protocolPolicy;
+      this._regionName = value.regionName;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // protocol_policy - computed: false, optional: true, required: false
+  private _protocolPolicy?: string; 
+  public get protocolPolicy() {
+    return this.getStringAttribute('protocol_policy');
+  }
+  public set protocolPolicy(value: string) {
+    this._protocolPolicy = value;
+  }
+  public resetProtocolPolicy() {
+    this._protocolPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolPolicyInput() {
+    return this._protocolPolicy;
+  }
+
+  // region_name - computed: false, optional: false, required: true
+  private _regionName?: string; 
+  public get regionName() {
+    return this.getStringAttribute('region_name');
+  }
+  public set regionName(value: string) {
+    this._regionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionNameInput() {
+    return this._regionName;
+  }
+
+  // resource_type - computed: true, optional: false, required: false
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#create AwsLightsailDistribution#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#delete AwsLightsailDistribution#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_distribution#update AwsLightsailDistribution#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

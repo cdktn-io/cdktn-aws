@@ -1,0 +1,615 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSsoadminTrustedTokenIssuerConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#client_token AwsSsoadminTrustedTokenIssuer#client_token}
+  */
+  readonly clientToken?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#instance_arn AwsSsoadminTrustedTokenIssuer#instance_arn}
+  */
+  readonly instanceArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#name AwsSsoadminTrustedTokenIssuer#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#region AwsSsoadminTrustedTokenIssuer#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#tags AwsSsoadminTrustedTokenIssuer#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_type AwsSsoadminTrustedTokenIssuer#trusted_token_issuer_type}
+  */
+  readonly trustedTokenIssuerType: string;
+  /**
+  * trusted_token_issuer_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_configuration AwsSsoadminTrustedTokenIssuer#trusted_token_issuer_configuration}
+  */
+  readonly trustedTokenIssuerConfiguration?: AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer aws_ssoadmin_trusted_token_issuer}
+*/
+export class AwsSsoadminTrustedTokenIssuer extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ssoadmin_trusted_token_issuer";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSsoadminTrustedTokenIssuer resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSsoadminTrustedTokenIssuer to import
+  * @param importFromId The id of the existing AwsSsoadminTrustedTokenIssuer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSsoadminTrustedTokenIssuer to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_trusted_token_issuer", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer aws_ssoadmin_trusted_token_issuer} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSsoadminTrustedTokenIssuerConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSsoadminTrustedTokenIssuerConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ssoadmin_trusted_token_issuer',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._clientToken = config.clientToken;
+    this._instanceArn = config.instanceArn;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._trustedTokenIssuerType = config.trustedTokenIssuerType;
+    this._trustedTokenIssuerConfiguration.internalValue = config.trustedTokenIssuerConfiguration;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // client_token - computed: false, optional: true, required: false
+  private _clientToken?: string; 
+  public get clientToken() {
+    return this.getStringAttribute('client_token');
+  }
+  public set clientToken(value: string) {
+    this._clientToken = value;
+  }
+  public resetClientToken() {
+    this._clientToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientTokenInput() {
+    return this._clientToken;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // instance_arn - computed: false, optional: false, required: true
+  private _instanceArn?: string; 
+  public get instanceArn() {
+    return this.getStringAttribute('instance_arn');
+  }
+  public set instanceArn(value: string) {
+    this._instanceArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceArnInput() {
+    return this._instanceArn;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // trusted_token_issuer_type - computed: false, optional: false, required: true
+  private _trustedTokenIssuerType?: string; 
+  public get trustedTokenIssuerType() {
+    return this.getStringAttribute('trusted_token_issuer_type');
+  }
+  public set trustedTokenIssuerType(value: string) {
+    this._trustedTokenIssuerType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedTokenIssuerTypeInput() {
+    return this._trustedTokenIssuerType;
+  }
+
+  // trusted_token_issuer_configuration - computed: false, optional: true, required: false
+  private _trustedTokenIssuerConfiguration = new AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList(this, "trusted_token_issuer_configuration", false);
+  public get trustedTokenIssuerConfiguration() {
+    return this._trustedTokenIssuerConfiguration;
+  }
+  public putTrustedTokenIssuerConfiguration(value: AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable) {
+    this._trustedTokenIssuerConfiguration.internalValue = value;
+  }
+  public resetTrustedTokenIssuerConfiguration() {
+    this._trustedTokenIssuerConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedTokenIssuerConfigurationInput() {
+    return this._trustedTokenIssuerConfiguration.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      client_token: cdktn.stringToTerraform(this._clientToken),
+      instance_arn: cdktn.stringToTerraform(this._instanceArn),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      trusted_token_issuer_type: cdktn.stringToTerraform(this._trustedTokenIssuerType),
+      trusted_token_issuer_configuration: cdktn.listMapper(awsSsoadminTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      client_token: {
+        value: cdktn.stringToHclTerraform(this._clientToken),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_arn: {
+        value: cdktn.stringToHclTerraform(this._instanceArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      trusted_token_issuer_type: {
+        value: cdktn.stringToHclTerraform(this._trustedTokenIssuerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trusted_token_issuer_configuration: {
+        value: cdktn.listMapperHcl(awsSsoadminTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSsoadminTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform(struct?: AwsSsoadminTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    claim_attribute_path: cdktn.stringToTerraform(struct!.claimAttributePath),
+    identity_store_attribute_path: cdktn.stringToTerraform(struct!.identityStoreAttributePath),
+    issuer_url: cdktn.stringToTerraform(struct!.issuerUrl),
+    jwks_retrieval_option: cdktn.stringToTerraform(struct!.jwksRetrievalOption),
+  }
+}
+
+
+export function awsSsoadminTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform(struct?: AwsSsoadminTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    claim_attribute_path: {
+      value: cdktn.stringToHclTerraform(struct!.claimAttributePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    identity_store_attribute_path: {
+      value: cdktn.stringToHclTerraform(struct!.identityStoreAttributePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    issuer_url: {
+      value: cdktn.stringToHclTerraform(struct!.issuerUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    jwks_retrieval_option: {
+      value: cdktn.stringToHclTerraform(struct!.jwksRetrievalOption),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsoadminTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform(struct?: AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    oidc_jwt_configuration: cdktn.listMapper(awsSsoadminTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform, true)(struct!.oidcJwtConfiguration),
+  }
+}
+
+
+export function awsSsoadminTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform(struct?: AwsSsoadminTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    oidc_jwt_configuration: {
+      value: cdktn.listMapperHcl(awsSsoadminTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform, true)(struct!.oidcJwtConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OidcJwtConfigurationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSsoadminTrustedTokenIssuer {
+export interface OidcJwtConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#claim_attribute_path AwsSsoadminTrustedTokenIssuer#claim_attribute_path}
+  */
+  readonly claimAttributePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#identity_store_attribute_path AwsSsoadminTrustedTokenIssuer#identity_store_attribute_path}
+  */
+  readonly identityStoreAttributePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#issuer_url AwsSsoadminTrustedTokenIssuer#issuer_url}
+  */
+  readonly issuerUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#jwks_retrieval_option AwsSsoadminTrustedTokenIssuer#jwks_retrieval_option}
+  */
+  readonly jwksRetrievalOption: string;
+}
+export class OidcJwtConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OidcJwtConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._claimAttributePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.claimAttributePath = this._claimAttributePath;
+    }
+    if (this._identityStoreAttributePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityStoreAttributePath = this._identityStoreAttributePath;
+    }
+    if (this._issuerUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.issuerUrl = this._issuerUrl;
+    }
+    if (this._jwksRetrievalOption !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jwksRetrievalOption = this._jwksRetrievalOption;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OidcJwtConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._claimAttributePath = undefined;
+      this._identityStoreAttributePath = undefined;
+      this._issuerUrl = undefined;
+      this._jwksRetrievalOption = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._claimAttributePath = value.claimAttributePath;
+      this._identityStoreAttributePath = value.identityStoreAttributePath;
+      this._issuerUrl = value.issuerUrl;
+      this._jwksRetrievalOption = value.jwksRetrievalOption;
+    }
+  }
+
+  // claim_attribute_path - computed: false, optional: false, required: true
+  private _claimAttributePath?: string; 
+  public get claimAttributePath() {
+    return this.getStringAttribute('claim_attribute_path');
+  }
+  public set claimAttributePath(value: string) {
+    this._claimAttributePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get claimAttributePathInput() {
+    return this._claimAttributePath;
+  }
+
+  // identity_store_attribute_path - computed: false, optional: false, required: true
+  private _identityStoreAttributePath?: string; 
+  public get identityStoreAttributePath() {
+    return this.getStringAttribute('identity_store_attribute_path');
+  }
+  public set identityStoreAttributePath(value: string) {
+    this._identityStoreAttributePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityStoreAttributePathInput() {
+    return this._identityStoreAttributePath;
+  }
+
+  // issuer_url - computed: false, optional: false, required: true
+  private _issuerUrl?: string; 
+  public get issuerUrl() {
+    return this.getStringAttribute('issuer_url');
+  }
+  public set issuerUrl(value: string) {
+    this._issuerUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get issuerUrlInput() {
+    return this._issuerUrl;
+  }
+
+  // jwks_retrieval_option - computed: false, optional: false, required: true
+  private _jwksRetrievalOption?: string; 
+  public get jwksRetrievalOption() {
+    return this.getStringAttribute('jwks_retrieval_option');
+  }
+  public set jwksRetrievalOption(value: string) {
+    this._jwksRetrievalOption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jwksRetrievalOptionInput() {
+    return this._jwksRetrievalOption;
+  }
+}
+
+export class OidcJwtConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : OidcJwtConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OidcJwtConfigurationPropertyOutputReference {
+    return new OidcJwtConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TrustedTokenIssuerConfigurationProperty {
+  /**
+  * oidc_jwt_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#oidc_jwt_configuration AwsSsoadminTrustedTokenIssuer#oidc_jwt_configuration}
+  */
+  readonly oidcJwtConfiguration?: OidcJwtConfigurationProperty[] | cdktn.IResolvable;
+}
+export class TrustedTokenIssuerConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._oidcJwtConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oidcJwtConfiguration = this._oidcJwtConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._oidcJwtConfiguration.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._oidcJwtConfiguration.internalValue = value.oidcJwtConfiguration;
+    }
+  }
+
+  // oidc_jwt_configuration - computed: false, optional: true, required: false
+  private _oidcJwtConfiguration = new OidcJwtConfigurationPropertyList(this, "oidc_jwt_configuration", false);
+  public get oidcJwtConfiguration() {
+    return this._oidcJwtConfiguration;
+  }
+  public putOidcJwtConfiguration(value: OidcJwtConfigurationProperty[] | cdktn.IResolvable) {
+    this._oidcJwtConfiguration.internalValue = value;
+  }
+  public resetOidcJwtConfiguration() {
+    this._oidcJwtConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcJwtConfigurationInput() {
+    return this._oidcJwtConfiguration.internalValue;
+  }
+}
+
+export class TrustedTokenIssuerConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TrustedTokenIssuerConfigurationPropertyOutputReference {
+    return new TrustedTokenIssuerConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

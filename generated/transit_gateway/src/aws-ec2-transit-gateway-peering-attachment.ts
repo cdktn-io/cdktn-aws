@@ -1,0 +1,431 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsEc2TransitGatewayPeeringAttachmentConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#id AwsEc2TransitGatewayPeeringAttachment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_account_id AwsEc2TransitGatewayPeeringAttachment#peer_account_id}
+  */
+  readonly peerAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_region AwsEc2TransitGatewayPeeringAttachment#peer_region}
+  */
+  readonly peerRegion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#peer_transit_gateway_id AwsEc2TransitGatewayPeeringAttachment#peer_transit_gateway_id}
+  */
+  readonly peerTransitGatewayId: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#region AwsEc2TransitGatewayPeeringAttachment#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags AwsEc2TransitGatewayPeeringAttachment#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#tags_all AwsEc2TransitGatewayPeeringAttachment#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#transit_gateway_id AwsEc2TransitGatewayPeeringAttachment#transit_gateway_id}
+  */
+  readonly transitGatewayId: string;
+  /**
+  * options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#options AwsEc2TransitGatewayPeeringAttachment#options}
+  */
+  readonly options?: AwsEc2TransitGatewayPeeringAttachment.OptionsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment aws_ec2_transit_gateway_peering_attachment}
+*/
+export class AwsEc2TransitGatewayPeeringAttachment extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ec2_transit_gateway_peering_attachment";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsEc2TransitGatewayPeeringAttachment resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsEc2TransitGatewayPeeringAttachment to import
+  * @param importFromId The id of the existing AwsEc2TransitGatewayPeeringAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2TransitGatewayPeeringAttachment to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_transit_gateway_peering_attachment", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment aws_ec2_transit_gateway_peering_attachment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsEc2TransitGatewayPeeringAttachmentConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsEc2TransitGatewayPeeringAttachmentConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ec2_transit_gateway_peering_attachment',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._peerAccountId = config.peerAccountId;
+    this._peerRegion = config.peerRegion;
+    this._peerTransitGatewayId = config.peerTransitGatewayId;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._transitGatewayId = config.transitGatewayId;
+    this._options.internalValue = config.options;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // peer_account_id - computed: true, optional: true, required: false
+  private _peerAccountId?: string; 
+  public get peerAccountId() {
+    return this.getStringAttribute('peer_account_id');
+  }
+  public set peerAccountId(value: string) {
+    this._peerAccountId = value;
+  }
+  public resetPeerAccountId() {
+    this._peerAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerAccountIdInput() {
+    return this._peerAccountId;
+  }
+
+  // peer_region - computed: false, optional: false, required: true
+  private _peerRegion?: string; 
+  public get peerRegion() {
+    return this.getStringAttribute('peer_region');
+  }
+  public set peerRegion(value: string) {
+    this._peerRegion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerRegionInput() {
+    return this._peerRegion;
+  }
+
+  // peer_transit_gateway_id - computed: false, optional: false, required: true
+  private _peerTransitGatewayId?: string; 
+  public get peerTransitGatewayId() {
+    return this.getStringAttribute('peer_transit_gateway_id');
+  }
+  public set peerTransitGatewayId(value: string) {
+    this._peerTransitGatewayId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerTransitGatewayIdInput() {
+    return this._peerTransitGatewayId;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // transit_gateway_id - computed: false, optional: false, required: true
+  private _transitGatewayId?: string; 
+  public get transitGatewayId() {
+    return this.getStringAttribute('transit_gateway_id');
+  }
+  public set transitGatewayId(value: string) {
+    this._transitGatewayId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitGatewayIdInput() {
+    return this._transitGatewayId;
+  }
+
+  // options - computed: false, optional: true, required: false
+  private _options = new AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference(this, "options");
+  public get options() {
+    return this._options;
+  }
+  public putOptions(value: AwsEc2TransitGatewayPeeringAttachment.OptionsProperty) {
+    this._options.internalValue = value;
+  }
+  public resetOptions() {
+    this._options.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionsInput() {
+    return this._options.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      peer_account_id: cdktn.stringToTerraform(this._peerAccountId),
+      peer_region: cdktn.stringToTerraform(this._peerRegion),
+      peer_transit_gateway_id: cdktn.stringToTerraform(this._peerTransitGatewayId),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
+      options: awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToTerraform(this._options.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_account_id: {
+        value: cdktn.stringToHclTerraform(this._peerAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_region: {
+        value: cdktn.stringToHclTerraform(this._peerRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_transit_gateway_id: {
+        value: cdktn.stringToHclTerraform(this._peerTransitGatewayId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      transit_gateway_id: {
+        value: cdktn.stringToHclTerraform(this._transitGatewayId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      options: {
+        value: awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToHclTerraform(this._options.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToTerraform(struct?: AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference | AwsEc2TransitGatewayPeeringAttachment.OptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    dynamic_routing: cdktn.stringToTerraform(struct!.dynamicRouting),
+  }
+}
+
+
+export function awsEc2TransitGatewayPeeringAttachmentOptionsPropertyToHclTerraform(struct?: AwsEc2TransitGatewayPeeringAttachment.OptionsPropertyOutputReference | AwsEc2TransitGatewayPeeringAttachment.OptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    dynamic_routing: {
+      value: cdktn.stringToHclTerraform(struct!.dynamicRouting),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsEc2TransitGatewayPeeringAttachment {
+export interface OptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_transit_gateway_peering_attachment#dynamic_routing AwsEc2TransitGatewayPeeringAttachment#dynamic_routing}
+  */
+  readonly dynamicRouting?: string;
+}
+export class OptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dynamicRouting !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicRouting = this._dynamicRouting;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dynamicRouting = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dynamicRouting = value.dynamicRouting;
+    }
+  }
+
+  // dynamic_routing - computed: false, optional: true, required: false
+  private _dynamicRouting?: string; 
+  public get dynamicRouting() {
+    return this.getStringAttribute('dynamic_routing');
+  }
+  public set dynamicRouting(value: string) {
+    this._dynamicRouting = value;
+  }
+  public resetDynamicRouting() {
+    this._dynamicRouting = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicRoutingInput() {
+    return this._dynamicRouting;
+  }
+}
+}

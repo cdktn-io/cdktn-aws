@@ -1,0 +1,668 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsGrafanaWorkspaceSamlConfigurationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#admin_role_values AwsGrafanaWorkspaceSamlConfiguration#admin_role_values}
+  */
+  readonly adminRoleValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#allowed_organizations AwsGrafanaWorkspaceSamlConfiguration#allowed_organizations}
+  */
+  readonly allowedOrganizations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#editor_role_values AwsGrafanaWorkspaceSamlConfiguration#editor_role_values}
+  */
+  readonly editorRoleValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#email_assertion AwsGrafanaWorkspaceSamlConfiguration#email_assertion}
+  */
+  readonly emailAssertion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#groups_assertion AwsGrafanaWorkspaceSamlConfiguration#groups_assertion}
+  */
+  readonly groupsAssertion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#id AwsGrafanaWorkspaceSamlConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_url AwsGrafanaWorkspaceSamlConfiguration#idp_metadata_url}
+  */
+  readonly idpMetadataUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#idp_metadata_xml AwsGrafanaWorkspaceSamlConfiguration#idp_metadata_xml}
+  */
+  readonly idpMetadataXml?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_assertion AwsGrafanaWorkspaceSamlConfiguration#login_assertion}
+  */
+  readonly loginAssertion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#login_validity_duration AwsGrafanaWorkspaceSamlConfiguration#login_validity_duration}
+  */
+  readonly loginValidityDuration?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#name_assertion AwsGrafanaWorkspaceSamlConfiguration#name_assertion}
+  */
+  readonly nameAssertion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#org_assertion AwsGrafanaWorkspaceSamlConfiguration#org_assertion}
+  */
+  readonly orgAssertion?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#region AwsGrafanaWorkspaceSamlConfiguration#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#role_assertion AwsGrafanaWorkspaceSamlConfiguration#role_assertion}
+  */
+  readonly roleAssertion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#workspace_id AwsGrafanaWorkspaceSamlConfiguration#workspace_id}
+  */
+  readonly workspaceId: string;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#timeouts AwsGrafanaWorkspaceSamlConfiguration#timeouts}
+  */
+  readonly timeouts?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration aws_grafana_workspace_saml_configuration}
+*/
+export class AwsGrafanaWorkspaceSamlConfiguration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_grafana_workspace_saml_configuration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsGrafanaWorkspaceSamlConfiguration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsGrafanaWorkspaceSamlConfiguration to import
+  * @param importFromId The id of the existing AwsGrafanaWorkspaceSamlConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGrafanaWorkspaceSamlConfiguration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace_saml_configuration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration aws_grafana_workspace_saml_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsGrafanaWorkspaceSamlConfigurationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsGrafanaWorkspaceSamlConfigurationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_grafana_workspace_saml_configuration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._adminRoleValues = config.adminRoleValues;
+    this._allowedOrganizations = config.allowedOrganizations;
+    this._editorRoleValues = config.editorRoleValues;
+    this._emailAssertion = config.emailAssertion;
+    this._groupsAssertion = config.groupsAssertion;
+    this._id = config.id;
+    this._idpMetadataUrl = config.idpMetadataUrl;
+    this._idpMetadataXml = config.idpMetadataXml;
+    this._loginAssertion = config.loginAssertion;
+    this._loginValidityDuration = config.loginValidityDuration;
+    this._nameAssertion = config.nameAssertion;
+    this._orgAssertion = config.orgAssertion;
+    this._region = config.region;
+    this._roleAssertion = config.roleAssertion;
+    this._workspaceId = config.workspaceId;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // admin_role_values - computed: false, optional: true, required: false
+  private _adminRoleValues?: string[]; 
+  public get adminRoleValues() {
+    return this.getListAttribute('admin_role_values');
+  }
+  public set adminRoleValues(value: string[]) {
+    this._adminRoleValues = value;
+  }
+  public resetAdminRoleValues() {
+    this._adminRoleValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminRoleValuesInput() {
+    return this._adminRoleValues;
+  }
+
+  // allowed_organizations - computed: false, optional: true, required: false
+  private _allowedOrganizations?: string[]; 
+  public get allowedOrganizations() {
+    return this.getListAttribute('allowed_organizations');
+  }
+  public set allowedOrganizations(value: string[]) {
+    this._allowedOrganizations = value;
+  }
+  public resetAllowedOrganizations() {
+    this._allowedOrganizations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOrganizationsInput() {
+    return this._allowedOrganizations;
+  }
+
+  // editor_role_values - computed: false, optional: false, required: true
+  private _editorRoleValues?: string[]; 
+  public get editorRoleValues() {
+    return this.getListAttribute('editor_role_values');
+  }
+  public set editorRoleValues(value: string[]) {
+    this._editorRoleValues = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editorRoleValuesInput() {
+    return this._editorRoleValues;
+  }
+
+  // email_assertion - computed: true, optional: true, required: false
+  private _emailAssertion?: string; 
+  public get emailAssertion() {
+    return this.getStringAttribute('email_assertion');
+  }
+  public set emailAssertion(value: string) {
+    this._emailAssertion = value;
+  }
+  public resetEmailAssertion() {
+    this._emailAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAssertionInput() {
+    return this._emailAssertion;
+  }
+
+  // groups_assertion - computed: false, optional: true, required: false
+  private _groupsAssertion?: string; 
+  public get groupsAssertion() {
+    return this.getStringAttribute('groups_assertion');
+  }
+  public set groupsAssertion(value: string) {
+    this._groupsAssertion = value;
+  }
+  public resetGroupsAssertion() {
+    this._groupsAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupsAssertionInput() {
+    return this._groupsAssertion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // idp_metadata_url - computed: false, optional: true, required: false
+  private _idpMetadataUrl?: string; 
+  public get idpMetadataUrl() {
+    return this.getStringAttribute('idp_metadata_url');
+  }
+  public set idpMetadataUrl(value: string) {
+    this._idpMetadataUrl = value;
+  }
+  public resetIdpMetadataUrl() {
+    this._idpMetadataUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idpMetadataUrlInput() {
+    return this._idpMetadataUrl;
+  }
+
+  // idp_metadata_xml - computed: false, optional: true, required: false
+  private _idpMetadataXml?: string; 
+  public get idpMetadataXml() {
+    return this.getStringAttribute('idp_metadata_xml');
+  }
+  public set idpMetadataXml(value: string) {
+    this._idpMetadataXml = value;
+  }
+  public resetIdpMetadataXml() {
+    this._idpMetadataXml = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idpMetadataXmlInput() {
+    return this._idpMetadataXml;
+  }
+
+  // login_assertion - computed: true, optional: true, required: false
+  private _loginAssertion?: string; 
+  public get loginAssertion() {
+    return this.getStringAttribute('login_assertion');
+  }
+  public set loginAssertion(value: string) {
+    this._loginAssertion = value;
+  }
+  public resetLoginAssertion() {
+    this._loginAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginAssertionInput() {
+    return this._loginAssertion;
+  }
+
+  // login_validity_duration - computed: true, optional: true, required: false
+  private _loginValidityDuration?: number; 
+  public get loginValidityDuration() {
+    return this.getNumberAttribute('login_validity_duration');
+  }
+  public set loginValidityDuration(value: number) {
+    this._loginValidityDuration = value;
+  }
+  public resetLoginValidityDuration() {
+    this._loginValidityDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginValidityDurationInput() {
+    return this._loginValidityDuration;
+  }
+
+  // name_assertion - computed: true, optional: true, required: false
+  private _nameAssertion?: string; 
+  public get nameAssertion() {
+    return this.getStringAttribute('name_assertion');
+  }
+  public set nameAssertion(value: string) {
+    this._nameAssertion = value;
+  }
+  public resetNameAssertion() {
+    this._nameAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameAssertionInput() {
+    return this._nameAssertion;
+  }
+
+  // org_assertion - computed: false, optional: true, required: false
+  private _orgAssertion?: string; 
+  public get orgAssertion() {
+    return this.getStringAttribute('org_assertion');
+  }
+  public set orgAssertion(value: string) {
+    this._orgAssertion = value;
+  }
+  public resetOrgAssertion() {
+    this._orgAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orgAssertionInput() {
+    return this._orgAssertion;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // role_assertion - computed: false, optional: true, required: false
+  private _roleAssertion?: string; 
+  public get roleAssertion() {
+    return this.getStringAttribute('role_assertion');
+  }
+  public set roleAssertion(value: string) {
+    this._roleAssertion = value;
+  }
+  public resetRoleAssertion() {
+    this._roleAssertion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleAssertionInput() {
+    return this._roleAssertion;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // workspace_id - computed: false, optional: false, required: true
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsGrafanaWorkspaceSamlConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      admin_role_values: cdktn.listMapper(cdktn.stringToTerraform, false)(this._adminRoleValues),
+      allowed_organizations: cdktn.listMapper(cdktn.stringToTerraform, false)(this._allowedOrganizations),
+      editor_role_values: cdktn.listMapper(cdktn.stringToTerraform, false)(this._editorRoleValues),
+      email_assertion: cdktn.stringToTerraform(this._emailAssertion),
+      groups_assertion: cdktn.stringToTerraform(this._groupsAssertion),
+      id: cdktn.stringToTerraform(this._id),
+      idp_metadata_url: cdktn.stringToTerraform(this._idpMetadataUrl),
+      idp_metadata_xml: cdktn.stringToTerraform(this._idpMetadataXml),
+      login_assertion: cdktn.stringToTerraform(this._loginAssertion),
+      login_validity_duration: cdktn.numberToTerraform(this._loginValidityDuration),
+      name_assertion: cdktn.stringToTerraform(this._nameAssertion),
+      org_assertion: cdktn.stringToTerraform(this._orgAssertion),
+      region: cdktn.stringToTerraform(this._region),
+      role_assertion: cdktn.stringToTerraform(this._roleAssertion),
+      workspace_id: cdktn.stringToTerraform(this._workspaceId),
+      timeouts: awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admin_role_values: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._adminRoleValues),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      allowed_organizations: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._allowedOrganizations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      editor_role_values: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._editorRoleValues),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      email_assertion: {
+        value: cdktn.stringToHclTerraform(this._emailAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      groups_assertion: {
+        value: cdktn.stringToHclTerraform(this._groupsAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      idp_metadata_url: {
+        value: cdktn.stringToHclTerraform(this._idpMetadataUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      idp_metadata_xml: {
+        value: cdktn.stringToHclTerraform(this._idpMetadataXml),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      login_assertion: {
+        value: cdktn.stringToHclTerraform(this._loginAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      login_validity_duration: {
+        value: cdktn.numberToHclTerraform(this._loginValidityDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name_assertion: {
+        value: cdktn.stringToHclTerraform(this._nameAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_assertion: {
+        value: cdktn.stringToHclTerraform(this._orgAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_assertion: {
+        value: cdktn.stringToHclTerraform(this._roleAssertion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workspace_id: {
+        value: cdktn.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToTerraform(struct?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsGrafanaWorkspaceSamlConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsGrafanaWorkspaceSamlConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsGrafanaWorkspaceSamlConfiguration {
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#create AwsGrafanaWorkspaceSamlConfiguration#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_saml_configuration#delete AwsGrafanaWorkspaceSamlConfiguration#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

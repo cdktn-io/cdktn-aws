@@ -1,0 +1,1011 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDbProxyConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#debug_logging AwsDbProxy#debug_logging}
+  */
+  readonly debugLogging?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#default_auth_scheme AwsDbProxy#default_auth_scheme}
+  */
+  readonly defaultAuthScheme?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#endpoint_network_type AwsDbProxy#endpoint_network_type}
+  */
+  readonly endpointNetworkType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#engine_family AwsDbProxy#engine_family}
+  */
+  readonly engineFamily: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#id AwsDbProxy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#idle_client_timeout AwsDbProxy#idle_client_timeout}
+  */
+  readonly idleClientTimeout?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#name AwsDbProxy#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#region AwsDbProxy#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#require_tls AwsDbProxy#require_tls}
+  */
+  readonly requireTls?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#role_arn AwsDbProxy#role_arn}
+  */
+  readonly roleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags AwsDbProxy#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#tags_all AwsDbProxy#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#target_connection_network_type AwsDbProxy#target_connection_network_type}
+  */
+  readonly targetConnectionNetworkType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_security_group_ids AwsDbProxy#vpc_security_group_ids}
+  */
+  readonly vpcSecurityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#vpc_subnet_ids AwsDbProxy#vpc_subnet_ids}
+  */
+  readonly vpcSubnetIds: string[];
+  /**
+  * auth block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth AwsDbProxy#auth}
+  */
+  readonly auth?: AwsDbProxy.AuthProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#timeouts AwsDbProxy#timeouts}
+  */
+  readonly timeouts?: AwsDbProxy.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy aws_db_proxy}
+*/
+export class AwsDbProxy extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_db_proxy";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDbProxy resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDbProxy to import
+  * @param importFromId The id of the existing AwsDbProxy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbProxy to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_proxy", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy aws_db_proxy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDbProxyConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDbProxyConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_db_proxy',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._debugLogging = config.debugLogging;
+    this._defaultAuthScheme = config.defaultAuthScheme;
+    this._endpointNetworkType = config.endpointNetworkType;
+    this._engineFamily = config.engineFamily;
+    this._id = config.id;
+    this._idleClientTimeout = config.idleClientTimeout;
+    this._name = config.name;
+    this._region = config.region;
+    this._requireTls = config.requireTls;
+    this._roleArn = config.roleArn;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._targetConnectionNetworkType = config.targetConnectionNetworkType;
+    this._vpcSecurityGroupIds = config.vpcSecurityGroupIds;
+    this._vpcSubnetIds = config.vpcSubnetIds;
+    this._auth.internalValue = config.auth;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // debug_logging - computed: false, optional: true, required: false
+  private _debugLogging?: boolean | cdktn.IResolvable; 
+  public get debugLogging() {
+    return this.getBooleanAttribute('debug_logging');
+  }
+  public set debugLogging(value: boolean | cdktn.IResolvable) {
+    this._debugLogging = value;
+  }
+  public resetDebugLogging() {
+    this._debugLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get debugLoggingInput() {
+    return this._debugLogging;
+  }
+
+  // default_auth_scheme - computed: true, optional: true, required: false
+  private _defaultAuthScheme?: string; 
+  public get defaultAuthScheme() {
+    return this.getStringAttribute('default_auth_scheme');
+  }
+  public set defaultAuthScheme(value: string) {
+    this._defaultAuthScheme = value;
+  }
+  public resetDefaultAuthScheme() {
+    this._defaultAuthScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultAuthSchemeInput() {
+    return this._defaultAuthScheme;
+  }
+
+  // endpoint - computed: true, optional: false, required: false
+  public get endpoint() {
+    return this.getStringAttribute('endpoint');
+  }
+
+  // endpoint_network_type - computed: true, optional: true, required: false
+  private _endpointNetworkType?: string; 
+  public get endpointNetworkType() {
+    return this.getStringAttribute('endpoint_network_type');
+  }
+  public set endpointNetworkType(value: string) {
+    this._endpointNetworkType = value;
+  }
+  public resetEndpointNetworkType() {
+    this._endpointNetworkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointNetworkTypeInput() {
+    return this._endpointNetworkType;
+  }
+
+  // engine_family - computed: false, optional: false, required: true
+  private _engineFamily?: string; 
+  public get engineFamily() {
+    return this.getStringAttribute('engine_family');
+  }
+  public set engineFamily(value: string) {
+    this._engineFamily = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineFamilyInput() {
+    return this._engineFamily;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // idle_client_timeout - computed: true, optional: true, required: false
+  private _idleClientTimeout?: number; 
+  public get idleClientTimeout() {
+    return this.getNumberAttribute('idle_client_timeout');
+  }
+  public set idleClientTimeout(value: number) {
+    this._idleClientTimeout = value;
+  }
+  public resetIdleClientTimeout() {
+    this._idleClientTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleClientTimeoutInput() {
+    return this._idleClientTimeout;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // require_tls - computed: false, optional: true, required: false
+  private _requireTls?: boolean | cdktn.IResolvable; 
+  public get requireTls() {
+    return this.getBooleanAttribute('require_tls');
+  }
+  public set requireTls(value: boolean | cdktn.IResolvable) {
+    this._requireTls = value;
+  }
+  public resetRequireTls() {
+    this._requireTls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireTlsInput() {
+    return this._requireTls;
+  }
+
+  // role_arn - computed: false, optional: false, required: true
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // target_connection_network_type - computed: true, optional: true, required: false
+  private _targetConnectionNetworkType?: string; 
+  public get targetConnectionNetworkType() {
+    return this.getStringAttribute('target_connection_network_type');
+  }
+  public set targetConnectionNetworkType(value: string) {
+    this._targetConnectionNetworkType = value;
+  }
+  public resetTargetConnectionNetworkType() {
+    this._targetConnectionNetworkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetConnectionNetworkTypeInput() {
+    return this._targetConnectionNetworkType;
+  }
+
+  // vpc_security_group_ids - computed: true, optional: true, required: false
+  private _vpcSecurityGroupIds?: string[]; 
+  public get vpcSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_ids'));
+  }
+  public set vpcSecurityGroupIds(value: string[]) {
+    this._vpcSecurityGroupIds = value;
+  }
+  public resetVpcSecurityGroupIds() {
+    this._vpcSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupIdsInput() {
+    return this._vpcSecurityGroupIds;
+  }
+
+  // vpc_subnet_ids - computed: false, optional: false, required: true
+  private _vpcSubnetIds?: string[]; 
+  public get vpcSubnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_subnet_ids'));
+  }
+  public set vpcSubnetIds(value: string[]) {
+    this._vpcSubnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSubnetIdsInput() {
+    return this._vpcSubnetIds;
+  }
+
+  // auth - computed: false, optional: true, required: false
+  private _auth = new AwsDbProxy.AuthPropertyList(this, "auth", true);
+  public get auth() {
+    return this._auth;
+  }
+  public putAuth(value: AwsDbProxy.AuthProperty[] | cdktn.IResolvable) {
+    this._auth.internalValue = value;
+  }
+  public resetAuth() {
+    this._auth.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authInput() {
+    return this._auth.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDbProxy.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDbProxy.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      debug_logging: cdktn.booleanToTerraform(this._debugLogging),
+      default_auth_scheme: cdktn.stringToTerraform(this._defaultAuthScheme),
+      endpoint_network_type: cdktn.stringToTerraform(this._endpointNetworkType),
+      engine_family: cdktn.stringToTerraform(this._engineFamily),
+      id: cdktn.stringToTerraform(this._id),
+      idle_client_timeout: cdktn.numberToTerraform(this._idleClientTimeout),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      require_tls: cdktn.booleanToTerraform(this._requireTls),
+      role_arn: cdktn.stringToTerraform(this._roleArn),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      target_connection_network_type: cdktn.stringToTerraform(this._targetConnectionNetworkType),
+      vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
+      vpc_subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSubnetIds),
+      auth: cdktn.listMapper(awsDbProxyAuthPropertyToTerraform, true)(this._auth.internalValue),
+      timeouts: awsDbProxyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      debug_logging: {
+        value: cdktn.booleanToHclTerraform(this._debugLogging),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      default_auth_scheme: {
+        value: cdktn.stringToHclTerraform(this._defaultAuthScheme),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      endpoint_network_type: {
+        value: cdktn.stringToHclTerraform(this._endpointNetworkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      engine_family: {
+        value: cdktn.stringToHclTerraform(this._engineFamily),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      idle_client_timeout: {
+        value: cdktn.numberToHclTerraform(this._idleClientTimeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      require_tls: {
+        value: cdktn.booleanToHclTerraform(this._requireTls),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      role_arn: {
+        value: cdktn.stringToHclTerraform(this._roleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      target_connection_network_type: {
+        value: cdktn.stringToHclTerraform(this._targetConnectionNetworkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpc_security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSecurityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      vpc_subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSubnetIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      auth: {
+        value: cdktn.listMapperHcl(awsDbProxyAuthPropertyToHclTerraform, true)(this._auth.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDbProxy.AuthPropertyList",
+      },
+      timeouts: {
+        value: awsDbProxyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDbProxy.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDbProxyAuthPropertyToTerraform(struct?: AwsDbProxy.AuthProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    auth_scheme: cdktn.stringToTerraform(struct!.authScheme),
+    client_password_auth_type: cdktn.stringToTerraform(struct!.clientPasswordAuthType),
+    description: cdktn.stringToTerraform(struct!.description),
+    iam_auth: cdktn.stringToTerraform(struct!.iamAuth),
+    secret_arn: cdktn.stringToTerraform(struct!.secretArn),
+    username: cdktn.stringToTerraform(struct!.username),
+  }
+}
+
+
+export function awsDbProxyAuthPropertyToHclTerraform(struct?: AwsDbProxy.AuthProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    auth_scheme: {
+      value: cdktn.stringToHclTerraform(struct!.authScheme),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_password_auth_type: {
+      value: cdktn.stringToHclTerraform(struct!.clientPasswordAuthType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktn.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    iam_auth: {
+      value: cdktn.stringToHclTerraform(struct!.iamAuth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_arn: {
+      value: cdktn.stringToHclTerraform(struct!.secretArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktn.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDbProxyTimeoutsPropertyToTerraform(struct?: AwsDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDbProxyTimeoutsPropertyToHclTerraform(struct?: AwsDbProxy.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDbProxy {
+export interface AuthProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#auth_scheme AwsDbProxy#auth_scheme}
+  */
+  readonly authScheme?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#client_password_auth_type AwsDbProxy#client_password_auth_type}
+  */
+  readonly clientPasswordAuthType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#description AwsDbProxy#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#iam_auth AwsDbProxy#iam_auth}
+  */
+  readonly iamAuth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#secret_arn AwsDbProxy#secret_arn}
+  */
+  readonly secretArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#username AwsDbProxy#username}
+  */
+  readonly username?: string;
+}
+export class AuthPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AuthProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._authScheme !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authScheme = this._authScheme;
+    }
+    if (this._clientPasswordAuthType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientPasswordAuthType = this._clientPasswordAuthType;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._iamAuth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.iamAuth = this._iamAuth;
+    }
+    if (this._secretArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretArn = this._secretArn;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AuthProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._authScheme = undefined;
+      this._clientPasswordAuthType = undefined;
+      this._description = undefined;
+      this._iamAuth = undefined;
+      this._secretArn = undefined;
+      this._username = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._authScheme = value.authScheme;
+      this._clientPasswordAuthType = value.clientPasswordAuthType;
+      this._description = value.description;
+      this._iamAuth = value.iamAuth;
+      this._secretArn = value.secretArn;
+      this._username = value.username;
+    }
+  }
+
+  // auth_scheme - computed: false, optional: true, required: false
+  private _authScheme?: string; 
+  public get authScheme() {
+    return this.getStringAttribute('auth_scheme');
+  }
+  public set authScheme(value: string) {
+    this._authScheme = value;
+  }
+  public resetAuthScheme() {
+    this._authScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authSchemeInput() {
+    return this._authScheme;
+  }
+
+  // client_password_auth_type - computed: true, optional: true, required: false
+  private _clientPasswordAuthType?: string; 
+  public get clientPasswordAuthType() {
+    return this.getStringAttribute('client_password_auth_type');
+  }
+  public set clientPasswordAuthType(value: string) {
+    this._clientPasswordAuthType = value;
+  }
+  public resetClientPasswordAuthType() {
+    this._clientPasswordAuthType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientPasswordAuthTypeInput() {
+    return this._clientPasswordAuthType;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // iam_auth - computed: false, optional: true, required: false
+  private _iamAuth?: string; 
+  public get iamAuth() {
+    return this.getStringAttribute('iam_auth');
+  }
+  public set iamAuth(value: string) {
+    this._iamAuth = value;
+  }
+  public resetIamAuth() {
+    this._iamAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamAuthInput() {
+    return this._iamAuth;
+  }
+
+  // secret_arn - computed: false, optional: true, required: false
+  private _secretArn?: string; 
+  public get secretArn() {
+    return this.getStringAttribute('secret_arn');
+  }
+  public set secretArn(value: string) {
+    this._secretArn = value;
+  }
+  public resetSecretArn() {
+    this._secretArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretArnInput() {
+    return this._secretArn;
+  }
+
+  // username - computed: false, optional: true, required: false
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class AuthPropertyList extends cdktn.ComplexList {
+  public internalValue? : AuthProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AuthPropertyOutputReference {
+    return new AuthPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#create AwsDbProxy#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#delete AwsDbProxy#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_proxy#update AwsDbProxy#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

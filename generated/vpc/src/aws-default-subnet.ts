@@ -1,0 +1,739 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDefaultSubnetConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#assign_ipv6_address_on_creation AwsDefaultSubnet#assign_ipv6_address_on_creation}
+  */
+  readonly assignIpv6AddressOnCreation?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#availability_zone AwsDefaultSubnet#availability_zone}
+  */
+  readonly availabilityZone: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#customer_owned_ipv4_pool AwsDefaultSubnet#customer_owned_ipv4_pool}
+  */
+  readonly customerOwnedIpv4Pool?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_dns64 AwsDefaultSubnet#enable_dns64}
+  */
+  readonly enableDns64?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_a_record_on_launch AwsDefaultSubnet#enable_resource_name_dns_a_record_on_launch}
+  */
+  readonly enableResourceNameDnsARecordOnLaunch?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#enable_resource_name_dns_aaaa_record_on_launch AwsDefaultSubnet#enable_resource_name_dns_aaaa_record_on_launch}
+  */
+  readonly enableResourceNameDnsAaaaRecordOnLaunch?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#force_destroy AwsDefaultSubnet#force_destroy}
+  */
+  readonly forceDestroy?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#id AwsDefaultSubnet#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_cidr_block AwsDefaultSubnet#ipv6_cidr_block}
+  */
+  readonly ipv6CidrBlock?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#ipv6_native AwsDefaultSubnet#ipv6_native}
+  */
+  readonly ipv6Native?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_customer_owned_ip_on_launch AwsDefaultSubnet#map_customer_owned_ip_on_launch}
+  */
+  readonly mapCustomerOwnedIpOnLaunch?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#map_public_ip_on_launch AwsDefaultSubnet#map_public_ip_on_launch}
+  */
+  readonly mapPublicIpOnLaunch?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#private_dns_hostname_type_on_launch AwsDefaultSubnet#private_dns_hostname_type_on_launch}
+  */
+  readonly privateDnsHostnameTypeOnLaunch?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#region AwsDefaultSubnet#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags AwsDefaultSubnet#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#tags_all AwsDefaultSubnet#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#timeouts AwsDefaultSubnet#timeouts}
+  */
+  readonly timeouts?: AwsDefaultSubnet.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet aws_default_subnet}
+*/
+export class AwsDefaultSubnet extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_default_subnet";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDefaultSubnet resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDefaultSubnet to import
+  * @param importFromId The id of the existing AwsDefaultSubnet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultSubnet to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_default_subnet", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet aws_default_subnet} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDefaultSubnetConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDefaultSubnetConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_default_subnet',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._assignIpv6AddressOnCreation = config.assignIpv6AddressOnCreation;
+    this._availabilityZone = config.availabilityZone;
+    this._customerOwnedIpv4Pool = config.customerOwnedIpv4Pool;
+    this._enableDns64 = config.enableDns64;
+    this._enableResourceNameDnsARecordOnLaunch = config.enableResourceNameDnsARecordOnLaunch;
+    this._enableResourceNameDnsAaaaRecordOnLaunch = config.enableResourceNameDnsAaaaRecordOnLaunch;
+    this._forceDestroy = config.forceDestroy;
+    this._id = config.id;
+    this._ipv6CidrBlock = config.ipv6CidrBlock;
+    this._ipv6Native = config.ipv6Native;
+    this._mapCustomerOwnedIpOnLaunch = config.mapCustomerOwnedIpOnLaunch;
+    this._mapPublicIpOnLaunch = config.mapPublicIpOnLaunch;
+    this._privateDnsHostnameTypeOnLaunch = config.privateDnsHostnameTypeOnLaunch;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // assign_ipv6_address_on_creation - computed: false, optional: true, required: false
+  private _assignIpv6AddressOnCreation?: boolean | cdktn.IResolvable; 
+  public get assignIpv6AddressOnCreation() {
+    return this.getBooleanAttribute('assign_ipv6_address_on_creation');
+  }
+  public set assignIpv6AddressOnCreation(value: boolean | cdktn.IResolvable) {
+    this._assignIpv6AddressOnCreation = value;
+  }
+  public resetAssignIpv6AddressOnCreation() {
+    this._assignIpv6AddressOnCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assignIpv6AddressOnCreationInput() {
+    return this._assignIpv6AddressOnCreation;
+  }
+
+  // availability_zone - computed: false, optional: false, required: true
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // availability_zone_id - computed: true, optional: false, required: false
+  public get availabilityZoneId() {
+    return this.getStringAttribute('availability_zone_id');
+  }
+
+  // cidr_block - computed: true, optional: false, required: false
+  public get cidrBlock() {
+    return this.getStringAttribute('cidr_block');
+  }
+
+  // customer_owned_ipv4_pool - computed: false, optional: true, required: false
+  private _customerOwnedIpv4Pool?: string; 
+  public get customerOwnedIpv4Pool() {
+    return this.getStringAttribute('customer_owned_ipv4_pool');
+  }
+  public set customerOwnedIpv4Pool(value: string) {
+    this._customerOwnedIpv4Pool = value;
+  }
+  public resetCustomerOwnedIpv4Pool() {
+    this._customerOwnedIpv4Pool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerOwnedIpv4PoolInput() {
+    return this._customerOwnedIpv4Pool;
+  }
+
+  // enable_dns64 - computed: false, optional: true, required: false
+  private _enableDns64?: boolean | cdktn.IResolvable; 
+  public get enableDns64() {
+    return this.getBooleanAttribute('enable_dns64');
+  }
+  public set enableDns64(value: boolean | cdktn.IResolvable) {
+    this._enableDns64 = value;
+  }
+  public resetEnableDns64() {
+    this._enableDns64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableDns64Input() {
+    return this._enableDns64;
+  }
+
+  // enable_lni_at_device_index - computed: true, optional: false, required: false
+  public get enableLniAtDeviceIndex() {
+    return this.getNumberAttribute('enable_lni_at_device_index');
+  }
+
+  // enable_resource_name_dns_a_record_on_launch - computed: false, optional: true, required: false
+  private _enableResourceNameDnsARecordOnLaunch?: boolean | cdktn.IResolvable; 
+  public get enableResourceNameDnsARecordOnLaunch() {
+    return this.getBooleanAttribute('enable_resource_name_dns_a_record_on_launch');
+  }
+  public set enableResourceNameDnsARecordOnLaunch(value: boolean | cdktn.IResolvable) {
+    this._enableResourceNameDnsARecordOnLaunch = value;
+  }
+  public resetEnableResourceNameDnsARecordOnLaunch() {
+    this._enableResourceNameDnsARecordOnLaunch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableResourceNameDnsARecordOnLaunchInput() {
+    return this._enableResourceNameDnsARecordOnLaunch;
+  }
+
+  // enable_resource_name_dns_aaaa_record_on_launch - computed: false, optional: true, required: false
+  private _enableResourceNameDnsAaaaRecordOnLaunch?: boolean | cdktn.IResolvable; 
+  public get enableResourceNameDnsAaaaRecordOnLaunch() {
+    return this.getBooleanAttribute('enable_resource_name_dns_aaaa_record_on_launch');
+  }
+  public set enableResourceNameDnsAaaaRecordOnLaunch(value: boolean | cdktn.IResolvable) {
+    this._enableResourceNameDnsAaaaRecordOnLaunch = value;
+  }
+  public resetEnableResourceNameDnsAaaaRecordOnLaunch() {
+    this._enableResourceNameDnsAaaaRecordOnLaunch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableResourceNameDnsAaaaRecordOnLaunchInput() {
+    return this._enableResourceNameDnsAaaaRecordOnLaunch;
+  }
+
+  // existing_default_subnet - computed: true, optional: false, required: false
+  public get existingDefaultSubnet() {
+    return this.getBooleanAttribute('existing_default_subnet');
+  }
+
+  // force_destroy - computed: false, optional: true, required: false
+  private _forceDestroy?: boolean | cdktn.IResolvable; 
+  public get forceDestroy() {
+    return this.getBooleanAttribute('force_destroy');
+  }
+  public set forceDestroy(value: boolean | cdktn.IResolvable) {
+    this._forceDestroy = value;
+  }
+  public resetForceDestroy() {
+    this._forceDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDestroyInput() {
+    return this._forceDestroy;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ipv6_cidr_block - computed: true, optional: true, required: false
+  private _ipv6CidrBlock?: string; 
+  public get ipv6CidrBlock() {
+    return this.getStringAttribute('ipv6_cidr_block');
+  }
+  public set ipv6CidrBlock(value: string) {
+    this._ipv6CidrBlock = value;
+  }
+  public resetIpv6CidrBlock() {
+    this._ipv6CidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6CidrBlockInput() {
+    return this._ipv6CidrBlock;
+  }
+
+  // ipv6_cidr_block_association_id - computed: true, optional: false, required: false
+  public get ipv6CidrBlockAssociationId() {
+    return this.getStringAttribute('ipv6_cidr_block_association_id');
+  }
+
+  // ipv6_native - computed: false, optional: true, required: false
+  private _ipv6Native?: boolean | cdktn.IResolvable; 
+  public get ipv6Native() {
+    return this.getBooleanAttribute('ipv6_native');
+  }
+  public set ipv6Native(value: boolean | cdktn.IResolvable) {
+    this._ipv6Native = value;
+  }
+  public resetIpv6Native() {
+    this._ipv6Native = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6NativeInput() {
+    return this._ipv6Native;
+  }
+
+  // map_customer_owned_ip_on_launch - computed: false, optional: true, required: false
+  private _mapCustomerOwnedIpOnLaunch?: boolean | cdktn.IResolvable; 
+  public get mapCustomerOwnedIpOnLaunch() {
+    return this.getBooleanAttribute('map_customer_owned_ip_on_launch');
+  }
+  public set mapCustomerOwnedIpOnLaunch(value: boolean | cdktn.IResolvable) {
+    this._mapCustomerOwnedIpOnLaunch = value;
+  }
+  public resetMapCustomerOwnedIpOnLaunch() {
+    this._mapCustomerOwnedIpOnLaunch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mapCustomerOwnedIpOnLaunchInput() {
+    return this._mapCustomerOwnedIpOnLaunch;
+  }
+
+  // map_public_ip_on_launch - computed: false, optional: true, required: false
+  private _mapPublicIpOnLaunch?: boolean | cdktn.IResolvable; 
+  public get mapPublicIpOnLaunch() {
+    return this.getBooleanAttribute('map_public_ip_on_launch');
+  }
+  public set mapPublicIpOnLaunch(value: boolean | cdktn.IResolvable) {
+    this._mapPublicIpOnLaunch = value;
+  }
+  public resetMapPublicIpOnLaunch() {
+    this._mapPublicIpOnLaunch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mapPublicIpOnLaunchInput() {
+    return this._mapPublicIpOnLaunch;
+  }
+
+  // outpost_arn - computed: true, optional: false, required: false
+  public get outpostArn() {
+    return this.getStringAttribute('outpost_arn');
+  }
+
+  // owner_id - computed: true, optional: false, required: false
+  public get ownerId() {
+    return this.getStringAttribute('owner_id');
+  }
+
+  // private_dns_hostname_type_on_launch - computed: true, optional: true, required: false
+  private _privateDnsHostnameTypeOnLaunch?: string; 
+  public get privateDnsHostnameTypeOnLaunch() {
+    return this.getStringAttribute('private_dns_hostname_type_on_launch');
+  }
+  public set privateDnsHostnameTypeOnLaunch(value: string) {
+    this._privateDnsHostnameTypeOnLaunch = value;
+  }
+  public resetPrivateDnsHostnameTypeOnLaunch() {
+    this._privateDnsHostnameTypeOnLaunch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsHostnameTypeOnLaunchInput() {
+    return this._privateDnsHostnameTypeOnLaunch;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_id - computed: true, optional: false, required: false
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDefaultSubnet.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDefaultSubnet.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      assign_ipv6_address_on_creation: cdktn.booleanToTerraform(this._assignIpv6AddressOnCreation),
+      availability_zone: cdktn.stringToTerraform(this._availabilityZone),
+      customer_owned_ipv4_pool: cdktn.stringToTerraform(this._customerOwnedIpv4Pool),
+      enable_dns64: cdktn.booleanToTerraform(this._enableDns64),
+      enable_resource_name_dns_a_record_on_launch: cdktn.booleanToTerraform(this._enableResourceNameDnsARecordOnLaunch),
+      enable_resource_name_dns_aaaa_record_on_launch: cdktn.booleanToTerraform(this._enableResourceNameDnsAaaaRecordOnLaunch),
+      force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
+      id: cdktn.stringToTerraform(this._id),
+      ipv6_cidr_block: cdktn.stringToTerraform(this._ipv6CidrBlock),
+      ipv6_native: cdktn.booleanToTerraform(this._ipv6Native),
+      map_customer_owned_ip_on_launch: cdktn.booleanToTerraform(this._mapCustomerOwnedIpOnLaunch),
+      map_public_ip_on_launch: cdktn.booleanToTerraform(this._mapPublicIpOnLaunch),
+      private_dns_hostname_type_on_launch: cdktn.stringToTerraform(this._privateDnsHostnameTypeOnLaunch),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      timeouts: awsDefaultSubnetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      assign_ipv6_address_on_creation: {
+        value: cdktn.booleanToHclTerraform(this._assignIpv6AddressOnCreation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      availability_zone: {
+        value: cdktn.stringToHclTerraform(this._availabilityZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      customer_owned_ipv4_pool: {
+        value: cdktn.stringToHclTerraform(this._customerOwnedIpv4Pool),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_dns64: {
+        value: cdktn.booleanToHclTerraform(this._enableDns64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_resource_name_dns_a_record_on_launch: {
+        value: cdktn.booleanToHclTerraform(this._enableResourceNameDnsARecordOnLaunch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_resource_name_dns_aaaa_record_on_launch: {
+        value: cdktn.booleanToHclTerraform(this._enableResourceNameDnsAaaaRecordOnLaunch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      force_destroy: {
+        value: cdktn.booleanToHclTerraform(this._forceDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv6_cidr_block: {
+        value: cdktn.stringToHclTerraform(this._ipv6CidrBlock),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv6_native: {
+        value: cdktn.booleanToHclTerraform(this._ipv6Native),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      map_customer_owned_ip_on_launch: {
+        value: cdktn.booleanToHclTerraform(this._mapCustomerOwnedIpOnLaunch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      map_public_ip_on_launch: {
+        value: cdktn.booleanToHclTerraform(this._mapPublicIpOnLaunch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      private_dns_hostname_type_on_launch: {
+        value: cdktn.stringToHclTerraform(this._privateDnsHostnameTypeOnLaunch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: awsDefaultSubnetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDefaultSubnet.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDefaultSubnetTimeoutsPropertyToTerraform(struct?: AwsDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+  }
+}
+
+
+export function awsDefaultSubnetTimeoutsPropertyToHclTerraform(struct?: AwsDefaultSubnet.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDefaultSubnet {
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#create AwsDefaultSubnet#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_subnet#delete AwsDefaultSubnet#delete}
+  */
+  readonly delete?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+}
+}

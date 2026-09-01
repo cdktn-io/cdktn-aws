@@ -1,0 +1,572 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSsmParameterConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#allowed_pattern AwsSsmParameter#allowed_pattern}
+  */
+  readonly allowedPattern?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#arn AwsSsmParameter#arn}
+  */
+  readonly arn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#data_type AwsSsmParameter#data_type}
+  */
+  readonly dataType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#description AwsSsmParameter#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#id AwsSsmParameter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#insecure_value AwsSsmParameter#insecure_value}
+  */
+  readonly insecureValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#key_id AwsSsmParameter#key_id}
+  */
+  readonly keyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#name AwsSsmParameter#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#overwrite AwsSsmParameter#overwrite}
+  */
+  readonly overwrite?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#region AwsSsmParameter#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#tags AwsSsmParameter#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#tags_all AwsSsmParameter#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#tier AwsSsmParameter#tier}
+  */
+  readonly tier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#type AwsSsmParameter#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#value AwsSsmParameter#value}
+  */
+  readonly value?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#value_wo AwsSsmParameter#value_wo}
+  */
+  readonly valueWo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#value_wo_version AwsSsmParameter#value_wo_version}
+  */
+  readonly valueWoVersion?: number;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter aws_ssm_parameter}
+*/
+export class AwsSsmParameter extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ssm_parameter";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSsmParameter resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSsmParameter to import
+  * @param importFromId The id of the existing AwsSsmParameter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSsmParameter to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_parameter", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_parameter aws_ssm_parameter} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSsmParameterConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSsmParameterConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ssm_parameter',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allowedPattern = config.allowedPattern;
+    this._arn = config.arn;
+    this._dataType = config.dataType;
+    this._description = config.description;
+    this._id = config.id;
+    this._insecureValue = config.insecureValue;
+    this._keyId = config.keyId;
+    this._name = config.name;
+    this._overwrite = config.overwrite;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._tier = config.tier;
+    this._type = config.type;
+    this._value = config.value;
+    this._valueWo = config.valueWo;
+    this._valueWoVersion = config.valueWoVersion;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allowed_pattern - computed: false, optional: true, required: false
+  private _allowedPattern?: string; 
+  public get allowedPattern() {
+    return this.getStringAttribute('allowed_pattern');
+  }
+  public set allowedPattern(value: string) {
+    this._allowedPattern = value;
+  }
+  public resetAllowedPattern() {
+    this._allowedPattern = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedPatternInput() {
+    return this._allowedPattern;
+  }
+
+  // arn - computed: true, optional: true, required: false
+  private _arn?: string; 
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+  public set arn(value: string) {
+    this._arn = value;
+  }
+  public resetArn() {
+    this._arn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get arnInput() {
+    return this._arn;
+  }
+
+  // data_type - computed: true, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // has_value_wo - computed: true, optional: false, required: false
+  public get hasValueWo() {
+    return this.getBooleanAttribute('has_value_wo');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // insecure_value - computed: true, optional: true, required: false
+  private _insecureValue?: string; 
+  public get insecureValue() {
+    return this.getStringAttribute('insecure_value');
+  }
+  public set insecureValue(value: string) {
+    this._insecureValue = value;
+  }
+  public resetInsecureValue() {
+    this._insecureValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get insecureValueInput() {
+    return this._insecureValue;
+  }
+
+  // key_id - computed: true, optional: true, required: false
+  private _keyId?: string; 
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+  public set keyId(value: string) {
+    this._keyId = value;
+  }
+  public resetKeyId() {
+    this._keyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyIdInput() {
+    return this._keyId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // overwrite - computed: false, optional: true, required: false
+  private _overwrite?: boolean | cdktn.IResolvable; 
+  public get overwrite() {
+    return this.getBooleanAttribute('overwrite');
+  }
+  public set overwrite(value: boolean | cdktn.IResolvable) {
+    this._overwrite = value;
+  }
+  public resetOverwrite() {
+    this._overwrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overwriteInput() {
+    return this._overwrite;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // tier - computed: true, optional: true, required: false
+  private _tier?: string; 
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+  public set tier(value: string) {
+    this._tier = value;
+  }
+  public resetTier() {
+    this._tier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: true, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+
+  // value_wo - computed: false, optional: true, required: false
+  private _valueWo?: string; 
+  /**
+  * @deprecated Write-only: the provider never returns this value; reading it always yields null by protocol contract. The getter remains for compatibility and will be removed in a future prebuilt-provider major.
+  */
+  public get valueWo() {
+    return this.getStringAttribute('value_wo');
+  }
+  public set valueWo(value: string) {
+    this._valueWo = value;
+  }
+  public resetValueWo() {
+    this._valueWo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueWoInput() {
+    return this._valueWo;
+  }
+
+  // value_wo_version - computed: false, optional: true, required: false
+  private _valueWoVersion?: number; 
+  public get valueWoVersion() {
+    return this.getNumberAttribute('value_wo_version');
+  }
+  public set valueWoVersion(value: number) {
+    this._valueWoVersion = value;
+  }
+  public resetValueWoVersion() {
+    this._valueWoVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueWoVersionInput() {
+    return this._valueWoVersion;
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getNumberAttribute('version');
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allowed_pattern: cdktn.stringToTerraform(this._allowedPattern),
+      arn: cdktn.stringToTerraform(this._arn),
+      data_type: cdktn.stringToTerraform(this._dataType),
+      description: cdktn.stringToTerraform(this._description),
+      id: cdktn.stringToTerraform(this._id),
+      insecure_value: cdktn.stringToTerraform(this._insecureValue),
+      key_id: cdktn.stringToTerraform(this._keyId),
+      name: cdktn.stringToTerraform(this._name),
+      overwrite: cdktn.booleanToTerraform(this._overwrite),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      tier: cdktn.stringToTerraform(this._tier),
+      type: cdktn.stringToTerraform(this._type),
+      value: cdktn.stringToTerraform(this._value),
+      value_wo: this.markWriteOnlyAttribute(cdktn.stringToTerraform(this._valueWo)),
+      value_wo_version: cdktn.numberToTerraform(this._valueWoVersion),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_pattern: {
+        value: cdktn.stringToHclTerraform(this._allowedPattern),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      arn: {
+        value: cdktn.stringToHclTerraform(this._arn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_type: {
+        value: cdktn.stringToHclTerraform(this._dataType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      insecure_value: {
+        value: cdktn.stringToHclTerraform(this._insecureValue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_id: {
+        value: cdktn.stringToHclTerraform(this._keyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      overwrite: {
+        value: cdktn.booleanToHclTerraform(this._overwrite),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tier: {
+        value: cdktn.stringToHclTerraform(this._tier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      value: {
+        value: cdktn.stringToHclTerraform(this._value),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      value_wo: {
+        value: this.markWriteOnlyAttribute(cdktn.stringToHclTerraform(this._valueWo)),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      value_wo_version: {
+        value: cdktn.numberToHclTerraform(this._valueWoVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

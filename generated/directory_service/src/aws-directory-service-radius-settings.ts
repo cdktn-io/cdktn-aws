@@ -1,0 +1,533 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDirectoryServiceRadiusSettingsConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#authentication_protocol AwsDirectoryServiceRadiusSettings#authentication_protocol}
+  */
+  readonly authenticationProtocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#directory_id AwsDirectoryServiceRadiusSettings#directory_id}
+  */
+  readonly directoryId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#display_label AwsDirectoryServiceRadiusSettings#display_label}
+  */
+  readonly displayLabel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#id AwsDirectoryServiceRadiusSettings#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_port AwsDirectoryServiceRadiusSettings#radius_port}
+  */
+  readonly radiusPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_retries AwsDirectoryServiceRadiusSettings#radius_retries}
+  */
+  readonly radiusRetries: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_servers AwsDirectoryServiceRadiusSettings#radius_servers}
+  */
+  readonly radiusServers: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_timeout AwsDirectoryServiceRadiusSettings#radius_timeout}
+  */
+  readonly radiusTimeout: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#region AwsDirectoryServiceRadiusSettings#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#shared_secret AwsDirectoryServiceRadiusSettings#shared_secret}
+  */
+  readonly sharedSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#use_same_username AwsDirectoryServiceRadiusSettings#use_same_username}
+  */
+  readonly useSameUsername?: boolean | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#timeouts AwsDirectoryServiceRadiusSettings#timeouts}
+  */
+  readonly timeouts?: AwsDirectoryServiceRadiusSettings.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings aws_directory_service_radius_settings}
+*/
+export class AwsDirectoryServiceRadiusSettings extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_directory_service_radius_settings";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDirectoryServiceRadiusSettings resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDirectoryServiceRadiusSettings to import
+  * @param importFromId The id of the existing AwsDirectoryServiceRadiusSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDirectoryServiceRadiusSettings to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_radius_settings", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings aws_directory_service_radius_settings} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDirectoryServiceRadiusSettingsConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDirectoryServiceRadiusSettingsConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_directory_service_radius_settings',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._authenticationProtocol = config.authenticationProtocol;
+    this._directoryId = config.directoryId;
+    this._displayLabel = config.displayLabel;
+    this._id = config.id;
+    this._radiusPort = config.radiusPort;
+    this._radiusRetries = config.radiusRetries;
+    this._radiusServers = config.radiusServers;
+    this._radiusTimeout = config.radiusTimeout;
+    this._region = config.region;
+    this._sharedSecret = config.sharedSecret;
+    this._useSameUsername = config.useSameUsername;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // authentication_protocol - computed: false, optional: false, required: true
+  private _authenticationProtocol?: string; 
+  public get authenticationProtocol() {
+    return this.getStringAttribute('authentication_protocol');
+  }
+  public set authenticationProtocol(value: string) {
+    this._authenticationProtocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationProtocolInput() {
+    return this._authenticationProtocol;
+  }
+
+  // directory_id - computed: false, optional: false, required: true
+  private _directoryId?: string; 
+  public get directoryId() {
+    return this.getStringAttribute('directory_id');
+  }
+  public set directoryId(value: string) {
+    this._directoryId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryIdInput() {
+    return this._directoryId;
+  }
+
+  // display_label - computed: false, optional: false, required: true
+  private _displayLabel?: string; 
+  public get displayLabel() {
+    return this.getStringAttribute('display_label');
+  }
+  public set displayLabel(value: string) {
+    this._displayLabel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayLabelInput() {
+    return this._displayLabel;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // radius_port - computed: false, optional: false, required: true
+  private _radiusPort?: number; 
+  public get radiusPort() {
+    return this.getNumberAttribute('radius_port');
+  }
+  public set radiusPort(value: number) {
+    this._radiusPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusPortInput() {
+    return this._radiusPort;
+  }
+
+  // radius_retries - computed: false, optional: false, required: true
+  private _radiusRetries?: number; 
+  public get radiusRetries() {
+    return this.getNumberAttribute('radius_retries');
+  }
+  public set radiusRetries(value: number) {
+    this._radiusRetries = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusRetriesInput() {
+    return this._radiusRetries;
+  }
+
+  // radius_servers - computed: false, optional: false, required: true
+  private _radiusServers?: string[]; 
+  public get radiusServers() {
+    return cdktn.Fn.tolist(this.getListAttribute('radius_servers'));
+  }
+  public set radiusServers(value: string[]) {
+    this._radiusServers = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusServersInput() {
+    return this._radiusServers;
+  }
+
+  // radius_timeout - computed: false, optional: false, required: true
+  private _radiusTimeout?: number; 
+  public get radiusTimeout() {
+    return this.getNumberAttribute('radius_timeout');
+  }
+  public set radiusTimeout(value: number) {
+    this._radiusTimeout = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusTimeoutInput() {
+    return this._radiusTimeout;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // shared_secret - computed: false, optional: false, required: true
+  private _sharedSecret?: string; 
+  public get sharedSecret() {
+    return this.getStringAttribute('shared_secret');
+  }
+  public set sharedSecret(value: string) {
+    this._sharedSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedSecretInput() {
+    return this._sharedSecret;
+  }
+
+  // use_same_username - computed: false, optional: true, required: false
+  private _useSameUsername?: boolean | cdktn.IResolvable; 
+  public get useSameUsername() {
+    return this.getBooleanAttribute('use_same_username');
+  }
+  public set useSameUsername(value: boolean | cdktn.IResolvable) {
+    this._useSameUsername = value;
+  }
+  public resetUseSameUsername() {
+    this._useSameUsername = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSameUsernameInput() {
+    return this._useSameUsername;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDirectoryServiceRadiusSettings.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDirectoryServiceRadiusSettings.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      authentication_protocol: cdktn.stringToTerraform(this._authenticationProtocol),
+      directory_id: cdktn.stringToTerraform(this._directoryId),
+      display_label: cdktn.stringToTerraform(this._displayLabel),
+      id: cdktn.stringToTerraform(this._id),
+      radius_port: cdktn.numberToTerraform(this._radiusPort),
+      radius_retries: cdktn.numberToTerraform(this._radiusRetries),
+      radius_servers: cdktn.listMapper(cdktn.stringToTerraform, false)(this._radiusServers),
+      radius_timeout: cdktn.numberToTerraform(this._radiusTimeout),
+      region: cdktn.stringToTerraform(this._region),
+      shared_secret: cdktn.stringToTerraform(this._sharedSecret),
+      use_same_username: cdktn.booleanToTerraform(this._useSameUsername),
+      timeouts: awsDirectoryServiceRadiusSettingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authentication_protocol: {
+        value: cdktn.stringToHclTerraform(this._authenticationProtocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      directory_id: {
+        value: cdktn.stringToHclTerraform(this._directoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_label: {
+        value: cdktn.stringToHclTerraform(this._displayLabel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      radius_port: {
+        value: cdktn.numberToHclTerraform(this._radiusPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      radius_retries: {
+        value: cdktn.numberToHclTerraform(this._radiusRetries),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      radius_servers: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._radiusServers),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      radius_timeout: {
+        value: cdktn.numberToHclTerraform(this._radiusTimeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shared_secret: {
+        value: cdktn.stringToHclTerraform(this._sharedSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      use_same_username: {
+        value: cdktn.booleanToHclTerraform(this._useSameUsername),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: awsDirectoryServiceRadiusSettingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDirectoryServiceRadiusSettings.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDirectoryServiceRadiusSettingsTimeoutsPropertyToTerraform(struct?: AwsDirectoryServiceRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDirectoryServiceRadiusSettingsTimeoutsPropertyToHclTerraform(struct?: AwsDirectoryServiceRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDirectoryServiceRadiusSettings {
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#create AwsDirectoryServiceRadiusSettings#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#update AwsDirectoryServiceRadiusSettings#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

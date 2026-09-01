@@ -1,0 +1,998 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApiGatewayUsagePlanConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#description AwsApiGatewayUsagePlan#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#id AwsApiGatewayUsagePlan#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#name AwsApiGatewayUsagePlan#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#product_code AwsApiGatewayUsagePlan#product_code}
+  */
+  readonly productCode?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#region AwsApiGatewayUsagePlan#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags AwsApiGatewayUsagePlan#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#tags_all AwsApiGatewayUsagePlan#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * api_stages block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_stages AwsApiGatewayUsagePlan#api_stages}
+  */
+  readonly apiStages?: AwsApiGatewayUsagePlan.ApiStagesProperty[] | cdktn.IResolvable;
+  /**
+  * quota_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#quota_settings AwsApiGatewayUsagePlan#quota_settings}
+  */
+  readonly quotaSettings?: AwsApiGatewayUsagePlan.QuotaSettingsProperty;
+  /**
+  * throttle_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle_settings AwsApiGatewayUsagePlan#throttle_settings}
+  */
+  readonly throttleSettings?: AwsApiGatewayUsagePlan.ThrottleSettingsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan aws_api_gateway_usage_plan}
+*/
+export class AwsApiGatewayUsagePlan extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_api_gateway_usage_plan";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApiGatewayUsagePlan resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApiGatewayUsagePlan to import
+  * @param importFromId The id of the existing AwsApiGatewayUsagePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiGatewayUsagePlan to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_usage_plan", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan aws_api_gateway_usage_plan} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApiGatewayUsagePlanConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsApiGatewayUsagePlanConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_api_gateway_usage_plan',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._id = config.id;
+    this._name = config.name;
+    this._productCode = config.productCode;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._apiStages.internalValue = config.apiStages;
+    this._quotaSettings.internalValue = config.quotaSettings;
+    this._throttleSettings.internalValue = config.throttleSettings;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // product_code - computed: false, optional: true, required: false
+  private _productCode?: string; 
+  public get productCode() {
+    return this.getStringAttribute('product_code');
+  }
+  public set productCode(value: string) {
+    this._productCode = value;
+  }
+  public resetProductCode() {
+    this._productCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productCodeInput() {
+    return this._productCode;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // api_stages - computed: false, optional: true, required: false
+  private _apiStages = new AwsApiGatewayUsagePlan.ApiStagesPropertyList(this, "api_stages", true);
+  public get apiStages() {
+    return this._apiStages;
+  }
+  public putApiStages(value: AwsApiGatewayUsagePlan.ApiStagesProperty[] | cdktn.IResolvable) {
+    this._apiStages.internalValue = value;
+  }
+  public resetApiStages() {
+    this._apiStages.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiStagesInput() {
+    return this._apiStages.internalValue;
+  }
+
+  // quota_settings - computed: false, optional: true, required: false
+  private _quotaSettings = new AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference(this, "quota_settings");
+  public get quotaSettings() {
+    return this._quotaSettings;
+  }
+  public putQuotaSettings(value: AwsApiGatewayUsagePlan.QuotaSettingsProperty) {
+    this._quotaSettings.internalValue = value;
+  }
+  public resetQuotaSettings() {
+    this._quotaSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaSettingsInput() {
+    return this._quotaSettings.internalValue;
+  }
+
+  // throttle_settings - computed: false, optional: true, required: false
+  private _throttleSettings = new AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference(this, "throttle_settings");
+  public get throttleSettings() {
+    return this._throttleSettings;
+  }
+  public putThrottleSettings(value: AwsApiGatewayUsagePlan.ThrottleSettingsProperty) {
+    this._throttleSettings.internalValue = value;
+  }
+  public resetThrottleSettings() {
+    this._throttleSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throttleSettingsInput() {
+    return this._throttleSettings.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      product_code: cdktn.stringToTerraform(this._productCode),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      api_stages: cdktn.listMapper(awsApiGatewayUsagePlanApiStagesPropertyToTerraform, true)(this._apiStages.internalValue),
+      quota_settings: awsApiGatewayUsagePlanQuotaSettingsPropertyToTerraform(this._quotaSettings.internalValue),
+      throttle_settings: awsApiGatewayUsagePlanThrottleSettingsPropertyToTerraform(this._throttleSettings.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      product_code: {
+        value: cdktn.stringToHclTerraform(this._productCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      api_stages: {
+        value: cdktn.listMapperHcl(awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform, true)(this._apiStages.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsApiGatewayUsagePlan.ApiStagesPropertyList",
+      },
+      quota_settings: {
+        value: awsApiGatewayUsagePlanQuotaSettingsPropertyToHclTerraform(this._quotaSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsApiGatewayUsagePlan.QuotaSettingsPropertyList",
+      },
+      throttle_settings: {
+        value: awsApiGatewayUsagePlanThrottleSettingsPropertyToHclTerraform(this._throttleSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsApiGatewayUsagePlan.ThrottleSettingsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsApiGatewayUsagePlanThrottlePropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    burst_limit: cdktn.numberToTerraform(struct!.burstLimit),
+    path: cdktn.stringToTerraform(struct!.path),
+    rate_limit: cdktn.numberToTerraform(struct!.rateLimit),
+  }
+}
+
+
+export function awsApiGatewayUsagePlanThrottlePropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    burst_limit: {
+      value: cdktn.numberToHclTerraform(struct!.burstLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    path: {
+      value: cdktn.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rate_limit: {
+      value: cdktn.numberToHclTerraform(struct!.rateLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsApiGatewayUsagePlanApiStagesPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    api_id: cdktn.stringToTerraform(struct!.apiId),
+    stage: cdktn.stringToTerraform(struct!.stage),
+    throttle: cdktn.listMapper(awsApiGatewayUsagePlanThrottlePropertyToTerraform, true)(struct!.throttle),
+  }
+}
+
+
+export function awsApiGatewayUsagePlanApiStagesPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ApiStagesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    api_id: {
+      value: cdktn.stringToHclTerraform(struct!.apiId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    stage: {
+      value: cdktn.stringToHclTerraform(struct!.stage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    throttle: {
+      value: cdktn.listMapperHcl(awsApiGatewayUsagePlanThrottlePropertyToHclTerraform, true)(struct!.throttle),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ThrottlePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsApiGatewayUsagePlanQuotaSettingsPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.QuotaSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    limit: cdktn.numberToTerraform(struct!.limit),
+    offset: cdktn.numberToTerraform(struct!.offset),
+    period: cdktn.stringToTerraform(struct!.period),
+  }
+}
+
+
+export function awsApiGatewayUsagePlanQuotaSettingsPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.QuotaSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.QuotaSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    limit: {
+      value: cdktn.numberToHclTerraform(struct!.limit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    offset: {
+      value: cdktn.numberToHclTerraform(struct!.offset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    period: {
+      value: cdktn.stringToHclTerraform(struct!.period),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsApiGatewayUsagePlanThrottleSettingsPropertyToTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.ThrottleSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    burst_limit: cdktn.numberToTerraform(struct!.burstLimit),
+    rate_limit: cdktn.numberToTerraform(struct!.rateLimit),
+  }
+}
+
+
+export function awsApiGatewayUsagePlanThrottleSettingsPropertyToHclTerraform(struct?: AwsApiGatewayUsagePlan.ThrottleSettingsPropertyOutputReference | AwsApiGatewayUsagePlan.ThrottleSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    burst_limit: {
+      value: cdktn.numberToHclTerraform(struct!.burstLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    rate_limit: {
+      value: cdktn.numberToHclTerraform(struct!.rateLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsApiGatewayUsagePlan {
+export interface ThrottleProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit AwsApiGatewayUsagePlan#burst_limit}
+  */
+  readonly burstLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#path AwsApiGatewayUsagePlan#path}
+  */
+  readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit AwsApiGatewayUsagePlan#rate_limit}
+  */
+  readonly rateLimit?: number;
+}
+export class ThrottlePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ThrottleProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._burstLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.burstLimit = this._burstLimit;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._rateLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rateLimit = this._rateLimit;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ThrottleProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._burstLimit = undefined;
+      this._path = undefined;
+      this._rateLimit = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._burstLimit = value.burstLimit;
+      this._path = value.path;
+      this._rateLimit = value.rateLimit;
+    }
+  }
+
+  // burst_limit - computed: false, optional: true, required: false
+  private _burstLimit?: number; 
+  public get burstLimit() {
+    return this.getNumberAttribute('burst_limit');
+  }
+  public set burstLimit(value: number) {
+    this._burstLimit = value;
+  }
+  public resetBurstLimit() {
+    this._burstLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get burstLimitInput() {
+    return this._burstLimit;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // rate_limit - computed: false, optional: true, required: false
+  private _rateLimit?: number; 
+  public get rateLimit() {
+    return this.getNumberAttribute('rate_limit');
+  }
+  public set rateLimit(value: number) {
+    this._rateLimit = value;
+  }
+  public resetRateLimit() {
+    this._rateLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateLimitInput() {
+    return this._rateLimit;
+  }
+}
+
+export class ThrottlePropertyList extends cdktn.ComplexList {
+  public internalValue? : ThrottleProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ThrottlePropertyOutputReference {
+    return new ThrottlePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApiStagesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#api_id AwsApiGatewayUsagePlan#api_id}
+  */
+  readonly apiId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#stage AwsApiGatewayUsagePlan#stage}
+  */
+  readonly stage: string;
+  /**
+  * throttle block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#throttle AwsApiGatewayUsagePlan#throttle}
+  */
+  readonly throttle?: ThrottleProperty[] | cdktn.IResolvable;
+}
+export class ApiStagesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiStagesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._apiId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.apiId = this._apiId;
+    }
+    if (this._stage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stage = this._stage;
+    }
+    if (this._throttle?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.throttle = this._throttle?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiStagesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._apiId = undefined;
+      this._stage = undefined;
+      this._throttle.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._apiId = value.apiId;
+      this._stage = value.stage;
+      this._throttle.internalValue = value.throttle;
+    }
+  }
+
+  // api_id - computed: false, optional: false, required: true
+  private _apiId?: string; 
+  public get apiId() {
+    return this.getStringAttribute('api_id');
+  }
+  public set apiId(value: string) {
+    this._apiId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiIdInput() {
+    return this._apiId;
+  }
+
+  // stage - computed: false, optional: false, required: true
+  private _stage?: string; 
+  public get stage() {
+    return this.getStringAttribute('stage');
+  }
+  public set stage(value: string) {
+    this._stage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stageInput() {
+    return this._stage;
+  }
+
+  // throttle - computed: false, optional: true, required: false
+  private _throttle = new ThrottlePropertyList(this, "throttle", true);
+  public get throttle() {
+    return this._throttle;
+  }
+  public putThrottle(value: ThrottleProperty[] | cdktn.IResolvable) {
+    this._throttle.internalValue = value;
+  }
+  public resetThrottle() {
+    this._throttle.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throttleInput() {
+    return this._throttle.internalValue;
+  }
+}
+
+export class ApiStagesPropertyList extends cdktn.ComplexList {
+  public internalValue? : ApiStagesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiStagesPropertyOutputReference {
+    return new ApiStagesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface QuotaSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#limit AwsApiGatewayUsagePlan#limit}
+  */
+  readonly limit: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#offset AwsApiGatewayUsagePlan#offset}
+  */
+  readonly offset?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#period AwsApiGatewayUsagePlan#period}
+  */
+  readonly period: string;
+}
+export class QuotaSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): QuotaSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._limit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.limit = this._limit;
+    }
+    if (this._offset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.offset = this._offset;
+    }
+    if (this._period !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.period = this._period;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: QuotaSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._limit = undefined;
+      this._offset = undefined;
+      this._period = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._limit = value.limit;
+      this._offset = value.offset;
+      this._period = value.period;
+    }
+  }
+
+  // limit - computed: false, optional: false, required: true
+  private _limit?: number; 
+  public get limit() {
+    return this.getNumberAttribute('limit');
+  }
+  public set limit(value: number) {
+    this._limit = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get limitInput() {
+    return this._limit;
+  }
+
+  // offset - computed: false, optional: true, required: false
+  private _offset?: number; 
+  public get offset() {
+    return this.getNumberAttribute('offset');
+  }
+  public set offset(value: number) {
+    this._offset = value;
+  }
+  public resetOffset() {
+    this._offset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offsetInput() {
+    return this._offset;
+  }
+
+  // period - computed: false, optional: false, required: true
+  private _period?: string; 
+  public get period() {
+    return this.getStringAttribute('period');
+  }
+  public set period(value: string) {
+    this._period = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodInput() {
+    return this._period;
+  }
+}
+export interface ThrottleSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#burst_limit AwsApiGatewayUsagePlan#burst_limit}
+  */
+  readonly burstLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_usage_plan#rate_limit AwsApiGatewayUsagePlan#rate_limit}
+  */
+  readonly rateLimit?: number;
+}
+export class ThrottleSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ThrottleSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._burstLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.burstLimit = this._burstLimit;
+    }
+    if (this._rateLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rateLimit = this._rateLimit;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ThrottleSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._burstLimit = undefined;
+      this._rateLimit = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._burstLimit = value.burstLimit;
+      this._rateLimit = value.rateLimit;
+    }
+  }
+
+  // burst_limit - computed: false, optional: true, required: false
+  private _burstLimit?: number; 
+  public get burstLimit() {
+    return this.getNumberAttribute('burst_limit');
+  }
+  public set burstLimit(value: number) {
+    this._burstLimit = value;
+  }
+  public resetBurstLimit() {
+    this._burstLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get burstLimitInput() {
+    return this._burstLimit;
+  }
+
+  // rate_limit - computed: false, optional: true, required: false
+  private _rateLimit?: number; 
+  public get rateLimit() {
+    return this.getNumberAttribute('rate_limit');
+  }
+  public set rateLimit(value: number) {
+    this._rateLimit = value;
+  }
+  public resetRateLimit() {
+    this._rateLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateLimitInput() {
+    return this._rateLimit;
+  }
+}
+}

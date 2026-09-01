@@ -1,0 +1,1217 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsTransferConnectorConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#access_role AwsTransferConnector#access_role}
+  */
+  readonly accessRole: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#id AwsTransferConnector#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#logging_role AwsTransferConnector#logging_role}
+  */
+  readonly loggingRole?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#region AwsTransferConnector#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#security_policy_name AwsTransferConnector#security_policy_name}
+  */
+  readonly securityPolicyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags AwsTransferConnector#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#tags_all AwsTransferConnector#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#url AwsTransferConnector#url}
+  */
+  readonly url?: string;
+  /**
+  * as2_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#as2_config AwsTransferConnector#as2_config}
+  */
+  readonly as2Config?: AwsTransferConnector.As2ConfigProperty;
+  /**
+  * egress_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#egress_config AwsTransferConnector#egress_config}
+  */
+  readonly egressConfig?: AwsTransferConnector.EgressConfigProperty;
+  /**
+  * sftp_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#sftp_config AwsTransferConnector#sftp_config}
+  */
+  readonly sftpConfig?: AwsTransferConnector.SftpConfigProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#timeouts AwsTransferConnector#timeouts}
+  */
+  readonly timeouts?: AwsTransferConnector.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector aws_transfer_connector}
+*/
+export class AwsTransferConnector extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_transfer_connector";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsTransferConnector resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsTransferConnector to import
+  * @param importFromId The id of the existing AwsTransferConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTransferConnector to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_connector", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector aws_transfer_connector} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsTransferConnectorConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsTransferConnectorConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_transfer_connector',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._accessRole = config.accessRole;
+    this._id = config.id;
+    this._loggingRole = config.loggingRole;
+    this._region = config.region;
+    this._securityPolicyName = config.securityPolicyName;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._url = config.url;
+    this._as2Config.internalValue = config.as2Config;
+    this._egressConfig.internalValue = config.egressConfig;
+    this._sftpConfig.internalValue = config.sftpConfig;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // access_role - computed: false, optional: false, required: true
+  private _accessRole?: string; 
+  public get accessRole() {
+    return this.getStringAttribute('access_role');
+  }
+  public set accessRole(value: string) {
+    this._accessRole = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessRoleInput() {
+    return this._accessRole;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // connector_id - computed: true, optional: false, required: false
+  public get connectorId() {
+    return this.getStringAttribute('connector_id');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // logging_role - computed: false, optional: true, required: false
+  private _loggingRole?: string; 
+  public get loggingRole() {
+    return this.getStringAttribute('logging_role');
+  }
+  public set loggingRole(value: string) {
+    this._loggingRole = value;
+  }
+  public resetLoggingRole() {
+    this._loggingRole = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingRoleInput() {
+    return this._loggingRole;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_policy_name - computed: true, optional: true, required: false
+  private _securityPolicyName?: string; 
+  public get securityPolicyName() {
+    return this.getStringAttribute('security_policy_name');
+  }
+  public set securityPolicyName(value: string) {
+    this._securityPolicyName = value;
+  }
+  public resetSecurityPolicyName() {
+    this._securityPolicyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityPolicyNameInput() {
+    return this._securityPolicyName;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+
+  // as2_config - computed: false, optional: true, required: false
+  private _as2Config = new AwsTransferConnector.As2ConfigPropertyOutputReference(this, "as2_config");
+  public get as2Config() {
+    return this._as2Config;
+  }
+  public putAs2Config(value: AwsTransferConnector.As2ConfigProperty) {
+    this._as2Config.internalValue = value;
+  }
+  public resetAs2Config() {
+    this._as2Config.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get as2ConfigInput() {
+    return this._as2Config.internalValue;
+  }
+
+  // egress_config - computed: false, optional: true, required: false
+  private _egressConfig = new AwsTransferConnector.EgressConfigPropertyOutputReference(this, "egress_config");
+  public get egressConfig() {
+    return this._egressConfig;
+  }
+  public putEgressConfig(value: AwsTransferConnector.EgressConfigProperty) {
+    this._egressConfig.internalValue = value;
+  }
+  public resetEgressConfig() {
+    this._egressConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressConfigInput() {
+    return this._egressConfig.internalValue;
+  }
+
+  // sftp_config - computed: false, optional: true, required: false
+  private _sftpConfig = new AwsTransferConnector.SftpConfigPropertyOutputReference(this, "sftp_config");
+  public get sftpConfig() {
+    return this._sftpConfig;
+  }
+  public putSftpConfig(value: AwsTransferConnector.SftpConfigProperty) {
+    this._sftpConfig.internalValue = value;
+  }
+  public resetSftpConfig() {
+    this._sftpConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sftpConfigInput() {
+    return this._sftpConfig.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsTransferConnector.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsTransferConnector.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      access_role: cdktn.stringToTerraform(this._accessRole),
+      id: cdktn.stringToTerraform(this._id),
+      logging_role: cdktn.stringToTerraform(this._loggingRole),
+      region: cdktn.stringToTerraform(this._region),
+      security_policy_name: cdktn.stringToTerraform(this._securityPolicyName),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      url: cdktn.stringToTerraform(this._url),
+      as2_config: awsTransferConnectorAs2ConfigPropertyToTerraform(this._as2Config.internalValue),
+      egress_config: awsTransferConnectorEgressConfigPropertyToTerraform(this._egressConfig.internalValue),
+      sftp_config: awsTransferConnectorSftpConfigPropertyToTerraform(this._sftpConfig.internalValue),
+      timeouts: awsTransferConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_role: {
+        value: cdktn.stringToHclTerraform(this._accessRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logging_role: {
+        value: cdktn.stringToHclTerraform(this._loggingRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_policy_name: {
+        value: cdktn.stringToHclTerraform(this._securityPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      url: {
+        value: cdktn.stringToHclTerraform(this._url),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      as2_config: {
+        value: awsTransferConnectorAs2ConfigPropertyToHclTerraform(this._as2Config.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTransferConnector.As2ConfigPropertyList",
+      },
+      egress_config: {
+        value: awsTransferConnectorEgressConfigPropertyToHclTerraform(this._egressConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTransferConnector.EgressConfigPropertyList",
+      },
+      sftp_config: {
+        value: awsTransferConnectorSftpConfigPropertyToHclTerraform(this._sftpConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTransferConnector.SftpConfigPropertyList",
+      },
+      timeouts: {
+        value: awsTransferConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsTransferConnector.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsTransferConnectorAs2ConfigPropertyToTerraform(struct?: AwsTransferConnector.As2ConfigPropertyOutputReference | AwsTransferConnector.As2ConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    compression: cdktn.stringToTerraform(struct!.compression),
+    encryption_algorithm: cdktn.stringToTerraform(struct!.encryptionAlgorithm),
+    local_profile_id: cdktn.stringToTerraform(struct!.localProfileId),
+    mdn_response: cdktn.stringToTerraform(struct!.mdnResponse),
+    mdn_signing_algorithm: cdktn.stringToTerraform(struct!.mdnSigningAlgorithm),
+    message_subject: cdktn.stringToTerraform(struct!.messageSubject),
+    partner_profile_id: cdktn.stringToTerraform(struct!.partnerProfileId),
+    signing_algorithm: cdktn.stringToTerraform(struct!.signingAlgorithm),
+  }
+}
+
+
+export function awsTransferConnectorAs2ConfigPropertyToHclTerraform(struct?: AwsTransferConnector.As2ConfigPropertyOutputReference | AwsTransferConnector.As2ConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    compression: {
+      value: cdktn.stringToHclTerraform(struct!.compression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    encryption_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.encryptionAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_profile_id: {
+      value: cdktn.stringToHclTerraform(struct!.localProfileId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mdn_response: {
+      value: cdktn.stringToHclTerraform(struct!.mdnResponse),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mdn_signing_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.mdnSigningAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    message_subject: {
+      value: cdktn.stringToHclTerraform(struct!.messageSubject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    partner_profile_id: {
+      value: cdktn.stringToHclTerraform(struct!.partnerProfileId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    signing_algorithm: {
+      value: cdktn.stringToHclTerraform(struct!.signingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferConnectorVpcLatticePropertyToTerraform(struct?: AwsTransferConnector.VpcLatticePropertyOutputReference | AwsTransferConnector.VpcLatticeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    port_number: cdktn.numberToTerraform(struct!.portNumber),
+    resource_configuration_arn: cdktn.stringToTerraform(struct!.resourceConfigurationArn),
+  }
+}
+
+
+export function awsTransferConnectorVpcLatticePropertyToHclTerraform(struct?: AwsTransferConnector.VpcLatticePropertyOutputReference | AwsTransferConnector.VpcLatticeProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    port_number: {
+      value: cdktn.numberToHclTerraform(struct!.portNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    resource_configuration_arn: {
+      value: cdktn.stringToHclTerraform(struct!.resourceConfigurationArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferConnectorEgressConfigPropertyToTerraform(struct?: AwsTransferConnector.EgressConfigPropertyOutputReference | AwsTransferConnector.EgressConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    vpc_lattice: awsTransferConnectorVpcLatticePropertyToTerraform(struct!.vpcLattice),
+  }
+}
+
+
+export function awsTransferConnectorEgressConfigPropertyToHclTerraform(struct?: AwsTransferConnector.EgressConfigPropertyOutputReference | AwsTransferConnector.EgressConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    vpc_lattice: {
+      value: awsTransferConnectorVpcLatticePropertyToHclTerraform(struct!.vpcLattice),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VpcLatticePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferConnectorSftpConfigPropertyToTerraform(struct?: AwsTransferConnector.SftpConfigPropertyOutputReference | AwsTransferConnector.SftpConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    trusted_host_keys: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.trustedHostKeys),
+    user_secret_id: cdktn.stringToTerraform(struct!.userSecretId),
+  }
+}
+
+
+export function awsTransferConnectorSftpConfigPropertyToHclTerraform(struct?: AwsTransferConnector.SftpConfigPropertyOutputReference | AwsTransferConnector.SftpConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    trusted_host_keys: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.trustedHostKeys),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    user_secret_id: {
+      value: cdktn.stringToHclTerraform(struct!.userSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTransferConnectorTimeoutsPropertyToTerraform(struct?: AwsTransferConnector.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsTransferConnectorTimeoutsPropertyToHclTerraform(struct?: AwsTransferConnector.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsTransferConnector {
+export interface As2ConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#compression AwsTransferConnector#compression}
+  */
+  readonly compression: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#encryption_algorithm AwsTransferConnector#encryption_algorithm}
+  */
+  readonly encryptionAlgorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#local_profile_id AwsTransferConnector#local_profile_id}
+  */
+  readonly localProfileId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_response AwsTransferConnector#mdn_response}
+  */
+  readonly mdnResponse: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#mdn_signing_algorithm AwsTransferConnector#mdn_signing_algorithm}
+  */
+  readonly mdnSigningAlgorithm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#message_subject AwsTransferConnector#message_subject}
+  */
+  readonly messageSubject?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#partner_profile_id AwsTransferConnector#partner_profile_id}
+  */
+  readonly partnerProfileId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#signing_algorithm AwsTransferConnector#signing_algorithm}
+  */
+  readonly signingAlgorithm: string;
+}
+export class As2ConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): As2ConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._compression !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.compression = this._compression;
+    }
+    if (this._encryptionAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionAlgorithm = this._encryptionAlgorithm;
+    }
+    if (this._localProfileId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localProfileId = this._localProfileId;
+    }
+    if (this._mdnResponse !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mdnResponse = this._mdnResponse;
+    }
+    if (this._mdnSigningAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mdnSigningAlgorithm = this._mdnSigningAlgorithm;
+    }
+    if (this._messageSubject !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.messageSubject = this._messageSubject;
+    }
+    if (this._partnerProfileId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.partnerProfileId = this._partnerProfileId;
+    }
+    if (this._signingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signingAlgorithm = this._signingAlgorithm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: As2ConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._compression = undefined;
+      this._encryptionAlgorithm = undefined;
+      this._localProfileId = undefined;
+      this._mdnResponse = undefined;
+      this._mdnSigningAlgorithm = undefined;
+      this._messageSubject = undefined;
+      this._partnerProfileId = undefined;
+      this._signingAlgorithm = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._compression = value.compression;
+      this._encryptionAlgorithm = value.encryptionAlgorithm;
+      this._localProfileId = value.localProfileId;
+      this._mdnResponse = value.mdnResponse;
+      this._mdnSigningAlgorithm = value.mdnSigningAlgorithm;
+      this._messageSubject = value.messageSubject;
+      this._partnerProfileId = value.partnerProfileId;
+      this._signingAlgorithm = value.signingAlgorithm;
+    }
+  }
+
+  // compression - computed: false, optional: false, required: true
+  private _compression?: string; 
+  public get compression() {
+    return this.getStringAttribute('compression');
+  }
+  public set compression(value: string) {
+    this._compression = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionInput() {
+    return this._compression;
+  }
+
+  // encryption_algorithm - computed: false, optional: false, required: true
+  private _encryptionAlgorithm?: string; 
+  public get encryptionAlgorithm() {
+    return this.getStringAttribute('encryption_algorithm');
+  }
+  public set encryptionAlgorithm(value: string) {
+    this._encryptionAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAlgorithmInput() {
+    return this._encryptionAlgorithm;
+  }
+
+  // local_profile_id - computed: false, optional: false, required: true
+  private _localProfileId?: string; 
+  public get localProfileId() {
+    return this.getStringAttribute('local_profile_id');
+  }
+  public set localProfileId(value: string) {
+    this._localProfileId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localProfileIdInput() {
+    return this._localProfileId;
+  }
+
+  // mdn_response - computed: false, optional: false, required: true
+  private _mdnResponse?: string; 
+  public get mdnResponse() {
+    return this.getStringAttribute('mdn_response');
+  }
+  public set mdnResponse(value: string) {
+    this._mdnResponse = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mdnResponseInput() {
+    return this._mdnResponse;
+  }
+
+  // mdn_signing_algorithm - computed: false, optional: true, required: false
+  private _mdnSigningAlgorithm?: string; 
+  public get mdnSigningAlgorithm() {
+    return this.getStringAttribute('mdn_signing_algorithm');
+  }
+  public set mdnSigningAlgorithm(value: string) {
+    this._mdnSigningAlgorithm = value;
+  }
+  public resetMdnSigningAlgorithm() {
+    this._mdnSigningAlgorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mdnSigningAlgorithmInput() {
+    return this._mdnSigningAlgorithm;
+  }
+
+  // message_subject - computed: false, optional: true, required: false
+  private _messageSubject?: string; 
+  public get messageSubject() {
+    return this.getStringAttribute('message_subject');
+  }
+  public set messageSubject(value: string) {
+    this._messageSubject = value;
+  }
+  public resetMessageSubject() {
+    this._messageSubject = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageSubjectInput() {
+    return this._messageSubject;
+  }
+
+  // partner_profile_id - computed: false, optional: false, required: true
+  private _partnerProfileId?: string; 
+  public get partnerProfileId() {
+    return this.getStringAttribute('partner_profile_id');
+  }
+  public set partnerProfileId(value: string) {
+    this._partnerProfileId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerProfileIdInput() {
+    return this._partnerProfileId;
+  }
+
+  // signing_algorithm - computed: false, optional: false, required: true
+  private _signingAlgorithm?: string; 
+  public get signingAlgorithm() {
+    return this.getStringAttribute('signing_algorithm');
+  }
+  public set signingAlgorithm(value: string) {
+    this._signingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signingAlgorithmInput() {
+    return this._signingAlgorithm;
+  }
+}
+export interface VpcLatticeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#port_number AwsTransferConnector#port_number}
+  */
+  readonly portNumber?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#resource_configuration_arn AwsTransferConnector#resource_configuration_arn}
+  */
+  readonly resourceConfigurationArn: string;
+}
+export class VpcLatticePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcLatticeProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._portNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portNumber = this._portNumber;
+    }
+    if (this._resourceConfigurationArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceConfigurationArn = this._resourceConfigurationArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcLatticeProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._portNumber = undefined;
+      this._resourceConfigurationArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._portNumber = value.portNumber;
+      this._resourceConfigurationArn = value.resourceConfigurationArn;
+    }
+  }
+
+  // port_number - computed: false, optional: true, required: false
+  private _portNumber?: number; 
+  public get portNumber() {
+    return this.getNumberAttribute('port_number');
+  }
+  public set portNumber(value: number) {
+    this._portNumber = value;
+  }
+  public resetPortNumber() {
+    this._portNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portNumberInput() {
+    return this._portNumber;
+  }
+
+  // resource_configuration_arn - computed: false, optional: false, required: true
+  private _resourceConfigurationArn?: string; 
+  public get resourceConfigurationArn() {
+    return this.getStringAttribute('resource_configuration_arn');
+  }
+  public set resourceConfigurationArn(value: string) {
+    this._resourceConfigurationArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceConfigurationArnInput() {
+    return this._resourceConfigurationArn;
+  }
+}
+export interface EgressConfigProperty {
+  /**
+  * vpc_lattice block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#vpc_lattice AwsTransferConnector#vpc_lattice}
+  */
+  readonly vpcLattice?: VpcLatticeProperty;
+}
+export class EgressConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EgressConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._vpcLattice?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcLattice = this._vpcLattice?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EgressConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._vpcLattice.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._vpcLattice.internalValue = value.vpcLattice;
+    }
+  }
+
+  // vpc_lattice - computed: false, optional: true, required: false
+  private _vpcLattice = new VpcLatticePropertyOutputReference(this, "vpc_lattice");
+  public get vpcLattice() {
+    return this._vpcLattice;
+  }
+  public putVpcLattice(value: VpcLatticeProperty) {
+    this._vpcLattice.internalValue = value;
+  }
+  public resetVpcLattice() {
+    this._vpcLattice.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcLatticeInput() {
+    return this._vpcLattice.internalValue;
+  }
+}
+export interface SftpConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#trusted_host_keys AwsTransferConnector#trusted_host_keys}
+  */
+  readonly trustedHostKeys?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#user_secret_id AwsTransferConnector#user_secret_id}
+  */
+  readonly userSecretId?: string;
+}
+export class SftpConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SftpConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._trustedHostKeys !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedHostKeys = this._trustedHostKeys;
+    }
+    if (this._userSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userSecretId = this._userSecretId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SftpConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._trustedHostKeys = undefined;
+      this._userSecretId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._trustedHostKeys = value.trustedHostKeys;
+      this._userSecretId = value.userSecretId;
+    }
+  }
+
+  // trusted_host_keys - computed: false, optional: true, required: false
+  private _trustedHostKeys?: string[]; 
+  public get trustedHostKeys() {
+    return cdktn.Fn.tolist(this.getListAttribute('trusted_host_keys'));
+  }
+  public set trustedHostKeys(value: string[]) {
+    this._trustedHostKeys = value;
+  }
+  public resetTrustedHostKeys() {
+    this._trustedHostKeys = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedHostKeysInput() {
+    return this._trustedHostKeys;
+  }
+
+  // user_secret_id - computed: false, optional: true, required: false
+  private _userSecretId?: string; 
+  public get userSecretId() {
+    return this.getStringAttribute('user_secret_id');
+  }
+  public set userSecretId(value: string) {
+    this._userSecretId = value;
+  }
+  public resetUserSecretId() {
+    this._userSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userSecretIdInput() {
+    return this._userSecretId;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#create AwsTransferConnector#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#delete AwsTransferConnector#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_connector#update AwsTransferConnector#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

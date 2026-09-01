@@ -1,0 +1,473 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface DataAwsEcrpublicImagesConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#region DataAwsEcrpublicImages#region}
+  */
+  readonly region?: string;
+  /**
+  * AWS account ID associated with the public registry that contains the repository. If not specified, the default public registry is assumed.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#registry_id DataAwsEcrpublicImages#registry_id}
+  */
+  readonly registryId?: string;
+  /**
+  * Name of the public repository.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#repository_name DataAwsEcrpublicImages#repository_name}
+  */
+  readonly repositoryName: string;
+  /**
+  * image_ids block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_ids DataAwsEcrpublicImages#image_ids}
+  */
+  readonly imageIds?: DataAwsEcrpublicImages.ImageIdsProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images aws_ecrpublic_images}
+*/
+export class DataAwsEcrpublicImages extends cdktn.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ecrpublic_images";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a DataAwsEcrpublicImages resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAwsEcrpublicImages to import
+  * @param importFromId The id of the existing DataAwsEcrpublicImages that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsEcrpublicImages to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecrpublic_images", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images aws_ecrpublic_images} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAwsEcrpublicImagesConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAwsEcrpublicImagesConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ecrpublic_images',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._region = config.region;
+    this._registryId = config.registryId;
+    this._repositoryName = config.repositoryName;
+    this._imageIds.internalValue = config.imageIds;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // images - computed: true, optional: false, required: false
+  private _images = new DataAwsEcrpublicImages.ImagesPropertyList(this, "images", false);
+  public get images() {
+    return this._images;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // registry_id - computed: false, optional: true, required: false
+  private _registryId?: string; 
+  public get registryId() {
+    return this.getStringAttribute('registry_id');
+  }
+  public set registryId(value: string) {
+    this._registryId = value;
+  }
+  public resetRegistryId() {
+    this._registryId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registryIdInput() {
+    return this._registryId;
+  }
+
+  // repository_name - computed: false, optional: false, required: true
+  private _repositoryName?: string; 
+  public get repositoryName() {
+    return this.getStringAttribute('repository_name');
+  }
+  public set repositoryName(value: string) {
+    this._repositoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryNameInput() {
+    return this._repositoryName;
+  }
+
+  // image_ids - computed: false, optional: true, required: false
+  private _imageIds = new DataAwsEcrpublicImages.ImageIdsPropertyList(this, "image_ids", false);
+  public get imageIds() {
+    return this._imageIds;
+  }
+  public putImageIds(value: DataAwsEcrpublicImages.ImageIdsProperty[] | cdktn.IResolvable) {
+    this._imageIds.internalValue = value;
+  }
+  public resetImageIds() {
+    this._imageIds.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageIdsInput() {
+    return this._imageIds.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      region: cdktn.stringToTerraform(this._region),
+      registry_id: cdktn.stringToTerraform(this._registryId),
+      repository_name: cdktn.stringToTerraform(this._repositoryName),
+      image_ids: cdktn.listMapper(dataAwsEcrpublicImagesImageIdsPropertyToTerraform, true)(this._imageIds.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      registry_id: {
+        value: cdktn.stringToHclTerraform(this._registryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_name: {
+        value: cdktn.stringToHclTerraform(this._repositoryName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      image_ids: {
+        value: cdktn.listMapperHcl(dataAwsEcrpublicImagesImageIdsPropertyToHclTerraform, true)(this._imageIds.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAwsEcrpublicImages.ImageIdsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function dataAwsEcrpublicImagesImagesPropertyToTerraform(struct?: DataAwsEcrpublicImages.ImagesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsEcrpublicImagesImagesPropertyToHclTerraform(struct?: DataAwsEcrpublicImages.ImagesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsEcrpublicImagesImageIdsPropertyToTerraform(struct?: DataAwsEcrpublicImages.ImageIdsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    image_digest: cdktn.stringToTerraform(struct!.imageDigest),
+    image_tag: cdktn.stringToTerraform(struct!.imageTag),
+  }
+}
+
+
+export function dataAwsEcrpublicImagesImageIdsPropertyToHclTerraform(struct?: DataAwsEcrpublicImages.ImageIdsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    image_digest: {
+      value: cdktn.stringToHclTerraform(struct!.imageDigest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    image_tag: {
+      value: cdktn.stringToHclTerraform(struct!.imageTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace DataAwsEcrpublicImages {
+export interface ImagesProperty {
+}
+export class ImagesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ImagesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ImagesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // artifact_media_type - computed: true, optional: false, required: false
+  public get artifactMediaType() {
+    return this.getStringAttribute('artifact_media_type');
+  }
+
+  // image_digest - computed: true, optional: false, required: false
+  public get imageDigest() {
+    return this.getStringAttribute('image_digest');
+  }
+
+  // image_manifest_media_type - computed: true, optional: false, required: false
+  public get imageManifestMediaType() {
+    return this.getStringAttribute('image_manifest_media_type');
+  }
+
+  // image_pushed_at - computed: true, optional: false, required: false
+  public get imagePushedAt() {
+    return this.getStringAttribute('image_pushed_at');
+  }
+
+  // image_size_in_bytes - computed: true, optional: false, required: false
+  public get imageSizeInBytes() {
+    return this.getNumberAttribute('image_size_in_bytes');
+  }
+
+  // image_tags - computed: true, optional: false, required: false
+  public get imageTags() {
+    return this.getListAttribute('image_tags');
+  }
+
+  // registry_id - computed: true, optional: false, required: false
+  public get registryId() {
+    return this.getStringAttribute('registry_id');
+  }
+
+  // repository_name - computed: true, optional: false, required: false
+  public get repositoryName() {
+    return this.getStringAttribute('repository_name');
+  }
+}
+
+export class ImagesPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ImagesPropertyOutputReference {
+    return new ImagesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ImageIdsProperty {
+  /**
+  * Image digest.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_digest DataAwsEcrpublicImages#image_digest}
+  */
+  readonly imageDigest?: string;
+  /**
+  * Image tag.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_tag DataAwsEcrpublicImages#image_tag}
+  */
+  readonly imageTag?: string;
+}
+export class ImageIdsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ImageIdsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._imageDigest !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.imageDigest = this._imageDigest;
+    }
+    if (this._imageTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.imageTag = this._imageTag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ImageIdsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._imageDigest = undefined;
+      this._imageTag = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._imageDigest = value.imageDigest;
+      this._imageTag = value.imageTag;
+    }
+  }
+
+  // image_digest - computed: false, optional: true, required: false
+  private _imageDigest?: string; 
+  public get imageDigest() {
+    return this.getStringAttribute('image_digest');
+  }
+  public set imageDigest(value: string) {
+    this._imageDigest = value;
+  }
+  public resetImageDigest() {
+    this._imageDigest = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageDigestInput() {
+    return this._imageDigest;
+  }
+
+  // image_tag - computed: false, optional: true, required: false
+  private _imageTag?: string; 
+  public get imageTag() {
+    return this.getStringAttribute('image_tag');
+  }
+  public set imageTag(value: string) {
+    this._imageTag = value;
+  }
+  public resetImageTag() {
+    this._imageTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageTagInput() {
+    return this._imageTag;
+  }
+}
+
+export class ImageIdsPropertyList extends cdktn.ComplexList {
+  public internalValue? : ImageIdsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ImageIdsPropertyOutputReference {
+    return new ImageIdsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

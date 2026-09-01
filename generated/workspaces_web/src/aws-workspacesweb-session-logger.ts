@@ -1,0 +1,894 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsWorkspaceswebSessionLoggerConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#additional_encryption_context AwsWorkspaceswebSessionLogger#additional_encryption_context}
+  */
+  readonly additionalEncryptionContext?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#customer_managed_key AwsWorkspaceswebSessionLogger#customer_managed_key}
+  */
+  readonly customerManagedKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#display_name AwsWorkspaceswebSessionLogger#display_name}
+  */
+  readonly displayName?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#region AwsWorkspaceswebSessionLogger#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#tags AwsWorkspaceswebSessionLogger#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * event_filter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#event_filter AwsWorkspaceswebSessionLogger#event_filter}
+  */
+  readonly eventFilter?: AwsWorkspaceswebSessionLogger.EventFilterProperty[] | cdktn.IResolvable;
+  /**
+  * log_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_configuration AwsWorkspaceswebSessionLogger#log_configuration}
+  */
+  readonly logConfiguration?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger aws_workspacesweb_session_logger}
+*/
+export class AwsWorkspaceswebSessionLogger extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_workspacesweb_session_logger";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsWorkspaceswebSessionLogger resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsWorkspaceswebSessionLogger to import
+  * @param importFromId The id of the existing AwsWorkspaceswebSessionLogger that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkspaceswebSessionLogger to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_session_logger", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger aws_workspacesweb_session_logger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsWorkspaceswebSessionLoggerConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsWorkspaceswebSessionLoggerConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_workspacesweb_session_logger',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._additionalEncryptionContext = config.additionalEncryptionContext;
+    this._customerManagedKey = config.customerManagedKey;
+    this._displayName = config.displayName;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._eventFilter.internalValue = config.eventFilter;
+    this._logConfiguration.internalValue = config.logConfiguration;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // additional_encryption_context - computed: false, optional: true, required: false
+  private _additionalEncryptionContext?: { [key: string]: string }; 
+  public get additionalEncryptionContext() {
+    return this.getStringMapAttribute('additional_encryption_context');
+  }
+  public set additionalEncryptionContext(value: { [key: string]: string }) {
+    this._additionalEncryptionContext = value;
+  }
+  public resetAdditionalEncryptionContext() {
+    this._additionalEncryptionContext = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalEncryptionContextInput() {
+    return this._additionalEncryptionContext;
+  }
+
+  // associated_portal_arns - computed: true, optional: false, required: false
+  public get associatedPortalArns() {
+    return this.getListAttribute('associated_portal_arns');
+  }
+
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey?: string; 
+  public get customerManagedKey() {
+    return this.getStringAttribute('customer_managed_key');
+  }
+  public set customerManagedKey(value: string) {
+    this._customerManagedKey = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey;
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // session_logger_arn - computed: true, optional: false, required: false
+  public get sessionLoggerArn() {
+    return this.getStringAttribute('session_logger_arn');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // event_filter - computed: false, optional: true, required: false
+  private _eventFilter = new AwsWorkspaceswebSessionLogger.EventFilterPropertyList(this, "event_filter", false);
+  public get eventFilter() {
+    return this._eventFilter;
+  }
+  public putEventFilter(value: AwsWorkspaceswebSessionLogger.EventFilterProperty[] | cdktn.IResolvable) {
+    this._eventFilter.internalValue = value;
+  }
+  public resetEventFilter() {
+    this._eventFilter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventFilterInput() {
+    return this._eventFilter.internalValue;
+  }
+
+  // log_configuration - computed: false, optional: true, required: false
+  private _logConfiguration = new AwsWorkspaceswebSessionLogger.LogConfigurationPropertyList(this, "log_configuration", false);
+  public get logConfiguration() {
+    return this._logConfiguration;
+  }
+  public putLogConfiguration(value: AwsWorkspaceswebSessionLogger.LogConfigurationProperty[] | cdktn.IResolvable) {
+    this._logConfiguration.internalValue = value;
+  }
+  public resetLogConfiguration() {
+    this._logConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logConfigurationInput() {
+    return this._logConfiguration.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      additional_encryption_context: cdktn.hashMapper(cdktn.stringToTerraform)(this._additionalEncryptionContext),
+      customer_managed_key: cdktn.stringToTerraform(this._customerManagedKey),
+      display_name: cdktn.stringToTerraform(this._displayName),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      event_filter: cdktn.listMapper(awsWorkspaceswebSessionLoggerEventFilterPropertyToTerraform, true)(this._eventFilter.internalValue),
+      log_configuration: cdktn.listMapper(awsWorkspaceswebSessionLoggerLogConfigurationPropertyToTerraform, true)(this._logConfiguration.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_encryption_context: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._additionalEncryptionContext),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      customer_managed_key: {
+        value: cdktn.stringToHclTerraform(this._customerManagedKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktn.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      event_filter: {
+        value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform, true)(this._eventFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsWorkspaceswebSessionLogger.EventFilterPropertyList",
+      },
+      log_configuration: {
+        value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerLogConfigurationPropertyToHclTerraform, true)(this._logConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsWorkspaceswebSessionLogger.LogConfigurationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsWorkspaceswebSessionLoggerAllPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.AllProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsWorkspaceswebSessionLoggerAllPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.AllProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsWorkspaceswebSessionLoggerEventFilterPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    include: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.include),
+    all: cdktn.listMapper(awsWorkspaceswebSessionLoggerAllPropertyToTerraform, true)(struct!.all),
+  }
+}
+
+
+export function awsWorkspaceswebSessionLoggerEventFilterPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.EventFilterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    include: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.include),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    all: {
+      value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerAllPropertyToHclTerraform, true)(struct!.all),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AllPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsWorkspaceswebSessionLoggerS3PropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.S3Property | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    bucket_owner: cdktn.stringToTerraform(struct!.bucketOwner),
+    folder_structure: cdktn.stringToTerraform(struct!.folderStructure),
+    key_prefix: cdktn.stringToTerraform(struct!.keyPrefix),
+    log_file_format: cdktn.stringToTerraform(struct!.logFileFormat),
+  }
+}
+
+
+export function awsWorkspaceswebSessionLoggerS3PropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.S3Property | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bucket_owner: {
+      value: cdktn.stringToHclTerraform(struct!.bucketOwner),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    folder_structure: {
+      value: cdktn.stringToHclTerraform(struct!.folderStructure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_prefix: {
+      value: cdktn.stringToHclTerraform(struct!.keyPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    log_file_format: {
+      value: cdktn.stringToHclTerraform(struct!.logFileFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsWorkspaceswebSessionLoggerLogConfigurationPropertyToTerraform(struct?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3: cdktn.listMapper(awsWorkspaceswebSessionLoggerS3PropertyToTerraform, true)(struct!.s3),
+  }
+}
+
+
+export function awsWorkspaceswebSessionLoggerLogConfigurationPropertyToHclTerraform(struct?: AwsWorkspaceswebSessionLogger.LogConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3: {
+      value: cdktn.listMapperHcl(awsWorkspaceswebSessionLoggerS3PropertyToHclTerraform, true)(struct!.s3),
+      isBlock: true,
+      type: "list",
+      storageClassType: "S3PropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsWorkspaceswebSessionLogger {
+export interface AllProperty {
+}
+export class AllPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AllProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AllProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+    }
+  }
+}
+
+export class AllPropertyList extends cdktn.ComplexList {
+  public internalValue? : AllProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AllPropertyOutputReference {
+    return new AllPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EventFilterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#include AwsWorkspaceswebSessionLogger#include}
+  */
+  readonly include?: string[];
+  /**
+  * all block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#all AwsWorkspaceswebSessionLogger#all}
+  */
+  readonly all?: AllProperty[] | cdktn.IResolvable;
+}
+export class EventFilterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventFilterProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._include !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.include = this._include;
+    }
+    if (this._all?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.all = this._all?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventFilterProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._include = undefined;
+      this._all.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._include = value.include;
+      this._all.internalValue = value.all;
+    }
+  }
+
+  // include - computed: false, optional: true, required: false
+  private _include?: string[]; 
+  public get include() {
+    return cdktn.Fn.tolist(this.getListAttribute('include'));
+  }
+  public set include(value: string[]) {
+    this._include = value;
+  }
+  public resetInclude() {
+    this._include = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeInput() {
+    return this._include;
+  }
+
+  // all - computed: false, optional: true, required: false
+  private _all = new AllPropertyList(this, "all", false);
+  public get all() {
+    return this._all;
+  }
+  public putAll(value: AllProperty[] | cdktn.IResolvable) {
+    this._all.internalValue = value;
+  }
+  public resetAll() {
+    this._all.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allInput() {
+    return this._all.internalValue;
+  }
+}
+
+export class EventFilterPropertyList extends cdktn.ComplexList {
+  public internalValue? : EventFilterProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventFilterPropertyOutputReference {
+    return new EventFilterPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface S3Property {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket AwsWorkspaceswebSessionLogger#bucket}
+  */
+  readonly bucket: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#bucket_owner AwsWorkspaceswebSessionLogger#bucket_owner}
+  */
+  readonly bucketOwner?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#folder_structure AwsWorkspaceswebSessionLogger#folder_structure}
+  */
+  readonly folderStructure: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#key_prefix AwsWorkspaceswebSessionLogger#key_prefix}
+  */
+  readonly keyPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#log_file_format AwsWorkspaceswebSessionLogger#log_file_format}
+  */
+  readonly logFileFormat: string;
+}
+export class S3PropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): S3Property | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._bucketOwner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucketOwner = this._bucketOwner;
+    }
+    if (this._folderStructure !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.folderStructure = this._folderStructure;
+    }
+    if (this._keyPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyPrefix = this._keyPrefix;
+    }
+    if (this._logFileFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logFileFormat = this._logFileFormat;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: S3Property | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._bucket = undefined;
+      this._bucketOwner = undefined;
+      this._folderStructure = undefined;
+      this._keyPrefix = undefined;
+      this._logFileFormat = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._bucket = value.bucket;
+      this._bucketOwner = value.bucketOwner;
+      this._folderStructure = value.folderStructure;
+      this._keyPrefix = value.keyPrefix;
+      this._logFileFormat = value.logFileFormat;
+    }
+  }
+
+  // bucket - computed: false, optional: false, required: true
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // bucket_owner - computed: true, optional: true, required: false
+  private _bucketOwner?: string; 
+  public get bucketOwner() {
+    return this.getStringAttribute('bucket_owner');
+  }
+  public set bucketOwner(value: string) {
+    this._bucketOwner = value;
+  }
+  public resetBucketOwner() {
+    this._bucketOwner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketOwnerInput() {
+    return this._bucketOwner;
+  }
+
+  // folder_structure - computed: false, optional: false, required: true
+  private _folderStructure?: string; 
+  public get folderStructure() {
+    return this.getStringAttribute('folder_structure');
+  }
+  public set folderStructure(value: string) {
+    this._folderStructure = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get folderStructureInput() {
+    return this._folderStructure;
+  }
+
+  // key_prefix - computed: false, optional: true, required: false
+  private _keyPrefix?: string; 
+  public get keyPrefix() {
+    return this.getStringAttribute('key_prefix');
+  }
+  public set keyPrefix(value: string) {
+    this._keyPrefix = value;
+  }
+  public resetKeyPrefix() {
+    this._keyPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyPrefixInput() {
+    return this._keyPrefix;
+  }
+
+  // log_file_format - computed: false, optional: false, required: true
+  private _logFileFormat?: string; 
+  public get logFileFormat() {
+    return this.getStringAttribute('log_file_format');
+  }
+  public set logFileFormat(value: string) {
+    this._logFileFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logFileFormatInput() {
+    return this._logFileFormat;
+  }
+}
+
+export class S3PropertyList extends cdktn.ComplexList {
+  public internalValue? : S3Property[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): S3PropertyOutputReference {
+    return new S3PropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogConfigurationProperty {
+  /**
+  * s3 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_session_logger#s3 AwsWorkspaceswebSessionLogger#s3}
+  */
+  readonly s3?: S3Property[] | cdktn.IResolvable;
+}
+export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3 = this._s3?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._s3.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._s3.internalValue = value.s3;
+    }
+  }
+
+  // s3 - computed: false, optional: true, required: false
+  private _s3 = new S3PropertyList(this, "s3", false);
+  public get s3() {
+    return this._s3;
+  }
+  public putS3(value: S3Property[] | cdktn.IResolvable) {
+    this._s3.internalValue = value;
+  }
+  public resetS3() {
+    this._s3.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3Input() {
+    return this._s3.internalValue;
+  }
+}
+
+export class LogConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : LogConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogConfigurationPropertyOutputReference {
+    return new LogConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

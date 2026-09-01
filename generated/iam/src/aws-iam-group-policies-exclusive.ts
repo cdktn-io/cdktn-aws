@@ -1,0 +1,134 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsIamGroupPoliciesExclusiveConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#group_name AwsIamGroupPoliciesExclusive#group_name}
+  */
+  readonly groupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#policy_names AwsIamGroupPoliciesExclusive#policy_names}
+  */
+  readonly policyNames: string[];
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive aws_iam_group_policies_exclusive}
+*/
+export class AwsIamGroupPoliciesExclusive extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_iam_group_policies_exclusive";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsIamGroupPoliciesExclusive resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsIamGroupPoliciesExclusive to import
+  * @param importFromId The id of the existing AwsIamGroupPoliciesExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIamGroupPoliciesExclusive to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_group_policies_exclusive", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_group_policies_exclusive aws_iam_group_policies_exclusive} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsIamGroupPoliciesExclusiveConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsIamGroupPoliciesExclusiveConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_iam_group_policies_exclusive',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._groupName = config.groupName;
+    this._policyNames = config.policyNames;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // group_name - computed: false, optional: false, required: true
+  private _groupName?: string; 
+  public get groupName() {
+    return this.getStringAttribute('group_name');
+  }
+  public set groupName(value: string) {
+    this._groupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupNameInput() {
+    return this._groupName;
+  }
+
+  // policy_names - computed: false, optional: false, required: true
+  private _policyNames?: string[]; 
+  public get policyNames() {
+    return cdktn.Fn.tolist(this.getListAttribute('policy_names'));
+  }
+  public set policyNames(value: string[]) {
+    this._policyNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNamesInput() {
+    return this._policyNames;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      group_name: cdktn.stringToTerraform(this._groupName),
+      policy_names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._policyNames),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      group_name: {
+        value: cdktn.stringToHclTerraform(this._groupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_names: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._policyNames),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

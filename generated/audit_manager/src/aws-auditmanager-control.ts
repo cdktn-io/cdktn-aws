@@ -1,0 +1,792 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAuditmanagerControlConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#action_plan_instructions AwsAuditmanagerControl#action_plan_instructions}
+  */
+  readonly actionPlanInstructions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#action_plan_title AwsAuditmanagerControl#action_plan_title}
+  */
+  readonly actionPlanTitle?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#description AwsAuditmanagerControl#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#name AwsAuditmanagerControl#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#region AwsAuditmanagerControl#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#tags AwsAuditmanagerControl#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#testing_information AwsAuditmanagerControl#testing_information}
+  */
+  readonly testingInformation?: string;
+  /**
+  * control_mapping_sources block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#control_mapping_sources AwsAuditmanagerControl#control_mapping_sources}
+  */
+  readonly controlMappingSources?: AwsAuditmanagerControl.ControlMappingSourcesProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control aws_auditmanager_control}
+*/
+export class AwsAuditmanagerControl extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_auditmanager_control";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAuditmanagerControl resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAuditmanagerControl to import
+  * @param importFromId The id of the existing AwsAuditmanagerControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAuditmanagerControl to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_control", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control aws_auditmanager_control} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAuditmanagerControlConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAuditmanagerControlConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_auditmanager_control',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._actionPlanInstructions = config.actionPlanInstructions;
+    this._actionPlanTitle = config.actionPlanTitle;
+    this._description = config.description;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._testingInformation = config.testingInformation;
+    this._controlMappingSources.internalValue = config.controlMappingSources;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // action_plan_instructions - computed: false, optional: true, required: false
+  private _actionPlanInstructions?: string; 
+  public get actionPlanInstructions() {
+    return this.getStringAttribute('action_plan_instructions');
+  }
+  public set actionPlanInstructions(value: string) {
+    this._actionPlanInstructions = value;
+  }
+  public resetActionPlanInstructions() {
+    this._actionPlanInstructions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionPlanInstructionsInput() {
+    return this._actionPlanInstructions;
+  }
+
+  // action_plan_title - computed: false, optional: true, required: false
+  private _actionPlanTitle?: string; 
+  public get actionPlanTitle() {
+    return this.getStringAttribute('action_plan_title');
+  }
+  public set actionPlanTitle(value: string) {
+    this._actionPlanTitle = value;
+  }
+  public resetActionPlanTitle() {
+    this._actionPlanTitle = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionPlanTitleInput() {
+    return this._actionPlanTitle;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // testing_information - computed: false, optional: true, required: false
+  private _testingInformation?: string; 
+  public get testingInformation() {
+    return this.getStringAttribute('testing_information');
+  }
+  public set testingInformation(value: string) {
+    this._testingInformation = value;
+  }
+  public resetTestingInformation() {
+    this._testingInformation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testingInformationInput() {
+    return this._testingInformation;
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+
+  // control_mapping_sources - computed: false, optional: true, required: false
+  private _controlMappingSources = new AwsAuditmanagerControl.ControlMappingSourcesPropertyList(this, "control_mapping_sources", true);
+  public get controlMappingSources() {
+    return this._controlMappingSources;
+  }
+  public putControlMappingSources(value: AwsAuditmanagerControl.ControlMappingSourcesProperty[] | cdktn.IResolvable) {
+    this._controlMappingSources.internalValue = value;
+  }
+  public resetControlMappingSources() {
+    this._controlMappingSources.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get controlMappingSourcesInput() {
+    return this._controlMappingSources.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      action_plan_instructions: cdktn.stringToTerraform(this._actionPlanInstructions),
+      action_plan_title: cdktn.stringToTerraform(this._actionPlanTitle),
+      description: cdktn.stringToTerraform(this._description),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      testing_information: cdktn.stringToTerraform(this._testingInformation),
+      control_mapping_sources: cdktn.listMapper(awsAuditmanagerControlControlMappingSourcesPropertyToTerraform, true)(this._controlMappingSources.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      action_plan_instructions: {
+        value: cdktn.stringToHclTerraform(this._actionPlanInstructions),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      action_plan_title: {
+        value: cdktn.stringToHclTerraform(this._actionPlanTitle),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      testing_information: {
+        value: cdktn.stringToHclTerraform(this._testingInformation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      control_mapping_sources: {
+        value: cdktn.listMapperHcl(awsAuditmanagerControlControlMappingSourcesPropertyToHclTerraform, true)(this._controlMappingSources.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsAuditmanagerControl.ControlMappingSourcesPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAuditmanagerControlSourceKeywordPropertyToTerraform(struct?: AwsAuditmanagerControl.SourceKeywordProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    keyword_input_type: cdktn.stringToTerraform(struct!.keywordInputType),
+    keyword_value: cdktn.stringToTerraform(struct!.keywordValue),
+  }
+}
+
+
+export function awsAuditmanagerControlSourceKeywordPropertyToHclTerraform(struct?: AwsAuditmanagerControl.SourceKeywordProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    keyword_input_type: {
+      value: cdktn.stringToHclTerraform(struct!.keywordInputType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    keyword_value: {
+      value: cdktn.stringToHclTerraform(struct!.keywordValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAuditmanagerControlControlMappingSourcesPropertyToTerraform(struct?: AwsAuditmanagerControl.ControlMappingSourcesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    source_description: cdktn.stringToTerraform(struct!.sourceDescription),
+    source_frequency: cdktn.stringToTerraform(struct!.sourceFrequency),
+    source_keyword: cdktn.listMapper(awsAuditmanagerControlSourceKeywordPropertyToTerraform, false)(struct!.sourceKeyword),
+    source_name: cdktn.stringToTerraform(struct!.sourceName),
+    source_set_up_option: cdktn.stringToTerraform(struct!.sourceSetUpOption),
+    source_type: cdktn.stringToTerraform(struct!.sourceType),
+    troubleshooting_text: cdktn.stringToTerraform(struct!.troubleshootingText),
+  }
+}
+
+
+export function awsAuditmanagerControlControlMappingSourcesPropertyToHclTerraform(struct?: AwsAuditmanagerControl.ControlMappingSourcesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    source_description: {
+      value: cdktn.stringToHclTerraform(struct!.sourceDescription),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_frequency: {
+      value: cdktn.stringToHclTerraform(struct!.sourceFrequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_keyword: {
+      value: cdktn.listMapperHcl(awsAuditmanagerControlSourceKeywordPropertyToHclTerraform, false)(struct!.sourceKeyword),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SourceKeywordPropertyList",
+    },
+    source_name: {
+      value: cdktn.stringToHclTerraform(struct!.sourceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_set_up_option: {
+      value: cdktn.stringToHclTerraform(struct!.sourceSetUpOption),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_type: {
+      value: cdktn.stringToHclTerraform(struct!.sourceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    troubleshooting_text: {
+      value: cdktn.stringToHclTerraform(struct!.troubleshootingText),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAuditmanagerControl {
+export interface SourceKeywordProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#keyword_input_type AwsAuditmanagerControl#keyword_input_type}
+  */
+  readonly keywordInputType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#keyword_value AwsAuditmanagerControl#keyword_value}
+  */
+  readonly keywordValue?: string;
+}
+export class SourceKeywordPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SourceKeywordProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keywordInputType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keywordInputType = this._keywordInputType;
+    }
+    if (this._keywordValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keywordValue = this._keywordValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SourceKeywordProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keywordInputType = undefined;
+      this._keywordValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keywordInputType = value.keywordInputType;
+      this._keywordValue = value.keywordValue;
+    }
+  }
+
+  // keyword_input_type - computed: true, optional: true, required: false
+  private _keywordInputType?: string; 
+  public get keywordInputType() {
+    return this.getStringAttribute('keyword_input_type');
+  }
+  public set keywordInputType(value: string) {
+    this._keywordInputType = value;
+  }
+  public resetKeywordInputType() {
+    this._keywordInputType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keywordInputTypeInput() {
+    return this._keywordInputType;
+  }
+
+  // keyword_value - computed: true, optional: true, required: false
+  private _keywordValue?: string; 
+  public get keywordValue() {
+    return this.getStringAttribute('keyword_value');
+  }
+  public set keywordValue(value: string) {
+    this._keywordValue = value;
+  }
+  public resetKeywordValue() {
+    this._keywordValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keywordValueInput() {
+    return this._keywordValue;
+  }
+}
+
+export class SourceKeywordPropertyList extends cdktn.ComplexList {
+  public internalValue? : SourceKeywordProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SourceKeywordPropertyOutputReference {
+    return new SourceKeywordPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ControlMappingSourcesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_description AwsAuditmanagerControl#source_description}
+  */
+  readonly sourceDescription?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_frequency AwsAuditmanagerControl#source_frequency}
+  */
+  readonly sourceFrequency?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_keyword AwsAuditmanagerControl#source_keyword}
+  */
+  readonly sourceKeyword?: SourceKeywordProperty[] | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_name AwsAuditmanagerControl#source_name}
+  */
+  readonly sourceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_set_up_option AwsAuditmanagerControl#source_set_up_option}
+  */
+  readonly sourceSetUpOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#source_type AwsAuditmanagerControl#source_type}
+  */
+  readonly sourceType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_control#troubleshooting_text AwsAuditmanagerControl#troubleshooting_text}
+  */
+  readonly troubleshootingText?: string;
+}
+export class ControlMappingSourcesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ControlMappingSourcesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceDescription !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceDescription = this._sourceDescription;
+    }
+    if (this._sourceFrequency !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceFrequency = this._sourceFrequency;
+    }
+    if (this._sourceKeyword?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceKeyword = this._sourceKeyword?.internalValue;
+    }
+    if (this._sourceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceName = this._sourceName;
+    }
+    if (this._sourceSetUpOption !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSetUpOption = this._sourceSetUpOption;
+    }
+    if (this._sourceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceType = this._sourceType;
+    }
+    if (this._troubleshootingText !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.troubleshootingText = this._troubleshootingText;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ControlMappingSourcesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._sourceDescription = undefined;
+      this._sourceFrequency = undefined;
+      this._sourceKeyword.internalValue = undefined;
+      this._sourceName = undefined;
+      this._sourceSetUpOption = undefined;
+      this._sourceType = undefined;
+      this._troubleshootingText = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._sourceDescription = value.sourceDescription;
+      this._sourceFrequency = value.sourceFrequency;
+      this._sourceKeyword.internalValue = value.sourceKeyword;
+      this._sourceName = value.sourceName;
+      this._sourceSetUpOption = value.sourceSetUpOption;
+      this._sourceType = value.sourceType;
+      this._troubleshootingText = value.troubleshootingText;
+    }
+  }
+
+  // source_description - computed: false, optional: true, required: false
+  private _sourceDescription?: string; 
+  public get sourceDescription() {
+    return this.getStringAttribute('source_description');
+  }
+  public set sourceDescription(value: string) {
+    this._sourceDescription = value;
+  }
+  public resetSourceDescription() {
+    this._sourceDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDescriptionInput() {
+    return this._sourceDescription;
+  }
+
+  // source_frequency - computed: false, optional: true, required: false
+  private _sourceFrequency?: string; 
+  public get sourceFrequency() {
+    return this.getStringAttribute('source_frequency');
+  }
+  public set sourceFrequency(value: string) {
+    this._sourceFrequency = value;
+  }
+  public resetSourceFrequency() {
+    this._sourceFrequency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFrequencyInput() {
+    return this._sourceFrequency;
+  }
+
+  // source_id - computed: true, optional: false, required: false
+  public get sourceId() {
+    return this.getStringAttribute('source_id');
+  }
+
+  // source_keyword - computed: true, optional: true, required: false
+  private _sourceKeyword = new SourceKeywordPropertyList(this, "source_keyword", false);
+  public get sourceKeyword() {
+    return this._sourceKeyword;
+  }
+  public putSourceKeyword(value: SourceKeywordProperty[] | cdktn.IResolvable) {
+    this._sourceKeyword.internalValue = value;
+  }
+  public resetSourceKeyword() {
+    this._sourceKeyword.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceKeywordInput() {
+    return this._sourceKeyword.internalValue;
+  }
+
+  // source_name - computed: false, optional: false, required: true
+  private _sourceName?: string; 
+  public get sourceName() {
+    return this.getStringAttribute('source_name');
+  }
+  public set sourceName(value: string) {
+    this._sourceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceNameInput() {
+    return this._sourceName;
+  }
+
+  // source_set_up_option - computed: false, optional: false, required: true
+  private _sourceSetUpOption?: string; 
+  public get sourceSetUpOption() {
+    return this.getStringAttribute('source_set_up_option');
+  }
+  public set sourceSetUpOption(value: string) {
+    this._sourceSetUpOption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSetUpOptionInput() {
+    return this._sourceSetUpOption;
+  }
+
+  // source_type - computed: false, optional: false, required: true
+  private _sourceType?: string; 
+  public get sourceType() {
+    return this.getStringAttribute('source_type');
+  }
+  public set sourceType(value: string) {
+    this._sourceType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTypeInput() {
+    return this._sourceType;
+  }
+
+  // troubleshooting_text - computed: false, optional: true, required: false
+  private _troubleshootingText?: string; 
+  public get troubleshootingText() {
+    return this.getStringAttribute('troubleshooting_text');
+  }
+  public set troubleshootingText(value: string) {
+    this._troubleshootingText = value;
+  }
+  public resetTroubleshootingText() {
+    this._troubleshootingText = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get troubleshootingTextInput() {
+    return this._troubleshootingText;
+  }
+}
+
+export class ControlMappingSourcesPropertyList extends cdktn.ComplexList {
+  public internalValue? : ControlMappingSourcesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ControlMappingSourcesPropertyOutputReference {
+    return new ControlMappingSourcesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

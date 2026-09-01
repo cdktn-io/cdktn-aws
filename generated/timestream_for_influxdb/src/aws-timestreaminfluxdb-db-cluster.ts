@@ -1,0 +1,1353 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsTimestreaminfluxdbDbClusterConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * The amount of storage to allocate for your DB storage type in GiB (gibibytes).
+  * 					This field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#allocated_storage AwsTimestreaminfluxdbDbCluster#allocated_storage}
+  */
+  readonly allocatedStorage?: number;
+  /**
+  * Name of the initial InfluxDB bucket. All InfluxDB data is stored in a bucket.
+  * 					A bucket combines the concept of a database and a retention period (the duration of time
+  * 					that each data point persists). A bucket belongs to an organization. Along with organization,
+  * 					username, and password, this argument will be stored in the secret referred to by the
+  * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
+  * 					(when using an InfluxDB V3 db parameter group).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket AwsTimestreaminfluxdbDbCluster#bucket}
+  */
+  readonly bucket?: string;
+  /**
+  * The Timestream for InfluxDB DB instance type to run InfluxDB on.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_instance_type AwsTimestreaminfluxdbDbCluster#db_instance_type}
+  */
+  readonly dbInstanceType: string;
+  /**
+  * The ID of the DB parameter group to assign to your DB cluster. 
+  * 					DB parameter groups specify how the database is configured. For example, DB parameter groups 
+  * 					can specify the limit for query concurrency.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_parameter_group_identifier AwsTimestreaminfluxdbDbCluster#db_parameter_group_identifier}
+  */
+  readonly dbParameterGroupIdentifier?: string;
+  /**
+  * The Timestream for InfluxDB DB storage type to read and write InfluxDB data. 
+  * 					You can choose between 3 different types of provisioned Influx IOPS included storage according 
+  * 					to your workloads requirements: Influx IO Included 3000 IOPS, Influx IO Included 12000 IOPS, 
+  * 					Influx IO Included 16000 IOPS.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#db_storage_type AwsTimestreaminfluxdbDbCluster#db_storage_type}
+  */
+  readonly dbStorageType?: string;
+  /**
+  * Specifies the type of cluster to create. This field is forbidden for InfluxDB V3 clusters
+  * 					(when using an InfluxDB V3 db parameter group).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#deployment_type AwsTimestreaminfluxdbDbCluster#deployment_type}
+  */
+  readonly deploymentType?: string;
+  /**
+  * Specifies the behavior of failure recovery when the primary node of the cluster
+  * 					fails.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#failover_mode AwsTimestreaminfluxdbDbCluster#failover_mode}
+  */
+  readonly failoverMode?: string;
+  /**
+  * The name that uniquely identifies the DB cluster when interacting with the 
+  * 					Amazon Timestream for InfluxDB API and CLI commands. This name will also be a 
+  * 					prefix included in the endpoint. DB cluster names must be unique per customer 
+  * 					and per region.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#name AwsTimestreaminfluxdbDbCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Specifies whether the networkType of the Timestream for InfluxDB cluster is 
+  * 					IPV4, which can communicate over IPv4 protocol only, or DUAL, which can communicate 
+  * 					over both IPv4 and IPv6 protocols.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#network_type AwsTimestreaminfluxdbDbCluster#network_type}
+  */
+  readonly networkType?: string;
+  /**
+  * Name of the initial organization for the initial admin user in InfluxDB. An
+  * 					InfluxDB organization is a workspace for a group of users. Along with bucket, username,
+  * 					and password, this argument will be stored in the secret referred to by the
+  * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
+  * 					(when using an InfluxDB V3 db parameter group).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#organization AwsTimestreaminfluxdbDbCluster#organization}
+  */
+  readonly organization?: string;
+  /**
+  * Password of the initial admin user created in InfluxDB. This password will
+  * 					allow you to access the InfluxDB UI to perform various administrative tasks and
+  * 					also use the InfluxDB CLI to create an operator token. Along with bucket, username,
+  * 					and organization, this argument will be stored in the secret referred to by the
+  * 					influx_auth_parameters_secret_arn attribute. This field is forbidden for InfluxDB V3 clusters
+  * 					(when using an InfluxDB V3 db parameter group) as the AWS API rejects it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#password AwsTimestreaminfluxdbDbCluster#password}
+  */
+  readonly password?: string;
+  /**
+  * The port number on which InfluxDB accepts connections.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#port AwsTimestreaminfluxdbDbCluster#port}
+  */
+  readonly port?: number;
+  /**
+  * Configures the Timestream for InfluxDB cluster with a public IP to facilitate access.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#publicly_accessible AwsTimestreaminfluxdbDbCluster#publicly_accessible}
+  */
+  readonly publiclyAccessible?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#region AwsTimestreaminfluxdbDbCluster#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#tags AwsTimestreaminfluxdbDbCluster#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Username of the initial admin user created in InfluxDB. Must start with a letter
+  * 					and can't end with a hyphen or contain two consecutive hyphens. This username will allow
+  * 					you to access the InfluxDB UI to perform various administrative tasks and also use the
+  * 					InfluxDB CLI to create an operator token. Along with bucket, organization, and password,
+  * 					this argument will be stored in the secret referred to by the influx_auth_parameters_secret_arn
+  * 					attribute. This field is forbidden for InfluxDB V3 clusters (when using an InfluxDB V3 db parameter group).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#username AwsTimestreaminfluxdbDbCluster#username}
+  */
+  readonly username?: string;
+  /**
+  * A list of VPC security group IDs to associate with the Timestream for InfluxDB cluster.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_security_group_ids AwsTimestreaminfluxdbDbCluster#vpc_security_group_ids}
+  */
+  readonly vpcSecurityGroupIds: string[];
+  /**
+  * A list of VPC subnet IDs to associate with the DB cluster. Provide at least 
+  * 					two VPC subnet IDs in different availability zones when deploying with a Multi-AZ standby.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#vpc_subnet_ids AwsTimestreaminfluxdbDbCluster#vpc_subnet_ids}
+  */
+  readonly vpcSubnetIds: string[];
+  /**
+  * log_delivery_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#log_delivery_configuration AwsTimestreaminfluxdbDbCluster#log_delivery_configuration}
+  */
+  readonly logDeliveryConfiguration?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
+  /**
+  * maintenance_schedule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#maintenance_schedule AwsTimestreaminfluxdbDbCluster#maintenance_schedule}
+  */
+  readonly maintenanceSchedule?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timeouts AwsTimestreaminfluxdbDbCluster#timeouts}
+  */
+  readonly timeouts?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster aws_timestreaminfluxdb_db_cluster}
+*/
+export class AwsTimestreaminfluxdbDbCluster extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_timestreaminfluxdb_db_cluster";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsTimestreaminfluxdbDbCluster resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsTimestreaminfluxdbDbCluster to import
+  * @param importFromId The id of the existing AwsTimestreaminfluxdbDbCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTimestreaminfluxdbDbCluster to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_timestreaminfluxdb_db_cluster", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster aws_timestreaminfluxdb_db_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsTimestreaminfluxdbDbClusterConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsTimestreaminfluxdbDbClusterConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_timestreaminfluxdb_db_cluster',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allocatedStorage = config.allocatedStorage;
+    this._bucket = config.bucket;
+    this._dbInstanceType = config.dbInstanceType;
+    this._dbParameterGroupIdentifier = config.dbParameterGroupIdentifier;
+    this._dbStorageType = config.dbStorageType;
+    this._deploymentType = config.deploymentType;
+    this._failoverMode = config.failoverMode;
+    this._name = config.name;
+    this._networkType = config.networkType;
+    this._organization = config.organization;
+    this._password = config.password;
+    this._port = config.port;
+    this._publiclyAccessible = config.publiclyAccessible;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._username = config.username;
+    this._vpcSecurityGroupIds = config.vpcSecurityGroupIds;
+    this._vpcSubnetIds = config.vpcSubnetIds;
+    this._logDeliveryConfiguration.internalValue = config.logDeliveryConfiguration;
+    this._maintenanceSchedule.internalValue = config.maintenanceSchedule;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allocated_storage - computed: false, optional: true, required: false
+  private _allocatedStorage?: number; 
+  public get allocatedStorage() {
+    return this.getNumberAttribute('allocated_storage');
+  }
+  public set allocatedStorage(value: number) {
+    this._allocatedStorage = value;
+  }
+  public resetAllocatedStorage() {
+    this._allocatedStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocatedStorageInput() {
+    return this._allocatedStorage;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // bucket - computed: false, optional: true, required: false
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  public resetBucket() {
+    this._bucket = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // db_instance_type - computed: false, optional: false, required: true
+  private _dbInstanceType?: string; 
+  public get dbInstanceType() {
+    return this.getStringAttribute('db_instance_type');
+  }
+  public set dbInstanceType(value: string) {
+    this._dbInstanceType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbInstanceTypeInput() {
+    return this._dbInstanceType;
+  }
+
+  // db_parameter_group_identifier - computed: false, optional: true, required: false
+  private _dbParameterGroupIdentifier?: string; 
+  public get dbParameterGroupIdentifier() {
+    return this.getStringAttribute('db_parameter_group_identifier');
+  }
+  public set dbParameterGroupIdentifier(value: string) {
+    this._dbParameterGroupIdentifier = value;
+  }
+  public resetDbParameterGroupIdentifier() {
+    this._dbParameterGroupIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbParameterGroupIdentifierInput() {
+    return this._dbParameterGroupIdentifier;
+  }
+
+  // db_storage_type - computed: true, optional: true, required: false
+  private _dbStorageType?: string; 
+  public get dbStorageType() {
+    return this.getStringAttribute('db_storage_type');
+  }
+  public set dbStorageType(value: string) {
+    this._dbStorageType = value;
+  }
+  public resetDbStorageType() {
+    this._dbStorageType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbStorageTypeInput() {
+    return this._dbStorageType;
+  }
+
+  // deployment_type - computed: true, optional: true, required: false
+  private _deploymentType?: string; 
+  public get deploymentType() {
+    return this.getStringAttribute('deployment_type');
+  }
+  public set deploymentType(value: string) {
+    this._deploymentType = value;
+  }
+  public resetDeploymentType() {
+    this._deploymentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentTypeInput() {
+    return this._deploymentType;
+  }
+
+  // endpoint - computed: true, optional: false, required: false
+  public get endpoint() {
+    return this.getStringAttribute('endpoint');
+  }
+
+  // engine_type - computed: true, optional: false, required: false
+  public get engineType() {
+    return this.getStringAttribute('engine_type');
+  }
+
+  // failover_mode - computed: true, optional: true, required: false
+  private _failoverMode?: string; 
+  public get failoverMode() {
+    return this.getStringAttribute('failover_mode');
+  }
+  public set failoverMode(value: string) {
+    this._failoverMode = value;
+  }
+  public resetFailoverMode() {
+    this._failoverMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverModeInput() {
+    return this._failoverMode;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // influx_auth_parameters_secret_arn - computed: true, optional: false, required: false
+  public get influxAuthParametersSecretArn() {
+    return this.getStringAttribute('influx_auth_parameters_secret_arn');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // network_type - computed: true, optional: true, required: false
+  private _networkType?: string; 
+  public get networkType() {
+    return this.getStringAttribute('network_type');
+  }
+  public set networkType(value: string) {
+    this._networkType = value;
+  }
+  public resetNetworkType() {
+    this._networkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTypeInput() {
+    return this._networkType;
+  }
+
+  // organization - computed: false, optional: true, required: false
+  private _organization?: string; 
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+  public set organization(value: string) {
+    this._organization = value;
+  }
+  public resetOrganization() {
+    this._organization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization;
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // port - computed: true, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // publicly_accessible - computed: true, optional: true, required: false
+  private _publiclyAccessible?: boolean | cdktn.IResolvable; 
+  public get publiclyAccessible() {
+    return this.getBooleanAttribute('publicly_accessible');
+  }
+  public set publiclyAccessible(value: boolean | cdktn.IResolvable) {
+    this._publiclyAccessible = value;
+  }
+  public resetPubliclyAccessible() {
+    this._publiclyAccessible = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publiclyAccessibleInput() {
+    return this._publiclyAccessible;
+  }
+
+  // reader_endpoint - computed: true, optional: false, required: false
+  public get readerEndpoint() {
+    return this.getStringAttribute('reader_endpoint');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // username - computed: false, optional: true, required: false
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+
+  // vpc_security_group_ids - computed: false, optional: false, required: true
+  private _vpcSecurityGroupIds?: string[]; 
+  public get vpcSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_ids'));
+  }
+  public set vpcSecurityGroupIds(value: string[]) {
+    this._vpcSecurityGroupIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupIdsInput() {
+    return this._vpcSecurityGroupIds;
+  }
+
+  // vpc_subnet_ids - computed: false, optional: false, required: true
+  private _vpcSubnetIds?: string[]; 
+  public get vpcSubnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_subnet_ids'));
+  }
+  public set vpcSubnetIds(value: string[]) {
+    this._vpcSubnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSubnetIdsInput() {
+    return this._vpcSubnetIds;
+  }
+
+  // log_delivery_configuration - computed: false, optional: true, required: false
+  private _logDeliveryConfiguration = new AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", false);
+  public get logDeliveryConfiguration() {
+    return this._logDeliveryConfiguration;
+  }
+  public putLogDeliveryConfiguration(value: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
+    this._logDeliveryConfiguration.internalValue = value;
+  }
+  public resetLogDeliveryConfiguration() {
+    this._logDeliveryConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDeliveryConfigurationInput() {
+    return this._logDeliveryConfiguration.internalValue;
+  }
+
+  // maintenance_schedule - computed: false, optional: true, required: false
+  private _maintenanceSchedule = new AwsTimestreaminfluxdbDbCluster.MaintenanceSchedulePropertyList(this, "maintenance_schedule", false);
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
+  }
+  public putMaintenanceSchedule(value: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty[] | cdktn.IResolvable) {
+    this._maintenanceSchedule.internalValue = value;
+  }
+  public resetMaintenanceSchedule() {
+    this._maintenanceSchedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceScheduleInput() {
+    return this._maintenanceSchedule.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsTimestreaminfluxdbDbCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allocated_storage: cdktn.numberToTerraform(this._allocatedStorage),
+      bucket: cdktn.stringToTerraform(this._bucket),
+      db_instance_type: cdktn.stringToTerraform(this._dbInstanceType),
+      db_parameter_group_identifier: cdktn.stringToTerraform(this._dbParameterGroupIdentifier),
+      db_storage_type: cdktn.stringToTerraform(this._dbStorageType),
+      deployment_type: cdktn.stringToTerraform(this._deploymentType),
+      failover_mode: cdktn.stringToTerraform(this._failoverMode),
+      name: cdktn.stringToTerraform(this._name),
+      network_type: cdktn.stringToTerraform(this._networkType),
+      organization: cdktn.stringToTerraform(this._organization),
+      password: cdktn.stringToTerraform(this._password),
+      port: cdktn.numberToTerraform(this._port),
+      publicly_accessible: cdktn.booleanToTerraform(this._publiclyAccessible),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      username: cdktn.stringToTerraform(this._username),
+      vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
+      vpc_subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSubnetIds),
+      log_delivery_configuration: cdktn.listMapper(awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
+      maintenance_schedule: cdktn.listMapper(awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToTerraform, true)(this._maintenanceSchedule.internalValue),
+      timeouts: awsTimestreaminfluxdbDbClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allocated_storage: {
+        value: cdktn.numberToHclTerraform(this._allocatedStorage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      bucket: {
+        value: cdktn.stringToHclTerraform(this._bucket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      db_instance_type: {
+        value: cdktn.stringToHclTerraform(this._dbInstanceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      db_parameter_group_identifier: {
+        value: cdktn.stringToHclTerraform(this._dbParameterGroupIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      db_storage_type: {
+        value: cdktn.stringToHclTerraform(this._dbStorageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deployment_type: {
+        value: cdktn.stringToHclTerraform(this._deploymentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      failover_mode: {
+        value: cdktn.stringToHclTerraform(this._failoverMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_type: {
+        value: cdktn.stringToHclTerraform(this._networkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization: {
+        value: cdktn.stringToHclTerraform(this._organization),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktn.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktn.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      publicly_accessible: {
+        value: cdktn.booleanToHclTerraform(this._publiclyAccessible),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      username: {
+        value: cdktn.stringToHclTerraform(this._username),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpc_security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSecurityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      vpc_subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSubnetIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      log_delivery_configuration: {
+        value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationPropertyList",
+      },
+      maintenance_schedule: {
+        value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToHclTerraform, true)(this._maintenanceSchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsTimestreaminfluxdbDbCluster.MaintenanceSchedulePropertyList",
+      },
+      timeouts: {
+        value: awsTimestreaminfluxdbDbClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsTimestreaminfluxdbDbCluster.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket_name: cdktn.stringToTerraform(struct!.bucketName),
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+  }
+}
+
+
+export function awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.S3ConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket_name: {
+      value: cdktn.stringToHclTerraform(struct!.bucketName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3_configuration: cdktn.listMapper(awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToTerraform, true)(struct!.s3Configuration),
+  }
+}
+
+
+export function awsTimestreaminfluxdbDbClusterLogDeliveryConfigurationPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3_configuration: {
+      value: cdktn.listMapperHcl(awsTimestreaminfluxdbDbClusterS3ConfigurationPropertyToHclTerraform, true)(struct!.s3Configuration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "S3ConfigurationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    preferred_maintenance_window: cdktn.stringToTerraform(struct!.preferredMaintenanceWindow),
+    timezone: cdktn.stringToTerraform(struct!.timezone),
+  }
+}
+
+
+export function awsTimestreaminfluxdbDbClusterMaintenanceSchedulePropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.MaintenanceScheduleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    preferred_maintenance_window: {
+      value: cdktn.stringToHclTerraform(struct!.preferredMaintenanceWindow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timezone: {
+      value: cdktn.stringToHclTerraform(struct!.timezone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToTerraform(struct?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsTimestreaminfluxdbDbClusterTimeoutsPropertyToHclTerraform(struct?: AwsTimestreaminfluxdbDbCluster.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsTimestreaminfluxdbDbCluster {
+export interface S3ConfigurationProperty {
+  /**
+  * The name of the S3 bucket to deliver logs to.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#bucket_name AwsTimestreaminfluxdbDbCluster#bucket_name}
+  */
+  readonly bucketName: string;
+  /**
+  * Indicates whether log delivery to the S3 bucket is enabled.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#enabled AwsTimestreaminfluxdbDbCluster#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+}
+export class S3ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): S3ConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucketName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucketName = this._bucketName;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: S3ConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._bucketName = undefined;
+      this._enabled = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._bucketName = value.bucketName;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // bucket_name - computed: false, optional: false, required: true
+  private _bucketName?: string; 
+  public get bucketName() {
+    return this.getStringAttribute('bucket_name');
+  }
+  public set bucketName(value: string) {
+    this._bucketName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketNameInput() {
+    return this._bucketName;
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+
+export class S3ConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : S3ConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): S3ConfigurationPropertyOutputReference {
+    return new S3ConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogDeliveryConfigurationProperty {
+  /**
+  * s3_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#s3_configuration AwsTimestreaminfluxdbDbCluster#s3_configuration}
+  */
+  readonly s3Configuration?: S3ConfigurationProperty[] | cdktn.IResolvable;
+}
+export class LogDeliveryConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogDeliveryConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3Configuration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Configuration = this._s3Configuration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogDeliveryConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._s3Configuration.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._s3Configuration.internalValue = value.s3Configuration;
+    }
+  }
+
+  // s3_configuration - computed: false, optional: true, required: false
+  private _s3Configuration = new S3ConfigurationPropertyList(this, "s3_configuration", false);
+  public get s3Configuration() {
+    return this._s3Configuration;
+  }
+  public putS3Configuration(value: S3ConfigurationProperty[] | cdktn.IResolvable) {
+    this._s3Configuration.internalValue = value;
+  }
+  public resetS3Configuration() {
+    this._s3Configuration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3ConfigurationInput() {
+    return this._s3Configuration.internalValue;
+  }
+}
+
+export class LogDeliveryConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : LogDeliveryConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogDeliveryConfigurationPropertyOutputReference {
+    return new LogDeliveryConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MaintenanceScheduleProperty {
+  /**
+  * The preferred maintenance window in the format ddd:HH:MM-ddd:HH:MM.
+  * 								Day must be one of Mon, Tue, Wed, Thu, Fri, Sat, or Sun. Provide an empty
+  * 								string to let the system choose a window.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#preferred_maintenance_window AwsTimestreaminfluxdbDbCluster#preferred_maintenance_window}
+  */
+  readonly preferredMaintenanceWindow: string;
+  /**
+  * The IANA timezone identifier for the maintenance window. For
+  * 								example, America/New_York or UTC.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#timezone AwsTimestreaminfluxdbDbCluster#timezone}
+  */
+  readonly timezone: string;
+}
+export class MaintenanceSchedulePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MaintenanceScheduleProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._preferredMaintenanceWindow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preferredMaintenanceWindow = this._preferredMaintenanceWindow;
+    }
+    if (this._timezone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timezone = this._timezone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceScheduleProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._preferredMaintenanceWindow = undefined;
+      this._timezone = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._preferredMaintenanceWindow = value.preferredMaintenanceWindow;
+      this._timezone = value.timezone;
+    }
+  }
+
+  // preferred_maintenance_window - computed: false, optional: false, required: true
+  private _preferredMaintenanceWindow?: string; 
+  public get preferredMaintenanceWindow() {
+    return this.getStringAttribute('preferred_maintenance_window');
+  }
+  public set preferredMaintenanceWindow(value: string) {
+    this._preferredMaintenanceWindow = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredMaintenanceWindowInput() {
+    return this._preferredMaintenanceWindow;
+  }
+
+  // timezone - computed: false, optional: false, required: true
+  private _timezone?: string; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string) {
+    this._timezone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone;
+  }
+}
+
+export class MaintenanceSchedulePropertyList extends cdktn.ComplexList {
+  public internalValue? : MaintenanceScheduleProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MaintenanceSchedulePropertyOutputReference {
+    return new MaintenanceSchedulePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#create AwsTimestreaminfluxdbDbCluster#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#delete AwsTimestreaminfluxdbDbCluster#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/timestreaminfluxdb_db_cluster#update AwsTimestreaminfluxdbDbCluster#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

@@ -1,0 +1,1175 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCloudsearchDomainConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#id AwsCloudsearchDomain#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#multi_az AwsCloudsearchDomain#multi_az}
+  */
+  readonly multiAz?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name AwsCloudsearchDomain#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#region AwsCloudsearchDomain#region}
+  */
+  readonly region?: string;
+  /**
+  * endpoint_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#endpoint_options AwsCloudsearchDomain#endpoint_options}
+  */
+  readonly endpointOptions?: AwsCloudsearchDomain.EndpointOptionsProperty;
+  /**
+  * index_field block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#index_field AwsCloudsearchDomain#index_field}
+  */
+  readonly indexField?: AwsCloudsearchDomain.IndexFieldProperty[] | cdktn.IResolvable;
+  /**
+  * scaling_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#scaling_parameters AwsCloudsearchDomain#scaling_parameters}
+  */
+  readonly scalingParameters?: AwsCloudsearchDomain.ScalingParametersProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#timeouts AwsCloudsearchDomain#timeouts}
+  */
+  readonly timeouts?: AwsCloudsearchDomain.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain aws_cloudsearch_domain}
+*/
+export class AwsCloudsearchDomain extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_cloudsearch_domain";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCloudsearchDomain resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCloudsearchDomain to import
+  * @param importFromId The id of the existing AwsCloudsearchDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCloudsearchDomain to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudsearch_domain", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain aws_cloudsearch_domain} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCloudsearchDomainConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCloudsearchDomainConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_cloudsearch_domain',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._multiAz = config.multiAz;
+    this._name = config.name;
+    this._region = config.region;
+    this._endpointOptions.internalValue = config.endpointOptions;
+    this._indexField.internalValue = config.indexField;
+    this._scalingParameters.internalValue = config.scalingParameters;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // document_service_endpoint - computed: true, optional: false, required: false
+  public get documentServiceEndpoint() {
+    return this.getStringAttribute('document_service_endpoint');
+  }
+
+  // domain_id - computed: true, optional: false, required: false
+  public get domainId() {
+    return this.getStringAttribute('domain_id');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // multi_az - computed: true, optional: true, required: false
+  private _multiAz?: boolean | cdktn.IResolvable; 
+  public get multiAz() {
+    return this.getBooleanAttribute('multi_az');
+  }
+  public set multiAz(value: boolean | cdktn.IResolvable) {
+    this._multiAz = value;
+  }
+  public resetMultiAz() {
+    this._multiAz = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiAzInput() {
+    return this._multiAz;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // search_service_endpoint - computed: true, optional: false, required: false
+  public get searchServiceEndpoint() {
+    return this.getStringAttribute('search_service_endpoint');
+  }
+
+  // endpoint_options - computed: false, optional: true, required: false
+  private _endpointOptions = new AwsCloudsearchDomain.EndpointOptionsPropertyOutputReference(this, "endpoint_options");
+  public get endpointOptions() {
+    return this._endpointOptions;
+  }
+  public putEndpointOptions(value: AwsCloudsearchDomain.EndpointOptionsProperty) {
+    this._endpointOptions.internalValue = value;
+  }
+  public resetEndpointOptions() {
+    this._endpointOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointOptionsInput() {
+    return this._endpointOptions.internalValue;
+  }
+
+  // index_field - computed: false, optional: true, required: false
+  private _indexField = new AwsCloudsearchDomain.IndexFieldPropertyList(this, "index_field", true);
+  public get indexField() {
+    return this._indexField;
+  }
+  public putIndexField(value: AwsCloudsearchDomain.IndexFieldProperty[] | cdktn.IResolvable) {
+    this._indexField.internalValue = value;
+  }
+  public resetIndexField() {
+    this._indexField.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get indexFieldInput() {
+    return this._indexField.internalValue;
+  }
+
+  // scaling_parameters - computed: false, optional: true, required: false
+  private _scalingParameters = new AwsCloudsearchDomain.ScalingParametersPropertyOutputReference(this, "scaling_parameters");
+  public get scalingParameters() {
+    return this._scalingParameters;
+  }
+  public putScalingParameters(value: AwsCloudsearchDomain.ScalingParametersProperty) {
+    this._scalingParameters.internalValue = value;
+  }
+  public resetScalingParameters() {
+    this._scalingParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalingParametersInput() {
+    return this._scalingParameters.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsCloudsearchDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsCloudsearchDomain.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      multi_az: cdktn.booleanToTerraform(this._multiAz),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      endpoint_options: awsCloudsearchDomainEndpointOptionsPropertyToTerraform(this._endpointOptions.internalValue),
+      index_field: cdktn.listMapper(awsCloudsearchDomainIndexFieldPropertyToTerraform, true)(this._indexField.internalValue),
+      scaling_parameters: awsCloudsearchDomainScalingParametersPropertyToTerraform(this._scalingParameters.internalValue),
+      timeouts: awsCloudsearchDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_az: {
+        value: cdktn.booleanToHclTerraform(this._multiAz),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      endpoint_options: {
+        value: awsCloudsearchDomainEndpointOptionsPropertyToHclTerraform(this._endpointOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCloudsearchDomain.EndpointOptionsPropertyList",
+      },
+      index_field: {
+        value: cdktn.listMapperHcl(awsCloudsearchDomainIndexFieldPropertyToHclTerraform, true)(this._indexField.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsCloudsearchDomain.IndexFieldPropertyList",
+      },
+      scaling_parameters: {
+        value: awsCloudsearchDomainScalingParametersPropertyToHclTerraform(this._scalingParameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCloudsearchDomain.ScalingParametersPropertyList",
+      },
+      timeouts: {
+        value: awsCloudsearchDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsCloudsearchDomain.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCloudsearchDomainEndpointOptionsPropertyToTerraform(struct?: AwsCloudsearchDomain.EndpointOptionsPropertyOutputReference | AwsCloudsearchDomain.EndpointOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enforce_https: cdktn.booleanToTerraform(struct!.enforceHttps),
+    tls_security_policy: cdktn.stringToTerraform(struct!.tlsSecurityPolicy),
+  }
+}
+
+
+export function awsCloudsearchDomainEndpointOptionsPropertyToHclTerraform(struct?: AwsCloudsearchDomain.EndpointOptionsPropertyOutputReference | AwsCloudsearchDomain.EndpointOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enforce_https: {
+      value: cdktn.booleanToHclTerraform(struct!.enforceHttps),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_security_policy: {
+      value: cdktn.stringToHclTerraform(struct!.tlsSecurityPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudsearchDomainIndexFieldPropertyToTerraform(struct?: AwsCloudsearchDomain.IndexFieldProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    analysis_scheme: cdktn.stringToTerraform(struct!.analysisScheme),
+    default_value: cdktn.stringToTerraform(struct!.defaultValue),
+    facet: cdktn.booleanToTerraform(struct!.facet),
+    highlight: cdktn.booleanToTerraform(struct!.highlight),
+    name: cdktn.stringToTerraform(struct!.name),
+    return: cdktn.booleanToTerraform(struct!.return),
+    search: cdktn.booleanToTerraform(struct!.search),
+    sort: cdktn.booleanToTerraform(struct!.sort),
+    source_fields: cdktn.stringToTerraform(struct!.sourceFields),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsCloudsearchDomainIndexFieldPropertyToHclTerraform(struct?: AwsCloudsearchDomain.IndexFieldProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    analysis_scheme: {
+      value: cdktn.stringToHclTerraform(struct!.analysisScheme),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_value: {
+      value: cdktn.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    facet: {
+      value: cdktn.booleanToHclTerraform(struct!.facet),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    highlight: {
+      value: cdktn.booleanToHclTerraform(struct!.highlight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    return: {
+      value: cdktn.booleanToHclTerraform(struct!.return),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    search: {
+      value: cdktn.booleanToHclTerraform(struct!.search),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    sort: {
+      value: cdktn.booleanToHclTerraform(struct!.sort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    source_fields: {
+      value: cdktn.stringToHclTerraform(struct!.sourceFields),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudsearchDomainScalingParametersPropertyToTerraform(struct?: AwsCloudsearchDomain.ScalingParametersPropertyOutputReference | AwsCloudsearchDomain.ScalingParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    desired_instance_type: cdktn.stringToTerraform(struct!.desiredInstanceType),
+    desired_partition_count: cdktn.numberToTerraform(struct!.desiredPartitionCount),
+    desired_replication_count: cdktn.numberToTerraform(struct!.desiredReplicationCount),
+  }
+}
+
+
+export function awsCloudsearchDomainScalingParametersPropertyToHclTerraform(struct?: AwsCloudsearchDomain.ScalingParametersPropertyOutputReference | AwsCloudsearchDomain.ScalingParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    desired_instance_type: {
+      value: cdktn.stringToHclTerraform(struct!.desiredInstanceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    desired_partition_count: {
+      value: cdktn.numberToHclTerraform(struct!.desiredPartitionCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    desired_replication_count: {
+      value: cdktn.numberToHclTerraform(struct!.desiredReplicationCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudsearchDomainTimeoutsPropertyToTerraform(struct?: AwsCloudsearchDomain.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsCloudsearchDomainTimeoutsPropertyToHclTerraform(struct?: AwsCloudsearchDomain.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCloudsearchDomain {
+export interface EndpointOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#enforce_https AwsCloudsearchDomain#enforce_https}
+  */
+  readonly enforceHttps?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#tls_security_policy AwsCloudsearchDomain#tls_security_policy}
+  */
+  readonly tlsSecurityPolicy?: string;
+}
+export class EndpointOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EndpointOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enforceHttps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enforceHttps = this._enforceHttps;
+    }
+    if (this._tlsSecurityPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tlsSecurityPolicy = this._tlsSecurityPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enforceHttps = undefined;
+      this._tlsSecurityPolicy = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enforceHttps = value.enforceHttps;
+      this._tlsSecurityPolicy = value.tlsSecurityPolicy;
+    }
+  }
+
+  // enforce_https - computed: true, optional: true, required: false
+  private _enforceHttps?: boolean | cdktn.IResolvable; 
+  public get enforceHttps() {
+    return this.getBooleanAttribute('enforce_https');
+  }
+  public set enforceHttps(value: boolean | cdktn.IResolvable) {
+    this._enforceHttps = value;
+  }
+  public resetEnforceHttps() {
+    this._enforceHttps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforceHttpsInput() {
+    return this._enforceHttps;
+  }
+
+  // tls_security_policy - computed: true, optional: true, required: false
+  private _tlsSecurityPolicy?: string; 
+  public get tlsSecurityPolicy() {
+    return this.getStringAttribute('tls_security_policy');
+  }
+  public set tlsSecurityPolicy(value: string) {
+    this._tlsSecurityPolicy = value;
+  }
+  public resetTlsSecurityPolicy() {
+    this._tlsSecurityPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsSecurityPolicyInput() {
+    return this._tlsSecurityPolicy;
+  }
+}
+export interface IndexFieldProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#analysis_scheme AwsCloudsearchDomain#analysis_scheme}
+  */
+  readonly analysisScheme?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#default_value AwsCloudsearchDomain#default_value}
+  */
+  readonly defaultValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#facet AwsCloudsearchDomain#facet}
+  */
+  readonly facet?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#highlight AwsCloudsearchDomain#highlight}
+  */
+  readonly highlight?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name AwsCloudsearchDomain#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#return AwsCloudsearchDomain#return}
+  */
+  readonly return?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#search AwsCloudsearchDomain#search}
+  */
+  readonly search?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#sort AwsCloudsearchDomain#sort}
+  */
+  readonly sort?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#source_fields AwsCloudsearchDomain#source_fields}
+  */
+  readonly sourceFields?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#type AwsCloudsearchDomain#type}
+  */
+  readonly type: string;
+}
+export class IndexFieldPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IndexFieldProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._analysisScheme !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.analysisScheme = this._analysisScheme;
+    }
+    if (this._defaultValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultValue = this._defaultValue;
+    }
+    if (this._facet !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.facet = this._facet;
+    }
+    if (this._highlight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.highlight = this._highlight;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._return !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.return = this._return;
+    }
+    if (this._search !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.search = this._search;
+    }
+    if (this._sort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sort = this._sort;
+    }
+    if (this._sourceFields !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceFields = this._sourceFields;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IndexFieldProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._analysisScheme = undefined;
+      this._defaultValue = undefined;
+      this._facet = undefined;
+      this._highlight = undefined;
+      this._name = undefined;
+      this._return = undefined;
+      this._search = undefined;
+      this._sort = undefined;
+      this._sourceFields = undefined;
+      this._type = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._analysisScheme = value.analysisScheme;
+      this._defaultValue = value.defaultValue;
+      this._facet = value.facet;
+      this._highlight = value.highlight;
+      this._name = value.name;
+      this._return = value.return;
+      this._search = value.search;
+      this._sort = value.sort;
+      this._sourceFields = value.sourceFields;
+      this._type = value.type;
+    }
+  }
+
+  // analysis_scheme - computed: false, optional: true, required: false
+  private _analysisScheme?: string; 
+  public get analysisScheme() {
+    return this.getStringAttribute('analysis_scheme');
+  }
+  public set analysisScheme(value: string) {
+    this._analysisScheme = value;
+  }
+  public resetAnalysisScheme() {
+    this._analysisScheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analysisSchemeInput() {
+    return this._analysisScheme;
+  }
+
+  // default_value - computed: false, optional: true, required: false
+  private _defaultValue?: string; 
+  public get defaultValue() {
+    return this.getStringAttribute('default_value');
+  }
+  public set defaultValue(value: string) {
+    this._defaultValue = value;
+  }
+  public resetDefaultValue() {
+    this._defaultValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultValueInput() {
+    return this._defaultValue;
+  }
+
+  // facet - computed: false, optional: true, required: false
+  private _facet?: boolean | cdktn.IResolvable; 
+  public get facet() {
+    return this.getBooleanAttribute('facet');
+  }
+  public set facet(value: boolean | cdktn.IResolvable) {
+    this._facet = value;
+  }
+  public resetFacet() {
+    this._facet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get facetInput() {
+    return this._facet;
+  }
+
+  // highlight - computed: false, optional: true, required: false
+  private _highlight?: boolean | cdktn.IResolvable; 
+  public get highlight() {
+    return this.getBooleanAttribute('highlight');
+  }
+  public set highlight(value: boolean | cdktn.IResolvable) {
+    this._highlight = value;
+  }
+  public resetHighlight() {
+    this._highlight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get highlightInput() {
+    return this._highlight;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // return - computed: false, optional: true, required: false
+  private _return?: boolean | cdktn.IResolvable; 
+  public get return() {
+    return this.getBooleanAttribute('return');
+  }
+  public set return(value: boolean | cdktn.IResolvable) {
+    this._return = value;
+  }
+  public resetReturn() {
+    this._return = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get returnInput() {
+    return this._return;
+  }
+
+  // search - computed: false, optional: true, required: false
+  private _search?: boolean | cdktn.IResolvable; 
+  public get search() {
+    return this.getBooleanAttribute('search');
+  }
+  public set search(value: boolean | cdktn.IResolvable) {
+    this._search = value;
+  }
+  public resetSearch() {
+    this._search = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get searchInput() {
+    return this._search;
+  }
+
+  // sort - computed: false, optional: true, required: false
+  private _sort?: boolean | cdktn.IResolvable; 
+  public get sort() {
+    return this.getBooleanAttribute('sort');
+  }
+  public set sort(value: boolean | cdktn.IResolvable) {
+    this._sort = value;
+  }
+  public resetSort() {
+    this._sort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sortInput() {
+    return this._sort;
+  }
+
+  // source_fields - computed: false, optional: true, required: false
+  private _sourceFields?: string; 
+  public get sourceFields() {
+    return this.getStringAttribute('source_fields');
+  }
+  public set sourceFields(value: string) {
+    this._sourceFields = value;
+  }
+  public resetSourceFields() {
+    this._sourceFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFieldsInput() {
+    return this._sourceFields;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class IndexFieldPropertyList extends cdktn.ComplexList {
+  public internalValue? : IndexFieldProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IndexFieldPropertyOutputReference {
+    return new IndexFieldPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ScalingParametersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_instance_type AwsCloudsearchDomain#desired_instance_type}
+  */
+  readonly desiredInstanceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_partition_count AwsCloudsearchDomain#desired_partition_count}
+  */
+  readonly desiredPartitionCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_replication_count AwsCloudsearchDomain#desired_replication_count}
+  */
+  readonly desiredReplicationCount?: number;
+}
+export class ScalingParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ScalingParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._desiredInstanceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.desiredInstanceType = this._desiredInstanceType;
+    }
+    if (this._desiredPartitionCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.desiredPartitionCount = this._desiredPartitionCount;
+    }
+    if (this._desiredReplicationCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.desiredReplicationCount = this._desiredReplicationCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ScalingParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._desiredInstanceType = undefined;
+      this._desiredPartitionCount = undefined;
+      this._desiredReplicationCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._desiredInstanceType = value.desiredInstanceType;
+      this._desiredPartitionCount = value.desiredPartitionCount;
+      this._desiredReplicationCount = value.desiredReplicationCount;
+    }
+  }
+
+  // desired_instance_type - computed: true, optional: true, required: false
+  private _desiredInstanceType?: string; 
+  public get desiredInstanceType() {
+    return this.getStringAttribute('desired_instance_type');
+  }
+  public set desiredInstanceType(value: string) {
+    this._desiredInstanceType = value;
+  }
+  public resetDesiredInstanceType() {
+    this._desiredInstanceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredInstanceTypeInput() {
+    return this._desiredInstanceType;
+  }
+
+  // desired_partition_count - computed: true, optional: true, required: false
+  private _desiredPartitionCount?: number; 
+  public get desiredPartitionCount() {
+    return this.getNumberAttribute('desired_partition_count');
+  }
+  public set desiredPartitionCount(value: number) {
+    this._desiredPartitionCount = value;
+  }
+  public resetDesiredPartitionCount() {
+    this._desiredPartitionCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredPartitionCountInput() {
+    return this._desiredPartitionCount;
+  }
+
+  // desired_replication_count - computed: true, optional: true, required: false
+  private _desiredReplicationCount?: number; 
+  public get desiredReplicationCount() {
+    return this.getNumberAttribute('desired_replication_count');
+  }
+  public set desiredReplicationCount(value: number) {
+    this._desiredReplicationCount = value;
+  }
+  public resetDesiredReplicationCount() {
+    this._desiredReplicationCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredReplicationCountInput() {
+    return this._desiredReplicationCount;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#create AwsCloudsearchDomain#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#delete AwsCloudsearchDomain#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#update AwsCloudsearchDomain#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

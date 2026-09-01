@@ -1,0 +1,279 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApiGatewayGatewayResponseConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#id AwsApiGatewayGatewayResponse#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#region AwsApiGatewayGatewayResponse#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#response_parameters AwsApiGatewayGatewayResponse#response_parameters}
+  */
+  readonly responseParameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#response_templates AwsApiGatewayGatewayResponse#response_templates}
+  */
+  readonly responseTemplates?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#response_type AwsApiGatewayGatewayResponse#response_type}
+  */
+  readonly responseType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#rest_api_id AwsApiGatewayGatewayResponse#rest_api_id}
+  */
+  readonly restApiId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#status_code AwsApiGatewayGatewayResponse#status_code}
+  */
+  readonly statusCode?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response aws_api_gateway_gateway_response}
+*/
+export class AwsApiGatewayGatewayResponse extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_api_gateway_gateway_response";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApiGatewayGatewayResponse resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApiGatewayGatewayResponse to import
+  * @param importFromId The id of the existing AwsApiGatewayGatewayResponse that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiGatewayGatewayResponse to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_gateway_response", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_gateway_response aws_api_gateway_gateway_response} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApiGatewayGatewayResponseConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsApiGatewayGatewayResponseConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_api_gateway_gateway_response',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._region = config.region;
+    this._responseParameters = config.responseParameters;
+    this._responseTemplates = config.responseTemplates;
+    this._responseType = config.responseType;
+    this._restApiId = config.restApiId;
+    this._statusCode = config.statusCode;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // response_parameters - computed: false, optional: true, required: false
+  private _responseParameters?: { [key: string]: string }; 
+  public get responseParameters() {
+    return this.getStringMapAttribute('response_parameters');
+  }
+  public set responseParameters(value: { [key: string]: string }) {
+    this._responseParameters = value;
+  }
+  public resetResponseParameters() {
+    this._responseParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseParametersInput() {
+    return this._responseParameters;
+  }
+
+  // response_templates - computed: false, optional: true, required: false
+  private _responseTemplates?: { [key: string]: string }; 
+  public get responseTemplates() {
+    return this.getStringMapAttribute('response_templates');
+  }
+  public set responseTemplates(value: { [key: string]: string }) {
+    this._responseTemplates = value;
+  }
+  public resetResponseTemplates() {
+    this._responseTemplates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseTemplatesInput() {
+    return this._responseTemplates;
+  }
+
+  // response_type - computed: false, optional: false, required: true
+  private _responseType?: string; 
+  public get responseType() {
+    return this.getStringAttribute('response_type');
+  }
+  public set responseType(value: string) {
+    this._responseType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseTypeInput() {
+    return this._responseType;
+  }
+
+  // rest_api_id - computed: false, optional: false, required: true
+  private _restApiId?: string; 
+  public get restApiId() {
+    return this.getStringAttribute('rest_api_id');
+  }
+  public set restApiId(value: string) {
+    this._restApiId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restApiIdInput() {
+    return this._restApiId;
+  }
+
+  // status_code - computed: false, optional: true, required: false
+  private _statusCode?: string; 
+  public get statusCode() {
+    return this.getStringAttribute('status_code');
+  }
+  public set statusCode(value: string) {
+    this._statusCode = value;
+  }
+  public resetStatusCode() {
+    this._statusCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeInput() {
+    return this._statusCode;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      response_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._responseParameters),
+      response_templates: cdktn.hashMapper(cdktn.stringToTerraform)(this._responseTemplates),
+      response_type: cdktn.stringToTerraform(this._responseType),
+      rest_api_id: cdktn.stringToTerraform(this._restApiId),
+      status_code: cdktn.stringToTerraform(this._statusCode),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      response_parameters: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._responseParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      response_templates: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._responseTemplates),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      response_type: {
+        value: cdktn.stringToHclTerraform(this._responseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rest_api_id: {
+        value: cdktn.stringToHclTerraform(this._restApiId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      status_code: {
+        value: cdktn.stringToHclTerraform(this._statusCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

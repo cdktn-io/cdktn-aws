@@ -1,0 +1,402 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsOpensearchPackageConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#engine_version AwsOpensearchPackage#engine_version}
+  */
+  readonly engineVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#id AwsOpensearchPackage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_description AwsOpensearchPackage#package_description}
+  */
+  readonly packageDescription?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_name AwsOpensearchPackage#package_name}
+  */
+  readonly packageName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_type AwsOpensearchPackage#package_type}
+  */
+  readonly packageType: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#region AwsOpensearchPackage#region}
+  */
+  readonly region?: string;
+  /**
+  * package_source block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_source AwsOpensearchPackage#package_source}
+  */
+  readonly packageSource: AwsOpensearchPackage.PackageSourceProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package aws_opensearch_package}
+*/
+export class AwsOpensearchPackage extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_opensearch_package";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsOpensearchPackage resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsOpensearchPackage to import
+  * @param importFromId The id of the existing AwsOpensearchPackage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOpensearchPackage to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_package", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package aws_opensearch_package} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsOpensearchPackageConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsOpensearchPackageConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_opensearch_package',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._engineVersion = config.engineVersion;
+    this._id = config.id;
+    this._packageDescription = config.packageDescription;
+    this._packageName = config.packageName;
+    this._packageType = config.packageType;
+    this._region = config.region;
+    this._packageSource.internalValue = config.packageSource;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // available_package_version - computed: true, optional: false, required: false
+  public get availablePackageVersion() {
+    return this.getStringAttribute('available_package_version');
+  }
+
+  // engine_version - computed: false, optional: true, required: false
+  private _engineVersion?: string; 
+  public get engineVersion() {
+    return this.getStringAttribute('engine_version');
+  }
+  public set engineVersion(value: string) {
+    this._engineVersion = value;
+  }
+  public resetEngineVersion() {
+    this._engineVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineVersionInput() {
+    return this._engineVersion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // package_description - computed: false, optional: true, required: false
+  private _packageDescription?: string; 
+  public get packageDescription() {
+    return this.getStringAttribute('package_description');
+  }
+  public set packageDescription(value: string) {
+    this._packageDescription = value;
+  }
+  public resetPackageDescription() {
+    this._packageDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageDescriptionInput() {
+    return this._packageDescription;
+  }
+
+  // package_id - computed: true, optional: false, required: false
+  public get packageId() {
+    return this.getStringAttribute('package_id');
+  }
+
+  // package_name - computed: false, optional: false, required: true
+  private _packageName?: string; 
+  public get packageName() {
+    return this.getStringAttribute('package_name');
+  }
+  public set packageName(value: string) {
+    this._packageName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageNameInput() {
+    return this._packageName;
+  }
+
+  // package_type - computed: false, optional: false, required: true
+  private _packageType?: string; 
+  public get packageType() {
+    return this.getStringAttribute('package_type');
+  }
+  public set packageType(value: string) {
+    this._packageType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageTypeInput() {
+    return this._packageType;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // package_source - computed: false, optional: false, required: true
+  private _packageSource = new AwsOpensearchPackage.PackageSourcePropertyOutputReference(this, "package_source");
+  public get packageSource() {
+    return this._packageSource;
+  }
+  public putPackageSource(value: AwsOpensearchPackage.PackageSourceProperty) {
+    this._packageSource.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageSourceInput() {
+    return this._packageSource.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      engine_version: cdktn.stringToTerraform(this._engineVersion),
+      id: cdktn.stringToTerraform(this._id),
+      package_description: cdktn.stringToTerraform(this._packageDescription),
+      package_name: cdktn.stringToTerraform(this._packageName),
+      package_type: cdktn.stringToTerraform(this._packageType),
+      region: cdktn.stringToTerraform(this._region),
+      package_source: awsOpensearchPackagePackageSourcePropertyToTerraform(this._packageSource.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      engine_version: {
+        value: cdktn.stringToHclTerraform(this._engineVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_description: {
+        value: cdktn.stringToHclTerraform(this._packageDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_name: {
+        value: cdktn.stringToHclTerraform(this._packageName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_type: {
+        value: cdktn.stringToHclTerraform(this._packageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_source: {
+        value: awsOpensearchPackagePackageSourcePropertyToHclTerraform(this._packageSource.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsOpensearchPackage.PackageSourcePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsOpensearchPackagePackageSourcePropertyToTerraform(struct?: AwsOpensearchPackage.PackageSourcePropertyOutputReference | AwsOpensearchPackage.PackageSourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    s3_bucket_name: cdktn.stringToTerraform(struct!.s3BucketName),
+    s3_key: cdktn.stringToTerraform(struct!.s3Key),
+  }
+}
+
+
+export function awsOpensearchPackagePackageSourcePropertyToHclTerraform(struct?: AwsOpensearchPackage.PackageSourcePropertyOutputReference | AwsOpensearchPackage.PackageSourceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    s3_bucket_name: {
+      value: cdktn.stringToHclTerraform(struct!.s3BucketName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_key: {
+      value: cdktn.stringToHclTerraform(struct!.s3Key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsOpensearchPackage {
+export interface PackageSourceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_bucket_name AwsOpensearchPackage#s3_bucket_name}
+  */
+  readonly s3BucketName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_key AwsOpensearchPackage#s3_key}
+  */
+  readonly s3Key: string;
+}
+export class PackageSourcePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PackageSourceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._s3BucketName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3BucketName = this._s3BucketName;
+    }
+    if (this._s3Key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Key = this._s3Key;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PackageSourceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._s3BucketName = undefined;
+      this._s3Key = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._s3BucketName = value.s3BucketName;
+      this._s3Key = value.s3Key;
+    }
+  }
+
+  // s3_bucket_name - computed: false, optional: false, required: true
+  private _s3BucketName?: string; 
+  public get s3BucketName() {
+    return this.getStringAttribute('s3_bucket_name');
+  }
+  public set s3BucketName(value: string) {
+    this._s3BucketName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3BucketNameInput() {
+    return this._s3BucketName;
+  }
+
+  // s3_key - computed: false, optional: false, required: true
+  private _s3Key?: string; 
+  public get s3Key() {
+    return this.getStringAttribute('s3_key');
+  }
+  public set s3Key(value: string) {
+    this._s3Key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3KeyInput() {
+    return this._s3Key;
+  }
+}
+}

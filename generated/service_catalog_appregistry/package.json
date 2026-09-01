@@ -1,0 +1,40 @@
+{
+  "name": "@cdktn/aws-service-catalog-appregistry",
+  "version": "0.0.0",
+  "private": true,
+  "description": "cdk-terrain bindings for the Service Catalog AppRegistry group of terraform-provider-aws 6.62.0",
+  "license": "MPL-2.0",
+  "author": {
+    "name": "cdktn-io",
+    "organization": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdktn-io/cdktn-aws.git"
+  },
+  "stability": "experimental",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "tsc": {
+      "outDir": "lib",
+      "rootDir": "src"
+    },
+    "targets": {
+      "go": {
+        "moduleName": "github.com/cdktn-io/cdktn-aws-go",
+        "packageName": "awsservicecatalogappregistry"
+      }
+    }
+  },
+  "peerDependencies": {
+    "cdktn": "^0.24.0",
+    "constructs": "^10.7.0"
+  },
+  "devDependencies": {
+    "cdktn": "0.24.0",
+    "constructs": "10.7.0"
+  }
+}

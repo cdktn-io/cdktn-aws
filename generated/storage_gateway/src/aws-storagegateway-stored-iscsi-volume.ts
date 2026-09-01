@@ -1,0 +1,460 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsStoragegatewayStoredIscsiVolumeConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#disk_id AwsStoragegatewayStoredIscsiVolume#disk_id}
+  */
+  readonly diskId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#gateway_arn AwsStoragegatewayStoredIscsiVolume#gateway_arn}
+  */
+  readonly gatewayArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#id AwsStoragegatewayStoredIscsiVolume#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_encrypted AwsStoragegatewayStoredIscsiVolume#kms_encrypted}
+  */
+  readonly kmsEncrypted?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#kms_key AwsStoragegatewayStoredIscsiVolume#kms_key}
+  */
+  readonly kmsKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#network_interface_id AwsStoragegatewayStoredIscsiVolume#network_interface_id}
+  */
+  readonly networkInterfaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#preserve_existing_data AwsStoragegatewayStoredIscsiVolume#preserve_existing_data}
+  */
+  readonly preserveExistingData: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#region AwsStoragegatewayStoredIscsiVolume#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#snapshot_id AwsStoragegatewayStoredIscsiVolume#snapshot_id}
+  */
+  readonly snapshotId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags AwsStoragegatewayStoredIscsiVolume#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#tags_all AwsStoragegatewayStoredIscsiVolume#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#target_name AwsStoragegatewayStoredIscsiVolume#target_name}
+  */
+  readonly targetName: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume aws_storagegateway_stored_iscsi_volume}
+*/
+export class AwsStoragegatewayStoredIscsiVolume extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_storagegateway_stored_iscsi_volume";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsStoragegatewayStoredIscsiVolume resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsStoragegatewayStoredIscsiVolume to import
+  * @param importFromId The id of the existing AwsStoragegatewayStoredIscsiVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStoragegatewayStoredIscsiVolume to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_storagegateway_stored_iscsi_volume", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/storagegateway_stored_iscsi_volume aws_storagegateway_stored_iscsi_volume} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsStoragegatewayStoredIscsiVolumeConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsStoragegatewayStoredIscsiVolumeConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_storagegateway_stored_iscsi_volume',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._diskId = config.diskId;
+    this._gatewayArn = config.gatewayArn;
+    this._id = config.id;
+    this._kmsEncrypted = config.kmsEncrypted;
+    this._kmsKey = config.kmsKey;
+    this._networkInterfaceId = config.networkInterfaceId;
+    this._preserveExistingData = config.preserveExistingData;
+    this._region = config.region;
+    this._snapshotId = config.snapshotId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._targetName = config.targetName;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // chap_enabled - computed: true, optional: false, required: false
+  public get chapEnabled() {
+    return this.getBooleanAttribute('chap_enabled');
+  }
+
+  // disk_id - computed: false, optional: false, required: true
+  private _diskId?: string; 
+  public get diskId() {
+    return this.getStringAttribute('disk_id');
+  }
+  public set diskId(value: string) {
+    this._diskId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskIdInput() {
+    return this._diskId;
+  }
+
+  // gateway_arn - computed: false, optional: false, required: true
+  private _gatewayArn?: string; 
+  public get gatewayArn() {
+    return this.getStringAttribute('gateway_arn');
+  }
+  public set gatewayArn(value: string) {
+    this._gatewayArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayArnInput() {
+    return this._gatewayArn;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_encrypted - computed: false, optional: true, required: false
+  private _kmsEncrypted?: boolean | cdktn.IResolvable; 
+  public get kmsEncrypted() {
+    return this.getBooleanAttribute('kms_encrypted');
+  }
+  public set kmsEncrypted(value: boolean | cdktn.IResolvable) {
+    this._kmsEncrypted = value;
+  }
+  public resetKmsEncrypted() {
+    this._kmsEncrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsEncryptedInput() {
+    return this._kmsEncrypted;
+  }
+
+  // kms_key - computed: false, optional: true, required: false
+  private _kmsKey?: string; 
+  public get kmsKey() {
+    return this.getStringAttribute('kms_key');
+  }
+  public set kmsKey(value: string) {
+    this._kmsKey = value;
+  }
+  public resetKmsKey() {
+    this._kmsKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyInput() {
+    return this._kmsKey;
+  }
+
+  // lun_number - computed: true, optional: false, required: false
+  public get lunNumber() {
+    return this.getNumberAttribute('lun_number');
+  }
+
+  // network_interface_id - computed: false, optional: false, required: true
+  private _networkInterfaceId?: string; 
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+  public set networkInterfaceId(value: string) {
+    this._networkInterfaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdInput() {
+    return this._networkInterfaceId;
+  }
+
+  // network_interface_port - computed: true, optional: false, required: false
+  public get networkInterfacePort() {
+    return this.getNumberAttribute('network_interface_port');
+  }
+
+  // preserve_existing_data - computed: false, optional: false, required: true
+  private _preserveExistingData?: boolean | cdktn.IResolvable; 
+  public get preserveExistingData() {
+    return this.getBooleanAttribute('preserve_existing_data');
+  }
+  public set preserveExistingData(value: boolean | cdktn.IResolvable) {
+    this._preserveExistingData = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preserveExistingDataInput() {
+    return this._preserveExistingData;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // snapshot_id - computed: false, optional: true, required: false
+  private _snapshotId?: string; 
+  public get snapshotId() {
+    return this.getStringAttribute('snapshot_id');
+  }
+  public set snapshotId(value: string) {
+    this._snapshotId = value;
+  }
+  public resetSnapshotId() {
+    this._snapshotId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotIdInput() {
+    return this._snapshotId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // target_arn - computed: true, optional: false, required: false
+  public get targetArn() {
+    return this.getStringAttribute('target_arn');
+  }
+
+  // target_name - computed: false, optional: false, required: true
+  private _targetName?: string; 
+  public get targetName() {
+    return this.getStringAttribute('target_name');
+  }
+  public set targetName(value: string) {
+    this._targetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetNameInput() {
+    return this._targetName;
+  }
+
+  // volume_attachment_status - computed: true, optional: false, required: false
+  public get volumeAttachmentStatus() {
+    return this.getStringAttribute('volume_attachment_status');
+  }
+
+  // volume_id - computed: true, optional: false, required: false
+  public get volumeId() {
+    return this.getStringAttribute('volume_id');
+  }
+
+  // volume_size_in_bytes - computed: true, optional: false, required: false
+  public get volumeSizeInBytes() {
+    return this.getNumberAttribute('volume_size_in_bytes');
+  }
+
+  // volume_status - computed: true, optional: false, required: false
+  public get volumeStatus() {
+    return this.getStringAttribute('volume_status');
+  }
+
+  // volume_type - computed: true, optional: false, required: false
+  public get volumeType() {
+    return this.getStringAttribute('volume_type');
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      disk_id: cdktn.stringToTerraform(this._diskId),
+      gateway_arn: cdktn.stringToTerraform(this._gatewayArn),
+      id: cdktn.stringToTerraform(this._id),
+      kms_encrypted: cdktn.booleanToTerraform(this._kmsEncrypted),
+      kms_key: cdktn.stringToTerraform(this._kmsKey),
+      network_interface_id: cdktn.stringToTerraform(this._networkInterfaceId),
+      preserve_existing_data: cdktn.booleanToTerraform(this._preserveExistingData),
+      region: cdktn.stringToTerraform(this._region),
+      snapshot_id: cdktn.stringToTerraform(this._snapshotId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      target_name: cdktn.stringToTerraform(this._targetName),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disk_id: {
+        value: cdktn.stringToHclTerraform(this._diskId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_arn: {
+        value: cdktn.stringToHclTerraform(this._gatewayArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_encrypted: {
+        value: cdktn.booleanToHclTerraform(this._kmsEncrypted),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      kms_key: {
+        value: cdktn.stringToHclTerraform(this._kmsKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_interface_id: {
+        value: cdktn.stringToHclTerraform(this._networkInterfaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preserve_existing_data: {
+        value: cdktn.booleanToHclTerraform(this._preserveExistingData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      snapshot_id: {
+        value: cdktn.stringToHclTerraform(this._snapshotId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      target_name: {
+        value: cdktn.stringToHclTerraform(this._targetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

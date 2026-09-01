@@ -1,0 +1,662 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVpclatticeServiceNetworkVpcAssociationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#id AwsVpclatticeServiceNetworkVpcAssociation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#private_dns_enabled AwsVpclatticeServiceNetworkVpcAssociation#private_dns_enabled}
+  */
+  readonly privateDnsEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#region AwsVpclatticeServiceNetworkVpcAssociation#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#security_group_ids AwsVpclatticeServiceNetworkVpcAssociation#security_group_ids}
+  */
+  readonly securityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#service_network_identifier AwsVpclatticeServiceNetworkVpcAssociation#service_network_identifier}
+  */
+  readonly serviceNetworkIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#tags AwsVpclatticeServiceNetworkVpcAssociation#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#tags_all AwsVpclatticeServiceNetworkVpcAssociation#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#vpc_identifier AwsVpclatticeServiceNetworkVpcAssociation#vpc_identifier}
+  */
+  readonly vpcIdentifier: string;
+  /**
+  * dns_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#dns_options AwsVpclatticeServiceNetworkVpcAssociation#dns_options}
+  */
+  readonly dnsOptions?: AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#timeouts AwsVpclatticeServiceNetworkVpcAssociation#timeouts}
+  */
+  readonly timeouts?: AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association aws_vpclattice_service_network_vpc_association}
+*/
+export class AwsVpclatticeServiceNetworkVpcAssociation extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_vpclattice_service_network_vpc_association";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVpclatticeServiceNetworkVpcAssociation resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVpclatticeServiceNetworkVpcAssociation to import
+  * @param importFromId The id of the existing AwsVpclatticeServiceNetworkVpcAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpclatticeServiceNetworkVpcAssociation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_service_network_vpc_association", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association aws_vpclattice_service_network_vpc_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVpclatticeServiceNetworkVpcAssociationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVpclatticeServiceNetworkVpcAssociationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_vpclattice_service_network_vpc_association',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._privateDnsEnabled = config.privateDnsEnabled;
+    this._region = config.region;
+    this._securityGroupIds = config.securityGroupIds;
+    this._serviceNetworkIdentifier = config.serviceNetworkIdentifier;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._vpcIdentifier = config.vpcIdentifier;
+    this._dnsOptions.internalValue = config.dnsOptions;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // created_by - computed: true, optional: false, required: false
+  public get createdBy() {
+    return this.getStringAttribute('created_by');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // private_dns_enabled - computed: true, optional: true, required: false
+  private _privateDnsEnabled?: boolean | cdktn.IResolvable; 
+  public get privateDnsEnabled() {
+    return this.getBooleanAttribute('private_dns_enabled');
+  }
+  public set privateDnsEnabled(value: boolean | cdktn.IResolvable) {
+    this._privateDnsEnabled = value;
+  }
+  public resetPrivateDnsEnabled() {
+    this._privateDnsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsEnabledInput() {
+    return this._privateDnsEnabled;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_group_ids - computed: false, optional: true, required: false
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return this.getListAttribute('security_group_ids');
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  public resetSecurityGroupIds() {
+    this._securityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // service_network_identifier - computed: false, optional: false, required: true
+  private _serviceNetworkIdentifier?: string; 
+  public get serviceNetworkIdentifier() {
+    return this.getStringAttribute('service_network_identifier');
+  }
+  public set serviceNetworkIdentifier(value: string) {
+    this._serviceNetworkIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNetworkIdentifierInput() {
+    return this._serviceNetworkIdentifier;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_identifier - computed: false, optional: false, required: true
+  private _vpcIdentifier?: string; 
+  public get vpcIdentifier() {
+    return this.getStringAttribute('vpc_identifier');
+  }
+  public set vpcIdentifier(value: string) {
+    this._vpcIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcIdentifierInput() {
+    return this._vpcIdentifier;
+  }
+
+  // dns_options - computed: false, optional: true, required: false
+  private _dnsOptions = new AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsPropertyOutputReference(this, "dns_options");
+  public get dnsOptions() {
+    return this._dnsOptions;
+  }
+  public putDnsOptions(value: AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsProperty) {
+    this._dnsOptions.internalValue = value;
+  }
+  public resetDnsOptions() {
+    this._dnsOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsOptionsInput() {
+    return this._dnsOptions.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      private_dns_enabled: cdktn.booleanToTerraform(this._privateDnsEnabled),
+      region: cdktn.stringToTerraform(this._region),
+      security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
+      service_network_identifier: cdktn.stringToTerraform(this._serviceNetworkIdentifier),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      vpc_identifier: cdktn.stringToTerraform(this._vpcIdentifier),
+      dns_options: awsVpclatticeServiceNetworkVpcAssociationDnsOptionsPropertyToTerraform(this._dnsOptions.internalValue),
+      timeouts: awsVpclatticeServiceNetworkVpcAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_dns_enabled: {
+        value: cdktn.booleanToHclTerraform(this._privateDnsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      service_network_identifier: {
+        value: cdktn.stringToHclTerraform(this._serviceNetworkIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_identifier: {
+        value: cdktn.stringToHclTerraform(this._vpcIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dns_options: {
+        value: awsVpclatticeServiceNetworkVpcAssociationDnsOptionsPropertyToHclTerraform(this._dnsOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsPropertyList",
+      },
+      timeouts: {
+        value: awsVpclatticeServiceNetworkVpcAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsVpclatticeServiceNetworkVpcAssociationDnsOptionsPropertyToTerraform(struct?: AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsPropertyOutputReference | AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    private_dns_preference: cdktn.stringToTerraform(struct!.privateDnsPreference),
+    private_dns_specified_domains: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.privateDnsSpecifiedDomains),
+  }
+}
+
+
+export function awsVpclatticeServiceNetworkVpcAssociationDnsOptionsPropertyToHclTerraform(struct?: AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsPropertyOutputReference | AwsVpclatticeServiceNetworkVpcAssociation.DnsOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    private_dns_preference: {
+      value: cdktn.stringToHclTerraform(struct!.privateDnsPreference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_dns_specified_domains: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.privateDnsSpecifiedDomains),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpclatticeServiceNetworkVpcAssociationTimeoutsPropertyToTerraform(struct?: AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsVpclatticeServiceNetworkVpcAssociationTimeoutsPropertyToHclTerraform(struct?: AwsVpclatticeServiceNetworkVpcAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsVpclatticeServiceNetworkVpcAssociation {
+export interface DnsOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#private_dns_preference AwsVpclatticeServiceNetworkVpcAssociation#private_dns_preference}
+  */
+  readonly privateDnsPreference?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#private_dns_specified_domains AwsVpclatticeServiceNetworkVpcAssociation#private_dns_specified_domains}
+  */
+  readonly privateDnsSpecifiedDomains?: string[];
+}
+export class DnsOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DnsOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._privateDnsPreference !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateDnsPreference = this._privateDnsPreference;
+    }
+    if (this._privateDnsSpecifiedDomains !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateDnsSpecifiedDomains = this._privateDnsSpecifiedDomains;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._privateDnsPreference = undefined;
+      this._privateDnsSpecifiedDomains = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._privateDnsPreference = value.privateDnsPreference;
+      this._privateDnsSpecifiedDomains = value.privateDnsSpecifiedDomains;
+    }
+  }
+
+  // private_dns_preference - computed: false, optional: true, required: false
+  private _privateDnsPreference?: string; 
+  public get privateDnsPreference() {
+    return this.getStringAttribute('private_dns_preference');
+  }
+  public set privateDnsPreference(value: string) {
+    this._privateDnsPreference = value;
+  }
+  public resetPrivateDnsPreference() {
+    this._privateDnsPreference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsPreferenceInput() {
+    return this._privateDnsPreference;
+  }
+
+  // private_dns_specified_domains - computed: true, optional: true, required: false
+  private _privateDnsSpecifiedDomains?: string[]; 
+  public get privateDnsSpecifiedDomains() {
+    return cdktn.Fn.tolist(this.getListAttribute('private_dns_specified_domains'));
+  }
+  public set privateDnsSpecifiedDomains(value: string[]) {
+    this._privateDnsSpecifiedDomains = value;
+  }
+  public resetPrivateDnsSpecifiedDomains() {
+    this._privateDnsSpecifiedDomains = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsSpecifiedDomainsInput() {
+    return this._privateDnsSpecifiedDomains;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#create AwsVpclatticeServiceNetworkVpcAssociation#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#delete AwsVpclatticeServiceNetworkVpcAssociation#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_service_network_vpc_association#update AwsVpclatticeServiceNetworkVpcAssociation#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

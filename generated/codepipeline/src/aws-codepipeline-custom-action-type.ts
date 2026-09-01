@@ -1,0 +1,1110 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCodepipelineCustomActionTypeConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#category AwsCodepipelineCustomActionType#category}
+  */
+  readonly category: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#id AwsCodepipelineCustomActionType#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#provider_name AwsCodepipelineCustomActionType#provider_name}
+  */
+  readonly providerName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#region AwsCodepipelineCustomActionType#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags AwsCodepipelineCustomActionType#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags_all AwsCodepipelineCustomActionType#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#version AwsCodepipelineCustomActionType#version}
+  */
+  readonly version: string;
+  /**
+  * configuration_property block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#configuration_property AwsCodepipelineCustomActionType#configuration_property}
+  */
+  readonly configurationProperty?: AwsCodepipelineCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable;
+  /**
+  * input_artifact_details block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#input_artifact_details AwsCodepipelineCustomActionType#input_artifact_details}
+  */
+  readonly inputArtifactDetails: AwsCodepipelineCustomActionType.InputArtifactDetailsProperty;
+  /**
+  * output_artifact_details block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#output_artifact_details AwsCodepipelineCustomActionType#output_artifact_details}
+  */
+  readonly outputArtifactDetails: AwsCodepipelineCustomActionType.OutputArtifactDetailsProperty;
+  /**
+  * settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#settings AwsCodepipelineCustomActionType#settings}
+  */
+  readonly settings?: AwsCodepipelineCustomActionType.SettingsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type aws_codepipeline_custom_action_type}
+*/
+export class AwsCodepipelineCustomActionType extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_codepipeline_custom_action_type";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCodepipelineCustomActionType resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCodepipelineCustomActionType to import
+  * @param importFromId The id of the existing AwsCodepipelineCustomActionType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCodepipelineCustomActionType to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codepipeline_custom_action_type", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type aws_codepipeline_custom_action_type} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCodepipelineCustomActionTypeConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCodepipelineCustomActionTypeConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_codepipeline_custom_action_type',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._category = config.category;
+    this._id = config.id;
+    this._providerName = config.providerName;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._version = config.version;
+    this._configurationProperty.internalValue = config.configurationProperty;
+    this._inputArtifactDetails.internalValue = config.inputArtifactDetails;
+    this._outputArtifactDetails.internalValue = config.outputArtifactDetails;
+    this._settings.internalValue = config.settings;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // category - computed: false, optional: false, required: true
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // owner - computed: true, optional: false, required: false
+  public get owner() {
+    return this.getStringAttribute('owner');
+  }
+
+  // provider_name - computed: false, optional: false, required: true
+  private _providerName?: string; 
+  public get providerName() {
+    return this.getStringAttribute('provider_name');
+  }
+  public set providerName(value: string) {
+    this._providerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get providerNameInput() {
+    return this._providerName;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // configuration_property - computed: false, optional: true, required: false
+  private _configurationProperty = new AwsCodepipelineCustomActionType.ConfigurationPropertyPropertyList(this, "configuration_property", false);
+  public get configurationProperty() {
+    return this._configurationProperty;
+  }
+  public putConfigurationProperty(value: AwsCodepipelineCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable) {
+    this._configurationProperty.internalValue = value;
+  }
+  public resetConfigurationProperty() {
+    this._configurationProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationPropertyInput() {
+    return this._configurationProperty.internalValue;
+  }
+
+  // input_artifact_details - computed: false, optional: false, required: true
+  private _inputArtifactDetails = new AwsCodepipelineCustomActionType.InputArtifactDetailsPropertyOutputReference(this, "input_artifact_details");
+  public get inputArtifactDetails() {
+    return this._inputArtifactDetails;
+  }
+  public putInputArtifactDetails(value: AwsCodepipelineCustomActionType.InputArtifactDetailsProperty) {
+    this._inputArtifactDetails.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputArtifactDetailsInput() {
+    return this._inputArtifactDetails.internalValue;
+  }
+
+  // output_artifact_details - computed: false, optional: false, required: true
+  private _outputArtifactDetails = new AwsCodepipelineCustomActionType.OutputArtifactDetailsPropertyOutputReference(this, "output_artifact_details");
+  public get outputArtifactDetails() {
+    return this._outputArtifactDetails;
+  }
+  public putOutputArtifactDetails(value: AwsCodepipelineCustomActionType.OutputArtifactDetailsProperty) {
+    this._outputArtifactDetails.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputArtifactDetailsInput() {
+    return this._outputArtifactDetails.internalValue;
+  }
+
+  // settings - computed: false, optional: true, required: false
+  private _settings = new AwsCodepipelineCustomActionType.SettingsPropertyOutputReference(this, "settings");
+  public get settings() {
+    return this._settings;
+  }
+  public putSettings(value: AwsCodepipelineCustomActionType.SettingsProperty) {
+    this._settings.internalValue = value;
+  }
+  public resetSettings() {
+    this._settings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingsInput() {
+    return this._settings.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      category: cdktn.stringToTerraform(this._category),
+      id: cdktn.stringToTerraform(this._id),
+      provider_name: cdktn.stringToTerraform(this._providerName),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      version: cdktn.stringToTerraform(this._version),
+      configuration_property: cdktn.listMapper(awsCodepipelineCustomActionTypeConfigurationPropertyPropertyToTerraform, true)(this._configurationProperty.internalValue),
+      input_artifact_details: awsCodepipelineCustomActionTypeInputArtifactDetailsPropertyToTerraform(this._inputArtifactDetails.internalValue),
+      output_artifact_details: awsCodepipelineCustomActionTypeOutputArtifactDetailsPropertyToTerraform(this._outputArtifactDetails.internalValue),
+      settings: awsCodepipelineCustomActionTypeSettingsPropertyToTerraform(this._settings.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      category: {
+        value: cdktn.stringToHclTerraform(this._category),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      provider_name: {
+        value: cdktn.stringToHclTerraform(this._providerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version: {
+        value: cdktn.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      configuration_property: {
+        value: cdktn.listMapperHcl(awsCodepipelineCustomActionTypeConfigurationPropertyPropertyToHclTerraform, true)(this._configurationProperty.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCodepipelineCustomActionType.ConfigurationPropertyPropertyList",
+      },
+      input_artifact_details: {
+        value: awsCodepipelineCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(this._inputArtifactDetails.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCodepipelineCustomActionType.InputArtifactDetailsPropertyList",
+      },
+      output_artifact_details: {
+        value: awsCodepipelineCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(this._outputArtifactDetails.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCodepipelineCustomActionType.OutputArtifactDetailsPropertyList",
+      },
+      settings: {
+        value: awsCodepipelineCustomActionTypeSettingsPropertyToHclTerraform(this._settings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCodepipelineCustomActionType.SettingsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCodepipelineCustomActionTypeConfigurationPropertyPropertyToTerraform(struct?: AwsCodepipelineCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    description: cdktn.stringToTerraform(struct!.description),
+    key: cdktn.booleanToTerraform(struct!.key),
+    name: cdktn.stringToTerraform(struct!.name),
+    queryable: cdktn.booleanToTerraform(struct!.queryable),
+    required: cdktn.booleanToTerraform(struct!.required),
+    secret: cdktn.booleanToTerraform(struct!.secret),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsCodepipelineCustomActionTypeConfigurationPropertyPropertyToHclTerraform(struct?: AwsCodepipelineCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    description: {
+      value: cdktn.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktn.booleanToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    queryable: {
+      value: cdktn.booleanToHclTerraform(struct!.queryable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    required: {
+      value: cdktn.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    secret: {
+      value: cdktn.booleanToHclTerraform(struct!.secret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCodepipelineCustomActionTypeInputArtifactDetailsPropertyToTerraform(struct?: AwsCodepipelineCustomActionType.InputArtifactDetailsPropertyOutputReference | AwsCodepipelineCustomActionType.InputArtifactDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    maximum_count: cdktn.numberToTerraform(struct!.maximumCount),
+    minimum_count: cdktn.numberToTerraform(struct!.minimumCount),
+  }
+}
+
+
+export function awsCodepipelineCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(struct?: AwsCodepipelineCustomActionType.InputArtifactDetailsPropertyOutputReference | AwsCodepipelineCustomActionType.InputArtifactDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    maximum_count: {
+      value: cdktn.numberToHclTerraform(struct!.maximumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum_count: {
+      value: cdktn.numberToHclTerraform(struct!.minimumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCodepipelineCustomActionTypeOutputArtifactDetailsPropertyToTerraform(struct?: AwsCodepipelineCustomActionType.OutputArtifactDetailsPropertyOutputReference | AwsCodepipelineCustomActionType.OutputArtifactDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    maximum_count: cdktn.numberToTerraform(struct!.maximumCount),
+    minimum_count: cdktn.numberToTerraform(struct!.minimumCount),
+  }
+}
+
+
+export function awsCodepipelineCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(struct?: AwsCodepipelineCustomActionType.OutputArtifactDetailsPropertyOutputReference | AwsCodepipelineCustomActionType.OutputArtifactDetailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    maximum_count: {
+      value: cdktn.numberToHclTerraform(struct!.maximumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum_count: {
+      value: cdktn.numberToHclTerraform(struct!.minimumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCodepipelineCustomActionTypeSettingsPropertyToTerraform(struct?: AwsCodepipelineCustomActionType.SettingsPropertyOutputReference | AwsCodepipelineCustomActionType.SettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    entity_url_template: cdktn.stringToTerraform(struct!.entityUrlTemplate),
+    execution_url_template: cdktn.stringToTerraform(struct!.executionUrlTemplate),
+    revision_url_template: cdktn.stringToTerraform(struct!.revisionUrlTemplate),
+    third_party_configuration_url: cdktn.stringToTerraform(struct!.thirdPartyConfigurationUrl),
+  }
+}
+
+
+export function awsCodepipelineCustomActionTypeSettingsPropertyToHclTerraform(struct?: AwsCodepipelineCustomActionType.SettingsPropertyOutputReference | AwsCodepipelineCustomActionType.SettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    entity_url_template: {
+      value: cdktn.stringToHclTerraform(struct!.entityUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    execution_url_template: {
+      value: cdktn.stringToHclTerraform(struct!.executionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    revision_url_template: {
+      value: cdktn.stringToHclTerraform(struct!.revisionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    third_party_configuration_url: {
+      value: cdktn.stringToHclTerraform(struct!.thirdPartyConfigurationUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCodepipelineCustomActionType {
+export interface ConfigurationPropertyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#description AwsCodepipelineCustomActionType#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#key AwsCodepipelineCustomActionType#key}
+  */
+  readonly key: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#name AwsCodepipelineCustomActionType#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#queryable AwsCodepipelineCustomActionType#queryable}
+  */
+  readonly queryable?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#required AwsCodepipelineCustomActionType#required}
+  */
+  readonly required: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#secret AwsCodepipelineCustomActionType#secret}
+  */
+  readonly secret: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#type AwsCodepipelineCustomActionType#type}
+  */
+  readonly type?: string;
+}
+export class ConfigurationPropertyPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConfigurationPropertyProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._queryable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryable = this._queryable;
+    }
+    if (this._required !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.required = this._required;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConfigurationPropertyProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._key = undefined;
+      this._name = undefined;
+      this._queryable = undefined;
+      this._required = undefined;
+      this._secret = undefined;
+      this._type = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._key = value.key;
+      this._name = value.name;
+      this._queryable = value.queryable;
+      this._required = value.required;
+      this._secret = value.secret;
+      this._type = value.type;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: boolean | cdktn.IResolvable; 
+  public get key() {
+    return this.getBooleanAttribute('key');
+  }
+  public set key(value: boolean | cdktn.IResolvable) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // queryable - computed: false, optional: true, required: false
+  private _queryable?: boolean | cdktn.IResolvable; 
+  public get queryable() {
+    return this.getBooleanAttribute('queryable');
+  }
+  public set queryable(value: boolean | cdktn.IResolvable) {
+    this._queryable = value;
+  }
+  public resetQueryable() {
+    this._queryable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryableInput() {
+    return this._queryable;
+  }
+
+  // required - computed: false, optional: false, required: true
+  private _required?: boolean | cdktn.IResolvable; 
+  public get required() {
+    return this.getBooleanAttribute('required');
+  }
+  public set required(value: boolean | cdktn.IResolvable) {
+    this._required = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiredInput() {
+    return this._required;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: boolean | cdktn.IResolvable; 
+  public get secret() {
+    return this.getBooleanAttribute('secret');
+  }
+  public set secret(value: boolean | cdktn.IResolvable) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class ConfigurationPropertyPropertyList extends cdktn.ComplexList {
+  public internalValue? : ConfigurationPropertyProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConfigurationPropertyPropertyOutputReference {
+    return new ConfigurationPropertyPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface InputArtifactDetailsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count AwsCodepipelineCustomActionType#maximum_count}
+  */
+  readonly maximumCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count AwsCodepipelineCustomActionType#minimum_count}
+  */
+  readonly minimumCount: number;
+}
+export class InputArtifactDetailsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): InputArtifactDetailsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maximumCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximumCount = this._maximumCount;
+    }
+    if (this._minimumCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimumCount = this._minimumCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InputArtifactDetailsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maximumCount = undefined;
+      this._minimumCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maximumCount = value.maximumCount;
+      this._minimumCount = value.minimumCount;
+    }
+  }
+
+  // maximum_count - computed: false, optional: false, required: true
+  private _maximumCount?: number; 
+  public get maximumCount() {
+    return this.getNumberAttribute('maximum_count');
+  }
+  public set maximumCount(value: number) {
+    this._maximumCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumCountInput() {
+    return this._maximumCount;
+  }
+
+  // minimum_count - computed: false, optional: false, required: true
+  private _minimumCount?: number; 
+  public get minimumCount() {
+    return this.getNumberAttribute('minimum_count');
+  }
+  public set minimumCount(value: number) {
+    this._minimumCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumCountInput() {
+    return this._minimumCount;
+  }
+}
+export interface OutputArtifactDetailsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count AwsCodepipelineCustomActionType#maximum_count}
+  */
+  readonly maximumCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count AwsCodepipelineCustomActionType#minimum_count}
+  */
+  readonly minimumCount: number;
+}
+export class OutputArtifactDetailsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OutputArtifactDetailsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maximumCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maximumCount = this._maximumCount;
+    }
+    if (this._minimumCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimumCount = this._minimumCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OutputArtifactDetailsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maximumCount = undefined;
+      this._minimumCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maximumCount = value.maximumCount;
+      this._minimumCount = value.minimumCount;
+    }
+  }
+
+  // maximum_count - computed: false, optional: false, required: true
+  private _maximumCount?: number; 
+  public get maximumCount() {
+    return this.getNumberAttribute('maximum_count');
+  }
+  public set maximumCount(value: number) {
+    this._maximumCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumCountInput() {
+    return this._maximumCount;
+  }
+
+  // minimum_count - computed: false, optional: false, required: true
+  private _minimumCount?: number; 
+  public get minimumCount() {
+    return this.getNumberAttribute('minimum_count');
+  }
+  public set minimumCount(value: number) {
+    this._minimumCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumCountInput() {
+    return this._minimumCount;
+  }
+}
+export interface SettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#entity_url_template AwsCodepipelineCustomActionType#entity_url_template}
+  */
+  readonly entityUrlTemplate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#execution_url_template AwsCodepipelineCustomActionType#execution_url_template}
+  */
+  readonly executionUrlTemplate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#revision_url_template AwsCodepipelineCustomActionType#revision_url_template}
+  */
+  readonly revisionUrlTemplate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#third_party_configuration_url AwsCodepipelineCustomActionType#third_party_configuration_url}
+  */
+  readonly thirdPartyConfigurationUrl?: string;
+}
+export class SettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._entityUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entityUrlTemplate = this._entityUrlTemplate;
+    }
+    if (this._executionUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.executionUrlTemplate = this._executionUrlTemplate;
+    }
+    if (this._revisionUrlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.revisionUrlTemplate = this._revisionUrlTemplate;
+    }
+    if (this._thirdPartyConfigurationUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.thirdPartyConfigurationUrl = this._thirdPartyConfigurationUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._entityUrlTemplate = undefined;
+      this._executionUrlTemplate = undefined;
+      this._revisionUrlTemplate = undefined;
+      this._thirdPartyConfigurationUrl = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._entityUrlTemplate = value.entityUrlTemplate;
+      this._executionUrlTemplate = value.executionUrlTemplate;
+      this._revisionUrlTemplate = value.revisionUrlTemplate;
+      this._thirdPartyConfigurationUrl = value.thirdPartyConfigurationUrl;
+    }
+  }
+
+  // entity_url_template - computed: false, optional: true, required: false
+  private _entityUrlTemplate?: string; 
+  public get entityUrlTemplate() {
+    return this.getStringAttribute('entity_url_template');
+  }
+  public set entityUrlTemplate(value: string) {
+    this._entityUrlTemplate = value;
+  }
+  public resetEntityUrlTemplate() {
+    this._entityUrlTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityUrlTemplateInput() {
+    return this._entityUrlTemplate;
+  }
+
+  // execution_url_template - computed: false, optional: true, required: false
+  private _executionUrlTemplate?: string; 
+  public get executionUrlTemplate() {
+    return this.getStringAttribute('execution_url_template');
+  }
+  public set executionUrlTemplate(value: string) {
+    this._executionUrlTemplate = value;
+  }
+  public resetExecutionUrlTemplate() {
+    this._executionUrlTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionUrlTemplateInput() {
+    return this._executionUrlTemplate;
+  }
+
+  // revision_url_template - computed: false, optional: true, required: false
+  private _revisionUrlTemplate?: string; 
+  public get revisionUrlTemplate() {
+    return this.getStringAttribute('revision_url_template');
+  }
+  public set revisionUrlTemplate(value: string) {
+    this._revisionUrlTemplate = value;
+  }
+  public resetRevisionUrlTemplate() {
+    this._revisionUrlTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionUrlTemplateInput() {
+    return this._revisionUrlTemplate;
+  }
+
+  // third_party_configuration_url - computed: false, optional: true, required: false
+  private _thirdPartyConfigurationUrl?: string; 
+  public get thirdPartyConfigurationUrl() {
+    return this.getStringAttribute('third_party_configuration_url');
+  }
+  public set thirdPartyConfigurationUrl(value: string) {
+    this._thirdPartyConfigurationUrl = value;
+  }
+  public resetThirdPartyConfigurationUrl() {
+    this._thirdPartyConfigurationUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thirdPartyConfigurationUrlInput() {
+    return this._thirdPartyConfigurationUrl;
+  }
+}
+}

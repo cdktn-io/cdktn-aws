@@ -1,0 +1,761 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVpcPeeringConnectionConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#auto_accept AwsVpcPeeringConnection#auto_accept}
+  */
+  readonly autoAccept?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#id AwsVpcPeeringConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#peer_owner_id AwsVpcPeeringConnection#peer_owner_id}
+  */
+  readonly peerOwnerId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#peer_region AwsVpcPeeringConnection#peer_region}
+  */
+  readonly peerRegion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#peer_vpc_id AwsVpcPeeringConnection#peer_vpc_id}
+  */
+  readonly peerVpcId: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#region AwsVpcPeeringConnection#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#tags AwsVpcPeeringConnection#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#tags_all AwsVpcPeeringConnection#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#vpc_id AwsVpcPeeringConnection#vpc_id}
+  */
+  readonly vpcId: string;
+  /**
+  * accepter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#accepter AwsVpcPeeringConnection#accepter}
+  */
+  readonly accepter?: AwsVpcPeeringConnection.AccepterProperty;
+  /**
+  * requester block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#requester AwsVpcPeeringConnection#requester}
+  */
+  readonly requester?: AwsVpcPeeringConnection.RequesterProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#timeouts AwsVpcPeeringConnection#timeouts}
+  */
+  readonly timeouts?: AwsVpcPeeringConnection.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection aws_vpc_peering_connection}
+*/
+export class AwsVpcPeeringConnection extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_vpc_peering_connection";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVpcPeeringConnection resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVpcPeeringConnection to import
+  * @param importFromId The id of the existing AwsVpcPeeringConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcPeeringConnection to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_peering_connection", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection aws_vpc_peering_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVpcPeeringConnectionConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVpcPeeringConnectionConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_vpc_peering_connection',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._autoAccept = config.autoAccept;
+    this._id = config.id;
+    this._peerOwnerId = config.peerOwnerId;
+    this._peerRegion = config.peerRegion;
+    this._peerVpcId = config.peerVpcId;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._vpcId = config.vpcId;
+    this._accepter.internalValue = config.accepter;
+    this._requester.internalValue = config.requester;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // accept_status - computed: true, optional: false, required: false
+  public get acceptStatus() {
+    return this.getStringAttribute('accept_status');
+  }
+
+  // auto_accept - computed: false, optional: true, required: false
+  private _autoAccept?: boolean | cdktn.IResolvable; 
+  public get autoAccept() {
+    return this.getBooleanAttribute('auto_accept');
+  }
+  public set autoAccept(value: boolean | cdktn.IResolvable) {
+    this._autoAccept = value;
+  }
+  public resetAutoAccept() {
+    this._autoAccept = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoAcceptInput() {
+    return this._autoAccept;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // peer_owner_id - computed: true, optional: true, required: false
+  private _peerOwnerId?: string; 
+  public get peerOwnerId() {
+    return this.getStringAttribute('peer_owner_id');
+  }
+  public set peerOwnerId(value: string) {
+    this._peerOwnerId = value;
+  }
+  public resetPeerOwnerId() {
+    this._peerOwnerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerOwnerIdInput() {
+    return this._peerOwnerId;
+  }
+
+  // peer_region - computed: true, optional: true, required: false
+  private _peerRegion?: string; 
+  public get peerRegion() {
+    return this.getStringAttribute('peer_region');
+  }
+  public set peerRegion(value: string) {
+    this._peerRegion = value;
+  }
+  public resetPeerRegion() {
+    this._peerRegion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerRegionInput() {
+    return this._peerRegion;
+  }
+
+  // peer_vpc_id - computed: false, optional: false, required: true
+  private _peerVpcId?: string; 
+  public get peerVpcId() {
+    return this.getStringAttribute('peer_vpc_id');
+  }
+  public set peerVpcId(value: string) {
+    this._peerVpcId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerVpcIdInput() {
+    return this._peerVpcId;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_id - computed: false, optional: false, required: true
+  private _vpcId?: string; 
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+  public set vpcId(value: string) {
+    this._vpcId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcIdInput() {
+    return this._vpcId;
+  }
+
+  // accepter - computed: false, optional: true, required: false
+  private _accepter = new AwsVpcPeeringConnection.AccepterPropertyOutputReference(this, "accepter");
+  public get accepter() {
+    return this._accepter;
+  }
+  public putAccepter(value: AwsVpcPeeringConnection.AccepterProperty) {
+    this._accepter.internalValue = value;
+  }
+  public resetAccepter() {
+    this._accepter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accepterInput() {
+    return this._accepter.internalValue;
+  }
+
+  // requester - computed: false, optional: true, required: false
+  private _requester = new AwsVpcPeeringConnection.RequesterPropertyOutputReference(this, "requester");
+  public get requester() {
+    return this._requester;
+  }
+  public putRequester(value: AwsVpcPeeringConnection.RequesterProperty) {
+    this._requester.internalValue = value;
+  }
+  public resetRequester() {
+    this._requester.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requesterInput() {
+    return this._requester.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsVpcPeeringConnection.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsVpcPeeringConnection.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      auto_accept: cdktn.booleanToTerraform(this._autoAccept),
+      id: cdktn.stringToTerraform(this._id),
+      peer_owner_id: cdktn.stringToTerraform(this._peerOwnerId),
+      peer_region: cdktn.stringToTerraform(this._peerRegion),
+      peer_vpc_id: cdktn.stringToTerraform(this._peerVpcId),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      vpc_id: cdktn.stringToTerraform(this._vpcId),
+      accepter: awsVpcPeeringConnectionAccepterPropertyToTerraform(this._accepter.internalValue),
+      requester: awsVpcPeeringConnectionRequesterPropertyToTerraform(this._requester.internalValue),
+      timeouts: awsVpcPeeringConnectionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_accept: {
+        value: cdktn.booleanToHclTerraform(this._autoAccept),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_owner_id: {
+        value: cdktn.stringToHclTerraform(this._peerOwnerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_region: {
+        value: cdktn.stringToHclTerraform(this._peerRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_vpc_id: {
+        value: cdktn.stringToHclTerraform(this._peerVpcId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_id: {
+        value: cdktn.stringToHclTerraform(this._vpcId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      accepter: {
+        value: awsVpcPeeringConnectionAccepterPropertyToHclTerraform(this._accepter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVpcPeeringConnection.AccepterPropertyList",
+      },
+      requester: {
+        value: awsVpcPeeringConnectionRequesterPropertyToHclTerraform(this._requester.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVpcPeeringConnection.RequesterPropertyList",
+      },
+      timeouts: {
+        value: awsVpcPeeringConnectionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsVpcPeeringConnection.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsVpcPeeringConnectionAccepterPropertyToTerraform(struct?: AwsVpcPeeringConnection.AccepterPropertyOutputReference | AwsVpcPeeringConnection.AccepterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    allow_remote_vpc_dns_resolution: cdktn.booleanToTerraform(struct!.allowRemoteVpcDnsResolution),
+  }
+}
+
+
+export function awsVpcPeeringConnectionAccepterPropertyToHclTerraform(struct?: AwsVpcPeeringConnection.AccepterPropertyOutputReference | AwsVpcPeeringConnection.AccepterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    allow_remote_vpc_dns_resolution: {
+      value: cdktn.booleanToHclTerraform(struct!.allowRemoteVpcDnsResolution),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpcPeeringConnectionRequesterPropertyToTerraform(struct?: AwsVpcPeeringConnection.RequesterPropertyOutputReference | AwsVpcPeeringConnection.RequesterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    allow_remote_vpc_dns_resolution: cdktn.booleanToTerraform(struct!.allowRemoteVpcDnsResolution),
+  }
+}
+
+
+export function awsVpcPeeringConnectionRequesterPropertyToHclTerraform(struct?: AwsVpcPeeringConnection.RequesterPropertyOutputReference | AwsVpcPeeringConnection.RequesterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    allow_remote_vpc_dns_resolution: {
+      value: cdktn.booleanToHclTerraform(struct!.allowRemoteVpcDnsResolution),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVpcPeeringConnectionTimeoutsPropertyToTerraform(struct?: AwsVpcPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsVpcPeeringConnectionTimeoutsPropertyToHclTerraform(struct?: AwsVpcPeeringConnection.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsVpcPeeringConnection {
+export interface AccepterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#allow_remote_vpc_dns_resolution AwsVpcPeeringConnection#allow_remote_vpc_dns_resolution}
+  */
+  readonly allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable;
+}
+export class AccepterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AccepterProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowRemoteVpcDnsResolution !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowRemoteVpcDnsResolution = this._allowRemoteVpcDnsResolution;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccepterProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowRemoteVpcDnsResolution = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowRemoteVpcDnsResolution = value.allowRemoteVpcDnsResolution;
+    }
+  }
+
+  // allow_remote_vpc_dns_resolution - computed: false, optional: true, required: false
+  private _allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable; 
+  public get allowRemoteVpcDnsResolution() {
+    return this.getBooleanAttribute('allow_remote_vpc_dns_resolution');
+  }
+  public set allowRemoteVpcDnsResolution(value: boolean | cdktn.IResolvable) {
+    this._allowRemoteVpcDnsResolution = value;
+  }
+  public resetAllowRemoteVpcDnsResolution() {
+    this._allowRemoteVpcDnsResolution = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowRemoteVpcDnsResolutionInput() {
+    return this._allowRemoteVpcDnsResolution;
+  }
+}
+export interface RequesterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#allow_remote_vpc_dns_resolution AwsVpcPeeringConnection#allow_remote_vpc_dns_resolution}
+  */
+  readonly allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable;
+}
+export class RequesterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RequesterProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowRemoteVpcDnsResolution !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowRemoteVpcDnsResolution = this._allowRemoteVpcDnsResolution;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RequesterProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowRemoteVpcDnsResolution = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowRemoteVpcDnsResolution = value.allowRemoteVpcDnsResolution;
+    }
+  }
+
+  // allow_remote_vpc_dns_resolution - computed: false, optional: true, required: false
+  private _allowRemoteVpcDnsResolution?: boolean | cdktn.IResolvable; 
+  public get allowRemoteVpcDnsResolution() {
+    return this.getBooleanAttribute('allow_remote_vpc_dns_resolution');
+  }
+  public set allowRemoteVpcDnsResolution(value: boolean | cdktn.IResolvable) {
+    this._allowRemoteVpcDnsResolution = value;
+  }
+  public resetAllowRemoteVpcDnsResolution() {
+    this._allowRemoteVpcDnsResolution = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowRemoteVpcDnsResolutionInput() {
+    return this._allowRemoteVpcDnsResolution;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#create AwsVpcPeeringConnection#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#delete AwsVpcPeeringConnection#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_peering_connection#update AwsVpcPeeringConnection#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

@@ -1,0 +1,194 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSsoadminApplicationAssignmentConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment#application_arn AwsSsoadminApplicationAssignment#application_arn}
+  */
+  readonly applicationArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment#principal_id AwsSsoadminApplicationAssignment#principal_id}
+  */
+  readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment#principal_type AwsSsoadminApplicationAssignment#principal_type}
+  */
+  readonly principalType: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment#region AwsSsoadminApplicationAssignment#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment aws_ssoadmin_application_assignment}
+*/
+export class AwsSsoadminApplicationAssignment extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ssoadmin_application_assignment";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSsoadminApplicationAssignment resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSsoadminApplicationAssignment to import
+  * @param importFromId The id of the existing AwsSsoadminApplicationAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSsoadminApplicationAssignment to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application_assignment", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_application_assignment aws_ssoadmin_application_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSsoadminApplicationAssignmentConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSsoadminApplicationAssignmentConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ssoadmin_application_assignment',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._applicationArn = config.applicationArn;
+    this._principalId = config.principalId;
+    this._principalType = config.principalType;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // application_arn - computed: false, optional: false, required: true
+  private _applicationArn?: string; 
+  public get applicationArn() {
+    return this.getStringAttribute('application_arn');
+  }
+  public set applicationArn(value: string) {
+    this._applicationArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationArnInput() {
+    return this._applicationArn;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // principal_id - computed: false, optional: false, required: true
+  private _principalId?: string; 
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+  public set principalId(value: string) {
+    this._principalId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalIdInput() {
+    return this._principalId;
+  }
+
+  // principal_type - computed: false, optional: false, required: true
+  private _principalType?: string; 
+  public get principalType() {
+    return this.getStringAttribute('principal_type');
+  }
+  public set principalType(value: string) {
+    this._principalType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalTypeInput() {
+    return this._principalType;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      application_arn: cdktn.stringToTerraform(this._applicationArn),
+      principal_id: cdktn.stringToTerraform(this._principalId),
+      principal_type: cdktn.stringToTerraform(this._principalType),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      application_arn: {
+        value: cdktn.stringToHclTerraform(this._applicationArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      principal_id: {
+        value: cdktn.stringToHclTerraform(this._principalId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      principal_type: {
+        value: cdktn.stringToHclTerraform(this._principalType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

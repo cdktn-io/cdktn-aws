@@ -1,0 +1,334 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsCloudfrontMonitoringSubscriptionConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#distribution_id AwsCloudfrontMonitoringSubscription#distribution_id}
+  */
+  readonly distributionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#id AwsCloudfrontMonitoringSubscription#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * monitoring_subscription block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#monitoring_subscription AwsCloudfrontMonitoringSubscription#monitoring_subscription}
+  */
+  readonly monitoringSubscription: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription aws_cloudfront_monitoring_subscription}
+*/
+export class AwsCloudfrontMonitoringSubscription extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_cloudfront_monitoring_subscription";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsCloudfrontMonitoringSubscription resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsCloudfrontMonitoringSubscription to import
+  * @param importFromId The id of the existing AwsCloudfrontMonitoringSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCloudfrontMonitoringSubscription to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_monitoring_subscription", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription aws_cloudfront_monitoring_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsCloudfrontMonitoringSubscriptionConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsCloudfrontMonitoringSubscriptionConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_cloudfront_monitoring_subscription',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._distributionId = config.distributionId;
+    this._id = config.id;
+    this._monitoringSubscription.internalValue = config.monitoringSubscription;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // distribution_id - computed: false, optional: false, required: true
+  private _distributionId?: string; 
+  public get distributionId() {
+    return this.getStringAttribute('distribution_id');
+  }
+  public set distributionId(value: string) {
+    this._distributionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get distributionIdInput() {
+    return this._distributionId;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // monitoring_subscription - computed: false, optional: false, required: true
+  private _monitoringSubscription = new AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference(this, "monitoring_subscription");
+  public get monitoringSubscription() {
+    return this._monitoringSubscription;
+  }
+  public putMonitoringSubscription(value: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty) {
+    this._monitoringSubscription.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitoringSubscriptionInput() {
+    return this._monitoringSubscription.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      distribution_id: cdktn.stringToTerraform(this._distributionId),
+      id: cdktn.stringToTerraform(this._id),
+      monitoring_subscription: awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(this._monitoringSubscription.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      distribution_id: {
+        value: cdktn.stringToHclTerraform(this._distributionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      monitoring_subscription: {
+        value: awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(this._monitoringSubscription.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct?: AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    realtime_metrics_subscription_status: cdktn.stringToTerraform(struct!.realtimeMetricsSubscriptionStatus),
+  }
+}
+
+
+export function awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct?: AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigPropertyOutputReference | AwsCloudfrontMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    realtime_metrics_subscription_status: {
+      value: cdktn.stringToHclTerraform(struct!.realtimeMetricsSubscriptionStatus),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToTerraform(struct?: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    realtime_metrics_subscription_config: awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToTerraform(struct!.realtimeMetricsSubscriptionConfig),
+  }
+}
+
+
+export function awsCloudfrontMonitoringSubscriptionMonitoringSubscriptionPropertyToHclTerraform(struct?: AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionPropertyOutputReference | AwsCloudfrontMonitoringSubscription.MonitoringSubscriptionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    realtime_metrics_subscription_config: {
+      value: awsCloudfrontMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyToHclTerraform(struct!.realtimeMetricsSubscriptionConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "RealtimeMetricsSubscriptionConfigPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsCloudfrontMonitoringSubscription {
+export interface RealtimeMetricsSubscriptionConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_status AwsCloudfrontMonitoringSubscription#realtime_metrics_subscription_status}
+  */
+  readonly realtimeMetricsSubscriptionStatus: string;
+}
+export class RealtimeMetricsSubscriptionConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RealtimeMetricsSubscriptionConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._realtimeMetricsSubscriptionStatus !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.realtimeMetricsSubscriptionStatus = this._realtimeMetricsSubscriptionStatus;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RealtimeMetricsSubscriptionConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._realtimeMetricsSubscriptionStatus = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._realtimeMetricsSubscriptionStatus = value.realtimeMetricsSubscriptionStatus;
+    }
+  }
+
+  // realtime_metrics_subscription_status - computed: false, optional: false, required: true
+  private _realtimeMetricsSubscriptionStatus?: string; 
+  public get realtimeMetricsSubscriptionStatus() {
+    return this.getStringAttribute('realtime_metrics_subscription_status');
+  }
+  public set realtimeMetricsSubscriptionStatus(value: string) {
+    this._realtimeMetricsSubscriptionStatus = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get realtimeMetricsSubscriptionStatusInput() {
+    return this._realtimeMetricsSubscriptionStatus;
+  }
+}
+export interface MonitoringSubscriptionProperty {
+  /**
+  * realtime_metrics_subscription_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_monitoring_subscription#realtime_metrics_subscription_config AwsCloudfrontMonitoringSubscription#realtime_metrics_subscription_config}
+  */
+  readonly realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty;
+}
+export class MonitoringSubscriptionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringSubscriptionProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._realtimeMetricsSubscriptionConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.realtimeMetricsSubscriptionConfig = this._realtimeMetricsSubscriptionConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSubscriptionProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._realtimeMetricsSubscriptionConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._realtimeMetricsSubscriptionConfig.internalValue = value.realtimeMetricsSubscriptionConfig;
+    }
+  }
+
+  // realtime_metrics_subscription_config - computed: false, optional: false, required: true
+  private _realtimeMetricsSubscriptionConfig = new RealtimeMetricsSubscriptionConfigPropertyOutputReference(this, "realtime_metrics_subscription_config");
+  public get realtimeMetricsSubscriptionConfig() {
+    return this._realtimeMetricsSubscriptionConfig;
+  }
+  public putRealtimeMetricsSubscriptionConfig(value: RealtimeMetricsSubscriptionConfigProperty) {
+    this._realtimeMetricsSubscriptionConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get realtimeMetricsSubscriptionConfigInput() {
+    return this._realtimeMetricsSubscriptionConfig.internalValue;
+  }
+}
+}

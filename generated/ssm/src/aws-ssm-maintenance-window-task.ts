@@ -1,0 +1,2182 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSsmMaintenanceWindowTaskConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cutoff_behavior AwsSsmMaintenanceWindowTask#cutoff_behavior}
+  */
+  readonly cutoffBehavior?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#description AwsSsmMaintenanceWindowTask#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#id AwsSsmMaintenanceWindowTask#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_concurrency AwsSsmMaintenanceWindowTask#max_concurrency}
+  */
+  readonly maxConcurrency?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#max_errors AwsSsmMaintenanceWindowTask#max_errors}
+  */
+  readonly maxErrors?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsSsmMaintenanceWindowTask#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#priority AwsSsmMaintenanceWindowTask#priority}
+  */
+  readonly priority?: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#region AwsSsmMaintenanceWindowTask#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn AwsSsmMaintenanceWindowTask#service_role_arn}
+  */
+  readonly serviceRoleArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_arn AwsSsmMaintenanceWindowTask#task_arn}
+  */
+  readonly taskArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_type AwsSsmMaintenanceWindowTask#task_type}
+  */
+  readonly taskType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#window_id AwsSsmMaintenanceWindowTask#window_id}
+  */
+  readonly windowId: string;
+  /**
+  * targets block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#targets AwsSsmMaintenanceWindowTask#targets}
+  */
+  readonly targets?: AwsSsmMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable;
+  /**
+  * task_invocation_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#task_invocation_parameters AwsSsmMaintenanceWindowTask#task_invocation_parameters}
+  */
+  readonly taskInvocationParameters?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task aws_ssm_maintenance_window_task}
+*/
+export class AwsSsmMaintenanceWindowTask extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ssm_maintenance_window_task";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSsmMaintenanceWindowTask resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSsmMaintenanceWindowTask to import
+  * @param importFromId The id of the existing AwsSsmMaintenanceWindowTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSsmMaintenanceWindowTask to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_maintenance_window_task", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task aws_ssm_maintenance_window_task} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSsmMaintenanceWindowTaskConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSsmMaintenanceWindowTaskConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ssm_maintenance_window_task',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._cutoffBehavior = config.cutoffBehavior;
+    this._description = config.description;
+    this._id = config.id;
+    this._maxConcurrency = config.maxConcurrency;
+    this._maxErrors = config.maxErrors;
+    this._name = config.name;
+    this._priority = config.priority;
+    this._region = config.region;
+    this._serviceRoleArn = config.serviceRoleArn;
+    this._taskArn = config.taskArn;
+    this._taskType = config.taskType;
+    this._windowId = config.windowId;
+    this._targets.internalValue = config.targets;
+    this._taskInvocationParameters.internalValue = config.taskInvocationParameters;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // cutoff_behavior - computed: false, optional: true, required: false
+  private _cutoffBehavior?: string; 
+  public get cutoffBehavior() {
+    return this.getStringAttribute('cutoff_behavior');
+  }
+  public set cutoffBehavior(value: string) {
+    this._cutoffBehavior = value;
+  }
+  public resetCutoffBehavior() {
+    this._cutoffBehavior = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cutoffBehaviorInput() {
+    return this._cutoffBehavior;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // max_concurrency - computed: true, optional: true, required: false
+  private _maxConcurrency?: string; 
+  public get maxConcurrency() {
+    return this.getStringAttribute('max_concurrency');
+  }
+  public set maxConcurrency(value: string) {
+    this._maxConcurrency = value;
+  }
+  public resetMaxConcurrency() {
+    this._maxConcurrency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrencyInput() {
+    return this._maxConcurrency;
+  }
+
+  // max_errors - computed: true, optional: true, required: false
+  private _maxErrors?: string; 
+  public get maxErrors() {
+    return this.getStringAttribute('max_errors');
+  }
+  public set maxErrors(value: string) {
+    this._maxErrors = value;
+  }
+  public resetMaxErrors() {
+    this._maxErrors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxErrorsInput() {
+    return this._maxErrors;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // service_role_arn - computed: true, optional: true, required: false
+  private _serviceRoleArn?: string; 
+  public get serviceRoleArn() {
+    return this.getStringAttribute('service_role_arn');
+  }
+  public set serviceRoleArn(value: string) {
+    this._serviceRoleArn = value;
+  }
+  public resetServiceRoleArn() {
+    this._serviceRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRoleArnInput() {
+    return this._serviceRoleArn;
+  }
+
+  // task_arn - computed: false, optional: false, required: true
+  private _taskArn?: string; 
+  public get taskArn() {
+    return this.getStringAttribute('task_arn');
+  }
+  public set taskArn(value: string) {
+    this._taskArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskArnInput() {
+    return this._taskArn;
+  }
+
+  // task_type - computed: false, optional: false, required: true
+  private _taskType?: string; 
+  public get taskType() {
+    return this.getStringAttribute('task_type');
+  }
+  public set taskType(value: string) {
+    this._taskType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskTypeInput() {
+    return this._taskType;
+  }
+
+  // window_id - computed: false, optional: false, required: true
+  private _windowId?: string; 
+  public get windowId() {
+    return this.getStringAttribute('window_id');
+  }
+  public set windowId(value: string) {
+    this._windowId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowIdInput() {
+    return this._windowId;
+  }
+
+  // window_task_id - computed: true, optional: false, required: false
+  public get windowTaskId() {
+    return this.getStringAttribute('window_task_id');
+  }
+
+  // targets - computed: false, optional: true, required: false
+  private _targets = new AwsSsmMaintenanceWindowTask.TargetsPropertyList(this, "targets", false);
+  public get targets() {
+    return this._targets;
+  }
+  public putTargets(value: AwsSsmMaintenanceWindowTask.TargetsProperty[] | cdktn.IResolvable) {
+    this._targets.internalValue = value;
+  }
+  public resetTargets() {
+    this._targets.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetsInput() {
+    return this._targets.internalValue;
+  }
+
+  // task_invocation_parameters - computed: false, optional: true, required: false
+  private _taskInvocationParameters = new AwsSsmMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference(this, "task_invocation_parameters");
+  public get taskInvocationParameters() {
+    return this._taskInvocationParameters;
+  }
+  public putTaskInvocationParameters(value: AwsSsmMaintenanceWindowTask.TaskInvocationParametersProperty) {
+    this._taskInvocationParameters.internalValue = value;
+  }
+  public resetTaskInvocationParameters() {
+    this._taskInvocationParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskInvocationParametersInput() {
+    return this._taskInvocationParameters.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cutoff_behavior: cdktn.stringToTerraform(this._cutoffBehavior),
+      description: cdktn.stringToTerraform(this._description),
+      id: cdktn.stringToTerraform(this._id),
+      max_concurrency: cdktn.stringToTerraform(this._maxConcurrency),
+      max_errors: cdktn.stringToTerraform(this._maxErrors),
+      name: cdktn.stringToTerraform(this._name),
+      priority: cdktn.numberToTerraform(this._priority),
+      region: cdktn.stringToTerraform(this._region),
+      service_role_arn: cdktn.stringToTerraform(this._serviceRoleArn),
+      task_arn: cdktn.stringToTerraform(this._taskArn),
+      task_type: cdktn.stringToTerraform(this._taskType),
+      window_id: cdktn.stringToTerraform(this._windowId),
+      targets: cdktn.listMapper(awsSsmMaintenanceWindowTaskTargetsPropertyToTerraform, true)(this._targets.internalValue),
+      task_invocation_parameters: awsSsmMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(this._taskInvocationParameters.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cutoff_behavior: {
+        value: cdktn.stringToHclTerraform(this._cutoffBehavior),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_concurrency: {
+        value: cdktn.stringToHclTerraform(this._maxConcurrency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_errors: {
+        value: cdktn.stringToHclTerraform(this._maxErrors),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktn.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_role_arn: {
+        value: cdktn.stringToHclTerraform(this._serviceRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      task_arn: {
+        value: cdktn.stringToHclTerraform(this._taskArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      task_type: {
+        value: cdktn.stringToHclTerraform(this._taskType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      window_id: {
+        value: cdktn.stringToHclTerraform(this._windowId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      targets: {
+        value: cdktn.listMapperHcl(awsSsmMaintenanceWindowTaskTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSsmMaintenanceWindowTask.TargetsPropertyList",
+      },
+      task_invocation_parameters: {
+        value: awsSsmMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(this._taskInvocationParameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSsmMaintenanceWindowTask.TaskInvocationParametersPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSsmMaintenanceWindowTaskTargetsPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    key: cdktn.stringToTerraform(struct!.key),
+    values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskTargetsPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.TargetsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    key: {
+      value: cdktn.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.AutomationParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.AutomationParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    document_version: cdktn.stringToTerraform(struct!.documentVersion),
+    parameter: cdktn.listMapper(awsSsmMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToTerraform, true)(struct!.parameter),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.AutomationParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.AutomationParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    document_version: {
+      value: cdktn.stringToHclTerraform(struct!.documentVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameter: {
+      value: cdktn.listMapperHcl(awsSsmMaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
+      isBlock: true,
+      type: "set",
+      storageClassType: "TaskInvocationParametersAutomationParametersParameterPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.LambdaParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.LambdaParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    client_context: cdktn.stringToTerraform(struct!.clientContext),
+    payload: cdktn.stringToTerraform(struct!.payload),
+    qualifier: cdktn.stringToTerraform(struct!.qualifier),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.LambdaParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.LambdaParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    client_context: {
+      value: cdktn.stringToHclTerraform(struct!.clientContext),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    payload: {
+      value: cdktn.stringToHclTerraform(struct!.payload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    qualifier: {
+      value: cdktn.stringToHclTerraform(struct!.qualifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | AwsSsmMaintenanceWindowTask.CloudwatchConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cloudwatch_log_group_name: cdktn.stringToTerraform(struct!.cloudwatchLogGroupName),
+    cloudwatch_output_enabled: cdktn.booleanToTerraform(struct!.cloudwatchOutputEnabled),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.CloudwatchConfigPropertyOutputReference | AwsSsmMaintenanceWindowTask.CloudwatchConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cloudwatch_log_group_name: {
+      value: cdktn.stringToHclTerraform(struct!.cloudwatchLogGroupName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cloudwatch_output_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.cloudwatchOutputEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.NotificationConfigPropertyOutputReference | AwsSsmMaintenanceWindowTask.NotificationConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    notification_arn: cdktn.stringToTerraform(struct!.notificationArn),
+    notification_events: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.notificationEvents),
+    notification_type: cdktn.stringToTerraform(struct!.notificationType),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.NotificationConfigPropertyOutputReference | AwsSsmMaintenanceWindowTask.NotificationConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    notification_arn: {
+      value: cdktn.stringToHclTerraform(struct!.notificationArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    notification_events: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.notificationEvents),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    notification_type: {
+      value: cdktn.stringToHclTerraform(struct!.notificationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.RunCommandParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    comment: cdktn.stringToTerraform(struct!.comment),
+    document_hash: cdktn.stringToTerraform(struct!.documentHash),
+    document_hash_type: cdktn.stringToTerraform(struct!.documentHashType),
+    document_version: cdktn.stringToTerraform(struct!.documentVersion),
+    output_s3_bucket: cdktn.stringToTerraform(struct!.outputS3Bucket),
+    output_s3_key_prefix: cdktn.stringToTerraform(struct!.outputS3KeyPrefix),
+    service_role_arn: cdktn.stringToTerraform(struct!.serviceRoleArn),
+    timeout_seconds: cdktn.numberToTerraform(struct!.timeoutSeconds),
+    cloudwatch_config: awsSsmMaintenanceWindowTaskCloudwatchConfigPropertyToTerraform(struct!.cloudwatchConfig),
+    notification_config: awsSsmMaintenanceWindowTaskNotificationConfigPropertyToTerraform(struct!.notificationConfig),
+    parameter: cdktn.listMapper(awsSsmMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToTerraform, true)(struct!.parameter),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.RunCommandParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.RunCommandParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    comment: {
+      value: cdktn.stringToHclTerraform(struct!.comment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    document_hash: {
+      value: cdktn.stringToHclTerraform(struct!.documentHash),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    document_hash_type: {
+      value: cdktn.stringToHclTerraform(struct!.documentHashType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    document_version: {
+      value: cdktn.stringToHclTerraform(struct!.documentVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    output_s3_bucket: {
+      value: cdktn.stringToHclTerraform(struct!.outputS3Bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    output_s3_key_prefix: {
+      value: cdktn.stringToHclTerraform(struct!.outputS3KeyPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_role_arn: {
+      value: cdktn.stringToHclTerraform(struct!.serviceRoleArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timeout_seconds: {
+      value: cdktn.numberToHclTerraform(struct!.timeoutSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    cloudwatch_config: {
+      value: awsSsmMaintenanceWindowTaskCloudwatchConfigPropertyToHclTerraform(struct!.cloudwatchConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudwatchConfigPropertyList",
+    },
+    notification_config: {
+      value: awsSsmMaintenanceWindowTaskNotificationConfigPropertyToHclTerraform(struct!.notificationConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NotificationConfigPropertyList",
+    },
+    parameter: {
+      value: cdktn.listMapperHcl(awsSsmMaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterPropertyToHclTerraform, true)(struct!.parameter),
+      isBlock: true,
+      type: "set",
+      storageClassType: "TaskInvocationParametersRunCommandParametersParameterPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.StepFunctionsParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    input: cdktn.stringToTerraform(struct!.input),
+    name: cdktn.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.StepFunctionsParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.StepFunctionsParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    input: {
+      value: cdktn.stringToHclTerraform(struct!.input),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersPropertyToTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.TaskInvocationParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    automation_parameters: awsSsmMaintenanceWindowTaskAutomationParametersPropertyToTerraform(struct!.automationParameters),
+    lambda_parameters: awsSsmMaintenanceWindowTaskLambdaParametersPropertyToTerraform(struct!.lambdaParameters),
+    run_command_parameters: awsSsmMaintenanceWindowTaskRunCommandParametersPropertyToTerraform(struct!.runCommandParameters),
+    step_functions_parameters: awsSsmMaintenanceWindowTaskStepFunctionsParametersPropertyToTerraform(struct!.stepFunctionsParameters),
+  }
+}
+
+
+export function awsSsmMaintenanceWindowTaskTaskInvocationParametersPropertyToHclTerraform(struct?: AwsSsmMaintenanceWindowTask.TaskInvocationParametersPropertyOutputReference | AwsSsmMaintenanceWindowTask.TaskInvocationParametersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    automation_parameters: {
+      value: awsSsmMaintenanceWindowTaskAutomationParametersPropertyToHclTerraform(struct!.automationParameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationParametersPropertyList",
+    },
+    lambda_parameters: {
+      value: awsSsmMaintenanceWindowTaskLambdaParametersPropertyToHclTerraform(struct!.lambdaParameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LambdaParametersPropertyList",
+    },
+    run_command_parameters: {
+      value: awsSsmMaintenanceWindowTaskRunCommandParametersPropertyToHclTerraform(struct!.runCommandParameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "RunCommandParametersPropertyList",
+    },
+    step_functions_parameters: {
+      value: awsSsmMaintenanceWindowTaskStepFunctionsParametersPropertyToHclTerraform(struct!.stepFunctionsParameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StepFunctionsParametersPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSsmMaintenanceWindowTask {
+export interface TargetsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#key AwsSsmMaintenanceWindowTask#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsSsmMaintenanceWindowTask#values}
+  */
+  readonly values: string[];
+}
+export class TargetsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TargetsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TargetsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class TargetsPropertyList extends cdktn.ComplexList {
+  public internalValue? : TargetsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TargetsPropertyOutputReference {
+    return new TargetsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TaskInvocationParametersAutomationParametersParameterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsSsmMaintenanceWindowTask#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsSsmMaintenanceWindowTask#values}
+  */
+  readonly values: string[];
+}
+export class TaskInvocationParametersAutomationParametersParameterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TaskInvocationParametersAutomationParametersParameterProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._values = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class TaskInvocationParametersAutomationParametersParameterPropertyList extends cdktn.ComplexList {
+  public internalValue? : TaskInvocationParametersAutomationParametersParameterProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TaskInvocationParametersAutomationParametersParameterPropertyOutputReference {
+    return new TaskInvocationParametersAutomationParametersParameterPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AutomationParametersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version AwsSsmMaintenanceWindowTask#document_version}
+  */
+  readonly documentVersion?: string;
+  /**
+  * parameter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter AwsSsmMaintenanceWindowTask#parameter}
+  */
+  readonly parameter?: TaskInvocationParametersAutomationParametersParameterProperty[] | cdktn.IResolvable;
+}
+export class AutomationParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AutomationParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._documentVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentVersion = this._documentVersion;
+    }
+    if (this._parameter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameter = this._parameter?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._documentVersion = undefined;
+      this._parameter.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._documentVersion = value.documentVersion;
+      this._parameter.internalValue = value.parameter;
+    }
+  }
+
+  // document_version - computed: false, optional: true, required: false
+  private _documentVersion?: string; 
+  public get documentVersion() {
+    return this.getStringAttribute('document_version');
+  }
+  public set documentVersion(value: string) {
+    this._documentVersion = value;
+  }
+  public resetDocumentVersion() {
+    this._documentVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentVersionInput() {
+    return this._documentVersion;
+  }
+
+  // parameter - computed: false, optional: true, required: false
+  private _parameter = new TaskInvocationParametersAutomationParametersParameterPropertyList(this, "parameter", true);
+  public get parameter() {
+    return this._parameter;
+  }
+  public putParameter(value: TaskInvocationParametersAutomationParametersParameterProperty[] | cdktn.IResolvable) {
+    this._parameter.internalValue = value;
+  }
+  public resetParameter() {
+    this._parameter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterInput() {
+    return this._parameter.internalValue;
+  }
+}
+export interface LambdaParametersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#client_context AwsSsmMaintenanceWindowTask#client_context}
+  */
+  readonly clientContext?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#payload AwsSsmMaintenanceWindowTask#payload}
+  */
+  readonly payload?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#qualifier AwsSsmMaintenanceWindowTask#qualifier}
+  */
+  readonly qualifier?: string;
+}
+export class LambdaParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LambdaParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientContext !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientContext = this._clientContext;
+    }
+    if (this._payload !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.payload = this._payload;
+    }
+    if (this._qualifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.qualifier = this._qualifier;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LambdaParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientContext = undefined;
+      this._payload = undefined;
+      this._qualifier = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientContext = value.clientContext;
+      this._payload = value.payload;
+      this._qualifier = value.qualifier;
+    }
+  }
+
+  // client_context - computed: false, optional: true, required: false
+  private _clientContext?: string; 
+  public get clientContext() {
+    return this.getStringAttribute('client_context');
+  }
+  public set clientContext(value: string) {
+    this._clientContext = value;
+  }
+  public resetClientContext() {
+    this._clientContext = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientContextInput() {
+    return this._clientContext;
+  }
+
+  // payload - computed: false, optional: true, required: false
+  private _payload?: string; 
+  public get payload() {
+    return this.getStringAttribute('payload');
+  }
+  public set payload(value: string) {
+    this._payload = value;
+  }
+  public resetPayload() {
+    this._payload = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get payloadInput() {
+    return this._payload;
+  }
+
+  // qualifier - computed: false, optional: true, required: false
+  private _qualifier?: string; 
+  public get qualifier() {
+    return this.getStringAttribute('qualifier');
+  }
+  public set qualifier(value: string) {
+    this._qualifier = value;
+  }
+  public resetQualifier() {
+    this._qualifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierInput() {
+    return this._qualifier;
+  }
+}
+export interface CloudwatchConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_log_group_name AwsSsmMaintenanceWindowTask#cloudwatch_log_group_name}
+  */
+  readonly cloudwatchLogGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_output_enabled AwsSsmMaintenanceWindowTask#cloudwatch_output_enabled}
+  */
+  readonly cloudwatchOutputEnabled?: boolean | cdktn.IResolvable;
+}
+export class CloudwatchConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudwatchConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudwatchLogGroupName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudwatchLogGroupName = this._cloudwatchLogGroupName;
+    }
+    if (this._cloudwatchOutputEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudwatchOutputEnabled = this._cloudwatchOutputEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudwatchConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cloudwatchLogGroupName = undefined;
+      this._cloudwatchOutputEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cloudwatchLogGroupName = value.cloudwatchLogGroupName;
+      this._cloudwatchOutputEnabled = value.cloudwatchOutputEnabled;
+    }
+  }
+
+  // cloudwatch_log_group_name - computed: true, optional: true, required: false
+  private _cloudwatchLogGroupName?: string; 
+  public get cloudwatchLogGroupName() {
+    return this.getStringAttribute('cloudwatch_log_group_name');
+  }
+  public set cloudwatchLogGroupName(value: string) {
+    this._cloudwatchLogGroupName = value;
+  }
+  public resetCloudwatchLogGroupName() {
+    this._cloudwatchLogGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchLogGroupNameInput() {
+    return this._cloudwatchLogGroupName;
+  }
+
+  // cloudwatch_output_enabled - computed: false, optional: true, required: false
+  private _cloudwatchOutputEnabled?: boolean | cdktn.IResolvable; 
+  public get cloudwatchOutputEnabled() {
+    return this.getBooleanAttribute('cloudwatch_output_enabled');
+  }
+  public set cloudwatchOutputEnabled(value: boolean | cdktn.IResolvable) {
+    this._cloudwatchOutputEnabled = value;
+  }
+  public resetCloudwatchOutputEnabled() {
+    this._cloudwatchOutputEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchOutputEnabledInput() {
+    return this._cloudwatchOutputEnabled;
+  }
+}
+export interface NotificationConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_arn AwsSsmMaintenanceWindowTask#notification_arn}
+  */
+  readonly notificationArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_events AwsSsmMaintenanceWindowTask#notification_events}
+  */
+  readonly notificationEvents?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_type AwsSsmMaintenanceWindowTask#notification_type}
+  */
+  readonly notificationType?: string;
+}
+export class NotificationConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NotificationConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._notificationArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationArn = this._notificationArn;
+    }
+    if (this._notificationEvents !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationEvents = this._notificationEvents;
+    }
+    if (this._notificationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationType = this._notificationType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._notificationArn = undefined;
+      this._notificationEvents = undefined;
+      this._notificationType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._notificationArn = value.notificationArn;
+      this._notificationEvents = value.notificationEvents;
+      this._notificationType = value.notificationType;
+    }
+  }
+
+  // notification_arn - computed: false, optional: true, required: false
+  private _notificationArn?: string; 
+  public get notificationArn() {
+    return this.getStringAttribute('notification_arn');
+  }
+  public set notificationArn(value: string) {
+    this._notificationArn = value;
+  }
+  public resetNotificationArn() {
+    this._notificationArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationArnInput() {
+    return this._notificationArn;
+  }
+
+  // notification_events - computed: false, optional: true, required: false
+  private _notificationEvents?: string[]; 
+  public get notificationEvents() {
+    return this.getListAttribute('notification_events');
+  }
+  public set notificationEvents(value: string[]) {
+    this._notificationEvents = value;
+  }
+  public resetNotificationEvents() {
+    this._notificationEvents = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationEventsInput() {
+    return this._notificationEvents;
+  }
+
+  // notification_type - computed: false, optional: true, required: false
+  private _notificationType?: string; 
+  public get notificationType() {
+    return this.getStringAttribute('notification_type');
+  }
+  public set notificationType(value: string) {
+    this._notificationType = value;
+  }
+  public resetNotificationType() {
+    this._notificationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationTypeInput() {
+    return this._notificationType;
+  }
+}
+export interface TaskInvocationParametersRunCommandParametersParameterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsSsmMaintenanceWindowTask#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#values AwsSsmMaintenanceWindowTask#values}
+  */
+  readonly values: string[];
+}
+export class TaskInvocationParametersRunCommandParametersParameterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TaskInvocationParametersRunCommandParametersParameterProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._values = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class TaskInvocationParametersRunCommandParametersParameterPropertyList extends cdktn.ComplexList {
+  public internalValue? : TaskInvocationParametersRunCommandParametersParameterProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TaskInvocationParametersRunCommandParametersParameterPropertyOutputReference {
+    return new TaskInvocationParametersRunCommandParametersParameterPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface RunCommandParametersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#comment AwsSsmMaintenanceWindowTask#comment}
+  */
+  readonly comment?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash AwsSsmMaintenanceWindowTask#document_hash}
+  */
+  readonly documentHash?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_hash_type AwsSsmMaintenanceWindowTask#document_hash_type}
+  */
+  readonly documentHashType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#document_version AwsSsmMaintenanceWindowTask#document_version}
+  */
+  readonly documentVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_bucket AwsSsmMaintenanceWindowTask#output_s3_bucket}
+  */
+  readonly outputS3Bucket?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#output_s3_key_prefix AwsSsmMaintenanceWindowTask#output_s3_key_prefix}
+  */
+  readonly outputS3KeyPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#service_role_arn AwsSsmMaintenanceWindowTask#service_role_arn}
+  */
+  readonly serviceRoleArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#timeout_seconds AwsSsmMaintenanceWindowTask#timeout_seconds}
+  */
+  readonly timeoutSeconds?: number;
+  /**
+  * cloudwatch_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#cloudwatch_config AwsSsmMaintenanceWindowTask#cloudwatch_config}
+  */
+  readonly cloudwatchConfig?: CloudwatchConfigProperty;
+  /**
+  * notification_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#notification_config AwsSsmMaintenanceWindowTask#notification_config}
+  */
+  readonly notificationConfig?: NotificationConfigProperty;
+  /**
+  * parameter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#parameter AwsSsmMaintenanceWindowTask#parameter}
+  */
+  readonly parameter?: TaskInvocationParametersRunCommandParametersParameterProperty[] | cdktn.IResolvable;
+}
+export class RunCommandParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RunCommandParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._comment !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.comment = this._comment;
+    }
+    if (this._documentHash !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentHash = this._documentHash;
+    }
+    if (this._documentHashType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentHashType = this._documentHashType;
+    }
+    if (this._documentVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentVersion = this._documentVersion;
+    }
+    if (this._outputS3Bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputS3Bucket = this._outputS3Bucket;
+    }
+    if (this._outputS3KeyPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputS3KeyPrefix = this._outputS3KeyPrefix;
+    }
+    if (this._serviceRoleArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceRoleArn = this._serviceRoleArn;
+    }
+    if (this._timeoutSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeoutSeconds = this._timeoutSeconds;
+    }
+    if (this._cloudwatchConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudwatchConfig = this._cloudwatchConfig?.internalValue;
+    }
+    if (this._notificationConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationConfig = this._notificationConfig?.internalValue;
+    }
+    if (this._parameter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameter = this._parameter?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RunCommandParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._comment = undefined;
+      this._documentHash = undefined;
+      this._documentHashType = undefined;
+      this._documentVersion = undefined;
+      this._outputS3Bucket = undefined;
+      this._outputS3KeyPrefix = undefined;
+      this._serviceRoleArn = undefined;
+      this._timeoutSeconds = undefined;
+      this._cloudwatchConfig.internalValue = undefined;
+      this._notificationConfig.internalValue = undefined;
+      this._parameter.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._comment = value.comment;
+      this._documentHash = value.documentHash;
+      this._documentHashType = value.documentHashType;
+      this._documentVersion = value.documentVersion;
+      this._outputS3Bucket = value.outputS3Bucket;
+      this._outputS3KeyPrefix = value.outputS3KeyPrefix;
+      this._serviceRoleArn = value.serviceRoleArn;
+      this._timeoutSeconds = value.timeoutSeconds;
+      this._cloudwatchConfig.internalValue = value.cloudwatchConfig;
+      this._notificationConfig.internalValue = value.notificationConfig;
+      this._parameter.internalValue = value.parameter;
+    }
+  }
+
+  // comment - computed: false, optional: true, required: false
+  private _comment?: string; 
+  public get comment() {
+    return this.getStringAttribute('comment');
+  }
+  public set comment(value: string) {
+    this._comment = value;
+  }
+  public resetComment() {
+    this._comment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commentInput() {
+    return this._comment;
+  }
+
+  // document_hash - computed: false, optional: true, required: false
+  private _documentHash?: string; 
+  public get documentHash() {
+    return this.getStringAttribute('document_hash');
+  }
+  public set documentHash(value: string) {
+    this._documentHash = value;
+  }
+  public resetDocumentHash() {
+    this._documentHash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentHashInput() {
+    return this._documentHash;
+  }
+
+  // document_hash_type - computed: false, optional: true, required: false
+  private _documentHashType?: string; 
+  public get documentHashType() {
+    return this.getStringAttribute('document_hash_type');
+  }
+  public set documentHashType(value: string) {
+    this._documentHashType = value;
+  }
+  public resetDocumentHashType() {
+    this._documentHashType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentHashTypeInput() {
+    return this._documentHashType;
+  }
+
+  // document_version - computed: false, optional: true, required: false
+  private _documentVersion?: string; 
+  public get documentVersion() {
+    return this.getStringAttribute('document_version');
+  }
+  public set documentVersion(value: string) {
+    this._documentVersion = value;
+  }
+  public resetDocumentVersion() {
+    this._documentVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentVersionInput() {
+    return this._documentVersion;
+  }
+
+  // output_s3_bucket - computed: false, optional: true, required: false
+  private _outputS3Bucket?: string; 
+  public get outputS3Bucket() {
+    return this.getStringAttribute('output_s3_bucket');
+  }
+  public set outputS3Bucket(value: string) {
+    this._outputS3Bucket = value;
+  }
+  public resetOutputS3Bucket() {
+    this._outputS3Bucket = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputS3BucketInput() {
+    return this._outputS3Bucket;
+  }
+
+  // output_s3_key_prefix - computed: false, optional: true, required: false
+  private _outputS3KeyPrefix?: string; 
+  public get outputS3KeyPrefix() {
+    return this.getStringAttribute('output_s3_key_prefix');
+  }
+  public set outputS3KeyPrefix(value: string) {
+    this._outputS3KeyPrefix = value;
+  }
+  public resetOutputS3KeyPrefix() {
+    this._outputS3KeyPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputS3KeyPrefixInput() {
+    return this._outputS3KeyPrefix;
+  }
+
+  // service_role_arn - computed: false, optional: true, required: false
+  private _serviceRoleArn?: string; 
+  public get serviceRoleArn() {
+    return this.getStringAttribute('service_role_arn');
+  }
+  public set serviceRoleArn(value: string) {
+    this._serviceRoleArn = value;
+  }
+  public resetServiceRoleArn() {
+    this._serviceRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRoleArnInput() {
+    return this._serviceRoleArn;
+  }
+
+  // timeout_seconds - computed: false, optional: true, required: false
+  private _timeoutSeconds?: number; 
+  public get timeoutSeconds() {
+    return this.getNumberAttribute('timeout_seconds');
+  }
+  public set timeoutSeconds(value: number) {
+    this._timeoutSeconds = value;
+  }
+  public resetTimeoutSeconds() {
+    this._timeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutSecondsInput() {
+    return this._timeoutSeconds;
+  }
+
+  // cloudwatch_config - computed: false, optional: true, required: false
+  private _cloudwatchConfig = new CloudwatchConfigPropertyOutputReference(this, "cloudwatch_config");
+  public get cloudwatchConfig() {
+    return this._cloudwatchConfig;
+  }
+  public putCloudwatchConfig(value: CloudwatchConfigProperty) {
+    this._cloudwatchConfig.internalValue = value;
+  }
+  public resetCloudwatchConfig() {
+    this._cloudwatchConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchConfigInput() {
+    return this._cloudwatchConfig.internalValue;
+  }
+
+  // notification_config - computed: false, optional: true, required: false
+  private _notificationConfig = new NotificationConfigPropertyOutputReference(this, "notification_config");
+  public get notificationConfig() {
+    return this._notificationConfig;
+  }
+  public putNotificationConfig(value: NotificationConfigProperty) {
+    this._notificationConfig.internalValue = value;
+  }
+  public resetNotificationConfig() {
+    this._notificationConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationConfigInput() {
+    return this._notificationConfig.internalValue;
+  }
+
+  // parameter - computed: false, optional: true, required: false
+  private _parameter = new TaskInvocationParametersRunCommandParametersParameterPropertyList(this, "parameter", true);
+  public get parameter() {
+    return this._parameter;
+  }
+  public putParameter(value: TaskInvocationParametersRunCommandParametersParameterProperty[] | cdktn.IResolvable) {
+    this._parameter.internalValue = value;
+  }
+  public resetParameter() {
+    this._parameter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterInput() {
+    return this._parameter.internalValue;
+  }
+}
+export interface StepFunctionsParametersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#input AwsSsmMaintenanceWindowTask#input}
+  */
+  readonly input?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#name AwsSsmMaintenanceWindowTask#name}
+  */
+  readonly name?: string;
+}
+export class StepFunctionsParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StepFunctionsParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._input !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.input = this._input;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StepFunctionsParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._input = undefined;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._input = value.input;
+      this._name = value.name;
+    }
+  }
+
+  // input - computed: false, optional: true, required: false
+  private _input?: string; 
+  public get input() {
+    return this.getStringAttribute('input');
+  }
+  public set input(value: string) {
+    this._input = value;
+  }
+  public resetInput() {
+    this._input = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputInput() {
+    return this._input;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface TaskInvocationParametersProperty {
+  /**
+  * automation_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#automation_parameters AwsSsmMaintenanceWindowTask#automation_parameters}
+  */
+  readonly automationParameters?: AutomationParametersProperty;
+  /**
+  * lambda_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#lambda_parameters AwsSsmMaintenanceWindowTask#lambda_parameters}
+  */
+  readonly lambdaParameters?: LambdaParametersProperty;
+  /**
+  * run_command_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#run_command_parameters AwsSsmMaintenanceWindowTask#run_command_parameters}
+  */
+  readonly runCommandParameters?: RunCommandParametersProperty;
+  /**
+  * step_functions_parameters block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_task#step_functions_parameters AwsSsmMaintenanceWindowTask#step_functions_parameters}
+  */
+  readonly stepFunctionsParameters?: StepFunctionsParametersProperty;
+}
+export class TaskInvocationParametersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TaskInvocationParametersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._automationParameters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automationParameters = this._automationParameters?.internalValue;
+    }
+    if (this._lambdaParameters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lambdaParameters = this._lambdaParameters?.internalValue;
+    }
+    if (this._runCommandParameters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runCommandParameters = this._runCommandParameters?.internalValue;
+    }
+    if (this._stepFunctionsParameters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stepFunctionsParameters = this._stepFunctionsParameters?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TaskInvocationParametersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._automationParameters.internalValue = undefined;
+      this._lambdaParameters.internalValue = undefined;
+      this._runCommandParameters.internalValue = undefined;
+      this._stepFunctionsParameters.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._automationParameters.internalValue = value.automationParameters;
+      this._lambdaParameters.internalValue = value.lambdaParameters;
+      this._runCommandParameters.internalValue = value.runCommandParameters;
+      this._stepFunctionsParameters.internalValue = value.stepFunctionsParameters;
+    }
+  }
+
+  // automation_parameters - computed: false, optional: true, required: false
+  private _automationParameters = new AutomationParametersPropertyOutputReference(this, "automation_parameters");
+  public get automationParameters() {
+    return this._automationParameters;
+  }
+  public putAutomationParameters(value: AutomationParametersProperty) {
+    this._automationParameters.internalValue = value;
+  }
+  public resetAutomationParameters() {
+    this._automationParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationParametersInput() {
+    return this._automationParameters.internalValue;
+  }
+
+  // lambda_parameters - computed: false, optional: true, required: false
+  private _lambdaParameters = new LambdaParametersPropertyOutputReference(this, "lambda_parameters");
+  public get lambdaParameters() {
+    return this._lambdaParameters;
+  }
+  public putLambdaParameters(value: LambdaParametersProperty) {
+    this._lambdaParameters.internalValue = value;
+  }
+  public resetLambdaParameters() {
+    this._lambdaParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lambdaParametersInput() {
+    return this._lambdaParameters.internalValue;
+  }
+
+  // run_command_parameters - computed: false, optional: true, required: false
+  private _runCommandParameters = new RunCommandParametersPropertyOutputReference(this, "run_command_parameters");
+  public get runCommandParameters() {
+    return this._runCommandParameters;
+  }
+  public putRunCommandParameters(value: RunCommandParametersProperty) {
+    this._runCommandParameters.internalValue = value;
+  }
+  public resetRunCommandParameters() {
+    this._runCommandParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runCommandParametersInput() {
+    return this._runCommandParameters.internalValue;
+  }
+
+  // step_functions_parameters - computed: false, optional: true, required: false
+  private _stepFunctionsParameters = new StepFunctionsParametersPropertyOutputReference(this, "step_functions_parameters");
+  public get stepFunctionsParameters() {
+    return this._stepFunctionsParameters;
+  }
+  public putStepFunctionsParameters(value: StepFunctionsParametersProperty) {
+    this._stepFunctionsParameters.internalValue = value;
+  }
+  public resetStepFunctionsParameters() {
+    this._stepFunctionsParameters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stepFunctionsParametersInput() {
+    return this._stepFunctionsParameters.internalValue;
+  }
+}
+}

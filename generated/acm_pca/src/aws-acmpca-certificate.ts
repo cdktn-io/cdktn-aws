@@ -1,0 +1,432 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAcmpcaCertificateConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#api_passthrough AwsAcmpcaCertificate#api_passthrough}
+  */
+  readonly apiPassthrough?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_authority_arn AwsAcmpcaCertificate#certificate_authority_arn}
+  */
+  readonly certificateAuthorityArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#certificate_signing_request AwsAcmpcaCertificate#certificate_signing_request}
+  */
+  readonly certificateSigningRequest: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#id AwsAcmpcaCertificate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#region AwsAcmpcaCertificate#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#signing_algorithm AwsAcmpcaCertificate#signing_algorithm}
+  */
+  readonly signingAlgorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#template_arn AwsAcmpcaCertificate#template_arn}
+  */
+  readonly templateArn?: string;
+  /**
+  * validity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#validity AwsAcmpcaCertificate#validity}
+  */
+  readonly validity: AwsAcmpcaCertificate.ValidityProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate aws_acmpca_certificate}
+*/
+export class AwsAcmpcaCertificate extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_acmpca_certificate";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAcmpcaCertificate resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAcmpcaCertificate to import
+  * @param importFromId The id of the existing AwsAcmpcaCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAcmpcaCertificate to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_acmpca_certificate", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate aws_acmpca_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAcmpcaCertificateConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAcmpcaCertificateConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_acmpca_certificate',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._apiPassthrough = config.apiPassthrough;
+    this._certificateAuthorityArn = config.certificateAuthorityArn;
+    this._certificateSigningRequest = config.certificateSigningRequest;
+    this._id = config.id;
+    this._region = config.region;
+    this._signingAlgorithm = config.signingAlgorithm;
+    this._templateArn = config.templateArn;
+    this._validity.internalValue = config.validity;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // api_passthrough - computed: false, optional: true, required: false
+  private _apiPassthrough?: string; 
+  public get apiPassthrough() {
+    return this.getStringAttribute('api_passthrough');
+  }
+  public set apiPassthrough(value: string) {
+    this._apiPassthrough = value;
+  }
+  public resetApiPassthrough() {
+    this._apiPassthrough = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiPassthroughInput() {
+    return this._apiPassthrough;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // certificate - computed: true, optional: false, required: false
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+
+  // certificate_authority_arn - computed: false, optional: false, required: true
+  private _certificateAuthorityArn?: string; 
+  public get certificateAuthorityArn() {
+    return this.getStringAttribute('certificate_authority_arn');
+  }
+  public set certificateAuthorityArn(value: string) {
+    this._certificateAuthorityArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateAuthorityArnInput() {
+    return this._certificateAuthorityArn;
+  }
+
+  // certificate_chain - computed: true, optional: false, required: false
+  public get certificateChain() {
+    return this.getStringAttribute('certificate_chain');
+  }
+
+  // certificate_signing_request - computed: false, optional: false, required: true
+  private _certificateSigningRequest?: string; 
+  public get certificateSigningRequest() {
+    return this.getStringAttribute('certificate_signing_request');
+  }
+  public set certificateSigningRequest(value: string) {
+    this._certificateSigningRequest = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateSigningRequestInput() {
+    return this._certificateSigningRequest;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // signing_algorithm - computed: false, optional: false, required: true
+  private _signingAlgorithm?: string; 
+  public get signingAlgorithm() {
+    return this.getStringAttribute('signing_algorithm');
+  }
+  public set signingAlgorithm(value: string) {
+    this._signingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signingAlgorithmInput() {
+    return this._signingAlgorithm;
+  }
+
+  // template_arn - computed: false, optional: true, required: false
+  private _templateArn?: string; 
+  public get templateArn() {
+    return this.getStringAttribute('template_arn');
+  }
+  public set templateArn(value: string) {
+    this._templateArn = value;
+  }
+  public resetTemplateArn() {
+    this._templateArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateArnInput() {
+    return this._templateArn;
+  }
+
+  // validity - computed: false, optional: false, required: true
+  private _validity = new AwsAcmpcaCertificate.ValidityPropertyOutputReference(this, "validity");
+  public get validity() {
+    return this._validity;
+  }
+  public putValidity(value: AwsAcmpcaCertificate.ValidityProperty) {
+    this._validity.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validityInput() {
+    return this._validity.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      api_passthrough: cdktn.stringToTerraform(this._apiPassthrough),
+      certificate_authority_arn: cdktn.stringToTerraform(this._certificateAuthorityArn),
+      certificate_signing_request: cdktn.stringToTerraform(this._certificateSigningRequest),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      signing_algorithm: cdktn.stringToTerraform(this._signingAlgorithm),
+      template_arn: cdktn.stringToTerraform(this._templateArn),
+      validity: awsAcmpcaCertificateValidityPropertyToTerraform(this._validity.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_passthrough: {
+        value: cdktn.stringToHclTerraform(this._apiPassthrough),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_authority_arn: {
+        value: cdktn.stringToHclTerraform(this._certificateAuthorityArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_signing_request: {
+        value: cdktn.stringToHclTerraform(this._certificateSigningRequest),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      signing_algorithm: {
+        value: cdktn.stringToHclTerraform(this._signingAlgorithm),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      template_arn: {
+        value: cdktn.stringToHclTerraform(this._templateArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      validity: {
+        value: awsAcmpcaCertificateValidityPropertyToHclTerraform(this._validity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAcmpcaCertificate.ValidityPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAcmpcaCertificateValidityPropertyToTerraform(struct?: AwsAcmpcaCertificate.ValidityPropertyOutputReference | AwsAcmpcaCertificate.ValidityProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    type: cdktn.stringToTerraform(struct!.type),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsAcmpcaCertificateValidityPropertyToHclTerraform(struct?: AwsAcmpcaCertificate.ValidityPropertyOutputReference | AwsAcmpcaCertificate.ValidityProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAcmpcaCertificate {
+export interface ValidityProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#type AwsAcmpcaCertificate#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/acmpca_certificate#value AwsAcmpcaCertificate#value}
+  */
+  readonly value: string;
+}
+export class ValidityPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ValidityProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ValidityProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+}

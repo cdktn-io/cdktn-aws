@@ -1,0 +1,676 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsPinpointEmailTemplateConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#region AwsPinpointEmailTemplate#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#tags AwsPinpointEmailTemplate#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#template_name AwsPinpointEmailTemplate#template_name}
+  */
+  readonly templateName: string;
+  /**
+  * email_template block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#email_template AwsPinpointEmailTemplate#email_template}
+  */
+  readonly emailTemplate?: AwsPinpointEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template aws_pinpoint_email_template}
+*/
+export class AwsPinpointEmailTemplate extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_pinpoint_email_template";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsPinpointEmailTemplate resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsPinpointEmailTemplate to import
+  * @param importFromId The id of the existing AwsPinpointEmailTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPinpointEmailTemplate to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_email_template", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template aws_pinpoint_email_template} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsPinpointEmailTemplateConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsPinpointEmailTemplateConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_pinpoint_email_template',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._region = config.region;
+    this._tags = config.tags;
+    this._templateName = config.templateName;
+    this._emailTemplate.internalValue = config.emailTemplate;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // template_name - computed: false, optional: false, required: true
+  private _templateName?: string; 
+  public get templateName() {
+    return this.getStringAttribute('template_name');
+  }
+  public set templateName(value: string) {
+    this._templateName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateNameInput() {
+    return this._templateName;
+  }
+
+  // email_template - computed: false, optional: true, required: false
+  private _emailTemplate = new AwsPinpointEmailTemplate.EmailTemplatePropertyList(this, "email_template", false);
+  public get emailTemplate() {
+    return this._emailTemplate;
+  }
+  public putEmailTemplate(value: AwsPinpointEmailTemplate.EmailTemplateProperty[] | cdktn.IResolvable) {
+    this._emailTemplate.internalValue = value;
+  }
+  public resetEmailTemplate() {
+    this._emailTemplate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailTemplateInput() {
+    return this._emailTemplate.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      template_name: cdktn.stringToTerraform(this._templateName),
+      email_template: cdktn.listMapper(awsPinpointEmailTemplateEmailTemplatePropertyToTerraform, true)(this._emailTemplate.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      template_name: {
+        value: cdktn.stringToHclTerraform(this._templateName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      email_template: {
+        value: cdktn.listMapperHcl(awsPinpointEmailTemplateEmailTemplatePropertyToHclTerraform, true)(this._emailTemplate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsPinpointEmailTemplate.EmailTemplatePropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsPinpointEmailTemplateHeaderPropertyToTerraform(struct?: AwsPinpointEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsPinpointEmailTemplateHeaderPropertyToHclTerraform(struct?: AwsPinpointEmailTemplate.HeaderProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsPinpointEmailTemplateEmailTemplatePropertyToTerraform(struct?: AwsPinpointEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    default_substitutions: cdktn.stringToTerraform(struct!.defaultSubstitutions),
+    description: cdktn.stringToTerraform(struct!.description),
+    html_part: cdktn.stringToTerraform(struct!.htmlPart),
+    recommender_id: cdktn.stringToTerraform(struct!.recommenderId),
+    subject: cdktn.stringToTerraform(struct!.subject),
+    text_part: cdktn.stringToTerraform(struct!.textPart),
+    header: cdktn.listMapper(awsPinpointEmailTemplateHeaderPropertyToTerraform, true)(struct!.header),
+  }
+}
+
+
+export function awsPinpointEmailTemplateEmailTemplatePropertyToHclTerraform(struct?: AwsPinpointEmailTemplate.EmailTemplateProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    default_substitutions: {
+      value: cdktn.stringToHclTerraform(struct!.defaultSubstitutions),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktn.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    html_part: {
+      value: cdktn.stringToHclTerraform(struct!.htmlPart),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recommender_id: {
+      value: cdktn.stringToHclTerraform(struct!.recommenderId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subject: {
+      value: cdktn.stringToHclTerraform(struct!.subject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    text_part: {
+      value: cdktn.stringToHclTerraform(struct!.textPart),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header: {
+      value: cdktn.listMapperHcl(awsPinpointEmailTemplateHeaderPropertyToHclTerraform, true)(struct!.header),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HeaderPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsPinpointEmailTemplate {
+export interface HeaderProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#name AwsPinpointEmailTemplate#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#value AwsPinpointEmailTemplate#value}
+  */
+  readonly value?: string;
+}
+export class HeaderPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HeaderProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HeaderProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class HeaderPropertyList extends cdktn.ComplexList {
+  public internalValue? : HeaderProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HeaderPropertyOutputReference {
+    return new HeaderPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EmailTemplateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#default_substitutions AwsPinpointEmailTemplate#default_substitutions}
+  */
+  readonly defaultSubstitutions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#description AwsPinpointEmailTemplate#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#html_part AwsPinpointEmailTemplate#html_part}
+  */
+  readonly htmlPart?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#recommender_id AwsPinpointEmailTemplate#recommender_id}
+  */
+  readonly recommenderId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#subject AwsPinpointEmailTemplate#subject}
+  */
+  readonly subject?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#text_part AwsPinpointEmailTemplate#text_part}
+  */
+  readonly textPart?: string;
+  /**
+  * header block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_email_template#header AwsPinpointEmailTemplate#header}
+  */
+  readonly header?: HeaderProperty[] | cdktn.IResolvable;
+}
+export class EmailTemplatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EmailTemplateProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultSubstitutions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultSubstitutions = this._defaultSubstitutions;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._htmlPart !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.htmlPart = this._htmlPart;
+    }
+    if (this._recommenderId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recommenderId = this._recommenderId;
+    }
+    if (this._subject !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subject = this._subject;
+    }
+    if (this._textPart !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.textPart = this._textPart;
+    }
+    if (this._header?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.header = this._header?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EmailTemplateProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultSubstitutions = undefined;
+      this._description = undefined;
+      this._htmlPart = undefined;
+      this._recommenderId = undefined;
+      this._subject = undefined;
+      this._textPart = undefined;
+      this._header.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultSubstitutions = value.defaultSubstitutions;
+      this._description = value.description;
+      this._htmlPart = value.htmlPart;
+      this._recommenderId = value.recommenderId;
+      this._subject = value.subject;
+      this._textPart = value.textPart;
+      this._header.internalValue = value.header;
+    }
+  }
+
+  // default_substitutions - computed: false, optional: true, required: false
+  private _defaultSubstitutions?: string; 
+  public get defaultSubstitutions() {
+    return this.getStringAttribute('default_substitutions');
+  }
+  public set defaultSubstitutions(value: string) {
+    this._defaultSubstitutions = value;
+  }
+  public resetDefaultSubstitutions() {
+    this._defaultSubstitutions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultSubstitutionsInput() {
+    return this._defaultSubstitutions;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // html_part - computed: false, optional: true, required: false
+  private _htmlPart?: string; 
+  public get htmlPart() {
+    return this.getStringAttribute('html_part');
+  }
+  public set htmlPart(value: string) {
+    this._htmlPart = value;
+  }
+  public resetHtmlPart() {
+    this._htmlPart = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get htmlPartInput() {
+    return this._htmlPart;
+  }
+
+  // recommender_id - computed: false, optional: true, required: false
+  private _recommenderId?: string; 
+  public get recommenderId() {
+    return this.getStringAttribute('recommender_id');
+  }
+  public set recommenderId(value: string) {
+    this._recommenderId = value;
+  }
+  public resetRecommenderId() {
+    this._recommenderId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recommenderIdInput() {
+    return this._recommenderId;
+  }
+
+  // subject - computed: false, optional: true, required: false
+  private _subject?: string; 
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+  public set subject(value: string) {
+    this._subject = value;
+  }
+  public resetSubject() {
+    this._subject = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectInput() {
+    return this._subject;
+  }
+
+  // text_part - computed: false, optional: true, required: false
+  private _textPart?: string; 
+  public get textPart() {
+    return this.getStringAttribute('text_part');
+  }
+  public set textPart(value: string) {
+    this._textPart = value;
+  }
+  public resetTextPart() {
+    this._textPart = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get textPartInput() {
+    return this._textPart;
+  }
+
+  // header - computed: false, optional: true, required: false
+  private _header = new HeaderPropertyList(this, "header", false);
+  public get header() {
+    return this._header;
+  }
+  public putHeader(value: HeaderProperty[] | cdktn.IResolvable) {
+    this._header.internalValue = value;
+  }
+  public resetHeader() {
+    this._header.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerInput() {
+    return this._header.internalValue;
+  }
+}
+
+export class EmailTemplatePropertyList extends cdktn.ComplexList {
+  public internalValue? : EmailTemplateProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EmailTemplatePropertyOutputReference {
+    return new EmailTemplatePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

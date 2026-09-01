@@ -1,0 +1,2050 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsElastictranscoderPresetConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#container AwsElastictranscoderPreset#container}
+  */
+  readonly container: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#description AwsElastictranscoderPreset#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#id AwsElastictranscoderPreset#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#name AwsElastictranscoderPreset#name}
+  */
+  readonly name?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#region AwsElastictranscoderPreset#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#type AwsElastictranscoderPreset#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#video_codec_options AwsElastictranscoderPreset#video_codec_options}
+  */
+  readonly videoCodecOptions?: { [key: string]: string };
+  /**
+  * audio block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#audio AwsElastictranscoderPreset#audio}
+  */
+  readonly audio?: AwsElastictranscoderPreset.AudioProperty;
+  /**
+  * audio_codec_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#audio_codec_options AwsElastictranscoderPreset#audio_codec_options}
+  */
+  readonly audioCodecOptions?: AwsElastictranscoderPreset.AudioCodecOptionsProperty;
+  /**
+  * thumbnails block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#thumbnails AwsElastictranscoderPreset#thumbnails}
+  */
+  readonly thumbnails?: AwsElastictranscoderPreset.ThumbnailsProperty;
+  /**
+  * video block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#video AwsElastictranscoderPreset#video}
+  */
+  readonly video?: AwsElastictranscoderPreset.VideoProperty;
+  /**
+  * video_watermarks block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#video_watermarks AwsElastictranscoderPreset#video_watermarks}
+  */
+  readonly videoWatermarks?: AwsElastictranscoderPreset.VideoWatermarksProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset aws_elastictranscoder_preset}
+*/
+export class AwsElastictranscoderPreset extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_elastictranscoder_preset";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsElastictranscoderPreset resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsElastictranscoderPreset to import
+  * @param importFromId The id of the existing AwsElastictranscoderPreset that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsElastictranscoderPreset to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elastictranscoder_preset", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset aws_elastictranscoder_preset} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsElastictranscoderPresetConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsElastictranscoderPresetConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_elastictranscoder_preset',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._container = config.container;
+    this._description = config.description;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._type = config.type;
+    this._videoCodecOptions = config.videoCodecOptions;
+    this._audio.internalValue = config.audio;
+    this._audioCodecOptions.internalValue = config.audioCodecOptions;
+    this._thumbnails.internalValue = config.thumbnails;
+    this._video.internalValue = config.video;
+    this._videoWatermarks.internalValue = config.videoWatermarks;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // container - computed: false, optional: false, required: true
+  private _container?: string; 
+  public get container() {
+    return this.getStringAttribute('container');
+  }
+  public set container(value: string) {
+    this._container = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerInput() {
+    return this._container;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // type - computed: true, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // video_codec_options - computed: false, optional: true, required: false
+  private _videoCodecOptions?: { [key: string]: string }; 
+  public get videoCodecOptions() {
+    return this.getStringMapAttribute('video_codec_options');
+  }
+  public set videoCodecOptions(value: { [key: string]: string }) {
+    this._videoCodecOptions = value;
+  }
+  public resetVideoCodecOptions() {
+    this._videoCodecOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get videoCodecOptionsInput() {
+    return this._videoCodecOptions;
+  }
+
+  // audio - computed: false, optional: true, required: false
+  private _audio = new AwsElastictranscoderPreset.AudioPropertyOutputReference(this, "audio");
+  public get audio() {
+    return this._audio;
+  }
+  public putAudio(value: AwsElastictranscoderPreset.AudioProperty) {
+    this._audio.internalValue = value;
+  }
+  public resetAudio() {
+    this._audio.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audioInput() {
+    return this._audio.internalValue;
+  }
+
+  // audio_codec_options - computed: false, optional: true, required: false
+  private _audioCodecOptions = new AwsElastictranscoderPreset.AudioCodecOptionsPropertyOutputReference(this, "audio_codec_options");
+  public get audioCodecOptions() {
+    return this._audioCodecOptions;
+  }
+  public putAudioCodecOptions(value: AwsElastictranscoderPreset.AudioCodecOptionsProperty) {
+    this._audioCodecOptions.internalValue = value;
+  }
+  public resetAudioCodecOptions() {
+    this._audioCodecOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audioCodecOptionsInput() {
+    return this._audioCodecOptions.internalValue;
+  }
+
+  // thumbnails - computed: false, optional: true, required: false
+  private _thumbnails = new AwsElastictranscoderPreset.ThumbnailsPropertyOutputReference(this, "thumbnails");
+  public get thumbnails() {
+    return this._thumbnails;
+  }
+  public putThumbnails(value: AwsElastictranscoderPreset.ThumbnailsProperty) {
+    this._thumbnails.internalValue = value;
+  }
+  public resetThumbnails() {
+    this._thumbnails.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thumbnailsInput() {
+    return this._thumbnails.internalValue;
+  }
+
+  // video - computed: false, optional: true, required: false
+  private _video = new AwsElastictranscoderPreset.VideoPropertyOutputReference(this, "video");
+  public get video() {
+    return this._video;
+  }
+  public putVideo(value: AwsElastictranscoderPreset.VideoProperty) {
+    this._video.internalValue = value;
+  }
+  public resetVideo() {
+    this._video.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get videoInput() {
+    return this._video.internalValue;
+  }
+
+  // video_watermarks - computed: false, optional: true, required: false
+  private _videoWatermarks = new AwsElastictranscoderPreset.VideoWatermarksPropertyList(this, "video_watermarks", true);
+  public get videoWatermarks() {
+    return this._videoWatermarks;
+  }
+  public putVideoWatermarks(value: AwsElastictranscoderPreset.VideoWatermarksProperty[] | cdktn.IResolvable) {
+    this._videoWatermarks.internalValue = value;
+  }
+  public resetVideoWatermarks() {
+    this._videoWatermarks.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get videoWatermarksInput() {
+    return this._videoWatermarks.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      container: cdktn.stringToTerraform(this._container),
+      description: cdktn.stringToTerraform(this._description),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      type: cdktn.stringToTerraform(this._type),
+      video_codec_options: cdktn.hashMapper(cdktn.stringToTerraform)(this._videoCodecOptions),
+      audio: awsElastictranscoderPresetAudioPropertyToTerraform(this._audio.internalValue),
+      audio_codec_options: awsElastictranscoderPresetAudioCodecOptionsPropertyToTerraform(this._audioCodecOptions.internalValue),
+      thumbnails: awsElastictranscoderPresetThumbnailsPropertyToTerraform(this._thumbnails.internalValue),
+      video: awsElastictranscoderPresetVideoPropertyToTerraform(this._video.internalValue),
+      video_watermarks: cdktn.listMapper(awsElastictranscoderPresetVideoWatermarksPropertyToTerraform, true)(this._videoWatermarks.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      container: {
+        value: cdktn.stringToHclTerraform(this._container),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      video_codec_options: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._videoCodecOptions),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      audio: {
+        value: awsElastictranscoderPresetAudioPropertyToHclTerraform(this._audio.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsElastictranscoderPreset.AudioPropertyList",
+      },
+      audio_codec_options: {
+        value: awsElastictranscoderPresetAudioCodecOptionsPropertyToHclTerraform(this._audioCodecOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsElastictranscoderPreset.AudioCodecOptionsPropertyList",
+      },
+      thumbnails: {
+        value: awsElastictranscoderPresetThumbnailsPropertyToHclTerraform(this._thumbnails.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsElastictranscoderPreset.ThumbnailsPropertyList",
+      },
+      video: {
+        value: awsElastictranscoderPresetVideoPropertyToHclTerraform(this._video.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsElastictranscoderPreset.VideoPropertyList",
+      },
+      video_watermarks: {
+        value: cdktn.listMapperHcl(awsElastictranscoderPresetVideoWatermarksPropertyToHclTerraform, true)(this._videoWatermarks.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsElastictranscoderPreset.VideoWatermarksPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsElastictranscoderPresetAudioPropertyToTerraform(struct?: AwsElastictranscoderPreset.AudioPropertyOutputReference | AwsElastictranscoderPreset.AudioProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    audio_packing_mode: cdktn.stringToTerraform(struct!.audioPackingMode),
+    bit_rate: cdktn.stringToTerraform(struct!.bitRate),
+    channels: cdktn.stringToTerraform(struct!.channels),
+    codec: cdktn.stringToTerraform(struct!.codec),
+    sample_rate: cdktn.stringToTerraform(struct!.sampleRate),
+  }
+}
+
+
+export function awsElastictranscoderPresetAudioPropertyToHclTerraform(struct?: AwsElastictranscoderPreset.AudioPropertyOutputReference | AwsElastictranscoderPreset.AudioProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    audio_packing_mode: {
+      value: cdktn.stringToHclTerraform(struct!.audioPackingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bit_rate: {
+      value: cdktn.stringToHclTerraform(struct!.bitRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    channels: {
+      value: cdktn.stringToHclTerraform(struct!.channels),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    codec: {
+      value: cdktn.stringToHclTerraform(struct!.codec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sample_rate: {
+      value: cdktn.stringToHclTerraform(struct!.sampleRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElastictranscoderPresetAudioCodecOptionsPropertyToTerraform(struct?: AwsElastictranscoderPreset.AudioCodecOptionsPropertyOutputReference | AwsElastictranscoderPreset.AudioCodecOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bit_depth: cdktn.stringToTerraform(struct!.bitDepth),
+    bit_order: cdktn.stringToTerraform(struct!.bitOrder),
+    profile: cdktn.stringToTerraform(struct!.profile),
+    signed: cdktn.stringToTerraform(struct!.signed),
+  }
+}
+
+
+export function awsElastictranscoderPresetAudioCodecOptionsPropertyToHclTerraform(struct?: AwsElastictranscoderPreset.AudioCodecOptionsPropertyOutputReference | AwsElastictranscoderPreset.AudioCodecOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bit_depth: {
+      value: cdktn.stringToHclTerraform(struct!.bitDepth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bit_order: {
+      value: cdktn.stringToHclTerraform(struct!.bitOrder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    profile: {
+      value: cdktn.stringToHclTerraform(struct!.profile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    signed: {
+      value: cdktn.stringToHclTerraform(struct!.signed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElastictranscoderPresetThumbnailsPropertyToTerraform(struct?: AwsElastictranscoderPreset.ThumbnailsPropertyOutputReference | AwsElastictranscoderPreset.ThumbnailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    aspect_ratio: cdktn.stringToTerraform(struct!.aspectRatio),
+    format: cdktn.stringToTerraform(struct!.format),
+    interval: cdktn.stringToTerraform(struct!.interval),
+    max_height: cdktn.stringToTerraform(struct!.maxHeight),
+    max_width: cdktn.stringToTerraform(struct!.maxWidth),
+    padding_policy: cdktn.stringToTerraform(struct!.paddingPolicy),
+    resolution: cdktn.stringToTerraform(struct!.resolution),
+    sizing_policy: cdktn.stringToTerraform(struct!.sizingPolicy),
+  }
+}
+
+
+export function awsElastictranscoderPresetThumbnailsPropertyToHclTerraform(struct?: AwsElastictranscoderPreset.ThumbnailsPropertyOutputReference | AwsElastictranscoderPreset.ThumbnailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    aspect_ratio: {
+      value: cdktn.stringToHclTerraform(struct!.aspectRatio),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    format: {
+      value: cdktn.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    interval: {
+      value: cdktn.stringToHclTerraform(struct!.interval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_height: {
+      value: cdktn.stringToHclTerraform(struct!.maxHeight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_width: {
+      value: cdktn.stringToHclTerraform(struct!.maxWidth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    padding_policy: {
+      value: cdktn.stringToHclTerraform(struct!.paddingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resolution: {
+      value: cdktn.stringToHclTerraform(struct!.resolution),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sizing_policy: {
+      value: cdktn.stringToHclTerraform(struct!.sizingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElastictranscoderPresetVideoPropertyToTerraform(struct?: AwsElastictranscoderPreset.VideoPropertyOutputReference | AwsElastictranscoderPreset.VideoProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    aspect_ratio: cdktn.stringToTerraform(struct!.aspectRatio),
+    bit_rate: cdktn.stringToTerraform(struct!.bitRate),
+    codec: cdktn.stringToTerraform(struct!.codec),
+    display_aspect_ratio: cdktn.stringToTerraform(struct!.displayAspectRatio),
+    fixed_gop: cdktn.stringToTerraform(struct!.fixedGop),
+    frame_rate: cdktn.stringToTerraform(struct!.frameRate),
+    keyframes_max_dist: cdktn.stringToTerraform(struct!.keyframesMaxDist),
+    max_frame_rate: cdktn.stringToTerraform(struct!.maxFrameRate),
+    max_height: cdktn.stringToTerraform(struct!.maxHeight),
+    max_width: cdktn.stringToTerraform(struct!.maxWidth),
+    padding_policy: cdktn.stringToTerraform(struct!.paddingPolicy),
+    resolution: cdktn.stringToTerraform(struct!.resolution),
+    sizing_policy: cdktn.stringToTerraform(struct!.sizingPolicy),
+  }
+}
+
+
+export function awsElastictranscoderPresetVideoPropertyToHclTerraform(struct?: AwsElastictranscoderPreset.VideoPropertyOutputReference | AwsElastictranscoderPreset.VideoProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    aspect_ratio: {
+      value: cdktn.stringToHclTerraform(struct!.aspectRatio),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bit_rate: {
+      value: cdktn.stringToHclTerraform(struct!.bitRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    codec: {
+      value: cdktn.stringToHclTerraform(struct!.codec),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    display_aspect_ratio: {
+      value: cdktn.stringToHclTerraform(struct!.displayAspectRatio),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    fixed_gop: {
+      value: cdktn.stringToHclTerraform(struct!.fixedGop),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    frame_rate: {
+      value: cdktn.stringToHclTerraform(struct!.frameRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    keyframes_max_dist: {
+      value: cdktn.stringToHclTerraform(struct!.keyframesMaxDist),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_frame_rate: {
+      value: cdktn.stringToHclTerraform(struct!.maxFrameRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_height: {
+      value: cdktn.stringToHclTerraform(struct!.maxHeight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_width: {
+      value: cdktn.stringToHclTerraform(struct!.maxWidth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    padding_policy: {
+      value: cdktn.stringToHclTerraform(struct!.paddingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resolution: {
+      value: cdktn.stringToHclTerraform(struct!.resolution),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sizing_policy: {
+      value: cdktn.stringToHclTerraform(struct!.sizingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElastictranscoderPresetVideoWatermarksPropertyToTerraform(struct?: AwsElastictranscoderPreset.VideoWatermarksProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    horizontal_align: cdktn.stringToTerraform(struct!.horizontalAlign),
+    horizontal_offset: cdktn.stringToTerraform(struct!.horizontalOffset),
+    id: cdktn.stringToTerraform(struct!.id),
+    max_height: cdktn.stringToTerraform(struct!.maxHeight),
+    max_width: cdktn.stringToTerraform(struct!.maxWidth),
+    opacity: cdktn.stringToTerraform(struct!.opacity),
+    sizing_policy: cdktn.stringToTerraform(struct!.sizingPolicy),
+    target: cdktn.stringToTerraform(struct!.target),
+    vertical_align: cdktn.stringToTerraform(struct!.verticalAlign),
+    vertical_offset: cdktn.stringToTerraform(struct!.verticalOffset),
+  }
+}
+
+
+export function awsElastictranscoderPresetVideoWatermarksPropertyToHclTerraform(struct?: AwsElastictranscoderPreset.VideoWatermarksProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    horizontal_align: {
+      value: cdktn.stringToHclTerraform(struct!.horizontalAlign),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    horizontal_offset: {
+      value: cdktn.stringToHclTerraform(struct!.horizontalOffset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktn.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_height: {
+      value: cdktn.stringToHclTerraform(struct!.maxHeight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_width: {
+      value: cdktn.stringToHclTerraform(struct!.maxWidth),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    opacity: {
+      value: cdktn.stringToHclTerraform(struct!.opacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sizing_policy: {
+      value: cdktn.stringToHclTerraform(struct!.sizingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target: {
+      value: cdktn.stringToHclTerraform(struct!.target),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vertical_align: {
+      value: cdktn.stringToHclTerraform(struct!.verticalAlign),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vertical_offset: {
+      value: cdktn.stringToHclTerraform(struct!.verticalOffset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsElastictranscoderPreset {
+export interface AudioProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#audio_packing_mode AwsElastictranscoderPreset#audio_packing_mode}
+  */
+  readonly audioPackingMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#bit_rate AwsElastictranscoderPreset#bit_rate}
+  */
+  readonly bitRate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#channels AwsElastictranscoderPreset#channels}
+  */
+  readonly channels?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#codec AwsElastictranscoderPreset#codec}
+  */
+  readonly codec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#sample_rate AwsElastictranscoderPreset#sample_rate}
+  */
+  readonly sampleRate?: string;
+}
+export class AudioPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AudioProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._audioPackingMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.audioPackingMode = this._audioPackingMode;
+    }
+    if (this._bitRate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bitRate = this._bitRate;
+    }
+    if (this._channels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.channels = this._channels;
+    }
+    if (this._codec !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.codec = this._codec;
+    }
+    if (this._sampleRate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sampleRate = this._sampleRate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AudioProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._audioPackingMode = undefined;
+      this._bitRate = undefined;
+      this._channels = undefined;
+      this._codec = undefined;
+      this._sampleRate = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._audioPackingMode = value.audioPackingMode;
+      this._bitRate = value.bitRate;
+      this._channels = value.channels;
+      this._codec = value.codec;
+      this._sampleRate = value.sampleRate;
+    }
+  }
+
+  // audio_packing_mode - computed: false, optional: true, required: false
+  private _audioPackingMode?: string; 
+  public get audioPackingMode() {
+    return this.getStringAttribute('audio_packing_mode');
+  }
+  public set audioPackingMode(value: string) {
+    this._audioPackingMode = value;
+  }
+  public resetAudioPackingMode() {
+    this._audioPackingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audioPackingModeInput() {
+    return this._audioPackingMode;
+  }
+
+  // bit_rate - computed: true, optional: true, required: false
+  private _bitRate?: string; 
+  public get bitRate() {
+    return this.getStringAttribute('bit_rate');
+  }
+  public set bitRate(value: string) {
+    this._bitRate = value;
+  }
+  public resetBitRate() {
+    this._bitRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitRateInput() {
+    return this._bitRate;
+  }
+
+  // channels - computed: false, optional: true, required: false
+  private _channels?: string; 
+  public get channels() {
+    return this.getStringAttribute('channels');
+  }
+  public set channels(value: string) {
+    this._channels = value;
+  }
+  public resetChannels() {
+    this._channels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get channelsInput() {
+    return this._channels;
+  }
+
+  // codec - computed: false, optional: true, required: false
+  private _codec?: string; 
+  public get codec() {
+    return this.getStringAttribute('codec');
+  }
+  public set codec(value: string) {
+    this._codec = value;
+  }
+  public resetCodec() {
+    this._codec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codecInput() {
+    return this._codec;
+  }
+
+  // sample_rate - computed: false, optional: true, required: false
+  private _sampleRate?: string; 
+  public get sampleRate() {
+    return this.getStringAttribute('sample_rate');
+  }
+  public set sampleRate(value: string) {
+    this._sampleRate = value;
+  }
+  public resetSampleRate() {
+    this._sampleRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sampleRateInput() {
+    return this._sampleRate;
+  }
+}
+export interface AudioCodecOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#bit_depth AwsElastictranscoderPreset#bit_depth}
+  */
+  readonly bitDepth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#bit_order AwsElastictranscoderPreset#bit_order}
+  */
+  readonly bitOrder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#profile AwsElastictranscoderPreset#profile}
+  */
+  readonly profile?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#signed AwsElastictranscoderPreset#signed}
+  */
+  readonly signed?: string;
+}
+export class AudioCodecOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AudioCodecOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bitDepth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bitDepth = this._bitDepth;
+    }
+    if (this._bitOrder !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bitOrder = this._bitOrder;
+    }
+    if (this._profile !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.profile = this._profile;
+    }
+    if (this._signed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signed = this._signed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AudioCodecOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bitDepth = undefined;
+      this._bitOrder = undefined;
+      this._profile = undefined;
+      this._signed = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bitDepth = value.bitDepth;
+      this._bitOrder = value.bitOrder;
+      this._profile = value.profile;
+      this._signed = value.signed;
+    }
+  }
+
+  // bit_depth - computed: true, optional: true, required: false
+  private _bitDepth?: string; 
+  public get bitDepth() {
+    return this.getStringAttribute('bit_depth');
+  }
+  public set bitDepth(value: string) {
+    this._bitDepth = value;
+  }
+  public resetBitDepth() {
+    this._bitDepth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitDepthInput() {
+    return this._bitDepth;
+  }
+
+  // bit_order - computed: true, optional: true, required: false
+  private _bitOrder?: string; 
+  public get bitOrder() {
+    return this.getStringAttribute('bit_order');
+  }
+  public set bitOrder(value: string) {
+    this._bitOrder = value;
+  }
+  public resetBitOrder() {
+    this._bitOrder = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitOrderInput() {
+    return this._bitOrder;
+  }
+
+  // profile - computed: true, optional: true, required: false
+  private _profile?: string; 
+  public get profile() {
+    return this.getStringAttribute('profile');
+  }
+  public set profile(value: string) {
+    this._profile = value;
+  }
+  public resetProfile() {
+    this._profile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileInput() {
+    return this._profile;
+  }
+
+  // signed - computed: true, optional: true, required: false
+  private _signed?: string; 
+  public get signed() {
+    return this.getStringAttribute('signed');
+  }
+  public set signed(value: string) {
+    this._signed = value;
+  }
+  public resetSigned() {
+    this._signed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedInput() {
+    return this._signed;
+  }
+}
+export interface ThumbnailsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#aspect_ratio AwsElastictranscoderPreset#aspect_ratio}
+  */
+  readonly aspectRatio?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#format AwsElastictranscoderPreset#format}
+  */
+  readonly format?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#interval AwsElastictranscoderPreset#interval}
+  */
+  readonly interval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_height AwsElastictranscoderPreset#max_height}
+  */
+  readonly maxHeight?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_width AwsElastictranscoderPreset#max_width}
+  */
+  readonly maxWidth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#padding_policy AwsElastictranscoderPreset#padding_policy}
+  */
+  readonly paddingPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#resolution AwsElastictranscoderPreset#resolution}
+  */
+  readonly resolution?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#sizing_policy AwsElastictranscoderPreset#sizing_policy}
+  */
+  readonly sizingPolicy?: string;
+}
+export class ThumbnailsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ThumbnailsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._aspectRatio !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.aspectRatio = this._aspectRatio;
+    }
+    if (this._format !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.format = this._format;
+    }
+    if (this._interval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval;
+    }
+    if (this._maxHeight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxHeight = this._maxHeight;
+    }
+    if (this._maxWidth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxWidth = this._maxWidth;
+    }
+    if (this._paddingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paddingPolicy = this._paddingPolicy;
+    }
+    if (this._resolution !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resolution = this._resolution;
+    }
+    if (this._sizingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sizingPolicy = this._sizingPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ThumbnailsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._aspectRatio = undefined;
+      this._format = undefined;
+      this._interval = undefined;
+      this._maxHeight = undefined;
+      this._maxWidth = undefined;
+      this._paddingPolicy = undefined;
+      this._resolution = undefined;
+      this._sizingPolicy = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._aspectRatio = value.aspectRatio;
+      this._format = value.format;
+      this._interval = value.interval;
+      this._maxHeight = value.maxHeight;
+      this._maxWidth = value.maxWidth;
+      this._paddingPolicy = value.paddingPolicy;
+      this._resolution = value.resolution;
+      this._sizingPolicy = value.sizingPolicy;
+    }
+  }
+
+  // aspect_ratio - computed: false, optional: true, required: false
+  private _aspectRatio?: string; 
+  public get aspectRatio() {
+    return this.getStringAttribute('aspect_ratio');
+  }
+  public set aspectRatio(value: string) {
+    this._aspectRatio = value;
+  }
+  public resetAspectRatio() {
+    this._aspectRatio = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aspectRatioInput() {
+    return this._aspectRatio;
+  }
+
+  // format - computed: false, optional: true, required: false
+  private _format?: string; 
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+  public set format(value: string) {
+    this._format = value;
+  }
+  public resetFormat() {
+    this._format = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format;
+  }
+
+  // interval - computed: false, optional: true, required: false
+  private _interval?: string; 
+  public get interval() {
+    return this.getStringAttribute('interval');
+  }
+  public set interval(value: string) {
+    this._interval = value;
+  }
+  public resetInterval() {
+    this._interval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval;
+  }
+
+  // max_height - computed: false, optional: true, required: false
+  private _maxHeight?: string; 
+  public get maxHeight() {
+    return this.getStringAttribute('max_height');
+  }
+  public set maxHeight(value: string) {
+    this._maxHeight = value;
+  }
+  public resetMaxHeight() {
+    this._maxHeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxHeightInput() {
+    return this._maxHeight;
+  }
+
+  // max_width - computed: false, optional: true, required: false
+  private _maxWidth?: string; 
+  public get maxWidth() {
+    return this.getStringAttribute('max_width');
+  }
+  public set maxWidth(value: string) {
+    this._maxWidth = value;
+  }
+  public resetMaxWidth() {
+    this._maxWidth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWidthInput() {
+    return this._maxWidth;
+  }
+
+  // padding_policy - computed: false, optional: true, required: false
+  private _paddingPolicy?: string; 
+  public get paddingPolicy() {
+    return this.getStringAttribute('padding_policy');
+  }
+  public set paddingPolicy(value: string) {
+    this._paddingPolicy = value;
+  }
+  public resetPaddingPolicy() {
+    this._paddingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get paddingPolicyInput() {
+    return this._paddingPolicy;
+  }
+
+  // resolution - computed: false, optional: true, required: false
+  private _resolution?: string; 
+  public get resolution() {
+    return this.getStringAttribute('resolution');
+  }
+  public set resolution(value: string) {
+    this._resolution = value;
+  }
+  public resetResolution() {
+    this._resolution = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resolutionInput() {
+    return this._resolution;
+  }
+
+  // sizing_policy - computed: false, optional: true, required: false
+  private _sizingPolicy?: string; 
+  public get sizingPolicy() {
+    return this.getStringAttribute('sizing_policy');
+  }
+  public set sizingPolicy(value: string) {
+    this._sizingPolicy = value;
+  }
+  public resetSizingPolicy() {
+    this._sizingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizingPolicyInput() {
+    return this._sizingPolicy;
+  }
+}
+export interface VideoProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#aspect_ratio AwsElastictranscoderPreset#aspect_ratio}
+  */
+  readonly aspectRatio?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#bit_rate AwsElastictranscoderPreset#bit_rate}
+  */
+  readonly bitRate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#codec AwsElastictranscoderPreset#codec}
+  */
+  readonly codec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#display_aspect_ratio AwsElastictranscoderPreset#display_aspect_ratio}
+  */
+  readonly displayAspectRatio?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#fixed_gop AwsElastictranscoderPreset#fixed_gop}
+  */
+  readonly fixedGop?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#frame_rate AwsElastictranscoderPreset#frame_rate}
+  */
+  readonly frameRate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#keyframes_max_dist AwsElastictranscoderPreset#keyframes_max_dist}
+  */
+  readonly keyframesMaxDist?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_frame_rate AwsElastictranscoderPreset#max_frame_rate}
+  */
+  readonly maxFrameRate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_height AwsElastictranscoderPreset#max_height}
+  */
+  readonly maxHeight?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_width AwsElastictranscoderPreset#max_width}
+  */
+  readonly maxWidth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#padding_policy AwsElastictranscoderPreset#padding_policy}
+  */
+  readonly paddingPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#resolution AwsElastictranscoderPreset#resolution}
+  */
+  readonly resolution?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#sizing_policy AwsElastictranscoderPreset#sizing_policy}
+  */
+  readonly sizingPolicy?: string;
+}
+export class VideoPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VideoProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._aspectRatio !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.aspectRatio = this._aspectRatio;
+    }
+    if (this._bitRate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bitRate = this._bitRate;
+    }
+    if (this._codec !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.codec = this._codec;
+    }
+    if (this._displayAspectRatio !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayAspectRatio = this._displayAspectRatio;
+    }
+    if (this._fixedGop !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fixedGop = this._fixedGop;
+    }
+    if (this._frameRate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.frameRate = this._frameRate;
+    }
+    if (this._keyframesMaxDist !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyframesMaxDist = this._keyframesMaxDist;
+    }
+    if (this._maxFrameRate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxFrameRate = this._maxFrameRate;
+    }
+    if (this._maxHeight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxHeight = this._maxHeight;
+    }
+    if (this._maxWidth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxWidth = this._maxWidth;
+    }
+    if (this._paddingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paddingPolicy = this._paddingPolicy;
+    }
+    if (this._resolution !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resolution = this._resolution;
+    }
+    if (this._sizingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sizingPolicy = this._sizingPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VideoProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._aspectRatio = undefined;
+      this._bitRate = undefined;
+      this._codec = undefined;
+      this._displayAspectRatio = undefined;
+      this._fixedGop = undefined;
+      this._frameRate = undefined;
+      this._keyframesMaxDist = undefined;
+      this._maxFrameRate = undefined;
+      this._maxHeight = undefined;
+      this._maxWidth = undefined;
+      this._paddingPolicy = undefined;
+      this._resolution = undefined;
+      this._sizingPolicy = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._aspectRatio = value.aspectRatio;
+      this._bitRate = value.bitRate;
+      this._codec = value.codec;
+      this._displayAspectRatio = value.displayAspectRatio;
+      this._fixedGop = value.fixedGop;
+      this._frameRate = value.frameRate;
+      this._keyframesMaxDist = value.keyframesMaxDist;
+      this._maxFrameRate = value.maxFrameRate;
+      this._maxHeight = value.maxHeight;
+      this._maxWidth = value.maxWidth;
+      this._paddingPolicy = value.paddingPolicy;
+      this._resolution = value.resolution;
+      this._sizingPolicy = value.sizingPolicy;
+    }
+  }
+
+  // aspect_ratio - computed: false, optional: true, required: false
+  private _aspectRatio?: string; 
+  public get aspectRatio() {
+    return this.getStringAttribute('aspect_ratio');
+  }
+  public set aspectRatio(value: string) {
+    this._aspectRatio = value;
+  }
+  public resetAspectRatio() {
+    this._aspectRatio = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aspectRatioInput() {
+    return this._aspectRatio;
+  }
+
+  // bit_rate - computed: true, optional: true, required: false
+  private _bitRate?: string; 
+  public get bitRate() {
+    return this.getStringAttribute('bit_rate');
+  }
+  public set bitRate(value: string) {
+    this._bitRate = value;
+  }
+  public resetBitRate() {
+    this._bitRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bitRateInput() {
+    return this._bitRate;
+  }
+
+  // codec - computed: false, optional: true, required: false
+  private _codec?: string; 
+  public get codec() {
+    return this.getStringAttribute('codec');
+  }
+  public set codec(value: string) {
+    this._codec = value;
+  }
+  public resetCodec() {
+    this._codec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codecInput() {
+    return this._codec;
+  }
+
+  // display_aspect_ratio - computed: false, optional: true, required: false
+  private _displayAspectRatio?: string; 
+  public get displayAspectRatio() {
+    return this.getStringAttribute('display_aspect_ratio');
+  }
+  public set displayAspectRatio(value: string) {
+    this._displayAspectRatio = value;
+  }
+  public resetDisplayAspectRatio() {
+    this._displayAspectRatio = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayAspectRatioInput() {
+    return this._displayAspectRatio;
+  }
+
+  // fixed_gop - computed: false, optional: true, required: false
+  private _fixedGop?: string; 
+  public get fixedGop() {
+    return this.getStringAttribute('fixed_gop');
+  }
+  public set fixedGop(value: string) {
+    this._fixedGop = value;
+  }
+  public resetFixedGop() {
+    this._fixedGop = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedGopInput() {
+    return this._fixedGop;
+  }
+
+  // frame_rate - computed: false, optional: true, required: false
+  private _frameRate?: string; 
+  public get frameRate() {
+    return this.getStringAttribute('frame_rate');
+  }
+  public set frameRate(value: string) {
+    this._frameRate = value;
+  }
+  public resetFrameRate() {
+    this._frameRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frameRateInput() {
+    return this._frameRate;
+  }
+
+  // keyframes_max_dist - computed: false, optional: true, required: false
+  private _keyframesMaxDist?: string; 
+  public get keyframesMaxDist() {
+    return this.getStringAttribute('keyframes_max_dist');
+  }
+  public set keyframesMaxDist(value: string) {
+    this._keyframesMaxDist = value;
+  }
+  public resetKeyframesMaxDist() {
+    this._keyframesMaxDist = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyframesMaxDistInput() {
+    return this._keyframesMaxDist;
+  }
+
+  // max_frame_rate - computed: true, optional: true, required: false
+  private _maxFrameRate?: string; 
+  public get maxFrameRate() {
+    return this.getStringAttribute('max_frame_rate');
+  }
+  public set maxFrameRate(value: string) {
+    this._maxFrameRate = value;
+  }
+  public resetMaxFrameRate() {
+    this._maxFrameRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxFrameRateInput() {
+    return this._maxFrameRate;
+  }
+
+  // max_height - computed: false, optional: true, required: false
+  private _maxHeight?: string; 
+  public get maxHeight() {
+    return this.getStringAttribute('max_height');
+  }
+  public set maxHeight(value: string) {
+    this._maxHeight = value;
+  }
+  public resetMaxHeight() {
+    this._maxHeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxHeightInput() {
+    return this._maxHeight;
+  }
+
+  // max_width - computed: false, optional: true, required: false
+  private _maxWidth?: string; 
+  public get maxWidth() {
+    return this.getStringAttribute('max_width');
+  }
+  public set maxWidth(value: string) {
+    this._maxWidth = value;
+  }
+  public resetMaxWidth() {
+    this._maxWidth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWidthInput() {
+    return this._maxWidth;
+  }
+
+  // padding_policy - computed: false, optional: true, required: false
+  private _paddingPolicy?: string; 
+  public get paddingPolicy() {
+    return this.getStringAttribute('padding_policy');
+  }
+  public set paddingPolicy(value: string) {
+    this._paddingPolicy = value;
+  }
+  public resetPaddingPolicy() {
+    this._paddingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get paddingPolicyInput() {
+    return this._paddingPolicy;
+  }
+
+  // resolution - computed: false, optional: true, required: false
+  private _resolution?: string; 
+  public get resolution() {
+    return this.getStringAttribute('resolution');
+  }
+  public set resolution(value: string) {
+    this._resolution = value;
+  }
+  public resetResolution() {
+    this._resolution = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resolutionInput() {
+    return this._resolution;
+  }
+
+  // sizing_policy - computed: false, optional: true, required: false
+  private _sizingPolicy?: string; 
+  public get sizingPolicy() {
+    return this.getStringAttribute('sizing_policy');
+  }
+  public set sizingPolicy(value: string) {
+    this._sizingPolicy = value;
+  }
+  public resetSizingPolicy() {
+    this._sizingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizingPolicyInput() {
+    return this._sizingPolicy;
+  }
+}
+export interface VideoWatermarksProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#horizontal_align AwsElastictranscoderPreset#horizontal_align}
+  */
+  readonly horizontalAlign?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#horizontal_offset AwsElastictranscoderPreset#horizontal_offset}
+  */
+  readonly horizontalOffset?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#id AwsElastictranscoderPreset#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_height AwsElastictranscoderPreset#max_height}
+  */
+  readonly maxHeight?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#max_width AwsElastictranscoderPreset#max_width}
+  */
+  readonly maxWidth?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#opacity AwsElastictranscoderPreset#opacity}
+  */
+  readonly opacity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#sizing_policy AwsElastictranscoderPreset#sizing_policy}
+  */
+  readonly sizingPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#target AwsElastictranscoderPreset#target}
+  */
+  readonly target?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#vertical_align AwsElastictranscoderPreset#vertical_align}
+  */
+  readonly verticalAlign?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_preset#vertical_offset AwsElastictranscoderPreset#vertical_offset}
+  */
+  readonly verticalOffset?: string;
+}
+export class VideoWatermarksPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VideoWatermarksProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._horizontalAlign !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.horizontalAlign = this._horizontalAlign;
+    }
+    if (this._horizontalOffset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.horizontalOffset = this._horizontalOffset;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._maxHeight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxHeight = this._maxHeight;
+    }
+    if (this._maxWidth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxWidth = this._maxWidth;
+    }
+    if (this._opacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.opacity = this._opacity;
+    }
+    if (this._sizingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sizingPolicy = this._sizingPolicy;
+    }
+    if (this._target !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.target = this._target;
+    }
+    if (this._verticalAlign !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verticalAlign = this._verticalAlign;
+    }
+    if (this._verticalOffset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verticalOffset = this._verticalOffset;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VideoWatermarksProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._horizontalAlign = undefined;
+      this._horizontalOffset = undefined;
+      this._id = undefined;
+      this._maxHeight = undefined;
+      this._maxWidth = undefined;
+      this._opacity = undefined;
+      this._sizingPolicy = undefined;
+      this._target = undefined;
+      this._verticalAlign = undefined;
+      this._verticalOffset = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._horizontalAlign = value.horizontalAlign;
+      this._horizontalOffset = value.horizontalOffset;
+      this._id = value.id;
+      this._maxHeight = value.maxHeight;
+      this._maxWidth = value.maxWidth;
+      this._opacity = value.opacity;
+      this._sizingPolicy = value.sizingPolicy;
+      this._target = value.target;
+      this._verticalAlign = value.verticalAlign;
+      this._verticalOffset = value.verticalOffset;
+    }
+  }
+
+  // horizontal_align - computed: false, optional: true, required: false
+  private _horizontalAlign?: string; 
+  public get horizontalAlign() {
+    return this.getStringAttribute('horizontal_align');
+  }
+  public set horizontalAlign(value: string) {
+    this._horizontalAlign = value;
+  }
+  public resetHorizontalAlign() {
+    this._horizontalAlign = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get horizontalAlignInput() {
+    return this._horizontalAlign;
+  }
+
+  // horizontal_offset - computed: false, optional: true, required: false
+  private _horizontalOffset?: string; 
+  public get horizontalOffset() {
+    return this.getStringAttribute('horizontal_offset');
+  }
+  public set horizontalOffset(value: string) {
+    this._horizontalOffset = value;
+  }
+  public resetHorizontalOffset() {
+    this._horizontalOffset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get horizontalOffsetInput() {
+    return this._horizontalOffset;
+  }
+
+  // id - computed: false, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // max_height - computed: false, optional: true, required: false
+  private _maxHeight?: string; 
+  public get maxHeight() {
+    return this.getStringAttribute('max_height');
+  }
+  public set maxHeight(value: string) {
+    this._maxHeight = value;
+  }
+  public resetMaxHeight() {
+    this._maxHeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxHeightInput() {
+    return this._maxHeight;
+  }
+
+  // max_width - computed: false, optional: true, required: false
+  private _maxWidth?: string; 
+  public get maxWidth() {
+    return this.getStringAttribute('max_width');
+  }
+  public set maxWidth(value: string) {
+    this._maxWidth = value;
+  }
+  public resetMaxWidth() {
+    this._maxWidth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWidthInput() {
+    return this._maxWidth;
+  }
+
+  // opacity - computed: false, optional: true, required: false
+  private _opacity?: string; 
+  public get opacity() {
+    return this.getStringAttribute('opacity');
+  }
+  public set opacity(value: string) {
+    this._opacity = value;
+  }
+  public resetOpacity() {
+    this._opacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get opacityInput() {
+    return this._opacity;
+  }
+
+  // sizing_policy - computed: false, optional: true, required: false
+  private _sizingPolicy?: string; 
+  public get sizingPolicy() {
+    return this.getStringAttribute('sizing_policy');
+  }
+  public set sizingPolicy(value: string) {
+    this._sizingPolicy = value;
+  }
+  public resetSizingPolicy() {
+    this._sizingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizingPolicyInput() {
+    return this._sizingPolicy;
+  }
+
+  // target - computed: false, optional: true, required: false
+  private _target?: string; 
+  public get target() {
+    return this.getStringAttribute('target');
+  }
+  public set target(value: string) {
+    this._target = value;
+  }
+  public resetTarget() {
+    this._target = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target;
+  }
+
+  // vertical_align - computed: false, optional: true, required: false
+  private _verticalAlign?: string; 
+  public get verticalAlign() {
+    return this.getStringAttribute('vertical_align');
+  }
+  public set verticalAlign(value: string) {
+    this._verticalAlign = value;
+  }
+  public resetVerticalAlign() {
+    this._verticalAlign = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verticalAlignInput() {
+    return this._verticalAlign;
+  }
+
+  // vertical_offset - computed: false, optional: true, required: false
+  private _verticalOffset?: string; 
+  public get verticalOffset() {
+    return this.getStringAttribute('vertical_offset');
+  }
+  public set verticalOffset(value: string) {
+    this._verticalOffset = value;
+  }
+  public resetVerticalOffset() {
+    this._verticalOffset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verticalOffsetInput() {
+    return this._verticalOffset;
+  }
+}
+
+export class VideoWatermarksPropertyList extends cdktn.ComplexList {
+  public internalValue? : VideoWatermarksProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VideoWatermarksPropertyOutputReference {
+    return new VideoWatermarksPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

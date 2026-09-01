@@ -1,0 +1,1004 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsNatGatewayConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_id AwsNatGateway#allocation_id}
+  */
+  readonly allocationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_mode AwsNatGateway#availability_mode}
+  */
+  readonly availabilityMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#connectivity_type AwsNatGateway#connectivity_type}
+  */
+  readonly connectivityType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#id AwsNatGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#private_ip AwsNatGateway#private_ip}
+  */
+  readonly privateIp?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#region AwsNatGateway#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_allocation_ids AwsNatGateway#secondary_allocation_ids}
+  */
+  readonly secondaryAllocationIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_address_count AwsNatGateway#secondary_private_ip_address_count}
+  */
+  readonly secondaryPrivateIpAddressCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#secondary_private_ip_addresses AwsNatGateway#secondary_private_ip_addresses}
+  */
+  readonly secondaryPrivateIpAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#subnet_id AwsNatGateway#subnet_id}
+  */
+  readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags AwsNatGateway#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#tags_all AwsNatGateway#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#vpc_id AwsNatGateway#vpc_id}
+  */
+  readonly vpcId?: string;
+  /**
+  * availability_zone_address block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_address AwsNatGateway#availability_zone_address}
+  */
+  readonly availabilityZoneAddress?: AwsNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#timeouts AwsNatGateway#timeouts}
+  */
+  readonly timeouts?: AwsNatGateway.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway aws_nat_gateway}
+*/
+export class AwsNatGateway extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_nat_gateway";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsNatGateway resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsNatGateway to import
+  * @param importFromId The id of the existing AwsNatGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNatGateway to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_nat_gateway", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway aws_nat_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsNatGatewayConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsNatGatewayConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_nat_gateway',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allocationId = config.allocationId;
+    this._availabilityMode = config.availabilityMode;
+    this._connectivityType = config.connectivityType;
+    this._id = config.id;
+    this._privateIp = config.privateIp;
+    this._region = config.region;
+    this._secondaryAllocationIds = config.secondaryAllocationIds;
+    this._secondaryPrivateIpAddressCount = config.secondaryPrivateIpAddressCount;
+    this._secondaryPrivateIpAddresses = config.secondaryPrivateIpAddresses;
+    this._subnetId = config.subnetId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._vpcId = config.vpcId;
+    this._availabilityZoneAddress.internalValue = config.availabilityZoneAddress;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allocation_id - computed: false, optional: true, required: false
+  private _allocationId?: string; 
+  public get allocationId() {
+    return this.getStringAttribute('allocation_id');
+  }
+  public set allocationId(value: string) {
+    this._allocationId = value;
+  }
+  public resetAllocationId() {
+    this._allocationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocationIdInput() {
+    return this._allocationId;
+  }
+
+  // association_id - computed: true, optional: false, required: false
+  public get associationId() {
+    return this.getStringAttribute('association_id');
+  }
+
+  // auto_provision_zones - computed: true, optional: false, required: false
+  public get autoProvisionZones() {
+    return this.getStringAttribute('auto_provision_zones');
+  }
+
+  // auto_scaling_ips - computed: true, optional: false, required: false
+  public get autoScalingIps() {
+    return this.getStringAttribute('auto_scaling_ips');
+  }
+
+  // availability_mode - computed: true, optional: true, required: false
+  private _availabilityMode?: string; 
+  public get availabilityMode() {
+    return this.getStringAttribute('availability_mode');
+  }
+  public set availabilityMode(value: string) {
+    this._availabilityMode = value;
+  }
+  public resetAvailabilityMode() {
+    this._availabilityMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityModeInput() {
+    return this._availabilityMode;
+  }
+
+  // connectivity_type - computed: false, optional: true, required: false
+  private _connectivityType?: string; 
+  public get connectivityType() {
+    return this.getStringAttribute('connectivity_type');
+  }
+  public set connectivityType(value: string) {
+    this._connectivityType = value;
+  }
+  public resetConnectivityType() {
+    this._connectivityType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectivityTypeInput() {
+    return this._connectivityType;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // network_interface_id - computed: true, optional: false, required: false
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+
+  // private_ip - computed: true, optional: true, required: false
+  private _privateIp?: string; 
+  public get privateIp() {
+    return this.getStringAttribute('private_ip');
+  }
+  public set privateIp(value: string) {
+    this._privateIp = value;
+  }
+  public resetPrivateIp() {
+    this._privateIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpInput() {
+    return this._privateIp;
+  }
+
+  // public_ip - computed: true, optional: false, required: false
+  public get publicIp() {
+    return this.getStringAttribute('public_ip');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // regional_nat_gateway_address - computed: true, optional: false, required: false
+  private _regionalNatGatewayAddress = new AwsNatGateway.RegionalNatGatewayAddressPropertyList(this, "regional_nat_gateway_address", true);
+  public get regionalNatGatewayAddress() {
+    return this._regionalNatGatewayAddress;
+  }
+
+  // regional_nat_gateway_auto_mode - computed: true, optional: false, required: false
+  public get regionalNatGatewayAutoMode() {
+    return this.getStringAttribute('regional_nat_gateway_auto_mode');
+  }
+
+  // route_table_id - computed: true, optional: false, required: false
+  public get routeTableId() {
+    return this.getStringAttribute('route_table_id');
+  }
+
+  // secondary_allocation_ids - computed: true, optional: true, required: false
+  private _secondaryAllocationIds?: string[]; 
+  public get secondaryAllocationIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('secondary_allocation_ids'));
+  }
+  public set secondaryAllocationIds(value: string[]) {
+    this._secondaryAllocationIds = value;
+  }
+  public resetSecondaryAllocationIds() {
+    this._secondaryAllocationIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryAllocationIdsInput() {
+    return this._secondaryAllocationIds;
+  }
+
+  // secondary_private_ip_address_count - computed: true, optional: true, required: false
+  private _secondaryPrivateIpAddressCount?: number; 
+  public get secondaryPrivateIpAddressCount() {
+    return this.getNumberAttribute('secondary_private_ip_address_count');
+  }
+  public set secondaryPrivateIpAddressCount(value: number) {
+    this._secondaryPrivateIpAddressCount = value;
+  }
+  public resetSecondaryPrivateIpAddressCount() {
+    this._secondaryPrivateIpAddressCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryPrivateIpAddressCountInput() {
+    return this._secondaryPrivateIpAddressCount;
+  }
+
+  // secondary_private_ip_addresses - computed: true, optional: true, required: false
+  private _secondaryPrivateIpAddresses?: string[]; 
+  public get secondaryPrivateIpAddresses() {
+    return cdktn.Fn.tolist(this.getListAttribute('secondary_private_ip_addresses'));
+  }
+  public set secondaryPrivateIpAddresses(value: string[]) {
+    this._secondaryPrivateIpAddresses = value;
+  }
+  public resetSecondaryPrivateIpAddresses() {
+    this._secondaryPrivateIpAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryPrivateIpAddressesInput() {
+    return this._secondaryPrivateIpAddresses;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_id - computed: true, optional: true, required: false
+  private _vpcId?: string; 
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+  public set vpcId(value: string) {
+    this._vpcId = value;
+  }
+  public resetVpcId() {
+    this._vpcId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcIdInput() {
+    return this._vpcId;
+  }
+
+  // availability_zone_address - computed: false, optional: true, required: false
+  private _availabilityZoneAddress = new AwsNatGateway.AvailabilityZoneAddressPropertyList(this, "availability_zone_address", true);
+  public get availabilityZoneAddress() {
+    return this._availabilityZoneAddress;
+  }
+  public putAvailabilityZoneAddress(value: AwsNatGateway.AvailabilityZoneAddressProperty[] | cdktn.IResolvable) {
+    this._availabilityZoneAddress.internalValue = value;
+  }
+  public resetAvailabilityZoneAddress() {
+    this._availabilityZoneAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneAddressInput() {
+    return this._availabilityZoneAddress.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsNatGateway.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsNatGateway.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allocation_id: cdktn.stringToTerraform(this._allocationId),
+      availability_mode: cdktn.stringToTerraform(this._availabilityMode),
+      connectivity_type: cdktn.stringToTerraform(this._connectivityType),
+      id: cdktn.stringToTerraform(this._id),
+      private_ip: cdktn.stringToTerraform(this._privateIp),
+      region: cdktn.stringToTerraform(this._region),
+      secondary_allocation_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._secondaryAllocationIds),
+      secondary_private_ip_address_count: cdktn.numberToTerraform(this._secondaryPrivateIpAddressCount),
+      secondary_private_ip_addresses: cdktn.listMapper(cdktn.stringToTerraform, false)(this._secondaryPrivateIpAddresses),
+      subnet_id: cdktn.stringToTerraform(this._subnetId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      vpc_id: cdktn.stringToTerraform(this._vpcId),
+      availability_zone_address: cdktn.listMapper(awsNatGatewayAvailabilityZoneAddressPropertyToTerraform, true)(this._availabilityZoneAddress.internalValue),
+      timeouts: awsNatGatewayTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allocation_id: {
+        value: cdktn.stringToHclTerraform(this._allocationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      availability_mode: {
+        value: cdktn.stringToHclTerraform(this._availabilityMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connectivity_type: {
+        value: cdktn.stringToHclTerraform(this._connectivityType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip: {
+        value: cdktn.stringToHclTerraform(this._privateIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secondary_allocation_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._secondaryAllocationIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      secondary_private_ip_address_count: {
+        value: cdktn.numberToHclTerraform(this._secondaryPrivateIpAddressCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      secondary_private_ip_addresses: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._secondaryPrivateIpAddresses),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      subnet_id: {
+        value: cdktn.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_id: {
+        value: cdktn.stringToHclTerraform(this._vpcId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      availability_zone_address: {
+        value: cdktn.listMapperHcl(awsNatGatewayAvailabilityZoneAddressPropertyToHclTerraform, true)(this._availabilityZoneAddress.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsNatGateway.AvailabilityZoneAddressPropertyList",
+      },
+      timeouts: {
+        value: awsNatGatewayTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsNatGateway.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsNatGatewayRegionalNatGatewayAddressPropertyToTerraform(struct?: AwsNatGateway.RegionalNatGatewayAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsNatGatewayRegionalNatGatewayAddressPropertyToHclTerraform(struct?: AwsNatGateway.RegionalNatGatewayAddressProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsNatGatewayAvailabilityZoneAddressPropertyToTerraform(struct?: AwsNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    allocation_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allocationIds),
+    availability_zone: cdktn.stringToTerraform(struct!.availabilityZone),
+    availability_zone_id: cdktn.stringToTerraform(struct!.availabilityZoneId),
+  }
+}
+
+
+export function awsNatGatewayAvailabilityZoneAddressPropertyToHclTerraform(struct?: AwsNatGateway.AvailabilityZoneAddressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    allocation_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.allocationIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    availability_zone: {
+      value: cdktn.stringToHclTerraform(struct!.availabilityZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    availability_zone_id: {
+      value: cdktn.stringToHclTerraform(struct!.availabilityZoneId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsNatGatewayTimeoutsPropertyToTerraform(struct?: AwsNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsNatGatewayTimeoutsPropertyToHclTerraform(struct?: AwsNatGateway.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsNatGateway {
+export interface RegionalNatGatewayAddressProperty {
+}
+export class RegionalNatGatewayAddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RegionalNatGatewayAddressProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RegionalNatGatewayAddressProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allocation_id - computed: true, optional: false, required: false
+  public get allocationId() {
+    return this.getStringAttribute('allocation_id');
+  }
+
+  // association_id - computed: true, optional: false, required: false
+  public get associationId() {
+    return this.getStringAttribute('association_id');
+  }
+
+  // availability_zone - computed: true, optional: false, required: false
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+
+  // availability_zone_id - computed: true, optional: false, required: false
+  public get availabilityZoneId() {
+    return this.getStringAttribute('availability_zone_id');
+  }
+
+  // network_interface_id - computed: true, optional: false, required: false
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+
+  // public_ip - computed: true, optional: false, required: false
+  public get publicIp() {
+    return this.getStringAttribute('public_ip');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+}
+
+export class RegionalNatGatewayAddressPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RegionalNatGatewayAddressPropertyOutputReference {
+    return new RegionalNatGatewayAddressPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AvailabilityZoneAddressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#allocation_ids AwsNatGateway#allocation_ids}
+  */
+  readonly allocationIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone AwsNatGateway#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#availability_zone_id AwsNatGateway#availability_zone_id}
+  */
+  readonly availabilityZoneId?: string;
+}
+export class AvailabilityZoneAddressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AvailabilityZoneAddressProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allocationIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allocationIds = this._allocationIds;
+    }
+    if (this._availabilityZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availabilityZone = this._availabilityZone;
+    }
+    if (this._availabilityZoneId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availabilityZoneId = this._availabilityZoneId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AvailabilityZoneAddressProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allocationIds = undefined;
+      this._availabilityZone = undefined;
+      this._availabilityZoneId = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allocationIds = value.allocationIds;
+      this._availabilityZone = value.availabilityZone;
+      this._availabilityZoneId = value.availabilityZoneId;
+    }
+  }
+
+  // allocation_ids - computed: false, optional: true, required: false
+  private _allocationIds?: string[]; 
+  public get allocationIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('allocation_ids'));
+  }
+  public set allocationIds(value: string[]) {
+    this._allocationIds = value;
+  }
+  public resetAllocationIds() {
+    this._allocationIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocationIdsInput() {
+    return this._allocationIds;
+  }
+
+  // availability_zone - computed: false, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // availability_zone_id - computed: true, optional: true, required: false
+  private _availabilityZoneId?: string; 
+  public get availabilityZoneId() {
+    return this.getStringAttribute('availability_zone_id');
+  }
+  public set availabilityZoneId(value: string) {
+    this._availabilityZoneId = value;
+  }
+  public resetAvailabilityZoneId() {
+    this._availabilityZoneId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneIdInput() {
+    return this._availabilityZoneId;
+  }
+}
+
+export class AvailabilityZoneAddressPropertyList extends cdktn.ComplexList {
+  public internalValue? : AvailabilityZoneAddressProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AvailabilityZoneAddressPropertyOutputReference {
+    return new AvailabilityZoneAddressPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#create AwsNatGateway#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#delete AwsNatGateway#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/nat_gateway#update AwsNatGateway#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

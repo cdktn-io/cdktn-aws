@@ -1,0 +1,754 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApiGatewayIntegrationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#cache_key_parameters AwsApiGatewayIntegration#cache_key_parameters}
+  */
+  readonly cacheKeyParameters?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#cache_namespace AwsApiGatewayIntegration#cache_namespace}
+  */
+  readonly cacheNamespace?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#connection_id AwsApiGatewayIntegration#connection_id}
+  */
+  readonly connectionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#connection_type AwsApiGatewayIntegration#connection_type}
+  */
+  readonly connectionType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#content_handling AwsApiGatewayIntegration#content_handling}
+  */
+  readonly contentHandling?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#credentials AwsApiGatewayIntegration#credentials}
+  */
+  readonly credentials?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#http_method AwsApiGatewayIntegration#http_method}
+  */
+  readonly httpMethod: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#id AwsApiGatewayIntegration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#integration_http_method AwsApiGatewayIntegration#integration_http_method}
+  */
+  readonly integrationHttpMethod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#integration_target AwsApiGatewayIntegration#integration_target}
+  */
+  readonly integrationTarget?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#passthrough_behavior AwsApiGatewayIntegration#passthrough_behavior}
+  */
+  readonly passthroughBehavior?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#region AwsApiGatewayIntegration#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#request_parameters AwsApiGatewayIntegration#request_parameters}
+  */
+  readonly requestParameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#request_templates AwsApiGatewayIntegration#request_templates}
+  */
+  readonly requestTemplates?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#resource_id AwsApiGatewayIntegration#resource_id}
+  */
+  readonly resourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#response_transfer_mode AwsApiGatewayIntegration#response_transfer_mode}
+  */
+  readonly responseTransferMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#rest_api_id AwsApiGatewayIntegration#rest_api_id}
+  */
+  readonly restApiId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#timeout_milliseconds AwsApiGatewayIntegration#timeout_milliseconds}
+  */
+  readonly timeoutMilliseconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#type AwsApiGatewayIntegration#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#uri AwsApiGatewayIntegration#uri}
+  */
+  readonly uri?: string;
+  /**
+  * tls_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#tls_config AwsApiGatewayIntegration#tls_config}
+  */
+  readonly tlsConfig?: AwsApiGatewayIntegration.TlsConfigProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration aws_api_gateway_integration}
+*/
+export class AwsApiGatewayIntegration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_api_gateway_integration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApiGatewayIntegration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApiGatewayIntegration to import
+  * @param importFromId The id of the existing AwsApiGatewayIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiGatewayIntegration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_integration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration aws_api_gateway_integration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApiGatewayIntegrationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsApiGatewayIntegrationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_api_gateway_integration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._cacheKeyParameters = config.cacheKeyParameters;
+    this._cacheNamespace = config.cacheNamespace;
+    this._connectionId = config.connectionId;
+    this._connectionType = config.connectionType;
+    this._contentHandling = config.contentHandling;
+    this._credentials = config.credentials;
+    this._httpMethod = config.httpMethod;
+    this._id = config.id;
+    this._integrationHttpMethod = config.integrationHttpMethod;
+    this._integrationTarget = config.integrationTarget;
+    this._passthroughBehavior = config.passthroughBehavior;
+    this._region = config.region;
+    this._requestParameters = config.requestParameters;
+    this._requestTemplates = config.requestTemplates;
+    this._resourceId = config.resourceId;
+    this._responseTransferMode = config.responseTransferMode;
+    this._restApiId = config.restApiId;
+    this._timeoutMilliseconds = config.timeoutMilliseconds;
+    this._type = config.type;
+    this._uri = config.uri;
+    this._tlsConfig.internalValue = config.tlsConfig;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // cache_key_parameters - computed: false, optional: true, required: false
+  private _cacheKeyParameters?: string[]; 
+  public get cacheKeyParameters() {
+    return cdktn.Fn.tolist(this.getListAttribute('cache_key_parameters'));
+  }
+  public set cacheKeyParameters(value: string[]) {
+    this._cacheKeyParameters = value;
+  }
+  public resetCacheKeyParameters() {
+    this._cacheKeyParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheKeyParametersInput() {
+    return this._cacheKeyParameters;
+  }
+
+  // cache_namespace - computed: true, optional: true, required: false
+  private _cacheNamespace?: string; 
+  public get cacheNamespace() {
+    return this.getStringAttribute('cache_namespace');
+  }
+  public set cacheNamespace(value: string) {
+    this._cacheNamespace = value;
+  }
+  public resetCacheNamespace() {
+    this._cacheNamespace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheNamespaceInput() {
+    return this._cacheNamespace;
+  }
+
+  // connection_id - computed: false, optional: true, required: false
+  private _connectionId?: string; 
+  public get connectionId() {
+    return this.getStringAttribute('connection_id');
+  }
+  public set connectionId(value: string) {
+    this._connectionId = value;
+  }
+  public resetConnectionId() {
+    this._connectionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionIdInput() {
+    return this._connectionId;
+  }
+
+  // connection_type - computed: false, optional: true, required: false
+  private _connectionType?: string; 
+  public get connectionType() {
+    return this.getStringAttribute('connection_type');
+  }
+  public set connectionType(value: string) {
+    this._connectionType = value;
+  }
+  public resetConnectionType() {
+    this._connectionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionTypeInput() {
+    return this._connectionType;
+  }
+
+  // content_handling - computed: false, optional: true, required: false
+  private _contentHandling?: string; 
+  public get contentHandling() {
+    return this.getStringAttribute('content_handling');
+  }
+  public set contentHandling(value: string) {
+    this._contentHandling = value;
+  }
+  public resetContentHandling() {
+    this._contentHandling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentHandlingInput() {
+    return this._contentHandling;
+  }
+
+  // credentials - computed: false, optional: true, required: false
+  private _credentials?: string; 
+  public get credentials() {
+    return this.getStringAttribute('credentials');
+  }
+  public set credentials(value: string) {
+    this._credentials = value;
+  }
+  public resetCredentials() {
+    this._credentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get credentialsInput() {
+    return this._credentials;
+  }
+
+  // http_method - computed: false, optional: false, required: true
+  private _httpMethod?: string; 
+  public get httpMethod() {
+    return this.getStringAttribute('http_method');
+  }
+  public set httpMethod(value: string) {
+    this._httpMethod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpMethodInput() {
+    return this._httpMethod;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // integration_http_method - computed: false, optional: true, required: false
+  private _integrationHttpMethod?: string; 
+  public get integrationHttpMethod() {
+    return this.getStringAttribute('integration_http_method');
+  }
+  public set integrationHttpMethod(value: string) {
+    this._integrationHttpMethod = value;
+  }
+  public resetIntegrationHttpMethod() {
+    this._integrationHttpMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrationHttpMethodInput() {
+    return this._integrationHttpMethod;
+  }
+
+  // integration_target - computed: false, optional: true, required: false
+  private _integrationTarget?: string; 
+  public get integrationTarget() {
+    return this.getStringAttribute('integration_target');
+  }
+  public set integrationTarget(value: string) {
+    this._integrationTarget = value;
+  }
+  public resetIntegrationTarget() {
+    this._integrationTarget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrationTargetInput() {
+    return this._integrationTarget;
+  }
+
+  // passthrough_behavior - computed: true, optional: true, required: false
+  private _passthroughBehavior?: string; 
+  public get passthroughBehavior() {
+    return this.getStringAttribute('passthrough_behavior');
+  }
+  public set passthroughBehavior(value: string) {
+    this._passthroughBehavior = value;
+  }
+  public resetPassthroughBehavior() {
+    this._passthroughBehavior = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passthroughBehaviorInput() {
+    return this._passthroughBehavior;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // request_parameters - computed: false, optional: true, required: false
+  private _requestParameters?: { [key: string]: string }; 
+  public get requestParameters() {
+    return this.getStringMapAttribute('request_parameters');
+  }
+  public set requestParameters(value: { [key: string]: string }) {
+    this._requestParameters = value;
+  }
+  public resetRequestParameters() {
+    this._requestParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestParametersInput() {
+    return this._requestParameters;
+  }
+
+  // request_templates - computed: false, optional: true, required: false
+  private _requestTemplates?: { [key: string]: string }; 
+  public get requestTemplates() {
+    return this.getStringMapAttribute('request_templates');
+  }
+  public set requestTemplates(value: { [key: string]: string }) {
+    this._requestTemplates = value;
+  }
+  public resetRequestTemplates() {
+    this._requestTemplates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestTemplatesInput() {
+    return this._requestTemplates;
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+
+  // response_transfer_mode - computed: true, optional: true, required: false
+  private _responseTransferMode?: string; 
+  public get responseTransferMode() {
+    return this.getStringAttribute('response_transfer_mode');
+  }
+  public set responseTransferMode(value: string) {
+    this._responseTransferMode = value;
+  }
+  public resetResponseTransferMode() {
+    this._responseTransferMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseTransferModeInput() {
+    return this._responseTransferMode;
+  }
+
+  // rest_api_id - computed: false, optional: false, required: true
+  private _restApiId?: string; 
+  public get restApiId() {
+    return this.getStringAttribute('rest_api_id');
+  }
+  public set restApiId(value: string) {
+    this._restApiId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restApiIdInput() {
+    return this._restApiId;
+  }
+
+  // timeout_milliseconds - computed: false, optional: true, required: false
+  private _timeoutMilliseconds?: number; 
+  public get timeoutMilliseconds() {
+    return this.getNumberAttribute('timeout_milliseconds');
+  }
+  public set timeoutMilliseconds(value: number) {
+    this._timeoutMilliseconds = value;
+  }
+  public resetTimeoutMilliseconds() {
+    this._timeoutMilliseconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutMillisecondsInput() {
+    return this._timeoutMilliseconds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+
+  // tls_config - computed: false, optional: true, required: false
+  private _tlsConfig = new AwsApiGatewayIntegration.TlsConfigPropertyOutputReference(this, "tls_config");
+  public get tlsConfig() {
+    return this._tlsConfig;
+  }
+  public putTlsConfig(value: AwsApiGatewayIntegration.TlsConfigProperty) {
+    this._tlsConfig.internalValue = value;
+  }
+  public resetTlsConfig() {
+    this._tlsConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsConfigInput() {
+    return this._tlsConfig.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cache_key_parameters: cdktn.listMapper(cdktn.stringToTerraform, false)(this._cacheKeyParameters),
+      cache_namespace: cdktn.stringToTerraform(this._cacheNamespace),
+      connection_id: cdktn.stringToTerraform(this._connectionId),
+      connection_type: cdktn.stringToTerraform(this._connectionType),
+      content_handling: cdktn.stringToTerraform(this._contentHandling),
+      credentials: cdktn.stringToTerraform(this._credentials),
+      http_method: cdktn.stringToTerraform(this._httpMethod),
+      id: cdktn.stringToTerraform(this._id),
+      integration_http_method: cdktn.stringToTerraform(this._integrationHttpMethod),
+      integration_target: cdktn.stringToTerraform(this._integrationTarget),
+      passthrough_behavior: cdktn.stringToTerraform(this._passthroughBehavior),
+      region: cdktn.stringToTerraform(this._region),
+      request_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._requestParameters),
+      request_templates: cdktn.hashMapper(cdktn.stringToTerraform)(this._requestTemplates),
+      resource_id: cdktn.stringToTerraform(this._resourceId),
+      response_transfer_mode: cdktn.stringToTerraform(this._responseTransferMode),
+      rest_api_id: cdktn.stringToTerraform(this._restApiId),
+      timeout_milliseconds: cdktn.numberToTerraform(this._timeoutMilliseconds),
+      type: cdktn.stringToTerraform(this._type),
+      uri: cdktn.stringToTerraform(this._uri),
+      tls_config: awsApiGatewayIntegrationTlsConfigPropertyToTerraform(this._tlsConfig.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cache_key_parameters: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._cacheKeyParameters),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      cache_namespace: {
+        value: cdktn.stringToHclTerraform(this._cacheNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connection_id: {
+        value: cdktn.stringToHclTerraform(this._connectionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connection_type: {
+        value: cdktn.stringToHclTerraform(this._connectionType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_handling: {
+        value: cdktn.stringToHclTerraform(this._contentHandling),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      credentials: {
+        value: cdktn.stringToHclTerraform(this._credentials),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      http_method: {
+        value: cdktn.stringToHclTerraform(this._httpMethod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_http_method: {
+        value: cdktn.stringToHclTerraform(this._integrationHttpMethod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_target: {
+        value: cdktn.stringToHclTerraform(this._integrationTarget),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      passthrough_behavior: {
+        value: cdktn.stringToHclTerraform(this._passthroughBehavior),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      request_parameters: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._requestParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      request_templates: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._requestTemplates),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      resource_id: {
+        value: cdktn.stringToHclTerraform(this._resourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      response_transfer_mode: {
+        value: cdktn.stringToHclTerraform(this._responseTransferMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rest_api_id: {
+        value: cdktn.stringToHclTerraform(this._restApiId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeout_milliseconds: {
+        value: cdktn.numberToHclTerraform(this._timeoutMilliseconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      uri: {
+        value: cdktn.stringToHclTerraform(this._uri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tls_config: {
+        value: awsApiGatewayIntegrationTlsConfigPropertyToHclTerraform(this._tlsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsApiGatewayIntegration.TlsConfigPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsApiGatewayIntegrationTlsConfigPropertyToTerraform(struct?: AwsApiGatewayIntegration.TlsConfigPropertyOutputReference | AwsApiGatewayIntegration.TlsConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    insecure_skip_verification: cdktn.booleanToTerraform(struct!.insecureSkipVerification),
+  }
+}
+
+
+export function awsApiGatewayIntegrationTlsConfigPropertyToHclTerraform(struct?: AwsApiGatewayIntegration.TlsConfigPropertyOutputReference | AwsApiGatewayIntegration.TlsConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    insecure_skip_verification: {
+      value: cdktn.booleanToHclTerraform(struct!.insecureSkipVerification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsApiGatewayIntegration {
+export interface TlsConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_integration#insecure_skip_verification AwsApiGatewayIntegration#insecure_skip_verification}
+  */
+  readonly insecureSkipVerification?: boolean | cdktn.IResolvable;
+}
+export class TlsConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TlsConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._insecureSkipVerification !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.insecureSkipVerification = this._insecureSkipVerification;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TlsConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._insecureSkipVerification = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._insecureSkipVerification = value.insecureSkipVerification;
+    }
+  }
+
+  // insecure_skip_verification - computed: false, optional: true, required: false
+  private _insecureSkipVerification?: boolean | cdktn.IResolvable; 
+  public get insecureSkipVerification() {
+    return this.getBooleanAttribute('insecure_skip_verification');
+  }
+  public set insecureSkipVerification(value: boolean | cdktn.IResolvable) {
+    this._insecureSkipVerification = value;
+  }
+  public resetInsecureSkipVerification() {
+    this._insecureSkipVerification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get insecureSkipVerificationInput() {
+    return this._insecureSkipVerification;
+  }
+}
+}

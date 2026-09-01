@@ -1,0 +1,2468 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsMskReplicatorConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#description AwsMskReplicator#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#id AwsMskReplicator#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#region AwsMskReplicator#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_name AwsMskReplicator#replicator_name}
+  */
+  readonly replicatorName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#service_execution_role_arn AwsMskReplicator#service_execution_role_arn}
+  */
+  readonly serviceExecutionRoleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags AwsMskReplicator#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags_all AwsMskReplicator#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * kafka_cluster block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#kafka_cluster AwsMskReplicator#kafka_cluster}
+  */
+  readonly kafkaCluster: AwsMskReplicator.KafkaClusterProperty[] | cdktn.IResolvable;
+  /**
+  * log_delivery block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_delivery AwsMskReplicator#log_delivery}
+  */
+  readonly logDelivery?: AwsMskReplicator.LogDeliveryProperty;
+  /**
+  * replication_info_list block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replication_info_list AwsMskReplicator#replication_info_list}
+  */
+  readonly replicationInfoList: AwsMskReplicator.ReplicationInfoListProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#timeouts AwsMskReplicator#timeouts}
+  */
+  readonly timeouts?: AwsMskReplicator.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator aws_msk_replicator}
+*/
+export class AwsMskReplicator extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_msk_replicator";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsMskReplicator resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsMskReplicator to import
+  * @param importFromId The id of the existing AwsMskReplicator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMskReplicator to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_replicator", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator aws_msk_replicator} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsMskReplicatorConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsMskReplicatorConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_msk_replicator',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._id = config.id;
+    this._region = config.region;
+    this._replicatorName = config.replicatorName;
+    this._serviceExecutionRoleArn = config.serviceExecutionRoleArn;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._kafkaCluster.internalValue = config.kafkaCluster;
+    this._logDelivery.internalValue = config.logDelivery;
+    this._replicationInfoList.internalValue = config.replicationInfoList;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // current_version - computed: true, optional: false, required: false
+  public get currentVersion() {
+    return this.getStringAttribute('current_version');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // replicator_name - computed: false, optional: false, required: true
+  private _replicatorName?: string; 
+  public get replicatorName() {
+    return this.getStringAttribute('replicator_name');
+  }
+  public set replicatorName(value: string) {
+    this._replicatorName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicatorNameInput() {
+    return this._replicatorName;
+  }
+
+  // service_execution_role_arn - computed: false, optional: false, required: true
+  private _serviceExecutionRoleArn?: string; 
+  public get serviceExecutionRoleArn() {
+    return this.getStringAttribute('service_execution_role_arn');
+  }
+  public set serviceExecutionRoleArn(value: string) {
+    this._serviceExecutionRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceExecutionRoleArnInput() {
+    return this._serviceExecutionRoleArn;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // kafka_cluster - computed: false, optional: false, required: true
+  private _kafkaCluster = new AwsMskReplicator.KafkaClusterPropertyList(this, "kafka_cluster", false);
+  public get kafkaCluster() {
+    return this._kafkaCluster;
+  }
+  public putKafkaCluster(value: AwsMskReplicator.KafkaClusterProperty[] | cdktn.IResolvable) {
+    this._kafkaCluster.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kafkaClusterInput() {
+    return this._kafkaCluster.internalValue;
+  }
+
+  // log_delivery - computed: false, optional: true, required: false
+  private _logDelivery = new AwsMskReplicator.LogDeliveryPropertyOutputReference(this, "log_delivery");
+  public get logDelivery() {
+    return this._logDelivery;
+  }
+  public putLogDelivery(value: AwsMskReplicator.LogDeliveryProperty) {
+    this._logDelivery.internalValue = value;
+  }
+  public resetLogDelivery() {
+    this._logDelivery.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDeliveryInput() {
+    return this._logDelivery.internalValue;
+  }
+
+  // replication_info_list - computed: false, optional: false, required: true
+  private _replicationInfoList = new AwsMskReplicator.ReplicationInfoListPropertyOutputReference(this, "replication_info_list");
+  public get replicationInfoList() {
+    return this._replicationInfoList;
+  }
+  public putReplicationInfoList(value: AwsMskReplicator.ReplicationInfoListProperty) {
+    this._replicationInfoList.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationInfoListInput() {
+    return this._replicationInfoList.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsMskReplicator.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsMskReplicator.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      replicator_name: cdktn.stringToTerraform(this._replicatorName),
+      service_execution_role_arn: cdktn.stringToTerraform(this._serviceExecutionRoleArn),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      kafka_cluster: cdktn.listMapper(awsMskReplicatorKafkaClusterPropertyToTerraform, true)(this._kafkaCluster.internalValue),
+      log_delivery: awsMskReplicatorLogDeliveryPropertyToTerraform(this._logDelivery.internalValue),
+      replication_info_list: awsMskReplicatorReplicationInfoListPropertyToTerraform(this._replicationInfoList.internalValue),
+      timeouts: awsMskReplicatorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replicator_name: {
+        value: cdktn.stringToHclTerraform(this._replicatorName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_execution_role_arn: {
+        value: cdktn.stringToHclTerraform(this._serviceExecutionRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      kafka_cluster: {
+        value: cdktn.listMapperHcl(awsMskReplicatorKafkaClusterPropertyToHclTerraform, true)(this._kafkaCluster.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsMskReplicator.KafkaClusterPropertyList",
+      },
+      log_delivery: {
+        value: awsMskReplicatorLogDeliveryPropertyToHclTerraform(this._logDelivery.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsMskReplicator.LogDeliveryPropertyList",
+      },
+      replication_info_list: {
+        value: awsMskReplicatorReplicationInfoListPropertyToHclTerraform(this._replicationInfoList.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsMskReplicator.ReplicationInfoListPropertyList",
+      },
+      timeouts: {
+        value: awsMskReplicatorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsMskReplicator.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsMskReplicatorAmazonMskClusterPropertyToTerraform(struct?: AwsMskReplicator.AmazonMskClusterPropertyOutputReference | AwsMskReplicator.AmazonMskClusterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    msk_cluster_arn: cdktn.stringToTerraform(struct!.mskClusterArn),
+  }
+}
+
+
+export function awsMskReplicatorAmazonMskClusterPropertyToHclTerraform(struct?: AwsMskReplicator.AmazonMskClusterPropertyOutputReference | AwsMskReplicator.AmazonMskClusterProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    msk_cluster_arn: {
+      value: cdktn.stringToHclTerraform(struct!.mskClusterArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorVpcConfigPropertyToTerraform(struct?: AwsMskReplicator.VpcConfigPropertyOutputReference | AwsMskReplicator.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    security_groups_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroupsIds),
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+  }
+}
+
+
+export function awsMskReplicatorVpcConfigPropertyToHclTerraform(struct?: AwsMskReplicator.VpcConfigPropertyOutputReference | AwsMskReplicator.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    security_groups_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.securityGroupsIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorKafkaClusterPropertyToTerraform(struct?: AwsMskReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    amazon_msk_cluster: awsMskReplicatorAmazonMskClusterPropertyToTerraform(struct!.amazonMskCluster),
+    vpc_config: awsMskReplicatorVpcConfigPropertyToTerraform(struct!.vpcConfig),
+  }
+}
+
+
+export function awsMskReplicatorKafkaClusterPropertyToHclTerraform(struct?: AwsMskReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    amazon_msk_cluster: {
+      value: awsMskReplicatorAmazonMskClusterPropertyToHclTerraform(struct!.amazonMskCluster),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AmazonMskClusterPropertyList",
+    },
+    vpc_config: {
+      value: awsMskReplicatorVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VpcConfigPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorCloudwatchLogsPropertyToTerraform(struct?: AwsMskReplicator.CloudwatchLogsPropertyOutputReference | AwsMskReplicator.CloudwatchLogsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    log_group: cdktn.stringToTerraform(struct!.logGroup),
+  }
+}
+
+
+export function awsMskReplicatorCloudwatchLogsPropertyToHclTerraform(struct?: AwsMskReplicator.CloudwatchLogsPropertyOutputReference | AwsMskReplicator.CloudwatchLogsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    log_group: {
+      value: cdktn.stringToHclTerraform(struct!.logGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorFirehosePropertyToTerraform(struct?: AwsMskReplicator.FirehosePropertyOutputReference | AwsMskReplicator.FirehoseProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delivery_stream: cdktn.stringToTerraform(struct!.deliveryStream),
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+  }
+}
+
+
+export function awsMskReplicatorFirehosePropertyToHclTerraform(struct?: AwsMskReplicator.FirehosePropertyOutputReference | AwsMskReplicator.FirehoseProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delivery_stream: {
+      value: cdktn.stringToHclTerraform(struct!.deliveryStream),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorS3PropertyToTerraform(struct?: AwsMskReplicator.S3PropertyOutputReference | AwsMskReplicator.S3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    bucket: cdktn.stringToTerraform(struct!.bucket),
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+  }
+}
+
+
+export function awsMskReplicatorS3PropertyToHclTerraform(struct?: AwsMskReplicator.S3PropertyOutputReference | AwsMskReplicator.S3Property): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    bucket: {
+      value: cdktn.stringToHclTerraform(struct!.bucket),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorReplicatorLogDeliveryPropertyToTerraform(struct?: AwsMskReplicator.ReplicatorLogDeliveryPropertyOutputReference | AwsMskReplicator.ReplicatorLogDeliveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cloudwatch_logs: awsMskReplicatorCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: awsMskReplicatorFirehosePropertyToTerraform(struct!.firehose),
+    s3: awsMskReplicatorS3PropertyToTerraform(struct!.s3),
+  }
+}
+
+
+export function awsMskReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct?: AwsMskReplicator.ReplicatorLogDeliveryPropertyOutputReference | AwsMskReplicator.ReplicatorLogDeliveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cloudwatch_logs: {
+      value: awsMskReplicatorCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudwatchLogsPropertyList",
+    },
+    firehose: {
+      value: awsMskReplicatorFirehosePropertyToHclTerraform(struct!.firehose),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FirehosePropertyList",
+    },
+    s3: {
+      value: awsMskReplicatorS3PropertyToHclTerraform(struct!.s3),
+      isBlock: true,
+      type: "list",
+      storageClassType: "S3PropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorLogDeliveryPropertyToTerraform(struct?: AwsMskReplicator.LogDeliveryPropertyOutputReference | AwsMskReplicator.LogDeliveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    replicator_log_delivery: awsMskReplicatorReplicatorLogDeliveryPropertyToTerraform(struct!.replicatorLogDelivery),
+  }
+}
+
+
+export function awsMskReplicatorLogDeliveryPropertyToHclTerraform(struct?: AwsMskReplicator.LogDeliveryPropertyOutputReference | AwsMskReplicator.LogDeliveryProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    replicator_log_delivery: {
+      value: awsMskReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct!.replicatorLogDelivery),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ReplicatorLogDeliveryPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorConsumerGroupReplicationPropertyToTerraform(struct?: AwsMskReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    consumer_group_offset_sync_mode: cdktn.stringToTerraform(struct!.consumerGroupOffsetSyncMode),
+    consumer_groups_to_exclude: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.consumerGroupsToExclude),
+    consumer_groups_to_replicate: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.consumerGroupsToReplicate),
+    detect_and_copy_new_consumer_groups: cdktn.booleanToTerraform(struct!.detectAndCopyNewConsumerGroups),
+    synchronise_consumer_group_offsets: cdktn.booleanToTerraform(struct!.synchroniseConsumerGroupOffsets),
+  }
+}
+
+
+export function awsMskReplicatorConsumerGroupReplicationPropertyToHclTerraform(struct?: AwsMskReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    consumer_group_offset_sync_mode: {
+      value: cdktn.stringToHclTerraform(struct!.consumerGroupOffsetSyncMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    consumer_groups_to_exclude: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.consumerGroupsToExclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    consumer_groups_to_replicate: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.consumerGroupsToReplicate),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    detect_and_copy_new_consumer_groups: {
+      value: cdktn.booleanToHclTerraform(struct!.detectAndCopyNewConsumerGroups),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    synchronise_consumer_group_offsets: {
+      value: cdktn.booleanToHclTerraform(struct!.synchroniseConsumerGroupOffsets),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorStartingPositionPropertyToTerraform(struct?: AwsMskReplicator.StartingPositionPropertyOutputReference | AwsMskReplicator.StartingPositionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsMskReplicatorStartingPositionPropertyToHclTerraform(struct?: AwsMskReplicator.StartingPositionPropertyOutputReference | AwsMskReplicator.StartingPositionProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorTopicNameConfigurationPropertyToTerraform(struct?: AwsMskReplicator.TopicNameConfigurationPropertyOutputReference | AwsMskReplicator.TopicNameConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsMskReplicatorTopicNameConfigurationPropertyToHclTerraform(struct?: AwsMskReplicator.TopicNameConfigurationPropertyOutputReference | AwsMskReplicator.TopicNameConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorTopicReplicationPropertyToTerraform(struct?: AwsMskReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    copy_access_control_lists_for_topics: cdktn.booleanToTerraform(struct!.copyAccessControlListsForTopics),
+    copy_topic_configurations: cdktn.booleanToTerraform(struct!.copyTopicConfigurations),
+    detect_and_copy_new_topics: cdktn.booleanToTerraform(struct!.detectAndCopyNewTopics),
+    topics_to_exclude: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.topicsToExclude),
+    topics_to_replicate: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.topicsToReplicate),
+    starting_position: awsMskReplicatorStartingPositionPropertyToTerraform(struct!.startingPosition),
+    topic_name_configuration: awsMskReplicatorTopicNameConfigurationPropertyToTerraform(struct!.topicNameConfiguration),
+  }
+}
+
+
+export function awsMskReplicatorTopicReplicationPropertyToHclTerraform(struct?: AwsMskReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    copy_access_control_lists_for_topics: {
+      value: cdktn.booleanToHclTerraform(struct!.copyAccessControlListsForTopics),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    copy_topic_configurations: {
+      value: cdktn.booleanToHclTerraform(struct!.copyTopicConfigurations),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    detect_and_copy_new_topics: {
+      value: cdktn.booleanToHclTerraform(struct!.detectAndCopyNewTopics),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    topics_to_exclude: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.topicsToExclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    topics_to_replicate: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.topicsToReplicate),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    starting_position: {
+      value: awsMskReplicatorStartingPositionPropertyToHclTerraform(struct!.startingPosition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StartingPositionPropertyList",
+    },
+    topic_name_configuration: {
+      value: awsMskReplicatorTopicNameConfigurationPropertyToHclTerraform(struct!.topicNameConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TopicNameConfigurationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorReplicationInfoListPropertyToTerraform(struct?: AwsMskReplicator.ReplicationInfoListPropertyOutputReference | AwsMskReplicator.ReplicationInfoListProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    source_kafka_cluster_arn: cdktn.stringToTerraform(struct!.sourceKafkaClusterArn),
+    target_compression_type: cdktn.stringToTerraform(struct!.targetCompressionType),
+    target_kafka_cluster_arn: cdktn.stringToTerraform(struct!.targetKafkaClusterArn),
+    consumer_group_replication: cdktn.listMapper(awsMskReplicatorConsumerGroupReplicationPropertyToTerraform, true)(struct!.consumerGroupReplication),
+    topic_replication: cdktn.listMapper(awsMskReplicatorTopicReplicationPropertyToTerraform, true)(struct!.topicReplication),
+  }
+}
+
+
+export function awsMskReplicatorReplicationInfoListPropertyToHclTerraform(struct?: AwsMskReplicator.ReplicationInfoListPropertyOutputReference | AwsMskReplicator.ReplicationInfoListProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    source_kafka_cluster_arn: {
+      value: cdktn.stringToHclTerraform(struct!.sourceKafkaClusterArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_compression_type: {
+      value: cdktn.stringToHclTerraform(struct!.targetCompressionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_kafka_cluster_arn: {
+      value: cdktn.stringToHclTerraform(struct!.targetKafkaClusterArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    consumer_group_replication: {
+      value: cdktn.listMapperHcl(awsMskReplicatorConsumerGroupReplicationPropertyToHclTerraform, true)(struct!.consumerGroupReplication),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumerGroupReplicationPropertyList",
+    },
+    topic_replication: {
+      value: cdktn.listMapperHcl(awsMskReplicatorTopicReplicationPropertyToHclTerraform, true)(struct!.topicReplication),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TopicReplicationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsMskReplicatorTimeoutsPropertyToTerraform(struct?: AwsMskReplicator.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsMskReplicatorTimeoutsPropertyToHclTerraform(struct?: AwsMskReplicator.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsMskReplicator {
+export interface AmazonMskClusterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#msk_cluster_arn AwsMskReplicator#msk_cluster_arn}
+  */
+  readonly mskClusterArn: string;
+}
+export class AmazonMskClusterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AmazonMskClusterProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mskClusterArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mskClusterArn = this._mskClusterArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AmazonMskClusterProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._mskClusterArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._mskClusterArn = value.mskClusterArn;
+    }
+  }
+
+  // msk_cluster_arn - computed: false, optional: false, required: true
+  private _mskClusterArn?: string; 
+  public get mskClusterArn() {
+    return this.getStringAttribute('msk_cluster_arn');
+  }
+  public set mskClusterArn(value: string) {
+    this._mskClusterArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mskClusterArnInput() {
+    return this._mskClusterArn;
+  }
+}
+export interface VpcConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#security_groups_ids AwsMskReplicator#security_groups_ids}
+  */
+  readonly securityGroupsIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#subnet_ids AwsMskReplicator#subnet_ids}
+  */
+  readonly subnetIds: string[];
+}
+export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._securityGroupsIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroupsIds = this._securityGroupsIds;
+    }
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._securityGroupsIds = undefined;
+      this._subnetIds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._securityGroupsIds = value.securityGroupsIds;
+      this._subnetIds = value.subnetIds;
+    }
+  }
+
+  // security_groups_ids - computed: false, optional: true, required: false
+  private _securityGroupsIds?: string[]; 
+  public get securityGroupsIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_groups_ids'));
+  }
+  public set securityGroupsIds(value: string[]) {
+    this._securityGroupsIds = value;
+  }
+  public resetSecurityGroupsIds() {
+    this._securityGroupsIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupsIdsInput() {
+    return this._securityGroupsIds;
+  }
+
+  // subnet_ids - computed: false, optional: false, required: true
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+}
+export interface KafkaClusterProperty {
+  /**
+  * amazon_msk_cluster block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#amazon_msk_cluster AwsMskReplicator#amazon_msk_cluster}
+  */
+  readonly amazonMskCluster: AmazonMskClusterProperty;
+  /**
+  * vpc_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#vpc_config AwsMskReplicator#vpc_config}
+  */
+  readonly vpcConfig: VpcConfigProperty;
+}
+export class KafkaClusterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KafkaClusterProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._amazonMskCluster?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.amazonMskCluster = this._amazonMskCluster?.internalValue;
+    }
+    if (this._vpcConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcConfig = this._vpcConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KafkaClusterProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._amazonMskCluster.internalValue = undefined;
+      this._vpcConfig.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._amazonMskCluster.internalValue = value.amazonMskCluster;
+      this._vpcConfig.internalValue = value.vpcConfig;
+    }
+  }
+
+  // amazon_msk_cluster - computed: false, optional: false, required: true
+  private _amazonMskCluster = new AmazonMskClusterPropertyOutputReference(this, "amazon_msk_cluster");
+  public get amazonMskCluster() {
+    return this._amazonMskCluster;
+  }
+  public putAmazonMskCluster(value: AmazonMskClusterProperty) {
+    this._amazonMskCluster.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get amazonMskClusterInput() {
+    return this._amazonMskCluster.internalValue;
+  }
+
+  // vpc_config - computed: false, optional: false, required: true
+  private _vpcConfig = new VpcConfigPropertyOutputReference(this, "vpc_config");
+  public get vpcConfig() {
+    return this._vpcConfig;
+  }
+  public putVpcConfig(value: VpcConfigProperty) {
+    this._vpcConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcConfigInput() {
+    return this._vpcConfig.internalValue;
+  }
+}
+
+export class KafkaClusterPropertyList extends cdktn.ComplexList {
+  public internalValue? : KafkaClusterProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KafkaClusterPropertyOutputReference {
+    return new KafkaClusterPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudwatchLogsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsMskReplicator#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_group AwsMskReplicator#log_group}
+  */
+  readonly logGroup?: string;
+}
+export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudwatchLogsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._logGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logGroup = this._logGroup;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudwatchLogsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._logGroup = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._logGroup = value.logGroup;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // log_group - computed: false, optional: true, required: false
+  private _logGroup?: string; 
+  public get logGroup() {
+    return this.getStringAttribute('log_group');
+  }
+  public set logGroup(value: string) {
+    this._logGroup = value;
+  }
+  public resetLogGroup() {
+    this._logGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logGroupInput() {
+    return this._logGroup;
+  }
+}
+export interface FirehoseProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delivery_stream AwsMskReplicator#delivery_stream}
+  */
+  readonly deliveryStream?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsMskReplicator#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+}
+export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): FirehoseProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deliveryStream !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deliveryStream = this._deliveryStream;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirehoseProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._deliveryStream = undefined;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._deliveryStream = value.deliveryStream;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // delivery_stream - computed: false, optional: true, required: false
+  private _deliveryStream?: string; 
+  public get deliveryStream() {
+    return this.getStringAttribute('delivery_stream');
+  }
+  public set deliveryStream(value: string) {
+    this._deliveryStream = value;
+  }
+  public resetDeliveryStream() {
+    this._deliveryStream = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryStreamInput() {
+    return this._deliveryStream;
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+export interface S3Property {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#bucket AwsMskReplicator#bucket}
+  */
+  readonly bucket?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsMskReplicator#enabled}
+  */
+  readonly enabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#prefix AwsMskReplicator#prefix}
+  */
+  readonly prefix?: string;
+}
+export class S3PropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): S3Property | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bucket !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: S3Property | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._bucket = undefined;
+      this._enabled = undefined;
+      this._prefix = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._bucket = value.bucket;
+      this._enabled = value.enabled;
+      this._prefix = value.prefix;
+    }
+  }
+
+  // bucket - computed: false, optional: true, required: false
+  private _bucket?: string; 
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+  public set bucket(value: string) {
+    this._bucket = value;
+  }
+  public resetBucket() {
+    this._bucket = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketInput() {
+    return this._bucket;
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+}
+export interface ReplicatorLogDeliveryProperty {
+  /**
+  * cloudwatch_logs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#cloudwatch_logs AwsMskReplicator#cloudwatch_logs}
+  */
+  readonly cloudwatchLogs?: CloudwatchLogsProperty;
+  /**
+  * firehose block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#firehose AwsMskReplicator#firehose}
+  */
+  readonly firehose?: FirehoseProperty;
+  /**
+  * s3 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#s3 AwsMskReplicator#s3}
+  */
+  readonly s3?: S3Property;
+}
+export class ReplicatorLogDeliveryPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ReplicatorLogDeliveryProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudwatchLogs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudwatchLogs = this._cloudwatchLogs?.internalValue;
+    }
+    if (this._firehose?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.firehose = this._firehose?.internalValue;
+    }
+    if (this._s3?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3 = this._s3?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReplicatorLogDeliveryProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cloudwatchLogs.internalValue = undefined;
+      this._firehose.internalValue = undefined;
+      this._s3.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cloudwatchLogs.internalValue = value.cloudwatchLogs;
+      this._firehose.internalValue = value.firehose;
+      this._s3.internalValue = value.s3;
+    }
+  }
+
+  // cloudwatch_logs - computed: false, optional: true, required: false
+  private _cloudwatchLogs = new CloudwatchLogsPropertyOutputReference(this, "cloudwatch_logs");
+  public get cloudwatchLogs() {
+    return this._cloudwatchLogs;
+  }
+  public putCloudwatchLogs(value: CloudwatchLogsProperty) {
+    this._cloudwatchLogs.internalValue = value;
+  }
+  public resetCloudwatchLogs() {
+    this._cloudwatchLogs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchLogsInput() {
+    return this._cloudwatchLogs.internalValue;
+  }
+
+  // firehose - computed: false, optional: true, required: false
+  private _firehose = new FirehosePropertyOutputReference(this, "firehose");
+  public get firehose() {
+    return this._firehose;
+  }
+  public putFirehose(value: FirehoseProperty) {
+    this._firehose.internalValue = value;
+  }
+  public resetFirehose() {
+    this._firehose.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firehoseInput() {
+    return this._firehose.internalValue;
+  }
+
+  // s3 - computed: false, optional: true, required: false
+  private _s3 = new S3PropertyOutputReference(this, "s3");
+  public get s3() {
+    return this._s3;
+  }
+  public putS3(value: S3Property) {
+    this._s3.internalValue = value;
+  }
+  public resetS3() {
+    this._s3.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3Input() {
+    return this._s3.internalValue;
+  }
+}
+export interface LogDeliveryProperty {
+  /**
+  * replicator_log_delivery block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_log_delivery AwsMskReplicator#replicator_log_delivery}
+  */
+  readonly replicatorLogDelivery?: ReplicatorLogDeliveryProperty;
+}
+export class LogDeliveryPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LogDeliveryProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._replicatorLogDelivery?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicatorLogDelivery = this._replicatorLogDelivery?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogDeliveryProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._replicatorLogDelivery.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._replicatorLogDelivery.internalValue = value.replicatorLogDelivery;
+    }
+  }
+
+  // replicator_log_delivery - computed: false, optional: true, required: false
+  private _replicatorLogDelivery = new ReplicatorLogDeliveryPropertyOutputReference(this, "replicator_log_delivery");
+  public get replicatorLogDelivery() {
+    return this._replicatorLogDelivery;
+  }
+  public putReplicatorLogDelivery(value: ReplicatorLogDeliveryProperty) {
+    this._replicatorLogDelivery.internalValue = value;
+  }
+  public resetReplicatorLogDelivery() {
+    this._replicatorLogDelivery.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicatorLogDeliveryInput() {
+    return this._replicatorLogDelivery.internalValue;
+  }
+}
+export interface ConsumerGroupReplicationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_offset_sync_mode AwsMskReplicator#consumer_group_offset_sync_mode}
+  */
+  readonly consumerGroupOffsetSyncMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_exclude AwsMskReplicator#consumer_groups_to_exclude}
+  */
+  readonly consumerGroupsToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_replicate AwsMskReplicator#consumer_groups_to_replicate}
+  */
+  readonly consumerGroupsToReplicate: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_consumer_groups AwsMskReplicator#detect_and_copy_new_consumer_groups}
+  */
+  readonly detectAndCopyNewConsumerGroups?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#synchronise_consumer_group_offsets AwsMskReplicator#synchronise_consumer_group_offsets}
+  */
+  readonly synchroniseConsumerGroupOffsets?: boolean | cdktn.IResolvable;
+}
+export class ConsumerGroupReplicationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConsumerGroupReplicationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumerGroupOffsetSyncMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerGroupOffsetSyncMode = this._consumerGroupOffsetSyncMode;
+    }
+    if (this._consumerGroupsToExclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerGroupsToExclude = this._consumerGroupsToExclude;
+    }
+    if (this._consumerGroupsToReplicate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerGroupsToReplicate = this._consumerGroupsToReplicate;
+    }
+    if (this._detectAndCopyNewConsumerGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.detectAndCopyNewConsumerGroups = this._detectAndCopyNewConsumerGroups;
+    }
+    if (this._synchroniseConsumerGroupOffsets !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.synchroniseConsumerGroupOffsets = this._synchroniseConsumerGroupOffsets;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumerGroupReplicationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._consumerGroupOffsetSyncMode = undefined;
+      this._consumerGroupsToExclude = undefined;
+      this._consumerGroupsToReplicate = undefined;
+      this._detectAndCopyNewConsumerGroups = undefined;
+      this._synchroniseConsumerGroupOffsets = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._consumerGroupOffsetSyncMode = value.consumerGroupOffsetSyncMode;
+      this._consumerGroupsToExclude = value.consumerGroupsToExclude;
+      this._consumerGroupsToReplicate = value.consumerGroupsToReplicate;
+      this._detectAndCopyNewConsumerGroups = value.detectAndCopyNewConsumerGroups;
+      this._synchroniseConsumerGroupOffsets = value.synchroniseConsumerGroupOffsets;
+    }
+  }
+
+  // consumer_group_offset_sync_mode - computed: true, optional: true, required: false
+  private _consumerGroupOffsetSyncMode?: string; 
+  public get consumerGroupOffsetSyncMode() {
+    return this.getStringAttribute('consumer_group_offset_sync_mode');
+  }
+  public set consumerGroupOffsetSyncMode(value: string) {
+    this._consumerGroupOffsetSyncMode = value;
+  }
+  public resetConsumerGroupOffsetSyncMode() {
+    this._consumerGroupOffsetSyncMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerGroupOffsetSyncModeInput() {
+    return this._consumerGroupOffsetSyncMode;
+  }
+
+  // consumer_groups_to_exclude - computed: true, optional: true, required: false
+  private _consumerGroupsToExclude?: string[]; 
+  public get consumerGroupsToExclude() {
+    return cdktn.Fn.tolist(this.getListAttribute('consumer_groups_to_exclude'));
+  }
+  public set consumerGroupsToExclude(value: string[]) {
+    this._consumerGroupsToExclude = value;
+  }
+  public resetConsumerGroupsToExclude() {
+    this._consumerGroupsToExclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerGroupsToExcludeInput() {
+    return this._consumerGroupsToExclude;
+  }
+
+  // consumer_groups_to_replicate - computed: false, optional: false, required: true
+  private _consumerGroupsToReplicate?: string[]; 
+  public get consumerGroupsToReplicate() {
+    return cdktn.Fn.tolist(this.getListAttribute('consumer_groups_to_replicate'));
+  }
+  public set consumerGroupsToReplicate(value: string[]) {
+    this._consumerGroupsToReplicate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerGroupsToReplicateInput() {
+    return this._consumerGroupsToReplicate;
+  }
+
+  // detect_and_copy_new_consumer_groups - computed: false, optional: true, required: false
+  private _detectAndCopyNewConsumerGroups?: boolean | cdktn.IResolvable; 
+  public get detectAndCopyNewConsumerGroups() {
+    return this.getBooleanAttribute('detect_and_copy_new_consumer_groups');
+  }
+  public set detectAndCopyNewConsumerGroups(value: boolean | cdktn.IResolvable) {
+    this._detectAndCopyNewConsumerGroups = value;
+  }
+  public resetDetectAndCopyNewConsumerGroups() {
+    this._detectAndCopyNewConsumerGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get detectAndCopyNewConsumerGroupsInput() {
+    return this._detectAndCopyNewConsumerGroups;
+  }
+
+  // synchronise_consumer_group_offsets - computed: false, optional: true, required: false
+  private _synchroniseConsumerGroupOffsets?: boolean | cdktn.IResolvable; 
+  public get synchroniseConsumerGroupOffsets() {
+    return this.getBooleanAttribute('synchronise_consumer_group_offsets');
+  }
+  public set synchroniseConsumerGroupOffsets(value: boolean | cdktn.IResolvable) {
+    this._synchroniseConsumerGroupOffsets = value;
+  }
+  public resetSynchroniseConsumerGroupOffsets() {
+    this._synchroniseConsumerGroupOffsets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get synchroniseConsumerGroupOffsetsInput() {
+    return this._synchroniseConsumerGroupOffsets;
+  }
+}
+
+export class ConsumerGroupReplicationPropertyList extends cdktn.ComplexList {
+  public internalValue? : ConsumerGroupReplicationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConsumerGroupReplicationPropertyOutputReference {
+    return new ConsumerGroupReplicationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface StartingPositionProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type AwsMskReplicator#type}
+  */
+  readonly type?: string;
+}
+export class StartingPositionPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StartingPositionProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StartingPositionProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface TopicNameConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type AwsMskReplicator#type}
+  */
+  readonly type?: string;
+}
+export class TopicNameConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): TopicNameConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TopicNameConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface TopicReplicationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_access_control_lists_for_topics AwsMskReplicator#copy_access_control_lists_for_topics}
+  */
+  readonly copyAccessControlListsForTopics?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_topic_configurations AwsMskReplicator#copy_topic_configurations}
+  */
+  readonly copyTopicConfigurations?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_topics AwsMskReplicator#detect_and_copy_new_topics}
+  */
+  readonly detectAndCopyNewTopics?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_exclude AwsMskReplicator#topics_to_exclude}
+  */
+  readonly topicsToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_replicate AwsMskReplicator#topics_to_replicate}
+  */
+  readonly topicsToReplicate: string[];
+  /**
+  * starting_position block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#starting_position AwsMskReplicator#starting_position}
+  */
+  readonly startingPosition?: StartingPositionProperty;
+  /**
+  * topic_name_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_name_configuration AwsMskReplicator#topic_name_configuration}
+  */
+  readonly topicNameConfiguration?: TopicNameConfigurationProperty;
+}
+export class TopicReplicationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TopicReplicationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._copyAccessControlListsForTopics !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.copyAccessControlListsForTopics = this._copyAccessControlListsForTopics;
+    }
+    if (this._copyTopicConfigurations !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.copyTopicConfigurations = this._copyTopicConfigurations;
+    }
+    if (this._detectAndCopyNewTopics !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.detectAndCopyNewTopics = this._detectAndCopyNewTopics;
+    }
+    if (this._topicsToExclude !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topicsToExclude = this._topicsToExclude;
+    }
+    if (this._topicsToReplicate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topicsToReplicate = this._topicsToReplicate;
+    }
+    if (this._startingPosition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startingPosition = this._startingPosition?.internalValue;
+    }
+    if (this._topicNameConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topicNameConfiguration = this._topicNameConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TopicReplicationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._copyAccessControlListsForTopics = undefined;
+      this._copyTopicConfigurations = undefined;
+      this._detectAndCopyNewTopics = undefined;
+      this._topicsToExclude = undefined;
+      this._topicsToReplicate = undefined;
+      this._startingPosition.internalValue = undefined;
+      this._topicNameConfiguration.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._copyAccessControlListsForTopics = value.copyAccessControlListsForTopics;
+      this._copyTopicConfigurations = value.copyTopicConfigurations;
+      this._detectAndCopyNewTopics = value.detectAndCopyNewTopics;
+      this._topicsToExclude = value.topicsToExclude;
+      this._topicsToReplicate = value.topicsToReplicate;
+      this._startingPosition.internalValue = value.startingPosition;
+      this._topicNameConfiguration.internalValue = value.topicNameConfiguration;
+    }
+  }
+
+  // copy_access_control_lists_for_topics - computed: false, optional: true, required: false
+  private _copyAccessControlListsForTopics?: boolean | cdktn.IResolvable; 
+  public get copyAccessControlListsForTopics() {
+    return this.getBooleanAttribute('copy_access_control_lists_for_topics');
+  }
+  public set copyAccessControlListsForTopics(value: boolean | cdktn.IResolvable) {
+    this._copyAccessControlListsForTopics = value;
+  }
+  public resetCopyAccessControlListsForTopics() {
+    this._copyAccessControlListsForTopics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyAccessControlListsForTopicsInput() {
+    return this._copyAccessControlListsForTopics;
+  }
+
+  // copy_topic_configurations - computed: false, optional: true, required: false
+  private _copyTopicConfigurations?: boolean | cdktn.IResolvable; 
+  public get copyTopicConfigurations() {
+    return this.getBooleanAttribute('copy_topic_configurations');
+  }
+  public set copyTopicConfigurations(value: boolean | cdktn.IResolvable) {
+    this._copyTopicConfigurations = value;
+  }
+  public resetCopyTopicConfigurations() {
+    this._copyTopicConfigurations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyTopicConfigurationsInput() {
+    return this._copyTopicConfigurations;
+  }
+
+  // detect_and_copy_new_topics - computed: false, optional: true, required: false
+  private _detectAndCopyNewTopics?: boolean | cdktn.IResolvable; 
+  public get detectAndCopyNewTopics() {
+    return this.getBooleanAttribute('detect_and_copy_new_topics');
+  }
+  public set detectAndCopyNewTopics(value: boolean | cdktn.IResolvable) {
+    this._detectAndCopyNewTopics = value;
+  }
+  public resetDetectAndCopyNewTopics() {
+    this._detectAndCopyNewTopics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get detectAndCopyNewTopicsInput() {
+    return this._detectAndCopyNewTopics;
+  }
+
+  // topics_to_exclude - computed: true, optional: true, required: false
+  private _topicsToExclude?: string[]; 
+  public get topicsToExclude() {
+    return cdktn.Fn.tolist(this.getListAttribute('topics_to_exclude'));
+  }
+  public set topicsToExclude(value: string[]) {
+    this._topicsToExclude = value;
+  }
+  public resetTopicsToExclude() {
+    this._topicsToExclude = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicsToExcludeInput() {
+    return this._topicsToExclude;
+  }
+
+  // topics_to_replicate - computed: false, optional: false, required: true
+  private _topicsToReplicate?: string[]; 
+  public get topicsToReplicate() {
+    return cdktn.Fn.tolist(this.getListAttribute('topics_to_replicate'));
+  }
+  public set topicsToReplicate(value: string[]) {
+    this._topicsToReplicate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicsToReplicateInput() {
+    return this._topicsToReplicate;
+  }
+
+  // starting_position - computed: false, optional: true, required: false
+  private _startingPosition = new StartingPositionPropertyOutputReference(this, "starting_position");
+  public get startingPosition() {
+    return this._startingPosition;
+  }
+  public putStartingPosition(value: StartingPositionProperty) {
+    this._startingPosition.internalValue = value;
+  }
+  public resetStartingPosition() {
+    this._startingPosition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startingPositionInput() {
+    return this._startingPosition.internalValue;
+  }
+
+  // topic_name_configuration - computed: false, optional: true, required: false
+  private _topicNameConfiguration = new TopicNameConfigurationPropertyOutputReference(this, "topic_name_configuration");
+  public get topicNameConfiguration() {
+    return this._topicNameConfiguration;
+  }
+  public putTopicNameConfiguration(value: TopicNameConfigurationProperty) {
+    this._topicNameConfiguration.internalValue = value;
+  }
+  public resetTopicNameConfiguration() {
+    this._topicNameConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicNameConfigurationInput() {
+    return this._topicNameConfiguration.internalValue;
+  }
+}
+
+export class TopicReplicationPropertyList extends cdktn.ComplexList {
+  public internalValue? : TopicReplicationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TopicReplicationPropertyOutputReference {
+    return new TopicReplicationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ReplicationInfoListProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#source_kafka_cluster_arn AwsMskReplicator#source_kafka_cluster_arn}
+  */
+  readonly sourceKafkaClusterArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_compression_type AwsMskReplicator#target_compression_type}
+  */
+  readonly targetCompressionType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_kafka_cluster_arn AwsMskReplicator#target_kafka_cluster_arn}
+  */
+  readonly targetKafkaClusterArn: string;
+  /**
+  * consumer_group_replication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_replication AwsMskReplicator#consumer_group_replication}
+  */
+  readonly consumerGroupReplication: ConsumerGroupReplicationProperty[] | cdktn.IResolvable;
+  /**
+  * topic_replication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_replication AwsMskReplicator#topic_replication}
+  */
+  readonly topicReplication: TopicReplicationProperty[] | cdktn.IResolvable;
+}
+export class ReplicationInfoListPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ReplicationInfoListProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceKafkaClusterArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceKafkaClusterArn = this._sourceKafkaClusterArn;
+    }
+    if (this._targetCompressionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetCompressionType = this._targetCompressionType;
+    }
+    if (this._targetKafkaClusterArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetKafkaClusterArn = this._targetKafkaClusterArn;
+    }
+    if (this._consumerGroupReplication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumerGroupReplication = this._consumerGroupReplication?.internalValue;
+    }
+    if (this._topicReplication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topicReplication = this._topicReplication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReplicationInfoListProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sourceKafkaClusterArn = undefined;
+      this._targetCompressionType = undefined;
+      this._targetKafkaClusterArn = undefined;
+      this._consumerGroupReplication.internalValue = undefined;
+      this._topicReplication.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sourceKafkaClusterArn = value.sourceKafkaClusterArn;
+      this._targetCompressionType = value.targetCompressionType;
+      this._targetKafkaClusterArn = value.targetKafkaClusterArn;
+      this._consumerGroupReplication.internalValue = value.consumerGroupReplication;
+      this._topicReplication.internalValue = value.topicReplication;
+    }
+  }
+
+  // source_kafka_cluster_alias - computed: true, optional: false, required: false
+  public get sourceKafkaClusterAlias() {
+    return this.getStringAttribute('source_kafka_cluster_alias');
+  }
+
+  // source_kafka_cluster_arn - computed: false, optional: false, required: true
+  private _sourceKafkaClusterArn?: string; 
+  public get sourceKafkaClusterArn() {
+    return this.getStringAttribute('source_kafka_cluster_arn');
+  }
+  public set sourceKafkaClusterArn(value: string) {
+    this._sourceKafkaClusterArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceKafkaClusterArnInput() {
+    return this._sourceKafkaClusterArn;
+  }
+
+  // target_compression_type - computed: false, optional: false, required: true
+  private _targetCompressionType?: string; 
+  public get targetCompressionType() {
+    return this.getStringAttribute('target_compression_type');
+  }
+  public set targetCompressionType(value: string) {
+    this._targetCompressionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetCompressionTypeInput() {
+    return this._targetCompressionType;
+  }
+
+  // target_kafka_cluster_alias - computed: true, optional: false, required: false
+  public get targetKafkaClusterAlias() {
+    return this.getStringAttribute('target_kafka_cluster_alias');
+  }
+
+  // target_kafka_cluster_arn - computed: false, optional: false, required: true
+  private _targetKafkaClusterArn?: string; 
+  public get targetKafkaClusterArn() {
+    return this.getStringAttribute('target_kafka_cluster_arn');
+  }
+  public set targetKafkaClusterArn(value: string) {
+    this._targetKafkaClusterArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetKafkaClusterArnInput() {
+    return this._targetKafkaClusterArn;
+  }
+
+  // consumer_group_replication - computed: false, optional: false, required: true
+  private _consumerGroupReplication = new ConsumerGroupReplicationPropertyList(this, "consumer_group_replication", false);
+  public get consumerGroupReplication() {
+    return this._consumerGroupReplication;
+  }
+  public putConsumerGroupReplication(value: ConsumerGroupReplicationProperty[] | cdktn.IResolvable) {
+    this._consumerGroupReplication.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerGroupReplicationInput() {
+    return this._consumerGroupReplication.internalValue;
+  }
+
+  // topic_replication - computed: false, optional: false, required: true
+  private _topicReplication = new TopicReplicationPropertyList(this, "topic_replication", false);
+  public get topicReplication() {
+    return this._topicReplication;
+  }
+  public putTopicReplication(value: TopicReplicationProperty[] | cdktn.IResolvable) {
+    this._topicReplication.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicReplicationInput() {
+    return this._topicReplication.internalValue;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#create AwsMskReplicator#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delete AwsMskReplicator#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#update AwsMskReplicator#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

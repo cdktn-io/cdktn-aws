@@ -1,0 +1,674 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsKmsKeyConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#bypass_policy_lockout_safety_check AwsKmsKey#bypass_policy_lockout_safety_check}
+  */
+  readonly bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#custom_key_store_id AwsKmsKey#custom_key_store_id}
+  */
+  readonly customKeyStoreId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#customer_master_key_spec AwsKmsKey#customer_master_key_spec}
+  */
+  readonly customerMasterKeySpec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#deletion_window_in_days AwsKmsKey#deletion_window_in_days}
+  */
+  readonly deletionWindowInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#description AwsKmsKey#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#enable_key_rotation AwsKmsKey#enable_key_rotation}
+  */
+  readonly enableKeyRotation?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#id AwsKmsKey#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#is_enabled AwsKmsKey#is_enabled}
+  */
+  readonly isEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#key_usage AwsKmsKey#key_usage}
+  */
+  readonly keyUsage?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#multi_region AwsKmsKey#multi_region}
+  */
+  readonly multiRegion?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#policy AwsKmsKey#policy}
+  */
+  readonly policy?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#region AwsKmsKey#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#rotation_period_in_days AwsKmsKey#rotation_period_in_days}
+  */
+  readonly rotationPeriodInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags AwsKmsKey#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#tags_all AwsKmsKey#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#xks_key_id AwsKmsKey#xks_key_id}
+  */
+  readonly xksKeyId?: string;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#timeouts AwsKmsKey#timeouts}
+  */
+  readonly timeouts?: AwsKmsKey.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key aws_kms_key}
+*/
+export class AwsKmsKey extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_kms_key";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsKmsKey resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsKmsKey to import
+  * @param importFromId The id of the existing AwsKmsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKmsKey to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_key", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key aws_kms_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsKmsKeyConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsKmsKeyConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_kms_key',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._bypassPolicyLockoutSafetyCheck = config.bypassPolicyLockoutSafetyCheck;
+    this._customKeyStoreId = config.customKeyStoreId;
+    this._customerMasterKeySpec = config.customerMasterKeySpec;
+    this._deletionWindowInDays = config.deletionWindowInDays;
+    this._description = config.description;
+    this._enableKeyRotation = config.enableKeyRotation;
+    this._id = config.id;
+    this._isEnabled = config.isEnabled;
+    this._keyUsage = config.keyUsage;
+    this._multiRegion = config.multiRegion;
+    this._policy = config.policy;
+    this._region = config.region;
+    this._rotationPeriodInDays = config.rotationPeriodInDays;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._xksKeyId = config.xksKeyId;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // bypass_policy_lockout_safety_check - computed: false, optional: true, required: false
+  private _bypassPolicyLockoutSafetyCheck?: boolean | cdktn.IResolvable; 
+  public get bypassPolicyLockoutSafetyCheck() {
+    return this.getBooleanAttribute('bypass_policy_lockout_safety_check');
+  }
+  public set bypassPolicyLockoutSafetyCheck(value: boolean | cdktn.IResolvable) {
+    this._bypassPolicyLockoutSafetyCheck = value;
+  }
+  public resetBypassPolicyLockoutSafetyCheck() {
+    this._bypassPolicyLockoutSafetyCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bypassPolicyLockoutSafetyCheckInput() {
+    return this._bypassPolicyLockoutSafetyCheck;
+  }
+
+  // custom_key_store_id - computed: false, optional: true, required: false
+  private _customKeyStoreId?: string; 
+  public get customKeyStoreId() {
+    return this.getStringAttribute('custom_key_store_id');
+  }
+  public set customKeyStoreId(value: string) {
+    this._customKeyStoreId = value;
+  }
+  public resetCustomKeyStoreId() {
+    this._customKeyStoreId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customKeyStoreIdInput() {
+    return this._customKeyStoreId;
+  }
+
+  // customer_master_key_spec - computed: false, optional: true, required: false
+  private _customerMasterKeySpec?: string; 
+  public get customerMasterKeySpec() {
+    return this.getStringAttribute('customer_master_key_spec');
+  }
+  public set customerMasterKeySpec(value: string) {
+    this._customerMasterKeySpec = value;
+  }
+  public resetCustomerMasterKeySpec() {
+    this._customerMasterKeySpec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerMasterKeySpecInput() {
+    return this._customerMasterKeySpec;
+  }
+
+  // deletion_window_in_days - computed: false, optional: true, required: false
+  private _deletionWindowInDays?: number; 
+  public get deletionWindowInDays() {
+    return this.getNumberAttribute('deletion_window_in_days');
+  }
+  public set deletionWindowInDays(value: number) {
+    this._deletionWindowInDays = value;
+  }
+  public resetDeletionWindowInDays() {
+    this._deletionWindowInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionWindowInDaysInput() {
+    return this._deletionWindowInDays;
+  }
+
+  // description - computed: true, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // enable_key_rotation - computed: false, optional: true, required: false
+  private _enableKeyRotation?: boolean | cdktn.IResolvable; 
+  public get enableKeyRotation() {
+    return this.getBooleanAttribute('enable_key_rotation');
+  }
+  public set enableKeyRotation(value: boolean | cdktn.IResolvable) {
+    this._enableKeyRotation = value;
+  }
+  public resetEnableKeyRotation() {
+    this._enableKeyRotation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableKeyRotationInput() {
+    return this._enableKeyRotation;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // is_enabled - computed: false, optional: true, required: false
+  private _isEnabled?: boolean | cdktn.IResolvable; 
+  public get isEnabled() {
+    return this.getBooleanAttribute('is_enabled');
+  }
+  public set isEnabled(value: boolean | cdktn.IResolvable) {
+    this._isEnabled = value;
+  }
+  public resetIsEnabled() {
+    this._isEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isEnabledInput() {
+    return this._isEnabled;
+  }
+
+  // key_id - computed: true, optional: false, required: false
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+
+  // key_usage - computed: false, optional: true, required: false
+  private _keyUsage?: string; 
+  public get keyUsage() {
+    return this.getStringAttribute('key_usage');
+  }
+  public set keyUsage(value: string) {
+    this._keyUsage = value;
+  }
+  public resetKeyUsage() {
+    this._keyUsage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyUsageInput() {
+    return this._keyUsage;
+  }
+
+  // multi_region - computed: true, optional: true, required: false
+  private _multiRegion?: boolean | cdktn.IResolvable; 
+  public get multiRegion() {
+    return this.getBooleanAttribute('multi_region');
+  }
+  public set multiRegion(value: boolean | cdktn.IResolvable) {
+    this._multiRegion = value;
+  }
+  public resetMultiRegion() {
+    this._multiRegion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiRegionInput() {
+    return this._multiRegion;
+  }
+
+  // policy - computed: true, optional: true, required: false
+  private _policy?: string; 
+  public get policy() {
+    return this.getStringAttribute('policy');
+  }
+  public set policy(value: string) {
+    this._policy = value;
+  }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // rotation_period_in_days - computed: true, optional: true, required: false
+  private _rotationPeriodInDays?: number; 
+  public get rotationPeriodInDays() {
+    return this.getNumberAttribute('rotation_period_in_days');
+  }
+  public set rotationPeriodInDays(value: number) {
+    this._rotationPeriodInDays = value;
+  }
+  public resetRotationPeriodInDays() {
+    this._rotationPeriodInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rotationPeriodInDaysInput() {
+    return this._rotationPeriodInDays;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // xks_key_id - computed: false, optional: true, required: false
+  private _xksKeyId?: string; 
+  public get xksKeyId() {
+    return this.getStringAttribute('xks_key_id');
+  }
+  public set xksKeyId(value: string) {
+    this._xksKeyId = value;
+  }
+  public resetXksKeyId() {
+    this._xksKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xksKeyIdInput() {
+    return this._xksKeyId;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsKmsKey.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsKmsKey.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      bypass_policy_lockout_safety_check: cdktn.booleanToTerraform(this._bypassPolicyLockoutSafetyCheck),
+      custom_key_store_id: cdktn.stringToTerraform(this._customKeyStoreId),
+      customer_master_key_spec: cdktn.stringToTerraform(this._customerMasterKeySpec),
+      deletion_window_in_days: cdktn.numberToTerraform(this._deletionWindowInDays),
+      description: cdktn.stringToTerraform(this._description),
+      enable_key_rotation: cdktn.booleanToTerraform(this._enableKeyRotation),
+      id: cdktn.stringToTerraform(this._id),
+      is_enabled: cdktn.booleanToTerraform(this._isEnabled),
+      key_usage: cdktn.stringToTerraform(this._keyUsage),
+      multi_region: cdktn.booleanToTerraform(this._multiRegion),
+      policy: cdktn.stringToTerraform(this._policy),
+      region: cdktn.stringToTerraform(this._region),
+      rotation_period_in_days: cdktn.numberToTerraform(this._rotationPeriodInDays),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      xks_key_id: cdktn.stringToTerraform(this._xksKeyId),
+      timeouts: awsKmsKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bypass_policy_lockout_safety_check: {
+        value: cdktn.booleanToHclTerraform(this._bypassPolicyLockoutSafetyCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      custom_key_store_id: {
+        value: cdktn.stringToHclTerraform(this._customKeyStoreId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      customer_master_key_spec: {
+        value: cdktn.stringToHclTerraform(this._customerMasterKeySpec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deletion_window_in_days: {
+        value: cdktn.numberToHclTerraform(this._deletionWindowInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_key_rotation: {
+        value: cdktn.booleanToHclTerraform(this._enableKeyRotation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_enabled: {
+        value: cdktn.booleanToHclTerraform(this._isEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      key_usage: {
+        value: cdktn.stringToHclTerraform(this._keyUsage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_region: {
+        value: cdktn.booleanToHclTerraform(this._multiRegion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      policy: {
+        value: cdktn.stringToHclTerraform(this._policy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rotation_period_in_days: {
+        value: cdktn.numberToHclTerraform(this._rotationPeriodInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      xks_key_id: {
+        value: cdktn.stringToHclTerraform(this._xksKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: awsKmsKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsKmsKey.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsKmsKeyTimeoutsPropertyToTerraform(struct?: AwsKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+  }
+}
+
+
+export function awsKmsKeyTimeoutsPropertyToHclTerraform(struct?: AwsKmsKey.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsKmsKey {
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kms_key#create AwsKmsKey#create}
+  */
+  readonly create?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+}
+}

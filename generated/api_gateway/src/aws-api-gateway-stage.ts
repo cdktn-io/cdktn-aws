@@ -1,0 +1,846 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsApiGatewayStageConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_enabled AwsApiGatewayStage#cache_cluster_enabled}
+  */
+  readonly cacheClusterEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_size AwsApiGatewayStage#cache_cluster_size}
+  */
+  readonly cacheClusterSize?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#client_certificate_id AwsApiGatewayStage#client_certificate_id}
+  */
+  readonly clientCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id AwsApiGatewayStage#deployment_id}
+  */
+  readonly deploymentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#description AwsApiGatewayStage#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#documentation_version AwsApiGatewayStage#documentation_version}
+  */
+  readonly documentationVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#id AwsApiGatewayStage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#region AwsApiGatewayStage#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#rest_api_id AwsApiGatewayStage#rest_api_id}
+  */
+  readonly restApiId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_name AwsApiGatewayStage#stage_name}
+  */
+  readonly stageName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags AwsApiGatewayStage#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags_all AwsApiGatewayStage#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#variables AwsApiGatewayStage#variables}
+  */
+  readonly variables?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#xray_tracing_enabled AwsApiGatewayStage#xray_tracing_enabled}
+  */
+  readonly xrayTracingEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * access_log_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#access_log_settings AwsApiGatewayStage#access_log_settings}
+  */
+  readonly accessLogSettings?: AwsApiGatewayStage.AccessLogSettingsProperty;
+  /**
+  * canary_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#canary_settings AwsApiGatewayStage#canary_settings}
+  */
+  readonly canarySettings?: AwsApiGatewayStage.CanarySettingsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage aws_api_gateway_stage}
+*/
+export class AwsApiGatewayStage extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_api_gateway_stage";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsApiGatewayStage resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsApiGatewayStage to import
+  * @param importFromId The id of the existing AwsApiGatewayStage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiGatewayStage to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_stage", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage aws_api_gateway_stage} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsApiGatewayStageConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsApiGatewayStageConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_api_gateway_stage',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._cacheClusterEnabled = config.cacheClusterEnabled;
+    this._cacheClusterSize = config.cacheClusterSize;
+    this._clientCertificateId = config.clientCertificateId;
+    this._deploymentId = config.deploymentId;
+    this._description = config.description;
+    this._documentationVersion = config.documentationVersion;
+    this._id = config.id;
+    this._region = config.region;
+    this._restApiId = config.restApiId;
+    this._stageName = config.stageName;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._variables = config.variables;
+    this._xrayTracingEnabled = config.xrayTracingEnabled;
+    this._accessLogSettings.internalValue = config.accessLogSettings;
+    this._canarySettings.internalValue = config.canarySettings;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // cache_cluster_enabled - computed: false, optional: true, required: false
+  private _cacheClusterEnabled?: boolean | cdktn.IResolvable; 
+  public get cacheClusterEnabled() {
+    return this.getBooleanAttribute('cache_cluster_enabled');
+  }
+  public set cacheClusterEnabled(value: boolean | cdktn.IResolvable) {
+    this._cacheClusterEnabled = value;
+  }
+  public resetCacheClusterEnabled() {
+    this._cacheClusterEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheClusterEnabledInput() {
+    return this._cacheClusterEnabled;
+  }
+
+  // cache_cluster_size - computed: false, optional: true, required: false
+  private _cacheClusterSize?: string; 
+  public get cacheClusterSize() {
+    return this.getStringAttribute('cache_cluster_size');
+  }
+  public set cacheClusterSize(value: string) {
+    this._cacheClusterSize = value;
+  }
+  public resetCacheClusterSize() {
+    this._cacheClusterSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheClusterSizeInput() {
+    return this._cacheClusterSize;
+  }
+
+  // client_certificate_id - computed: false, optional: true, required: false
+  private _clientCertificateId?: string; 
+  public get clientCertificateId() {
+    return this.getStringAttribute('client_certificate_id');
+  }
+  public set clientCertificateId(value: string) {
+    this._clientCertificateId = value;
+  }
+  public resetClientCertificateId() {
+    this._clientCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateIdInput() {
+    return this._clientCertificateId;
+  }
+
+  // deployment_id - computed: false, optional: false, required: true
+  private _deploymentId?: string; 
+  public get deploymentId() {
+    return this.getStringAttribute('deployment_id');
+  }
+  public set deploymentId(value: string) {
+    this._deploymentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentIdInput() {
+    return this._deploymentId;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // documentation_version - computed: false, optional: true, required: false
+  private _documentationVersion?: string; 
+  public get documentationVersion() {
+    return this.getStringAttribute('documentation_version');
+  }
+  public set documentationVersion(value: string) {
+    this._documentationVersion = value;
+  }
+  public resetDocumentationVersion() {
+    this._documentationVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentationVersionInput() {
+    return this._documentationVersion;
+  }
+
+  // execution_arn - computed: true, optional: false, required: false
+  public get executionArn() {
+    return this.getStringAttribute('execution_arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // invoke_url - computed: true, optional: false, required: false
+  public get invokeUrl() {
+    return this.getStringAttribute('invoke_url');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // rest_api_id - computed: false, optional: false, required: true
+  private _restApiId?: string; 
+  public get restApiId() {
+    return this.getStringAttribute('rest_api_id');
+  }
+  public set restApiId(value: string) {
+    this._restApiId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restApiIdInput() {
+    return this._restApiId;
+  }
+
+  // stage_name - computed: false, optional: false, required: true
+  private _stageName?: string; 
+  public get stageName() {
+    return this.getStringAttribute('stage_name');
+  }
+  public set stageName(value: string) {
+    this._stageName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stageNameInput() {
+    return this._stageName;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // variables - computed: false, optional: true, required: false
+  private _variables?: { [key: string]: string }; 
+  public get variables() {
+    return this.getStringMapAttribute('variables');
+  }
+  public set variables(value: { [key: string]: string }) {
+    this._variables = value;
+  }
+  public resetVariables() {
+    this._variables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get variablesInput() {
+    return this._variables;
+  }
+
+  // web_acl_arn - computed: true, optional: false, required: false
+  public get webAclArn() {
+    return this.getStringAttribute('web_acl_arn');
+  }
+
+  // xray_tracing_enabled - computed: false, optional: true, required: false
+  private _xrayTracingEnabled?: boolean | cdktn.IResolvable; 
+  public get xrayTracingEnabled() {
+    return this.getBooleanAttribute('xray_tracing_enabled');
+  }
+  public set xrayTracingEnabled(value: boolean | cdktn.IResolvable) {
+    this._xrayTracingEnabled = value;
+  }
+  public resetXrayTracingEnabled() {
+    this._xrayTracingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xrayTracingEnabledInput() {
+    return this._xrayTracingEnabled;
+  }
+
+  // access_log_settings - computed: false, optional: true, required: false
+  private _accessLogSettings = new AwsApiGatewayStage.AccessLogSettingsPropertyOutputReference(this, "access_log_settings");
+  public get accessLogSettings() {
+    return this._accessLogSettings;
+  }
+  public putAccessLogSettings(value: AwsApiGatewayStage.AccessLogSettingsProperty) {
+    this._accessLogSettings.internalValue = value;
+  }
+  public resetAccessLogSettings() {
+    this._accessLogSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessLogSettingsInput() {
+    return this._accessLogSettings.internalValue;
+  }
+
+  // canary_settings - computed: false, optional: true, required: false
+  private _canarySettings = new AwsApiGatewayStage.CanarySettingsPropertyOutputReference(this, "canary_settings");
+  public get canarySettings() {
+    return this._canarySettings;
+  }
+  public putCanarySettings(value: AwsApiGatewayStage.CanarySettingsProperty) {
+    this._canarySettings.internalValue = value;
+  }
+  public resetCanarySettings() {
+    this._canarySettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get canarySettingsInput() {
+    return this._canarySettings.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cache_cluster_enabled: cdktn.booleanToTerraform(this._cacheClusterEnabled),
+      cache_cluster_size: cdktn.stringToTerraform(this._cacheClusterSize),
+      client_certificate_id: cdktn.stringToTerraform(this._clientCertificateId),
+      deployment_id: cdktn.stringToTerraform(this._deploymentId),
+      description: cdktn.stringToTerraform(this._description),
+      documentation_version: cdktn.stringToTerraform(this._documentationVersion),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      rest_api_id: cdktn.stringToTerraform(this._restApiId),
+      stage_name: cdktn.stringToTerraform(this._stageName),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      variables: cdktn.hashMapper(cdktn.stringToTerraform)(this._variables),
+      xray_tracing_enabled: cdktn.booleanToTerraform(this._xrayTracingEnabled),
+      access_log_settings: awsApiGatewayStageAccessLogSettingsPropertyToTerraform(this._accessLogSettings.internalValue),
+      canary_settings: awsApiGatewayStageCanarySettingsPropertyToTerraform(this._canarySettings.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cache_cluster_enabled: {
+        value: cdktn.booleanToHclTerraform(this._cacheClusterEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cache_cluster_size: {
+        value: cdktn.stringToHclTerraform(this._cacheClusterSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_certificate_id: {
+        value: cdktn.stringToHclTerraform(this._clientCertificateId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      deployment_id: {
+        value: cdktn.stringToHclTerraform(this._deploymentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      documentation_version: {
+        value: cdktn.stringToHclTerraform(this._documentationVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rest_api_id: {
+        value: cdktn.stringToHclTerraform(this._restApiId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stage_name: {
+        value: cdktn.stringToHclTerraform(this._stageName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      variables: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._variables),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      xray_tracing_enabled: {
+        value: cdktn.booleanToHclTerraform(this._xrayTracingEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      access_log_settings: {
+        value: awsApiGatewayStageAccessLogSettingsPropertyToHclTerraform(this._accessLogSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsApiGatewayStage.AccessLogSettingsPropertyList",
+      },
+      canary_settings: {
+        value: awsApiGatewayStageCanarySettingsPropertyToHclTerraform(this._canarySettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsApiGatewayStage.CanarySettingsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsApiGatewayStageAccessLogSettingsPropertyToTerraform(struct?: AwsApiGatewayStage.AccessLogSettingsPropertyOutputReference | AwsApiGatewayStage.AccessLogSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    destination_arn: cdktn.stringToTerraform(struct!.destinationArn),
+    format: cdktn.stringToTerraform(struct!.format),
+  }
+}
+
+
+export function awsApiGatewayStageAccessLogSettingsPropertyToHclTerraform(struct?: AwsApiGatewayStage.AccessLogSettingsPropertyOutputReference | AwsApiGatewayStage.AccessLogSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    destination_arn: {
+      value: cdktn.stringToHclTerraform(struct!.destinationArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    format: {
+      value: cdktn.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsApiGatewayStageCanarySettingsPropertyToTerraform(struct?: AwsApiGatewayStage.CanarySettingsPropertyOutputReference | AwsApiGatewayStage.CanarySettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    deployment_id: cdktn.stringToTerraform(struct!.deploymentId),
+    percent_traffic: cdktn.numberToTerraform(struct!.percentTraffic),
+    stage_variable_overrides: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.stageVariableOverrides),
+    use_stage_cache: cdktn.booleanToTerraform(struct!.useStageCache),
+  }
+}
+
+
+export function awsApiGatewayStageCanarySettingsPropertyToHclTerraform(struct?: AwsApiGatewayStage.CanarySettingsPropertyOutputReference | AwsApiGatewayStage.CanarySettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    deployment_id: {
+      value: cdktn.stringToHclTerraform(struct!.deploymentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    percent_traffic: {
+      value: cdktn.numberToHclTerraform(struct!.percentTraffic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    stage_variable_overrides: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.stageVariableOverrides),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    use_stage_cache: {
+      value: cdktn.booleanToHclTerraform(struct!.useStageCache),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsApiGatewayStage {
+export interface AccessLogSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#destination_arn AwsApiGatewayStage#destination_arn}
+  */
+  readonly destinationArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#format AwsApiGatewayStage#format}
+  */
+  readonly format: string;
+}
+export class AccessLogSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AccessLogSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._destinationArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationArn = this._destinationArn;
+    }
+    if (this._format !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.format = this._format;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessLogSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._destinationArn = undefined;
+      this._format = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._destinationArn = value.destinationArn;
+      this._format = value.format;
+    }
+  }
+
+  // destination_arn - computed: false, optional: false, required: true
+  private _destinationArn?: string; 
+  public get destinationArn() {
+    return this.getStringAttribute('destination_arn');
+  }
+  public set destinationArn(value: string) {
+    this._destinationArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationArnInput() {
+    return this._destinationArn;
+  }
+
+  // format - computed: false, optional: false, required: true
+  private _format?: string; 
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+  public set format(value: string) {
+    this._format = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format;
+  }
+}
+export interface CanarySettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id AwsApiGatewayStage#deployment_id}
+  */
+  readonly deploymentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#percent_traffic AwsApiGatewayStage#percent_traffic}
+  */
+  readonly percentTraffic?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_variable_overrides AwsApiGatewayStage#stage_variable_overrides}
+  */
+  readonly stageVariableOverrides?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#use_stage_cache AwsApiGatewayStage#use_stage_cache}
+  */
+  readonly useStageCache?: boolean | cdktn.IResolvable;
+}
+export class CanarySettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CanarySettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deploymentId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deploymentId = this._deploymentId;
+    }
+    if (this._percentTraffic !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.percentTraffic = this._percentTraffic;
+    }
+    if (this._stageVariableOverrides !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stageVariableOverrides = this._stageVariableOverrides;
+    }
+    if (this._useStageCache !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useStageCache = this._useStageCache;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CanarySettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._deploymentId = undefined;
+      this._percentTraffic = undefined;
+      this._stageVariableOverrides = undefined;
+      this._useStageCache = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._deploymentId = value.deploymentId;
+      this._percentTraffic = value.percentTraffic;
+      this._stageVariableOverrides = value.stageVariableOverrides;
+      this._useStageCache = value.useStageCache;
+    }
+  }
+
+  // deployment_id - computed: false, optional: false, required: true
+  private _deploymentId?: string; 
+  public get deploymentId() {
+    return this.getStringAttribute('deployment_id');
+  }
+  public set deploymentId(value: string) {
+    this._deploymentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentIdInput() {
+    return this._deploymentId;
+  }
+
+  // percent_traffic - computed: false, optional: true, required: false
+  private _percentTraffic?: number; 
+  public get percentTraffic() {
+    return this.getNumberAttribute('percent_traffic');
+  }
+  public set percentTraffic(value: number) {
+    this._percentTraffic = value;
+  }
+  public resetPercentTraffic() {
+    this._percentTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentTrafficInput() {
+    return this._percentTraffic;
+  }
+
+  // stage_variable_overrides - computed: false, optional: true, required: false
+  private _stageVariableOverrides?: { [key: string]: string }; 
+  public get stageVariableOverrides() {
+    return this.getStringMapAttribute('stage_variable_overrides');
+  }
+  public set stageVariableOverrides(value: { [key: string]: string }) {
+    this._stageVariableOverrides = value;
+  }
+  public resetStageVariableOverrides() {
+    this._stageVariableOverrides = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stageVariableOverridesInput() {
+    return this._stageVariableOverrides;
+  }
+
+  // use_stage_cache - computed: false, optional: true, required: false
+  private _useStageCache?: boolean | cdktn.IResolvable; 
+  public get useStageCache() {
+    return this.getBooleanAttribute('use_stage_cache');
+  }
+  public set useStageCache(value: boolean | cdktn.IResolvable) {
+    this._useStageCache = value;
+  }
+  public resetUseStageCache() {
+    this._useStageCache = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useStageCacheInput() {
+    return this._useStageCache;
+  }
+}
+}

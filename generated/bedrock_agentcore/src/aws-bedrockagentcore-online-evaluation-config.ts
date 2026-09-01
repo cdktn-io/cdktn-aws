@@ -1,0 +1,1883 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsBedrockagentcoreOnlineEvaluationConfigConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#description AwsBedrockagentcoreOnlineEvaluationConfig#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#enable_on_create AwsBedrockagentcoreOnlineEvaluationConfig#enable_on_create}
+  */
+  readonly enableOnCreate: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluation_execution_role_arn AwsBedrockagentcoreOnlineEvaluationConfig#evaluation_execution_role_arn}
+  */
+  readonly evaluationExecutionRoleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#execution_status AwsBedrockagentcoreOnlineEvaluationConfig#execution_status}
+  */
+  readonly executionStatus?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#online_evaluation_config_name AwsBedrockagentcoreOnlineEvaluationConfig#online_evaluation_config_name}
+  */
+  readonly onlineEvaluationConfigName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#region AwsBedrockagentcoreOnlineEvaluationConfig#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#tags AwsBedrockagentcoreOnlineEvaluationConfig#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * data_source_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#data_source_config AwsBedrockagentcoreOnlineEvaluationConfig#data_source_config}
+  */
+  readonly dataSourceConfig?: AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable;
+  /**
+  * evaluator block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator AwsBedrockagentcoreOnlineEvaluationConfig#evaluator}
+  */
+  readonly evaluator?: AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable;
+  /**
+  * rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#rule AwsBedrockagentcoreOnlineEvaluationConfig#rule}
+  */
+  readonly rule?: AwsBedrockagentcoreOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#timeouts AwsBedrockagentcoreOnlineEvaluationConfig#timeouts}
+  */
+  readonly timeouts?: AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config aws_bedrockagentcore_online_evaluation_config}
+*/
+export class AwsBedrockagentcoreOnlineEvaluationConfig extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_bedrockagentcore_online_evaluation_config";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsBedrockagentcoreOnlineEvaluationConfig resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsBedrockagentcoreOnlineEvaluationConfig to import
+  * @param importFromId The id of the existing AwsBedrockagentcoreOnlineEvaluationConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBedrockagentcoreOnlineEvaluationConfig to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_online_evaluation_config", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config aws_bedrockagentcore_online_evaluation_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsBedrockagentcoreOnlineEvaluationConfigConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsBedrockagentcoreOnlineEvaluationConfigConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_bedrockagentcore_online_evaluation_config',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._enableOnCreate = config.enableOnCreate;
+    this._evaluationExecutionRoleArn = config.evaluationExecutionRoleArn;
+    this._executionStatus = config.executionStatus;
+    this._onlineEvaluationConfigName = config.onlineEvaluationConfigName;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._dataSourceConfig.internalValue = config.dataSourceConfig;
+    this._evaluator.internalValue = config.evaluator;
+    this._rule.internalValue = config.rule;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // enable_on_create - computed: false, optional: false, required: true
+  private _enableOnCreate?: boolean | cdktn.IResolvable; 
+  public get enableOnCreate() {
+    return this.getBooleanAttribute('enable_on_create');
+  }
+  public set enableOnCreate(value: boolean | cdktn.IResolvable) {
+    this._enableOnCreate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableOnCreateInput() {
+    return this._enableOnCreate;
+  }
+
+  // evaluation_execution_role_arn - computed: false, optional: false, required: true
+  private _evaluationExecutionRoleArn?: string; 
+  public get evaluationExecutionRoleArn() {
+    return this.getStringAttribute('evaluation_execution_role_arn');
+  }
+  public set evaluationExecutionRoleArn(value: string) {
+    this._evaluationExecutionRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationExecutionRoleArnInput() {
+    return this._evaluationExecutionRoleArn;
+  }
+
+  // execution_status - computed: true, optional: true, required: false
+  private _executionStatus?: string; 
+  public get executionStatus() {
+    return this.getStringAttribute('execution_status');
+  }
+  public set executionStatus(value: string) {
+    this._executionStatus = value;
+  }
+  public resetExecutionStatus() {
+    this._executionStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionStatusInput() {
+    return this._executionStatus;
+  }
+
+  // online_evaluation_config_arn - computed: true, optional: false, required: false
+  public get onlineEvaluationConfigArn() {
+    return this.getStringAttribute('online_evaluation_config_arn');
+  }
+
+  // online_evaluation_config_id - computed: true, optional: false, required: false
+  public get onlineEvaluationConfigId() {
+    return this.getStringAttribute('online_evaluation_config_id');
+  }
+
+  // online_evaluation_config_name - computed: false, optional: false, required: true
+  private _onlineEvaluationConfigName?: string; 
+  public get onlineEvaluationConfigName() {
+    return this.getStringAttribute('online_evaluation_config_name');
+  }
+  public set onlineEvaluationConfigName(value: string) {
+    this._onlineEvaluationConfigName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlineEvaluationConfigNameInput() {
+    return this._onlineEvaluationConfigName;
+  }
+
+  // output_config - computed: true, optional: false, required: false
+  private _outputConfig = new AwsBedrockagentcoreOnlineEvaluationConfig.OutputConfigPropertyList(this, "output_config", false);
+  public get outputConfig() {
+    return this._outputConfig;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // data_source_config - computed: false, optional: true, required: false
+  private _dataSourceConfig = new AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigPropertyList(this, "data_source_config", false);
+  public get dataSourceConfig() {
+    return this._dataSourceConfig;
+  }
+  public putDataSourceConfig(value: AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigProperty[] | cdktn.IResolvable) {
+    this._dataSourceConfig.internalValue = value;
+  }
+  public resetDataSourceConfig() {
+    this._dataSourceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataSourceConfigInput() {
+    return this._dataSourceConfig.internalValue;
+  }
+
+  // evaluator - computed: false, optional: true, required: false
+  private _evaluator = new AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorPropertyList(this, "evaluator", true);
+  public get evaluator() {
+    return this._evaluator;
+  }
+  public putEvaluator(value: AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorProperty[] | cdktn.IResolvable) {
+    this._evaluator.internalValue = value;
+  }
+  public resetEvaluator() {
+    this._evaluator.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluatorInput() {
+    return this._evaluator.internalValue;
+  }
+
+  // rule - computed: false, optional: true, required: false
+  private _rule = new AwsBedrockagentcoreOnlineEvaluationConfig.RulePropertyList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: AwsBedrockagentcoreOnlineEvaluationConfig.RuleProperty[] | cdktn.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  public resetRule() {
+    this._rule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      enable_on_create: cdktn.booleanToTerraform(this._enableOnCreate),
+      evaluation_execution_role_arn: cdktn.stringToTerraform(this._evaluationExecutionRoleArn),
+      execution_status: cdktn.stringToTerraform(this._executionStatus),
+      online_evaluation_config_name: cdktn.stringToTerraform(this._onlineEvaluationConfigName),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      data_source_config: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigDataSourceConfigPropertyToTerraform, true)(this._dataSourceConfig.internalValue),
+      evaluator: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigEvaluatorPropertyToTerraform, true)(this._evaluator.internalValue),
+      rule: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: awsBedrockagentcoreOnlineEvaluationConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_on_create: {
+        value: cdktn.booleanToHclTerraform(this._enableOnCreate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      evaluation_execution_role_arn: {
+        value: cdktn.stringToHclTerraform(this._evaluationExecutionRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      execution_status: {
+        value: cdktn.stringToHclTerraform(this._executionStatus),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      online_evaluation_config_name: {
+        value: cdktn.stringToHclTerraform(this._onlineEvaluationConfigName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      data_source_config: {
+        value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform, true)(this._dataSourceConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigPropertyList",
+      },
+      evaluator: {
+        value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigEvaluatorPropertyToHclTerraform, true)(this._evaluator.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorPropertyList",
+      },
+      rule: {
+        value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsBedrockagentcoreOnlineEvaluationConfig.RulePropertyList",
+      },
+      timeouts: {
+        value: awsBedrockagentcoreOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsBedrockagentcoreOnlineEvaluationConfigCloudwatchConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.CloudwatchConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigCloudwatchConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.CloudwatchConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigOutputConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.OutputConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigOutputConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.OutputConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    log_group_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.logGroupNames),
+    service_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.serviceNames),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.CloudwatchLogsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    log_group_names: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.logGroupNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    service_names: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.serviceNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigDataSourceConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cloudwatch_logs: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigCloudwatchLogsPropertyToTerraform, true)(struct!.cloudwatchLogs),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigDataSourceConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.DataSourceConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cloudwatch_logs: {
+      value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigCloudwatchLogsPropertyToHclTerraform, true)(struct!.cloudwatchLogs),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CloudwatchLogsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigEvaluatorPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    evaluator_id: cdktn.stringToTerraform(struct!.evaluatorId),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigEvaluatorPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.EvaluatorProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    evaluator_id: {
+      value: cdktn.stringToHclTerraform(struct!.evaluatorId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigValuePropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    boolean_value: cdktn.booleanToTerraform(struct!.booleanValue),
+    double_value: cdktn.numberToTerraform(struct!.doubleValue),
+    string_value: cdktn.stringToTerraform(struct!.stringValue),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigValuePropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.ValueProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    boolean_value: {
+      value: cdktn.booleanToHclTerraform(struct!.booleanValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    double_value: {
+      value: cdktn.numberToHclTerraform(struct!.doubleValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    string_value: {
+      value: cdktn.stringToHclTerraform(struct!.stringValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigFilterPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    key: cdktn.stringToTerraform(struct!.key),
+    operator: cdktn.stringToTerraform(struct!.operator),
+    value: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigValuePropertyToTerraform, true)(struct!.value),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigFilterPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.FilterProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    key: {
+      value: cdktn.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktn.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigValuePropertyToHclTerraform, true)(struct!.value),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ValuePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigSamplingConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    sampling_percentage: cdktn.numberToTerraform(struct!.samplingPercentage),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.SamplingConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    sampling_percentage: {
+      value: cdktn.numberToHclTerraform(struct!.samplingPercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigSessionConfigPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    session_timeout_minutes: cdktn.numberToTerraform(struct!.sessionTimeoutMinutes),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigSessionConfigPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.SessionConfigProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    session_timeout_minutes: {
+      value: cdktn.numberToHclTerraform(struct!.sessionTimeoutMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigRulePropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    filter: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigFilterPropertyToTerraform, true)(struct!.filter),
+    sampling_config: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigSamplingConfigPropertyToTerraform, true)(struct!.samplingConfig),
+    session_config: cdktn.listMapper(awsBedrockagentcoreOnlineEvaluationConfigSessionConfigPropertyToTerraform, true)(struct!.sessionConfig),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigRulePropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.RuleProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    filter: {
+      value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigFilterPropertyToHclTerraform, true)(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FilterPropertyList",
+    },
+    sampling_config: {
+      value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigSamplingConfigPropertyToHclTerraform, true)(struct!.samplingConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SamplingConfigPropertyList",
+    },
+    session_config: {
+      value: cdktn.listMapperHcl(awsBedrockagentcoreOnlineEvaluationConfigSessionConfigPropertyToHclTerraform, true)(struct!.sessionConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SessionConfigPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigTimeoutsPropertyToTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsBedrockagentcoreOnlineEvaluationConfigTimeoutsPropertyToHclTerraform(struct?: AwsBedrockagentcoreOnlineEvaluationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsBedrockagentcoreOnlineEvaluationConfig {
+export interface CloudwatchConfigProperty {
+}
+export class CloudwatchConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudwatchConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudwatchConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // log_group_name - computed: true, optional: false, required: false
+  public get logGroupName() {
+    return this.getStringAttribute('log_group_name');
+  }
+}
+
+export class CloudwatchConfigPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudwatchConfigPropertyOutputReference {
+    return new CloudwatchConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface OutputConfigProperty {
+}
+export class OutputConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OutputConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OutputConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // cloudwatch_config - computed: true, optional: false, required: false
+  private _cloudwatchConfig = new CloudwatchConfigPropertyList(this, "cloudwatch_config", false);
+  public get cloudwatchConfig() {
+    return this._cloudwatchConfig;
+  }
+}
+
+export class OutputConfigPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OutputConfigPropertyOutputReference {
+    return new OutputConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudwatchLogsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#log_group_names AwsBedrockagentcoreOnlineEvaluationConfig#log_group_names}
+  */
+  readonly logGroupNames: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#service_names AwsBedrockagentcoreOnlineEvaluationConfig#service_names}
+  */
+  readonly serviceNames: string[];
+}
+export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudwatchLogsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logGroupNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logGroupNames = this._logGroupNames;
+    }
+    if (this._serviceNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceNames = this._serviceNames;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudwatchLogsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._logGroupNames = undefined;
+      this._serviceNames = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._logGroupNames = value.logGroupNames;
+      this._serviceNames = value.serviceNames;
+    }
+  }
+
+  // log_group_names - computed: false, optional: false, required: true
+  private _logGroupNames?: string[]; 
+  public get logGroupNames() {
+    return this.getListAttribute('log_group_names');
+  }
+  public set logGroupNames(value: string[]) {
+    this._logGroupNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logGroupNamesInput() {
+    return this._logGroupNames;
+  }
+
+  // service_names - computed: false, optional: false, required: true
+  private _serviceNames?: string[]; 
+  public get serviceNames() {
+    return this.getListAttribute('service_names');
+  }
+  public set serviceNames(value: string[]) {
+    this._serviceNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNamesInput() {
+    return this._serviceNames;
+  }
+}
+
+export class CloudwatchLogsPropertyList extends cdktn.ComplexList {
+  public internalValue? : CloudwatchLogsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudwatchLogsPropertyOutputReference {
+    return new CloudwatchLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataSourceConfigProperty {
+  /**
+  * cloudwatch_logs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#cloudwatch_logs AwsBedrockagentcoreOnlineEvaluationConfig#cloudwatch_logs}
+  */
+  readonly cloudwatchLogs?: CloudwatchLogsProperty[] | cdktn.IResolvable;
+}
+export class DataSourceConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataSourceConfigProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudwatchLogs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudwatchLogs = this._cloudwatchLogs?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataSourceConfigProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._cloudwatchLogs.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._cloudwatchLogs.internalValue = value.cloudwatchLogs;
+    }
+  }
+
+  // cloudwatch_logs - computed: false, optional: true, required: false
+  private _cloudwatchLogs = new CloudwatchLogsPropertyList(this, "cloudwatch_logs", false);
+  public get cloudwatchLogs() {
+    return this._cloudwatchLogs;
+  }
+  public putCloudwatchLogs(value: CloudwatchLogsProperty[] | cdktn.IResolvable) {
+    this._cloudwatchLogs.internalValue = value;
+  }
+  public resetCloudwatchLogs() {
+    this._cloudwatchLogs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchLogsInput() {
+    return this._cloudwatchLogs.internalValue;
+  }
+}
+
+export class DataSourceConfigPropertyList extends cdktn.ComplexList {
+  public internalValue? : DataSourceConfigProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataSourceConfigPropertyOutputReference {
+    return new DataSourceConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EvaluatorProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#evaluator_id AwsBedrockagentcoreOnlineEvaluationConfig#evaluator_id}
+  */
+  readonly evaluatorId: string;
+}
+export class EvaluatorPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EvaluatorProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._evaluatorId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.evaluatorId = this._evaluatorId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EvaluatorProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._evaluatorId = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._evaluatorId = value.evaluatorId;
+    }
+  }
+
+  // evaluator_id - computed: false, optional: false, required: true
+  private _evaluatorId?: string; 
+  public get evaluatorId() {
+    return this.getStringAttribute('evaluator_id');
+  }
+  public set evaluatorId(value: string) {
+    this._evaluatorId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluatorIdInput() {
+    return this._evaluatorId;
+  }
+}
+
+export class EvaluatorPropertyList extends cdktn.ComplexList {
+  public internalValue? : EvaluatorProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EvaluatorPropertyOutputReference {
+    return new EvaluatorPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ValueProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#boolean_value AwsBedrockagentcoreOnlineEvaluationConfig#boolean_value}
+  */
+  readonly booleanValue?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#double_value AwsBedrockagentcoreOnlineEvaluationConfig#double_value}
+  */
+  readonly doubleValue?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#string_value AwsBedrockagentcoreOnlineEvaluationConfig#string_value}
+  */
+  readonly stringValue?: string;
+}
+export class ValuePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ValueProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._booleanValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.booleanValue = this._booleanValue;
+    }
+    if (this._doubleValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.doubleValue = this._doubleValue;
+    }
+    if (this._stringValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stringValue = this._stringValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ValueProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._booleanValue = undefined;
+      this._doubleValue = undefined;
+      this._stringValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._booleanValue = value.booleanValue;
+      this._doubleValue = value.doubleValue;
+      this._stringValue = value.stringValue;
+    }
+  }
+
+  // boolean_value - computed: false, optional: true, required: false
+  private _booleanValue?: boolean | cdktn.IResolvable; 
+  public get booleanValue() {
+    return this.getBooleanAttribute('boolean_value');
+  }
+  public set booleanValue(value: boolean | cdktn.IResolvable) {
+    this._booleanValue = value;
+  }
+  public resetBooleanValue() {
+    this._booleanValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get booleanValueInput() {
+    return this._booleanValue;
+  }
+
+  // double_value - computed: false, optional: true, required: false
+  private _doubleValue?: number; 
+  public get doubleValue() {
+    return this.getNumberAttribute('double_value');
+  }
+  public set doubleValue(value: number) {
+    this._doubleValue = value;
+  }
+  public resetDoubleValue() {
+    this._doubleValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get doubleValueInput() {
+    return this._doubleValue;
+  }
+
+  // string_value - computed: false, optional: true, required: false
+  private _stringValue?: string; 
+  public get stringValue() {
+    return this.getStringAttribute('string_value');
+  }
+  public set stringValue(value: string) {
+    this._stringValue = value;
+  }
+  public resetStringValue() {
+    this._stringValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stringValueInput() {
+    return this._stringValue;
+  }
+}
+
+export class ValuePropertyList extends cdktn.ComplexList {
+  public internalValue? : ValueProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ValuePropertyOutputReference {
+    return new ValuePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface FilterProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#key AwsBedrockagentcoreOnlineEvaluationConfig#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#operator AwsBedrockagentcoreOnlineEvaluationConfig#operator}
+  */
+  readonly operator: string;
+  /**
+  * value block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#value AwsBedrockagentcoreOnlineEvaluationConfig#value}
+  */
+  readonly value?: ValueProperty[] | cdktn.IResolvable;
+}
+export class FilterPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FilterProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._value?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilterProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._operator = undefined;
+      this._value.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._operator = value.operator;
+      this._value.internalValue = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value = new ValuePropertyList(this, "value", false);
+  public get value() {
+    return this._value;
+  }
+  public putValue(value: ValueProperty[] | cdktn.IResolvable) {
+    this._value.internalValue = value;
+  }
+  public resetValue() {
+    this._value.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value.internalValue;
+  }
+}
+
+export class FilterPropertyList extends cdktn.ComplexList {
+  public internalValue? : FilterProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FilterPropertyOutputReference {
+    return new FilterPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SamplingConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_percentage AwsBedrockagentcoreOnlineEvaluationConfig#sampling_percentage}
+  */
+  readonly samplingPercentage: number;
+}
+export class SamplingConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SamplingConfigProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._samplingPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.samplingPercentage = this._samplingPercentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SamplingConfigProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._samplingPercentage = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._samplingPercentage = value.samplingPercentage;
+    }
+  }
+
+  // sampling_percentage - computed: false, optional: false, required: true
+  private _samplingPercentage?: number; 
+  public get samplingPercentage() {
+    return this.getNumberAttribute('sampling_percentage');
+  }
+  public set samplingPercentage(value: number) {
+    this._samplingPercentage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get samplingPercentageInput() {
+    return this._samplingPercentage;
+  }
+}
+
+export class SamplingConfigPropertyList extends cdktn.ComplexList {
+  public internalValue? : SamplingConfigProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SamplingConfigPropertyOutputReference {
+    return new SamplingConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SessionConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_timeout_minutes AwsBedrockagentcoreOnlineEvaluationConfig#session_timeout_minutes}
+  */
+  readonly sessionTimeoutMinutes: number;
+}
+export class SessionConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SessionConfigProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sessionTimeoutMinutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionTimeoutMinutes = this._sessionTimeoutMinutes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SessionConfigProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._sessionTimeoutMinutes = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._sessionTimeoutMinutes = value.sessionTimeoutMinutes;
+    }
+  }
+
+  // session_timeout_minutes - computed: false, optional: false, required: true
+  private _sessionTimeoutMinutes?: number; 
+  public get sessionTimeoutMinutes() {
+    return this.getNumberAttribute('session_timeout_minutes');
+  }
+  public set sessionTimeoutMinutes(value: number) {
+    this._sessionTimeoutMinutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionTimeoutMinutesInput() {
+    return this._sessionTimeoutMinutes;
+  }
+}
+
+export class SessionConfigPropertyList extends cdktn.ComplexList {
+  public internalValue? : SessionConfigProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SessionConfigPropertyOutputReference {
+    return new SessionConfigPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface RuleProperty {
+  /**
+  * filter block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#filter AwsBedrockagentcoreOnlineEvaluationConfig#filter}
+  */
+  readonly filter?: FilterProperty[] | cdktn.IResolvable;
+  /**
+  * sampling_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#sampling_config AwsBedrockagentcoreOnlineEvaluationConfig#sampling_config}
+  */
+  readonly samplingConfig?: SamplingConfigProperty[] | cdktn.IResolvable;
+  /**
+  * session_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#session_config AwsBedrockagentcoreOnlineEvaluationConfig#session_config}
+  */
+  readonly sessionConfig?: SessionConfigProperty[] | cdktn.IResolvable;
+}
+export class RulePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RuleProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter?.internalValue;
+    }
+    if (this._samplingConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.samplingConfig = this._samplingConfig?.internalValue;
+    }
+    if (this._sessionConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionConfig = this._sessionConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RuleProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._filter.internalValue = undefined;
+      this._samplingConfig.internalValue = undefined;
+      this._sessionConfig.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._filter.internalValue = value.filter;
+      this._samplingConfig.internalValue = value.samplingConfig;
+      this._sessionConfig.internalValue = value.sessionConfig;
+    }
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter = new FilterPropertyList(this, "filter", false);
+  public get filter() {
+    return this._filter;
+  }
+  public putFilter(value: FilterProperty[] | cdktn.IResolvable) {
+    this._filter.internalValue = value;
+  }
+  public resetFilter() {
+    this._filter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter.internalValue;
+  }
+
+  // sampling_config - computed: false, optional: true, required: false
+  private _samplingConfig = new SamplingConfigPropertyList(this, "sampling_config", false);
+  public get samplingConfig() {
+    return this._samplingConfig;
+  }
+  public putSamplingConfig(value: SamplingConfigProperty[] | cdktn.IResolvable) {
+    this._samplingConfig.internalValue = value;
+  }
+  public resetSamplingConfig() {
+    this._samplingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get samplingConfigInput() {
+    return this._samplingConfig.internalValue;
+  }
+
+  // session_config - computed: false, optional: true, required: false
+  private _sessionConfig = new SessionConfigPropertyList(this, "session_config", false);
+  public get sessionConfig() {
+    return this._sessionConfig;
+  }
+  public putSessionConfig(value: SessionConfigProperty[] | cdktn.IResolvable) {
+    this._sessionConfig.internalValue = value;
+  }
+  public resetSessionConfig() {
+    this._sessionConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionConfigInput() {
+    return this._sessionConfig.internalValue;
+  }
+}
+
+export class RulePropertyList extends cdktn.ComplexList {
+  public internalValue? : RuleProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RulePropertyOutputReference {
+    return new RulePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#create AwsBedrockagentcoreOnlineEvaluationConfig#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#delete AwsBedrockagentcoreOnlineEvaluationConfig#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_online_evaluation_config#update AwsBedrockagentcoreOnlineEvaluationConfig#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

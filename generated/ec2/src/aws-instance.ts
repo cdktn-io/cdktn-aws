@@ -1,0 +1,4928 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsInstanceConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ami AwsInstance#ami}
+  */
+  readonly ami?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#associate_public_ip_address AwsInstance#associate_public_ip_address}
+  */
+  readonly associatePublicIpAddress?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#availability_zone AwsInstance#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_stop AwsInstance#disable_api_stop}
+  */
+  readonly disableApiStop?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#disable_api_termination AwsInstance#disable_api_termination}
+  */
+  readonly disableApiTermination?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_optimized AwsInstance#ebs_optimized}
+  */
+  readonly ebsOptimized?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_primary_ipv6 AwsInstance#enable_primary_ipv6}
+  */
+  readonly enablePrimaryIpv6?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#force_destroy AwsInstance#force_destroy}
+  */
+  readonly forceDestroy?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#get_password_data AwsInstance#get_password_data}
+  */
+  readonly fetchPasswordData?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hibernation AwsInstance#hibernation}
+  */
+  readonly hibernation?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_id AwsInstance#host_id}
+  */
+  readonly hostId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#host_resource_group_arn AwsInstance#host_resource_group_arn}
+  */
+  readonly hostResourceGroupArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iam_instance_profile AwsInstance#iam_instance_profile}
+  */
+  readonly iamInstanceProfile?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id AwsInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_initiated_shutdown_behavior AwsInstance#instance_initiated_shutdown_behavior}
+  */
+  readonly instanceInitiatedShutdownBehavior?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_type AwsInstance#instance_type}
+  */
+  readonly instanceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_address_count AwsInstance#ipv6_address_count}
+  */
+  readonly ipv6AddressCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ipv6_addresses AwsInstance#ipv6_addresses}
+  */
+  readonly ipv6Addresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#key_name AwsInstance#key_name}
+  */
+  readonly keyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#monitoring AwsInstance#monitoring}
+  */
+  readonly monitoring?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group AwsInstance#placement_group}
+  */
+  readonly placementGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_group_id AwsInstance#placement_group_id}
+  */
+  readonly placementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#placement_partition_number AwsInstance#placement_partition_number}
+  */
+  readonly placementPartitionNumber?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip AwsInstance#private_ip}
+  */
+  readonly privateIp?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#region AwsInstance#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_private_ips AwsInstance#secondary_private_ips}
+  */
+  readonly secondaryPrivateIps?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#security_groups AwsInstance#security_groups}
+  */
+  readonly securityGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#source_dest_check AwsInstance#source_dest_check}
+  */
+  readonly sourceDestCheck?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#subnet_id AwsInstance#subnet_id}
+  */
+  readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tenancy AwsInstance#tenancy}
+  */
+  readonly tenancy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data AwsInstance#user_data}
+  */
+  readonly userData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_base64 AwsInstance#user_data_base64}
+  */
+  readonly userDataBase64?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#user_data_replace_on_change AwsInstance#user_data_replace_on_change}
+  */
+  readonly userDataReplaceOnChange?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_tags AwsInstance#volume_tags}
+  */
+  readonly volumeTags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#vpc_security_group_ids AwsInstance#vpc_security_group_ids}
+  */
+  readonly vpcSecurityGroupIds?: string[];
+  /**
+  * capacity_reservation_specification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_specification AwsInstance#capacity_reservation_specification}
+  */
+  readonly capacityReservationSpecification?: AwsInstance.CapacityReservationSpecificationProperty;
+  /**
+  * cpu_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_options AwsInstance#cpu_options}
+  */
+  readonly cpuOptions?: AwsInstance.CpuOptionsProperty;
+  /**
+  * credit_specification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#credit_specification AwsInstance#credit_specification}
+  */
+  readonly creditSpecification?: AwsInstance.CreditSpecificationProperty;
+  /**
+  * ebs_block_device block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ebs_block_device AwsInstance#ebs_block_device}
+  */
+  readonly ebsBlockDevice?: AwsInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable;
+  /**
+  * enclave_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enclave_options AwsInstance#enclave_options}
+  */
+  readonly enclaveOptions?: AwsInstance.EnclaveOptionsProperty;
+  /**
+  * ephemeral_block_device block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#ephemeral_block_device AwsInstance#ephemeral_block_device}
+  */
+  readonly ephemeralBlockDevice?: AwsInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
+  /**
+  * instance_market_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_market_options AwsInstance#instance_market_options}
+  */
+  readonly instanceMarketOptions?: AwsInstance.InstanceMarketOptionsProperty;
+  /**
+  * launch_template block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#launch_template AwsInstance#launch_template}
+  */
+  readonly launchTemplate?: AwsInstance.LaunchTemplateProperty;
+  /**
+  * maintenance_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#maintenance_options AwsInstance#maintenance_options}
+  */
+  readonly maintenanceOptions?: AwsInstance.MaintenanceOptionsProperty;
+  /**
+  * metadata_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#metadata_options AwsInstance#metadata_options}
+  */
+  readonly metadataOptions?: AwsInstance.MetadataOptionsProperty;
+  /**
+  * network_interface block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface AwsInstance#network_interface}
+  */
+  readonly networkInterface?: AwsInstance.NetworkInterfaceProperty[] | cdktn.IResolvable;
+  /**
+  * primary_network_interface block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#primary_network_interface AwsInstance#primary_network_interface}
+  */
+  readonly primaryNetworkInterface?: AwsInstance.PrimaryNetworkInterfaceProperty;
+  /**
+  * private_dns_name_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_dns_name_options AwsInstance#private_dns_name_options}
+  */
+  readonly privateDnsNameOptions?: AwsInstance.PrivateDnsNameOptionsProperty;
+  /**
+  * root_block_device block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#root_block_device AwsInstance#root_block_device}
+  */
+  readonly rootBlockDevice?: AwsInstance.RootBlockDeviceProperty;
+  /**
+  * secondary_network_interface block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_network_interface AwsInstance#secondary_network_interface}
+  */
+  readonly secondaryNetworkInterface?: AwsInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#timeouts AwsInstance#timeouts}
+  */
+  readonly timeouts?: AwsInstance.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance aws_instance}
+*/
+export class AwsInstance extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_instance";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsInstance resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsInstance to import
+  * @param importFromId The id of the existing AwsInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInstance to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_instance", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance aws_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsInstanceConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsInstanceConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_instance',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._ami = config.ami;
+    this._associatePublicIpAddress = config.associatePublicIpAddress;
+    this._availabilityZone = config.availabilityZone;
+    this._disableApiStop = config.disableApiStop;
+    this._disableApiTermination = config.disableApiTermination;
+    this._ebsOptimized = config.ebsOptimized;
+    this._enablePrimaryIpv6 = config.enablePrimaryIpv6;
+    this._forceDestroy = config.forceDestroy;
+    this._getPasswordData = config.fetchPasswordData;
+    this._hibernation = config.hibernation;
+    this._hostId = config.hostId;
+    this._hostResourceGroupArn = config.hostResourceGroupArn;
+    this._iamInstanceProfile = config.iamInstanceProfile;
+    this._id = config.id;
+    this._instanceInitiatedShutdownBehavior = config.instanceInitiatedShutdownBehavior;
+    this._instanceType = config.instanceType;
+    this._ipv6AddressCount = config.ipv6AddressCount;
+    this._ipv6Addresses = config.ipv6Addresses;
+    this._keyName = config.keyName;
+    this._monitoring = config.monitoring;
+    this._placementGroup = config.placementGroup;
+    this._placementGroupId = config.placementGroupId;
+    this._placementPartitionNumber = config.placementPartitionNumber;
+    this._privateIp = config.privateIp;
+    this._region = config.region;
+    this._secondaryPrivateIps = config.secondaryPrivateIps;
+    this._securityGroups = config.securityGroups;
+    this._sourceDestCheck = config.sourceDestCheck;
+    this._subnetId = config.subnetId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._tenancy = config.tenancy;
+    this._userData = config.userData;
+    this._userDataBase64 = config.userDataBase64;
+    this._userDataReplaceOnChange = config.userDataReplaceOnChange;
+    this._volumeTags = config.volumeTags;
+    this._vpcSecurityGroupIds = config.vpcSecurityGroupIds;
+    this._capacityReservationSpecification.internalValue = config.capacityReservationSpecification;
+    this._cpuOptions.internalValue = config.cpuOptions;
+    this._creditSpecification.internalValue = config.creditSpecification;
+    this._ebsBlockDevice.internalValue = config.ebsBlockDevice;
+    this._enclaveOptions.internalValue = config.enclaveOptions;
+    this._ephemeralBlockDevice.internalValue = config.ephemeralBlockDevice;
+    this._instanceMarketOptions.internalValue = config.instanceMarketOptions;
+    this._launchTemplate.internalValue = config.launchTemplate;
+    this._maintenanceOptions.internalValue = config.maintenanceOptions;
+    this._metadataOptions.internalValue = config.metadataOptions;
+    this._networkInterface.internalValue = config.networkInterface;
+    this._primaryNetworkInterface.internalValue = config.primaryNetworkInterface;
+    this._privateDnsNameOptions.internalValue = config.privateDnsNameOptions;
+    this._rootBlockDevice.internalValue = config.rootBlockDevice;
+    this._secondaryNetworkInterface.internalValue = config.secondaryNetworkInterface;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // ami - computed: true, optional: true, required: false
+  private _ami?: string; 
+  public get ami() {
+    return this.getStringAttribute('ami');
+  }
+  public set ami(value: string) {
+    this._ami = value;
+  }
+  public resetAmi() {
+    this._ami = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get amiInput() {
+    return this._ami;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // associate_public_ip_address - computed: true, optional: true, required: false
+  private _associatePublicIpAddress?: boolean | cdktn.IResolvable; 
+  public get associatePublicIpAddress() {
+    return this.getBooleanAttribute('associate_public_ip_address');
+  }
+  public set associatePublicIpAddress(value: boolean | cdktn.IResolvable) {
+    this._associatePublicIpAddress = value;
+  }
+  public resetAssociatePublicIpAddress() {
+    this._associatePublicIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get associatePublicIpAddressInput() {
+    return this._associatePublicIpAddress;
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // disable_api_stop - computed: true, optional: true, required: false
+  private _disableApiStop?: boolean | cdktn.IResolvable; 
+  public get disableApiStop() {
+    return this.getBooleanAttribute('disable_api_stop');
+  }
+  public set disableApiStop(value: boolean | cdktn.IResolvable) {
+    this._disableApiStop = value;
+  }
+  public resetDisableApiStop() {
+    this._disableApiStop = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableApiStopInput() {
+    return this._disableApiStop;
+  }
+
+  // disable_api_termination - computed: true, optional: true, required: false
+  private _disableApiTermination?: boolean | cdktn.IResolvable; 
+  public get disableApiTermination() {
+    return this.getBooleanAttribute('disable_api_termination');
+  }
+  public set disableApiTermination(value: boolean | cdktn.IResolvable) {
+    this._disableApiTermination = value;
+  }
+  public resetDisableApiTermination() {
+    this._disableApiTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableApiTerminationInput() {
+    return this._disableApiTermination;
+  }
+
+  // ebs_optimized - computed: true, optional: true, required: false
+  private _ebsOptimized?: boolean | cdktn.IResolvable; 
+  public get ebsOptimized() {
+    return this.getBooleanAttribute('ebs_optimized');
+  }
+  public set ebsOptimized(value: boolean | cdktn.IResolvable) {
+    this._ebsOptimized = value;
+  }
+  public resetEbsOptimized() {
+    this._ebsOptimized = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ebsOptimizedInput() {
+    return this._ebsOptimized;
+  }
+
+  // enable_primary_ipv6 - computed: true, optional: true, required: false
+  private _enablePrimaryIpv6?: boolean | cdktn.IResolvable; 
+  public get enablePrimaryIpv6() {
+    return this.getBooleanAttribute('enable_primary_ipv6');
+  }
+  public set enablePrimaryIpv6(value: boolean | cdktn.IResolvable) {
+    this._enablePrimaryIpv6 = value;
+  }
+  public resetEnablePrimaryIpv6() {
+    this._enablePrimaryIpv6 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePrimaryIpv6Input() {
+    return this._enablePrimaryIpv6;
+  }
+
+  // force_destroy - computed: false, optional: true, required: false
+  private _forceDestroy?: boolean | cdktn.IResolvable; 
+  public get forceDestroy() {
+    return this.getBooleanAttribute('force_destroy');
+  }
+  public set forceDestroy(value: boolean | cdktn.IResolvable) {
+    this._forceDestroy = value;
+  }
+  public resetForceDestroy() {
+    this._forceDestroy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDestroyInput() {
+    return this._forceDestroy;
+  }
+
+  // get_password_data - computed: false, optional: true, required: false
+  private _getPasswordData?: boolean | cdktn.IResolvable; 
+  public get fetchPasswordData() {
+    return this.getBooleanAttribute('get_password_data');
+  }
+  public set fetchPasswordData(value: boolean | cdktn.IResolvable) {
+    this._getPasswordData = value;
+  }
+  public resetFetchPasswordData() {
+    this._getPasswordData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fetchPasswordDataInput() {
+    return this._getPasswordData;
+  }
+
+  // hibernation - computed: false, optional: true, required: false
+  private _hibernation?: boolean | cdktn.IResolvable; 
+  public get hibernation() {
+    return this.getBooleanAttribute('hibernation');
+  }
+  public set hibernation(value: boolean | cdktn.IResolvable) {
+    this._hibernation = value;
+  }
+  public resetHibernation() {
+    this._hibernation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hibernationInput() {
+    return this._hibernation;
+  }
+
+  // host_id - computed: true, optional: true, required: false
+  private _hostId?: string; 
+  public get hostId() {
+    return this.getStringAttribute('host_id');
+  }
+  public set hostId(value: string) {
+    this._hostId = value;
+  }
+  public resetHostId() {
+    this._hostId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostIdInput() {
+    return this._hostId;
+  }
+
+  // host_resource_group_arn - computed: true, optional: true, required: false
+  private _hostResourceGroupArn?: string; 
+  public get hostResourceGroupArn() {
+    return this.getStringAttribute('host_resource_group_arn');
+  }
+  public set hostResourceGroupArn(value: string) {
+    this._hostResourceGroupArn = value;
+  }
+  public resetHostResourceGroupArn() {
+    this._hostResourceGroupArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostResourceGroupArnInput() {
+    return this._hostResourceGroupArn;
+  }
+
+  // iam_instance_profile - computed: true, optional: true, required: false
+  private _iamInstanceProfile?: string; 
+  public get iamInstanceProfile() {
+    return this.getStringAttribute('iam_instance_profile');
+  }
+  public set iamInstanceProfile(value: string) {
+    this._iamInstanceProfile = value;
+  }
+  public resetIamInstanceProfile() {
+    this._iamInstanceProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamInstanceProfileInput() {
+    return this._iamInstanceProfile;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // instance_initiated_shutdown_behavior - computed: true, optional: true, required: false
+  private _instanceInitiatedShutdownBehavior?: string; 
+  public get instanceInitiatedShutdownBehavior() {
+    return this.getStringAttribute('instance_initiated_shutdown_behavior');
+  }
+  public set instanceInitiatedShutdownBehavior(value: string) {
+    this._instanceInitiatedShutdownBehavior = value;
+  }
+  public resetInstanceInitiatedShutdownBehavior() {
+    this._instanceInitiatedShutdownBehavior = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInitiatedShutdownBehaviorInput() {
+    return this._instanceInitiatedShutdownBehavior;
+  }
+
+  // instance_lifecycle - computed: true, optional: false, required: false
+  public get instanceLifecycle() {
+    return this.getStringAttribute('instance_lifecycle');
+  }
+
+  // instance_state - computed: true, optional: false, required: false
+  public get instanceState() {
+    return this.getStringAttribute('instance_state');
+  }
+
+  // instance_type - computed: true, optional: true, required: false
+  private _instanceType?: string; 
+  public get instanceType() {
+    return this.getStringAttribute('instance_type');
+  }
+  public set instanceType(value: string) {
+    this._instanceType = value;
+  }
+  public resetInstanceType() {
+    this._instanceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTypeInput() {
+    return this._instanceType;
+  }
+
+  // ipv6_address_count - computed: true, optional: true, required: false
+  private _ipv6AddressCount?: number; 
+  public get ipv6AddressCount() {
+    return this.getNumberAttribute('ipv6_address_count');
+  }
+  public set ipv6AddressCount(value: number) {
+    this._ipv6AddressCount = value;
+  }
+  public resetIpv6AddressCount() {
+    this._ipv6AddressCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressCountInput() {
+    return this._ipv6AddressCount;
+  }
+
+  // ipv6_addresses - computed: true, optional: true, required: false
+  private _ipv6Addresses?: string[]; 
+  public get ipv6Addresses() {
+    return this.getListAttribute('ipv6_addresses');
+  }
+  public set ipv6Addresses(value: string[]) {
+    this._ipv6Addresses = value;
+  }
+  public resetIpv6Addresses() {
+    this._ipv6Addresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressesInput() {
+    return this._ipv6Addresses;
+  }
+
+  // key_name - computed: true, optional: true, required: false
+  private _keyName?: string; 
+  public get keyName() {
+    return this.getStringAttribute('key_name');
+  }
+  public set keyName(value: string) {
+    this._keyName = value;
+  }
+  public resetKeyName() {
+    this._keyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyNameInput() {
+    return this._keyName;
+  }
+
+  // monitoring - computed: true, optional: true, required: false
+  private _monitoring?: boolean | cdktn.IResolvable; 
+  public get monitoring() {
+    return this.getBooleanAttribute('monitoring');
+  }
+  public set monitoring(value: boolean | cdktn.IResolvable) {
+    this._monitoring = value;
+  }
+  public resetMonitoring() {
+    this._monitoring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitoringInput() {
+    return this._monitoring;
+  }
+
+  // outpost_arn - computed: true, optional: false, required: false
+  public get outpostArn() {
+    return this.getStringAttribute('outpost_arn');
+  }
+
+  // password_data - computed: true, optional: false, required: false
+  public get passwordData() {
+    return this.getStringAttribute('password_data');
+  }
+
+  // placement_group - computed: true, optional: true, required: false
+  private _placementGroup?: string; 
+  public get placementGroup() {
+    return this.getStringAttribute('placement_group');
+  }
+  public set placementGroup(value: string) {
+    this._placementGroup = value;
+  }
+  public resetPlacementGroup() {
+    this._placementGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementGroupInput() {
+    return this._placementGroup;
+  }
+
+  // placement_group_id - computed: true, optional: true, required: false
+  private _placementGroupId?: string; 
+  public get placementGroupId() {
+    return this.getStringAttribute('placement_group_id');
+  }
+  public set placementGroupId(value: string) {
+    this._placementGroupId = value;
+  }
+  public resetPlacementGroupId() {
+    this._placementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementGroupIdInput() {
+    return this._placementGroupId;
+  }
+
+  // placement_partition_number - computed: true, optional: true, required: false
+  private _placementPartitionNumber?: number; 
+  public get placementPartitionNumber() {
+    return this.getNumberAttribute('placement_partition_number');
+  }
+  public set placementPartitionNumber(value: number) {
+    this._placementPartitionNumber = value;
+  }
+  public resetPlacementPartitionNumber() {
+    this._placementPartitionNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementPartitionNumberInput() {
+    return this._placementPartitionNumber;
+  }
+
+  // primary_network_interface_id - computed: true, optional: false, required: false
+  public get primaryNetworkInterfaceId() {
+    return this.getStringAttribute('primary_network_interface_id');
+  }
+
+  // private_dns - computed: true, optional: false, required: false
+  public get privateDns() {
+    return this.getStringAttribute('private_dns');
+  }
+
+  // private_ip - computed: true, optional: true, required: false
+  private _privateIp?: string; 
+  public get privateIp() {
+    return this.getStringAttribute('private_ip');
+  }
+  public set privateIp(value: string) {
+    this._privateIp = value;
+  }
+  public resetPrivateIp() {
+    this._privateIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpInput() {
+    return this._privateIp;
+  }
+
+  // public_dns - computed: true, optional: false, required: false
+  public get publicDns() {
+    return this.getStringAttribute('public_dns');
+  }
+
+  // public_ip - computed: true, optional: false, required: false
+  public get publicIp() {
+    return this.getStringAttribute('public_ip');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // secondary_private_ips - computed: true, optional: true, required: false
+  private _secondaryPrivateIps?: string[]; 
+  public get secondaryPrivateIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('secondary_private_ips'));
+  }
+  public set secondaryPrivateIps(value: string[]) {
+    this._secondaryPrivateIps = value;
+  }
+  public resetSecondaryPrivateIps() {
+    this._secondaryPrivateIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryPrivateIpsInput() {
+    return this._secondaryPrivateIps;
+  }
+
+  // security_groups - computed: true, optional: true, required: false
+  private _securityGroups?: string[]; 
+  public get securityGroups() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_groups'));
+  }
+  public set securityGroups(value: string[]) {
+    this._securityGroups = value;
+  }
+  public resetSecurityGroups() {
+    this._securityGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupsInput() {
+    return this._securityGroups;
+  }
+
+  // source_dest_check - computed: false, optional: true, required: false
+  private _sourceDestCheck?: boolean | cdktn.IResolvable; 
+  public get sourceDestCheck() {
+    return this.getBooleanAttribute('source_dest_check');
+  }
+  public set sourceDestCheck(value: boolean | cdktn.IResolvable) {
+    this._sourceDestCheck = value;
+  }
+  public resetSourceDestCheck() {
+    this._sourceDestCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDestCheckInput() {
+    return this._sourceDestCheck;
+  }
+
+  // spot_instance_request_id - computed: true, optional: false, required: false
+  public get spotInstanceRequestId() {
+    return this.getStringAttribute('spot_instance_request_id');
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // tenancy - computed: true, optional: true, required: false
+  private _tenancy?: string; 
+  public get tenancy() {
+    return this.getStringAttribute('tenancy');
+  }
+  public set tenancy(value: string) {
+    this._tenancy = value;
+  }
+  public resetTenancy() {
+    this._tenancy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenancyInput() {
+    return this._tenancy;
+  }
+
+  // user_data - computed: false, optional: true, required: false
+  private _userData?: string; 
+  public get userData() {
+    return this.getStringAttribute('user_data');
+  }
+  public set userData(value: string) {
+    this._userData = value;
+  }
+  public resetUserData() {
+    this._userData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataInput() {
+    return this._userData;
+  }
+
+  // user_data_base64 - computed: true, optional: true, required: false
+  private _userDataBase64?: string; 
+  public get userDataBase64() {
+    return this.getStringAttribute('user_data_base64');
+  }
+  public set userDataBase64(value: string) {
+    this._userDataBase64 = value;
+  }
+  public resetUserDataBase64() {
+    this._userDataBase64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataBase64Input() {
+    return this._userDataBase64;
+  }
+
+  // user_data_replace_on_change - computed: false, optional: true, required: false
+  private _userDataReplaceOnChange?: boolean | cdktn.IResolvable; 
+  public get userDataReplaceOnChange() {
+    return this.getBooleanAttribute('user_data_replace_on_change');
+  }
+  public set userDataReplaceOnChange(value: boolean | cdktn.IResolvable) {
+    this._userDataReplaceOnChange = value;
+  }
+  public resetUserDataReplaceOnChange() {
+    this._userDataReplaceOnChange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataReplaceOnChangeInput() {
+    return this._userDataReplaceOnChange;
+  }
+
+  // volume_tags - computed: false, optional: true, required: false
+  private _volumeTags?: { [key: string]: string }; 
+  public get volumeTags() {
+    return this.getStringMapAttribute('volume_tags');
+  }
+  public set volumeTags(value: { [key: string]: string }) {
+    this._volumeTags = value;
+  }
+  public resetVolumeTags() {
+    this._volumeTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeTagsInput() {
+    return this._volumeTags;
+  }
+
+  // vpc_security_group_ids - computed: true, optional: true, required: false
+  private _vpcSecurityGroupIds?: string[]; 
+  public get vpcSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_ids'));
+  }
+  public set vpcSecurityGroupIds(value: string[]) {
+    this._vpcSecurityGroupIds = value;
+  }
+  public resetVpcSecurityGroupIds() {
+    this._vpcSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupIdsInput() {
+    return this._vpcSecurityGroupIds;
+  }
+
+  // capacity_reservation_specification - computed: false, optional: true, required: false
+  private _capacityReservationSpecification = new AwsInstance.CapacityReservationSpecificationPropertyOutputReference(this, "capacity_reservation_specification");
+  public get capacityReservationSpecification() {
+    return this._capacityReservationSpecification;
+  }
+  public putCapacityReservationSpecification(value: AwsInstance.CapacityReservationSpecificationProperty) {
+    this._capacityReservationSpecification.internalValue = value;
+  }
+  public resetCapacityReservationSpecification() {
+    this._capacityReservationSpecification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationSpecificationInput() {
+    return this._capacityReservationSpecification.internalValue;
+  }
+
+  // cpu_options - computed: false, optional: true, required: false
+  private _cpuOptions = new AwsInstance.CpuOptionsPropertyOutputReference(this, "cpu_options");
+  public get cpuOptions() {
+    return this._cpuOptions;
+  }
+  public putCpuOptions(value: AwsInstance.CpuOptionsProperty) {
+    this._cpuOptions.internalValue = value;
+  }
+  public resetCpuOptions() {
+    this._cpuOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuOptionsInput() {
+    return this._cpuOptions.internalValue;
+  }
+
+  // credit_specification - computed: false, optional: true, required: false
+  private _creditSpecification = new AwsInstance.CreditSpecificationPropertyOutputReference(this, "credit_specification");
+  public get creditSpecification() {
+    return this._creditSpecification;
+  }
+  public putCreditSpecification(value: AwsInstance.CreditSpecificationProperty) {
+    this._creditSpecification.internalValue = value;
+  }
+  public resetCreditSpecification() {
+    this._creditSpecification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get creditSpecificationInput() {
+    return this._creditSpecification.internalValue;
+  }
+
+  // ebs_block_device - computed: false, optional: true, required: false
+  private _ebsBlockDevice = new AwsInstance.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  public get ebsBlockDevice() {
+    return this._ebsBlockDevice;
+  }
+  public putEbsBlockDevice(value: AwsInstance.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
+    this._ebsBlockDevice.internalValue = value;
+  }
+  public resetEbsBlockDevice() {
+    this._ebsBlockDevice.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ebsBlockDeviceInput() {
+    return this._ebsBlockDevice.internalValue;
+  }
+
+  // enclave_options - computed: false, optional: true, required: false
+  private _enclaveOptions = new AwsInstance.EnclaveOptionsPropertyOutputReference(this, "enclave_options");
+  public get enclaveOptions() {
+    return this._enclaveOptions;
+  }
+  public putEnclaveOptions(value: AwsInstance.EnclaveOptionsProperty) {
+    this._enclaveOptions.internalValue = value;
+  }
+  public resetEnclaveOptions() {
+    this._enclaveOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enclaveOptionsInput() {
+    return this._enclaveOptions.internalValue;
+  }
+
+  // ephemeral_block_device - computed: false, optional: true, required: false
+  private _ephemeralBlockDevice = new AwsInstance.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
+  public get ephemeralBlockDevice() {
+    return this._ephemeralBlockDevice;
+  }
+  public putEphemeralBlockDevice(value: AwsInstance.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
+    this._ephemeralBlockDevice.internalValue = value;
+  }
+  public resetEphemeralBlockDevice() {
+    this._ephemeralBlockDevice.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ephemeralBlockDeviceInput() {
+    return this._ephemeralBlockDevice.internalValue;
+  }
+
+  // instance_market_options - computed: false, optional: true, required: false
+  private _instanceMarketOptions = new AwsInstance.InstanceMarketOptionsPropertyOutputReference(this, "instance_market_options");
+  public get instanceMarketOptions() {
+    return this._instanceMarketOptions;
+  }
+  public putInstanceMarketOptions(value: AwsInstance.InstanceMarketOptionsProperty) {
+    this._instanceMarketOptions.internalValue = value;
+  }
+  public resetInstanceMarketOptions() {
+    this._instanceMarketOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceMarketOptionsInput() {
+    return this._instanceMarketOptions.internalValue;
+  }
+
+  // launch_template - computed: false, optional: true, required: false
+  private _launchTemplate = new AwsInstance.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  public get launchTemplate() {
+    return this._launchTemplate;
+  }
+  public putLaunchTemplate(value: AwsInstance.LaunchTemplateProperty) {
+    this._launchTemplate.internalValue = value;
+  }
+  public resetLaunchTemplate() {
+    this._launchTemplate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get launchTemplateInput() {
+    return this._launchTemplate.internalValue;
+  }
+
+  // maintenance_options - computed: false, optional: true, required: false
+  private _maintenanceOptions = new AwsInstance.MaintenanceOptionsPropertyOutputReference(this, "maintenance_options");
+  public get maintenanceOptions() {
+    return this._maintenanceOptions;
+  }
+  public putMaintenanceOptions(value: AwsInstance.MaintenanceOptionsProperty) {
+    this._maintenanceOptions.internalValue = value;
+  }
+  public resetMaintenanceOptions() {
+    this._maintenanceOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceOptionsInput() {
+    return this._maintenanceOptions.internalValue;
+  }
+
+  // metadata_options - computed: false, optional: true, required: false
+  private _metadataOptions = new AwsInstance.MetadataOptionsPropertyOutputReference(this, "metadata_options");
+  public get metadataOptions() {
+    return this._metadataOptions;
+  }
+  public putMetadataOptions(value: AwsInstance.MetadataOptionsProperty) {
+    this._metadataOptions.internalValue = value;
+  }
+  public resetMetadataOptions() {
+    this._metadataOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataOptionsInput() {
+    return this._metadataOptions.internalValue;
+  }
+
+  // network_interface - computed: false, optional: true, required: false
+  private _networkInterface = new AwsInstance.NetworkInterfacePropertyList(this, "network_interface", true);
+  public get networkInterface() {
+    return this._networkInterface;
+  }
+  public putNetworkInterface(value: AwsInstance.NetworkInterfaceProperty[] | cdktn.IResolvable) {
+    this._networkInterface.internalValue = value;
+  }
+  public resetNetworkInterface() {
+    this._networkInterface.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceInput() {
+    return this._networkInterface.internalValue;
+  }
+
+  // primary_network_interface - computed: false, optional: true, required: false
+  private _primaryNetworkInterface = new AwsInstance.PrimaryNetworkInterfacePropertyOutputReference(this, "primary_network_interface");
+  public get primaryNetworkInterface() {
+    return this._primaryNetworkInterface;
+  }
+  public putPrimaryNetworkInterface(value: AwsInstance.PrimaryNetworkInterfaceProperty) {
+    this._primaryNetworkInterface.internalValue = value;
+  }
+  public resetPrimaryNetworkInterface() {
+    this._primaryNetworkInterface.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryNetworkInterfaceInput() {
+    return this._primaryNetworkInterface.internalValue;
+  }
+
+  // private_dns_name_options - computed: false, optional: true, required: false
+  private _privateDnsNameOptions = new AwsInstance.PrivateDnsNameOptionsPropertyOutputReference(this, "private_dns_name_options");
+  public get privateDnsNameOptions() {
+    return this._privateDnsNameOptions;
+  }
+  public putPrivateDnsNameOptions(value: AwsInstance.PrivateDnsNameOptionsProperty) {
+    this._privateDnsNameOptions.internalValue = value;
+  }
+  public resetPrivateDnsNameOptions() {
+    this._privateDnsNameOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsNameOptionsInput() {
+    return this._privateDnsNameOptions.internalValue;
+  }
+
+  // root_block_device - computed: false, optional: true, required: false
+  private _rootBlockDevice = new AwsInstance.RootBlockDevicePropertyOutputReference(this, "root_block_device");
+  public get rootBlockDevice() {
+    return this._rootBlockDevice;
+  }
+  public putRootBlockDevice(value: AwsInstance.RootBlockDeviceProperty) {
+    this._rootBlockDevice.internalValue = value;
+  }
+  public resetRootBlockDevice() {
+    this._rootBlockDevice.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootBlockDeviceInput() {
+    return this._rootBlockDevice.internalValue;
+  }
+
+  // secondary_network_interface - computed: false, optional: true, required: false
+  private _secondaryNetworkInterface = new AwsInstance.SecondaryNetworkInterfacePropertyList(this, "secondary_network_interface", true);
+  public get secondaryNetworkInterface() {
+    return this._secondaryNetworkInterface;
+  }
+  public putSecondaryNetworkInterface(value: AwsInstance.SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable) {
+    this._secondaryNetworkInterface.internalValue = value;
+  }
+  public resetSecondaryNetworkInterface() {
+    this._secondaryNetworkInterface.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryNetworkInterfaceInput() {
+    return this._secondaryNetworkInterface.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsInstance.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsInstance.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      ami: cdktn.stringToTerraform(this._ami),
+      associate_public_ip_address: cdktn.booleanToTerraform(this._associatePublicIpAddress),
+      availability_zone: cdktn.stringToTerraform(this._availabilityZone),
+      disable_api_stop: cdktn.booleanToTerraform(this._disableApiStop),
+      disable_api_termination: cdktn.booleanToTerraform(this._disableApiTermination),
+      ebs_optimized: cdktn.booleanToTerraform(this._ebsOptimized),
+      enable_primary_ipv6: cdktn.booleanToTerraform(this._enablePrimaryIpv6),
+      force_destroy: cdktn.booleanToTerraform(this._forceDestroy),
+      get_password_data: cdktn.booleanToTerraform(this._getPasswordData),
+      hibernation: cdktn.booleanToTerraform(this._hibernation),
+      host_id: cdktn.stringToTerraform(this._hostId),
+      host_resource_group_arn: cdktn.stringToTerraform(this._hostResourceGroupArn),
+      iam_instance_profile: cdktn.stringToTerraform(this._iamInstanceProfile),
+      id: cdktn.stringToTerraform(this._id),
+      instance_initiated_shutdown_behavior: cdktn.stringToTerraform(this._instanceInitiatedShutdownBehavior),
+      instance_type: cdktn.stringToTerraform(this._instanceType),
+      ipv6_address_count: cdktn.numberToTerraform(this._ipv6AddressCount),
+      ipv6_addresses: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipv6Addresses),
+      key_name: cdktn.stringToTerraform(this._keyName),
+      monitoring: cdktn.booleanToTerraform(this._monitoring),
+      placement_group: cdktn.stringToTerraform(this._placementGroup),
+      placement_group_id: cdktn.stringToTerraform(this._placementGroupId),
+      placement_partition_number: cdktn.numberToTerraform(this._placementPartitionNumber),
+      private_ip: cdktn.stringToTerraform(this._privateIp),
+      region: cdktn.stringToTerraform(this._region),
+      secondary_private_ips: cdktn.listMapper(cdktn.stringToTerraform, false)(this._secondaryPrivateIps),
+      security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroups),
+      source_dest_check: cdktn.booleanToTerraform(this._sourceDestCheck),
+      subnet_id: cdktn.stringToTerraform(this._subnetId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      tenancy: cdktn.stringToTerraform(this._tenancy),
+      user_data: cdktn.stringToTerraform(this._userData),
+      user_data_base64: cdktn.stringToTerraform(this._userDataBase64),
+      user_data_replace_on_change: cdktn.booleanToTerraform(this._userDataReplaceOnChange),
+      volume_tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._volumeTags),
+      vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._vpcSecurityGroupIds),
+      capacity_reservation_specification: awsInstanceCapacityReservationSpecificationPropertyToTerraform(this._capacityReservationSpecification.internalValue),
+      cpu_options: awsInstanceCpuOptionsPropertyToTerraform(this._cpuOptions.internalValue),
+      credit_specification: awsInstanceCreditSpecificationPropertyToTerraform(this._creditSpecification.internalValue),
+      ebs_block_device: cdktn.listMapper(awsInstanceEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
+      enclave_options: awsInstanceEnclaveOptionsPropertyToTerraform(this._enclaveOptions.internalValue),
+      ephemeral_block_device: cdktn.listMapper(awsInstanceEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
+      instance_market_options: awsInstanceInstanceMarketOptionsPropertyToTerraform(this._instanceMarketOptions.internalValue),
+      launch_template: awsInstanceLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      maintenance_options: awsInstanceMaintenanceOptionsPropertyToTerraform(this._maintenanceOptions.internalValue),
+      metadata_options: awsInstanceMetadataOptionsPropertyToTerraform(this._metadataOptions.internalValue),
+      network_interface: cdktn.listMapper(awsInstanceNetworkInterfacePropertyToTerraform, true)(this._networkInterface.internalValue),
+      primary_network_interface: awsInstancePrimaryNetworkInterfacePropertyToTerraform(this._primaryNetworkInterface.internalValue),
+      private_dns_name_options: awsInstancePrivateDnsNameOptionsPropertyToTerraform(this._privateDnsNameOptions.internalValue),
+      root_block_device: awsInstanceRootBlockDevicePropertyToTerraform(this._rootBlockDevice.internalValue),
+      secondary_network_interface: cdktn.listMapper(awsInstanceSecondaryNetworkInterfacePropertyToTerraform, true)(this._secondaryNetworkInterface.internalValue),
+      timeouts: awsInstanceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      ami: {
+        value: cdktn.stringToHclTerraform(this._ami),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      associate_public_ip_address: {
+        value: cdktn.booleanToHclTerraform(this._associatePublicIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      availability_zone: {
+        value: cdktn.stringToHclTerraform(this._availabilityZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disable_api_stop: {
+        value: cdktn.booleanToHclTerraform(this._disableApiStop),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_api_termination: {
+        value: cdktn.booleanToHclTerraform(this._disableApiTermination),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ebs_optimized: {
+        value: cdktn.booleanToHclTerraform(this._ebsOptimized),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_primary_ipv6: {
+        value: cdktn.booleanToHclTerraform(this._enablePrimaryIpv6),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      force_destroy: {
+        value: cdktn.booleanToHclTerraform(this._forceDestroy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      get_password_data: {
+        value: cdktn.booleanToHclTerraform(this._getPasswordData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      hibernation: {
+        value: cdktn.booleanToHclTerraform(this._hibernation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      host_id: {
+        value: cdktn.stringToHclTerraform(this._hostId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_resource_group_arn: {
+        value: cdktn.stringToHclTerraform(this._hostResourceGroupArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      iam_instance_profile: {
+        value: cdktn.stringToHclTerraform(this._iamInstanceProfile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_initiated_shutdown_behavior: {
+        value: cdktn.stringToHclTerraform(this._instanceInitiatedShutdownBehavior),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_type: {
+        value: cdktn.stringToHclTerraform(this._instanceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv6_address_count: {
+        value: cdktn.numberToHclTerraform(this._ipv6AddressCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ipv6_addresses: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._ipv6Addresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      key_name: {
+        value: cdktn.stringToHclTerraform(this._keyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      monitoring: {
+        value: cdktn.booleanToHclTerraform(this._monitoring),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      placement_group: {
+        value: cdktn.stringToHclTerraform(this._placementGroup),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      placement_group_id: {
+        value: cdktn.stringToHclTerraform(this._placementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      placement_partition_number: {
+        value: cdktn.numberToHclTerraform(this._placementPartitionNumber),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      private_ip: {
+        value: cdktn.stringToHclTerraform(this._privateIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secondary_private_ips: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._secondaryPrivateIps),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      security_groups: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroups),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      source_dest_check: {
+        value: cdktn.booleanToHclTerraform(this._sourceDestCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      subnet_id: {
+        value: cdktn.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tenancy: {
+        value: cdktn.stringToHclTerraform(this._tenancy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_data: {
+        value: cdktn.stringToHclTerraform(this._userData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_data_base64: {
+        value: cdktn.stringToHclTerraform(this._userDataBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_data_replace_on_change: {
+        value: cdktn.booleanToHclTerraform(this._userDataReplaceOnChange),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      volume_tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._volumeTags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      vpc_security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._vpcSecurityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      capacity_reservation_specification: {
+        value: awsInstanceCapacityReservationSpecificationPropertyToHclTerraform(this._capacityReservationSpecification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.CapacityReservationSpecificationPropertyList",
+      },
+      cpu_options: {
+        value: awsInstanceCpuOptionsPropertyToHclTerraform(this._cpuOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.CpuOptionsPropertyList",
+      },
+      credit_specification: {
+        value: awsInstanceCreditSpecificationPropertyToHclTerraform(this._creditSpecification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.CreditSpecificationPropertyList",
+      },
+      ebs_block_device: {
+        value: cdktn.listMapperHcl(awsInstanceEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsInstance.EbsBlockDevicePropertyList",
+      },
+      enclave_options: {
+        value: awsInstanceEnclaveOptionsPropertyToHclTerraform(this._enclaveOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.EnclaveOptionsPropertyList",
+      },
+      ephemeral_block_device: {
+        value: cdktn.listMapperHcl(awsInstanceEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsInstance.EphemeralBlockDevicePropertyList",
+      },
+      instance_market_options: {
+        value: awsInstanceInstanceMarketOptionsPropertyToHclTerraform(this._instanceMarketOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.InstanceMarketOptionsPropertyList",
+      },
+      launch_template: {
+        value: awsInstanceLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.LaunchTemplatePropertyList",
+      },
+      maintenance_options: {
+        value: awsInstanceMaintenanceOptionsPropertyToHclTerraform(this._maintenanceOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.MaintenanceOptionsPropertyList",
+      },
+      metadata_options: {
+        value: awsInstanceMetadataOptionsPropertyToHclTerraform(this._metadataOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.MetadataOptionsPropertyList",
+      },
+      network_interface: {
+        value: cdktn.listMapperHcl(awsInstanceNetworkInterfacePropertyToHclTerraform, true)(this._networkInterface.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsInstance.NetworkInterfacePropertyList",
+      },
+      primary_network_interface: {
+        value: awsInstancePrimaryNetworkInterfacePropertyToHclTerraform(this._primaryNetworkInterface.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.PrimaryNetworkInterfacePropertyList",
+      },
+      private_dns_name_options: {
+        value: awsInstancePrivateDnsNameOptionsPropertyToHclTerraform(this._privateDnsNameOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.PrivateDnsNameOptionsPropertyList",
+      },
+      root_block_device: {
+        value: awsInstanceRootBlockDevicePropertyToHclTerraform(this._rootBlockDevice.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsInstance.RootBlockDevicePropertyList",
+      },
+      secondary_network_interface: {
+        value: cdktn.listMapperHcl(awsInstanceSecondaryNetworkInterfacePropertyToHclTerraform, true)(this._secondaryNetworkInterface.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsInstance.SecondaryNetworkInterfacePropertyList",
+      },
+      timeouts: {
+        value: awsInstanceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsInstance.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsInstanceCapacityReservationTargetPropertyToTerraform(struct?: AwsInstance.CapacityReservationTargetPropertyOutputReference | AwsInstance.CapacityReservationTargetProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    capacity_reservation_id: cdktn.stringToTerraform(struct!.capacityReservationId),
+    capacity_reservation_resource_group_arn: cdktn.stringToTerraform(struct!.capacityReservationResourceGroupArn),
+  }
+}
+
+
+export function awsInstanceCapacityReservationTargetPropertyToHclTerraform(struct?: AwsInstance.CapacityReservationTargetPropertyOutputReference | AwsInstance.CapacityReservationTargetProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    capacity_reservation_id: {
+      value: cdktn.stringToHclTerraform(struct!.capacityReservationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    capacity_reservation_resource_group_arn: {
+      value: cdktn.stringToHclTerraform(struct!.capacityReservationResourceGroupArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceCapacityReservationSpecificationPropertyToTerraform(struct?: AwsInstance.CapacityReservationSpecificationPropertyOutputReference | AwsInstance.CapacityReservationSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    capacity_reservation_preference: cdktn.stringToTerraform(struct!.capacityReservationPreference),
+    capacity_reservation_target: awsInstanceCapacityReservationTargetPropertyToTerraform(struct!.capacityReservationTarget),
+  }
+}
+
+
+export function awsInstanceCapacityReservationSpecificationPropertyToHclTerraform(struct?: AwsInstance.CapacityReservationSpecificationPropertyOutputReference | AwsInstance.CapacityReservationSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    capacity_reservation_preference: {
+      value: cdktn.stringToHclTerraform(struct!.capacityReservationPreference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    capacity_reservation_target: {
+      value: awsInstanceCapacityReservationTargetPropertyToHclTerraform(struct!.capacityReservationTarget),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CapacityReservationTargetPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceCpuOptionsPropertyToTerraform(struct?: AwsInstance.CpuOptionsPropertyOutputReference | AwsInstance.CpuOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    amd_sev_snp: cdktn.stringToTerraform(struct!.amdSevSnp),
+    core_count: cdktn.numberToTerraform(struct!.coreCount),
+    nested_virtualization: cdktn.stringToTerraform(struct!.nestedVirtualization),
+    threads_per_core: cdktn.numberToTerraform(struct!.threadsPerCore),
+  }
+}
+
+
+export function awsInstanceCpuOptionsPropertyToHclTerraform(struct?: AwsInstance.CpuOptionsPropertyOutputReference | AwsInstance.CpuOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    amd_sev_snp: {
+      value: cdktn.stringToHclTerraform(struct!.amdSevSnp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    core_count: {
+      value: cdktn.numberToHclTerraform(struct!.coreCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    nested_virtualization: {
+      value: cdktn.stringToHclTerraform(struct!.nestedVirtualization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threads_per_core: {
+      value: cdktn.numberToHclTerraform(struct!.threadsPerCore),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceCreditSpecificationPropertyToTerraform(struct?: AwsInstance.CreditSpecificationPropertyOutputReference | AwsInstance.CreditSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cpu_credits: cdktn.stringToTerraform(struct!.cpuCredits),
+  }
+}
+
+
+export function awsInstanceCreditSpecificationPropertyToHclTerraform(struct?: AwsInstance.CreditSpecificationPropertyOutputReference | AwsInstance.CreditSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cpu_credits: {
+      value: cdktn.stringToHclTerraform(struct!.cpuCredits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceEbsBlockDevicePropertyToTerraform(struct?: AwsInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete_on_termination: cdktn.booleanToTerraform(struct!.deleteOnTermination),
+    device_name: cdktn.stringToTerraform(struct!.deviceName),
+    encrypted: cdktn.booleanToTerraform(struct!.encrypted),
+    iops: cdktn.numberToTerraform(struct!.iops),
+    kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
+    snapshot_id: cdktn.stringToTerraform(struct!.snapshotId),
+    tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
+    tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagsAll),
+    throughput: cdktn.numberToTerraform(struct!.throughput),
+    volume_size: cdktn.numberToTerraform(struct!.volumeSize),
+    volume_type: cdktn.stringToTerraform(struct!.volumeType),
+  }
+}
+
+
+export function awsInstanceEbsBlockDevicePropertyToHclTerraform(struct?: AwsInstance.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete_on_termination: {
+      value: cdktn.booleanToHclTerraform(struct!.deleteOnTermination),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    device_name: {
+      value: cdktn.stringToHclTerraform(struct!.deviceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    encrypted: {
+      value: cdktn.booleanToHclTerraform(struct!.encrypted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    iops: {
+      value: cdktn.numberToHclTerraform(struct!.iops),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    kms_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    snapshot_id: {
+      value: cdktn.stringToHclTerraform(struct!.snapshotId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    tags_all: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tagsAll),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    throughput: {
+      value: cdktn.numberToHclTerraform(struct!.throughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    volume_size: {
+      value: cdktn.numberToHclTerraform(struct!.volumeSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    volume_type: {
+      value: cdktn.stringToHclTerraform(struct!.volumeType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceEnclaveOptionsPropertyToTerraform(struct?: AwsInstance.EnclaveOptionsPropertyOutputReference | AwsInstance.EnclaveOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+  }
+}
+
+
+export function awsInstanceEnclaveOptionsPropertyToHclTerraform(struct?: AwsInstance.EnclaveOptionsPropertyOutputReference | AwsInstance.EnclaveOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceEphemeralBlockDevicePropertyToTerraform(struct?: AwsInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    device_name: cdktn.stringToTerraform(struct!.deviceName),
+    no_device: cdktn.booleanToTerraform(struct!.noDevice),
+    virtual_name: cdktn.stringToTerraform(struct!.virtualName),
+  }
+}
+
+
+export function awsInstanceEphemeralBlockDevicePropertyToHclTerraform(struct?: AwsInstance.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    device_name: {
+      value: cdktn.stringToHclTerraform(struct!.deviceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    no_device: {
+      value: cdktn.booleanToHclTerraform(struct!.noDevice),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    virtual_name: {
+      value: cdktn.stringToHclTerraform(struct!.virtualName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceSpotOptionsPropertyToTerraform(struct?: AwsInstance.SpotOptionsPropertyOutputReference | AwsInstance.SpotOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    instance_interruption_behavior: cdktn.stringToTerraform(struct!.instanceInterruptionBehavior),
+    max_price: cdktn.stringToTerraform(struct!.maxPrice),
+    spot_instance_type: cdktn.stringToTerraform(struct!.spotInstanceType),
+    valid_until: cdktn.stringToTerraform(struct!.validUntil),
+  }
+}
+
+
+export function awsInstanceSpotOptionsPropertyToHclTerraform(struct?: AwsInstance.SpotOptionsPropertyOutputReference | AwsInstance.SpotOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    instance_interruption_behavior: {
+      value: cdktn.stringToHclTerraform(struct!.instanceInterruptionBehavior),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_price: {
+      value: cdktn.stringToHclTerraform(struct!.maxPrice),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    spot_instance_type: {
+      value: cdktn.stringToHclTerraform(struct!.spotInstanceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    valid_until: {
+      value: cdktn.stringToHclTerraform(struct!.validUntil),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceInstanceMarketOptionsPropertyToTerraform(struct?: AwsInstance.InstanceMarketOptionsPropertyOutputReference | AwsInstance.InstanceMarketOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    market_type: cdktn.stringToTerraform(struct!.marketType),
+    spot_options: awsInstanceSpotOptionsPropertyToTerraform(struct!.spotOptions),
+  }
+}
+
+
+export function awsInstanceInstanceMarketOptionsPropertyToHclTerraform(struct?: AwsInstance.InstanceMarketOptionsPropertyOutputReference | AwsInstance.InstanceMarketOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    market_type: {
+      value: cdktn.stringToHclTerraform(struct!.marketType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    spot_options: {
+      value: awsInstanceSpotOptionsPropertyToHclTerraform(struct!.spotOptions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpotOptionsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceLaunchTemplatePropertyToTerraform(struct?: AwsInstance.LaunchTemplatePropertyOutputReference | AwsInstance.LaunchTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    id: cdktn.stringToTerraform(struct!.id),
+    name: cdktn.stringToTerraform(struct!.name),
+    version: cdktn.stringToTerraform(struct!.version),
+  }
+}
+
+
+export function awsInstanceLaunchTemplatePropertyToHclTerraform(struct?: AwsInstance.LaunchTemplatePropertyOutputReference | AwsInstance.LaunchTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    id: {
+      value: cdktn.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktn.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceMaintenanceOptionsPropertyToTerraform(struct?: AwsInstance.MaintenanceOptionsPropertyOutputReference | AwsInstance.MaintenanceOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    auto_recovery: cdktn.stringToTerraform(struct!.autoRecovery),
+  }
+}
+
+
+export function awsInstanceMaintenanceOptionsPropertyToHclTerraform(struct?: AwsInstance.MaintenanceOptionsPropertyOutputReference | AwsInstance.MaintenanceOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    auto_recovery: {
+      value: cdktn.stringToHclTerraform(struct!.autoRecovery),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceMetadataOptionsPropertyToTerraform(struct?: AwsInstance.MetadataOptionsPropertyOutputReference | AwsInstance.MetadataOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    http_endpoint: cdktn.stringToTerraform(struct!.httpEndpoint),
+    http_protocol_ipv6: cdktn.stringToTerraform(struct!.httpProtocolIpv6),
+    http_put_response_hop_limit: cdktn.numberToTerraform(struct!.httpPutResponseHopLimit),
+    http_tokens: cdktn.stringToTerraform(struct!.httpTokens),
+    instance_metadata_tags: cdktn.stringToTerraform(struct!.instanceMetadataTags),
+  }
+}
+
+
+export function awsInstanceMetadataOptionsPropertyToHclTerraform(struct?: AwsInstance.MetadataOptionsPropertyOutputReference | AwsInstance.MetadataOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    http_endpoint: {
+      value: cdktn.stringToHclTerraform(struct!.httpEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_protocol_ipv6: {
+      value: cdktn.stringToHclTerraform(struct!.httpProtocolIpv6),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_put_response_hop_limit: {
+      value: cdktn.numberToHclTerraform(struct!.httpPutResponseHopLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    http_tokens: {
+      value: cdktn.stringToHclTerraform(struct!.httpTokens),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    instance_metadata_tags: {
+      value: cdktn.stringToHclTerraform(struct!.instanceMetadataTags),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceNetworkInterfacePropertyToTerraform(struct?: AwsInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete_on_termination: cdktn.booleanToTerraform(struct!.deleteOnTermination),
+    device_index: cdktn.numberToTerraform(struct!.deviceIndex),
+    network_card_index: cdktn.numberToTerraform(struct!.networkCardIndex),
+    network_interface_id: cdktn.stringToTerraform(struct!.networkInterfaceId),
+  }
+}
+
+
+export function awsInstanceNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.NetworkInterfaceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete_on_termination: {
+      value: cdktn.booleanToHclTerraform(struct!.deleteOnTermination),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    device_index: {
+      value: cdktn.numberToHclTerraform(struct!.deviceIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    network_card_index: {
+      value: cdktn.numberToHclTerraform(struct!.networkCardIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    network_interface_id: {
+      value: cdktn.stringToHclTerraform(struct!.networkInterfaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstancePrimaryNetworkInterfacePropertyToTerraform(struct?: AwsInstance.PrimaryNetworkInterfacePropertyOutputReference | AwsInstance.PrimaryNetworkInterfaceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    network_interface_id: cdktn.stringToTerraform(struct!.networkInterfaceId),
+  }
+}
+
+
+export function awsInstancePrimaryNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.PrimaryNetworkInterfacePropertyOutputReference | AwsInstance.PrimaryNetworkInterfaceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    network_interface_id: {
+      value: cdktn.stringToHclTerraform(struct!.networkInterfaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstancePrivateDnsNameOptionsPropertyToTerraform(struct?: AwsInstance.PrivateDnsNameOptionsPropertyOutputReference | AwsInstance.PrivateDnsNameOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enable_resource_name_dns_a_record: cdktn.booleanToTerraform(struct!.enableResourceNameDnsARecord),
+    enable_resource_name_dns_aaaa_record: cdktn.booleanToTerraform(struct!.enableResourceNameDnsAaaaRecord),
+    hostname_type: cdktn.stringToTerraform(struct!.hostnameType),
+  }
+}
+
+
+export function awsInstancePrivateDnsNameOptionsPropertyToHclTerraform(struct?: AwsInstance.PrivateDnsNameOptionsPropertyOutputReference | AwsInstance.PrivateDnsNameOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enable_resource_name_dns_a_record: {
+      value: cdktn.booleanToHclTerraform(struct!.enableResourceNameDnsARecord),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_resource_name_dns_aaaa_record: {
+      value: cdktn.booleanToHclTerraform(struct!.enableResourceNameDnsAaaaRecord),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    hostname_type: {
+      value: cdktn.stringToHclTerraform(struct!.hostnameType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceRootBlockDevicePropertyToTerraform(struct?: AwsInstance.RootBlockDevicePropertyOutputReference | AwsInstance.RootBlockDeviceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete_on_termination: cdktn.booleanToTerraform(struct!.deleteOnTermination),
+    encrypted: cdktn.booleanToTerraform(struct!.encrypted),
+    iops: cdktn.numberToTerraform(struct!.iops),
+    kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
+    tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
+    tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tagsAll),
+    throughput: cdktn.numberToTerraform(struct!.throughput),
+    volume_size: cdktn.numberToTerraform(struct!.volumeSize),
+    volume_type: cdktn.stringToTerraform(struct!.volumeType),
+  }
+}
+
+
+export function awsInstanceRootBlockDevicePropertyToHclTerraform(struct?: AwsInstance.RootBlockDevicePropertyOutputReference | AwsInstance.RootBlockDeviceProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete_on_termination: {
+      value: cdktn.booleanToHclTerraform(struct!.deleteOnTermination),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    encrypted: {
+      value: cdktn.booleanToHclTerraform(struct!.encrypted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    iops: {
+      value: cdktn.numberToHclTerraform(struct!.iops),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    kms_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    tags_all: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tagsAll),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    throughput: {
+      value: cdktn.numberToHclTerraform(struct!.throughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    volume_size: {
+      value: cdktn.numberToHclTerraform(struct!.volumeSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    volume_type: {
+      value: cdktn.stringToHclTerraform(struct!.volumeType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceSecondaryNetworkInterfacePropertyToTerraform(struct?: AwsInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    delete_on_termination: cdktn.booleanToTerraform(struct!.deleteOnTermination),
+    device_index: cdktn.numberToTerraform(struct!.deviceIndex),
+    interface_type: cdktn.stringToTerraform(struct!.interfaceType),
+    network_card_index: cdktn.numberToTerraform(struct!.networkCardIndex),
+    private_ip_address_count: cdktn.numberToTerraform(struct!.privateIpAddressCount),
+    secondary_subnet_id: cdktn.stringToTerraform(struct!.secondarySubnetId),
+  }
+}
+
+
+export function awsInstanceSecondaryNetworkInterfacePropertyToHclTerraform(struct?: AwsInstance.SecondaryNetworkInterfaceProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    delete_on_termination: {
+      value: cdktn.booleanToHclTerraform(struct!.deleteOnTermination),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    device_index: {
+      value: cdktn.numberToHclTerraform(struct!.deviceIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    interface_type: {
+      value: cdktn.stringToHclTerraform(struct!.interfaceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    network_card_index: {
+      value: cdktn.numberToHclTerraform(struct!.networkCardIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    private_ip_address_count: {
+      value: cdktn.numberToHclTerraform(struct!.privateIpAddressCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    secondary_subnet_id: {
+      value: cdktn.stringToHclTerraform(struct!.secondarySubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsInstanceTimeoutsPropertyToTerraform(struct?: AwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    read: cdktn.stringToTerraform(struct!.read),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsInstanceTimeoutsPropertyToHclTerraform(struct?: AwsInstance.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktn.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsInstance {
+export interface CapacityReservationTargetProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_id AwsInstance#capacity_reservation_id}
+  */
+  readonly capacityReservationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_resource_group_arn AwsInstance#capacity_reservation_resource_group_arn}
+  */
+  readonly capacityReservationResourceGroupArn?: string;
+}
+export class CapacityReservationTargetPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CapacityReservationTargetProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._capacityReservationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityReservationId = this._capacityReservationId;
+    }
+    if (this._capacityReservationResourceGroupArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityReservationResourceGroupArn = this._capacityReservationResourceGroupArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CapacityReservationTargetProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._capacityReservationId = undefined;
+      this._capacityReservationResourceGroupArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._capacityReservationId = value.capacityReservationId;
+      this._capacityReservationResourceGroupArn = value.capacityReservationResourceGroupArn;
+    }
+  }
+
+  // capacity_reservation_id - computed: false, optional: true, required: false
+  private _capacityReservationId?: string; 
+  public get capacityReservationId() {
+    return this.getStringAttribute('capacity_reservation_id');
+  }
+  public set capacityReservationId(value: string) {
+    this._capacityReservationId = value;
+  }
+  public resetCapacityReservationId() {
+    this._capacityReservationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationIdInput() {
+    return this._capacityReservationId;
+  }
+
+  // capacity_reservation_resource_group_arn - computed: false, optional: true, required: false
+  private _capacityReservationResourceGroupArn?: string; 
+  public get capacityReservationResourceGroupArn() {
+    return this.getStringAttribute('capacity_reservation_resource_group_arn');
+  }
+  public set capacityReservationResourceGroupArn(value: string) {
+    this._capacityReservationResourceGroupArn = value;
+  }
+  public resetCapacityReservationResourceGroupArn() {
+    this._capacityReservationResourceGroupArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationResourceGroupArnInput() {
+    return this._capacityReservationResourceGroupArn;
+  }
+}
+export interface CapacityReservationSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_preference AwsInstance#capacity_reservation_preference}
+  */
+  readonly capacityReservationPreference?: string;
+  /**
+  * capacity_reservation_target block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#capacity_reservation_target AwsInstance#capacity_reservation_target}
+  */
+  readonly capacityReservationTarget?: CapacityReservationTargetProperty;
+}
+export class CapacityReservationSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CapacityReservationSpecificationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._capacityReservationPreference !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityReservationPreference = this._capacityReservationPreference;
+    }
+    if (this._capacityReservationTarget?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityReservationTarget = this._capacityReservationTarget?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CapacityReservationSpecificationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._capacityReservationPreference = undefined;
+      this._capacityReservationTarget.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._capacityReservationPreference = value.capacityReservationPreference;
+      this._capacityReservationTarget.internalValue = value.capacityReservationTarget;
+    }
+  }
+
+  // capacity_reservation_preference - computed: false, optional: true, required: false
+  private _capacityReservationPreference?: string; 
+  public get capacityReservationPreference() {
+    return this.getStringAttribute('capacity_reservation_preference');
+  }
+  public set capacityReservationPreference(value: string) {
+    this._capacityReservationPreference = value;
+  }
+  public resetCapacityReservationPreference() {
+    this._capacityReservationPreference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationPreferenceInput() {
+    return this._capacityReservationPreference;
+  }
+
+  // capacity_reservation_target - computed: false, optional: true, required: false
+  private _capacityReservationTarget = new CapacityReservationTargetPropertyOutputReference(this, "capacity_reservation_target");
+  public get capacityReservationTarget() {
+    return this._capacityReservationTarget;
+  }
+  public putCapacityReservationTarget(value: CapacityReservationTargetProperty) {
+    this._capacityReservationTarget.internalValue = value;
+  }
+  public resetCapacityReservationTarget() {
+    this._capacityReservationTarget.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationTargetInput() {
+    return this._capacityReservationTarget.internalValue;
+  }
+}
+export interface CpuOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#amd_sev_snp AwsInstance#amd_sev_snp}
+  */
+  readonly amdSevSnp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#core_count AwsInstance#core_count}
+  */
+  readonly coreCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#nested_virtualization AwsInstance#nested_virtualization}
+  */
+  readonly nestedVirtualization?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#threads_per_core AwsInstance#threads_per_core}
+  */
+  readonly threadsPerCore?: number;
+}
+export class CpuOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CpuOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._amdSevSnp !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.amdSevSnp = this._amdSevSnp;
+    }
+    if (this._coreCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.coreCount = this._coreCount;
+    }
+    if (this._nestedVirtualization !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nestedVirtualization = this._nestedVirtualization;
+    }
+    if (this._threadsPerCore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threadsPerCore = this._threadsPerCore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CpuOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._amdSevSnp = undefined;
+      this._coreCount = undefined;
+      this._nestedVirtualization = undefined;
+      this._threadsPerCore = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._amdSevSnp = value.amdSevSnp;
+      this._coreCount = value.coreCount;
+      this._nestedVirtualization = value.nestedVirtualization;
+      this._threadsPerCore = value.threadsPerCore;
+    }
+  }
+
+  // amd_sev_snp - computed: true, optional: true, required: false
+  private _amdSevSnp?: string; 
+  public get amdSevSnp() {
+    return this.getStringAttribute('amd_sev_snp');
+  }
+  public set amdSevSnp(value: string) {
+    this._amdSevSnp = value;
+  }
+  public resetAmdSevSnp() {
+    this._amdSevSnp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get amdSevSnpInput() {
+    return this._amdSevSnp;
+  }
+
+  // core_count - computed: true, optional: true, required: false
+  private _coreCount?: number; 
+  public get coreCount() {
+    return this.getNumberAttribute('core_count');
+  }
+  public set coreCount(value: number) {
+    this._coreCount = value;
+  }
+  public resetCoreCount() {
+    this._coreCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coreCountInput() {
+    return this._coreCount;
+  }
+
+  // nested_virtualization - computed: true, optional: true, required: false
+  private _nestedVirtualization?: string; 
+  public get nestedVirtualization() {
+    return this.getStringAttribute('nested_virtualization');
+  }
+  public set nestedVirtualization(value: string) {
+    this._nestedVirtualization = value;
+  }
+  public resetNestedVirtualization() {
+    this._nestedVirtualization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nestedVirtualizationInput() {
+    return this._nestedVirtualization;
+  }
+
+  // threads_per_core - computed: true, optional: true, required: false
+  private _threadsPerCore?: number; 
+  public get threadsPerCore() {
+    return this.getNumberAttribute('threads_per_core');
+  }
+  public set threadsPerCore(value: number) {
+    this._threadsPerCore = value;
+  }
+  public resetThreadsPerCore() {
+    this._threadsPerCore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threadsPerCoreInput() {
+    return this._threadsPerCore;
+  }
+}
+export interface CreditSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#cpu_credits AwsInstance#cpu_credits}
+  */
+  readonly cpuCredits?: string;
+}
+export class CreditSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CreditSpecificationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cpuCredits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuCredits = this._cpuCredits;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CreditSpecificationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cpuCredits = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cpuCredits = value.cpuCredits;
+    }
+  }
+
+  // cpu_credits - computed: false, optional: true, required: false
+  private _cpuCredits?: string; 
+  public get cpuCredits() {
+    return this.getStringAttribute('cpu_credits');
+  }
+  public set cpuCredits(value: string) {
+    this._cpuCredits = value;
+  }
+  public resetCpuCredits() {
+    this._cpuCredits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuCreditsInput() {
+    return this._cpuCredits;
+  }
+}
+export interface EbsBlockDeviceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  */
+  readonly deleteOnTermination?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name AwsInstance#device_name}
+  */
+  readonly deviceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted AwsInstance#encrypted}
+  */
+  readonly encrypted?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops AwsInstance#iops}
+  */
+  readonly iops?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id AwsInstance#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#snapshot_id AwsInstance#snapshot_id}
+  */
+  readonly snapshotId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput AwsInstance#throughput}
+  */
+  readonly throughput?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size AwsInstance#volume_size}
+  */
+  readonly volumeSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type AwsInstance#volume_type}
+  */
+  readonly volumeType?: string;
+}
+export class EbsBlockDevicePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EbsBlockDeviceProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteOnTermination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteOnTermination = this._deleteOnTermination;
+    }
+    if (this._deviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceName = this._deviceName;
+    }
+    if (this._encrypted !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encrypted = this._encrypted;
+    }
+    if (this._iops !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.iops = this._iops;
+    }
+    if (this._kmsKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyId = this._kmsKeyId;
+    }
+    if (this._snapshotId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshotId = this._snapshotId;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._tagsAll !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tagsAll = this._tagsAll;
+    }
+    if (this._throughput !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.throughput = this._throughput;
+    }
+    if (this._volumeSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeSize = this._volumeSize;
+    }
+    if (this._volumeType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeType = this._volumeType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EbsBlockDeviceProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = undefined;
+      this._deviceName = undefined;
+      this._encrypted = undefined;
+      this._iops = undefined;
+      this._kmsKeyId = undefined;
+      this._snapshotId = undefined;
+      this._tags = undefined;
+      this._tagsAll = undefined;
+      this._throughput = undefined;
+      this._volumeSize = undefined;
+      this._volumeType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = value.deleteOnTermination;
+      this._deviceName = value.deviceName;
+      this._encrypted = value.encrypted;
+      this._iops = value.iops;
+      this._kmsKeyId = value.kmsKeyId;
+      this._snapshotId = value.snapshotId;
+      this._tags = value.tags;
+      this._tagsAll = value.tagsAll;
+      this._throughput = value.throughput;
+      this._volumeSize = value.volumeSize;
+      this._volumeType = value.volumeType;
+    }
+  }
+
+  // delete_on_termination - computed: false, optional: true, required: false
+  private _deleteOnTermination?: boolean | cdktn.IResolvable; 
+  public get deleteOnTermination() {
+    return this.getBooleanAttribute('delete_on_termination');
+  }
+  public set deleteOnTermination(value: boolean | cdktn.IResolvable) {
+    this._deleteOnTermination = value;
+  }
+  public resetDeleteOnTermination() {
+    this._deleteOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteOnTerminationInput() {
+    return this._deleteOnTermination;
+  }
+
+  // device_name - computed: false, optional: false, required: true
+  private _deviceName?: string; 
+  public get deviceName() {
+    return this.getStringAttribute('device_name');
+  }
+  public set deviceName(value: string) {
+    this._deviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceNameInput() {
+    return this._deviceName;
+  }
+
+  // encrypted - computed: true, optional: true, required: false
+  private _encrypted?: boolean | cdktn.IResolvable; 
+  public get encrypted() {
+    return this.getBooleanAttribute('encrypted');
+  }
+  public set encrypted(value: boolean | cdktn.IResolvable) {
+    this._encrypted = value;
+  }
+  public resetEncrypted() {
+    this._encrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptedInput() {
+    return this._encrypted;
+  }
+
+  // iops - computed: true, optional: true, required: false
+  private _iops?: number; 
+  public get iops() {
+    return this.getNumberAttribute('iops');
+  }
+  public set iops(value: number) {
+    this._iops = value;
+  }
+  public resetIops() {
+    this._iops = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iopsInput() {
+    return this._iops;
+  }
+
+  // kms_key_id - computed: true, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // snapshot_id - computed: true, optional: true, required: false
+  private _snapshotId?: string; 
+  public get snapshotId() {
+    return this.getStringAttribute('snapshot_id');
+  }
+  public set snapshotId(value: string) {
+    this._snapshotId = value;
+  }
+  public resetSnapshotId() {
+    this._snapshotId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotIdInput() {
+    return this._snapshotId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // throughput - computed: true, optional: true, required: false
+  private _throughput?: number; 
+  public get throughput() {
+    return this.getNumberAttribute('throughput');
+  }
+  public set throughput(value: number) {
+    this._throughput = value;
+  }
+  public resetThroughput() {
+    this._throughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputInput() {
+    return this._throughput;
+  }
+
+  // volume_id - computed: true, optional: false, required: false
+  public get volumeId() {
+    return this.getStringAttribute('volume_id');
+  }
+
+  // volume_size - computed: true, optional: true, required: false
+  private _volumeSize?: number; 
+  public get volumeSize() {
+    return this.getNumberAttribute('volume_size');
+  }
+  public set volumeSize(value: number) {
+    this._volumeSize = value;
+  }
+  public resetVolumeSize() {
+    this._volumeSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeSizeInput() {
+    return this._volumeSize;
+  }
+
+  // volume_type - computed: true, optional: true, required: false
+  private _volumeType?: string; 
+  public get volumeType() {
+    return this.getStringAttribute('volume_type');
+  }
+  public set volumeType(value: string) {
+    this._volumeType = value;
+  }
+  public resetVolumeType() {
+    this._volumeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeTypeInput() {
+    return this._volumeType;
+  }
+}
+
+export class EbsBlockDevicePropertyList extends cdktn.ComplexList {
+  public internalValue? : EbsBlockDeviceProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EbsBlockDevicePropertyOutputReference {
+    return new EbsBlockDevicePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EnclaveOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enabled AwsInstance#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+}
+export class EnclaveOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EnclaveOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EnclaveOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: true, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+export interface EphemeralBlockDeviceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_name AwsInstance#device_name}
+  */
+  readonly deviceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#no_device AwsInstance#no_device}
+  */
+  readonly noDevice?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#virtual_name AwsInstance#virtual_name}
+  */
+  readonly virtualName?: string;
+}
+export class EphemeralBlockDevicePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EphemeralBlockDeviceProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceName = this._deviceName;
+    }
+    if (this._noDevice !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.noDevice = this._noDevice;
+    }
+    if (this._virtualName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualName = this._virtualName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EphemeralBlockDeviceProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deviceName = undefined;
+      this._noDevice = undefined;
+      this._virtualName = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deviceName = value.deviceName;
+      this._noDevice = value.noDevice;
+      this._virtualName = value.virtualName;
+    }
+  }
+
+  // device_name - computed: false, optional: false, required: true
+  private _deviceName?: string; 
+  public get deviceName() {
+    return this.getStringAttribute('device_name');
+  }
+  public set deviceName(value: string) {
+    this._deviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceNameInput() {
+    return this._deviceName;
+  }
+
+  // no_device - computed: false, optional: true, required: false
+  private _noDevice?: boolean | cdktn.IResolvable; 
+  public get noDevice() {
+    return this.getBooleanAttribute('no_device');
+  }
+  public set noDevice(value: boolean | cdktn.IResolvable) {
+    this._noDevice = value;
+  }
+  public resetNoDevice() {
+    this._noDevice = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noDeviceInput() {
+    return this._noDevice;
+  }
+
+  // virtual_name - computed: false, optional: true, required: false
+  private _virtualName?: string; 
+  public get virtualName() {
+    return this.getStringAttribute('virtual_name');
+  }
+  public set virtualName(value: string) {
+    this._virtualName = value;
+  }
+  public resetVirtualName() {
+    this._virtualName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNameInput() {
+    return this._virtualName;
+  }
+}
+
+export class EphemeralBlockDevicePropertyList extends cdktn.ComplexList {
+  public internalValue? : EphemeralBlockDeviceProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EphemeralBlockDevicePropertyOutputReference {
+    return new EphemeralBlockDevicePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SpotOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_interruption_behavior AwsInstance#instance_interruption_behavior}
+  */
+  readonly instanceInterruptionBehavior?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#max_price AwsInstance#max_price}
+  */
+  readonly maxPrice?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_instance_type AwsInstance#spot_instance_type}
+  */
+  readonly spotInstanceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#valid_until AwsInstance#valid_until}
+  */
+  readonly validUntil?: string;
+}
+export class SpotOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpotOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._instanceInterruptionBehavior !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instanceInterruptionBehavior = this._instanceInterruptionBehavior;
+    }
+    if (this._maxPrice !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxPrice = this._maxPrice;
+    }
+    if (this._spotInstanceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spotInstanceType = this._spotInstanceType;
+    }
+    if (this._validUntil !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.validUntil = this._validUntil;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpotOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._instanceInterruptionBehavior = undefined;
+      this._maxPrice = undefined;
+      this._spotInstanceType = undefined;
+      this._validUntil = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._instanceInterruptionBehavior = value.instanceInterruptionBehavior;
+      this._maxPrice = value.maxPrice;
+      this._spotInstanceType = value.spotInstanceType;
+      this._validUntil = value.validUntil;
+    }
+  }
+
+  // instance_interruption_behavior - computed: true, optional: true, required: false
+  private _instanceInterruptionBehavior?: string; 
+  public get instanceInterruptionBehavior() {
+    return this.getStringAttribute('instance_interruption_behavior');
+  }
+  public set instanceInterruptionBehavior(value: string) {
+    this._instanceInterruptionBehavior = value;
+  }
+  public resetInstanceInterruptionBehavior() {
+    this._instanceInterruptionBehavior = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInterruptionBehaviorInput() {
+    return this._instanceInterruptionBehavior;
+  }
+
+  // max_price - computed: true, optional: true, required: false
+  private _maxPrice?: string; 
+  public get maxPrice() {
+    return this.getStringAttribute('max_price');
+  }
+  public set maxPrice(value: string) {
+    this._maxPrice = value;
+  }
+  public resetMaxPrice() {
+    this._maxPrice = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPriceInput() {
+    return this._maxPrice;
+  }
+
+  // spot_instance_type - computed: true, optional: true, required: false
+  private _spotInstanceType?: string; 
+  public get spotInstanceType() {
+    return this.getStringAttribute('spot_instance_type');
+  }
+  public set spotInstanceType(value: string) {
+    this._spotInstanceType = value;
+  }
+  public resetSpotInstanceType() {
+    this._spotInstanceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotInstanceTypeInput() {
+    return this._spotInstanceType;
+  }
+
+  // valid_until - computed: true, optional: true, required: false
+  private _validUntil?: string; 
+  public get validUntil() {
+    return this.getStringAttribute('valid_until');
+  }
+  public set validUntil(value: string) {
+    this._validUntil = value;
+  }
+  public resetValidUntil() {
+    this._validUntil = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validUntilInput() {
+    return this._validUntil;
+  }
+}
+export interface InstanceMarketOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#market_type AwsInstance#market_type}
+  */
+  readonly marketType?: string;
+  /**
+  * spot_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#spot_options AwsInstance#spot_options}
+  */
+  readonly spotOptions?: SpotOptionsProperty;
+}
+export class InstanceMarketOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): InstanceMarketOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._marketType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.marketType = this._marketType;
+    }
+    if (this._spotOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spotOptions = this._spotOptions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InstanceMarketOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._marketType = undefined;
+      this._spotOptions.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._marketType = value.marketType;
+      this._spotOptions.internalValue = value.spotOptions;
+    }
+  }
+
+  // market_type - computed: true, optional: true, required: false
+  private _marketType?: string; 
+  public get marketType() {
+    return this.getStringAttribute('market_type');
+  }
+  public set marketType(value: string) {
+    this._marketType = value;
+  }
+  public resetMarketType() {
+    this._marketType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get marketTypeInput() {
+    return this._marketType;
+  }
+
+  // spot_options - computed: false, optional: true, required: false
+  private _spotOptions = new SpotOptionsPropertyOutputReference(this, "spot_options");
+  public get spotOptions() {
+    return this._spotOptions;
+  }
+  public putSpotOptions(value: SpotOptionsProperty) {
+    this._spotOptions.internalValue = value;
+  }
+  public resetSpotOptions() {
+    this._spotOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotOptionsInput() {
+    return this._spotOptions.internalValue;
+  }
+}
+export interface LaunchTemplateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#id AwsInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#name AwsInstance#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#version AwsInstance#version}
+  */
+  readonly version?: string;
+}
+export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LaunchTemplateProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LaunchTemplateProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._id = undefined;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._id = value.id;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+export interface MaintenanceOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#auto_recovery AwsInstance#auto_recovery}
+  */
+  readonly autoRecovery?: string;
+}
+export class MaintenanceOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MaintenanceOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoRecovery !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoRecovery = this._autoRecovery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._autoRecovery = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoRecovery = value.autoRecovery;
+    }
+  }
+
+  // auto_recovery - computed: true, optional: true, required: false
+  private _autoRecovery?: string; 
+  public get autoRecovery() {
+    return this.getStringAttribute('auto_recovery');
+  }
+  public set autoRecovery(value: string) {
+    this._autoRecovery = value;
+  }
+  public resetAutoRecovery() {
+    this._autoRecovery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoRecoveryInput() {
+    return this._autoRecovery;
+  }
+}
+export interface MetadataOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_endpoint AwsInstance#http_endpoint}
+  */
+  readonly httpEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_protocol_ipv6 AwsInstance#http_protocol_ipv6}
+  */
+  readonly httpProtocolIpv6?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_put_response_hop_limit AwsInstance#http_put_response_hop_limit}
+  */
+  readonly httpPutResponseHopLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#http_tokens AwsInstance#http_tokens}
+  */
+  readonly httpTokens?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#instance_metadata_tags AwsInstance#instance_metadata_tags}
+  */
+  readonly instanceMetadataTags?: string;
+}
+export class MetadataOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MetadataOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._httpEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpEndpoint = this._httpEndpoint;
+    }
+    if (this._httpProtocolIpv6 !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpProtocolIpv6 = this._httpProtocolIpv6;
+    }
+    if (this._httpPutResponseHopLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpPutResponseHopLimit = this._httpPutResponseHopLimit;
+    }
+    if (this._httpTokens !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpTokens = this._httpTokens;
+    }
+    if (this._instanceMetadataTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instanceMetadataTags = this._instanceMetadataTags;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MetadataOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._httpEndpoint = undefined;
+      this._httpProtocolIpv6 = undefined;
+      this._httpPutResponseHopLimit = undefined;
+      this._httpTokens = undefined;
+      this._instanceMetadataTags = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._httpEndpoint = value.httpEndpoint;
+      this._httpProtocolIpv6 = value.httpProtocolIpv6;
+      this._httpPutResponseHopLimit = value.httpPutResponseHopLimit;
+      this._httpTokens = value.httpTokens;
+      this._instanceMetadataTags = value.instanceMetadataTags;
+    }
+  }
+
+  // http_endpoint - computed: false, optional: true, required: false
+  private _httpEndpoint?: string; 
+  public get httpEndpoint() {
+    return this.getStringAttribute('http_endpoint');
+  }
+  public set httpEndpoint(value: string) {
+    this._httpEndpoint = value;
+  }
+  public resetHttpEndpoint() {
+    this._httpEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpEndpointInput() {
+    return this._httpEndpoint;
+  }
+
+  // http_protocol_ipv6 - computed: false, optional: true, required: false
+  private _httpProtocolIpv6?: string; 
+  public get httpProtocolIpv6() {
+    return this.getStringAttribute('http_protocol_ipv6');
+  }
+  public set httpProtocolIpv6(value: string) {
+    this._httpProtocolIpv6 = value;
+  }
+  public resetHttpProtocolIpv6() {
+    this._httpProtocolIpv6 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpProtocolIpv6Input() {
+    return this._httpProtocolIpv6;
+  }
+
+  // http_put_response_hop_limit - computed: true, optional: true, required: false
+  private _httpPutResponseHopLimit?: number; 
+  public get httpPutResponseHopLimit() {
+    return this.getNumberAttribute('http_put_response_hop_limit');
+  }
+  public set httpPutResponseHopLimit(value: number) {
+    this._httpPutResponseHopLimit = value;
+  }
+  public resetHttpPutResponseHopLimit() {
+    this._httpPutResponseHopLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpPutResponseHopLimitInput() {
+    return this._httpPutResponseHopLimit;
+  }
+
+  // http_tokens - computed: true, optional: true, required: false
+  private _httpTokens?: string; 
+  public get httpTokens() {
+    return this.getStringAttribute('http_tokens');
+  }
+  public set httpTokens(value: string) {
+    this._httpTokens = value;
+  }
+  public resetHttpTokens() {
+    this._httpTokens = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpTokensInput() {
+    return this._httpTokens;
+  }
+
+  // instance_metadata_tags - computed: true, optional: true, required: false
+  private _instanceMetadataTags?: string; 
+  public get instanceMetadataTags() {
+    return this.getStringAttribute('instance_metadata_tags');
+  }
+  public set instanceMetadataTags(value: string) {
+    this._instanceMetadataTags = value;
+  }
+  public resetInstanceMetadataTags() {
+    this._instanceMetadataTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceMetadataTagsInput() {
+    return this._instanceMetadataTags;
+  }
+}
+export interface NetworkInterfaceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  */
+  readonly deleteOnTermination?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index AwsInstance#device_index}
+  */
+  readonly deviceIndex: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index AwsInstance#network_card_index}
+  */
+  readonly networkCardIndex?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id AwsInstance#network_interface_id}
+  */
+  readonly networkInterfaceId: string;
+}
+export class NetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkInterfaceProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteOnTermination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteOnTermination = this._deleteOnTermination;
+    }
+    if (this._deviceIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceIndex = this._deviceIndex;
+    }
+    if (this._networkCardIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkCardIndex = this._networkCardIndex;
+    }
+    if (this._networkInterfaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkInterfaceId = this._networkInterfaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkInterfaceProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = undefined;
+      this._deviceIndex = undefined;
+      this._networkCardIndex = undefined;
+      this._networkInterfaceId = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = value.deleteOnTermination;
+      this._deviceIndex = value.deviceIndex;
+      this._networkCardIndex = value.networkCardIndex;
+      this._networkInterfaceId = value.networkInterfaceId;
+    }
+  }
+
+  // delete_on_termination - computed: false, optional: true, required: false
+  private _deleteOnTermination?: boolean | cdktn.IResolvable; 
+  public get deleteOnTermination() {
+    return this.getBooleanAttribute('delete_on_termination');
+  }
+  public set deleteOnTermination(value: boolean | cdktn.IResolvable) {
+    this._deleteOnTermination = value;
+  }
+  public resetDeleteOnTermination() {
+    this._deleteOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteOnTerminationInput() {
+    return this._deleteOnTermination;
+  }
+
+  // device_index - computed: false, optional: false, required: true
+  private _deviceIndex?: number; 
+  public get deviceIndex() {
+    return this.getNumberAttribute('device_index');
+  }
+  public set deviceIndex(value: number) {
+    this._deviceIndex = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceIndexInput() {
+    return this._deviceIndex;
+  }
+
+  // network_card_index - computed: false, optional: true, required: false
+  private _networkCardIndex?: number; 
+  public get networkCardIndex() {
+    return this.getNumberAttribute('network_card_index');
+  }
+  public set networkCardIndex(value: number) {
+    this._networkCardIndex = value;
+  }
+  public resetNetworkCardIndex() {
+    this._networkCardIndex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkCardIndexInput() {
+    return this._networkCardIndex;
+  }
+
+  // network_interface_id - computed: false, optional: false, required: true
+  private _networkInterfaceId?: string; 
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+  public set networkInterfaceId(value: string) {
+    this._networkInterfaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdInput() {
+    return this._networkInterfaceId;
+  }
+}
+
+export class NetworkInterfacePropertyList extends cdktn.ComplexList {
+  public internalValue? : NetworkInterfaceProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkInterfacePropertyOutputReference {
+    return new NetworkInterfacePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PrimaryNetworkInterfaceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_interface_id AwsInstance#network_interface_id}
+  */
+  readonly networkInterfaceId: string;
+}
+export class PrimaryNetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PrimaryNetworkInterfaceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._networkInterfaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkInterfaceId = this._networkInterfaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrimaryNetworkInterfaceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._networkInterfaceId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._networkInterfaceId = value.networkInterfaceId;
+    }
+  }
+
+  // delete_on_termination - computed: true, optional: false, required: false
+  public get deleteOnTermination() {
+    return this.getBooleanAttribute('delete_on_termination');
+  }
+
+  // network_interface_id - computed: false, optional: false, required: true
+  private _networkInterfaceId?: string; 
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+  public set networkInterfaceId(value: string) {
+    this._networkInterfaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdInput() {
+    return this._networkInterfaceId;
+  }
+}
+export interface PrivateDnsNameOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_a_record AwsInstance#enable_resource_name_dns_a_record}
+  */
+  readonly enableResourceNameDnsARecord?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#enable_resource_name_dns_aaaa_record AwsInstance#enable_resource_name_dns_aaaa_record}
+  */
+  readonly enableResourceNameDnsAaaaRecord?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#hostname_type AwsInstance#hostname_type}
+  */
+  readonly hostnameType?: string;
+}
+export class PrivateDnsNameOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PrivateDnsNameOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableResourceNameDnsARecord !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableResourceNameDnsARecord = this._enableResourceNameDnsARecord;
+    }
+    if (this._enableResourceNameDnsAaaaRecord !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableResourceNameDnsAaaaRecord = this._enableResourceNameDnsAaaaRecord;
+    }
+    if (this._hostnameType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostnameType = this._hostnameType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateDnsNameOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableResourceNameDnsARecord = undefined;
+      this._enableResourceNameDnsAaaaRecord = undefined;
+      this._hostnameType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableResourceNameDnsARecord = value.enableResourceNameDnsARecord;
+      this._enableResourceNameDnsAaaaRecord = value.enableResourceNameDnsAaaaRecord;
+      this._hostnameType = value.hostnameType;
+    }
+  }
+
+  // enable_resource_name_dns_a_record - computed: true, optional: true, required: false
+  private _enableResourceNameDnsARecord?: boolean | cdktn.IResolvable; 
+  public get enableResourceNameDnsARecord() {
+    return this.getBooleanAttribute('enable_resource_name_dns_a_record');
+  }
+  public set enableResourceNameDnsARecord(value: boolean | cdktn.IResolvable) {
+    this._enableResourceNameDnsARecord = value;
+  }
+  public resetEnableResourceNameDnsARecord() {
+    this._enableResourceNameDnsARecord = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableResourceNameDnsARecordInput() {
+    return this._enableResourceNameDnsARecord;
+  }
+
+  // enable_resource_name_dns_aaaa_record - computed: true, optional: true, required: false
+  private _enableResourceNameDnsAaaaRecord?: boolean | cdktn.IResolvable; 
+  public get enableResourceNameDnsAaaaRecord() {
+    return this.getBooleanAttribute('enable_resource_name_dns_aaaa_record');
+  }
+  public set enableResourceNameDnsAaaaRecord(value: boolean | cdktn.IResolvable) {
+    this._enableResourceNameDnsAaaaRecord = value;
+  }
+  public resetEnableResourceNameDnsAaaaRecord() {
+    this._enableResourceNameDnsAaaaRecord = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableResourceNameDnsAaaaRecordInput() {
+    return this._enableResourceNameDnsAaaaRecord;
+  }
+
+  // hostname_type - computed: true, optional: true, required: false
+  private _hostnameType?: string; 
+  public get hostnameType() {
+    return this.getStringAttribute('hostname_type');
+  }
+  public set hostnameType(value: string) {
+    this._hostnameType = value;
+  }
+  public resetHostnameType() {
+    this._hostnameType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostnameTypeInput() {
+    return this._hostnameType;
+  }
+}
+export interface RootBlockDeviceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  */
+  readonly deleteOnTermination?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#encrypted AwsInstance#encrypted}
+  */
+  readonly encrypted?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#iops AwsInstance#iops}
+  */
+  readonly iops?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#kms_key_id AwsInstance#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags AwsInstance#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#tags_all AwsInstance#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#throughput AwsInstance#throughput}
+  */
+  readonly throughput?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_size AwsInstance#volume_size}
+  */
+  readonly volumeSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#volume_type AwsInstance#volume_type}
+  */
+  readonly volumeType?: string;
+}
+export class RootBlockDevicePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RootBlockDeviceProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteOnTermination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteOnTermination = this._deleteOnTermination;
+    }
+    if (this._encrypted !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encrypted = this._encrypted;
+    }
+    if (this._iops !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.iops = this._iops;
+    }
+    if (this._kmsKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyId = this._kmsKeyId;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._tagsAll !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tagsAll = this._tagsAll;
+    }
+    if (this._throughput !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.throughput = this._throughput;
+    }
+    if (this._volumeSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeSize = this._volumeSize;
+    }
+    if (this._volumeType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeType = this._volumeType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RootBlockDeviceProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._deleteOnTermination = undefined;
+      this._encrypted = undefined;
+      this._iops = undefined;
+      this._kmsKeyId = undefined;
+      this._tags = undefined;
+      this._tagsAll = undefined;
+      this._throughput = undefined;
+      this._volumeSize = undefined;
+      this._volumeType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._deleteOnTermination = value.deleteOnTermination;
+      this._encrypted = value.encrypted;
+      this._iops = value.iops;
+      this._kmsKeyId = value.kmsKeyId;
+      this._tags = value.tags;
+      this._tagsAll = value.tagsAll;
+      this._throughput = value.throughput;
+      this._volumeSize = value.volumeSize;
+      this._volumeType = value.volumeType;
+    }
+  }
+
+  // delete_on_termination - computed: false, optional: true, required: false
+  private _deleteOnTermination?: boolean | cdktn.IResolvable; 
+  public get deleteOnTermination() {
+    return this.getBooleanAttribute('delete_on_termination');
+  }
+  public set deleteOnTermination(value: boolean | cdktn.IResolvable) {
+    this._deleteOnTermination = value;
+  }
+  public resetDeleteOnTermination() {
+    this._deleteOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteOnTerminationInput() {
+    return this._deleteOnTermination;
+  }
+
+  // device_name - computed: true, optional: false, required: false
+  public get deviceName() {
+    return this.getStringAttribute('device_name');
+  }
+
+  // encrypted - computed: true, optional: true, required: false
+  private _encrypted?: boolean | cdktn.IResolvable; 
+  public get encrypted() {
+    return this.getBooleanAttribute('encrypted');
+  }
+  public set encrypted(value: boolean | cdktn.IResolvable) {
+    this._encrypted = value;
+  }
+  public resetEncrypted() {
+    this._encrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptedInput() {
+    return this._encrypted;
+  }
+
+  // iops - computed: true, optional: true, required: false
+  private _iops?: number; 
+  public get iops() {
+    return this.getNumberAttribute('iops');
+  }
+  public set iops(value: number) {
+    this._iops = value;
+  }
+  public resetIops() {
+    this._iops = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iopsInput() {
+    return this._iops;
+  }
+
+  // kms_key_id - computed: true, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // throughput - computed: true, optional: true, required: false
+  private _throughput?: number; 
+  public get throughput() {
+    return this.getNumberAttribute('throughput');
+  }
+  public set throughput(value: number) {
+    this._throughput = value;
+  }
+  public resetThroughput() {
+    this._throughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputInput() {
+    return this._throughput;
+  }
+
+  // volume_id - computed: true, optional: false, required: false
+  public get volumeId() {
+    return this.getStringAttribute('volume_id');
+  }
+
+  // volume_size - computed: true, optional: true, required: false
+  private _volumeSize?: number; 
+  public get volumeSize() {
+    return this.getNumberAttribute('volume_size');
+  }
+  public set volumeSize(value: number) {
+    this._volumeSize = value;
+  }
+  public resetVolumeSize() {
+    this._volumeSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeSizeInput() {
+    return this._volumeSize;
+  }
+
+  // volume_type - computed: true, optional: true, required: false
+  private _volumeType?: string; 
+  public get volumeType() {
+    return this.getStringAttribute('volume_type');
+  }
+  public set volumeType(value: string) {
+    this._volumeType = value;
+  }
+  public resetVolumeType() {
+    this._volumeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeTypeInput() {
+    return this._volumeType;
+  }
+}
+export interface SecondaryNetworkInterfaceProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete_on_termination AwsInstance#delete_on_termination}
+  */
+  readonly deleteOnTermination?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#device_index AwsInstance#device_index}
+  */
+  readonly deviceIndex?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#interface_type AwsInstance#interface_type}
+  */
+  readonly interfaceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#network_card_index AwsInstance#network_card_index}
+  */
+  readonly networkCardIndex: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#private_ip_address_count AwsInstance#private_ip_address_count}
+  */
+  readonly privateIpAddressCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#secondary_subnet_id AwsInstance#secondary_subnet_id}
+  */
+  readonly secondarySubnetId: string;
+}
+export class SecondaryNetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecondaryNetworkInterfaceProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteOnTermination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteOnTermination = this._deleteOnTermination;
+    }
+    if (this._deviceIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceIndex = this._deviceIndex;
+    }
+    if (this._interfaceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interfaceType = this._interfaceType;
+    }
+    if (this._networkCardIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkCardIndex = this._networkCardIndex;
+    }
+    if (this._privateIpAddressCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressCount = this._privateIpAddressCount;
+    }
+    if (this._secondarySubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secondarySubnetId = this._secondarySubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecondaryNetworkInterfaceProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = undefined;
+      this._deviceIndex = undefined;
+      this._interfaceType = undefined;
+      this._networkCardIndex = undefined;
+      this._privateIpAddressCount = undefined;
+      this._secondarySubnetId = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteOnTermination = value.deleteOnTermination;
+      this._deviceIndex = value.deviceIndex;
+      this._interfaceType = value.interfaceType;
+      this._networkCardIndex = value.networkCardIndex;
+      this._privateIpAddressCount = value.privateIpAddressCount;
+      this._secondarySubnetId = value.secondarySubnetId;
+    }
+  }
+
+  // delete_on_termination - computed: false, optional: true, required: false
+  private _deleteOnTermination?: boolean | cdktn.IResolvable; 
+  public get deleteOnTermination() {
+    return this.getBooleanAttribute('delete_on_termination');
+  }
+  public set deleteOnTermination(value: boolean | cdktn.IResolvable) {
+    this._deleteOnTermination = value;
+  }
+  public resetDeleteOnTermination() {
+    this._deleteOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteOnTerminationInput() {
+    return this._deleteOnTermination;
+  }
+
+  // device_index - computed: false, optional: true, required: false
+  private _deviceIndex?: number; 
+  public get deviceIndex() {
+    return this.getNumberAttribute('device_index');
+  }
+  public set deviceIndex(value: number) {
+    this._deviceIndex = value;
+  }
+  public resetDeviceIndex() {
+    this._deviceIndex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceIndexInput() {
+    return this._deviceIndex;
+  }
+
+  // interface_type - computed: false, optional: true, required: false
+  private _interfaceType?: string; 
+  public get interfaceType() {
+    return this.getStringAttribute('interface_type');
+  }
+  public set interfaceType(value: string) {
+    this._interfaceType = value;
+  }
+  public resetInterfaceType() {
+    this._interfaceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceTypeInput() {
+    return this._interfaceType;
+  }
+
+  // mac_address - computed: true, optional: false, required: false
+  public get macAddress() {
+    return this.getStringAttribute('mac_address');
+  }
+
+  // network_card_index - computed: false, optional: false, required: true
+  private _networkCardIndex?: number; 
+  public get networkCardIndex() {
+    return this.getNumberAttribute('network_card_index');
+  }
+  public set networkCardIndex(value: number) {
+    this._networkCardIndex = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkCardIndexInput() {
+    return this._networkCardIndex;
+  }
+
+  // private_ip_address_count - computed: false, optional: true, required: false
+  private _privateIpAddressCount?: number; 
+  public get privateIpAddressCount() {
+    return this.getNumberAttribute('private_ip_address_count');
+  }
+  public set privateIpAddressCount(value: number) {
+    this._privateIpAddressCount = value;
+  }
+  public resetPrivateIpAddressCount() {
+    this._privateIpAddressCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressCountInput() {
+    return this._privateIpAddressCount;
+  }
+
+  // private_ip_addresses - computed: true, optional: false, required: false
+  public get privateIpAddresses() {
+    return this.getListAttribute('private_ip_addresses');
+  }
+
+  // secondary_interface_id - computed: true, optional: false, required: false
+  public get secondaryInterfaceId() {
+    return this.getStringAttribute('secondary_interface_id');
+  }
+
+  // secondary_network_id - computed: true, optional: false, required: false
+  public get secondaryNetworkId() {
+    return this.getStringAttribute('secondary_network_id');
+  }
+
+  // secondary_subnet_id - computed: false, optional: false, required: true
+  private _secondarySubnetId?: string; 
+  public get secondarySubnetId() {
+    return this.getStringAttribute('secondary_subnet_id');
+  }
+  public set secondarySubnetId(value: string) {
+    this._secondarySubnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondarySubnetIdInput() {
+    return this._secondarySubnetId;
+  }
+
+  // source_dest_check - computed: true, optional: false, required: false
+  public get sourceDestCheck() {
+    return this.getBooleanAttribute('source_dest_check');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+}
+
+export class SecondaryNetworkInterfacePropertyList extends cdktn.ComplexList {
+  public internalValue? : SecondaryNetworkInterfaceProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecondaryNetworkInterfacePropertyOutputReference {
+    return new SecondaryNetworkInterfacePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#create AwsInstance#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#delete AwsInstance#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#read AwsInstance#read}
+  */
+  readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/instance#update AwsInstance#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

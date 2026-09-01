@@ -1,0 +1,1008 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDmsReplicationConfigConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#id AwsDmsReplicationConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#region AwsDmsReplicationConfig#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#replication_config_identifier AwsDmsReplicationConfig#replication_config_identifier}
+  */
+  readonly replicationConfigIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#replication_settings AwsDmsReplicationConfig#replication_settings}
+  */
+  readonly replicationSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#replication_type AwsDmsReplicationConfig#replication_type}
+  */
+  readonly replicationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#resource_identifier AwsDmsReplicationConfig#resource_identifier}
+  */
+  readonly resourceIdentifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#source_endpoint_arn AwsDmsReplicationConfig#source_endpoint_arn}
+  */
+  readonly sourceEndpointArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#start_replication AwsDmsReplicationConfig#start_replication}
+  */
+  readonly startReplication?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#supplemental_settings AwsDmsReplicationConfig#supplemental_settings}
+  */
+  readonly supplementalSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#table_mappings AwsDmsReplicationConfig#table_mappings}
+  */
+  readonly tableMappings: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#tags AwsDmsReplicationConfig#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#tags_all AwsDmsReplicationConfig#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#target_endpoint_arn AwsDmsReplicationConfig#target_endpoint_arn}
+  */
+  readonly targetEndpointArn: string;
+  /**
+  * compute_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#compute_config AwsDmsReplicationConfig#compute_config}
+  */
+  readonly computeConfig: AwsDmsReplicationConfig.ComputeConfigProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#timeouts AwsDmsReplicationConfig#timeouts}
+  */
+  readonly timeouts?: AwsDmsReplicationConfig.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config aws_dms_replication_config}
+*/
+export class AwsDmsReplicationConfig extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_dms_replication_config";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDmsReplicationConfig resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDmsReplicationConfig to import
+  * @param importFromId The id of the existing AwsDmsReplicationConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDmsReplicationConfig to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dms_replication_config", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config aws_dms_replication_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDmsReplicationConfigConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDmsReplicationConfigConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_dms_replication_config',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._region = config.region;
+    this._replicationConfigIdentifier = config.replicationConfigIdentifier;
+    this._replicationSettings = config.replicationSettings;
+    this._replicationType = config.replicationType;
+    this._resourceIdentifier = config.resourceIdentifier;
+    this._sourceEndpointArn = config.sourceEndpointArn;
+    this._startReplication = config.startReplication;
+    this._supplementalSettings = config.supplementalSettings;
+    this._tableMappings = config.tableMappings;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._targetEndpointArn = config.targetEndpointArn;
+    this._computeConfig.internalValue = config.computeConfig;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // replication_config_identifier - computed: false, optional: false, required: true
+  private _replicationConfigIdentifier?: string; 
+  public get replicationConfigIdentifier() {
+    return this.getStringAttribute('replication_config_identifier');
+  }
+  public set replicationConfigIdentifier(value: string) {
+    this._replicationConfigIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationConfigIdentifierInput() {
+    return this._replicationConfigIdentifier;
+  }
+
+  // replication_settings - computed: true, optional: true, required: false
+  private _replicationSettings?: string; 
+  public get replicationSettings() {
+    return this.getStringAttribute('replication_settings');
+  }
+  public set replicationSettings(value: string) {
+    this._replicationSettings = value;
+  }
+  public resetReplicationSettings() {
+    this._replicationSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationSettingsInput() {
+    return this._replicationSettings;
+  }
+
+  // replication_type - computed: false, optional: false, required: true
+  private _replicationType?: string; 
+  public get replicationType() {
+    return this.getStringAttribute('replication_type');
+  }
+  public set replicationType(value: string) {
+    this._replicationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationTypeInput() {
+    return this._replicationType;
+  }
+
+  // resource_identifier - computed: true, optional: true, required: false
+  private _resourceIdentifier?: string; 
+  public get resourceIdentifier() {
+    return this.getStringAttribute('resource_identifier');
+  }
+  public set resourceIdentifier(value: string) {
+    this._resourceIdentifier = value;
+  }
+  public resetResourceIdentifier() {
+    this._resourceIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdentifierInput() {
+    return this._resourceIdentifier;
+  }
+
+  // source_endpoint_arn - computed: false, optional: false, required: true
+  private _sourceEndpointArn?: string; 
+  public get sourceEndpointArn() {
+    return this.getStringAttribute('source_endpoint_arn');
+  }
+  public set sourceEndpointArn(value: string) {
+    this._sourceEndpointArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceEndpointArnInput() {
+    return this._sourceEndpointArn;
+  }
+
+  // start_replication - computed: false, optional: true, required: false
+  private _startReplication?: boolean | cdktn.IResolvable; 
+  public get startReplication() {
+    return this.getBooleanAttribute('start_replication');
+  }
+  public set startReplication(value: boolean | cdktn.IResolvable) {
+    this._startReplication = value;
+  }
+  public resetStartReplication() {
+    this._startReplication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startReplicationInput() {
+    return this._startReplication;
+  }
+
+  // supplemental_settings - computed: false, optional: true, required: false
+  private _supplementalSettings?: string; 
+  public get supplementalSettings() {
+    return this.getStringAttribute('supplemental_settings');
+  }
+  public set supplementalSettings(value: string) {
+    this._supplementalSettings = value;
+  }
+  public resetSupplementalSettings() {
+    this._supplementalSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get supplementalSettingsInput() {
+    return this._supplementalSettings;
+  }
+
+  // table_mappings - computed: false, optional: false, required: true
+  private _tableMappings?: string; 
+  public get tableMappings() {
+    return this.getStringAttribute('table_mappings');
+  }
+  public set tableMappings(value: string) {
+    this._tableMappings = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableMappingsInput() {
+    return this._tableMappings;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // target_endpoint_arn - computed: false, optional: false, required: true
+  private _targetEndpointArn?: string; 
+  public get targetEndpointArn() {
+    return this.getStringAttribute('target_endpoint_arn');
+  }
+  public set targetEndpointArn(value: string) {
+    this._targetEndpointArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetEndpointArnInput() {
+    return this._targetEndpointArn;
+  }
+
+  // compute_config - computed: false, optional: false, required: true
+  private _computeConfig = new AwsDmsReplicationConfig.ComputeConfigPropertyOutputReference(this, "compute_config");
+  public get computeConfig() {
+    return this._computeConfig;
+  }
+  public putComputeConfig(value: AwsDmsReplicationConfig.ComputeConfigProperty) {
+    this._computeConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeConfigInput() {
+    return this._computeConfig.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDmsReplicationConfig.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDmsReplicationConfig.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      replication_config_identifier: cdktn.stringToTerraform(this._replicationConfigIdentifier),
+      replication_settings: cdktn.stringToTerraform(this._replicationSettings),
+      replication_type: cdktn.stringToTerraform(this._replicationType),
+      resource_identifier: cdktn.stringToTerraform(this._resourceIdentifier),
+      source_endpoint_arn: cdktn.stringToTerraform(this._sourceEndpointArn),
+      start_replication: cdktn.booleanToTerraform(this._startReplication),
+      supplemental_settings: cdktn.stringToTerraform(this._supplementalSettings),
+      table_mappings: cdktn.stringToTerraform(this._tableMappings),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      target_endpoint_arn: cdktn.stringToTerraform(this._targetEndpointArn),
+      compute_config: awsDmsReplicationConfigComputeConfigPropertyToTerraform(this._computeConfig.internalValue),
+      timeouts: awsDmsReplicationConfigTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_config_identifier: {
+        value: cdktn.stringToHclTerraform(this._replicationConfigIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_settings: {
+        value: cdktn.stringToHclTerraform(this._replicationSettings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_type: {
+        value: cdktn.stringToHclTerraform(this._replicationType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_identifier: {
+        value: cdktn.stringToHclTerraform(this._resourceIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_endpoint_arn: {
+        value: cdktn.stringToHclTerraform(this._sourceEndpointArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_replication: {
+        value: cdktn.booleanToHclTerraform(this._startReplication),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      supplemental_settings: {
+        value: cdktn.stringToHclTerraform(this._supplementalSettings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      table_mappings: {
+        value: cdktn.stringToHclTerraform(this._tableMappings),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      target_endpoint_arn: {
+        value: cdktn.stringToHclTerraform(this._targetEndpointArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compute_config: {
+        value: awsDmsReplicationConfigComputeConfigPropertyToHclTerraform(this._computeConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDmsReplicationConfig.ComputeConfigPropertyList",
+      },
+      timeouts: {
+        value: awsDmsReplicationConfigTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDmsReplicationConfig.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDmsReplicationConfigComputeConfigPropertyToTerraform(struct?: AwsDmsReplicationConfig.ComputeConfigPropertyOutputReference | AwsDmsReplicationConfig.ComputeConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    availability_zone: cdktn.stringToTerraform(struct!.availabilityZone),
+    dns_name_servers: cdktn.stringToTerraform(struct!.dnsNameServers),
+    kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
+    max_capacity_units: cdktn.numberToTerraform(struct!.maxCapacityUnits),
+    min_capacity_units: cdktn.numberToTerraform(struct!.minCapacityUnits),
+    multi_az: cdktn.booleanToTerraform(struct!.multiAz),
+    preferred_maintenance_window: cdktn.stringToTerraform(struct!.preferredMaintenanceWindow),
+    replication_subnet_group_id: cdktn.stringToTerraform(struct!.replicationSubnetGroupId),
+    vpc_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.vpcSecurityGroupIds),
+  }
+}
+
+
+export function awsDmsReplicationConfigComputeConfigPropertyToHclTerraform(struct?: AwsDmsReplicationConfig.ComputeConfigPropertyOutputReference | AwsDmsReplicationConfig.ComputeConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    availability_zone: {
+      value: cdktn.stringToHclTerraform(struct!.availabilityZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dns_name_servers: {
+      value: cdktn.stringToHclTerraform(struct!.dnsNameServers),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kms_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_capacity_units: {
+      value: cdktn.numberToHclTerraform(struct!.maxCapacityUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_capacity_units: {
+      value: cdktn.numberToHclTerraform(struct!.minCapacityUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    multi_az: {
+      value: cdktn.booleanToHclTerraform(struct!.multiAz),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    preferred_maintenance_window: {
+      value: cdktn.stringToHclTerraform(struct!.preferredMaintenanceWindow),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    replication_subnet_group_id: {
+      value: cdktn.stringToHclTerraform(struct!.replicationSubnetGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vpc_security_group_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.vpcSecurityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDmsReplicationConfigTimeoutsPropertyToTerraform(struct?: AwsDmsReplicationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDmsReplicationConfigTimeoutsPropertyToHclTerraform(struct?: AwsDmsReplicationConfig.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDmsReplicationConfig {
+export interface ComputeConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#availability_zone AwsDmsReplicationConfig#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#dns_name_servers AwsDmsReplicationConfig#dns_name_servers}
+  */
+  readonly dnsNameServers?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#kms_key_id AwsDmsReplicationConfig#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#max_capacity_units AwsDmsReplicationConfig#max_capacity_units}
+  */
+  readonly maxCapacityUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#min_capacity_units AwsDmsReplicationConfig#min_capacity_units}
+  */
+  readonly minCapacityUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#multi_az AwsDmsReplicationConfig#multi_az}
+  */
+  readonly multiAz?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#preferred_maintenance_window AwsDmsReplicationConfig#preferred_maintenance_window}
+  */
+  readonly preferredMaintenanceWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#replication_subnet_group_id AwsDmsReplicationConfig#replication_subnet_group_id}
+  */
+  readonly replicationSubnetGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#vpc_security_group_ids AwsDmsReplicationConfig#vpc_security_group_ids}
+  */
+  readonly vpcSecurityGroupIds?: string[];
+}
+export class ComputeConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._availabilityZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availabilityZone = this._availabilityZone;
+    }
+    if (this._dnsNameServers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dnsNameServers = this._dnsNameServers;
+    }
+    if (this._kmsKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyId = this._kmsKeyId;
+    }
+    if (this._maxCapacityUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxCapacityUnits = this._maxCapacityUnits;
+    }
+    if (this._minCapacityUnits !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minCapacityUnits = this._minCapacityUnits;
+    }
+    if (this._multiAz !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.multiAz = this._multiAz;
+    }
+    if (this._preferredMaintenanceWindow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preferredMaintenanceWindow = this._preferredMaintenanceWindow;
+    }
+    if (this._replicationSubnetGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicationSubnetGroupId = this._replicationSubnetGroupId;
+    }
+    if (this._vpcSecurityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcSecurityGroupIds = this._vpcSecurityGroupIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._availabilityZone = undefined;
+      this._dnsNameServers = undefined;
+      this._kmsKeyId = undefined;
+      this._maxCapacityUnits = undefined;
+      this._minCapacityUnits = undefined;
+      this._multiAz = undefined;
+      this._preferredMaintenanceWindow = undefined;
+      this._replicationSubnetGroupId = undefined;
+      this._vpcSecurityGroupIds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._availabilityZone = value.availabilityZone;
+      this._dnsNameServers = value.dnsNameServers;
+      this._kmsKeyId = value.kmsKeyId;
+      this._maxCapacityUnits = value.maxCapacityUnits;
+      this._minCapacityUnits = value.minCapacityUnits;
+      this._multiAz = value.multiAz;
+      this._preferredMaintenanceWindow = value.preferredMaintenanceWindow;
+      this._replicationSubnetGroupId = value.replicationSubnetGroupId;
+      this._vpcSecurityGroupIds = value.vpcSecurityGroupIds;
+    }
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // dns_name_servers - computed: false, optional: true, required: false
+  private _dnsNameServers?: string; 
+  public get dnsNameServers() {
+    return this.getStringAttribute('dns_name_servers');
+  }
+  public set dnsNameServers(value: string) {
+    this._dnsNameServers = value;
+  }
+  public resetDnsNameServers() {
+    this._dnsNameServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNameServersInput() {
+    return this._dnsNameServers;
+  }
+
+  // kms_key_id - computed: true, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // max_capacity_units - computed: false, optional: true, required: false
+  private _maxCapacityUnits?: number; 
+  public get maxCapacityUnits() {
+    return this.getNumberAttribute('max_capacity_units');
+  }
+  public set maxCapacityUnits(value: number) {
+    this._maxCapacityUnits = value;
+  }
+  public resetMaxCapacityUnits() {
+    this._maxCapacityUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityUnitsInput() {
+    return this._maxCapacityUnits;
+  }
+
+  // min_capacity_units - computed: false, optional: true, required: false
+  private _minCapacityUnits?: number; 
+  public get minCapacityUnits() {
+    return this.getNumberAttribute('min_capacity_units');
+  }
+  public set minCapacityUnits(value: number) {
+    this._minCapacityUnits = value;
+  }
+  public resetMinCapacityUnits() {
+    this._minCapacityUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCapacityUnitsInput() {
+    return this._minCapacityUnits;
+  }
+
+  // multi_az - computed: true, optional: true, required: false
+  private _multiAz?: boolean | cdktn.IResolvable; 
+  public get multiAz() {
+    return this.getBooleanAttribute('multi_az');
+  }
+  public set multiAz(value: boolean | cdktn.IResolvable) {
+    this._multiAz = value;
+  }
+  public resetMultiAz() {
+    this._multiAz = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiAzInput() {
+    return this._multiAz;
+  }
+
+  // preferred_maintenance_window - computed: true, optional: true, required: false
+  private _preferredMaintenanceWindow?: string; 
+  public get preferredMaintenanceWindow() {
+    return this.getStringAttribute('preferred_maintenance_window');
+  }
+  public set preferredMaintenanceWindow(value: string) {
+    this._preferredMaintenanceWindow = value;
+  }
+  public resetPreferredMaintenanceWindow() {
+    this._preferredMaintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredMaintenanceWindowInput() {
+    return this._preferredMaintenanceWindow;
+  }
+
+  // replication_subnet_group_id - computed: false, optional: false, required: true
+  private _replicationSubnetGroupId?: string; 
+  public get replicationSubnetGroupId() {
+    return this.getStringAttribute('replication_subnet_group_id');
+  }
+  public set replicationSubnetGroupId(value: string) {
+    this._replicationSubnetGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationSubnetGroupIdInput() {
+    return this._replicationSubnetGroupId;
+  }
+
+  // vpc_security_group_ids - computed: true, optional: true, required: false
+  private _vpcSecurityGroupIds?: string[]; 
+  public get vpcSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('vpc_security_group_ids'));
+  }
+  public set vpcSecurityGroupIds(value: string[]) {
+    this._vpcSecurityGroupIds = value;
+  }
+  public resetVpcSecurityGroupIds() {
+    this._vpcSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSecurityGroupIdsInput() {
+    return this._vpcSecurityGroupIds;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#create AwsDmsReplicationConfig#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#delete AwsDmsReplicationConfig#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dms_replication_config#update AwsDmsReplicationConfig#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

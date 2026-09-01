@@ -1,0 +1,446 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface DataAwsServicequotasServiceQuotaConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#id DataAwsServicequotasServiceQuota#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#quota_code DataAwsServicequotasServiceQuota#quota_code}
+  */
+  readonly quotaCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#quota_name DataAwsServicequotasServiceQuota#quota_name}
+  */
+  readonly quotaName?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#region DataAwsServicequotasServiceQuota#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#service_code DataAwsServicequotasServiceQuota#service_code}
+  */
+  readonly serviceCode: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota aws_servicequotas_service_quota}
+*/
+export class DataAwsServicequotasServiceQuota extends cdktn.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_servicequotas_service_quota";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a DataAwsServicequotasServiceQuota resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAwsServicequotasServiceQuota to import
+  * @param importFromId The id of the existing DataAwsServicequotasServiceQuota that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsServicequotasServiceQuota to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_service_quota", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/servicequotas_service_quota aws_servicequotas_service_quota} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAwsServicequotasServiceQuotaConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAwsServicequotasServiceQuotaConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_servicequotas_service_quota',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._id = config.id;
+    this._quotaCode = config.quotaCode;
+    this._quotaName = config.quotaName;
+    this._region = config.region;
+    this._serviceCode = config.serviceCode;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // adjustable - computed: true, optional: false, required: false
+  public get adjustable() {
+    return this.getBooleanAttribute('adjustable');
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // default_value - computed: true, optional: false, required: false
+  public get defaultValue() {
+    return this.getNumberAttribute('default_value');
+  }
+
+  // global_quota - computed: true, optional: false, required: false
+  public get globalQuota() {
+    return this.getBooleanAttribute('global_quota');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // quota_code - computed: true, optional: true, required: false
+  private _quotaCode?: string; 
+  public get quotaCode() {
+    return this.getStringAttribute('quota_code');
+  }
+  public set quotaCode(value: string) {
+    this._quotaCode = value;
+  }
+  public resetQuotaCode() {
+    this._quotaCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaCodeInput() {
+    return this._quotaCode;
+  }
+
+  // quota_name - computed: true, optional: true, required: false
+  private _quotaName?: string; 
+  public get quotaName() {
+    return this.getStringAttribute('quota_name');
+  }
+  public set quotaName(value: string) {
+    this._quotaName = value;
+  }
+  public resetQuotaName() {
+    this._quotaName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaNameInput() {
+    return this._quotaName;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // service_code - computed: false, optional: false, required: true
+  private _serviceCode?: string; 
+  public get serviceCode() {
+    return this.getStringAttribute('service_code');
+  }
+  public set serviceCode(value: string) {
+    this._serviceCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceCodeInput() {
+    return this._serviceCode;
+  }
+
+  // service_name - computed: true, optional: false, required: false
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+
+  // usage_metric - computed: true, optional: false, required: false
+  private _usageMetric = new DataAwsServicequotasServiceQuota.UsageMetricPropertyList(this, "usage_metric", false);
+  public get usageMetric() {
+    return this._usageMetric;
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktn.stringToTerraform(this._id),
+      quota_code: cdktn.stringToTerraform(this._quotaCode),
+      quota_name: cdktn.stringToTerraform(this._quotaName),
+      region: cdktn.stringToTerraform(this._region),
+      service_code: cdktn.stringToTerraform(this._serviceCode),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      quota_code: {
+        value: cdktn.stringToHclTerraform(this._quotaCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      quota_name: {
+        value: cdktn.stringToHclTerraform(this._quotaName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_code: {
+        value: cdktn.stringToHclTerraform(this._serviceCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function dataAwsServicequotasServiceQuotaMetricDimensionsPropertyToTerraform(struct?: DataAwsServicequotasServiceQuota.MetricDimensionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsServicequotasServiceQuotaMetricDimensionsPropertyToHclTerraform(struct?: DataAwsServicequotasServiceQuota.MetricDimensionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function dataAwsServicequotasServiceQuotaUsageMetricPropertyToTerraform(struct?: DataAwsServicequotasServiceQuota.UsageMetricProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function dataAwsServicequotasServiceQuotaUsageMetricPropertyToHclTerraform(struct?: DataAwsServicequotasServiceQuota.UsageMetricProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export namespace DataAwsServicequotasServiceQuota {
+export interface MetricDimensionsProperty {
+}
+export class MetricDimensionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MetricDimensionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MetricDimensionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // class - computed: true, optional: false, required: false
+  public get class() {
+    return this.getStringAttribute('class');
+  }
+
+  // resource - computed: true, optional: false, required: false
+  public get resource() {
+    return this.getStringAttribute('resource');
+  }
+
+  // service - computed: true, optional: false, required: false
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class MetricDimensionsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MetricDimensionsPropertyOutputReference {
+    return new MetricDimensionsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface UsageMetricProperty {
+}
+export class UsageMetricPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): UsageMetricProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: UsageMetricProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // metric_dimensions - computed: true, optional: false, required: false
+  private _metricDimensions = new MetricDimensionsPropertyList(this, "metric_dimensions", false);
+  public get metricDimensions() {
+    return this._metricDimensions;
+  }
+
+  // metric_name - computed: true, optional: false, required: false
+  public get metricName() {
+    return this.getStringAttribute('metric_name');
+  }
+
+  // metric_namespace - computed: true, optional: false, required: false
+  public get metricNamespace() {
+    return this.getStringAttribute('metric_namespace');
+  }
+
+  // metric_statistic_recommendation - computed: true, optional: false, required: false
+  public get metricStatisticRecommendation() {
+    return this.getStringAttribute('metric_statistic_recommendation');
+  }
+}
+
+export class UsageMetricPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): UsageMetricPropertyOutputReference {
+    return new UsageMetricPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

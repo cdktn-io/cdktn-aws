@@ -1,0 +1,164 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVpcEndpointPrivateDnsConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#private_dns_enabled AwsVpcEndpointPrivateDns#private_dns_enabled}
+  */
+  readonly privateDnsEnabled: boolean | cdktn.IResolvable;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#region AwsVpcEndpointPrivateDns#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#vpc_endpoint_id AwsVpcEndpointPrivateDns#vpc_endpoint_id}
+  */
+  readonly vpcEndpointId: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns aws_vpc_endpoint_private_dns}
+*/
+export class AwsVpcEndpointPrivateDns extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_vpc_endpoint_private_dns";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVpcEndpointPrivateDns resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVpcEndpointPrivateDns to import
+  * @param importFromId The id of the existing AwsVpcEndpointPrivateDns that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcEndpointPrivateDns to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_private_dns", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_private_dns aws_vpc_endpoint_private_dns} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVpcEndpointPrivateDnsConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVpcEndpointPrivateDnsConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_vpc_endpoint_private_dns',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._privateDnsEnabled = config.privateDnsEnabled;
+    this._region = config.region;
+    this._vpcEndpointId = config.vpcEndpointId;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // private_dns_enabled - computed: false, optional: false, required: true
+  private _privateDnsEnabled?: boolean | cdktn.IResolvable; 
+  public get privateDnsEnabled() {
+    return this.getBooleanAttribute('private_dns_enabled');
+  }
+  public set privateDnsEnabled(value: boolean | cdktn.IResolvable) {
+    this._privateDnsEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsEnabledInput() {
+    return this._privateDnsEnabled;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // vpc_endpoint_id - computed: false, optional: false, required: true
+  private _vpcEndpointId?: string; 
+  public get vpcEndpointId() {
+    return this.getStringAttribute('vpc_endpoint_id');
+  }
+  public set vpcEndpointId(value: string) {
+    this._vpcEndpointId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcEndpointIdInput() {
+    return this._vpcEndpointId;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      private_dns_enabled: cdktn.booleanToTerraform(this._privateDnsEnabled),
+      region: cdktn.stringToTerraform(this._region),
+      vpc_endpoint_id: cdktn.stringToTerraform(this._vpcEndpointId),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      private_dns_enabled: {
+        value: cdktn.booleanToHclTerraform(this._privateDnsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vpc_endpoint_id: {
+        value: cdktn.stringToHclTerraform(this._vpcEndpointId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

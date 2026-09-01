@@ -1,0 +1,2212 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsVerifiedaccessEndpointConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#application_domain AwsVerifiedaccessEndpoint#application_domain}
+  */
+  readonly applicationDomain?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#attachment_type AwsVerifiedaccessEndpoint#attachment_type}
+  */
+  readonly attachmentType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#description AwsVerifiedaccessEndpoint#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#domain_certificate_arn AwsVerifiedaccessEndpoint#domain_certificate_arn}
+  */
+  readonly domainCertificateArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_domain_prefix AwsVerifiedaccessEndpoint#endpoint_domain_prefix}
+  */
+  readonly endpointDomainPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_type AwsVerifiedaccessEndpoint#endpoint_type}
+  */
+  readonly endpointType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#id AwsVerifiedaccessEndpoint#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#policy_document AwsVerifiedaccessEndpoint#policy_document}
+  */
+  readonly policyDocument?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#region AwsVerifiedaccessEndpoint#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#security_group_ids AwsVerifiedaccessEndpoint#security_group_ids}
+  */
+  readonly securityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags AwsVerifiedaccessEndpoint#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags_all AwsVerifiedaccessEndpoint#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#verified_access_group_id AwsVerifiedaccessEndpoint#verified_access_group_id}
+  */
+  readonly verifiedAccessGroupId: string;
+  /**
+  * cidr_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr_options AwsVerifiedaccessEndpoint#cidr_options}
+  */
+  readonly cidrOptions?: AwsVerifiedaccessEndpoint.CidrOptionsProperty;
+  /**
+  * load_balancer_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_options AwsVerifiedaccessEndpoint#load_balancer_options}
+  */
+  readonly loadBalancerOptions?: AwsVerifiedaccessEndpoint.LoadBalancerOptionsProperty;
+  /**
+  * network_interface_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_options AwsVerifiedaccessEndpoint#network_interface_options}
+  */
+  readonly networkInterfaceOptions?: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsProperty;
+  /**
+  * rds_options block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_options AwsVerifiedaccessEndpoint#rds_options}
+  */
+  readonly rdsOptions?: AwsVerifiedaccessEndpoint.RdsOptionsProperty;
+  /**
+  * sse_specification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#sse_specification AwsVerifiedaccessEndpoint#sse_specification}
+  */
+  readonly sseSpecification?: AwsVerifiedaccessEndpoint.SseSpecificationProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#timeouts AwsVerifiedaccessEndpoint#timeouts}
+  */
+  readonly timeouts?: AwsVerifiedaccessEndpoint.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint aws_verifiedaccess_endpoint}
+*/
+export class AwsVerifiedaccessEndpoint extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_verifiedaccess_endpoint";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsVerifiedaccessEndpoint resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsVerifiedaccessEndpoint to import
+  * @param importFromId The id of the existing AwsVerifiedaccessEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVerifiedaccessEndpoint to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedaccess_endpoint", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint aws_verifiedaccess_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsVerifiedaccessEndpointConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsVerifiedaccessEndpointConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_verifiedaccess_endpoint',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._applicationDomain = config.applicationDomain;
+    this._attachmentType = config.attachmentType;
+    this._description = config.description;
+    this._domainCertificateArn = config.domainCertificateArn;
+    this._endpointDomainPrefix = config.endpointDomainPrefix;
+    this._endpointType = config.endpointType;
+    this._id = config.id;
+    this._policyDocument = config.policyDocument;
+    this._region = config.region;
+    this._securityGroupIds = config.securityGroupIds;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._verifiedAccessGroupId = config.verifiedAccessGroupId;
+    this._cidrOptions.internalValue = config.cidrOptions;
+    this._loadBalancerOptions.internalValue = config.loadBalancerOptions;
+    this._networkInterfaceOptions.internalValue = config.networkInterfaceOptions;
+    this._rdsOptions.internalValue = config.rdsOptions;
+    this._sseSpecification.internalValue = config.sseSpecification;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // application_domain - computed: false, optional: true, required: false
+  private _applicationDomain?: string; 
+  public get applicationDomain() {
+    return this.getStringAttribute('application_domain');
+  }
+  public set applicationDomain(value: string) {
+    this._applicationDomain = value;
+  }
+  public resetApplicationDomain() {
+    this._applicationDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationDomainInput() {
+    return this._applicationDomain;
+  }
+
+  // attachment_type - computed: false, optional: false, required: true
+  private _attachmentType?: string; 
+  public get attachmentType() {
+    return this.getStringAttribute('attachment_type');
+  }
+  public set attachmentType(value: string) {
+    this._attachmentType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachmentTypeInput() {
+    return this._attachmentType;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // device_validation_domain - computed: true, optional: false, required: false
+  public get deviceValidationDomain() {
+    return this.getStringAttribute('device_validation_domain');
+  }
+
+  // domain_certificate_arn - computed: false, optional: true, required: false
+  private _domainCertificateArn?: string; 
+  public get domainCertificateArn() {
+    return this.getStringAttribute('domain_certificate_arn');
+  }
+  public set domainCertificateArn(value: string) {
+    this._domainCertificateArn = value;
+  }
+  public resetDomainCertificateArn() {
+    this._domainCertificateArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainCertificateArnInput() {
+    return this._domainCertificateArn;
+  }
+
+  // endpoint_domain - computed: true, optional: false, required: false
+  public get endpointDomain() {
+    return this.getStringAttribute('endpoint_domain');
+  }
+
+  // endpoint_domain_prefix - computed: false, optional: true, required: false
+  private _endpointDomainPrefix?: string; 
+  public get endpointDomainPrefix() {
+    return this.getStringAttribute('endpoint_domain_prefix');
+  }
+  public set endpointDomainPrefix(value: string) {
+    this._endpointDomainPrefix = value;
+  }
+  public resetEndpointDomainPrefix() {
+    this._endpointDomainPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointDomainPrefixInput() {
+    return this._endpointDomainPrefix;
+  }
+
+  // endpoint_type - computed: false, optional: false, required: true
+  private _endpointType?: string; 
+  public get endpointType() {
+    return this.getStringAttribute('endpoint_type');
+  }
+  public set endpointType(value: string) {
+    this._endpointType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointTypeInput() {
+    return this._endpointType;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // policy_document - computed: false, optional: true, required: false
+  private _policyDocument?: string; 
+  public get policyDocument() {
+    return this.getStringAttribute('policy_document');
+  }
+  public set policyDocument(value: string) {
+    this._policyDocument = value;
+  }
+  public resetPolicyDocument() {
+    this._policyDocument = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDocumentInput() {
+    return this._policyDocument;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_group_ids - computed: false, optional: true, required: false
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  public resetSecurityGroupIds() {
+    this._securityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // verified_access_group_id - computed: false, optional: false, required: true
+  private _verifiedAccessGroupId?: string; 
+  public get verifiedAccessGroupId() {
+    return this.getStringAttribute('verified_access_group_id');
+  }
+  public set verifiedAccessGroupId(value: string) {
+    this._verifiedAccessGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verifiedAccessGroupIdInput() {
+    return this._verifiedAccessGroupId;
+  }
+
+  // verified_access_instance_id - computed: true, optional: false, required: false
+  public get verifiedAccessInstanceId() {
+    return this.getStringAttribute('verified_access_instance_id');
+  }
+
+  // cidr_options - computed: false, optional: true, required: false
+  private _cidrOptions = new AwsVerifiedaccessEndpoint.CidrOptionsPropertyOutputReference(this, "cidr_options");
+  public get cidrOptions() {
+    return this._cidrOptions;
+  }
+  public putCidrOptions(value: AwsVerifiedaccessEndpoint.CidrOptionsProperty) {
+    this._cidrOptions.internalValue = value;
+  }
+  public resetCidrOptions() {
+    this._cidrOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrOptionsInput() {
+    return this._cidrOptions.internalValue;
+  }
+
+  // load_balancer_options - computed: false, optional: true, required: false
+  private _loadBalancerOptions = new AwsVerifiedaccessEndpoint.LoadBalancerOptionsPropertyOutputReference(this, "load_balancer_options");
+  public get loadBalancerOptions() {
+    return this._loadBalancerOptions;
+  }
+  public putLoadBalancerOptions(value: AwsVerifiedaccessEndpoint.LoadBalancerOptionsProperty) {
+    this._loadBalancerOptions.internalValue = value;
+  }
+  public resetLoadBalancerOptions() {
+    this._loadBalancerOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerOptionsInput() {
+    return this._loadBalancerOptions.internalValue;
+  }
+
+  // network_interface_options - computed: false, optional: true, required: false
+  private _networkInterfaceOptions = new AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPropertyOutputReference(this, "network_interface_options");
+  public get networkInterfaceOptions() {
+    return this._networkInterfaceOptions;
+  }
+  public putNetworkInterfaceOptions(value: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsProperty) {
+    this._networkInterfaceOptions.internalValue = value;
+  }
+  public resetNetworkInterfaceOptions() {
+    this._networkInterfaceOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceOptionsInput() {
+    return this._networkInterfaceOptions.internalValue;
+  }
+
+  // rds_options - computed: false, optional: true, required: false
+  private _rdsOptions = new AwsVerifiedaccessEndpoint.RdsOptionsPropertyOutputReference(this, "rds_options");
+  public get rdsOptions() {
+    return this._rdsOptions;
+  }
+  public putRdsOptions(value: AwsVerifiedaccessEndpoint.RdsOptionsProperty) {
+    this._rdsOptions.internalValue = value;
+  }
+  public resetRdsOptions() {
+    this._rdsOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdsOptionsInput() {
+    return this._rdsOptions.internalValue;
+  }
+
+  // sse_specification - computed: false, optional: true, required: false
+  private _sseSpecification = new AwsVerifiedaccessEndpoint.SseSpecificationPropertyOutputReference(this, "sse_specification");
+  public get sseSpecification() {
+    return this._sseSpecification;
+  }
+  public putSseSpecification(value: AwsVerifiedaccessEndpoint.SseSpecificationProperty) {
+    this._sseSpecification.internalValue = value;
+  }
+  public resetSseSpecification() {
+    this._sseSpecification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sseSpecificationInput() {
+    return this._sseSpecification.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsVerifiedaccessEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsVerifiedaccessEndpoint.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      application_domain: cdktn.stringToTerraform(this._applicationDomain),
+      attachment_type: cdktn.stringToTerraform(this._attachmentType),
+      description: cdktn.stringToTerraform(this._description),
+      domain_certificate_arn: cdktn.stringToTerraform(this._domainCertificateArn),
+      endpoint_domain_prefix: cdktn.stringToTerraform(this._endpointDomainPrefix),
+      endpoint_type: cdktn.stringToTerraform(this._endpointType),
+      id: cdktn.stringToTerraform(this._id),
+      policy_document: cdktn.stringToTerraform(this._policyDocument),
+      region: cdktn.stringToTerraform(this._region),
+      security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      verified_access_group_id: cdktn.stringToTerraform(this._verifiedAccessGroupId),
+      cidr_options: awsVerifiedaccessEndpointCidrOptionsPropertyToTerraform(this._cidrOptions.internalValue),
+      load_balancer_options: awsVerifiedaccessEndpointLoadBalancerOptionsPropertyToTerraform(this._loadBalancerOptions.internalValue),
+      network_interface_options: awsVerifiedaccessEndpointNetworkInterfaceOptionsPropertyToTerraform(this._networkInterfaceOptions.internalValue),
+      rds_options: awsVerifiedaccessEndpointRdsOptionsPropertyToTerraform(this._rdsOptions.internalValue),
+      sse_specification: awsVerifiedaccessEndpointSseSpecificationPropertyToTerraform(this._sseSpecification.internalValue),
+      timeouts: awsVerifiedaccessEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      application_domain: {
+        value: cdktn.stringToHclTerraform(this._applicationDomain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      attachment_type: {
+        value: cdktn.stringToHclTerraform(this._attachmentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_certificate_arn: {
+        value: cdktn.stringToHclTerraform(this._domainCertificateArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      endpoint_domain_prefix: {
+        value: cdktn.stringToHclTerraform(this._endpointDomainPrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      endpoint_type: {
+        value: cdktn.stringToHclTerraform(this._endpointType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_document: {
+        value: cdktn.stringToHclTerraform(this._policyDocument),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      verified_access_group_id: {
+        value: cdktn.stringToHclTerraform(this._verifiedAccessGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cidr_options: {
+        value: awsVerifiedaccessEndpointCidrOptionsPropertyToHclTerraform(this._cidrOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedaccessEndpoint.CidrOptionsPropertyList",
+      },
+      load_balancer_options: {
+        value: awsVerifiedaccessEndpointLoadBalancerOptionsPropertyToHclTerraform(this._loadBalancerOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedaccessEndpoint.LoadBalancerOptionsPropertyList",
+      },
+      network_interface_options: {
+        value: awsVerifiedaccessEndpointNetworkInterfaceOptionsPropertyToHclTerraform(this._networkInterfaceOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPropertyList",
+      },
+      rds_options: {
+        value: awsVerifiedaccessEndpointRdsOptionsPropertyToHclTerraform(this._rdsOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedaccessEndpoint.RdsOptionsPropertyList",
+      },
+      sse_specification: {
+        value: awsVerifiedaccessEndpointSseSpecificationPropertyToHclTerraform(this._sseSpecification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsVerifiedaccessEndpoint.SseSpecificationPropertyList",
+      },
+      timeouts: {
+        value: awsVerifiedaccessEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsVerifiedaccessEndpoint.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsVerifiedaccessEndpointCidrOptionsPortRangePropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    from_port: cdktn.numberToTerraform(struct!.fromPort),
+    to_port: cdktn.numberToTerraform(struct!.toPort),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointCidrOptionsPortRangePropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    from_port: {
+      value: cdktn.numberToHclTerraform(struct!.fromPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    to_port: {
+      value: cdktn.numberToHclTerraform(struct!.toPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointCidrOptionsPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.CidrOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.CidrOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    cidr: cdktn.stringToTerraform(struct!.cidr),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+    port_range: cdktn.listMapper(awsVerifiedaccessEndpointCidrOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointCidrOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.CidrOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.CidrOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    cidr: {
+      value: cdktn.stringToHclTerraform(struct!.cidr),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    port_range: {
+      value: cdktn.listMapperHcl(awsVerifiedaccessEndpointCidrOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      isBlock: true,
+      type: "set",
+      storageClassType: "CidrOptionsPortRangePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointLoadBalancerOptionsPortRangePropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    from_port: cdktn.numberToTerraform(struct!.fromPort),
+    to_port: cdktn.numberToTerraform(struct!.toPort),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    from_port: {
+      value: cdktn.numberToHclTerraform(struct!.fromPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    to_port: {
+      value: cdktn.numberToHclTerraform(struct!.toPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointLoadBalancerOptionsPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.LoadBalancerOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.LoadBalancerOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    load_balancer_arn: cdktn.stringToTerraform(struct!.loadBalancerArn),
+    port: cdktn.numberToTerraform(struct!.port),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+    port_range: cdktn.listMapper(awsVerifiedaccessEndpointLoadBalancerOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointLoadBalancerOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.LoadBalancerOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.LoadBalancerOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    load_balancer_arn: {
+      value: cdktn.stringToHclTerraform(struct!.loadBalancerArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktn.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    port_range: {
+      value: cdktn.listMapperHcl(awsVerifiedaccessEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LoadBalancerOptionsPortRangePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    from_port: cdktn.numberToTerraform(struct!.fromPort),
+    to_port: cdktn.numberToTerraform(struct!.toPort),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    from_port: {
+      value: cdktn.numberToHclTerraform(struct!.fromPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    to_port: {
+      value: cdktn.numberToHclTerraform(struct!.toPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointNetworkInterfaceOptionsPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    network_interface_id: cdktn.stringToTerraform(struct!.networkInterfaceId),
+    port: cdktn.numberToTerraform(struct!.port),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    port_range: cdktn.listMapper(awsVerifiedaccessEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointNetworkInterfaceOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.NetworkInterfaceOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    network_interface_id: {
+      value: cdktn.stringToHclTerraform(struct!.networkInterfaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktn.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port_range: {
+      value: cdktn.listMapperHcl(awsVerifiedaccessEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NetworkInterfaceOptionsPortRangePropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointRdsOptionsPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.RdsOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.RdsOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    port: cdktn.numberToTerraform(struct!.port),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    rds_db_cluster_arn: cdktn.stringToTerraform(struct!.rdsDbClusterArn),
+    rds_db_instance_arn: cdktn.stringToTerraform(struct!.rdsDbInstanceArn),
+    rds_db_proxy_arn: cdktn.stringToTerraform(struct!.rdsDbProxyArn),
+    rds_endpoint: cdktn.stringToTerraform(struct!.rdsEndpoint),
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointRdsOptionsPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.RdsOptionsPropertyOutputReference | AwsVerifiedaccessEndpoint.RdsOptionsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    port: {
+      value: cdktn.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rds_db_cluster_arn: {
+      value: cdktn.stringToHclTerraform(struct!.rdsDbClusterArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rds_db_instance_arn: {
+      value: cdktn.stringToHclTerraform(struct!.rdsDbInstanceArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rds_db_proxy_arn: {
+      value: cdktn.stringToHclTerraform(struct!.rdsDbProxyArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rds_endpoint: {
+      value: cdktn.stringToHclTerraform(struct!.rdsEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointSseSpecificationPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.SseSpecificationPropertyOutputReference | AwsVerifiedaccessEndpoint.SseSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    customer_managed_key_enabled: cdktn.booleanToTerraform(struct!.customerManagedKeyEnabled),
+    kms_key_arn: cdktn.stringToTerraform(struct!.kmsKeyArn),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointSseSpecificationPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.SseSpecificationPropertyOutputReference | AwsVerifiedaccessEndpoint.SseSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    customer_managed_key_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.customerManagedKeyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kms_key_arn: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsVerifiedaccessEndpointTimeoutsPropertyToTerraform(struct?: AwsVerifiedaccessEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsVerifiedaccessEndpointTimeoutsPropertyToHclTerraform(struct?: AwsVerifiedaccessEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsVerifiedaccessEndpoint {
+export interface CidrOptionsPortRangeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsVerifiedaccessEndpoint#from_port}
+  */
+  readonly fromPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsVerifiedaccessEndpoint#to_port}
+  */
+  readonly toPort: number;
+}
+export class CidrOptionsPortRangePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CidrOptionsPortRangeProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fromPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fromPort = this._fromPort;
+    }
+    if (this._toPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.toPort = this._toPort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CidrOptionsPortRangeProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fromPort = undefined;
+      this._toPort = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fromPort = value.fromPort;
+      this._toPort = value.toPort;
+    }
+  }
+
+  // from_port - computed: false, optional: false, required: true
+  private _fromPort?: number; 
+  public get fromPort() {
+    return this.getNumberAttribute('from_port');
+  }
+  public set fromPort(value: number) {
+    this._fromPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fromPortInput() {
+    return this._fromPort;
+  }
+
+  // to_port - computed: false, optional: false, required: true
+  private _toPort?: number; 
+  public get toPort() {
+    return this.getNumberAttribute('to_port');
+  }
+  public set toPort(value: number) {
+    this._toPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toPortInput() {
+    return this._toPort;
+  }
+}
+
+export class CidrOptionsPortRangePropertyList extends cdktn.ComplexList {
+  public internalValue? : CidrOptionsPortRangeProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CidrOptionsPortRangePropertyOutputReference {
+    return new CidrOptionsPortRangePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CidrOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr AwsVerifiedaccessEndpoint#cidr}
+  */
+  readonly cidr: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsVerifiedaccessEndpoint#protocol}
+  */
+  readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsVerifiedaccessEndpoint#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+  /**
+  * port_range block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsVerifiedaccessEndpoint#port_range}
+  */
+  readonly portRange: CidrOptionsPortRangeProperty[] | cdktn.IResolvable;
+}
+export class CidrOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CidrOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cidr !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cidr = this._cidr;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    if (this._portRange?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portRange = this._portRange?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CidrOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cidr = undefined;
+      this._protocol = undefined;
+      this._subnetIds = undefined;
+      this._portRange.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cidr = value.cidr;
+      this._protocol = value.protocol;
+      this._subnetIds = value.subnetIds;
+      this._portRange.internalValue = value.portRange;
+    }
+  }
+
+  // cidr - computed: false, optional: false, required: true
+  private _cidr?: string; 
+  public get cidr() {
+    return this.getStringAttribute('cidr');
+  }
+  public set cidr(value: string) {
+    this._cidr = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrInput() {
+    return this._cidr;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // subnet_ids - computed: false, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // port_range - computed: false, optional: false, required: true
+  private _portRange = new CidrOptionsPortRangePropertyList(this, "port_range", true);
+  public get portRange() {
+    return this._portRange;
+  }
+  public putPortRange(value: CidrOptionsPortRangeProperty[] | cdktn.IResolvable) {
+    this._portRange.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange.internalValue;
+  }
+}
+export interface LoadBalancerOptionsPortRangeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsVerifiedaccessEndpoint#from_port}
+  */
+  readonly fromPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsVerifiedaccessEndpoint#to_port}
+  */
+  readonly toPort: number;
+}
+export class LoadBalancerOptionsPortRangePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fromPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fromPort = this._fromPort;
+    }
+    if (this._toPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.toPort = this._toPort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fromPort = undefined;
+      this._toPort = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fromPort = value.fromPort;
+      this._toPort = value.toPort;
+    }
+  }
+
+  // from_port - computed: false, optional: false, required: true
+  private _fromPort?: number; 
+  public get fromPort() {
+    return this.getNumberAttribute('from_port');
+  }
+  public set fromPort(value: number) {
+    this._fromPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fromPortInput() {
+    return this._fromPort;
+  }
+
+  // to_port - computed: false, optional: false, required: true
+  private _toPort?: number; 
+  public get toPort() {
+    return this.getNumberAttribute('to_port');
+  }
+  public set toPort(value: number) {
+    this._toPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toPortInput() {
+    return this._toPort;
+  }
+}
+
+export class LoadBalancerOptionsPortRangePropertyList extends cdktn.ComplexList {
+  public internalValue? : LoadBalancerOptionsPortRangeProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LoadBalancerOptionsPortRangePropertyOutputReference {
+    return new LoadBalancerOptionsPortRangePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LoadBalancerOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_arn AwsVerifiedaccessEndpoint#load_balancer_arn}
+  */
+  readonly loadBalancerArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsVerifiedaccessEndpoint#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsVerifiedaccessEndpoint#protocol}
+  */
+  readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsVerifiedaccessEndpoint#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+  /**
+  * port_range block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsVerifiedaccessEndpoint#port_range}
+  */
+  readonly portRange?: LoadBalancerOptionsPortRangeProperty[] | cdktn.IResolvable;
+}
+export class LoadBalancerOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LoadBalancerOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._loadBalancerArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancerArn = this._loadBalancerArn;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    if (this._portRange?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portRange = this._portRange?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoadBalancerOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._loadBalancerArn = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._subnetIds = undefined;
+      this._portRange.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._loadBalancerArn = value.loadBalancerArn;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._subnetIds = value.subnetIds;
+      this._portRange.internalValue = value.portRange;
+    }
+  }
+
+  // load_balancer_arn - computed: false, optional: true, required: false
+  private _loadBalancerArn?: string; 
+  public get loadBalancerArn() {
+    return this.getStringAttribute('load_balancer_arn');
+  }
+  public set loadBalancerArn(value: string) {
+    this._loadBalancerArn = value;
+  }
+  public resetLoadBalancerArn() {
+    this._loadBalancerArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerArnInput() {
+    return this._loadBalancerArn;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // subnet_ids - computed: false, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // port_range - computed: false, optional: true, required: false
+  private _portRange = new LoadBalancerOptionsPortRangePropertyList(this, "port_range", true);
+  public get portRange() {
+    return this._portRange;
+  }
+  public putPortRange(value: LoadBalancerOptionsPortRangeProperty[] | cdktn.IResolvable) {
+    this._portRange.internalValue = value;
+  }
+  public resetPortRange() {
+    this._portRange.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange.internalValue;
+  }
+}
+export interface NetworkInterfaceOptionsPortRangeProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsVerifiedaccessEndpoint#from_port}
+  */
+  readonly fromPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsVerifiedaccessEndpoint#to_port}
+  */
+  readonly toPort: number;
+}
+export class NetworkInterfaceOptionsPortRangePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fromPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fromPort = this._fromPort;
+    }
+    if (this._toPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.toPort = this._toPort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fromPort = undefined;
+      this._toPort = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fromPort = value.fromPort;
+      this._toPort = value.toPort;
+    }
+  }
+
+  // from_port - computed: false, optional: false, required: true
+  private _fromPort?: number; 
+  public get fromPort() {
+    return this.getNumberAttribute('from_port');
+  }
+  public set fromPort(value: number) {
+    this._fromPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fromPortInput() {
+    return this._fromPort;
+  }
+
+  // to_port - computed: false, optional: false, required: true
+  private _toPort?: number; 
+  public get toPort() {
+    return this.getNumberAttribute('to_port');
+  }
+  public set toPort(value: number) {
+    this._toPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toPortInput() {
+    return this._toPort;
+  }
+}
+
+export class NetworkInterfaceOptionsPortRangePropertyList extends cdktn.ComplexList {
+  public internalValue? : NetworkInterfaceOptionsPortRangeProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkInterfaceOptionsPortRangePropertyOutputReference {
+    return new NetworkInterfaceOptionsPortRangePropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NetworkInterfaceOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_id AwsVerifiedaccessEndpoint#network_interface_id}
+  */
+  readonly networkInterfaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsVerifiedaccessEndpoint#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsVerifiedaccessEndpoint#protocol}
+  */
+  readonly protocol?: string;
+  /**
+  * port_range block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsVerifiedaccessEndpoint#port_range}
+  */
+  readonly portRange?: NetworkInterfaceOptionsPortRangeProperty[] | cdktn.IResolvable;
+}
+export class NetworkInterfaceOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkInterfaceOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._networkInterfaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkInterfaceId = this._networkInterfaceId;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._portRange?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portRange = this._portRange?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkInterfaceOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._networkInterfaceId = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._portRange.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._networkInterfaceId = value.networkInterfaceId;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._portRange.internalValue = value.portRange;
+    }
+  }
+
+  // network_interface_id - computed: false, optional: true, required: false
+  private _networkInterfaceId?: string; 
+  public get networkInterfaceId() {
+    return this.getStringAttribute('network_interface_id');
+  }
+  public set networkInterfaceId(value: string) {
+    this._networkInterfaceId = value;
+  }
+  public resetNetworkInterfaceId() {
+    this._networkInterfaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdInput() {
+    return this._networkInterfaceId;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // port_range - computed: false, optional: true, required: false
+  private _portRange = new NetworkInterfaceOptionsPortRangePropertyList(this, "port_range", true);
+  public get portRange() {
+    return this._portRange;
+  }
+  public putPortRange(value: NetworkInterfaceOptionsPortRangeProperty[] | cdktn.IResolvable) {
+    this._portRange.internalValue = value;
+  }
+  public resetPortRange() {
+    this._portRange.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange.internalValue;
+  }
+}
+export interface RdsOptionsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsVerifiedaccessEndpoint#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsVerifiedaccessEndpoint#protocol}
+  */
+  readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_cluster_arn AwsVerifiedaccessEndpoint#rds_db_cluster_arn}
+  */
+  readonly rdsDbClusterArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_instance_arn AwsVerifiedaccessEndpoint#rds_db_instance_arn}
+  */
+  readonly rdsDbInstanceArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_proxy_arn AwsVerifiedaccessEndpoint#rds_db_proxy_arn}
+  */
+  readonly rdsDbProxyArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_endpoint AwsVerifiedaccessEndpoint#rds_endpoint}
+  */
+  readonly rdsEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsVerifiedaccessEndpoint#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+}
+export class RdsOptionsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RdsOptionsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._rdsDbClusterArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdsDbClusterArn = this._rdsDbClusterArn;
+    }
+    if (this._rdsDbInstanceArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdsDbInstanceArn = this._rdsDbInstanceArn;
+    }
+    if (this._rdsDbProxyArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdsDbProxyArn = this._rdsDbProxyArn;
+    }
+    if (this._rdsEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdsEndpoint = this._rdsEndpoint;
+    }
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RdsOptionsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._rdsDbClusterArn = undefined;
+      this._rdsDbInstanceArn = undefined;
+      this._rdsDbProxyArn = undefined;
+      this._rdsEndpoint = undefined;
+      this._subnetIds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._rdsDbClusterArn = value.rdsDbClusterArn;
+      this._rdsDbInstanceArn = value.rdsDbInstanceArn;
+      this._rdsDbProxyArn = value.rdsDbProxyArn;
+      this._rdsEndpoint = value.rdsEndpoint;
+      this._subnetIds = value.subnetIds;
+    }
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // rds_db_cluster_arn - computed: false, optional: true, required: false
+  private _rdsDbClusterArn?: string; 
+  public get rdsDbClusterArn() {
+    return this.getStringAttribute('rds_db_cluster_arn');
+  }
+  public set rdsDbClusterArn(value: string) {
+    this._rdsDbClusterArn = value;
+  }
+  public resetRdsDbClusterArn() {
+    this._rdsDbClusterArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdsDbClusterArnInput() {
+    return this._rdsDbClusterArn;
+  }
+
+  // rds_db_instance_arn - computed: false, optional: true, required: false
+  private _rdsDbInstanceArn?: string; 
+  public get rdsDbInstanceArn() {
+    return this.getStringAttribute('rds_db_instance_arn');
+  }
+  public set rdsDbInstanceArn(value: string) {
+    this._rdsDbInstanceArn = value;
+  }
+  public resetRdsDbInstanceArn() {
+    this._rdsDbInstanceArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdsDbInstanceArnInput() {
+    return this._rdsDbInstanceArn;
+  }
+
+  // rds_db_proxy_arn - computed: false, optional: true, required: false
+  private _rdsDbProxyArn?: string; 
+  public get rdsDbProxyArn() {
+    return this.getStringAttribute('rds_db_proxy_arn');
+  }
+  public set rdsDbProxyArn(value: string) {
+    this._rdsDbProxyArn = value;
+  }
+  public resetRdsDbProxyArn() {
+    this._rdsDbProxyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdsDbProxyArnInput() {
+    return this._rdsDbProxyArn;
+  }
+
+  // rds_endpoint - computed: false, optional: true, required: false
+  private _rdsEndpoint?: string; 
+  public get rdsEndpoint() {
+    return this.getStringAttribute('rds_endpoint');
+  }
+  public set rdsEndpoint(value: string) {
+    this._rdsEndpoint = value;
+  }
+  public resetRdsEndpoint() {
+    this._rdsEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdsEndpointInput() {
+    return this._rdsEndpoint;
+  }
+
+  // subnet_ids - computed: false, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+}
+export interface SseSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#customer_managed_key_enabled AwsVerifiedaccessEndpoint#customer_managed_key_enabled}
+  */
+  readonly customerManagedKeyEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#kms_key_arn AwsVerifiedaccessEndpoint#kms_key_arn}
+  */
+  readonly kmsKeyArn?: string;
+}
+export class SseSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SseSpecificationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customerManagedKeyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customerManagedKeyEnabled = this._customerManagedKeyEnabled;
+    }
+    if (this._kmsKeyArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyArn = this._kmsKeyArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SseSpecificationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customerManagedKeyEnabled = undefined;
+      this._kmsKeyArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customerManagedKeyEnabled = value.customerManagedKeyEnabled;
+      this._kmsKeyArn = value.kmsKeyArn;
+    }
+  }
+
+  // customer_managed_key_enabled - computed: false, optional: true, required: false
+  private _customerManagedKeyEnabled?: boolean | cdktn.IResolvable; 
+  public get customerManagedKeyEnabled() {
+    return this.getBooleanAttribute('customer_managed_key_enabled');
+  }
+  public set customerManagedKeyEnabled(value: boolean | cdktn.IResolvable) {
+    this._customerManagedKeyEnabled = value;
+  }
+  public resetCustomerManagedKeyEnabled() {
+    this._customerManagedKeyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyEnabledInput() {
+    return this._customerManagedKeyEnabled;
+  }
+
+  // kms_key_arn - computed: false, optional: true, required: false
+  private _kmsKeyArn?: string; 
+  public get kmsKeyArn() {
+    return this.getStringAttribute('kms_key_arn');
+  }
+  public set kmsKeyArn(value: string) {
+    this._kmsKeyArn = value;
+  }
+  public resetKmsKeyArn() {
+    this._kmsKeyArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyArnInput() {
+    return this._kmsKeyArn;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#create AwsVerifiedaccessEndpoint#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#delete AwsVerifiedaccessEndpoint#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#update AwsVerifiedaccessEndpoint#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

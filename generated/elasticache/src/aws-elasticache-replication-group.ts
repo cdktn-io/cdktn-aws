@@ -1,0 +1,2123 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsElasticacheReplicationGroupConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#apply_immediately AwsElasticacheReplicationGroup#apply_immediately}
+  */
+  readonly applyImmediately?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#at_rest_encryption_enabled AwsElasticacheReplicationGroup#at_rest_encryption_enabled}
+  */
+  readonly atRestEncryptionEnabled?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#auth_token AwsElasticacheReplicationGroup#auth_token}
+  */
+  readonly authToken?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#auth_token_update_strategy AwsElasticacheReplicationGroup#auth_token_update_strategy}
+  */
+  readonly authTokenUpdateStrategy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#auth_token_wo AwsElasticacheReplicationGroup#auth_token_wo}
+  */
+  readonly authTokenWo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#auth_token_wo_version AwsElasticacheReplicationGroup#auth_token_wo_version}
+  */
+  readonly authTokenWoVersion?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#auto_minor_version_upgrade AwsElasticacheReplicationGroup#auto_minor_version_upgrade}
+  */
+  readonly autoMinorVersionUpgrade?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#automatic_failover_enabled AwsElasticacheReplicationGroup#automatic_failover_enabled}
+  */
+  readonly automaticFailoverEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#cluster_mode AwsElasticacheReplicationGroup#cluster_mode}
+  */
+  readonly clusterMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#data_tiering_enabled AwsElasticacheReplicationGroup#data_tiering_enabled}
+  */
+  readonly dataTieringEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#description AwsElasticacheReplicationGroup#description}
+  */
+  readonly description: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#durability AwsElasticacheReplicationGroup#durability}
+  */
+  readonly durability?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#engine AwsElasticacheReplicationGroup#engine}
+  */
+  readonly engine?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#engine_version AwsElasticacheReplicationGroup#engine_version}
+  */
+  readonly engineVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#final_snapshot_identifier AwsElasticacheReplicationGroup#final_snapshot_identifier}
+  */
+  readonly finalSnapshotIdentifier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#global_replication_group_id AwsElasticacheReplicationGroup#global_replication_group_id}
+  */
+  readonly globalReplicationGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#id AwsElasticacheReplicationGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#ip_discovery AwsElasticacheReplicationGroup#ip_discovery}
+  */
+  readonly ipDiscovery?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#kms_key_id AwsElasticacheReplicationGroup#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#maintenance_window AwsElasticacheReplicationGroup#maintenance_window}
+  */
+  readonly maintenanceWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#multi_az_enabled AwsElasticacheReplicationGroup#multi_az_enabled}
+  */
+  readonly multiAzEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#network_type AwsElasticacheReplicationGroup#network_type}
+  */
+  readonly networkType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#node_type AwsElasticacheReplicationGroup#node_type}
+  */
+  readonly nodeType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#notification_topic_arn AwsElasticacheReplicationGroup#notification_topic_arn}
+  */
+  readonly notificationTopicArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#num_cache_clusters AwsElasticacheReplicationGroup#num_cache_clusters}
+  */
+  readonly numCacheClusters?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#num_node_groups AwsElasticacheReplicationGroup#num_node_groups}
+  */
+  readonly numNodeGroups?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#parameter_group_name AwsElasticacheReplicationGroup#parameter_group_name}
+  */
+  readonly parameterGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#port AwsElasticacheReplicationGroup#port}
+  */
+  readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#preferred_cache_cluster_azs AwsElasticacheReplicationGroup#preferred_cache_cluster_azs}
+  */
+  readonly preferredCacheClusterAzs?: string[];
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#region AwsElasticacheReplicationGroup#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#replicas_per_node_group AwsElasticacheReplicationGroup#replicas_per_node_group}
+  */
+  readonly replicasPerNodeGroup?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#replication_group_id AwsElasticacheReplicationGroup#replication_group_id}
+  */
+  readonly replicationGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#security_group_ids AwsElasticacheReplicationGroup#security_group_ids}
+  */
+  readonly securityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#security_group_names AwsElasticacheReplicationGroup#security_group_names}
+  */
+  readonly securityGroupNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#snapshot_arns AwsElasticacheReplicationGroup#snapshot_arns}
+  */
+  readonly snapshotArns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#snapshot_name AwsElasticacheReplicationGroup#snapshot_name}
+  */
+  readonly snapshotName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#snapshot_retention_limit AwsElasticacheReplicationGroup#snapshot_retention_limit}
+  */
+  readonly snapshotRetentionLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#snapshot_window AwsElasticacheReplicationGroup#snapshot_window}
+  */
+  readonly snapshotWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#subnet_group_name AwsElasticacheReplicationGroup#subnet_group_name}
+  */
+  readonly subnetGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#tags AwsElasticacheReplicationGroup#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#tags_all AwsElasticacheReplicationGroup#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#transit_encryption_enabled AwsElasticacheReplicationGroup#transit_encryption_enabled}
+  */
+  readonly transitEncryptionEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#transit_encryption_mode AwsElasticacheReplicationGroup#transit_encryption_mode}
+  */
+  readonly transitEncryptionMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#user_group_ids AwsElasticacheReplicationGroup#user_group_ids}
+  */
+  readonly userGroupIds?: string[];
+  /**
+  * log_delivery_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#log_delivery_configuration AwsElasticacheReplicationGroup#log_delivery_configuration}
+  */
+  readonly logDeliveryConfiguration?: AwsElasticacheReplicationGroup.LogDeliveryConfigurationProperty[] | cdktn.IResolvable;
+  /**
+  * node_group_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#node_group_configuration AwsElasticacheReplicationGroup#node_group_configuration}
+  */
+  readonly nodeGroupConfiguration?: AwsElasticacheReplicationGroup.NodeGroupConfigurationProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#timeouts AwsElasticacheReplicationGroup#timeouts}
+  */
+  readonly timeouts?: AwsElasticacheReplicationGroup.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group aws_elasticache_replication_group}
+*/
+export class AwsElasticacheReplicationGroup extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_elasticache_replication_group";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsElasticacheReplicationGroup resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsElasticacheReplicationGroup to import
+  * @param importFromId The id of the existing AwsElasticacheReplicationGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsElasticacheReplicationGroup to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_replication_group", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group aws_elasticache_replication_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsElasticacheReplicationGroupConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsElasticacheReplicationGroupConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_elasticache_replication_group',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._applyImmediately = config.applyImmediately;
+    this._atRestEncryptionEnabled = config.atRestEncryptionEnabled;
+    this._authToken = config.authToken;
+    this._authTokenUpdateStrategy = config.authTokenUpdateStrategy;
+    this._authTokenWo = config.authTokenWo;
+    this._authTokenWoVersion = config.authTokenWoVersion;
+    this._autoMinorVersionUpgrade = config.autoMinorVersionUpgrade;
+    this._automaticFailoverEnabled = config.automaticFailoverEnabled;
+    this._clusterMode = config.clusterMode;
+    this._dataTieringEnabled = config.dataTieringEnabled;
+    this._description = config.description;
+    this._durability = config.durability;
+    this._engine = config.engine;
+    this._engineVersion = config.engineVersion;
+    this._finalSnapshotIdentifier = config.finalSnapshotIdentifier;
+    this._globalReplicationGroupId = config.globalReplicationGroupId;
+    this._id = config.id;
+    this._ipDiscovery = config.ipDiscovery;
+    this._kmsKeyId = config.kmsKeyId;
+    this._maintenanceWindow = config.maintenanceWindow;
+    this._multiAzEnabled = config.multiAzEnabled;
+    this._networkType = config.networkType;
+    this._nodeType = config.nodeType;
+    this._notificationTopicArn = config.notificationTopicArn;
+    this._numCacheClusters = config.numCacheClusters;
+    this._numNodeGroups = config.numNodeGroups;
+    this._parameterGroupName = config.parameterGroupName;
+    this._port = config.port;
+    this._preferredCacheClusterAzs = config.preferredCacheClusterAzs;
+    this._region = config.region;
+    this._replicasPerNodeGroup = config.replicasPerNodeGroup;
+    this._replicationGroupId = config.replicationGroupId;
+    this._securityGroupIds = config.securityGroupIds;
+    this._securityGroupNames = config.securityGroupNames;
+    this._snapshotArns = config.snapshotArns;
+    this._snapshotName = config.snapshotName;
+    this._snapshotRetentionLimit = config.snapshotRetentionLimit;
+    this._snapshotWindow = config.snapshotWindow;
+    this._subnetGroupName = config.subnetGroupName;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._transitEncryptionEnabled = config.transitEncryptionEnabled;
+    this._transitEncryptionMode = config.transitEncryptionMode;
+    this._userGroupIds = config.userGroupIds;
+    this._logDeliveryConfiguration.internalValue = config.logDeliveryConfiguration;
+    this._nodeGroupConfiguration.internalValue = config.nodeGroupConfiguration;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // apply_immediately - computed: true, optional: true, required: false
+  private _applyImmediately?: boolean | cdktn.IResolvable; 
+  public get applyImmediately() {
+    return this.getBooleanAttribute('apply_immediately');
+  }
+  public set applyImmediately(value: boolean | cdktn.IResolvable) {
+    this._applyImmediately = value;
+  }
+  public resetApplyImmediately() {
+    this._applyImmediately = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applyImmediatelyInput() {
+    return this._applyImmediately;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // at_rest_encryption_enabled - computed: true, optional: true, required: false
+  private _atRestEncryptionEnabled?: string; 
+  public get atRestEncryptionEnabled() {
+    return this.getStringAttribute('at_rest_encryption_enabled');
+  }
+  public set atRestEncryptionEnabled(value: string) {
+    this._atRestEncryptionEnabled = value;
+  }
+  public resetAtRestEncryptionEnabled() {
+    this._atRestEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get atRestEncryptionEnabledInput() {
+    return this._atRestEncryptionEnabled;
+  }
+
+  // auth_token - computed: false, optional: true, required: false
+  private _authToken?: string; 
+  public get authToken() {
+    return this.getStringAttribute('auth_token');
+  }
+  public set authToken(value: string) {
+    this._authToken = value;
+  }
+  public resetAuthToken() {
+    this._authToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenInput() {
+    return this._authToken;
+  }
+
+  // auth_token_update_strategy - computed: false, optional: true, required: false
+  private _authTokenUpdateStrategy?: string; 
+  public get authTokenUpdateStrategy() {
+    return this.getStringAttribute('auth_token_update_strategy');
+  }
+  public set authTokenUpdateStrategy(value: string) {
+    this._authTokenUpdateStrategy = value;
+  }
+  public resetAuthTokenUpdateStrategy() {
+    this._authTokenUpdateStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenUpdateStrategyInput() {
+    return this._authTokenUpdateStrategy;
+  }
+
+  // auth_token_wo - computed: false, optional: true, required: false
+  private _authTokenWo?: string; 
+  /**
+  * @deprecated Write-only: the provider never returns this value; reading it always yields null by protocol contract. The getter remains for compatibility and will be removed in a future prebuilt-provider major.
+  */
+  public get authTokenWo() {
+    return this.getStringAttribute('auth_token_wo');
+  }
+  public set authTokenWo(value: string) {
+    this._authTokenWo = value;
+  }
+  public resetAuthTokenWo() {
+    this._authTokenWo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenWoInput() {
+    return this._authTokenWo;
+  }
+
+  // auth_token_wo_version - computed: false, optional: true, required: false
+  private _authTokenWoVersion?: number; 
+  public get authTokenWoVersion() {
+    return this.getNumberAttribute('auth_token_wo_version');
+  }
+  public set authTokenWoVersion(value: number) {
+    this._authTokenWoVersion = value;
+  }
+  public resetAuthTokenWoVersion() {
+    this._authTokenWoVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authTokenWoVersionInput() {
+    return this._authTokenWoVersion;
+  }
+
+  // auto_minor_version_upgrade - computed: true, optional: true, required: false
+  private _autoMinorVersionUpgrade?: string; 
+  public get autoMinorVersionUpgrade() {
+    return this.getStringAttribute('auto_minor_version_upgrade');
+  }
+  public set autoMinorVersionUpgrade(value: string) {
+    this._autoMinorVersionUpgrade = value;
+  }
+  public resetAutoMinorVersionUpgrade() {
+    this._autoMinorVersionUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoMinorVersionUpgradeInput() {
+    return this._autoMinorVersionUpgrade;
+  }
+
+  // automatic_failover_enabled - computed: false, optional: true, required: false
+  private _automaticFailoverEnabled?: boolean | cdktn.IResolvable; 
+  public get automaticFailoverEnabled() {
+    return this.getBooleanAttribute('automatic_failover_enabled');
+  }
+  public set automaticFailoverEnabled(value: boolean | cdktn.IResolvable) {
+    this._automaticFailoverEnabled = value;
+  }
+  public resetAutomaticFailoverEnabled() {
+    this._automaticFailoverEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticFailoverEnabledInput() {
+    return this._automaticFailoverEnabled;
+  }
+
+  // cluster_enabled - computed: true, optional: false, required: false
+  public get clusterEnabled() {
+    return this.getBooleanAttribute('cluster_enabled');
+  }
+
+  // cluster_mode - computed: true, optional: true, required: false
+  private _clusterMode?: string; 
+  public get clusterMode() {
+    return this.getStringAttribute('cluster_mode');
+  }
+  public set clusterMode(value: string) {
+    this._clusterMode = value;
+  }
+  public resetClusterMode() {
+    this._clusterMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterModeInput() {
+    return this._clusterMode;
+  }
+
+  // configuration_endpoint_address - computed: true, optional: false, required: false
+  public get configurationEndpointAddress() {
+    return this.getStringAttribute('configuration_endpoint_address');
+  }
+
+  // data_tiering_enabled - computed: true, optional: true, required: false
+  private _dataTieringEnabled?: boolean | cdktn.IResolvable; 
+  public get dataTieringEnabled() {
+    return this.getBooleanAttribute('data_tiering_enabled');
+  }
+  public set dataTieringEnabled(value: boolean | cdktn.IResolvable) {
+    this._dataTieringEnabled = value;
+  }
+  public resetDataTieringEnabled() {
+    this._dataTieringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTieringEnabledInput() {
+    return this._dataTieringEnabled;
+  }
+
+  // description - computed: false, optional: false, required: true
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // durability - computed: true, optional: true, required: false
+  private _durability?: string; 
+  public get durability() {
+    return this.getStringAttribute('durability');
+  }
+  public set durability(value: string) {
+    this._durability = value;
+  }
+  public resetDurability() {
+    this._durability = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durabilityInput() {
+    return this._durability;
+  }
+
+  // engine - computed: true, optional: true, required: false
+  private _engine?: string; 
+  public get engine() {
+    return this.getStringAttribute('engine');
+  }
+  public set engine(value: string) {
+    this._engine = value;
+  }
+  public resetEngine() {
+    this._engine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineInput() {
+    return this._engine;
+  }
+
+  // engine_version - computed: true, optional: true, required: false
+  private _engineVersion?: string; 
+  public get engineVersion() {
+    return this.getStringAttribute('engine_version');
+  }
+  public set engineVersion(value: string) {
+    this._engineVersion = value;
+  }
+  public resetEngineVersion() {
+    this._engineVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineVersionInput() {
+    return this._engineVersion;
+  }
+
+  // engine_version_actual - computed: true, optional: false, required: false
+  public get engineVersionActual() {
+    return this.getStringAttribute('engine_version_actual');
+  }
+
+  // final_snapshot_identifier - computed: false, optional: true, required: false
+  private _finalSnapshotIdentifier?: string; 
+  public get finalSnapshotIdentifier() {
+    return this.getStringAttribute('final_snapshot_identifier');
+  }
+  public set finalSnapshotIdentifier(value: string) {
+    this._finalSnapshotIdentifier = value;
+  }
+  public resetFinalSnapshotIdentifier() {
+    this._finalSnapshotIdentifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get finalSnapshotIdentifierInput() {
+    return this._finalSnapshotIdentifier;
+  }
+
+  // global_replication_group_id - computed: true, optional: true, required: false
+  private _globalReplicationGroupId?: string; 
+  public get globalReplicationGroupId() {
+    return this.getStringAttribute('global_replication_group_id');
+  }
+  public set globalReplicationGroupId(value: string) {
+    this._globalReplicationGroupId = value;
+  }
+  public resetGlobalReplicationGroupId() {
+    this._globalReplicationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalReplicationGroupIdInput() {
+    return this._globalReplicationGroupId;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ip_discovery - computed: true, optional: true, required: false
+  private _ipDiscovery?: string; 
+  public get ipDiscovery() {
+    return this.getStringAttribute('ip_discovery');
+  }
+  public set ipDiscovery(value: string) {
+    this._ipDiscovery = value;
+  }
+  public resetIpDiscovery() {
+    this._ipDiscovery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipDiscoveryInput() {
+    return this._ipDiscovery;
+  }
+
+  // kms_key_id - computed: false, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // maintenance_window - computed: true, optional: true, required: false
+  private _maintenanceWindow?: string; 
+  public get maintenanceWindow() {
+    return this.getStringAttribute('maintenance_window');
+  }
+  public set maintenanceWindow(value: string) {
+    this._maintenanceWindow = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow;
+  }
+
+  // member_clusters - computed: true, optional: false, required: false
+  public get memberClusters() {
+    return cdktn.Fn.tolist(this.getListAttribute('member_clusters'));
+  }
+
+  // multi_az_enabled - computed: false, optional: true, required: false
+  private _multiAzEnabled?: boolean | cdktn.IResolvable; 
+  public get multiAzEnabled() {
+    return this.getBooleanAttribute('multi_az_enabled');
+  }
+  public set multiAzEnabled(value: boolean | cdktn.IResolvable) {
+    this._multiAzEnabled = value;
+  }
+  public resetMultiAzEnabled() {
+    this._multiAzEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiAzEnabledInput() {
+    return this._multiAzEnabled;
+  }
+
+  // network_type - computed: true, optional: true, required: false
+  private _networkType?: string; 
+  public get networkType() {
+    return this.getStringAttribute('network_type');
+  }
+  public set networkType(value: string) {
+    this._networkType = value;
+  }
+  public resetNetworkType() {
+    this._networkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkTypeInput() {
+    return this._networkType;
+  }
+
+  // node_type - computed: true, optional: true, required: false
+  private _nodeType?: string; 
+  public get nodeType() {
+    return this.getStringAttribute('node_type');
+  }
+  public set nodeType(value: string) {
+    this._nodeType = value;
+  }
+  public resetNodeType() {
+    this._nodeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeTypeInput() {
+    return this._nodeType;
+  }
+
+  // notification_topic_arn - computed: false, optional: true, required: false
+  private _notificationTopicArn?: string; 
+  public get notificationTopicArn() {
+    return this.getStringAttribute('notification_topic_arn');
+  }
+  public set notificationTopicArn(value: string) {
+    this._notificationTopicArn = value;
+  }
+  public resetNotificationTopicArn() {
+    this._notificationTopicArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationTopicArnInput() {
+    return this._notificationTopicArn;
+  }
+
+  // num_cache_clusters - computed: true, optional: true, required: false
+  private _numCacheClusters?: number; 
+  public get numCacheClusters() {
+    return this.getNumberAttribute('num_cache_clusters');
+  }
+  public set numCacheClusters(value: number) {
+    this._numCacheClusters = value;
+  }
+  public resetNumCacheClusters() {
+    this._numCacheClusters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numCacheClustersInput() {
+    return this._numCacheClusters;
+  }
+
+  // num_node_groups - computed: true, optional: true, required: false
+  private _numNodeGroups?: number; 
+  public get numNodeGroups() {
+    return this.getNumberAttribute('num_node_groups');
+  }
+  public set numNodeGroups(value: number) {
+    this._numNodeGroups = value;
+  }
+  public resetNumNodeGroups() {
+    this._numNodeGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numNodeGroupsInput() {
+    return this._numNodeGroups;
+  }
+
+  // parameter_group_name - computed: true, optional: true, required: false
+  private _parameterGroupName?: string; 
+  public get parameterGroupName() {
+    return this.getStringAttribute('parameter_group_name');
+  }
+  public set parameterGroupName(value: string) {
+    this._parameterGroupName = value;
+  }
+  public resetParameterGroupName() {
+    this._parameterGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterGroupNameInput() {
+    return this._parameterGroupName;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // preferred_cache_cluster_azs - computed: false, optional: true, required: false
+  private _preferredCacheClusterAzs?: string[]; 
+  public get preferredCacheClusterAzs() {
+    return this.getListAttribute('preferred_cache_cluster_azs');
+  }
+  public set preferredCacheClusterAzs(value: string[]) {
+    this._preferredCacheClusterAzs = value;
+  }
+  public resetPreferredCacheClusterAzs() {
+    this._preferredCacheClusterAzs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredCacheClusterAzsInput() {
+    return this._preferredCacheClusterAzs;
+  }
+
+  // primary_endpoint_address - computed: true, optional: false, required: false
+  public get primaryEndpointAddress() {
+    return this.getStringAttribute('primary_endpoint_address');
+  }
+
+  // reader_endpoint_address - computed: true, optional: false, required: false
+  public get readerEndpointAddress() {
+    return this.getStringAttribute('reader_endpoint_address');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // replicas_per_node_group - computed: true, optional: true, required: false
+  private _replicasPerNodeGroup?: number; 
+  public get replicasPerNodeGroup() {
+    return this.getNumberAttribute('replicas_per_node_group');
+  }
+  public set replicasPerNodeGroup(value: number) {
+    this._replicasPerNodeGroup = value;
+  }
+  public resetReplicasPerNodeGroup() {
+    this._replicasPerNodeGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicasPerNodeGroupInput() {
+    return this._replicasPerNodeGroup;
+  }
+
+  // replication_group_id - computed: false, optional: false, required: true
+  private _replicationGroupId?: string; 
+  public get replicationGroupId() {
+    return this.getStringAttribute('replication_group_id');
+  }
+  public set replicationGroupId(value: string) {
+    this._replicationGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationGroupIdInput() {
+    return this._replicationGroupId;
+  }
+
+  // security_group_ids - computed: true, optional: true, required: false
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  public resetSecurityGroupIds() {
+    this._securityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // security_group_names - computed: true, optional: true, required: false
+  private _securityGroupNames?: string[]; 
+  public get securityGroupNames() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_names'));
+  }
+  public set securityGroupNames(value: string[]) {
+    this._securityGroupNames = value;
+  }
+  public resetSecurityGroupNames() {
+    this._securityGroupNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupNamesInput() {
+    return this._securityGroupNames;
+  }
+
+  // snapshot_arns - computed: false, optional: true, required: false
+  private _snapshotArns?: string[]; 
+  public get snapshotArns() {
+    return cdktn.Fn.tolist(this.getListAttribute('snapshot_arns'));
+  }
+  public set snapshotArns(value: string[]) {
+    this._snapshotArns = value;
+  }
+  public resetSnapshotArns() {
+    this._snapshotArns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotArnsInput() {
+    return this._snapshotArns;
+  }
+
+  // snapshot_name - computed: false, optional: true, required: false
+  private _snapshotName?: string; 
+  public get snapshotName() {
+    return this.getStringAttribute('snapshot_name');
+  }
+  public set snapshotName(value: string) {
+    this._snapshotName = value;
+  }
+  public resetSnapshotName() {
+    this._snapshotName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotNameInput() {
+    return this._snapshotName;
+  }
+
+  // snapshot_retention_limit - computed: false, optional: true, required: false
+  private _snapshotRetentionLimit?: number; 
+  public get snapshotRetentionLimit() {
+    return this.getNumberAttribute('snapshot_retention_limit');
+  }
+  public set snapshotRetentionLimit(value: number) {
+    this._snapshotRetentionLimit = value;
+  }
+  public resetSnapshotRetentionLimit() {
+    this._snapshotRetentionLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotRetentionLimitInput() {
+    return this._snapshotRetentionLimit;
+  }
+
+  // snapshot_window - computed: true, optional: true, required: false
+  private _snapshotWindow?: string; 
+  public get snapshotWindow() {
+    return this.getStringAttribute('snapshot_window');
+  }
+  public set snapshotWindow(value: string) {
+    this._snapshotWindow = value;
+  }
+  public resetSnapshotWindow() {
+    this._snapshotWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotWindowInput() {
+    return this._snapshotWindow;
+  }
+
+  // subnet_group_name - computed: true, optional: true, required: false
+  private _subnetGroupName?: string; 
+  public get subnetGroupName() {
+    return this.getStringAttribute('subnet_group_name');
+  }
+  public set subnetGroupName(value: string) {
+    this._subnetGroupName = value;
+  }
+  public resetSubnetGroupName() {
+    this._subnetGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetGroupNameInput() {
+    return this._subnetGroupName;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // transit_encryption_enabled - computed: true, optional: true, required: false
+  private _transitEncryptionEnabled?: boolean | cdktn.IResolvable; 
+  public get transitEncryptionEnabled() {
+    return this.getBooleanAttribute('transit_encryption_enabled');
+  }
+  public set transitEncryptionEnabled(value: boolean | cdktn.IResolvable) {
+    this._transitEncryptionEnabled = value;
+  }
+  public resetTransitEncryptionEnabled() {
+    this._transitEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitEncryptionEnabledInput() {
+    return this._transitEncryptionEnabled;
+  }
+
+  // transit_encryption_mode - computed: true, optional: true, required: false
+  private _transitEncryptionMode?: string; 
+  public get transitEncryptionMode() {
+    return this.getStringAttribute('transit_encryption_mode');
+  }
+  public set transitEncryptionMode(value: string) {
+    this._transitEncryptionMode = value;
+  }
+  public resetTransitEncryptionMode() {
+    this._transitEncryptionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transitEncryptionModeInput() {
+    return this._transitEncryptionMode;
+  }
+
+  // user_group_ids - computed: false, optional: true, required: false
+  private _userGroupIds?: string[]; 
+  public get userGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('user_group_ids'));
+  }
+  public set userGroupIds(value: string[]) {
+    this._userGroupIds = value;
+  }
+  public resetUserGroupIds() {
+    this._userGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userGroupIdsInput() {
+    return this._userGroupIds;
+  }
+
+  // log_delivery_configuration - computed: false, optional: true, required: false
+  private _logDeliveryConfiguration = new AwsElasticacheReplicationGroup.LogDeliveryConfigurationPropertyList(this, "log_delivery_configuration", true);
+  public get logDeliveryConfiguration() {
+    return this._logDeliveryConfiguration;
+  }
+  public putLogDeliveryConfiguration(value: AwsElasticacheReplicationGroup.LogDeliveryConfigurationProperty[] | cdktn.IResolvable) {
+    this._logDeliveryConfiguration.internalValue = value;
+  }
+  public resetLogDeliveryConfiguration() {
+    this._logDeliveryConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logDeliveryConfigurationInput() {
+    return this._logDeliveryConfiguration.internalValue;
+  }
+
+  // node_group_configuration - computed: false, optional: true, required: false
+  private _nodeGroupConfiguration = new AwsElasticacheReplicationGroup.NodeGroupConfigurationPropertyList(this, "node_group_configuration", true);
+  public get nodeGroupConfiguration() {
+    return this._nodeGroupConfiguration;
+  }
+  public putNodeGroupConfiguration(value: AwsElasticacheReplicationGroup.NodeGroupConfigurationProperty[] | cdktn.IResolvable) {
+    this._nodeGroupConfiguration.internalValue = value;
+  }
+  public resetNodeGroupConfiguration() {
+    this._nodeGroupConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupConfigurationInput() {
+    return this._nodeGroupConfiguration.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsElasticacheReplicationGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsElasticacheReplicationGroup.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      apply_immediately: cdktn.booleanToTerraform(this._applyImmediately),
+      at_rest_encryption_enabled: cdktn.stringToTerraform(this._atRestEncryptionEnabled),
+      auth_token: cdktn.stringToTerraform(this._authToken),
+      auth_token_update_strategy: cdktn.stringToTerraform(this._authTokenUpdateStrategy),
+      auth_token_wo: this.markWriteOnlyAttribute(cdktn.stringToTerraform(this._authTokenWo)),
+      auth_token_wo_version: cdktn.numberToTerraform(this._authTokenWoVersion),
+      auto_minor_version_upgrade: cdktn.stringToTerraform(this._autoMinorVersionUpgrade),
+      automatic_failover_enabled: cdktn.booleanToTerraform(this._automaticFailoverEnabled),
+      cluster_mode: cdktn.stringToTerraform(this._clusterMode),
+      data_tiering_enabled: cdktn.booleanToTerraform(this._dataTieringEnabled),
+      description: cdktn.stringToTerraform(this._description),
+      durability: cdktn.stringToTerraform(this._durability),
+      engine: cdktn.stringToTerraform(this._engine),
+      engine_version: cdktn.stringToTerraform(this._engineVersion),
+      final_snapshot_identifier: cdktn.stringToTerraform(this._finalSnapshotIdentifier),
+      global_replication_group_id: cdktn.stringToTerraform(this._globalReplicationGroupId),
+      id: cdktn.stringToTerraform(this._id),
+      ip_discovery: cdktn.stringToTerraform(this._ipDiscovery),
+      kms_key_id: cdktn.stringToTerraform(this._kmsKeyId),
+      maintenance_window: cdktn.stringToTerraform(this._maintenanceWindow),
+      multi_az_enabled: cdktn.booleanToTerraform(this._multiAzEnabled),
+      network_type: cdktn.stringToTerraform(this._networkType),
+      node_type: cdktn.stringToTerraform(this._nodeType),
+      notification_topic_arn: cdktn.stringToTerraform(this._notificationTopicArn),
+      num_cache_clusters: cdktn.numberToTerraform(this._numCacheClusters),
+      num_node_groups: cdktn.numberToTerraform(this._numNodeGroups),
+      parameter_group_name: cdktn.stringToTerraform(this._parameterGroupName),
+      port: cdktn.numberToTerraform(this._port),
+      preferred_cache_cluster_azs: cdktn.listMapper(cdktn.stringToTerraform, false)(this._preferredCacheClusterAzs),
+      region: cdktn.stringToTerraform(this._region),
+      replicas_per_node_group: cdktn.numberToTerraform(this._replicasPerNodeGroup),
+      replication_group_id: cdktn.stringToTerraform(this._replicationGroupId),
+      security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
+      security_group_names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupNames),
+      snapshot_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(this._snapshotArns),
+      snapshot_name: cdktn.stringToTerraform(this._snapshotName),
+      snapshot_retention_limit: cdktn.numberToTerraform(this._snapshotRetentionLimit),
+      snapshot_window: cdktn.stringToTerraform(this._snapshotWindow),
+      subnet_group_name: cdktn.stringToTerraform(this._subnetGroupName),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      transit_encryption_enabled: cdktn.booleanToTerraform(this._transitEncryptionEnabled),
+      transit_encryption_mode: cdktn.stringToTerraform(this._transitEncryptionMode),
+      user_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._userGroupIds),
+      log_delivery_configuration: cdktn.listMapper(awsElasticacheReplicationGroupLogDeliveryConfigurationPropertyToTerraform, true)(this._logDeliveryConfiguration.internalValue),
+      node_group_configuration: cdktn.listMapper(awsElasticacheReplicationGroupNodeGroupConfigurationPropertyToTerraform, true)(this._nodeGroupConfiguration.internalValue),
+      timeouts: awsElasticacheReplicationGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      apply_immediately: {
+        value: cdktn.booleanToHclTerraform(this._applyImmediately),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      at_rest_encryption_enabled: {
+        value: cdktn.stringToHclTerraform(this._atRestEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      auth_token: {
+        value: cdktn.stringToHclTerraform(this._authToken),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      auth_token_update_strategy: {
+        value: cdktn.stringToHclTerraform(this._authTokenUpdateStrategy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      auth_token_wo: {
+        value: this.markWriteOnlyAttribute(cdktn.stringToHclTerraform(this._authTokenWo)),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      auth_token_wo_version: {
+        value: cdktn.numberToHclTerraform(this._authTokenWoVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      auto_minor_version_upgrade: {
+        value: cdktn.stringToHclTerraform(this._autoMinorVersionUpgrade),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      automatic_failover_enabled: {
+        value: cdktn.booleanToHclTerraform(this._automaticFailoverEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cluster_mode: {
+        value: cdktn.stringToHclTerraform(this._clusterMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_tiering_enabled: {
+        value: cdktn.booleanToHclTerraform(this._dataTieringEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      durability: {
+        value: cdktn.stringToHclTerraform(this._durability),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      engine: {
+        value: cdktn.stringToHclTerraform(this._engine),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      engine_version: {
+        value: cdktn.stringToHclTerraform(this._engineVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      final_snapshot_identifier: {
+        value: cdktn.stringToHclTerraform(this._finalSnapshotIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      global_replication_group_id: {
+        value: cdktn.stringToHclTerraform(this._globalReplicationGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_discovery: {
+        value: cdktn.stringToHclTerraform(this._ipDiscovery),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maintenance_window: {
+        value: cdktn.stringToHclTerraform(this._maintenanceWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_az_enabled: {
+        value: cdktn.booleanToHclTerraform(this._multiAzEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      network_type: {
+        value: cdktn.stringToHclTerraform(this._networkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_type: {
+        value: cdktn.stringToHclTerraform(this._nodeType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notification_topic_arn: {
+        value: cdktn.stringToHclTerraform(this._notificationTopicArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      num_cache_clusters: {
+        value: cdktn.numberToHclTerraform(this._numCacheClusters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      num_node_groups: {
+        value: cdktn.numberToHclTerraform(this._numNodeGroups),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      parameter_group_name: {
+        value: cdktn.stringToHclTerraform(this._parameterGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktn.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      preferred_cache_cluster_azs: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._preferredCacheClusterAzs),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replicas_per_node_group: {
+        value: cdktn.numberToHclTerraform(this._replicasPerNodeGroup),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      replication_group_id: {
+        value: cdktn.stringToHclTerraform(this._replicationGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      security_group_names: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupNames),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      snapshot_arns: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._snapshotArns),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      snapshot_name: {
+        value: cdktn.stringToHclTerraform(this._snapshotName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      snapshot_retention_limit: {
+        value: cdktn.numberToHclTerraform(this._snapshotRetentionLimit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      snapshot_window: {
+        value: cdktn.stringToHclTerraform(this._snapshotWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnet_group_name: {
+        value: cdktn.stringToHclTerraform(this._subnetGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      transit_encryption_enabled: {
+        value: cdktn.booleanToHclTerraform(this._transitEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      transit_encryption_mode: {
+        value: cdktn.stringToHclTerraform(this._transitEncryptionMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._userGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      log_delivery_configuration: {
+        value: cdktn.listMapperHcl(awsElasticacheReplicationGroupLogDeliveryConfigurationPropertyToHclTerraform, true)(this._logDeliveryConfiguration.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsElasticacheReplicationGroup.LogDeliveryConfigurationPropertyList",
+      },
+      node_group_configuration: {
+        value: cdktn.listMapperHcl(awsElasticacheReplicationGroupNodeGroupConfigurationPropertyToHclTerraform, true)(this._nodeGroupConfiguration.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsElasticacheReplicationGroup.NodeGroupConfigurationPropertyList",
+      },
+      timeouts: {
+        value: awsElasticacheReplicationGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsElasticacheReplicationGroup.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsElasticacheReplicationGroupLogDeliveryConfigurationPropertyToTerraform(struct?: AwsElasticacheReplicationGroup.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    destination: cdktn.stringToTerraform(struct!.destination),
+    destination_type: cdktn.stringToTerraform(struct!.destinationType),
+    log_format: cdktn.stringToTerraform(struct!.logFormat),
+    log_type: cdktn.stringToTerraform(struct!.logType),
+  }
+}
+
+
+export function awsElasticacheReplicationGroupLogDeliveryConfigurationPropertyToHclTerraform(struct?: AwsElasticacheReplicationGroup.LogDeliveryConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    destination: {
+      value: cdktn.stringToHclTerraform(struct!.destination),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_type: {
+      value: cdktn.stringToHclTerraform(struct!.destinationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    log_format: {
+      value: cdktn.stringToHclTerraform(struct!.logFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    log_type: {
+      value: cdktn.stringToHclTerraform(struct!.logType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElasticacheReplicationGroupNodeGroupConfigurationPropertyToTerraform(struct?: AwsElasticacheReplicationGroup.NodeGroupConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    node_group_id: cdktn.stringToTerraform(struct!.nodeGroupId),
+    primary_availability_zone: cdktn.stringToTerraform(struct!.primaryAvailabilityZone),
+    primary_outpost_arn: cdktn.stringToTerraform(struct!.primaryOutpostArn),
+    replica_availability_zones: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.replicaAvailabilityZones),
+    replica_count: cdktn.numberToTerraform(struct!.replicaCount),
+    replica_outpost_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.replicaOutpostArns),
+    slots: cdktn.stringToTerraform(struct!.slots),
+  }
+}
+
+
+export function awsElasticacheReplicationGroupNodeGroupConfigurationPropertyToHclTerraform(struct?: AwsElasticacheReplicationGroup.NodeGroupConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    node_group_id: {
+      value: cdktn.stringToHclTerraform(struct!.nodeGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary_availability_zone: {
+      value: cdktn.stringToHclTerraform(struct!.primaryAvailabilityZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary_outpost_arn: {
+      value: cdktn.stringToHclTerraform(struct!.primaryOutpostArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    replica_availability_zones: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.replicaAvailabilityZones),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    replica_count: {
+      value: cdktn.numberToHclTerraform(struct!.replicaCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    replica_outpost_arns: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.replicaOutpostArns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    slots: {
+      value: cdktn.stringToHclTerraform(struct!.slots),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsElasticacheReplicationGroupTimeoutsPropertyToTerraform(struct?: AwsElasticacheReplicationGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsElasticacheReplicationGroupTimeoutsPropertyToHclTerraform(struct?: AwsElasticacheReplicationGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsElasticacheReplicationGroup {
+export interface LogDeliveryConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#destination AwsElasticacheReplicationGroup#destination}
+  */
+  readonly destination: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#destination_type AwsElasticacheReplicationGroup#destination_type}
+  */
+  readonly destinationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#log_format AwsElasticacheReplicationGroup#log_format}
+  */
+  readonly logFormat: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#log_type AwsElasticacheReplicationGroup#log_type}
+  */
+  readonly logType: string;
+}
+export class LogDeliveryConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogDeliveryConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._destination !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destination = this._destination;
+    }
+    if (this._destinationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationType = this._destinationType;
+    }
+    if (this._logFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logFormat = this._logFormat;
+    }
+    if (this._logType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logType = this._logType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogDeliveryConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._destination = undefined;
+      this._destinationType = undefined;
+      this._logFormat = undefined;
+      this._logType = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._destination = value.destination;
+      this._destinationType = value.destinationType;
+      this._logFormat = value.logFormat;
+      this._logType = value.logType;
+    }
+  }
+
+  // destination - computed: false, optional: false, required: true
+  private _destination?: string; 
+  public get destination() {
+    return this.getStringAttribute('destination');
+  }
+  public set destination(value: string) {
+    this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination;
+  }
+
+  // destination_type - computed: false, optional: false, required: true
+  private _destinationType?: string; 
+  public get destinationType() {
+    return this.getStringAttribute('destination_type');
+  }
+  public set destinationType(value: string) {
+    this._destinationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationTypeInput() {
+    return this._destinationType;
+  }
+
+  // log_format - computed: false, optional: false, required: true
+  private _logFormat?: string; 
+  public get logFormat() {
+    return this.getStringAttribute('log_format');
+  }
+  public set logFormat(value: string) {
+    this._logFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logFormatInput() {
+    return this._logFormat;
+  }
+
+  // log_type - computed: false, optional: false, required: true
+  private _logType?: string; 
+  public get logType() {
+    return this.getStringAttribute('log_type');
+  }
+  public set logType(value: string) {
+    this._logType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logTypeInput() {
+    return this._logType;
+  }
+}
+
+export class LogDeliveryConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : LogDeliveryConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogDeliveryConfigurationPropertyOutputReference {
+    return new LogDeliveryConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NodeGroupConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#node_group_id AwsElasticacheReplicationGroup#node_group_id}
+  */
+  readonly nodeGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#primary_availability_zone AwsElasticacheReplicationGroup#primary_availability_zone}
+  */
+  readonly primaryAvailabilityZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#primary_outpost_arn AwsElasticacheReplicationGroup#primary_outpost_arn}
+  */
+  readonly primaryOutpostArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#replica_availability_zones AwsElasticacheReplicationGroup#replica_availability_zones}
+  */
+  readonly replicaAvailabilityZones?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#replica_count AwsElasticacheReplicationGroup#replica_count}
+  */
+  readonly replicaCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#replica_outpost_arns AwsElasticacheReplicationGroup#replica_outpost_arns}
+  */
+  readonly replicaOutpostArns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#slots AwsElasticacheReplicationGroup#slots}
+  */
+  readonly slots?: string;
+}
+export class NodeGroupConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NodeGroupConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodeGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroupId = this._nodeGroupId;
+    }
+    if (this._primaryAvailabilityZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryAvailabilityZone = this._primaryAvailabilityZone;
+    }
+    if (this._primaryOutpostArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryOutpostArn = this._primaryOutpostArn;
+    }
+    if (this._replicaAvailabilityZones !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaAvailabilityZones = this._replicaAvailabilityZones;
+    }
+    if (this._replicaCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaCount = this._replicaCount;
+    }
+    if (this._replicaOutpostArns !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicaOutpostArns = this._replicaOutpostArns;
+    }
+    if (this._slots !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.slots = this._slots;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NodeGroupConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._nodeGroupId = undefined;
+      this._primaryAvailabilityZone = undefined;
+      this._primaryOutpostArn = undefined;
+      this._replicaAvailabilityZones = undefined;
+      this._replicaCount = undefined;
+      this._replicaOutpostArns = undefined;
+      this._slots = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._nodeGroupId = value.nodeGroupId;
+      this._primaryAvailabilityZone = value.primaryAvailabilityZone;
+      this._primaryOutpostArn = value.primaryOutpostArn;
+      this._replicaAvailabilityZones = value.replicaAvailabilityZones;
+      this._replicaCount = value.replicaCount;
+      this._replicaOutpostArns = value.replicaOutpostArns;
+      this._slots = value.slots;
+    }
+  }
+
+  // node_group_id - computed: false, optional: true, required: false
+  private _nodeGroupId?: string; 
+  public get nodeGroupId() {
+    return this.getStringAttribute('node_group_id');
+  }
+  public set nodeGroupId(value: string) {
+    this._nodeGroupId = value;
+  }
+  public resetNodeGroupId() {
+    this._nodeGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupIdInput() {
+    return this._nodeGroupId;
+  }
+
+  // primary_availability_zone - computed: true, optional: true, required: false
+  private _primaryAvailabilityZone?: string; 
+  public get primaryAvailabilityZone() {
+    return this.getStringAttribute('primary_availability_zone');
+  }
+  public set primaryAvailabilityZone(value: string) {
+    this._primaryAvailabilityZone = value;
+  }
+  public resetPrimaryAvailabilityZone() {
+    this._primaryAvailabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryAvailabilityZoneInput() {
+    return this._primaryAvailabilityZone;
+  }
+
+  // primary_outpost_arn - computed: true, optional: true, required: false
+  private _primaryOutpostArn?: string; 
+  public get primaryOutpostArn() {
+    return this.getStringAttribute('primary_outpost_arn');
+  }
+  public set primaryOutpostArn(value: string) {
+    this._primaryOutpostArn = value;
+  }
+  public resetPrimaryOutpostArn() {
+    this._primaryOutpostArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryOutpostArnInput() {
+    return this._primaryOutpostArn;
+  }
+
+  // replica_availability_zones - computed: true, optional: true, required: false
+  private _replicaAvailabilityZones?: string[]; 
+  public get replicaAvailabilityZones() {
+    return this.getListAttribute('replica_availability_zones');
+  }
+  public set replicaAvailabilityZones(value: string[]) {
+    this._replicaAvailabilityZones = value;
+  }
+  public resetReplicaAvailabilityZones() {
+    this._replicaAvailabilityZones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaAvailabilityZonesInput() {
+    return this._replicaAvailabilityZones;
+  }
+
+  // replica_count - computed: false, optional: true, required: false
+  private _replicaCount?: number; 
+  public get replicaCount() {
+    return this.getNumberAttribute('replica_count');
+  }
+  public set replicaCount(value: number) {
+    this._replicaCount = value;
+  }
+  public resetReplicaCount() {
+    this._replicaCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaCountInput() {
+    return this._replicaCount;
+  }
+
+  // replica_outpost_arns - computed: true, optional: true, required: false
+  private _replicaOutpostArns?: string[]; 
+  public get replicaOutpostArns() {
+    return this.getListAttribute('replica_outpost_arns');
+  }
+  public set replicaOutpostArns(value: string[]) {
+    this._replicaOutpostArns = value;
+  }
+  public resetReplicaOutpostArns() {
+    this._replicaOutpostArns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaOutpostArnsInput() {
+    return this._replicaOutpostArns;
+  }
+
+  // slots - computed: false, optional: true, required: false
+  private _slots?: string; 
+  public get slots() {
+    return this.getStringAttribute('slots');
+  }
+  public set slots(value: string) {
+    this._slots = value;
+  }
+  public resetSlots() {
+    this._slots = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get slotsInput() {
+    return this._slots;
+  }
+}
+
+export class NodeGroupConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : NodeGroupConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NodeGroupConfigurationPropertyOutputReference {
+    return new NodeGroupConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#create AwsElasticacheReplicationGroup#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#delete AwsElasticacheReplicationGroup#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elasticache_replication_group#update AwsElasticacheReplicationGroup#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

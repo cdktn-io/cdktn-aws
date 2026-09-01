@@ -1,0 +1,880 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSqsQueueConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#content_based_deduplication AwsSqsQueue#content_based_deduplication}
+  */
+  readonly contentBasedDeduplication?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#deduplication_scope AwsSqsQueue#deduplication_scope}
+  */
+  readonly deduplicationScope?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delay_seconds AwsSqsQueue#delay_seconds}
+  */
+  readonly delaySeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_queue AwsSqsQueue#fifo_queue}
+  */
+  readonly fifoQueue?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#fifo_throughput_limit AwsSqsQueue#fifo_throughput_limit}
+  */
+  readonly fifoThroughputLimit?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#id AwsSqsQueue#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_data_key_reuse_period_seconds AwsSqsQueue#kms_data_key_reuse_period_seconds}
+  */
+  readonly kmsDataKeyReusePeriodSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#kms_master_key_id AwsSqsQueue#kms_master_key_id}
+  */
+  readonly kmsMasterKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#max_message_size AwsSqsQueue#max_message_size}
+  */
+  readonly maxMessageSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#message_retention_seconds AwsSqsQueue#message_retention_seconds}
+  */
+  readonly messageRetentionSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name AwsSqsQueue#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#name_prefix AwsSqsQueue#name_prefix}
+  */
+  readonly namePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#policy AwsSqsQueue#policy}
+  */
+  readonly policy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#receive_wait_time_seconds AwsSqsQueue#receive_wait_time_seconds}
+  */
+  readonly receiveWaitTimeSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_allow_policy AwsSqsQueue#redrive_allow_policy}
+  */
+  readonly redriveAllowPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#redrive_policy AwsSqsQueue#redrive_policy}
+  */
+  readonly redrivePolicy?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#region AwsSqsQueue#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#sqs_managed_sse_enabled AwsSqsQueue#sqs_managed_sse_enabled}
+  */
+  readonly sqsManagedSseEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags AwsSqsQueue#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#tags_all AwsSqsQueue#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#visibility_timeout_seconds AwsSqsQueue#visibility_timeout_seconds}
+  */
+  readonly visibilityTimeoutSeconds?: number;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#timeouts AwsSqsQueue#timeouts}
+  */
+  readonly timeouts?: AwsSqsQueue.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue aws_sqs_queue}
+*/
+export class AwsSqsQueue extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_sqs_queue";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSqsQueue resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSqsQueue to import
+  * @param importFromId The id of the existing AwsSqsQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSqsQueue to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sqs_queue", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue aws_sqs_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSqsQueueConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsSqsQueueConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_sqs_queue',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._contentBasedDeduplication = config.contentBasedDeduplication;
+    this._deduplicationScope = config.deduplicationScope;
+    this._delaySeconds = config.delaySeconds;
+    this._fifoQueue = config.fifoQueue;
+    this._fifoThroughputLimit = config.fifoThroughputLimit;
+    this._id = config.id;
+    this._kmsDataKeyReusePeriodSeconds = config.kmsDataKeyReusePeriodSeconds;
+    this._kmsMasterKeyId = config.kmsMasterKeyId;
+    this._maxMessageSize = config.maxMessageSize;
+    this._messageRetentionSeconds = config.messageRetentionSeconds;
+    this._name = config.name;
+    this._namePrefix = config.namePrefix;
+    this._policy = config.policy;
+    this._receiveWaitTimeSeconds = config.receiveWaitTimeSeconds;
+    this._redriveAllowPolicy = config.redriveAllowPolicy;
+    this._redrivePolicy = config.redrivePolicy;
+    this._region = config.region;
+    this._sqsManagedSseEnabled = config.sqsManagedSseEnabled;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._visibilityTimeoutSeconds = config.visibilityTimeoutSeconds;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // content_based_deduplication - computed: false, optional: true, required: false
+  private _contentBasedDeduplication?: boolean | cdktn.IResolvable; 
+  public get contentBasedDeduplication() {
+    return this.getBooleanAttribute('content_based_deduplication');
+  }
+  public set contentBasedDeduplication(value: boolean | cdktn.IResolvable) {
+    this._contentBasedDeduplication = value;
+  }
+  public resetContentBasedDeduplication() {
+    this._contentBasedDeduplication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentBasedDeduplicationInput() {
+    return this._contentBasedDeduplication;
+  }
+
+  // deduplication_scope - computed: true, optional: true, required: false
+  private _deduplicationScope?: string; 
+  public get deduplicationScope() {
+    return this.getStringAttribute('deduplication_scope');
+  }
+  public set deduplicationScope(value: string) {
+    this._deduplicationScope = value;
+  }
+  public resetDeduplicationScope() {
+    this._deduplicationScope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deduplicationScopeInput() {
+    return this._deduplicationScope;
+  }
+
+  // delay_seconds - computed: false, optional: true, required: false
+  private _delaySeconds?: number; 
+  public get delaySeconds() {
+    return this.getNumberAttribute('delay_seconds');
+  }
+  public set delaySeconds(value: number) {
+    this._delaySeconds = value;
+  }
+  public resetDelaySeconds() {
+    this._delaySeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delaySecondsInput() {
+    return this._delaySeconds;
+  }
+
+  // fifo_queue - computed: false, optional: true, required: false
+  private _fifoQueue?: boolean | cdktn.IResolvable; 
+  public get fifoQueue() {
+    return this.getBooleanAttribute('fifo_queue');
+  }
+  public set fifoQueue(value: boolean | cdktn.IResolvable) {
+    this._fifoQueue = value;
+  }
+  public resetFifoQueue() {
+    this._fifoQueue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fifoQueueInput() {
+    return this._fifoQueue;
+  }
+
+  // fifo_throughput_limit - computed: true, optional: true, required: false
+  private _fifoThroughputLimit?: string; 
+  public get fifoThroughputLimit() {
+    return this.getStringAttribute('fifo_throughput_limit');
+  }
+  public set fifoThroughputLimit(value: string) {
+    this._fifoThroughputLimit = value;
+  }
+  public resetFifoThroughputLimit() {
+    this._fifoThroughputLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fifoThroughputLimitInput() {
+    return this._fifoThroughputLimit;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_data_key_reuse_period_seconds - computed: true, optional: true, required: false
+  private _kmsDataKeyReusePeriodSeconds?: number; 
+  public get kmsDataKeyReusePeriodSeconds() {
+    return this.getNumberAttribute('kms_data_key_reuse_period_seconds');
+  }
+  public set kmsDataKeyReusePeriodSeconds(value: number) {
+    this._kmsDataKeyReusePeriodSeconds = value;
+  }
+  public resetKmsDataKeyReusePeriodSeconds() {
+    this._kmsDataKeyReusePeriodSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsDataKeyReusePeriodSecondsInput() {
+    return this._kmsDataKeyReusePeriodSeconds;
+  }
+
+  // kms_master_key_id - computed: false, optional: true, required: false
+  private _kmsMasterKeyId?: string; 
+  public get kmsMasterKeyId() {
+    return this.getStringAttribute('kms_master_key_id');
+  }
+  public set kmsMasterKeyId(value: string) {
+    this._kmsMasterKeyId = value;
+  }
+  public resetKmsMasterKeyId() {
+    this._kmsMasterKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsMasterKeyIdInput() {
+    return this._kmsMasterKeyId;
+  }
+
+  // max_message_size - computed: false, optional: true, required: false
+  private _maxMessageSize?: number; 
+  public get maxMessageSize() {
+    return this.getNumberAttribute('max_message_size');
+  }
+  public set maxMessageSize(value: number) {
+    this._maxMessageSize = value;
+  }
+  public resetMaxMessageSize() {
+    this._maxMessageSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxMessageSizeInput() {
+    return this._maxMessageSize;
+  }
+
+  // message_retention_seconds - computed: false, optional: true, required: false
+  private _messageRetentionSeconds?: number; 
+  public get messageRetentionSeconds() {
+    return this.getNumberAttribute('message_retention_seconds');
+  }
+  public set messageRetentionSeconds(value: number) {
+    this._messageRetentionSeconds = value;
+  }
+  public resetMessageRetentionSeconds() {
+    this._messageRetentionSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageRetentionSecondsInput() {
+    return this._messageRetentionSeconds;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // name_prefix - computed: true, optional: true, required: false
+  private _namePrefix?: string; 
+  public get namePrefix() {
+    return this.getStringAttribute('name_prefix');
+  }
+  public set namePrefix(value: string) {
+    this._namePrefix = value;
+  }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix;
+  }
+
+  // policy - computed: true, optional: true, required: false
+  private _policy?: string; 
+  public get policy() {
+    return this.getStringAttribute('policy');
+  }
+  public set policy(value: string) {
+    this._policy = value;
+  }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy;
+  }
+
+  // receive_wait_time_seconds - computed: false, optional: true, required: false
+  private _receiveWaitTimeSeconds?: number; 
+  public get receiveWaitTimeSeconds() {
+    return this.getNumberAttribute('receive_wait_time_seconds');
+  }
+  public set receiveWaitTimeSeconds(value: number) {
+    this._receiveWaitTimeSeconds = value;
+  }
+  public resetReceiveWaitTimeSeconds() {
+    this._receiveWaitTimeSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get receiveWaitTimeSecondsInput() {
+    return this._receiveWaitTimeSeconds;
+  }
+
+  // redrive_allow_policy - computed: true, optional: true, required: false
+  private _redriveAllowPolicy?: string; 
+  public get redriveAllowPolicy() {
+    return this.getStringAttribute('redrive_allow_policy');
+  }
+  public set redriveAllowPolicy(value: string) {
+    this._redriveAllowPolicy = value;
+  }
+  public resetRedriveAllowPolicy() {
+    this._redriveAllowPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redriveAllowPolicyInput() {
+    return this._redriveAllowPolicy;
+  }
+
+  // redrive_policy - computed: true, optional: true, required: false
+  private _redrivePolicy?: string; 
+  public get redrivePolicy() {
+    return this.getStringAttribute('redrive_policy');
+  }
+  public set redrivePolicy(value: string) {
+    this._redrivePolicy = value;
+  }
+  public resetRedrivePolicy() {
+    this._redrivePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redrivePolicyInput() {
+    return this._redrivePolicy;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // sqs_managed_sse_enabled - computed: true, optional: true, required: false
+  private _sqsManagedSseEnabled?: boolean | cdktn.IResolvable; 
+  public get sqsManagedSseEnabled() {
+    return this.getBooleanAttribute('sqs_managed_sse_enabled');
+  }
+  public set sqsManagedSseEnabled(value: boolean | cdktn.IResolvable) {
+    this._sqsManagedSseEnabled = value;
+  }
+  public resetSqsManagedSseEnabled() {
+    this._sqsManagedSseEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sqsManagedSseEnabledInput() {
+    return this._sqsManagedSseEnabled;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+
+  // visibility_timeout_seconds - computed: false, optional: true, required: false
+  private _visibilityTimeoutSeconds?: number; 
+  public get visibilityTimeoutSeconds() {
+    return this.getNumberAttribute('visibility_timeout_seconds');
+  }
+  public set visibilityTimeoutSeconds(value: number) {
+    this._visibilityTimeoutSeconds = value;
+  }
+  public resetVisibilityTimeoutSeconds() {
+    this._visibilityTimeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get visibilityTimeoutSecondsInput() {
+    return this._visibilityTimeoutSeconds;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsSqsQueue.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsSqsQueue.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      content_based_deduplication: cdktn.booleanToTerraform(this._contentBasedDeduplication),
+      deduplication_scope: cdktn.stringToTerraform(this._deduplicationScope),
+      delay_seconds: cdktn.numberToTerraform(this._delaySeconds),
+      fifo_queue: cdktn.booleanToTerraform(this._fifoQueue),
+      fifo_throughput_limit: cdktn.stringToTerraform(this._fifoThroughputLimit),
+      id: cdktn.stringToTerraform(this._id),
+      kms_data_key_reuse_period_seconds: cdktn.numberToTerraform(this._kmsDataKeyReusePeriodSeconds),
+      kms_master_key_id: cdktn.stringToTerraform(this._kmsMasterKeyId),
+      max_message_size: cdktn.numberToTerraform(this._maxMessageSize),
+      message_retention_seconds: cdktn.numberToTerraform(this._messageRetentionSeconds),
+      name: cdktn.stringToTerraform(this._name),
+      name_prefix: cdktn.stringToTerraform(this._namePrefix),
+      policy: cdktn.stringToTerraform(this._policy),
+      receive_wait_time_seconds: cdktn.numberToTerraform(this._receiveWaitTimeSeconds),
+      redrive_allow_policy: cdktn.stringToTerraform(this._redriveAllowPolicy),
+      redrive_policy: cdktn.stringToTerraform(this._redrivePolicy),
+      region: cdktn.stringToTerraform(this._region),
+      sqs_managed_sse_enabled: cdktn.booleanToTerraform(this._sqsManagedSseEnabled),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      visibility_timeout_seconds: cdktn.numberToTerraform(this._visibilityTimeoutSeconds),
+      timeouts: awsSqsQueueTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      content_based_deduplication: {
+        value: cdktn.booleanToHclTerraform(this._contentBasedDeduplication),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      deduplication_scope: {
+        value: cdktn.stringToHclTerraform(this._deduplicationScope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delay_seconds: {
+        value: cdktn.numberToHclTerraform(this._delaySeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      fifo_queue: {
+        value: cdktn.booleanToHclTerraform(this._fifoQueue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      fifo_throughput_limit: {
+        value: cdktn.stringToHclTerraform(this._fifoThroughputLimit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_data_key_reuse_period_seconds: {
+        value: cdktn.numberToHclTerraform(this._kmsDataKeyReusePeriodSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      kms_master_key_id: {
+        value: cdktn.stringToHclTerraform(this._kmsMasterKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_message_size: {
+        value: cdktn.numberToHclTerraform(this._maxMessageSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      message_retention_seconds: {
+        value: cdktn.numberToHclTerraform(this._messageRetentionSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name_prefix: {
+        value: cdktn.stringToHclTerraform(this._namePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy: {
+        value: cdktn.stringToHclTerraform(this._policy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      receive_wait_time_seconds: {
+        value: cdktn.numberToHclTerraform(this._receiveWaitTimeSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      redrive_allow_policy: {
+        value: cdktn.stringToHclTerraform(this._redriveAllowPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      redrive_policy: {
+        value: cdktn.stringToHclTerraform(this._redrivePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sqs_managed_sse_enabled: {
+        value: cdktn.booleanToHclTerraform(this._sqsManagedSseEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      visibility_timeout_seconds: {
+        value: cdktn.numberToHclTerraform(this._visibilityTimeoutSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      timeouts: {
+        value: awsSqsQueueTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsSqsQueue.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSqsQueueTimeoutsPropertyToTerraform(struct?: AwsSqsQueue.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsSqsQueueTimeoutsPropertyToHclTerraform(struct?: AwsSqsQueue.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSqsQueue {
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#create AwsSqsQueue#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#delete AwsSqsQueue#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sqs_queue#update AwsSqsQueue#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

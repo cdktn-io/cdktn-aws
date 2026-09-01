@@ -1,0 +1,597 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDatazoneAssetTypeConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#description AwsDatazoneAssetType#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#domain_identifier AwsDatazoneAssetType#domain_identifier}
+  */
+  readonly domainIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#name AwsDatazoneAssetType#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#owning_project_identifier AwsDatazoneAssetType#owning_project_identifier}
+  */
+  readonly owningProjectIdentifier: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#region AwsDatazoneAssetType#region}
+  */
+  readonly region?: string;
+  /**
+  * forms_input block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#forms_input AwsDatazoneAssetType#forms_input}
+  */
+  readonly formsInput?: AwsDatazoneAssetType.FormsInputProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#timeouts AwsDatazoneAssetType#timeouts}
+  */
+  readonly timeouts?: AwsDatazoneAssetType.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type aws_datazone_asset_type}
+*/
+export class AwsDatazoneAssetType extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_datazone_asset_type";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDatazoneAssetType resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDatazoneAssetType to import
+  * @param importFromId The id of the existing AwsDatazoneAssetType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDatazoneAssetType to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_asset_type", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type aws_datazone_asset_type} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDatazoneAssetTypeConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDatazoneAssetTypeConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_datazone_asset_type',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._domainIdentifier = config.domainIdentifier;
+    this._name = config.name;
+    this._owningProjectIdentifier = config.owningProjectIdentifier;
+    this._region = config.region;
+    this._formsInput.internalValue = config.formsInput;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // created_at - computed: true, optional: false, required: false
+  public get createdAt() {
+    return this.getStringAttribute('created_at');
+  }
+
+  // created_by - computed: true, optional: false, required: false
+  public get createdBy() {
+    return this.getStringAttribute('created_by');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // domain_identifier - computed: false, optional: false, required: true
+  private _domainIdentifier?: string; 
+  public get domainIdentifier() {
+    return this.getStringAttribute('domain_identifier');
+  }
+  public set domainIdentifier(value: string) {
+    this._domainIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainIdentifierInput() {
+    return this._domainIdentifier;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // owning_project_identifier - computed: false, optional: false, required: true
+  private _owningProjectIdentifier?: string; 
+  public get owningProjectIdentifier() {
+    return this.getStringAttribute('owning_project_identifier');
+  }
+  public set owningProjectIdentifier(value: string) {
+    this._owningProjectIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get owningProjectIdentifierInput() {
+    return this._owningProjectIdentifier;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // revision - computed: true, optional: false, required: false
+  public get revision() {
+    return this.getStringAttribute('revision');
+  }
+
+  // forms_input - computed: false, optional: true, required: false
+  private _formsInput = new AwsDatazoneAssetType.FormsInputPropertyList(this, "forms_input", true);
+  public get formsInput() {
+    return this._formsInput;
+  }
+  public putFormsInput(value: AwsDatazoneAssetType.FormsInputProperty[] | cdktn.IResolvable) {
+    this._formsInput.internalValue = value;
+  }
+  public resetFormsInput() {
+    this._formsInput.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formsInputInput() {
+    return this._formsInput.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDatazoneAssetType.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDatazoneAssetType.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      domain_identifier: cdktn.stringToTerraform(this._domainIdentifier),
+      name: cdktn.stringToTerraform(this._name),
+      owning_project_identifier: cdktn.stringToTerraform(this._owningProjectIdentifier),
+      region: cdktn.stringToTerraform(this._region),
+      forms_input: cdktn.listMapper(awsDatazoneAssetTypeFormsInputPropertyToTerraform, true)(this._formsInput.internalValue),
+      timeouts: awsDatazoneAssetTypeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_identifier: {
+        value: cdktn.stringToHclTerraform(this._domainIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      owning_project_identifier: {
+        value: cdktn.stringToHclTerraform(this._owningProjectIdentifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      forms_input: {
+        value: cdktn.listMapperHcl(awsDatazoneAssetTypeFormsInputPropertyToHclTerraform, true)(this._formsInput.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDatazoneAssetType.FormsInputPropertyList",
+      },
+      timeouts: {
+        value: awsDatazoneAssetTypeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDatazoneAssetType.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDatazoneAssetTypeFormsInputPropertyToTerraform(struct?: AwsDatazoneAssetType.FormsInputProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    map_block_key: cdktn.stringToTerraform(struct!.mapBlockKey),
+    required: cdktn.booleanToTerraform(struct!.required),
+    type_identifier: cdktn.stringToTerraform(struct!.typeIdentifier),
+    type_revision: cdktn.stringToTerraform(struct!.typeRevision),
+  }
+}
+
+
+export function awsDatazoneAssetTypeFormsInputPropertyToHclTerraform(struct?: AwsDatazoneAssetType.FormsInputProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    map_block_key: {
+      value: cdktn.stringToHclTerraform(struct!.mapBlockKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktn.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type_identifier: {
+      value: cdktn.stringToHclTerraform(struct!.typeIdentifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_revision: {
+      value: cdktn.stringToHclTerraform(struct!.typeRevision),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDatazoneAssetTypeTimeoutsPropertyToTerraform(struct?: AwsDatazoneAssetType.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+  }
+}
+
+
+export function awsDatazoneAssetTypeTimeoutsPropertyToHclTerraform(struct?: AwsDatazoneAssetType.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDatazoneAssetType {
+export interface FormsInputProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#map_block_key AwsDatazoneAssetType#map_block_key}
+  */
+  readonly mapBlockKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#required AwsDatazoneAssetType#required}
+  */
+  readonly required?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_identifier AwsDatazoneAssetType#type_identifier}
+  */
+  readonly typeIdentifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#type_revision AwsDatazoneAssetType#type_revision}
+  */
+  readonly typeRevision: string;
+}
+export class FormsInputPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FormsInputProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mapBlockKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mapBlockKey = this._mapBlockKey;
+    }
+    if (this._required !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.required = this._required;
+    }
+    if (this._typeIdentifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeIdentifier = this._typeIdentifier;
+    }
+    if (this._typeRevision !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeRevision = this._typeRevision;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FormsInputProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mapBlockKey = undefined;
+      this._required = undefined;
+      this._typeIdentifier = undefined;
+      this._typeRevision = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mapBlockKey = value.mapBlockKey;
+      this._required = value.required;
+      this._typeIdentifier = value.typeIdentifier;
+      this._typeRevision = value.typeRevision;
+    }
+  }
+
+  // map_block_key - computed: false, optional: false, required: true
+  private _mapBlockKey?: string; 
+  public get mapBlockKey() {
+    return this.getStringAttribute('map_block_key');
+  }
+  public set mapBlockKey(value: string) {
+    this._mapBlockKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mapBlockKeyInput() {
+    return this._mapBlockKey;
+  }
+
+  // required - computed: false, optional: true, required: false
+  private _required?: boolean | cdktn.IResolvable; 
+  public get required() {
+    return this.getBooleanAttribute('required');
+  }
+  public set required(value: boolean | cdktn.IResolvable) {
+    this._required = value;
+  }
+  public resetRequired() {
+    this._required = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiredInput() {
+    return this._required;
+  }
+
+  // type_identifier - computed: false, optional: false, required: true
+  private _typeIdentifier?: string; 
+  public get typeIdentifier() {
+    return this.getStringAttribute('type_identifier');
+  }
+  public set typeIdentifier(value: string) {
+    this._typeIdentifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeIdentifierInput() {
+    return this._typeIdentifier;
+  }
+
+  // type_revision - computed: false, optional: false, required: true
+  private _typeRevision?: string; 
+  public get typeRevision() {
+    return this.getStringAttribute('type_revision');
+  }
+  public set typeRevision(value: string) {
+    this._typeRevision = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeRevisionInput() {
+    return this._typeRevision;
+  }
+}
+
+export class FormsInputPropertyList extends cdktn.ComplexList {
+  public internalValue? : FormsInputProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FormsInputPropertyOutputReference {
+    return new FormsInputPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_asset_type#create AwsDatazoneAssetType#create}
+  */
+  readonly create?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+}
+}

@@ -1,0 +1,1068 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDirectoryServiceDirectoryConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#alias AwsDirectoryServiceDirectory#alias}
+  */
+  readonly alias?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#description AwsDirectoryServiceDirectory#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#desired_number_of_domain_controllers AwsDirectoryServiceDirectory#desired_number_of_domain_controllers}
+  */
+  readonly desiredNumberOfDomainControllers?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#edition AwsDirectoryServiceDirectory#edition}
+  */
+  readonly edition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_directory_data_access AwsDirectoryServiceDirectory#enable_directory_data_access}
+  */
+  readonly enableDirectoryDataAccess?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#enable_sso AwsDirectoryServiceDirectory#enable_sso}
+  */
+  readonly enableSso?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#id AwsDirectoryServiceDirectory#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#name AwsDirectoryServiceDirectory#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#password AwsDirectoryServiceDirectory#password}
+  */
+  readonly password: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#region AwsDirectoryServiceDirectory#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#short_name AwsDirectoryServiceDirectory#short_name}
+  */
+  readonly shortName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#size AwsDirectoryServiceDirectory#size}
+  */
+  readonly size?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags AwsDirectoryServiceDirectory#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#tags_all AwsDirectoryServiceDirectory#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#type AwsDirectoryServiceDirectory#type}
+  */
+  readonly type?: string;
+  /**
+  * connect_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#connect_settings AwsDirectoryServiceDirectory#connect_settings}
+  */
+  readonly connectSettings?: AwsDirectoryServiceDirectory.ConnectSettingsProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#timeouts AwsDirectoryServiceDirectory#timeouts}
+  */
+  readonly timeouts?: AwsDirectoryServiceDirectory.TimeoutsProperty;
+  /**
+  * vpc_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_settings AwsDirectoryServiceDirectory#vpc_settings}
+  */
+  readonly vpcSettings?: AwsDirectoryServiceDirectory.VpcSettingsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory aws_directory_service_directory}
+*/
+export class AwsDirectoryServiceDirectory extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_directory_service_directory";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDirectoryServiceDirectory resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDirectoryServiceDirectory to import
+  * @param importFromId The id of the existing AwsDirectoryServiceDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDirectoryServiceDirectory to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_directory", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory aws_directory_service_directory} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDirectoryServiceDirectoryConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDirectoryServiceDirectoryConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_directory_service_directory',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._alias = config.alias;
+    this._description = config.description;
+    this._desiredNumberOfDomainControllers = config.desiredNumberOfDomainControllers;
+    this._edition = config.edition;
+    this._enableDirectoryDataAccess = config.enableDirectoryDataAccess;
+    this._enableSso = config.enableSso;
+    this._id = config.id;
+    this._name = config.name;
+    this._password = config.password;
+    this._region = config.region;
+    this._shortName = config.shortName;
+    this._size = config.size;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._type = config.type;
+    this._connectSettings.internalValue = config.connectSettings;
+    this._timeouts.internalValue = config.timeouts;
+    this._vpcSettings.internalValue = config.vpcSettings;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // access_url - computed: true, optional: false, required: false
+  public get accessUrl() {
+    return this.getStringAttribute('access_url');
+  }
+
+  // alias - computed: true, optional: true, required: false
+  private _alias?: string; 
+  public get alias() {
+    return this.getStringAttribute('alias');
+  }
+  public set alias(value: string) {
+    this._alias = value;
+  }
+  public resetAlias() {
+    this._alias = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aliasInput() {
+    return this._alias;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // desired_number_of_domain_controllers - computed: true, optional: true, required: false
+  private _desiredNumberOfDomainControllers?: number; 
+  public get desiredNumberOfDomainControllers() {
+    return this.getNumberAttribute('desired_number_of_domain_controllers');
+  }
+  public set desiredNumberOfDomainControllers(value: number) {
+    this._desiredNumberOfDomainControllers = value;
+  }
+  public resetDesiredNumberOfDomainControllers() {
+    this._desiredNumberOfDomainControllers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredNumberOfDomainControllersInput() {
+    return this._desiredNumberOfDomainControllers;
+  }
+
+  // dns_ip_addresses - computed: true, optional: false, required: false
+  public get dnsIpAddresses() {
+    return cdktn.Fn.tolist(this.getListAttribute('dns_ip_addresses'));
+  }
+
+  // edition - computed: true, optional: true, required: false
+  private _edition?: string; 
+  public get edition() {
+    return this.getStringAttribute('edition');
+  }
+  public set edition(value: string) {
+    this._edition = value;
+  }
+  public resetEdition() {
+    this._edition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editionInput() {
+    return this._edition;
+  }
+
+  // enable_directory_data_access - computed: false, optional: true, required: false
+  private _enableDirectoryDataAccess?: boolean | cdktn.IResolvable; 
+  public get enableDirectoryDataAccess() {
+    return this.getBooleanAttribute('enable_directory_data_access');
+  }
+  public set enableDirectoryDataAccess(value: boolean | cdktn.IResolvable) {
+    this._enableDirectoryDataAccess = value;
+  }
+  public resetEnableDirectoryDataAccess() {
+    this._enableDirectoryDataAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableDirectoryDataAccessInput() {
+    return this._enableDirectoryDataAccess;
+  }
+
+  // enable_sso - computed: false, optional: true, required: false
+  private _enableSso?: boolean | cdktn.IResolvable; 
+  public get enableSso() {
+    return this.getBooleanAttribute('enable_sso');
+  }
+  public set enableSso(value: boolean | cdktn.IResolvable) {
+    this._enableSso = value;
+  }
+  public resetEnableSso() {
+    this._enableSso = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSsoInput() {
+    return this._enableSso;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_group_id - computed: true, optional: false, required: false
+  public get securityGroupId() {
+    return this.getStringAttribute('security_group_id');
+  }
+
+  // short_name - computed: true, optional: true, required: false
+  private _shortName?: string; 
+  public get shortName() {
+    return this.getStringAttribute('short_name');
+  }
+  public set shortName(value: string) {
+    this._shortName = value;
+  }
+  public resetShortName() {
+    this._shortName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shortNameInput() {
+    return this._shortName;
+  }
+
+  // size - computed: true, optional: true, required: false
+  private _size?: string; 
+  public get size() {
+    return this.getStringAttribute('size');
+  }
+  public set size(value: string) {
+    this._size = value;
+  }
+  public resetSize() {
+    this._size = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // connect_settings - computed: false, optional: true, required: false
+  private _connectSettings = new AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference(this, "connect_settings");
+  public get connectSettings() {
+    return this._connectSettings;
+  }
+  public putConnectSettings(value: AwsDirectoryServiceDirectory.ConnectSettingsProperty) {
+    this._connectSettings.internalValue = value;
+  }
+  public resetConnectSettings() {
+    this._connectSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectSettingsInput() {
+    return this._connectSettings.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsDirectoryServiceDirectory.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsDirectoryServiceDirectory.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // vpc_settings - computed: false, optional: true, required: false
+  private _vpcSettings = new AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference(this, "vpc_settings");
+  public get vpcSettings() {
+    return this._vpcSettings;
+  }
+  public putVpcSettings(value: AwsDirectoryServiceDirectory.VpcSettingsProperty) {
+    this._vpcSettings.internalValue = value;
+  }
+  public resetVpcSettings() {
+    this._vpcSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcSettingsInput() {
+    return this._vpcSettings.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      alias: cdktn.stringToTerraform(this._alias),
+      description: cdktn.stringToTerraform(this._description),
+      desired_number_of_domain_controllers: cdktn.numberToTerraform(this._desiredNumberOfDomainControllers),
+      edition: cdktn.stringToTerraform(this._edition),
+      enable_directory_data_access: cdktn.booleanToTerraform(this._enableDirectoryDataAccess),
+      enable_sso: cdktn.booleanToTerraform(this._enableSso),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      password: cdktn.stringToTerraform(this._password),
+      region: cdktn.stringToTerraform(this._region),
+      short_name: cdktn.stringToTerraform(this._shortName),
+      size: cdktn.stringToTerraform(this._size),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      type: cdktn.stringToTerraform(this._type),
+      connect_settings: awsDirectoryServiceDirectoryConnectSettingsPropertyToTerraform(this._connectSettings.internalValue),
+      timeouts: awsDirectoryServiceDirectoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_settings: awsDirectoryServiceDirectoryVpcSettingsPropertyToTerraform(this._vpcSettings.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alias: {
+        value: cdktn.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      desired_number_of_domain_controllers: {
+        value: cdktn.numberToHclTerraform(this._desiredNumberOfDomainControllers),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      edition: {
+        value: cdktn.stringToHclTerraform(this._edition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_directory_data_access: {
+        value: cdktn.booleanToHclTerraform(this._enableDirectoryDataAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_sso: {
+        value: cdktn.booleanToHclTerraform(this._enableSso),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktn.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      short_name: {
+        value: cdktn.stringToHclTerraform(this._shortName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      size: {
+        value: cdktn.stringToHclTerraform(this._size),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      type: {
+        value: cdktn.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connect_settings: {
+        value: awsDirectoryServiceDirectoryConnectSettingsPropertyToHclTerraform(this._connectSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDirectoryServiceDirectory.ConnectSettingsPropertyList",
+      },
+      timeouts: {
+        value: awsDirectoryServiceDirectoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsDirectoryServiceDirectory.TimeoutsProperty",
+      },
+      vpc_settings: {
+        value: awsDirectoryServiceDirectoryVpcSettingsPropertyToHclTerraform(this._vpcSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsDirectoryServiceDirectory.VpcSettingsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDirectoryServiceDirectoryConnectSettingsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.ConnectSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    customer_dns_ips: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.customerDnsIps),
+    customer_username: cdktn.stringToTerraform(struct!.customerUsername),
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+    vpc_id: cdktn.stringToTerraform(struct!.vpcId),
+  }
+}
+
+
+export function awsDirectoryServiceDirectoryConnectSettingsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.ConnectSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.ConnectSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    customer_dns_ips: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.customerDnsIps),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    customer_username: {
+      value: cdktn.stringToHclTerraform(struct!.customerUsername),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    vpc_id: {
+      value: cdktn.stringToHclTerraform(struct!.vpcId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDirectoryServiceDirectoryTimeoutsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsDirectoryServiceDirectoryTimeoutsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDirectoryServiceDirectoryVpcSettingsPropertyToTerraform(struct?: AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.VpcSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
+    vpc_id: cdktn.stringToTerraform(struct!.vpcId),
+  }
+}
+
+
+export function awsDirectoryServiceDirectoryVpcSettingsPropertyToHclTerraform(struct?: AwsDirectoryServiceDirectory.VpcSettingsPropertyOutputReference | AwsDirectoryServiceDirectory.VpcSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    subnet_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnetIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    vpc_id: {
+      value: cdktn.stringToHclTerraform(struct!.vpcId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDirectoryServiceDirectory {
+export interface ConnectSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_dns_ips AwsDirectoryServiceDirectory#customer_dns_ips}
+  */
+  readonly customerDnsIps: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#customer_username AwsDirectoryServiceDirectory#customer_username}
+  */
+  readonly customerUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids AwsDirectoryServiceDirectory#subnet_ids}
+  */
+  readonly subnetIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id AwsDirectoryServiceDirectory#vpc_id}
+  */
+  readonly vpcId: string;
+}
+export class ConnectSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ConnectSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customerDnsIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customerDnsIps = this._customerDnsIps;
+    }
+    if (this._customerUsername !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customerUsername = this._customerUsername;
+    }
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    if (this._vpcId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcId = this._vpcId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConnectSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customerDnsIps = undefined;
+      this._customerUsername = undefined;
+      this._subnetIds = undefined;
+      this._vpcId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customerDnsIps = value.customerDnsIps;
+      this._customerUsername = value.customerUsername;
+      this._subnetIds = value.subnetIds;
+      this._vpcId = value.vpcId;
+    }
+  }
+
+  // availability_zones - computed: true, optional: false, required: false
+  public get availabilityZones() {
+    return cdktn.Fn.tolist(this.getListAttribute('availability_zones'));
+  }
+
+  // connect_ips - computed: true, optional: false, required: false
+  public get connectIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('connect_ips'));
+  }
+
+  // customer_dns_ips - computed: false, optional: false, required: true
+  private _customerDnsIps?: string[]; 
+  public get customerDnsIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('customer_dns_ips'));
+  }
+  public set customerDnsIps(value: string[]) {
+    this._customerDnsIps = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerDnsIpsInput() {
+    return this._customerDnsIps;
+  }
+
+  // customer_username - computed: false, optional: false, required: true
+  private _customerUsername?: string; 
+  public get customerUsername() {
+    return this.getStringAttribute('customer_username');
+  }
+  public set customerUsername(value: string) {
+    this._customerUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerUsernameInput() {
+    return this._customerUsername;
+  }
+
+  // subnet_ids - computed: false, optional: false, required: true
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // vpc_id - computed: false, optional: false, required: true
+  private _vpcId?: string; 
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+  public set vpcId(value: string) {
+    this._vpcId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcIdInput() {
+    return this._vpcId;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#create AwsDirectoryServiceDirectory#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#delete AwsDirectoryServiceDirectory#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#update AwsDirectoryServiceDirectory#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+export interface VpcSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#subnet_ids AwsDirectoryServiceDirectory#subnet_ids}
+  */
+  readonly subnetIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_directory#vpc_id AwsDirectoryServiceDirectory#vpc_id}
+  */
+  readonly vpcId: string;
+}
+export class VpcSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subnetIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetIds = this._subnetIds;
+    }
+    if (this._vpcId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpcId = this._vpcId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._subnetIds = undefined;
+      this._vpcId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._subnetIds = value.subnetIds;
+      this._vpcId = value.vpcId;
+    }
+  }
+
+  // availability_zones - computed: true, optional: false, required: false
+  public get availabilityZones() {
+    return cdktn.Fn.tolist(this.getListAttribute('availability_zones'));
+  }
+
+  // subnet_ids - computed: false, optional: false, required: true
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // vpc_id - computed: false, optional: false, required: true
+  private _vpcId?: string; 
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+  public set vpcId(value: string) {
+    this._vpcId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcIdInput() {
+    return this._vpcId;
+  }
+}
+}

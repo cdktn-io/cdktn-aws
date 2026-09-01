@@ -1,0 +1,451 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsChimesdkvoiceSipRuleConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#disabled AwsChimesdkvoiceSipRule#disabled}
+  */
+  readonly disabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#id AwsChimesdkvoiceSipRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#name AwsChimesdkvoiceSipRule#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#region AwsChimesdkvoiceSipRule#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_type AwsChimesdkvoiceSipRule#trigger_type}
+  */
+  readonly triggerType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#trigger_value AwsChimesdkvoiceSipRule#trigger_value}
+  */
+  readonly triggerValue: string;
+  /**
+  * target_applications block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#target_applications AwsChimesdkvoiceSipRule#target_applications}
+  */
+  readonly targetApplications: AwsChimesdkvoiceSipRule.TargetApplicationsProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule aws_chimesdkvoice_sip_rule}
+*/
+export class AwsChimesdkvoiceSipRule extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_chimesdkvoice_sip_rule";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsChimesdkvoiceSipRule resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsChimesdkvoiceSipRule to import
+  * @param importFromId The id of the existing AwsChimesdkvoiceSipRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsChimesdkvoiceSipRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkvoice_sip_rule", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule aws_chimesdkvoice_sip_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsChimesdkvoiceSipRuleConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsChimesdkvoiceSipRuleConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_chimesdkvoice_sip_rule',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._disabled = config.disabled;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._triggerType = config.triggerType;
+    this._triggerValue = config.triggerValue;
+    this._targetApplications.internalValue = config.targetApplications;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean | cdktn.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktn.IResolvable) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // trigger_type - computed: false, optional: false, required: true
+  private _triggerType?: string; 
+  public get triggerType() {
+    return this.getStringAttribute('trigger_type');
+  }
+  public set triggerType(value: string) {
+    this._triggerType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerTypeInput() {
+    return this._triggerType;
+  }
+
+  // trigger_value - computed: false, optional: false, required: true
+  private _triggerValue?: string; 
+  public get triggerValue() {
+    return this.getStringAttribute('trigger_value');
+  }
+  public set triggerValue(value: string) {
+    this._triggerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerValueInput() {
+    return this._triggerValue;
+  }
+
+  // target_applications - computed: false, optional: false, required: true
+  private _targetApplications = new AwsChimesdkvoiceSipRule.TargetApplicationsPropertyList(this, "target_applications", true);
+  public get targetApplications() {
+    return this._targetApplications;
+  }
+  public putTargetApplications(value: AwsChimesdkvoiceSipRule.TargetApplicationsProperty[] | cdktn.IResolvable) {
+    this._targetApplications.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetApplicationsInput() {
+    return this._targetApplications.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      disabled: cdktn.booleanToTerraform(this._disabled),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      trigger_type: cdktn.stringToTerraform(this._triggerType),
+      trigger_value: cdktn.stringToTerraform(this._triggerValue),
+      target_applications: cdktn.listMapper(awsChimesdkvoiceSipRuleTargetApplicationsPropertyToTerraform, true)(this._targetApplications.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disabled: {
+        value: cdktn.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_type: {
+        value: cdktn.stringToHclTerraform(this._triggerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_value: {
+        value: cdktn.stringToHclTerraform(this._triggerValue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_applications: {
+        value: cdktn.listMapperHcl(awsChimesdkvoiceSipRuleTargetApplicationsPropertyToHclTerraform, true)(this._targetApplications.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsChimesdkvoiceSipRule.TargetApplicationsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsChimesdkvoiceSipRuleTargetApplicationsPropertyToTerraform(struct?: AwsChimesdkvoiceSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    aws_region: cdktn.stringToTerraform(struct!.awsRegion),
+    priority: cdktn.numberToTerraform(struct!.priority),
+    sip_media_application_id: cdktn.stringToTerraform(struct!.sipMediaApplicationId),
+  }
+}
+
+
+export function awsChimesdkvoiceSipRuleTargetApplicationsPropertyToHclTerraform(struct?: AwsChimesdkvoiceSipRule.TargetApplicationsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    aws_region: {
+      value: cdktn.stringToHclTerraform(struct!.awsRegion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktn.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    sip_media_application_id: {
+      value: cdktn.stringToHclTerraform(struct!.sipMediaApplicationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsChimesdkvoiceSipRule {
+export interface TargetApplicationsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#aws_region AwsChimesdkvoiceSipRule#aws_region}
+  */
+  readonly awsRegion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#priority AwsChimesdkvoiceSipRule#priority}
+  */
+  readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkvoice_sip_rule#sip_media_application_id AwsChimesdkvoiceSipRule#sip_media_application_id}
+  */
+  readonly sipMediaApplicationId: string;
+}
+export class TargetApplicationsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TargetApplicationsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._awsRegion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.awsRegion = this._awsRegion;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._sipMediaApplicationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sipMediaApplicationId = this._sipMediaApplicationId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TargetApplicationsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._awsRegion = undefined;
+      this._priority = undefined;
+      this._sipMediaApplicationId = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._awsRegion = value.awsRegion;
+      this._priority = value.priority;
+      this._sipMediaApplicationId = value.sipMediaApplicationId;
+    }
+  }
+
+  // aws_region - computed: false, optional: false, required: true
+  private _awsRegion?: string; 
+  public get awsRegion() {
+    return this.getStringAttribute('aws_region');
+  }
+  public set awsRegion(value: string) {
+    this._awsRegion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsRegionInput() {
+    return this._awsRegion;
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // sip_media_application_id - computed: false, optional: false, required: true
+  private _sipMediaApplicationId?: string; 
+  public get sipMediaApplicationId() {
+    return this.getStringAttribute('sip_media_application_id');
+  }
+  public set sipMediaApplicationId(value: string) {
+    this._sipMediaApplicationId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sipMediaApplicationIdInput() {
+    return this._sipMediaApplicationId;
+  }
+}
+
+export class TargetApplicationsPropertyList extends cdktn.ComplexList {
+  public internalValue? : TargetApplicationsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TargetApplicationsPropertyOutputReference {
+    return new TargetApplicationsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

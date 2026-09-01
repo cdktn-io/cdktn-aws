@@ -1,0 +1,497 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSsmMaintenanceWindowConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#allow_unassociated_targets AwsSsmMaintenanceWindow#allow_unassociated_targets}
+  */
+  readonly allowUnassociatedTargets?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#cutoff AwsSsmMaintenanceWindow#cutoff}
+  */
+  readonly cutoff: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#description AwsSsmMaintenanceWindow#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#duration AwsSsmMaintenanceWindow#duration}
+  */
+  readonly duration: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#enabled AwsSsmMaintenanceWindow#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#end_date AwsSsmMaintenanceWindow#end_date}
+  */
+  readonly endDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#id AwsSsmMaintenanceWindow#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#name AwsSsmMaintenanceWindow#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#region AwsSsmMaintenanceWindow#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#schedule AwsSsmMaintenanceWindow#schedule}
+  */
+  readonly schedule: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#schedule_offset AwsSsmMaintenanceWindow#schedule_offset}
+  */
+  readonly scheduleOffset?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#schedule_timezone AwsSsmMaintenanceWindow#schedule_timezone}
+  */
+  readonly scheduleTimezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#start_date AwsSsmMaintenanceWindow#start_date}
+  */
+  readonly startDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#tags AwsSsmMaintenanceWindow#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#tags_all AwsSsmMaintenanceWindow#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window aws_ssm_maintenance_window}
+*/
+export class AwsSsmMaintenanceWindow extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ssm_maintenance_window";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSsmMaintenanceWindow resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSsmMaintenanceWindow to import
+  * @param importFromId The id of the existing AwsSsmMaintenanceWindow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSsmMaintenanceWindow to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_maintenance_window", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window aws_ssm_maintenance_window} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSsmMaintenanceWindowConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSsmMaintenanceWindowConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ssm_maintenance_window',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._allowUnassociatedTargets = config.allowUnassociatedTargets;
+    this._cutoff = config.cutoff;
+    this._description = config.description;
+    this._duration = config.duration;
+    this._enabled = config.enabled;
+    this._endDate = config.endDate;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._schedule = config.schedule;
+    this._scheduleOffset = config.scheduleOffset;
+    this._scheduleTimezone = config.scheduleTimezone;
+    this._startDate = config.startDate;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // allow_unassociated_targets - computed: false, optional: true, required: false
+  private _allowUnassociatedTargets?: boolean | cdktn.IResolvable; 
+  public get allowUnassociatedTargets() {
+    return this.getBooleanAttribute('allow_unassociated_targets');
+  }
+  public set allowUnassociatedTargets(value: boolean | cdktn.IResolvable) {
+    this._allowUnassociatedTargets = value;
+  }
+  public resetAllowUnassociatedTargets() {
+    this._allowUnassociatedTargets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowUnassociatedTargetsInput() {
+    return this._allowUnassociatedTargets;
+  }
+
+  // cutoff - computed: false, optional: false, required: true
+  private _cutoff?: number; 
+  public get cutoff() {
+    return this.getNumberAttribute('cutoff');
+  }
+  public set cutoff(value: number) {
+    this._cutoff = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cutoffInput() {
+    return this._cutoff;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // duration - computed: false, optional: false, required: true
+  private _duration?: number; 
+  public get duration() {
+    return this.getNumberAttribute('duration');
+  }
+  public set duration(value: number) {
+    this._duration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // end_date - computed: false, optional: true, required: false
+  private _endDate?: string; 
+  public get endDate() {
+    return this.getStringAttribute('end_date');
+  }
+  public set endDate(value: string) {
+    this._endDate = value;
+  }
+  public resetEndDate() {
+    this._endDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endDateInput() {
+    return this._endDate;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // schedule - computed: false, optional: false, required: true
+  private _schedule?: string; 
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+  public set schedule(value: string) {
+    this._schedule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule;
+  }
+
+  // schedule_offset - computed: false, optional: true, required: false
+  private _scheduleOffset?: number; 
+  public get scheduleOffset() {
+    return this.getNumberAttribute('schedule_offset');
+  }
+  public set scheduleOffset(value: number) {
+    this._scheduleOffset = value;
+  }
+  public resetScheduleOffset() {
+    this._scheduleOffset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleOffsetInput() {
+    return this._scheduleOffset;
+  }
+
+  // schedule_timezone - computed: false, optional: true, required: false
+  private _scheduleTimezone?: string; 
+  public get scheduleTimezone() {
+    return this.getStringAttribute('schedule_timezone');
+  }
+  public set scheduleTimezone(value: string) {
+    this._scheduleTimezone = value;
+  }
+  public resetScheduleTimezone() {
+    this._scheduleTimezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleTimezoneInput() {
+    return this._scheduleTimezone;
+  }
+
+  // start_date - computed: false, optional: true, required: false
+  private _startDate?: string; 
+  public get startDate() {
+    return this.getStringAttribute('start_date');
+  }
+  public set startDate(value: string) {
+    this._startDate = value;
+  }
+  public resetStartDate() {
+    this._startDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startDateInput() {
+    return this._startDate;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      allow_unassociated_targets: cdktn.booleanToTerraform(this._allowUnassociatedTargets),
+      cutoff: cdktn.numberToTerraform(this._cutoff),
+      description: cdktn.stringToTerraform(this._description),
+      duration: cdktn.numberToTerraform(this._duration),
+      enabled: cdktn.booleanToTerraform(this._enabled),
+      end_date: cdktn.stringToTerraform(this._endDate),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      schedule: cdktn.stringToTerraform(this._schedule),
+      schedule_offset: cdktn.numberToTerraform(this._scheduleOffset),
+      schedule_timezone: cdktn.stringToTerraform(this._scheduleTimezone),
+      start_date: cdktn.stringToTerraform(this._startDate),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_unassociated_targets: {
+        value: cdktn.booleanToHclTerraform(this._allowUnassociatedTargets),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cutoff: {
+        value: cdktn.numberToHclTerraform(this._cutoff),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      duration: {
+        value: cdktn.numberToHclTerraform(this._duration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      enabled: {
+        value: cdktn.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      end_date: {
+        value: cdktn.stringToHclTerraform(this._endDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      schedule: {
+        value: cdktn.stringToHclTerraform(this._schedule),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      schedule_offset: {
+        value: cdktn.numberToHclTerraform(this._scheduleOffset),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      schedule_timezone: {
+        value: cdktn.stringToHclTerraform(this._scheduleTimezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_date: {
+        value: cdktn.stringToHclTerraform(this._startDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

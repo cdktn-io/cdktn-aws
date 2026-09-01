@@ -1,0 +1,711 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsSesEventDestinationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#configuration_set_name AwsSesEventDestination#configuration_set_name}
+  */
+  readonly configurationSetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#enabled AwsSesEventDestination#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#id AwsSesEventDestination#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#matching_types AwsSesEventDestination#matching_types}
+  */
+  readonly matchingTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#name AwsSesEventDestination#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#region AwsSesEventDestination#region}
+  */
+  readonly region?: string;
+  /**
+  * cloudwatch_destination block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#cloudwatch_destination AwsSesEventDestination#cloudwatch_destination}
+  */
+  readonly cloudwatchDestination?: AwsSesEventDestination.CloudwatchDestinationProperty[] | cdktn.IResolvable;
+  /**
+  * kinesis_destination block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#kinesis_destination AwsSesEventDestination#kinesis_destination}
+  */
+  readonly kinesisDestination?: AwsSesEventDestination.KinesisDestinationProperty;
+  /**
+  * sns_destination block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#sns_destination AwsSesEventDestination#sns_destination}
+  */
+  readonly snsDestination?: AwsSesEventDestination.SnsDestinationProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination aws_ses_event_destination}
+*/
+export class AwsSesEventDestination extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ses_event_destination";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsSesEventDestination resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsSesEventDestination to import
+  * @param importFromId The id of the existing AwsSesEventDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSesEventDestination to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ses_event_destination", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination aws_ses_event_destination} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsSesEventDestinationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsSesEventDestinationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ses_event_destination',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._configurationSetName = config.configurationSetName;
+    this._enabled = config.enabled;
+    this._id = config.id;
+    this._matchingTypes = config.matchingTypes;
+    this._name = config.name;
+    this._region = config.region;
+    this._cloudwatchDestination.internalValue = config.cloudwatchDestination;
+    this._kinesisDestination.internalValue = config.kinesisDestination;
+    this._snsDestination.internalValue = config.snsDestination;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // configuration_set_name - computed: false, optional: false, required: true
+  private _configurationSetName?: string; 
+  public get configurationSetName() {
+    return this.getStringAttribute('configuration_set_name');
+  }
+  public set configurationSetName(value: string) {
+    this._configurationSetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationSetNameInput() {
+    return this._configurationSetName;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // matching_types - computed: false, optional: false, required: true
+  private _matchingTypes?: string[]; 
+  public get matchingTypes() {
+    return cdktn.Fn.tolist(this.getListAttribute('matching_types'));
+  }
+  public set matchingTypes(value: string[]) {
+    this._matchingTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchingTypesInput() {
+    return this._matchingTypes;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // cloudwatch_destination - computed: false, optional: true, required: false
+  private _cloudwatchDestination = new AwsSesEventDestination.CloudwatchDestinationPropertyList(this, "cloudwatch_destination", true);
+  public get cloudwatchDestination() {
+    return this._cloudwatchDestination;
+  }
+  public putCloudwatchDestination(value: AwsSesEventDestination.CloudwatchDestinationProperty[] | cdktn.IResolvable) {
+    this._cloudwatchDestination.internalValue = value;
+  }
+  public resetCloudwatchDestination() {
+    this._cloudwatchDestination.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudwatchDestinationInput() {
+    return this._cloudwatchDestination.internalValue;
+  }
+
+  // kinesis_destination - computed: false, optional: true, required: false
+  private _kinesisDestination = new AwsSesEventDestination.KinesisDestinationPropertyOutputReference(this, "kinesis_destination");
+  public get kinesisDestination() {
+    return this._kinesisDestination;
+  }
+  public putKinesisDestination(value: AwsSesEventDestination.KinesisDestinationProperty) {
+    this._kinesisDestination.internalValue = value;
+  }
+  public resetKinesisDestination() {
+    this._kinesisDestination.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kinesisDestinationInput() {
+    return this._kinesisDestination.internalValue;
+  }
+
+  // sns_destination - computed: false, optional: true, required: false
+  private _snsDestination = new AwsSesEventDestination.SnsDestinationPropertyOutputReference(this, "sns_destination");
+  public get snsDestination() {
+    return this._snsDestination;
+  }
+  public putSnsDestination(value: AwsSesEventDestination.SnsDestinationProperty) {
+    this._snsDestination.internalValue = value;
+  }
+  public resetSnsDestination() {
+    this._snsDestination.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snsDestinationInput() {
+    return this._snsDestination.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      configuration_set_name: cdktn.stringToTerraform(this._configurationSetName),
+      enabled: cdktn.booleanToTerraform(this._enabled),
+      id: cdktn.stringToTerraform(this._id),
+      matching_types: cdktn.listMapper(cdktn.stringToTerraform, false)(this._matchingTypes),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      cloudwatch_destination: cdktn.listMapper(awsSesEventDestinationCloudwatchDestinationPropertyToTerraform, true)(this._cloudwatchDestination.internalValue),
+      kinesis_destination: awsSesEventDestinationKinesisDestinationPropertyToTerraform(this._kinesisDestination.internalValue),
+      sns_destination: awsSesEventDestinationSnsDestinationPropertyToTerraform(this._snsDestination.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      configuration_set_name: {
+        value: cdktn.stringToHclTerraform(this._configurationSetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktn.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      matching_types: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._matchingTypes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cloudwatch_destination: {
+        value: cdktn.listMapperHcl(awsSesEventDestinationCloudwatchDestinationPropertyToHclTerraform, true)(this._cloudwatchDestination.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsSesEventDestination.CloudwatchDestinationPropertyList",
+      },
+      kinesis_destination: {
+        value: awsSesEventDestinationKinesisDestinationPropertyToHclTerraform(this._kinesisDestination.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSesEventDestination.KinesisDestinationPropertyList",
+      },
+      sns_destination: {
+        value: awsSesEventDestinationSnsDestinationPropertyToHclTerraform(this._snsDestination.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsSesEventDestination.SnsDestinationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsSesEventDestinationCloudwatchDestinationPropertyToTerraform(struct?: AwsSesEventDestination.CloudwatchDestinationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    default_value: cdktn.stringToTerraform(struct!.defaultValue),
+    dimension_name: cdktn.stringToTerraform(struct!.dimensionName),
+    value_source: cdktn.stringToTerraform(struct!.valueSource),
+  }
+}
+
+
+export function awsSesEventDestinationCloudwatchDestinationPropertyToHclTerraform(struct?: AwsSesEventDestination.CloudwatchDestinationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktn.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dimension_name: {
+      value: cdktn.stringToHclTerraform(struct!.dimensionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value_source: {
+      value: cdktn.stringToHclTerraform(struct!.valueSource),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSesEventDestinationKinesisDestinationPropertyToTerraform(struct?: AwsSesEventDestination.KinesisDestinationPropertyOutputReference | AwsSesEventDestination.KinesisDestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    role_arn: cdktn.stringToTerraform(struct!.roleArn),
+    stream_arn: cdktn.stringToTerraform(struct!.streamArn),
+  }
+}
+
+
+export function awsSesEventDestinationKinesisDestinationPropertyToHclTerraform(struct?: AwsSesEventDestination.KinesisDestinationPropertyOutputReference | AwsSesEventDestination.KinesisDestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    role_arn: {
+      value: cdktn.stringToHclTerraform(struct!.roleArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    stream_arn: {
+      value: cdktn.stringToHclTerraform(struct!.streamArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsSesEventDestinationSnsDestinationPropertyToTerraform(struct?: AwsSesEventDestination.SnsDestinationPropertyOutputReference | AwsSesEventDestination.SnsDestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    topic_arn: cdktn.stringToTerraform(struct!.topicArn),
+  }
+}
+
+
+export function awsSesEventDestinationSnsDestinationPropertyToHclTerraform(struct?: AwsSesEventDestination.SnsDestinationPropertyOutputReference | AwsSesEventDestination.SnsDestinationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    topic_arn: {
+      value: cdktn.stringToHclTerraform(struct!.topicArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsSesEventDestination {
+export interface CloudwatchDestinationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#default_value AwsSesEventDestination#default_value}
+  */
+  readonly defaultValue: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#dimension_name AwsSesEventDestination#dimension_name}
+  */
+  readonly dimensionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#value_source AwsSesEventDestination#value_source}
+  */
+  readonly valueSource: string;
+}
+export class CloudwatchDestinationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudwatchDestinationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultValue = this._defaultValue;
+    }
+    if (this._dimensionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dimensionName = this._dimensionName;
+    }
+    if (this._valueSource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.valueSource = this._valueSource;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudwatchDestinationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultValue = undefined;
+      this._dimensionName = undefined;
+      this._valueSource = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultValue = value.defaultValue;
+      this._dimensionName = value.dimensionName;
+      this._valueSource = value.valueSource;
+    }
+  }
+
+  // default_value - computed: false, optional: false, required: true
+  private _defaultValue?: string; 
+  public get defaultValue() {
+    return this.getStringAttribute('default_value');
+  }
+  public set defaultValue(value: string) {
+    this._defaultValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultValueInput() {
+    return this._defaultValue;
+  }
+
+  // dimension_name - computed: false, optional: false, required: true
+  private _dimensionName?: string; 
+  public get dimensionName() {
+    return this.getStringAttribute('dimension_name');
+  }
+  public set dimensionName(value: string) {
+    this._dimensionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dimensionNameInput() {
+    return this._dimensionName;
+  }
+
+  // value_source - computed: false, optional: false, required: true
+  private _valueSource?: string; 
+  public get valueSource() {
+    return this.getStringAttribute('value_source');
+  }
+  public set valueSource(value: string) {
+    this._valueSource = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueSourceInput() {
+    return this._valueSource;
+  }
+}
+
+export class CloudwatchDestinationPropertyList extends cdktn.ComplexList {
+  public internalValue? : CloudwatchDestinationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudwatchDestinationPropertyOutputReference {
+    return new CloudwatchDestinationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface KinesisDestinationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#role_arn AwsSesEventDestination#role_arn}
+  */
+  readonly roleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#stream_arn AwsSesEventDestination#stream_arn}
+  */
+  readonly streamArn: string;
+}
+export class KinesisDestinationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KinesisDestinationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._roleArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.roleArn = this._roleArn;
+    }
+    if (this._streamArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streamArn = this._streamArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KinesisDestinationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._roleArn = undefined;
+      this._streamArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._roleArn = value.roleArn;
+      this._streamArn = value.streamArn;
+    }
+  }
+
+  // role_arn - computed: false, optional: false, required: true
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // stream_arn - computed: false, optional: false, required: true
+  private _streamArn?: string; 
+  public get streamArn() {
+    return this.getStringAttribute('stream_arn');
+  }
+  public set streamArn(value: string) {
+    this._streamArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamArnInput() {
+    return this._streamArn;
+  }
+}
+export interface SnsDestinationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ses_event_destination#topic_arn AwsSesEventDestination#topic_arn}
+  */
+  readonly topicArn: string;
+}
+export class SnsDestinationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SnsDestinationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._topicArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topicArn = this._topicArn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SnsDestinationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._topicArn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._topicArn = value.topicArn;
+    }
+  }
+
+  // topic_arn - computed: false, optional: false, required: true
+  private _topicArn?: string; 
+  public get topicArn() {
+    return this.getStringAttribute('topic_arn');
+  }
+  public set topicArn(value: string) {
+    this._topicArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicArnInput() {
+    return this._topicArn;
+  }
+}
+}

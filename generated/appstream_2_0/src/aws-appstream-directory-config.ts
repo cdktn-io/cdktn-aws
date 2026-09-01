@@ -1,0 +1,488 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAppstreamDirectoryConfigConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#directory_name AwsAppstreamDirectoryConfig#directory_name}
+  */
+  readonly directoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#id AwsAppstreamDirectoryConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#organizational_unit_distinguished_names AwsAppstreamDirectoryConfig#organizational_unit_distinguished_names}
+  */
+  readonly organizationalUnitDistinguishedNames: string[];
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#region AwsAppstreamDirectoryConfig#region}
+  */
+  readonly region?: string;
+  /**
+  * certificate_based_auth_properties block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_based_auth_properties AwsAppstreamDirectoryConfig#certificate_based_auth_properties}
+  */
+  readonly certificateBasedAuthProperties?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty;
+  /**
+  * service_account_credentials block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#service_account_credentials AwsAppstreamDirectoryConfig#service_account_credentials}
+  */
+  readonly serviceAccountCredentials: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config aws_appstream_directory_config}
+*/
+export class AwsAppstreamDirectoryConfig extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_appstream_directory_config";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAppstreamDirectoryConfig resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAppstreamDirectoryConfig to import
+  * @param importFromId The id of the existing AwsAppstreamDirectoryConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppstreamDirectoryConfig to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_directory_config", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config aws_appstream_directory_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAppstreamDirectoryConfigConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAppstreamDirectoryConfigConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_appstream_directory_config',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._directoryName = config.directoryName;
+    this._id = config.id;
+    this._organizationalUnitDistinguishedNames = config.organizationalUnitDistinguishedNames;
+    this._region = config.region;
+    this._certificateBasedAuthProperties.internalValue = config.certificateBasedAuthProperties;
+    this._serviceAccountCredentials.internalValue = config.serviceAccountCredentials;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // created_time - computed: true, optional: false, required: false
+  public get createdTime() {
+    return this.getStringAttribute('created_time');
+  }
+
+  // directory_name - computed: false, optional: false, required: true
+  private _directoryName?: string; 
+  public get directoryName() {
+    return this.getStringAttribute('directory_name');
+  }
+  public set directoryName(value: string) {
+    this._directoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryNameInput() {
+    return this._directoryName;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // organizational_unit_distinguished_names - computed: false, optional: false, required: true
+  private _organizationalUnitDistinguishedNames?: string[]; 
+  public get organizationalUnitDistinguishedNames() {
+    return cdktn.Fn.tolist(this.getListAttribute('organizational_unit_distinguished_names'));
+  }
+  public set organizationalUnitDistinguishedNames(value: string[]) {
+    this._organizationalUnitDistinguishedNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitDistinguishedNamesInput() {
+    return this._organizationalUnitDistinguishedNames;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // certificate_based_auth_properties - computed: false, optional: true, required: false
+  private _certificateBasedAuthProperties = new AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference(this, "certificate_based_auth_properties");
+  public get certificateBasedAuthProperties() {
+    return this._certificateBasedAuthProperties;
+  }
+  public putCertificateBasedAuthProperties(value: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty) {
+    this._certificateBasedAuthProperties.internalValue = value;
+  }
+  public resetCertificateBasedAuthProperties() {
+    this._certificateBasedAuthProperties.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateBasedAuthPropertiesInput() {
+    return this._certificateBasedAuthProperties.internalValue;
+  }
+
+  // service_account_credentials - computed: false, optional: false, required: true
+  private _serviceAccountCredentials = new AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference(this, "service_account_credentials");
+  public get serviceAccountCredentials() {
+    return this._serviceAccountCredentials;
+  }
+  public putServiceAccountCredentials(value: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty) {
+    this._serviceAccountCredentials.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountCredentialsInput() {
+    return this._serviceAccountCredentials.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      directory_name: cdktn.stringToTerraform(this._directoryName),
+      id: cdktn.stringToTerraform(this._id),
+      organizational_unit_distinguished_names: cdktn.listMapper(cdktn.stringToTerraform, false)(this._organizationalUnitDistinguishedNames),
+      region: cdktn.stringToTerraform(this._region),
+      certificate_based_auth_properties: awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(this._certificateBasedAuthProperties.internalValue),
+      service_account_credentials: awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToTerraform(this._serviceAccountCredentials.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      directory_name: {
+        value: cdktn.stringToHclTerraform(this._directoryName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organizational_unit_distinguished_names: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._organizationalUnitDistinguishedNames),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_based_auth_properties: {
+        value: awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(this._certificateBasedAuthProperties.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyList",
+      },
+      service_account_credentials: {
+        value: awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(this._serviceAccountCredentials.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToTerraform(struct?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    certificate_authority_arn: cdktn.stringToTerraform(struct!.certificateAuthorityArn),
+    status: cdktn.stringToTerraform(struct!.status),
+  }
+}
+
+
+export function awsAppstreamDirectoryConfigCertificateBasedAuthPropertiesPropertyToHclTerraform(struct?: AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesPropertyOutputReference | AwsAppstreamDirectoryConfig.CertificateBasedAuthPropertiesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    certificate_authority_arn: {
+      value: cdktn.stringToHclTerraform(struct!.certificateAuthorityArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    status: {
+      value: cdktn.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToTerraform(struct?: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    account_name: cdktn.stringToTerraform(struct!.accountName),
+    account_password: cdktn.stringToTerraform(struct!.accountPassword),
+  }
+}
+
+
+export function awsAppstreamDirectoryConfigServiceAccountCredentialsPropertyToHclTerraform(struct?: AwsAppstreamDirectoryConfig.ServiceAccountCredentialsPropertyOutputReference | AwsAppstreamDirectoryConfig.ServiceAccountCredentialsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    account_name: {
+      value: cdktn.stringToHclTerraform(struct!.accountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    account_password: {
+      value: cdktn.stringToHclTerraform(struct!.accountPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAppstreamDirectoryConfig {
+export interface CertificateBasedAuthPropertiesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#certificate_authority_arn AwsAppstreamDirectoryConfig#certificate_authority_arn}
+  */
+  readonly certificateAuthorityArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#status AwsAppstreamDirectoryConfig#status}
+  */
+  readonly status?: string;
+}
+export class CertificateBasedAuthPropertiesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CertificateBasedAuthPropertiesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateAuthorityArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateAuthorityArn = this._certificateAuthorityArn;
+    }
+    if (this._status !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateBasedAuthPropertiesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._certificateAuthorityArn = undefined;
+      this._status = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._certificateAuthorityArn = value.certificateAuthorityArn;
+      this._status = value.status;
+    }
+  }
+
+  // certificate_authority_arn - computed: false, optional: true, required: false
+  private _certificateAuthorityArn?: string; 
+  public get certificateAuthorityArn() {
+    return this.getStringAttribute('certificate_authority_arn');
+  }
+  public set certificateAuthorityArn(value: string) {
+    this._certificateAuthorityArn = value;
+  }
+  public resetCertificateAuthorityArn() {
+    this._certificateAuthorityArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateAuthorityArnInput() {
+    return this._certificateAuthorityArn;
+  }
+
+  // status - computed: false, optional: true, required: false
+  private _status?: string; 
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string) {
+    this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status;
+  }
+}
+export interface ServiceAccountCredentialsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_name AwsAppstreamDirectoryConfig#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_directory_config#account_password AwsAppstreamDirectoryConfig#account_password}
+  */
+  readonly accountPassword: string;
+}
+export class ServiceAccountCredentialsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServiceAccountCredentialsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._accountPassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountPassword = this._accountPassword;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceAccountCredentialsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accountName = undefined;
+      this._accountPassword = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accountName = value.accountName;
+      this._accountPassword = value.accountPassword;
+    }
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // account_password - computed: false, optional: false, required: true
+  private _accountPassword?: string; 
+  public get accountPassword() {
+    return this.getStringAttribute('account_password');
+  }
+  public set accountPassword(value: string) {
+    this._accountPassword = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountPasswordInput() {
+    return this._accountPassword;
+  }
+}
+}

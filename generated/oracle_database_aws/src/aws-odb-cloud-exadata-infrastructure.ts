@@ -1,0 +1,1494 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsOdbCloudExadataInfrastructureConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * The name of the Availability Zone (AZ) where the Exadata infrastructure is located. Changing this will force terraform to create new resource
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone AwsOdbCloudExadataInfrastructure#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
+  *  The AZ ID of the AZ where the Exadata infrastructure is located. Changing this will force terraform to create new resource
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone_id AwsOdbCloudExadataInfrastructure#availability_zone_id}
+  */
+  readonly availabilityZoneId: string;
+  /**
+  *  The number of compute instances that the Exadata infrastructure is located
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#compute_count AwsOdbCloudExadataInfrastructure#compute_count}
+  */
+  readonly computeCount?: number;
+  /**
+  * The email addresses of contacts to receive notification from Oracle about maintenance updates for the Exadata infrastructure. Changing this will force terraform to create new resource
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#customer_contacts_to_send_to_oci AwsOdbCloudExadataInfrastructure#customer_contacts_to_send_to_oci}
+  */
+  readonly customerContactsToSendToOci?: AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable;
+  /**
+  * The database server model type of the Exadata infrastructure. For the list of valid model names, use the ListDbSystemShapes operation
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#database_server_type AwsOdbCloudExadataInfrastructure#database_server_type}
+  */
+  readonly databaseServerType?: string;
+  /**
+  * The user-friendly name for the Exadata infrastructure. Changing this will force terraform to create a new resource
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#display_name AwsOdbCloudExadataInfrastructure#display_name}
+  */
+  readonly displayName: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#region AwsOdbCloudExadataInfrastructure#region}
+  */
+  readonly region?: string;
+  /**
+  * The model name of the Exadata infrastructure. Changing this will force terraform to create new resource
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#shape AwsOdbCloudExadataInfrastructure#shape}
+  */
+  readonly shape: string;
+  /**
+  * TThe number of storage servers that are activated for the Exadata infrastructure
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_count AwsOdbCloudExadataInfrastructure#storage_count}
+  */
+  readonly storageCount?: number;
+  /**
+  * The storage server model type of the Exadata infrastructure. For the list of valid model names, use the ListDbSystemShapes operation
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_server_type AwsOdbCloudExadataInfrastructure#storage_server_type}
+  */
+  readonly storageServerType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#tags AwsOdbCloudExadataInfrastructure#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * maintenance_window block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#maintenance_window AwsOdbCloudExadataInfrastructure#maintenance_window}
+  */
+  readonly maintenanceWindow?: AwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#timeouts AwsOdbCloudExadataInfrastructure#timeouts}
+  */
+  readonly timeouts?: AwsOdbCloudExadataInfrastructure.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure aws_odb_cloud_exadata_infrastructure}
+*/
+export class AwsOdbCloudExadataInfrastructure extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_odb_cloud_exadata_infrastructure";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsOdbCloudExadataInfrastructure resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsOdbCloudExadataInfrastructure to import
+  * @param importFromId The id of the existing AwsOdbCloudExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOdbCloudExadataInfrastructure to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_exadata_infrastructure", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure aws_odb_cloud_exadata_infrastructure} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsOdbCloudExadataInfrastructureConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsOdbCloudExadataInfrastructureConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_odb_cloud_exadata_infrastructure',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._availabilityZone = config.availabilityZone;
+    this._availabilityZoneId = config.availabilityZoneId;
+    this._computeCount = config.computeCount;
+    this._customerContactsToSendToOci.internalValue = config.customerContactsToSendToOci;
+    this._databaseServerType = config.databaseServerType;
+    this._displayName = config.displayName;
+    this._region = config.region;
+    this._shape = config.shape;
+    this._storageCount = config.storageCount;
+    this._storageServerType = config.storageServerType;
+    this._tags = config.tags;
+    this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // activated_storage_count - computed: true, optional: false, required: false
+  public get activatedStorageCount() {
+    return this.getNumberAttribute('activated_storage_count');
+  }
+
+  // additional_storage_count - computed: true, optional: false, required: false
+  public get additionalStorageCount() {
+    return this.getNumberAttribute('additional_storage_count');
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // availability_zone_id - computed: false, optional: false, required: true
+  private _availabilityZoneId?: string; 
+  public get availabilityZoneId() {
+    return this.getStringAttribute('availability_zone_id');
+  }
+  public set availabilityZoneId(value: string) {
+    this._availabilityZoneId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneIdInput() {
+    return this._availabilityZoneId;
+  }
+
+  // available_storage_size_in_gbs - computed: true, optional: false, required: false
+  public get availableStorageSizeInGbs() {
+    return this.getNumberAttribute('available_storage_size_in_gbs');
+  }
+
+  // compute_count - computed: true, optional: true, required: false
+  private _computeCount?: number; 
+  public get computeCount() {
+    return this.getNumberAttribute('compute_count');
+  }
+  public set computeCount(value: number) {
+    this._computeCount = value;
+  }
+  public resetComputeCount() {
+    this._computeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeCountInput() {
+    return this._computeCount;
+  }
+
+  // compute_model - computed: true, optional: false, required: false
+  public get computeModel() {
+    return this.getStringAttribute('compute_model');
+  }
+
+  // cpu_count - computed: true, optional: false, required: false
+  public get cpuCount() {
+    return this.getNumberAttribute('cpu_count');
+  }
+
+  // created_at - computed: true, optional: false, required: false
+  public get createdAt() {
+    return this.getStringAttribute('created_at');
+  }
+
+  // customer_contacts_to_send_to_oci - computed: false, optional: true, required: false
+  private _customerContactsToSendToOci = new AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList(this, "customer_contacts_to_send_to_oci", true);
+  public get customerContactsToSendToOci() {
+    return this._customerContactsToSendToOci;
+  }
+  public putCustomerContactsToSendToOci(value: AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable) {
+    this._customerContactsToSendToOci.internalValue = value;
+  }
+  public resetCustomerContactsToSendToOci() {
+    this._customerContactsToSendToOci.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerContactsToSendToOciInput() {
+    return this._customerContactsToSendToOci.internalValue;
+  }
+
+  // data_storage_size_in_tbs - computed: true, optional: false, required: false
+  public get dataStorageSizeInTbs() {
+    return this.getNumberAttribute('data_storage_size_in_tbs');
+  }
+
+  // database_server_type - computed: false, optional: true, required: false
+  private _databaseServerType?: string; 
+  public get databaseServerType() {
+    return this.getStringAttribute('database_server_type');
+  }
+  public set databaseServerType(value: string) {
+    this._databaseServerType = value;
+  }
+  public resetDatabaseServerType() {
+    this._databaseServerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseServerTypeInput() {
+    return this._databaseServerType;
+  }
+
+  // db_node_storage_size_in_gbs - computed: true, optional: false, required: false
+  public get dbNodeStorageSizeInGbs() {
+    return this.getNumberAttribute('db_node_storage_size_in_gbs');
+  }
+
+  // db_server_version - computed: true, optional: false, required: false
+  public get dbServerVersion() {
+    return this.getStringAttribute('db_server_version');
+  }
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // last_maintenance_run_id - computed: true, optional: false, required: false
+  public get lastMaintenanceRunId() {
+    return this.getStringAttribute('last_maintenance_run_id');
+  }
+
+  // max_cpu_count - computed: true, optional: false, required: false
+  public get maxCpuCount() {
+    return this.getNumberAttribute('max_cpu_count');
+  }
+
+  // max_data_storage_in_tbs - computed: true, optional: false, required: false
+  public get maxDataStorageInTbs() {
+    return this.getNumberAttribute('max_data_storage_in_tbs');
+  }
+
+  // max_db_node_storage_size_in_gbs - computed: true, optional: false, required: false
+  public get maxDbNodeStorageSizeInGbs() {
+    return this.getNumberAttribute('max_db_node_storage_size_in_gbs');
+  }
+
+  // max_memory_in_gbs - computed: true, optional: false, required: false
+  public get maxMemoryInGbs() {
+    return this.getNumberAttribute('max_memory_in_gbs');
+  }
+
+  // memory_size_in_gbs - computed: true, optional: false, required: false
+  public get memorySizeInGbs() {
+    return this.getNumberAttribute('memory_size_in_gbs');
+  }
+
+  // monthly_db_server_version - computed: true, optional: false, required: false
+  public get monthlyDbServerVersion() {
+    return this.getStringAttribute('monthly_db_server_version');
+  }
+
+  // monthly_storage_server_version - computed: true, optional: false, required: false
+  public get monthlyStorageServerVersion() {
+    return this.getStringAttribute('monthly_storage_server_version');
+  }
+
+  // next_maintenance_run_id - computed: true, optional: false, required: false
+  public get nextMaintenanceRunId() {
+    return this.getStringAttribute('next_maintenance_run_id');
+  }
+
+  // oci_resource_anchor_name - computed: true, optional: false, required: false
+  public get ociResourceAnchorName() {
+    return this.getStringAttribute('oci_resource_anchor_name');
+  }
+
+  // oci_url - computed: true, optional: false, required: false
+  public get ociUrl() {
+    return this.getStringAttribute('oci_url');
+  }
+
+  // ocid - computed: true, optional: false, required: false
+  public get ocid() {
+    return this.getStringAttribute('ocid');
+  }
+
+  // percent_progress - computed: true, optional: false, required: false
+  public get percentProgress() {
+    return this.getNumberAttribute('percent_progress');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // shape - computed: false, optional: false, required: true
+  private _shape?: string; 
+  public get shape() {
+    return this.getStringAttribute('shape');
+  }
+  public set shape(value: string) {
+    this._shape = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shapeInput() {
+    return this._shape;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // status_reason - computed: true, optional: false, required: false
+  public get statusReason() {
+    return this.getStringAttribute('status_reason');
+  }
+
+  // storage_count - computed: true, optional: true, required: false
+  private _storageCount?: number; 
+  public get storageCount() {
+    return this.getNumberAttribute('storage_count');
+  }
+  public set storageCount(value: number) {
+    this._storageCount = value;
+  }
+  public resetStorageCount() {
+    this._storageCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageCountInput() {
+    return this._storageCount;
+  }
+
+  // storage_server_type - computed: false, optional: true, required: false
+  private _storageServerType?: string; 
+  public get storageServerType() {
+    return this.getStringAttribute('storage_server_type');
+  }
+  public set storageServerType(value: string) {
+    this._storageServerType = value;
+  }
+  public resetStorageServerType() {
+    this._storageServerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageServerTypeInput() {
+    return this._storageServerType;
+  }
+
+  // storage_server_version - computed: true, optional: false, required: false
+  public get storageServerVersion() {
+    return this.getStringAttribute('storage_server_version');
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: false, required: false
+  private _tagsAll = new cdktn.StringMap(this, "tags_all");
+  public get tagsAll() {
+    return this._tagsAll;
+  }
+
+  // total_storage_size_in_gbs - computed: true, optional: false, required: false
+  public get totalStorageSizeInGbs() {
+    return this.getNumberAttribute('total_storage_size_in_gbs');
+  }
+
+  // maintenance_window - computed: false, optional: true, required: false
+  private _maintenanceWindow = new AwsOdbCloudExadataInfrastructure.MaintenanceWindowPropertyList(this, "maintenance_window", false);
+  public get maintenanceWindow() {
+    return this._maintenanceWindow;
+  }
+  public putMaintenanceWindow(value: AwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable) {
+    this._maintenanceWindow.internalValue = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsOdbCloudExadataInfrastructure.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsOdbCloudExadataInfrastructure.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      availability_zone: cdktn.stringToTerraform(this._availabilityZone),
+      availability_zone_id: cdktn.stringToTerraform(this._availabilityZoneId),
+      compute_count: cdktn.numberToTerraform(this._computeCount),
+      customer_contacts_to_send_to_oci: cdktn.listMapper(awsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform, false)(this._customerContactsToSendToOci.internalValue),
+      database_server_type: cdktn.stringToTerraform(this._databaseServerType),
+      display_name: cdktn.stringToTerraform(this._displayName),
+      region: cdktn.stringToTerraform(this._region),
+      shape: cdktn.stringToTerraform(this._shape),
+      storage_count: cdktn.numberToTerraform(this._storageCount),
+      storage_server_type: cdktn.stringToTerraform(this._storageServerType),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      maintenance_window: cdktn.listMapper(awsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform, true)(this._maintenanceWindow.internalValue),
+      timeouts: awsOdbCloudExadataInfrastructureTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      availability_zone: {
+        value: cdktn.stringToHclTerraform(this._availabilityZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      availability_zone_id: {
+        value: cdktn.stringToHclTerraform(this._availabilityZoneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compute_count: {
+        value: cdktn.numberToHclTerraform(this._computeCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      customer_contacts_to_send_to_oci: {
+        value: cdktn.listMapperHcl(awsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform, false)(this._customerContactsToSendToOci.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList",
+      },
+      database_server_type: {
+        value: cdktn.stringToHclTerraform(this._databaseServerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktn.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shape: {
+        value: cdktn.stringToHclTerraform(this._shape),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_count: {
+        value: cdktn.numberToHclTerraform(this._storageCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      storage_server_type: {
+        value: cdktn.stringToHclTerraform(this._storageServerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      maintenance_window: {
+        value: cdktn.listMapperHcl(awsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform, true)(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsOdbCloudExadataInfrastructure.MaintenanceWindowPropertyList",
+      },
+      timeouts: {
+        value: awsOdbCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsOdbCloudExadataInfrastructure.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform(struct?: AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    email: cdktn.stringToTerraform(struct!.email),
+  }
+}
+
+
+export function awsOdbCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform(struct?: AwsOdbCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    email: {
+      value: cdktn.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsOdbCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct?: AwsOdbCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function awsOdbCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(struct?: AwsOdbCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsOdbCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: AwsOdbCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    name: cdktn.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function awsOdbCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?: AwsOdbCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform(struct?: AwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    custom_action_timeout_in_mins: cdktn.numberToTerraform(struct!.customActionTimeoutInMins),
+    days_of_week: cdktn.listMapper(awsOdbCloudExadataInfrastructureDaysOfWeekPropertyToTerraform, false)(struct!.daysOfWeek),
+    hours_of_day: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.hoursOfDay),
+    is_custom_action_timeout_enabled: cdktn.booleanToTerraform(struct!.isCustomActionTimeoutEnabled),
+    lead_time_in_weeks: cdktn.numberToTerraform(struct!.leadTimeInWeeks),
+    months: cdktn.listMapper(awsOdbCloudExadataInfrastructureMonthsPropertyToTerraform, false)(struct!.months),
+    patching_mode: cdktn.stringToTerraform(struct!.patchingMode),
+    preference: cdktn.stringToTerraform(struct!.preference),
+    weeks_of_month: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.weeksOfMonth),
+  }
+}
+
+
+export function awsOdbCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform(struct?: AwsOdbCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    custom_action_timeout_in_mins: {
+      value: cdktn.numberToHclTerraform(struct!.customActionTimeoutInMins),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    days_of_week: {
+      value: cdktn.listMapperHcl(awsOdbCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: true,
+      type: "set",
+      storageClassType: "DaysOfWeekPropertyList",
+    },
+    hours_of_day: {
+      value: cdktn.listMapperHcl(cdktn.numberToHclTerraform, false)(struct!.hoursOfDay),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    is_custom_action_timeout_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.isCustomActionTimeoutEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    lead_time_in_weeks: {
+      value: cdktn.numberToHclTerraform(struct!.leadTimeInWeeks),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    months: {
+      value: cdktn.listMapperHcl(awsOdbCloudExadataInfrastructureMonthsPropertyToHclTerraform, false)(struct!.months),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MonthsPropertyList",
+    },
+    patching_mode: {
+      value: cdktn.stringToHclTerraform(struct!.patchingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    preference: {
+      value: cdktn.stringToHclTerraform(struct!.preference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    weeks_of_month: {
+      value: cdktn.listMapperHcl(cdktn.numberToHclTerraform, false)(struct!.weeksOfMonth),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsOdbCloudExadataInfrastructureTimeoutsPropertyToTerraform(struct?: AwsOdbCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsOdbCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(struct?: AwsOdbCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsOdbCloudExadataInfrastructure {
+export interface CustomerContactsToSendToOciProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#email AwsOdbCloudExadataInfrastructure#email}
+  */
+  readonly email?: string;
+}
+export class CustomerContactsToSendToOciPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CustomerContactsToSendToOciProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._email !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CustomerContactsToSendToOciProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._email = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._email = value.email;
+    }
+  }
+
+  // email - computed: false, optional: true, required: false
+  private _email?: string; 
+  public get email() {
+    return this.getStringAttribute('email');
+  }
+  public set email(value: string) {
+    this._email = value;
+  }
+  public resetEmail() {
+    this._email = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailInput() {
+    return this._email;
+  }
+}
+
+export class CustomerContactsToSendToOciPropertyList extends cdktn.ComplexList {
+  public internalValue? : CustomerContactsToSendToOciProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CustomerContactsToSendToOciPropertyOutputReference {
+    return new CustomerContactsToSendToOciPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DaysOfWeekProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name AwsOdbCloudExadataInfrastructure#name}
+  */
+  readonly name?: string;
+}
+export class DaysOfWeekPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DaysOfWeekProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DaysOfWeekProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class DaysOfWeekPropertyList extends cdktn.ComplexList {
+  public internalValue? : DaysOfWeekProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DaysOfWeekPropertyOutputReference {
+    return new DaysOfWeekPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MonthsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name AwsOdbCloudExadataInfrastructure#name}
+  */
+  readonly name?: string;
+}
+export class MonthsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonthsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonthsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class MonthsPropertyList extends cdktn.ComplexList {
+  public internalValue? : MonthsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonthsPropertyOutputReference {
+    return new MonthsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MaintenanceWindowProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#custom_action_timeout_in_mins AwsOdbCloudExadataInfrastructure#custom_action_timeout_in_mins}
+  */
+  readonly customActionTimeoutInMins: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#days_of_week AwsOdbCloudExadataInfrastructure#days_of_week}
+  */
+  readonly daysOfWeek?: DaysOfWeekProperty[] | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#hours_of_day AwsOdbCloudExadataInfrastructure#hours_of_day}
+  */
+  readonly hoursOfDay?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#is_custom_action_timeout_enabled AwsOdbCloudExadataInfrastructure#is_custom_action_timeout_enabled}
+  */
+  readonly isCustomActionTimeoutEnabled: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#lead_time_in_weeks AwsOdbCloudExadataInfrastructure#lead_time_in_weeks}
+  */
+  readonly leadTimeInWeeks?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#months AwsOdbCloudExadataInfrastructure#months}
+  */
+  readonly months?: MonthsProperty[] | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#patching_mode AwsOdbCloudExadataInfrastructure#patching_mode}
+  */
+  readonly patchingMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#preference AwsOdbCloudExadataInfrastructure#preference}
+  */
+  readonly preference: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#weeks_of_month AwsOdbCloudExadataInfrastructure#weeks_of_month}
+  */
+  readonly weeksOfMonth?: number[];
+}
+export class MaintenanceWindowPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MaintenanceWindowProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customActionTimeoutInMins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customActionTimeoutInMins = this._customActionTimeoutInMins;
+    }
+    if (this._daysOfWeek?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek?.internalValue;
+    }
+    if (this._hoursOfDay !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hoursOfDay = this._hoursOfDay;
+    }
+    if (this._isCustomActionTimeoutEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isCustomActionTimeoutEnabled = this._isCustomActionTimeoutEnabled;
+    }
+    if (this._leadTimeInWeeks !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.leadTimeInWeeks = this._leadTimeInWeeks;
+    }
+    if (this._months?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.months = this._months?.internalValue;
+    }
+    if (this._patchingMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patchingMode = this._patchingMode;
+    }
+    if (this._preference !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preference = this._preference;
+    }
+    if (this._weeksOfMonth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeksOfMonth = this._weeksOfMonth;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceWindowProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._customActionTimeoutInMins = undefined;
+      this._daysOfWeek.internalValue = undefined;
+      this._hoursOfDay = undefined;
+      this._isCustomActionTimeoutEnabled = undefined;
+      this._leadTimeInWeeks = undefined;
+      this._months.internalValue = undefined;
+      this._patchingMode = undefined;
+      this._preference = undefined;
+      this._weeksOfMonth = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._customActionTimeoutInMins = value.customActionTimeoutInMins;
+      this._daysOfWeek.internalValue = value.daysOfWeek;
+      this._hoursOfDay = value.hoursOfDay;
+      this._isCustomActionTimeoutEnabled = value.isCustomActionTimeoutEnabled;
+      this._leadTimeInWeeks = value.leadTimeInWeeks;
+      this._months.internalValue = value.months;
+      this._patchingMode = value.patchingMode;
+      this._preference = value.preference;
+      this._weeksOfMonth = value.weeksOfMonth;
+    }
+  }
+
+  // custom_action_timeout_in_mins - computed: false, optional: false, required: true
+  private _customActionTimeoutInMins?: number; 
+  public get customActionTimeoutInMins() {
+    return this.getNumberAttribute('custom_action_timeout_in_mins');
+  }
+  public set customActionTimeoutInMins(value: number) {
+    this._customActionTimeoutInMins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customActionTimeoutInMinsInput() {
+    return this._customActionTimeoutInMins;
+  }
+
+  // days_of_week - computed: true, optional: true, required: false
+  private _daysOfWeek = new DaysOfWeekPropertyList(this, "days_of_week", true);
+  public get daysOfWeek() {
+    return this._daysOfWeek;
+  }
+  public putDaysOfWeek(value: DaysOfWeekProperty[] | cdktn.IResolvable) {
+    this._daysOfWeek.internalValue = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek.internalValue;
+  }
+
+  // hours_of_day - computed: true, optional: true, required: false
+  private _hoursOfDay?: number[]; 
+  public get hoursOfDay() {
+    return cdktn.Token.asNumberList(cdktn.Fn.tolist(this.getNumberListAttribute('hours_of_day')));
+  }
+  public set hoursOfDay(value: number[]) {
+    this._hoursOfDay = value;
+  }
+  public resetHoursOfDay() {
+    this._hoursOfDay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursOfDayInput() {
+    return this._hoursOfDay;
+  }
+
+  // is_custom_action_timeout_enabled - computed: false, optional: false, required: true
+  private _isCustomActionTimeoutEnabled?: boolean | cdktn.IResolvable; 
+  public get isCustomActionTimeoutEnabled() {
+    return this.getBooleanAttribute('is_custom_action_timeout_enabled');
+  }
+  public set isCustomActionTimeoutEnabled(value: boolean | cdktn.IResolvable) {
+    this._isCustomActionTimeoutEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isCustomActionTimeoutEnabledInput() {
+    return this._isCustomActionTimeoutEnabled;
+  }
+
+  // lead_time_in_weeks - computed: true, optional: true, required: false
+  private _leadTimeInWeeks?: number; 
+  public get leadTimeInWeeks() {
+    return this.getNumberAttribute('lead_time_in_weeks');
+  }
+  public set leadTimeInWeeks(value: number) {
+    this._leadTimeInWeeks = value;
+  }
+  public resetLeadTimeInWeeks() {
+    this._leadTimeInWeeks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get leadTimeInWeeksInput() {
+    return this._leadTimeInWeeks;
+  }
+
+  // months - computed: true, optional: true, required: false
+  private _months = new MonthsPropertyList(this, "months", true);
+  public get months() {
+    return this._months;
+  }
+  public putMonths(value: MonthsProperty[] | cdktn.IResolvable) {
+    this._months.internalValue = value;
+  }
+  public resetMonths() {
+    this._months.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthsInput() {
+    return this._months.internalValue;
+  }
+
+  // patching_mode - computed: false, optional: false, required: true
+  private _patchingMode?: string; 
+  public get patchingMode() {
+    return this.getStringAttribute('patching_mode');
+  }
+  public set patchingMode(value: string) {
+    this._patchingMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchingModeInput() {
+    return this._patchingMode;
+  }
+
+  // preference - computed: false, optional: false, required: true
+  private _preference?: string; 
+  public get preference() {
+    return this.getStringAttribute('preference');
+  }
+  public set preference(value: string) {
+    this._preference = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferenceInput() {
+    return this._preference;
+  }
+
+  // weeks_of_month - computed: true, optional: true, required: false
+  private _weeksOfMonth?: number[]; 
+  public get weeksOfMonth() {
+    return cdktn.Token.asNumberList(cdktn.Fn.tolist(this.getNumberListAttribute('weeks_of_month')));
+  }
+  public set weeksOfMonth(value: number[]) {
+    this._weeksOfMonth = value;
+  }
+  public resetWeeksOfMonth() {
+    this._weeksOfMonth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeksOfMonthInput() {
+    return this._weeksOfMonth;
+  }
+}
+
+export class MaintenanceWindowPropertyList extends cdktn.ComplexList {
+  public internalValue? : MaintenanceWindowProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MaintenanceWindowPropertyOutputReference {
+    return new MaintenanceWindowPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#create AwsOdbCloudExadataInfrastructure#create}
+  */
+  readonly create?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#delete AwsOdbCloudExadataInfrastructure#delete}
+  */
+  readonly delete?: string;
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#update AwsOdbCloudExadataInfrastructure#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

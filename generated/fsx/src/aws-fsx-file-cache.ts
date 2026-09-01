@@ -1,0 +1,1505 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsFsxFileCacheConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#copy_tags_to_data_repository_associations AwsFsxFileCache#copy_tags_to_data_repository_associations}
+  */
+  readonly copyTagsToDataRepositoryAssociations?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type AwsFsxFileCache#file_cache_type}
+  */
+  readonly fileCacheType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_type_version AwsFsxFileCache#file_cache_type_version}
+  */
+  readonly fileCacheTypeVersion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#id AwsFsxFileCache#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#kms_key_id AwsFsxFileCache#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#region AwsFsxFileCache#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#security_group_ids AwsFsxFileCache#security_group_ids}
+  */
+  readonly securityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity AwsFsxFileCache#storage_capacity}
+  */
+  readonly storageCapacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#subnet_ids AwsFsxFileCache#subnet_ids}
+  */
+  readonly subnetIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags AwsFsxFileCache#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags_all AwsFsxFileCache#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * data_repository_association block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_association AwsFsxFileCache#data_repository_association}
+  */
+  readonly dataRepositoryAssociation?: AwsFsxFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable;
+  /**
+  * lustre_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#lustre_configuration AwsFsxFileCache#lustre_configuration}
+  */
+  readonly lustreConfiguration?: AwsFsxFileCache.LustreConfigurationProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#timeouts AwsFsxFileCache#timeouts}
+  */
+  readonly timeouts?: AwsFsxFileCache.TimeoutsProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache aws_fsx_file_cache}
+*/
+export class AwsFsxFileCache extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_fsx_file_cache";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsFsxFileCache resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsFsxFileCache to import
+  * @param importFromId The id of the existing AwsFsxFileCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFsxFileCache to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_file_cache", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache aws_fsx_file_cache} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsFsxFileCacheConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsFsxFileCacheConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_fsx_file_cache',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._copyTagsToDataRepositoryAssociations = config.copyTagsToDataRepositoryAssociations;
+    this._fileCacheType = config.fileCacheType;
+    this._fileCacheTypeVersion = config.fileCacheTypeVersion;
+    this._id = config.id;
+    this._kmsKeyId = config.kmsKeyId;
+    this._region = config.region;
+    this._securityGroupIds = config.securityGroupIds;
+    this._storageCapacity = config.storageCapacity;
+    this._subnetIds = config.subnetIds;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._dataRepositoryAssociation.internalValue = config.dataRepositoryAssociation;
+    this._lustreConfiguration.internalValue = config.lustreConfiguration;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // copy_tags_to_data_repository_associations - computed: false, optional: true, required: false
+  private _copyTagsToDataRepositoryAssociations?: boolean | cdktn.IResolvable; 
+  public get copyTagsToDataRepositoryAssociations() {
+    return this.getBooleanAttribute('copy_tags_to_data_repository_associations');
+  }
+  public set copyTagsToDataRepositoryAssociations(value: boolean | cdktn.IResolvable) {
+    this._copyTagsToDataRepositoryAssociations = value;
+  }
+  public resetCopyTagsToDataRepositoryAssociations() {
+    this._copyTagsToDataRepositoryAssociations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyTagsToDataRepositoryAssociationsInput() {
+    return this._copyTagsToDataRepositoryAssociations;
+  }
+
+  // data_repository_association_ids - computed: true, optional: false, required: false
+  public get dataRepositoryAssociationIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('data_repository_association_ids'));
+  }
+
+  // dns_name - computed: true, optional: false, required: false
+  public get dnsName() {
+    return this.getStringAttribute('dns_name');
+  }
+
+  // file_cache_id - computed: true, optional: false, required: false
+  public get fileCacheId() {
+    return this.getStringAttribute('file_cache_id');
+  }
+
+  // file_cache_type - computed: false, optional: false, required: true
+  private _fileCacheType?: string; 
+  public get fileCacheType() {
+    return this.getStringAttribute('file_cache_type');
+  }
+  public set fileCacheType(value: string) {
+    this._fileCacheType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileCacheTypeInput() {
+    return this._fileCacheType;
+  }
+
+  // file_cache_type_version - computed: false, optional: false, required: true
+  private _fileCacheTypeVersion?: string; 
+  public get fileCacheTypeVersion() {
+    return this.getStringAttribute('file_cache_type_version');
+  }
+  public set fileCacheTypeVersion(value: string) {
+    this._fileCacheTypeVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileCacheTypeVersionInput() {
+    return this._fileCacheTypeVersion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // kms_key_id - computed: true, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // network_interface_ids - computed: true, optional: false, required: false
+  public get networkInterfaceIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('network_interface_ids'));
+  }
+
+  // owner_id - computed: true, optional: false, required: false
+  public get ownerId() {
+    return this.getStringAttribute('owner_id');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_group_ids - computed: false, optional: true, required: false
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  public resetSecurityGroupIds() {
+    this._securityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // storage_capacity - computed: false, optional: false, required: true
+  private _storageCapacity?: number; 
+  public get storageCapacity() {
+    return this.getNumberAttribute('storage_capacity');
+  }
+  public set storageCapacity(value: number) {
+    this._storageCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageCapacityInput() {
+    return this._storageCapacity;
+  }
+
+  // subnet_ids - computed: false, optional: false, required: true
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return this.getListAttribute('subnet_ids');
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_id - computed: true, optional: false, required: false
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+
+  // data_repository_association - computed: false, optional: true, required: false
+  private _dataRepositoryAssociation = new AwsFsxFileCache.DataRepositoryAssociationPropertyList(this, "data_repository_association", true);
+  public get dataRepositoryAssociation() {
+    return this._dataRepositoryAssociation;
+  }
+  public putDataRepositoryAssociation(value: AwsFsxFileCache.DataRepositoryAssociationProperty[] | cdktn.IResolvable) {
+    this._dataRepositoryAssociation.internalValue = value;
+  }
+  public resetDataRepositoryAssociation() {
+    this._dataRepositoryAssociation.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataRepositoryAssociationInput() {
+    return this._dataRepositoryAssociation.internalValue;
+  }
+
+  // lustre_configuration - computed: false, optional: true, required: false
+  private _lustreConfiguration = new AwsFsxFileCache.LustreConfigurationPropertyList(this, "lustre_configuration", true);
+  public get lustreConfiguration() {
+    return this._lustreConfiguration;
+  }
+  public putLustreConfiguration(value: AwsFsxFileCache.LustreConfigurationProperty[] | cdktn.IResolvable) {
+    this._lustreConfiguration.internalValue = value;
+  }
+  public resetLustreConfiguration() {
+    this._lustreConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lustreConfigurationInput() {
+    return this._lustreConfiguration.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsFsxFileCache.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsFsxFileCache.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      copy_tags_to_data_repository_associations: cdktn.booleanToTerraform(this._copyTagsToDataRepositoryAssociations),
+      file_cache_type: cdktn.stringToTerraform(this._fileCacheType),
+      file_cache_type_version: cdktn.stringToTerraform(this._fileCacheTypeVersion),
+      id: cdktn.stringToTerraform(this._id),
+      kms_key_id: cdktn.stringToTerraform(this._kmsKeyId),
+      region: cdktn.stringToTerraform(this._region),
+      security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroupIds),
+      storage_capacity: cdktn.numberToTerraform(this._storageCapacity),
+      subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      data_repository_association: cdktn.listMapper(awsFsxFileCacheDataRepositoryAssociationPropertyToTerraform, true)(this._dataRepositoryAssociation.internalValue),
+      lustre_configuration: cdktn.listMapper(awsFsxFileCacheLustreConfigurationPropertyToTerraform, true)(this._lustreConfiguration.internalValue),
+      timeouts: awsFsxFileCacheTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      copy_tags_to_data_repository_associations: {
+        value: cdktn.booleanToHclTerraform(this._copyTagsToDataRepositoryAssociations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      file_cache_type: {
+        value: cdktn.stringToHclTerraform(this._fileCacheType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      file_cache_type_version: {
+        value: cdktn.stringToHclTerraform(this._fileCacheTypeVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._kmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_group_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroupIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      storage_capacity: {
+        value: cdktn.numberToHclTerraform(this._storageCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._subnetIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      data_repository_association: {
+        value: cdktn.listMapperHcl(awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform, true)(this._dataRepositoryAssociation.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsFsxFileCache.DataRepositoryAssociationPropertyList",
+      },
+      lustre_configuration: {
+        value: cdktn.listMapperHcl(awsFsxFileCacheLustreConfigurationPropertyToHclTerraform, true)(this._lustreConfiguration.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsFsxFileCache.LustreConfigurationPropertyList",
+      },
+      timeouts: {
+        value: awsFsxFileCacheTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsFsxFileCache.TimeoutsProperty",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsFsxFileCacheNfsPropertyToTerraform(struct?: AwsFsxFileCache.NfsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    dns_ips: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dnsIps),
+    version: cdktn.stringToTerraform(struct!.version),
+  }
+}
+
+
+export function awsFsxFileCacheNfsPropertyToHclTerraform(struct?: AwsFsxFileCache.NfsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    dns_ips: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.dnsIps),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    version: {
+      value: cdktn.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsFsxFileCacheDataRepositoryAssociationPropertyToTerraform(struct?: AwsFsxFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    data_repository_path: cdktn.stringToTerraform(struct!.dataRepositoryPath),
+    data_repository_subdirectories: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dataRepositorySubdirectories),
+    file_cache_path: cdktn.stringToTerraform(struct!.fileCachePath),
+    tags: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.tags),
+    nfs: cdktn.listMapper(awsFsxFileCacheNfsPropertyToTerraform, true)(struct!.nfs),
+  }
+}
+
+
+export function awsFsxFileCacheDataRepositoryAssociationPropertyToHclTerraform(struct?: AwsFsxFileCache.DataRepositoryAssociationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    data_repository_path: {
+      value: cdktn.stringToHclTerraform(struct!.dataRepositoryPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_repository_subdirectories: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.dataRepositorySubdirectories),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    file_cache_path: {
+      value: cdktn.stringToHclTerraform(struct!.fileCachePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(struct!.tags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    nfs: {
+      value: cdktn.listMapperHcl(awsFsxFileCacheNfsPropertyToHclTerraform, true)(struct!.nfs),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NfsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsFsxFileCacheLogConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.LogConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsFsxFileCacheLogConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.LogConfigurationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsFsxFileCacheMetadataConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    storage_capacity: cdktn.numberToTerraform(struct!.storageCapacity),
+  }
+}
+
+
+export function awsFsxFileCacheMetadataConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.MetadataConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    storage_capacity: {
+      value: cdktn.numberToHclTerraform(struct!.storageCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsFsxFileCacheLustreConfigurationPropertyToTerraform(struct?: AwsFsxFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    deployment_type: cdktn.stringToTerraform(struct!.deploymentType),
+    per_unit_storage_throughput: cdktn.numberToTerraform(struct!.perUnitStorageThroughput),
+    weekly_maintenance_start_time: cdktn.stringToTerraform(struct!.weeklyMaintenanceStartTime),
+    metadata_configuration: cdktn.listMapper(awsFsxFileCacheMetadataConfigurationPropertyToTerraform, true)(struct!.metadataConfiguration),
+  }
+}
+
+
+export function awsFsxFileCacheLustreConfigurationPropertyToHclTerraform(struct?: AwsFsxFileCache.LustreConfigurationProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    deployment_type: {
+      value: cdktn.stringToHclTerraform(struct!.deploymentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    per_unit_storage_throughput: {
+      value: cdktn.numberToHclTerraform(struct!.perUnitStorageThroughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    weekly_maintenance_start_time: {
+      value: cdktn.stringToHclTerraform(struct!.weeklyMaintenanceStartTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    metadata_configuration: {
+      value: cdktn.listMapperHcl(awsFsxFileCacheMetadataConfigurationPropertyToHclTerraform, true)(struct!.metadataConfiguration),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MetadataConfigurationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsFsxFileCacheTimeoutsPropertyToTerraform(struct?: AwsFsxFileCache.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsFsxFileCacheTimeoutsPropertyToHclTerraform(struct?: AwsFsxFileCache.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsFsxFileCache {
+export interface NfsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#dns_ips AwsFsxFileCache#dns_ips}
+  */
+  readonly dnsIps?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#version AwsFsxFileCache#version}
+  */
+  readonly version: string;
+}
+export class NfsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NfsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dnsIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dnsIps = this._dnsIps;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NfsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dnsIps = undefined;
+      this._version = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dnsIps = value.dnsIps;
+      this._version = value.version;
+    }
+  }
+
+  // dns_ips - computed: false, optional: true, required: false
+  private _dnsIps?: string[]; 
+  public get dnsIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('dns_ips'));
+  }
+  public set dnsIps(value: string[]) {
+    this._dnsIps = value;
+  }
+  public resetDnsIps() {
+    this._dnsIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsIpsInput() {
+    return this._dnsIps;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class NfsPropertyList extends cdktn.ComplexList {
+  public internalValue? : NfsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NfsPropertyOutputReference {
+    return new NfsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataRepositoryAssociationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_path AwsFsxFileCache#data_repository_path}
+  */
+  readonly dataRepositoryPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#data_repository_subdirectories AwsFsxFileCache#data_repository_subdirectories}
+  */
+  readonly dataRepositorySubdirectories?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#file_cache_path AwsFsxFileCache#file_cache_path}
+  */
+  readonly fileCachePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#tags AwsFsxFileCache#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * nfs block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#nfs AwsFsxFileCache#nfs}
+  */
+  readonly nfs?: NfsProperty[] | cdktn.IResolvable;
+}
+export class DataRepositoryAssociationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataRepositoryAssociationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataRepositoryPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataRepositoryPath = this._dataRepositoryPath;
+    }
+    if (this._dataRepositorySubdirectories !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataRepositorySubdirectories = this._dataRepositorySubdirectories;
+    }
+    if (this._fileCachePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fileCachePath = this._fileCachePath;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._nfs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfs = this._nfs?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataRepositoryAssociationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataRepositoryPath = undefined;
+      this._dataRepositorySubdirectories = undefined;
+      this._fileCachePath = undefined;
+      this._tags = undefined;
+      this._nfs.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataRepositoryPath = value.dataRepositoryPath;
+      this._dataRepositorySubdirectories = value.dataRepositorySubdirectories;
+      this._fileCachePath = value.fileCachePath;
+      this._tags = value.tags;
+      this._nfs.internalValue = value.nfs;
+    }
+  }
+
+  // association_id - computed: true, optional: false, required: false
+  public get associationId() {
+    return this.getStringAttribute('association_id');
+  }
+
+  // data_repository_path - computed: false, optional: false, required: true
+  private _dataRepositoryPath?: string; 
+  public get dataRepositoryPath() {
+    return this.getStringAttribute('data_repository_path');
+  }
+  public set dataRepositoryPath(value: string) {
+    this._dataRepositoryPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataRepositoryPathInput() {
+    return this._dataRepositoryPath;
+  }
+
+  // data_repository_subdirectories - computed: false, optional: true, required: false
+  private _dataRepositorySubdirectories?: string[]; 
+  public get dataRepositorySubdirectories() {
+    return cdktn.Fn.tolist(this.getListAttribute('data_repository_subdirectories'));
+  }
+  public set dataRepositorySubdirectories(value: string[]) {
+    this._dataRepositorySubdirectories = value;
+  }
+  public resetDataRepositorySubdirectories() {
+    this._dataRepositorySubdirectories = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataRepositorySubdirectoriesInput() {
+    return this._dataRepositorySubdirectories;
+  }
+
+  // file_cache_id - computed: true, optional: false, required: false
+  public get fileCacheId() {
+    return this.getStringAttribute('file_cache_id');
+  }
+
+  // file_cache_path - computed: false, optional: false, required: true
+  private _fileCachePath?: string; 
+  public get fileCachePath() {
+    return this.getStringAttribute('file_cache_path');
+  }
+  public set fileCachePath(value: string) {
+    this._fileCachePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileCachePathInput() {
+    return this._fileCachePath;
+  }
+
+  // file_system_id - computed: true, optional: false, required: false
+  public get fileSystemId() {
+    return this.getStringAttribute('file_system_id');
+  }
+
+  // file_system_path - computed: true, optional: false, required: false
+  public get fileSystemPath() {
+    return this.getStringAttribute('file_system_path');
+  }
+
+  // imported_file_chunk_size - computed: true, optional: false, required: false
+  public get importedFileChunkSize() {
+    return this.getNumberAttribute('imported_file_chunk_size');
+  }
+
+  // resource_arn - computed: true, optional: false, required: false
+  public get resourceArn() {
+    return this.getStringAttribute('resource_arn');
+  }
+
+  // tags - computed: true, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // nfs - computed: false, optional: true, required: false
+  private _nfs = new NfsPropertyList(this, "nfs", true);
+  public get nfs() {
+    return this._nfs;
+  }
+  public putNfs(value: NfsProperty[] | cdktn.IResolvable) {
+    this._nfs.internalValue = value;
+  }
+  public resetNfs() {
+    this._nfs.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsInput() {
+    return this._nfs.internalValue;
+  }
+}
+
+export class DataRepositoryAssociationPropertyList extends cdktn.ComplexList {
+  public internalValue? : DataRepositoryAssociationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataRepositoryAssociationPropertyOutputReference {
+    return new DataRepositoryAssociationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogConfigurationProperty {
+}
+export class LogConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogConfigurationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogConfigurationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // destination - computed: true, optional: false, required: false
+  public get destination() {
+    return this.getStringAttribute('destination');
+  }
+
+  // level - computed: true, optional: false, required: false
+  public get level() {
+    return this.getStringAttribute('level');
+  }
+}
+
+export class LogConfigurationPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogConfigurationPropertyOutputReference {
+    return new LogConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MetadataConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#storage_capacity AwsFsxFileCache#storage_capacity}
+  */
+  readonly storageCapacity: number;
+}
+export class MetadataConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MetadataConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._storageCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageCapacity = this._storageCapacity;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MetadataConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._storageCapacity = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._storageCapacity = value.storageCapacity;
+    }
+  }
+
+  // storage_capacity - computed: false, optional: false, required: true
+  private _storageCapacity?: number; 
+  public get storageCapacity() {
+    return this.getNumberAttribute('storage_capacity');
+  }
+  public set storageCapacity(value: number) {
+    this._storageCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageCapacityInput() {
+    return this._storageCapacity;
+  }
+}
+
+export class MetadataConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : MetadataConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MetadataConfigurationPropertyOutputReference {
+    return new MetadataConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LustreConfigurationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#deployment_type AwsFsxFileCache#deployment_type}
+  */
+  readonly deploymentType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#per_unit_storage_throughput AwsFsxFileCache#per_unit_storage_throughput}
+  */
+  readonly perUnitStorageThroughput: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#weekly_maintenance_start_time AwsFsxFileCache#weekly_maintenance_start_time}
+  */
+  readonly weeklyMaintenanceStartTime?: string;
+  /**
+  * metadata_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#metadata_configuration AwsFsxFileCache#metadata_configuration}
+  */
+  readonly metadataConfiguration: MetadataConfigurationProperty[] | cdktn.IResolvable;
+}
+export class LustreConfigurationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LustreConfigurationProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deploymentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deploymentType = this._deploymentType;
+    }
+    if (this._perUnitStorageThroughput !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.perUnitStorageThroughput = this._perUnitStorageThroughput;
+    }
+    if (this._weeklyMaintenanceStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyMaintenanceStartTime = this._weeklyMaintenanceStartTime;
+    }
+    if (this._metadataConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metadataConfiguration = this._metadataConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LustreConfigurationProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deploymentType = undefined;
+      this._perUnitStorageThroughput = undefined;
+      this._weeklyMaintenanceStartTime = undefined;
+      this._metadataConfiguration.internalValue = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deploymentType = value.deploymentType;
+      this._perUnitStorageThroughput = value.perUnitStorageThroughput;
+      this._weeklyMaintenanceStartTime = value.weeklyMaintenanceStartTime;
+      this._metadataConfiguration.internalValue = value.metadataConfiguration;
+    }
+  }
+
+  // deployment_type - computed: false, optional: false, required: true
+  private _deploymentType?: string; 
+  public get deploymentType() {
+    return this.getStringAttribute('deployment_type');
+  }
+  public set deploymentType(value: string) {
+    this._deploymentType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentTypeInput() {
+    return this._deploymentType;
+  }
+
+  // log_configuration - computed: true, optional: false, required: false
+  private _logConfiguration = new LogConfigurationPropertyList(this, "log_configuration", true);
+  public get logConfiguration() {
+    return this._logConfiguration;
+  }
+
+  // mount_name - computed: true, optional: false, required: false
+  public get mountName() {
+    return this.getStringAttribute('mount_name');
+  }
+
+  // per_unit_storage_throughput - computed: false, optional: false, required: true
+  private _perUnitStorageThroughput?: number; 
+  public get perUnitStorageThroughput() {
+    return this.getNumberAttribute('per_unit_storage_throughput');
+  }
+  public set perUnitStorageThroughput(value: number) {
+    this._perUnitStorageThroughput = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perUnitStorageThroughputInput() {
+    return this._perUnitStorageThroughput;
+  }
+
+  // weekly_maintenance_start_time - computed: false, optional: true, required: false
+  private _weeklyMaintenanceStartTime?: string; 
+  public get weeklyMaintenanceStartTime() {
+    return this.getStringAttribute('weekly_maintenance_start_time');
+  }
+  public set weeklyMaintenanceStartTime(value: string) {
+    this._weeklyMaintenanceStartTime = value;
+  }
+  public resetWeeklyMaintenanceStartTime() {
+    this._weeklyMaintenanceStartTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyMaintenanceStartTimeInput() {
+    return this._weeklyMaintenanceStartTime;
+  }
+
+  // metadata_configuration - computed: false, optional: false, required: true
+  private _metadataConfiguration = new MetadataConfigurationPropertyList(this, "metadata_configuration", true);
+  public get metadataConfiguration() {
+    return this._metadataConfiguration;
+  }
+  public putMetadataConfiguration(value: MetadataConfigurationProperty[] | cdktn.IResolvable) {
+    this._metadataConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataConfigurationInput() {
+    return this._metadataConfiguration.internalValue;
+  }
+}
+
+export class LustreConfigurationPropertyList extends cdktn.ComplexList {
+  public internalValue? : LustreConfigurationProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LustreConfigurationPropertyOutputReference {
+    return new LustreConfigurationPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#create AwsFsxFileCache#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#delete AwsFsxFileCache#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_file_cache#update AwsFsxFileCache#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+}

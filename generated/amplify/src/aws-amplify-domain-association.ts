@@ -1,0 +1,593 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsAmplifyDomainAssociationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#app_id AwsAmplifyDomainAssociation#app_id}
+  */
+  readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#domain_name AwsAmplifyDomainAssociation#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#enable_auto_sub_domain AwsAmplifyDomainAssociation#enable_auto_sub_domain}
+  */
+  readonly enableAutoSubDomain?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#id AwsAmplifyDomainAssociation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#region AwsAmplifyDomainAssociation#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#wait_for_verification AwsAmplifyDomainAssociation#wait_for_verification}
+  */
+  readonly waitForVerification?: boolean | cdktn.IResolvable;
+  /**
+  * certificate_settings block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#certificate_settings AwsAmplifyDomainAssociation#certificate_settings}
+  */
+  readonly certificateSettings?: AwsAmplifyDomainAssociation.CertificateSettingsProperty;
+  /**
+  * sub_domain block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#sub_domain AwsAmplifyDomainAssociation#sub_domain}
+  */
+  readonly subDomain: AwsAmplifyDomainAssociation.SubDomainProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association aws_amplify_domain_association}
+*/
+export class AwsAmplifyDomainAssociation extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_amplify_domain_association";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsAmplifyDomainAssociation resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsAmplifyDomainAssociation to import
+  * @param importFromId The id of the existing AwsAmplifyDomainAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAmplifyDomainAssociation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_amplify_domain_association", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association aws_amplify_domain_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsAmplifyDomainAssociationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsAmplifyDomainAssociationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_amplify_domain_association',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._appId = config.appId;
+    this._domainName = config.domainName;
+    this._enableAutoSubDomain = config.enableAutoSubDomain;
+    this._id = config.id;
+    this._region = config.region;
+    this._waitForVerification = config.waitForVerification;
+    this._certificateSettings.internalValue = config.certificateSettings;
+    this._subDomain.internalValue = config.subDomain;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // app_id - computed: false, optional: false, required: true
+  private _appId?: string; 
+  public get appId() {
+    return this.getStringAttribute('app_id');
+  }
+  public set appId(value: string) {
+    this._appId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appIdInput() {
+    return this._appId;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // certificate_verification_dns_record - computed: true, optional: false, required: false
+  public get certificateVerificationDnsRecord() {
+    return this.getStringAttribute('certificate_verification_dns_record');
+  }
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName?: string; 
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName;
+  }
+
+  // enable_auto_sub_domain - computed: false, optional: true, required: false
+  private _enableAutoSubDomain?: boolean | cdktn.IResolvable; 
+  public get enableAutoSubDomain() {
+    return this.getBooleanAttribute('enable_auto_sub_domain');
+  }
+  public set enableAutoSubDomain(value: boolean | cdktn.IResolvable) {
+    this._enableAutoSubDomain = value;
+  }
+  public resetEnableAutoSubDomain() {
+    this._enableAutoSubDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutoSubDomainInput() {
+    return this._enableAutoSubDomain;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // wait_for_verification - computed: false, optional: true, required: false
+  private _waitForVerification?: boolean | cdktn.IResolvable; 
+  public get waitForVerification() {
+    return this.getBooleanAttribute('wait_for_verification');
+  }
+  public set waitForVerification(value: boolean | cdktn.IResolvable) {
+    this._waitForVerification = value;
+  }
+  public resetWaitForVerification() {
+    this._waitForVerification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForVerificationInput() {
+    return this._waitForVerification;
+  }
+
+  // certificate_settings - computed: false, optional: true, required: false
+  private _certificateSettings = new AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference(this, "certificate_settings");
+  public get certificateSettings() {
+    return this._certificateSettings;
+  }
+  public putCertificateSettings(value: AwsAmplifyDomainAssociation.CertificateSettingsProperty) {
+    this._certificateSettings.internalValue = value;
+  }
+  public resetCertificateSettings() {
+    this._certificateSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateSettingsInput() {
+    return this._certificateSettings.internalValue;
+  }
+
+  // sub_domain - computed: false, optional: false, required: true
+  private _subDomain = new AwsAmplifyDomainAssociation.SubDomainPropertyList(this, "sub_domain", true);
+  public get subDomain() {
+    return this._subDomain;
+  }
+  public putSubDomain(value: AwsAmplifyDomainAssociation.SubDomainProperty[] | cdktn.IResolvable) {
+    this._subDomain.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subDomainInput() {
+    return this._subDomain.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      app_id: cdktn.stringToTerraform(this._appId),
+      domain_name: cdktn.stringToTerraform(this._domainName),
+      enable_auto_sub_domain: cdktn.booleanToTerraform(this._enableAutoSubDomain),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      wait_for_verification: cdktn.booleanToTerraform(this._waitForVerification),
+      certificate_settings: awsAmplifyDomainAssociationCertificateSettingsPropertyToTerraform(this._certificateSettings.internalValue),
+      sub_domain: cdktn.listMapper(awsAmplifyDomainAssociationSubDomainPropertyToTerraform, true)(this._subDomain.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_id: {
+        value: cdktn.stringToHclTerraform(this._appId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_name: {
+        value: cdktn.stringToHclTerraform(this._domainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_auto_sub_domain: {
+        value: cdktn.booleanToHclTerraform(this._enableAutoSubDomain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wait_for_verification: {
+        value: cdktn.booleanToHclTerraform(this._waitForVerification),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      certificate_settings: {
+        value: awsAmplifyDomainAssociationCertificateSettingsPropertyToHclTerraform(this._certificateSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsAmplifyDomainAssociation.CertificateSettingsPropertyList",
+      },
+      sub_domain: {
+        value: cdktn.listMapperHcl(awsAmplifyDomainAssociationSubDomainPropertyToHclTerraform, true)(this._subDomain.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsAmplifyDomainAssociation.SubDomainPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsAmplifyDomainAssociationCertificateSettingsPropertyToTerraform(struct?: AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference | AwsAmplifyDomainAssociation.CertificateSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    custom_certificate_arn: cdktn.stringToTerraform(struct!.customCertificateArn),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsAmplifyDomainAssociationCertificateSettingsPropertyToHclTerraform(struct?: AwsAmplifyDomainAssociation.CertificateSettingsPropertyOutputReference | AwsAmplifyDomainAssociation.CertificateSettingsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    custom_certificate_arn: {
+      value: cdktn.stringToHclTerraform(struct!.customCertificateArn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsAmplifyDomainAssociationSubDomainPropertyToTerraform(struct?: AwsAmplifyDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    branch_name: cdktn.stringToTerraform(struct!.branchName),
+    prefix: cdktn.stringToTerraform(struct!.prefix),
+  }
+}
+
+
+export function awsAmplifyDomainAssociationSubDomainPropertyToHclTerraform(struct?: AwsAmplifyDomainAssociation.SubDomainProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    branch_name: {
+      value: cdktn.stringToHclTerraform(struct!.branchName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prefix: {
+      value: cdktn.stringToHclTerraform(struct!.prefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsAmplifyDomainAssociation {
+export interface CertificateSettingsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#custom_certificate_arn AwsAmplifyDomainAssociation#custom_certificate_arn}
+  */
+  readonly customCertificateArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#type AwsAmplifyDomainAssociation#type}
+  */
+  readonly type: string;
+}
+export class CertificateSettingsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CertificateSettingsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customCertificateArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customCertificateArn = this._customCertificateArn;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateSettingsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customCertificateArn = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customCertificateArn = value.customCertificateArn;
+      this._type = value.type;
+    }
+  }
+
+  // certificate_verification_dns_record - computed: true, optional: false, required: false
+  public get certificateVerificationDnsRecord() {
+    return this.getStringAttribute('certificate_verification_dns_record');
+  }
+
+  // custom_certificate_arn - computed: false, optional: true, required: false
+  private _customCertificateArn?: string; 
+  public get customCertificateArn() {
+    return this.getStringAttribute('custom_certificate_arn');
+  }
+  public set customCertificateArn(value: string) {
+    this._customCertificateArn = value;
+  }
+  public resetCustomCertificateArn() {
+    this._customCertificateArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customCertificateArnInput() {
+    return this._customCertificateArn;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface SubDomainProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#branch_name AwsAmplifyDomainAssociation#branch_name}
+  */
+  readonly branchName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/amplify_domain_association#prefix AwsAmplifyDomainAssociation#prefix}
+  */
+  readonly prefix: string;
+}
+export class SubDomainPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SubDomainProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._branchName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.branchName = this._branchName;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SubDomainProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._branchName = undefined;
+      this._prefix = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._branchName = value.branchName;
+      this._prefix = value.prefix;
+    }
+  }
+
+  // branch_name - computed: false, optional: false, required: true
+  private _branchName?: string; 
+  public get branchName() {
+    return this.getStringAttribute('branch_name');
+  }
+  public set branchName(value: string) {
+    this._branchName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchNameInput() {
+    return this._branchName;
+  }
+
+  // dns_record - computed: true, optional: false, required: false
+  public get dnsRecord() {
+    return this.getStringAttribute('dns_record');
+  }
+
+  // prefix - computed: false, optional: false, required: true
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // verified - computed: true, optional: false, required: false
+  public get verified() {
+    return this.getBooleanAttribute('verified');
+  }
+}
+
+export class SubDomainPropertyList extends cdktn.ComplexList {
+  public internalValue? : SubDomainProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SubDomainPropertyOutputReference {
+    return new SubDomainPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

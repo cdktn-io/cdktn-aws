@@ -1,0 +1,231 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsEc2InstanceMetadataDefaultsConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_endpoint AwsEc2InstanceMetadataDefaults#http_endpoint}
+  */
+  readonly httpEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_put_response_hop_limit AwsEc2InstanceMetadataDefaults#http_put_response_hop_limit}
+  */
+  readonly httpPutResponseHopLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#http_tokens AwsEc2InstanceMetadataDefaults#http_tokens}
+  */
+  readonly httpTokens?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#instance_metadata_tags AwsEc2InstanceMetadataDefaults#instance_metadata_tags}
+  */
+  readonly instanceMetadataTags?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#region AwsEc2InstanceMetadataDefaults#region}
+  */
+  readonly region?: string;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults aws_ec2_instance_metadata_defaults}
+*/
+export class AwsEc2InstanceMetadataDefaults extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_ec2_instance_metadata_defaults";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsEc2InstanceMetadataDefaults resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsEc2InstanceMetadataDefaults to import
+  * @param importFromId The id of the existing AwsEc2InstanceMetadataDefaults that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2InstanceMetadataDefaults to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_instance_metadata_defaults", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_instance_metadata_defaults aws_ec2_instance_metadata_defaults} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsEc2InstanceMetadataDefaultsConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: AwsEc2InstanceMetadataDefaultsConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_ec2_instance_metadata_defaults',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._httpEndpoint = config.httpEndpoint;
+    this._httpPutResponseHopLimit = config.httpPutResponseHopLimit;
+    this._httpTokens = config.httpTokens;
+    this._instanceMetadataTags = config.instanceMetadataTags;
+    this._region = config.region;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // http_endpoint - computed: true, optional: true, required: false
+  private _httpEndpoint?: string; 
+  public get httpEndpoint() {
+    return this.getStringAttribute('http_endpoint');
+  }
+  public set httpEndpoint(value: string) {
+    this._httpEndpoint = value;
+  }
+  public resetHttpEndpoint() {
+    this._httpEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpEndpointInput() {
+    return this._httpEndpoint;
+  }
+
+  // http_put_response_hop_limit - computed: true, optional: true, required: false
+  private _httpPutResponseHopLimit?: number; 
+  public get httpPutResponseHopLimit() {
+    return this.getNumberAttribute('http_put_response_hop_limit');
+  }
+  public set httpPutResponseHopLimit(value: number) {
+    this._httpPutResponseHopLimit = value;
+  }
+  public resetHttpPutResponseHopLimit() {
+    this._httpPutResponseHopLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpPutResponseHopLimitInput() {
+    return this._httpPutResponseHopLimit;
+  }
+
+  // http_tokens - computed: true, optional: true, required: false
+  private _httpTokens?: string; 
+  public get httpTokens() {
+    return this.getStringAttribute('http_tokens');
+  }
+  public set httpTokens(value: string) {
+    this._httpTokens = value;
+  }
+  public resetHttpTokens() {
+    this._httpTokens = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpTokensInput() {
+    return this._httpTokens;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // instance_metadata_tags - computed: true, optional: true, required: false
+  private _instanceMetadataTags?: string; 
+  public get instanceMetadataTags() {
+    return this.getStringAttribute('instance_metadata_tags');
+  }
+  public set instanceMetadataTags(value: string) {
+    this._instanceMetadataTags = value;
+  }
+  public resetInstanceMetadataTags() {
+    this._instanceMetadataTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceMetadataTagsInput() {
+    return this._instanceMetadataTags;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      http_endpoint: cdktn.stringToTerraform(this._httpEndpoint),
+      http_put_response_hop_limit: cdktn.numberToTerraform(this._httpPutResponseHopLimit),
+      http_tokens: cdktn.stringToTerraform(this._httpTokens),
+      instance_metadata_tags: cdktn.stringToTerraform(this._instanceMetadataTags),
+      region: cdktn.stringToTerraform(this._region),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      http_endpoint: {
+        value: cdktn.stringToHclTerraform(this._httpEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      http_put_response_hop_limit: {
+        value: cdktn.numberToHclTerraform(this._httpPutResponseHopLimit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      http_tokens: {
+        value: cdktn.stringToHclTerraform(this._httpTokens),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_metadata_tags: {
+        value: cdktn.stringToHclTerraform(this._instanceMetadataTags),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

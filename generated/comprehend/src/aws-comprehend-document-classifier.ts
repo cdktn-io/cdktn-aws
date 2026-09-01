@@ -1,0 +1,1424 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsComprehendDocumentClassifierConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_access_role_arn AwsComprehendDocumentClassifier#data_access_role_arn}
+  */
+  readonly dataAccessRoleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#id AwsComprehendDocumentClassifier#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#language_code AwsComprehendDocumentClassifier#language_code}
+  */
+  readonly languageCode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#mode AwsComprehendDocumentClassifier#mode}
+  */
+  readonly mode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#model_kms_key_id AwsComprehendDocumentClassifier#model_kms_key_id}
+  */
+  readonly modelKmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#name AwsComprehendDocumentClassifier#name}
+  */
+  readonly name: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#region AwsComprehendDocumentClassifier#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags AwsComprehendDocumentClassifier#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags_all AwsComprehendDocumentClassifier#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name AwsComprehendDocumentClassifier#version_name}
+  */
+  readonly versionName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name_prefix AwsComprehendDocumentClassifier#version_name_prefix}
+  */
+  readonly versionNamePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#volume_kms_key_id AwsComprehendDocumentClassifier#volume_kms_key_id}
+  */
+  readonly volumeKmsKeyId?: string;
+  /**
+  * input_data_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#input_data_config AwsComprehendDocumentClassifier#input_data_config}
+  */
+  readonly inputDataConfig: AwsComprehendDocumentClassifier.InputDataConfigProperty;
+  /**
+  * output_data_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#output_data_config AwsComprehendDocumentClassifier#output_data_config}
+  */
+  readonly outputDataConfig?: AwsComprehendDocumentClassifier.OutputDataConfigProperty;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#timeouts AwsComprehendDocumentClassifier#timeouts}
+  */
+  readonly timeouts?: AwsComprehendDocumentClassifier.TimeoutsProperty;
+  /**
+  * vpc_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#vpc_config AwsComprehendDocumentClassifier#vpc_config}
+  */
+  readonly vpcConfig?: AwsComprehendDocumentClassifier.VpcConfigProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier aws_comprehend_document_classifier}
+*/
+export class AwsComprehendDocumentClassifier extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_comprehend_document_classifier";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsComprehendDocumentClassifier resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsComprehendDocumentClassifier to import
+  * @param importFromId The id of the existing AwsComprehendDocumentClassifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsComprehendDocumentClassifier to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_comprehend_document_classifier", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier aws_comprehend_document_classifier} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsComprehendDocumentClassifierConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsComprehendDocumentClassifierConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_comprehend_document_classifier',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._dataAccessRoleArn = config.dataAccessRoleArn;
+    this._id = config.id;
+    this._languageCode = config.languageCode;
+    this._mode = config.mode;
+    this._modelKmsKeyId = config.modelKmsKeyId;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._versionName = config.versionName;
+    this._versionNamePrefix = config.versionNamePrefix;
+    this._volumeKmsKeyId = config.volumeKmsKeyId;
+    this._inputDataConfig.internalValue = config.inputDataConfig;
+    this._outputDataConfig.internalValue = config.outputDataConfig;
+    this._timeouts.internalValue = config.timeouts;
+    this._vpcConfig.internalValue = config.vpcConfig;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // data_access_role_arn - computed: false, optional: false, required: true
+  private _dataAccessRoleArn?: string; 
+  public get dataAccessRoleArn() {
+    return this.getStringAttribute('data_access_role_arn');
+  }
+  public set dataAccessRoleArn(value: string) {
+    this._dataAccessRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataAccessRoleArnInput() {
+    return this._dataAccessRoleArn;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // language_code - computed: false, optional: false, required: true
+  private _languageCode?: string; 
+  public get languageCode() {
+    return this.getStringAttribute('language_code');
+  }
+  public set languageCode(value: string) {
+    this._languageCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get languageCodeInput() {
+    return this._languageCode;
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // model_kms_key_id - computed: false, optional: true, required: false
+  private _modelKmsKeyId?: string; 
+  public get modelKmsKeyId() {
+    return this.getStringAttribute('model_kms_key_id');
+  }
+  public set modelKmsKeyId(value: string) {
+    this._modelKmsKeyId = value;
+  }
+  public resetModelKmsKeyId() {
+    this._modelKmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelKmsKeyIdInput() {
+    return this._modelKmsKeyId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // version_name - computed: true, optional: true, required: false
+  private _versionName?: string; 
+  public get versionName() {
+    return this.getStringAttribute('version_name');
+  }
+  public set versionName(value: string) {
+    this._versionName = value;
+  }
+  public resetVersionName() {
+    this._versionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionNameInput() {
+    return this._versionName;
+  }
+
+  // version_name_prefix - computed: true, optional: true, required: false
+  private _versionNamePrefix?: string; 
+  public get versionNamePrefix() {
+    return this.getStringAttribute('version_name_prefix');
+  }
+  public set versionNamePrefix(value: string) {
+    this._versionNamePrefix = value;
+  }
+  public resetVersionNamePrefix() {
+    this._versionNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionNamePrefixInput() {
+    return this._versionNamePrefix;
+  }
+
+  // volume_kms_key_id - computed: false, optional: true, required: false
+  private _volumeKmsKeyId?: string; 
+  public get volumeKmsKeyId() {
+    return this.getStringAttribute('volume_kms_key_id');
+  }
+  public set volumeKmsKeyId(value: string) {
+    this._volumeKmsKeyId = value;
+  }
+  public resetVolumeKmsKeyId() {
+    this._volumeKmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeKmsKeyIdInput() {
+    return this._volumeKmsKeyId;
+  }
+
+  // input_data_config - computed: false, optional: false, required: true
+  private _inputDataConfig = new AwsComprehendDocumentClassifier.InputDataConfigPropertyOutputReference(this, "input_data_config");
+  public get inputDataConfig() {
+    return this._inputDataConfig;
+  }
+  public putInputDataConfig(value: AwsComprehendDocumentClassifier.InputDataConfigProperty) {
+    this._inputDataConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputDataConfigInput() {
+    return this._inputDataConfig.internalValue;
+  }
+
+  // output_data_config - computed: false, optional: true, required: false
+  private _outputDataConfig = new AwsComprehendDocumentClassifier.OutputDataConfigPropertyOutputReference(this, "output_data_config");
+  public get outputDataConfig() {
+    return this._outputDataConfig;
+  }
+  public putOutputDataConfig(value: AwsComprehendDocumentClassifier.OutputDataConfigProperty) {
+    this._outputDataConfig.internalValue = value;
+  }
+  public resetOutputDataConfig() {
+    this._outputDataConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputDataConfigInput() {
+    return this._outputDataConfig.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsComprehendDocumentClassifier.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsComprehendDocumentClassifier.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // vpc_config - computed: false, optional: true, required: false
+  private _vpcConfig = new AwsComprehendDocumentClassifier.VpcConfigPropertyOutputReference(this, "vpc_config");
+  public get vpcConfig() {
+    return this._vpcConfig;
+  }
+  public putVpcConfig(value: AwsComprehendDocumentClassifier.VpcConfigProperty) {
+    this._vpcConfig.internalValue = value;
+  }
+  public resetVpcConfig() {
+    this._vpcConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpcConfigInput() {
+    return this._vpcConfig.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      data_access_role_arn: cdktn.stringToTerraform(this._dataAccessRoleArn),
+      id: cdktn.stringToTerraform(this._id),
+      language_code: cdktn.stringToTerraform(this._languageCode),
+      mode: cdktn.stringToTerraform(this._mode),
+      model_kms_key_id: cdktn.stringToTerraform(this._modelKmsKeyId),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      version_name: cdktn.stringToTerraform(this._versionName),
+      version_name_prefix: cdktn.stringToTerraform(this._versionNamePrefix),
+      volume_kms_key_id: cdktn.stringToTerraform(this._volumeKmsKeyId),
+      input_data_config: awsComprehendDocumentClassifierInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
+      output_data_config: awsComprehendDocumentClassifierOutputDataConfigPropertyToTerraform(this._outputDataConfig.internalValue),
+      timeouts: awsComprehendDocumentClassifierTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: awsComprehendDocumentClassifierVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      data_access_role_arn: {
+        value: cdktn.stringToHclTerraform(this._dataAccessRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      language_code: {
+        value: cdktn.stringToHclTerraform(this._languageCode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mode: {
+        value: cdktn.stringToHclTerraform(this._mode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      model_kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._modelKmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version_name: {
+        value: cdktn.stringToHclTerraform(this._versionName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_name_prefix: {
+        value: cdktn.stringToHclTerraform(this._versionNamePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      volume_kms_key_id: {
+        value: cdktn.stringToHclTerraform(this._volumeKmsKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input_data_config: {
+        value: awsComprehendDocumentClassifierInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsComprehendDocumentClassifier.InputDataConfigPropertyList",
+      },
+      output_data_config: {
+        value: awsComprehendDocumentClassifierOutputDataConfigPropertyToHclTerraform(this._outputDataConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsComprehendDocumentClassifier.OutputDataConfigPropertyList",
+      },
+      timeouts: {
+        value: awsComprehendDocumentClassifierTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsComprehendDocumentClassifier.TimeoutsProperty",
+      },
+      vpc_config: {
+        value: awsComprehendDocumentClassifierVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsComprehendDocumentClassifier.VpcConfigPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsComprehendDocumentClassifierAugmentedManifestsPropertyToTerraform(struct?: AwsComprehendDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    annotation_data_s3_uri: cdktn.stringToTerraform(struct!.annotationDataS3Uri),
+    attribute_names: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.attributeNames),
+    document_type: cdktn.stringToTerraform(struct!.documentType),
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+    source_documents_s3_uri: cdktn.stringToTerraform(struct!.sourceDocumentsS3Uri),
+    split: cdktn.stringToTerraform(struct!.split),
+  }
+}
+
+
+export function awsComprehendDocumentClassifierAugmentedManifestsPropertyToHclTerraform(struct?: AwsComprehendDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    annotation_data_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.annotationDataS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    attribute_names: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.attributeNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    document_type: {
+      value: cdktn.stringToHclTerraform(struct!.documentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_documents_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.sourceDocumentsS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    split: {
+      value: cdktn.stringToHclTerraform(struct!.split),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendDocumentClassifierInputDataConfigPropertyToTerraform(struct?: AwsComprehendDocumentClassifier.InputDataConfigPropertyOutputReference | AwsComprehendDocumentClassifier.InputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    data_format: cdktn.stringToTerraform(struct!.dataFormat),
+    label_delimiter: cdktn.stringToTerraform(struct!.labelDelimiter),
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+    test_s3_uri: cdktn.stringToTerraform(struct!.testS3Uri),
+    augmented_manifests: cdktn.listMapper(awsComprehendDocumentClassifierAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
+  }
+}
+
+
+export function awsComprehendDocumentClassifierInputDataConfigPropertyToHclTerraform(struct?: AwsComprehendDocumentClassifier.InputDataConfigPropertyOutputReference | AwsComprehendDocumentClassifier.InputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    data_format: {
+      value: cdktn.stringToHclTerraform(struct!.dataFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    label_delimiter: {
+      value: cdktn.stringToHclTerraform(struct!.labelDelimiter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    test_s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.testS3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    augmented_manifests: {
+      value: cdktn.listMapperHcl(awsComprehendDocumentClassifierAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
+      isBlock: true,
+      type: "set",
+      storageClassType: "AugmentedManifestsPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendDocumentClassifierOutputDataConfigPropertyToTerraform(struct?: AwsComprehendDocumentClassifier.OutputDataConfigPropertyOutputReference | AwsComprehendDocumentClassifier.OutputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
+    s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
+  }
+}
+
+
+export function awsComprehendDocumentClassifierOutputDataConfigPropertyToHclTerraform(struct?: AwsComprehendDocumentClassifier.OutputDataConfigPropertyOutputReference | AwsComprehendDocumentClassifier.OutputDataConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    kms_key_id: {
+      value: cdktn.stringToHclTerraform(struct!.kmsKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    s3_uri: {
+      value: cdktn.stringToHclTerraform(struct!.s3Uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendDocumentClassifierTimeoutsPropertyToTerraform(struct?: AwsComprehendDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsComprehendDocumentClassifierTimeoutsPropertyToHclTerraform(struct?: AwsComprehendDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsComprehendDocumentClassifierVpcConfigPropertyToTerraform(struct?: AwsComprehendDocumentClassifier.VpcConfigPropertyOutputReference | AwsComprehendDocumentClassifier.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.securityGroupIds),
+    subnets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnets),
+  }
+}
+
+
+export function awsComprehendDocumentClassifierVpcConfigPropertyToHclTerraform(struct?: AwsComprehendDocumentClassifier.VpcConfigPropertyOutputReference | AwsComprehendDocumentClassifier.VpcConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    security_group_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.securityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnets: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.subnets),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsComprehendDocumentClassifier {
+export interface AugmentedManifestsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#annotation_data_s3_uri AwsComprehendDocumentClassifier#annotation_data_s3_uri}
+  */
+  readonly annotationDataS3Uri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#attribute_names AwsComprehendDocumentClassifier#attribute_names}
+  */
+  readonly attributeNames: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#document_type AwsComprehendDocumentClassifier#document_type}
+  */
+  readonly documentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsComprehendDocumentClassifier#s3_uri}
+  */
+  readonly s3Uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#source_documents_s3_uri AwsComprehendDocumentClassifier#source_documents_s3_uri}
+  */
+  readonly sourceDocumentsS3Uri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#split AwsComprehendDocumentClassifier#split}
+  */
+  readonly split?: string;
+}
+export class AugmentedManifestsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AugmentedManifestsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._annotationDataS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.annotationDataS3Uri = this._annotationDataS3Uri;
+    }
+    if (this._attributeNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.attributeNames = this._attributeNames;
+    }
+    if (this._documentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.documentType = this._documentType;
+    }
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    if (this._sourceDocumentsS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceDocumentsS3Uri = this._sourceDocumentsS3Uri;
+    }
+    if (this._split !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.split = this._split;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AugmentedManifestsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._annotationDataS3Uri = undefined;
+      this._attributeNames = undefined;
+      this._documentType = undefined;
+      this._s3Uri = undefined;
+      this._sourceDocumentsS3Uri = undefined;
+      this._split = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._annotationDataS3Uri = value.annotationDataS3Uri;
+      this._attributeNames = value.attributeNames;
+      this._documentType = value.documentType;
+      this._s3Uri = value.s3Uri;
+      this._sourceDocumentsS3Uri = value.sourceDocumentsS3Uri;
+      this._split = value.split;
+    }
+  }
+
+  // annotation_data_s3_uri - computed: false, optional: true, required: false
+  private _annotationDataS3Uri?: string; 
+  public get annotationDataS3Uri() {
+    return this.getStringAttribute('annotation_data_s3_uri');
+  }
+  public set annotationDataS3Uri(value: string) {
+    this._annotationDataS3Uri = value;
+  }
+  public resetAnnotationDataS3Uri() {
+    this._annotationDataS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationDataS3UriInput() {
+    return this._annotationDataS3Uri;
+  }
+
+  // attribute_names - computed: false, optional: false, required: true
+  private _attributeNames?: string[]; 
+  public get attributeNames() {
+    return this.getListAttribute('attribute_names');
+  }
+  public set attributeNames(value: string[]) {
+    this._attributeNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attributeNamesInput() {
+    return this._attributeNames;
+  }
+
+  // document_type - computed: false, optional: true, required: false
+  private _documentType?: string; 
+  public get documentType() {
+    return this.getStringAttribute('document_type');
+  }
+  public set documentType(value: string) {
+    this._documentType = value;
+  }
+  public resetDocumentType() {
+    this._documentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentTypeInput() {
+    return this._documentType;
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+
+  // source_documents_s3_uri - computed: false, optional: true, required: false
+  private _sourceDocumentsS3Uri?: string; 
+  public get sourceDocumentsS3Uri() {
+    return this.getStringAttribute('source_documents_s3_uri');
+  }
+  public set sourceDocumentsS3Uri(value: string) {
+    this._sourceDocumentsS3Uri = value;
+  }
+  public resetSourceDocumentsS3Uri() {
+    this._sourceDocumentsS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDocumentsS3UriInput() {
+    return this._sourceDocumentsS3Uri;
+  }
+
+  // split - computed: false, optional: true, required: false
+  private _split?: string; 
+  public get split() {
+    return this.getStringAttribute('split');
+  }
+  public set split(value: string) {
+    this._split = value;
+  }
+  public resetSplit() {
+    this._split = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get splitInput() {
+    return this._split;
+  }
+}
+
+export class AugmentedManifestsPropertyList extends cdktn.ComplexList {
+  public internalValue? : AugmentedManifestsProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AugmentedManifestsPropertyOutputReference {
+    return new AugmentedManifestsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface InputDataConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_format AwsComprehendDocumentClassifier#data_format}
+  */
+  readonly dataFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#label_delimiter AwsComprehendDocumentClassifier#label_delimiter}
+  */
+  readonly labelDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsComprehendDocumentClassifier#s3_uri}
+  */
+  readonly s3Uri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#test_s3_uri AwsComprehendDocumentClassifier#test_s3_uri}
+  */
+  readonly testS3Uri?: string;
+  /**
+  * augmented_manifests block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#augmented_manifests AwsComprehendDocumentClassifier#augmented_manifests}
+  */
+  readonly augmentedManifests?: AugmentedManifestsProperty[] | cdktn.IResolvable;
+}
+export class InputDataConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): InputDataConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataFormat = this._dataFormat;
+    }
+    if (this._labelDelimiter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labelDelimiter = this._labelDelimiter;
+    }
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    if (this._testS3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.testS3Uri = this._testS3Uri;
+    }
+    if (this._augmentedManifests?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.augmentedManifests = this._augmentedManifests?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: InputDataConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dataFormat = undefined;
+      this._labelDelimiter = undefined;
+      this._s3Uri = undefined;
+      this._testS3Uri = undefined;
+      this._augmentedManifests.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dataFormat = value.dataFormat;
+      this._labelDelimiter = value.labelDelimiter;
+      this._s3Uri = value.s3Uri;
+      this._testS3Uri = value.testS3Uri;
+      this._augmentedManifests.internalValue = value.augmentedManifests;
+    }
+  }
+
+  // data_format - computed: false, optional: true, required: false
+  private _dataFormat?: string; 
+  public get dataFormat() {
+    return this.getStringAttribute('data_format');
+  }
+  public set dataFormat(value: string) {
+    this._dataFormat = value;
+  }
+  public resetDataFormat() {
+    this._dataFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFormatInput() {
+    return this._dataFormat;
+  }
+
+  // label_delimiter - computed: true, optional: true, required: false
+  private _labelDelimiter?: string; 
+  public get labelDelimiter() {
+    return this.getStringAttribute('label_delimiter');
+  }
+  public set labelDelimiter(value: string) {
+    this._labelDelimiter = value;
+  }
+  public resetLabelDelimiter() {
+    this._labelDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelDelimiterInput() {
+    return this._labelDelimiter;
+  }
+
+  // s3_uri - computed: false, optional: true, required: false
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  public resetS3Uri() {
+    this._s3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+
+  // test_s3_uri - computed: false, optional: true, required: false
+  private _testS3Uri?: string; 
+  public get testS3Uri() {
+    return this.getStringAttribute('test_s3_uri');
+  }
+  public set testS3Uri(value: string) {
+    this._testS3Uri = value;
+  }
+  public resetTestS3Uri() {
+    this._testS3Uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testS3UriInput() {
+    return this._testS3Uri;
+  }
+
+  // augmented_manifests - computed: false, optional: true, required: false
+  private _augmentedManifests = new AugmentedManifestsPropertyList(this, "augmented_manifests", true);
+  public get augmentedManifests() {
+    return this._augmentedManifests;
+  }
+  public putAugmentedManifests(value: AugmentedManifestsProperty[] | cdktn.IResolvable) {
+    this._augmentedManifests.internalValue = value;
+  }
+  public resetAugmentedManifests() {
+    this._augmentedManifests.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get augmentedManifestsInput() {
+    return this._augmentedManifests.internalValue;
+  }
+}
+export interface OutputDataConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#kms_key_id AwsComprehendDocumentClassifier#kms_key_id}
+  */
+  readonly kmsKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsComprehendDocumentClassifier#s3_uri}
+  */
+  readonly s3Uri: string;
+}
+export class OutputDataConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OutputDataConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyId = this._kmsKeyId;
+    }
+    if (this._s3Uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.s3Uri = this._s3Uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OutputDataConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeyId = undefined;
+      this._s3Uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeyId = value.kmsKeyId;
+      this._s3Uri = value.s3Uri;
+    }
+  }
+
+  // kms_key_id - computed: false, optional: true, required: false
+  private _kmsKeyId?: string; 
+  public get kmsKeyId() {
+    return this.getStringAttribute('kms_key_id');
+  }
+  public set kmsKeyId(value: string) {
+    this._kmsKeyId = value;
+  }
+  public resetKmsKeyId() {
+    this._kmsKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyIdInput() {
+    return this._kmsKeyId;
+  }
+
+  // output_s3_uri - computed: true, optional: false, required: false
+  public get outputS3Uri() {
+    return this.getStringAttribute('output_s3_uri');
+  }
+
+  // s3_uri - computed: false, optional: false, required: true
+  private _s3Uri?: string; 
+  public get s3Uri() {
+    return this.getStringAttribute('s3_uri');
+  }
+  public set s3Uri(value: string) {
+    this._s3Uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get s3UriInput() {
+    return this._s3Uri;
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#create AwsComprehendDocumentClassifier#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#delete AwsComprehendDocumentClassifier#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#update AwsComprehendDocumentClassifier#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+export interface VpcConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#security_group_ids AwsComprehendDocumentClassifier#security_group_ids}
+  */
+  readonly securityGroupIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#subnets AwsComprehendDocumentClassifier#subnets}
+  */
+  readonly subnets: string[];
+}
+export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._securityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroupIds = this._securityGroupIds;
+    }
+    if (this._subnets !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnets = this._subnets;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._securityGroupIds = undefined;
+      this._subnets = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._securityGroupIds = value.securityGroupIds;
+      this._subnets = value.subnets;
+    }
+  }
+
+  // security_group_ids - computed: false, optional: false, required: true
+  private _securityGroupIds?: string[]; 
+  public get securityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_group_ids'));
+  }
+  public set securityGroupIds(value: string[]) {
+    this._securityGroupIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupIdsInput() {
+    return this._securityGroupIds;
+  }
+
+  // subnets - computed: false, optional: false, required: true
+  private _subnets?: string[]; 
+  public get subnets() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnets'));
+  }
+  public set subnets(value: string[]) {
+    this._subnets = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetsInput() {
+    return this._subnets;
+  }
+}
+}

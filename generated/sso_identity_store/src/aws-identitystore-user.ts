@@ -1,0 +1,1490 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsIdentitystoreUserConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#display_name AwsIdentitystoreUser#display_name}
+  */
+  readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#id AwsIdentitystoreUser#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#identity_store_id AwsIdentitystoreUser#identity_store_id}
+  */
+  readonly identityStoreId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locale AwsIdentitystoreUser#locale}
+  */
+  readonly locale?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#nickname AwsIdentitystoreUser#nickname}
+  */
+  readonly nickname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#preferred_language AwsIdentitystoreUser#preferred_language}
+  */
+  readonly preferredLanguage?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#profile_url AwsIdentitystoreUser#profile_url}
+  */
+  readonly profileUrl?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region AwsIdentitystoreUser#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#timezone AwsIdentitystoreUser#timezone}
+  */
+  readonly timezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#title AwsIdentitystoreUser#title}
+  */
+  readonly title?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_name AwsIdentitystoreUser#user_name}
+  */
+  readonly userName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#user_type AwsIdentitystoreUser#user_type}
+  */
+  readonly userType?: string;
+  /**
+  * addresses block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#addresses AwsIdentitystoreUser#addresses}
+  */
+  readonly addresses?: AwsIdentitystoreUser.AddressesProperty;
+  /**
+  * emails block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#emails AwsIdentitystoreUser#emails}
+  */
+  readonly emails?: AwsIdentitystoreUser.EmailsProperty;
+  /**
+  * name block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#name AwsIdentitystoreUser#name}
+  */
+  readonly name: AwsIdentitystoreUser.NameProperty;
+  /**
+  * phone_numbers block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#phone_numbers AwsIdentitystoreUser#phone_numbers}
+  */
+  readonly phoneNumbers?: AwsIdentitystoreUser.PhoneNumbersProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user aws_identitystore_user}
+*/
+export class AwsIdentitystoreUser extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_identitystore_user";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsIdentitystoreUser resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsIdentitystoreUser to import
+  * @param importFromId The id of the existing AwsIdentitystoreUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIdentitystoreUser to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_user", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user aws_identitystore_user} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsIdentitystoreUserConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsIdentitystoreUserConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_identitystore_user',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._displayName = config.displayName;
+    this._id = config.id;
+    this._identityStoreId = config.identityStoreId;
+    this._locale = config.locale;
+    this._nickname = config.nickname;
+    this._preferredLanguage = config.preferredLanguage;
+    this._profileUrl = config.profileUrl;
+    this._region = config.region;
+    this._timezone = config.timezone;
+    this._title = config.title;
+    this._userName = config.userName;
+    this._userType = config.userType;
+    this._addresses.internalValue = config.addresses;
+    this._emails.internalValue = config.emails;
+    this._name.internalValue = config.name;
+    this._phoneNumbers.internalValue = config.phoneNumbers;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // external_ids - computed: true, optional: false, required: false
+  private _externalIds = new AwsIdentitystoreUser.ExternalIdsPropertyList(this, "external_ids", false);
+  public get externalIds() {
+    return this._externalIds;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // identity_store_id - computed: false, optional: false, required: true
+  private _identityStoreId?: string; 
+  public get identityStoreId() {
+    return this.getStringAttribute('identity_store_id');
+  }
+  public set identityStoreId(value: string) {
+    this._identityStoreId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityStoreIdInput() {
+    return this._identityStoreId;
+  }
+
+  // locale - computed: false, optional: true, required: false
+  private _locale?: string; 
+  public get locale() {
+    return this.getStringAttribute('locale');
+  }
+  public set locale(value: string) {
+    this._locale = value;
+  }
+  public resetLocale() {
+    this._locale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localeInput() {
+    return this._locale;
+  }
+
+  // nickname - computed: false, optional: true, required: false
+  private _nickname?: string; 
+  public get nickname() {
+    return this.getStringAttribute('nickname');
+  }
+  public set nickname(value: string) {
+    this._nickname = value;
+  }
+  public resetNickname() {
+    this._nickname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nicknameInput() {
+    return this._nickname;
+  }
+
+  // preferred_language - computed: false, optional: true, required: false
+  private _preferredLanguage?: string; 
+  public get preferredLanguage() {
+    return this.getStringAttribute('preferred_language');
+  }
+  public set preferredLanguage(value: string) {
+    this._preferredLanguage = value;
+  }
+  public resetPreferredLanguage() {
+    this._preferredLanguage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredLanguageInput() {
+    return this._preferredLanguage;
+  }
+
+  // profile_url - computed: false, optional: true, required: false
+  private _profileUrl?: string; 
+  public get profileUrl() {
+    return this.getStringAttribute('profile_url');
+  }
+  public set profileUrl(value: string) {
+    this._profileUrl = value;
+  }
+  public resetProfileUrl() {
+    this._profileUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileUrlInput() {
+    return this._profileUrl;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // timezone - computed: false, optional: true, required: false
+  private _timezone?: string; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string) {
+    this._timezone = value;
+  }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone;
+  }
+
+  // title - computed: false, optional: true, required: false
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title;
+  }
+
+  // user_id - computed: true, optional: false, required: false
+  public get userId() {
+    return this.getStringAttribute('user_id');
+  }
+
+  // user_name - computed: false, optional: false, required: true
+  private _userName?: string; 
+  public get userName() {
+    return this.getStringAttribute('user_name');
+  }
+  public set userName(value: string) {
+    this._userName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userNameInput() {
+    return this._userName;
+  }
+
+  // user_status - computed: true, optional: false, required: false
+  public get userStatus() {
+    return this.getStringAttribute('user_status');
+  }
+
+  // user_type - computed: false, optional: true, required: false
+  private _userType?: string; 
+  public get userType() {
+    return this.getStringAttribute('user_type');
+  }
+  public set userType(value: string) {
+    this._userType = value;
+  }
+  public resetUserType() {
+    this._userType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userTypeInput() {
+    return this._userType;
+  }
+
+  // addresses - computed: false, optional: true, required: false
+  private _addresses = new AwsIdentitystoreUser.AddressesPropertyOutputReference(this, "addresses");
+  public get addresses() {
+    return this._addresses;
+  }
+  public putAddresses(value: AwsIdentitystoreUser.AddressesProperty) {
+    this._addresses.internalValue = value;
+  }
+  public resetAddresses() {
+    this._addresses.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressesInput() {
+    return this._addresses.internalValue;
+  }
+
+  // emails - computed: false, optional: true, required: false
+  private _emails = new AwsIdentitystoreUser.EmailsPropertyOutputReference(this, "emails");
+  public get emails() {
+    return this._emails;
+  }
+  public putEmails(value: AwsIdentitystoreUser.EmailsProperty) {
+    this._emails.internalValue = value;
+  }
+  public resetEmails() {
+    this._emails.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailsInput() {
+    return this._emails.internalValue;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name = new AwsIdentitystoreUser.NamePropertyOutputReference(this, "name");
+  public get name() {
+    return this._name;
+  }
+  public putName(value: AwsIdentitystoreUser.NameProperty) {
+    this._name.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name.internalValue;
+  }
+
+  // phone_numbers - computed: false, optional: true, required: false
+  private _phoneNumbers = new AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference(this, "phone_numbers");
+  public get phoneNumbers() {
+    return this._phoneNumbers;
+  }
+  public putPhoneNumbers(value: AwsIdentitystoreUser.PhoneNumbersProperty) {
+    this._phoneNumbers.internalValue = value;
+  }
+  public resetPhoneNumbers() {
+    this._phoneNumbers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumbersInput() {
+    return this._phoneNumbers.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      display_name: cdktn.stringToTerraform(this._displayName),
+      id: cdktn.stringToTerraform(this._id),
+      identity_store_id: cdktn.stringToTerraform(this._identityStoreId),
+      locale: cdktn.stringToTerraform(this._locale),
+      nickname: cdktn.stringToTerraform(this._nickname),
+      preferred_language: cdktn.stringToTerraform(this._preferredLanguage),
+      profile_url: cdktn.stringToTerraform(this._profileUrl),
+      region: cdktn.stringToTerraform(this._region),
+      timezone: cdktn.stringToTerraform(this._timezone),
+      title: cdktn.stringToTerraform(this._title),
+      user_name: cdktn.stringToTerraform(this._userName),
+      user_type: cdktn.stringToTerraform(this._userType),
+      addresses: awsIdentitystoreUserAddressesPropertyToTerraform(this._addresses.internalValue),
+      emails: awsIdentitystoreUserEmailsPropertyToTerraform(this._emails.internalValue),
+      name: awsIdentitystoreUserNamePropertyToTerraform(this._name.internalValue),
+      phone_numbers: awsIdentitystoreUserPhoneNumbersPropertyToTerraform(this._phoneNumbers.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      display_name: {
+        value: cdktn.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity_store_id: {
+        value: cdktn.stringToHclTerraform(this._identityStoreId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      locale: {
+        value: cdktn.stringToHclTerraform(this._locale),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      nickname: {
+        value: cdktn.stringToHclTerraform(this._nickname),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preferred_language: {
+        value: cdktn.stringToHclTerraform(this._preferredLanguage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      profile_url: {
+        value: cdktn.stringToHclTerraform(this._profileUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timezone: {
+        value: cdktn.stringToHclTerraform(this._timezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      title: {
+        value: cdktn.stringToHclTerraform(this._title),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_name: {
+        value: cdktn.stringToHclTerraform(this._userName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_type: {
+        value: cdktn.stringToHclTerraform(this._userType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      addresses: {
+        value: awsIdentitystoreUserAddressesPropertyToHclTerraform(this._addresses.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsIdentitystoreUser.AddressesPropertyList",
+      },
+      emails: {
+        value: awsIdentitystoreUserEmailsPropertyToHclTerraform(this._emails.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsIdentitystoreUser.EmailsPropertyList",
+      },
+      name: {
+        value: awsIdentitystoreUserNamePropertyToHclTerraform(this._name.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsIdentitystoreUser.NamePropertyList",
+      },
+      phone_numbers: {
+        value: awsIdentitystoreUserPhoneNumbersPropertyToHclTerraform(this._phoneNumbers.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsIdentitystoreUser.PhoneNumbersPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsIdentitystoreUserExternalIdsPropertyToTerraform(struct?: AwsIdentitystoreUser.ExternalIdsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsIdentitystoreUserExternalIdsPropertyToHclTerraform(struct?: AwsIdentitystoreUser.ExternalIdsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsIdentitystoreUserAddressesPropertyToTerraform(struct?: AwsIdentitystoreUser.AddressesPropertyOutputReference | AwsIdentitystoreUser.AddressesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    country: cdktn.stringToTerraform(struct!.country),
+    formatted: cdktn.stringToTerraform(struct!.formatted),
+    locality: cdktn.stringToTerraform(struct!.locality),
+    postal_code: cdktn.stringToTerraform(struct!.postalCode),
+    primary: cdktn.booleanToTerraform(struct!.primary),
+    region: cdktn.stringToTerraform(struct!.region),
+    street_address: cdktn.stringToTerraform(struct!.streetAddress),
+    type: cdktn.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function awsIdentitystoreUserAddressesPropertyToHclTerraform(struct?: AwsIdentitystoreUser.AddressesPropertyOutputReference | AwsIdentitystoreUser.AddressesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    country: {
+      value: cdktn.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    formatted: {
+      value: cdktn.stringToHclTerraform(struct!.formatted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktn.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktn.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary: {
+      value: cdktn.booleanToHclTerraform(struct!.primary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    region: {
+      value: cdktn.stringToHclTerraform(struct!.region),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    street_address: {
+      value: cdktn.stringToHclTerraform(struct!.streetAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsIdentitystoreUserEmailsPropertyToTerraform(struct?: AwsIdentitystoreUser.EmailsPropertyOutputReference | AwsIdentitystoreUser.EmailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    primary: cdktn.booleanToTerraform(struct!.primary),
+    type: cdktn.stringToTerraform(struct!.type),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsIdentitystoreUserEmailsPropertyToHclTerraform(struct?: AwsIdentitystoreUser.EmailsPropertyOutputReference | AwsIdentitystoreUser.EmailsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    primary: {
+      value: cdktn.booleanToHclTerraform(struct!.primary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsIdentitystoreUserNamePropertyToTerraform(struct?: AwsIdentitystoreUser.NamePropertyOutputReference | AwsIdentitystoreUser.NameProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    family_name: cdktn.stringToTerraform(struct!.familyName),
+    formatted: cdktn.stringToTerraform(struct!.formatted),
+    given_name: cdktn.stringToTerraform(struct!.givenName),
+    honorific_prefix: cdktn.stringToTerraform(struct!.honorificPrefix),
+    honorific_suffix: cdktn.stringToTerraform(struct!.honorificSuffix),
+    middle_name: cdktn.stringToTerraform(struct!.middleName),
+  }
+}
+
+
+export function awsIdentitystoreUserNamePropertyToHclTerraform(struct?: AwsIdentitystoreUser.NamePropertyOutputReference | AwsIdentitystoreUser.NameProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    family_name: {
+      value: cdktn.stringToHclTerraform(struct!.familyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    formatted: {
+      value: cdktn.stringToHclTerraform(struct!.formatted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    given_name: {
+      value: cdktn.stringToHclTerraform(struct!.givenName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    honorific_prefix: {
+      value: cdktn.stringToHclTerraform(struct!.honorificPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    honorific_suffix: {
+      value: cdktn.stringToHclTerraform(struct!.honorificSuffix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    middle_name: {
+      value: cdktn.stringToHclTerraform(struct!.middleName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsIdentitystoreUserPhoneNumbersPropertyToTerraform(struct?: AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference | AwsIdentitystoreUser.PhoneNumbersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    primary: cdktn.booleanToTerraform(struct!.primary),
+    type: cdktn.stringToTerraform(struct!.type),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsIdentitystoreUserPhoneNumbersPropertyToHclTerraform(struct?: AwsIdentitystoreUser.PhoneNumbersPropertyOutputReference | AwsIdentitystoreUser.PhoneNumbersProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    primary: {
+      value: cdktn.booleanToHclTerraform(struct!.primary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktn.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsIdentitystoreUser {
+export interface ExternalIdsProperty {
+}
+export class ExternalIdsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ExternalIdsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ExternalIdsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // issuer - computed: true, optional: false, required: false
+  public get issuer() {
+    return this.getStringAttribute('issuer');
+  }
+}
+
+export class ExternalIdsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ExternalIdsPropertyOutputReference {
+    return new ExternalIdsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AddressesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#country AwsIdentitystoreUser#country}
+  */
+  readonly country?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted AwsIdentitystoreUser#formatted}
+  */
+  readonly formatted?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#locality AwsIdentitystoreUser#locality}
+  */
+  readonly locality?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#postal_code AwsIdentitystoreUser#postal_code}
+  */
+  readonly postalCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  */
+  readonly primary?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#region AwsIdentitystoreUser#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#street_address AwsIdentitystoreUser#street_address}
+  */
+  readonly streetAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  */
+  readonly type?: string;
+}
+export class AddressesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AddressesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._formatted !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.formatted = this._formatted;
+    }
+    if (this._locality !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.locality = this._locality;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._region !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.region = this._region;
+    }
+    if (this._streetAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streetAddress = this._streetAddress;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AddressesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._country = undefined;
+      this._formatted = undefined;
+      this._locality = undefined;
+      this._postalCode = undefined;
+      this._primary = undefined;
+      this._region = undefined;
+      this._streetAddress = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._country = value.country;
+      this._formatted = value.formatted;
+      this._locality = value.locality;
+      this._postalCode = value.postalCode;
+      this._primary = value.primary;
+      this._region = value.region;
+      this._streetAddress = value.streetAddress;
+      this._type = value.type;
+    }
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // formatted - computed: false, optional: true, required: false
+  private _formatted?: string; 
+  public get formatted() {
+    return this.getStringAttribute('formatted');
+  }
+  public set formatted(value: string) {
+    this._formatted = value;
+  }
+  public resetFormatted() {
+    this._formatted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formattedInput() {
+    return this._formatted;
+  }
+
+  // locality - computed: false, optional: true, required: false
+  private _locality?: string; 
+  public get locality() {
+    return this.getStringAttribute('locality');
+  }
+  public set locality(value: string) {
+    this._locality = value;
+  }
+  public resetLocality() {
+    this._locality = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityInput() {
+    return this._locality;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktn.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktn.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // region - computed: false, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // street_address - computed: false, optional: true, required: false
+  private _streetAddress?: string; 
+  public get streetAddress() {
+    return this.getStringAttribute('street_address');
+  }
+  public set streetAddress(value: string) {
+    this._streetAddress = value;
+  }
+  public resetStreetAddress() {
+    this._streetAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streetAddressInput() {
+    return this._streetAddress;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface EmailsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  */
+  readonly primary?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value AwsIdentitystoreUser#value}
+  */
+  readonly value?: string;
+}
+export class EmailsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EmailsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EmailsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._primary = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._primary = value.primary;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktn.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktn.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+export interface NameProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#family_name AwsIdentitystoreUser#family_name}
+  */
+  readonly familyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#formatted AwsIdentitystoreUser#formatted}
+  */
+  readonly formatted?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#given_name AwsIdentitystoreUser#given_name}
+  */
+  readonly givenName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_prefix AwsIdentitystoreUser#honorific_prefix}
+  */
+  readonly honorificPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#honorific_suffix AwsIdentitystoreUser#honorific_suffix}
+  */
+  readonly honorificSuffix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#middle_name AwsIdentitystoreUser#middle_name}
+  */
+  readonly middleName?: string;
+}
+export class NamePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NameProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._familyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.familyName = this._familyName;
+    }
+    if (this._formatted !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.formatted = this._formatted;
+    }
+    if (this._givenName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.givenName = this._givenName;
+    }
+    if (this._honorificPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.honorificPrefix = this._honorificPrefix;
+    }
+    if (this._honorificSuffix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.honorificSuffix = this._honorificSuffix;
+    }
+    if (this._middleName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.middleName = this._middleName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NameProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._familyName = undefined;
+      this._formatted = undefined;
+      this._givenName = undefined;
+      this._honorificPrefix = undefined;
+      this._honorificSuffix = undefined;
+      this._middleName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._familyName = value.familyName;
+      this._formatted = value.formatted;
+      this._givenName = value.givenName;
+      this._honorificPrefix = value.honorificPrefix;
+      this._honorificSuffix = value.honorificSuffix;
+      this._middleName = value.middleName;
+    }
+  }
+
+  // family_name - computed: false, optional: false, required: true
+  private _familyName?: string; 
+  public get familyName() {
+    return this.getStringAttribute('family_name');
+  }
+  public set familyName(value: string) {
+    this._familyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get familyNameInput() {
+    return this._familyName;
+  }
+
+  // formatted - computed: false, optional: true, required: false
+  private _formatted?: string; 
+  public get formatted() {
+    return this.getStringAttribute('formatted');
+  }
+  public set formatted(value: string) {
+    this._formatted = value;
+  }
+  public resetFormatted() {
+    this._formatted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formattedInput() {
+    return this._formatted;
+  }
+
+  // given_name - computed: false, optional: false, required: true
+  private _givenName?: string; 
+  public get givenName() {
+    return this.getStringAttribute('given_name');
+  }
+  public set givenName(value: string) {
+    this._givenName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get givenNameInput() {
+    return this._givenName;
+  }
+
+  // honorific_prefix - computed: false, optional: true, required: false
+  private _honorificPrefix?: string; 
+  public get honorificPrefix() {
+    return this.getStringAttribute('honorific_prefix');
+  }
+  public set honorificPrefix(value: string) {
+    this._honorificPrefix = value;
+  }
+  public resetHonorificPrefix() {
+    this._honorificPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get honorificPrefixInput() {
+    return this._honorificPrefix;
+  }
+
+  // honorific_suffix - computed: false, optional: true, required: false
+  private _honorificSuffix?: string; 
+  public get honorificSuffix() {
+    return this.getStringAttribute('honorific_suffix');
+  }
+  public set honorificSuffix(value: string) {
+    this._honorificSuffix = value;
+  }
+  public resetHonorificSuffix() {
+    this._honorificSuffix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get honorificSuffixInput() {
+    return this._honorificSuffix;
+  }
+
+  // middle_name - computed: false, optional: true, required: false
+  private _middleName?: string; 
+  public get middleName() {
+    return this.getStringAttribute('middle_name');
+  }
+  public set middleName(value: string) {
+    this._middleName = value;
+  }
+  public resetMiddleName() {
+    this._middleName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get middleNameInput() {
+    return this._middleName;
+  }
+}
+export interface PhoneNumbersProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#primary AwsIdentitystoreUser#primary}
+  */
+  readonly primary?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#type AwsIdentitystoreUser#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/identitystore_user#value AwsIdentitystoreUser#value}
+  */
+  readonly value?: string;
+}
+export class PhoneNumbersPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PhoneNumbersProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PhoneNumbersProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._primary = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._primary = value.primary;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktn.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktn.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+}

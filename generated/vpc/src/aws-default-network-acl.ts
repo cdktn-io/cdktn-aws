@@ -1,0 +1,1062 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDefaultNetworkAclConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#default_network_acl_id AwsDefaultNetworkAcl#default_network_acl_id}
+  */
+  readonly defaultNetworkAclId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#id AwsDefaultNetworkAcl#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#region AwsDefaultNetworkAcl#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#subnet_ids AwsDefaultNetworkAcl#subnet_ids}
+  */
+  readonly subnetIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags AwsDefaultNetworkAcl#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#tags_all AwsDefaultNetworkAcl#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * egress block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#egress AwsDefaultNetworkAcl#egress}
+  */
+  readonly egress?: AwsDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable;
+  /**
+  * ingress block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ingress AwsDefaultNetworkAcl#ingress}
+  */
+  readonly ingress?: AwsDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl aws_default_network_acl}
+*/
+export class AwsDefaultNetworkAcl extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_default_network_acl";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDefaultNetworkAcl resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDefaultNetworkAcl to import
+  * @param importFromId The id of the existing AwsDefaultNetworkAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultNetworkAcl to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_default_network_acl", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl aws_default_network_acl} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDefaultNetworkAclConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDefaultNetworkAclConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_default_network_acl',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._defaultNetworkAclId = config.defaultNetworkAclId;
+    this._id = config.id;
+    this._region = config.region;
+    this._subnetIds = config.subnetIds;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._egress.internalValue = config.egress;
+    this._ingress.internalValue = config.ingress;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // default_network_acl_id - computed: false, optional: false, required: true
+  private _defaultNetworkAclId?: string; 
+  public get defaultNetworkAclId() {
+    return this.getStringAttribute('default_network_acl_id');
+  }
+  public set defaultNetworkAclId(value: string) {
+    this._defaultNetworkAclId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultNetworkAclIdInput() {
+    return this._defaultNetworkAclId;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // owner_id - computed: true, optional: false, required: false
+  public get ownerId() {
+    return this.getStringAttribute('owner_id');
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // subnet_ids - computed: false, optional: true, required: false
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  public resetSubnetIds() {
+    this._subnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // vpc_id - computed: true, optional: false, required: false
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
+
+  // egress - computed: false, optional: true, required: false
+  private _egress = new AwsDefaultNetworkAcl.EgressPropertyList(this, "egress", true);
+  public get egress() {
+    return this._egress;
+  }
+  public putEgress(value: AwsDefaultNetworkAcl.EgressProperty[] | cdktn.IResolvable) {
+    this._egress.internalValue = value;
+  }
+  public resetEgress() {
+    this._egress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressInput() {
+    return this._egress.internalValue;
+  }
+
+  // ingress - computed: false, optional: true, required: false
+  private _ingress = new AwsDefaultNetworkAcl.IngressPropertyList(this, "ingress", true);
+  public get ingress() {
+    return this._ingress;
+  }
+  public putIngress(value: AwsDefaultNetworkAcl.IngressProperty[] | cdktn.IResolvable) {
+    this._ingress.internalValue = value;
+  }
+  public resetIngress() {
+    this._ingress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressInput() {
+    return this._ingress.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      default_network_acl_id: cdktn.stringToTerraform(this._defaultNetworkAclId),
+      id: cdktn.stringToTerraform(this._id),
+      region: cdktn.stringToTerraform(this._region),
+      subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      egress: cdktn.listMapper(awsDefaultNetworkAclEgressPropertyToTerraform, true)(this._egress.internalValue),
+      ingress: cdktn.listMapper(awsDefaultNetworkAclIngressPropertyToTerraform, true)(this._ingress.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      default_network_acl_id: {
+        value: cdktn.stringToHclTerraform(this._defaultNetworkAclId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._subnetIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      egress: {
+        value: cdktn.listMapperHcl(awsDefaultNetworkAclEgressPropertyToHclTerraform, true)(this._egress.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDefaultNetworkAcl.EgressPropertyList",
+      },
+      ingress: {
+        value: cdktn.listMapperHcl(awsDefaultNetworkAclIngressPropertyToHclTerraform, true)(this._ingress.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsDefaultNetworkAcl.IngressPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsDefaultNetworkAclEgressPropertyToTerraform(struct?: AwsDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    action: cdktn.stringToTerraform(struct!.action),
+    cidr_block: cdktn.stringToTerraform(struct!.cidrBlock),
+    from_port: cdktn.numberToTerraform(struct!.fromPort),
+    icmp_code: cdktn.numberToTerraform(struct!.icmpCode),
+    icmp_type: cdktn.numberToTerraform(struct!.icmpType),
+    ipv6_cidr_block: cdktn.stringToTerraform(struct!.ipv6CidrBlock),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    rule_no: cdktn.numberToTerraform(struct!.ruleNo),
+    to_port: cdktn.numberToTerraform(struct!.toPort),
+  }
+}
+
+
+export function awsDefaultNetworkAclEgressPropertyToHclTerraform(struct?: AwsDefaultNetworkAcl.EgressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    action: {
+      value: cdktn.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cidr_block: {
+      value: cdktn.stringToHclTerraform(struct!.cidrBlock),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    from_port: {
+      value: cdktn.numberToHclTerraform(struct!.fromPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    icmp_code: {
+      value: cdktn.numberToHclTerraform(struct!.icmpCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    icmp_type: {
+      value: cdktn.numberToHclTerraform(struct!.icmpType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ipv6_cidr_block: {
+      value: cdktn.stringToHclTerraform(struct!.ipv6CidrBlock),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rule_no: {
+      value: cdktn.numberToHclTerraform(struct!.ruleNo),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    to_port: {
+      value: cdktn.numberToHclTerraform(struct!.toPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsDefaultNetworkAclIngressPropertyToTerraform(struct?: AwsDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    action: cdktn.stringToTerraform(struct!.action),
+    cidr_block: cdktn.stringToTerraform(struct!.cidrBlock),
+    from_port: cdktn.numberToTerraform(struct!.fromPort),
+    icmp_code: cdktn.numberToTerraform(struct!.icmpCode),
+    icmp_type: cdktn.numberToTerraform(struct!.icmpType),
+    ipv6_cidr_block: cdktn.stringToTerraform(struct!.ipv6CidrBlock),
+    protocol: cdktn.stringToTerraform(struct!.protocol),
+    rule_no: cdktn.numberToTerraform(struct!.ruleNo),
+    to_port: cdktn.numberToTerraform(struct!.toPort),
+  }
+}
+
+
+export function awsDefaultNetworkAclIngressPropertyToHclTerraform(struct?: AwsDefaultNetworkAcl.IngressProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    action: {
+      value: cdktn.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cidr_block: {
+      value: cdktn.stringToHclTerraform(struct!.cidrBlock),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    from_port: {
+      value: cdktn.numberToHclTerraform(struct!.fromPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    icmp_code: {
+      value: cdktn.numberToHclTerraform(struct!.icmpCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    icmp_type: {
+      value: cdktn.numberToHclTerraform(struct!.icmpType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ipv6_cidr_block: {
+      value: cdktn.stringToHclTerraform(struct!.ipv6CidrBlock),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktn.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rule_no: {
+      value: cdktn.numberToHclTerraform(struct!.ruleNo),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    to_port: {
+      value: cdktn.numberToHclTerraform(struct!.toPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsDefaultNetworkAcl {
+export interface EgressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action AwsDefaultNetworkAcl#action}
+  */
+  readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block AwsDefaultNetworkAcl#cidr_block}
+  */
+  readonly cidrBlock?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port AwsDefaultNetworkAcl#from_port}
+  */
+  readonly fromPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code AwsDefaultNetworkAcl#icmp_code}
+  */
+  readonly icmpCode?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type AwsDefaultNetworkAcl#icmp_type}
+  */
+  readonly icmpType?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block AwsDefaultNetworkAcl#ipv6_cidr_block}
+  */
+  readonly ipv6CidrBlock?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol AwsDefaultNetworkAcl#protocol}
+  */
+  readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no AwsDefaultNetworkAcl#rule_no}
+  */
+  readonly ruleNo: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port AwsDefaultNetworkAcl#to_port}
+  */
+  readonly toPort: number;
+}
+export class EgressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EgressProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._cidrBlock !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cidrBlock = this._cidrBlock;
+    }
+    if (this._fromPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fromPort = this._fromPort;
+    }
+    if (this._icmpCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.icmpCode = this._icmpCode;
+    }
+    if (this._icmpType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.icmpType = this._icmpType;
+    }
+    if (this._ipv6CidrBlock !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipv6CidrBlock = this._ipv6CidrBlock;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._ruleNo !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleNo = this._ruleNo;
+    }
+    if (this._toPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.toPort = this._toPort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EgressProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._cidrBlock = undefined;
+      this._fromPort = undefined;
+      this._icmpCode = undefined;
+      this._icmpType = undefined;
+      this._ipv6CidrBlock = undefined;
+      this._protocol = undefined;
+      this._ruleNo = undefined;
+      this._toPort = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._cidrBlock = value.cidrBlock;
+      this._fromPort = value.fromPort;
+      this._icmpCode = value.icmpCode;
+      this._icmpType = value.icmpType;
+      this._ipv6CidrBlock = value.ipv6CidrBlock;
+      this._protocol = value.protocol;
+      this._ruleNo = value.ruleNo;
+      this._toPort = value.toPort;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // cidr_block - computed: false, optional: true, required: false
+  private _cidrBlock?: string; 
+  public get cidrBlock() {
+    return this.getStringAttribute('cidr_block');
+  }
+  public set cidrBlock(value: string) {
+    this._cidrBlock = value;
+  }
+  public resetCidrBlock() {
+    this._cidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrBlockInput() {
+    return this._cidrBlock;
+  }
+
+  // from_port - computed: false, optional: false, required: true
+  private _fromPort?: number; 
+  public get fromPort() {
+    return this.getNumberAttribute('from_port');
+  }
+  public set fromPort(value: number) {
+    this._fromPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fromPortInput() {
+    return this._fromPort;
+  }
+
+  // icmp_code - computed: false, optional: true, required: false
+  private _icmpCode?: number; 
+  public get icmpCode() {
+    return this.getNumberAttribute('icmp_code');
+  }
+  public set icmpCode(value: number) {
+    this._icmpCode = value;
+  }
+  public resetIcmpCode() {
+    this._icmpCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpCodeInput() {
+    return this._icmpCode;
+  }
+
+  // icmp_type - computed: false, optional: true, required: false
+  private _icmpType?: number; 
+  public get icmpType() {
+    return this.getNumberAttribute('icmp_type');
+  }
+  public set icmpType(value: number) {
+    this._icmpType = value;
+  }
+  public resetIcmpType() {
+    this._icmpType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpTypeInput() {
+    return this._icmpType;
+  }
+
+  // ipv6_cidr_block - computed: false, optional: true, required: false
+  private _ipv6CidrBlock?: string; 
+  public get ipv6CidrBlock() {
+    return this.getStringAttribute('ipv6_cidr_block');
+  }
+  public set ipv6CidrBlock(value: string) {
+    this._ipv6CidrBlock = value;
+  }
+  public resetIpv6CidrBlock() {
+    this._ipv6CidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6CidrBlockInput() {
+    return this._ipv6CidrBlock;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // rule_no - computed: false, optional: false, required: true
+  private _ruleNo?: number; 
+  public get ruleNo() {
+    return this.getNumberAttribute('rule_no');
+  }
+  public set ruleNo(value: number) {
+    this._ruleNo = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleNoInput() {
+    return this._ruleNo;
+  }
+
+  // to_port - computed: false, optional: false, required: true
+  private _toPort?: number; 
+  public get toPort() {
+    return this.getNumberAttribute('to_port');
+  }
+  public set toPort(value: number) {
+    this._toPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toPortInput() {
+    return this._toPort;
+  }
+}
+
+export class EgressPropertyList extends cdktn.ComplexList {
+  public internalValue? : EgressProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EgressPropertyOutputReference {
+    return new EgressPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface IngressProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#action AwsDefaultNetworkAcl#action}
+  */
+  readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#cidr_block AwsDefaultNetworkAcl#cidr_block}
+  */
+  readonly cidrBlock?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#from_port AwsDefaultNetworkAcl#from_port}
+  */
+  readonly fromPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_code AwsDefaultNetworkAcl#icmp_code}
+  */
+  readonly icmpCode?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#icmp_type AwsDefaultNetworkAcl#icmp_type}
+  */
+  readonly icmpType?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#ipv6_cidr_block AwsDefaultNetworkAcl#ipv6_cidr_block}
+  */
+  readonly ipv6CidrBlock?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#protocol AwsDefaultNetworkAcl#protocol}
+  */
+  readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#rule_no AwsDefaultNetworkAcl#rule_no}
+  */
+  readonly ruleNo: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_network_acl#to_port AwsDefaultNetworkAcl#to_port}
+  */
+  readonly toPort: number;
+}
+export class IngressPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IngressProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._cidrBlock !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cidrBlock = this._cidrBlock;
+    }
+    if (this._fromPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fromPort = this._fromPort;
+    }
+    if (this._icmpCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.icmpCode = this._icmpCode;
+    }
+    if (this._icmpType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.icmpType = this._icmpType;
+    }
+    if (this._ipv6CidrBlock !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipv6CidrBlock = this._ipv6CidrBlock;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._ruleNo !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleNo = this._ruleNo;
+    }
+    if (this._toPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.toPort = this._toPort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IngressProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._cidrBlock = undefined;
+      this._fromPort = undefined;
+      this._icmpCode = undefined;
+      this._icmpType = undefined;
+      this._ipv6CidrBlock = undefined;
+      this._protocol = undefined;
+      this._ruleNo = undefined;
+      this._toPort = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._cidrBlock = value.cidrBlock;
+      this._fromPort = value.fromPort;
+      this._icmpCode = value.icmpCode;
+      this._icmpType = value.icmpType;
+      this._ipv6CidrBlock = value.ipv6CidrBlock;
+      this._protocol = value.protocol;
+      this._ruleNo = value.ruleNo;
+      this._toPort = value.toPort;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // cidr_block - computed: false, optional: true, required: false
+  private _cidrBlock?: string; 
+  public get cidrBlock() {
+    return this.getStringAttribute('cidr_block');
+  }
+  public set cidrBlock(value: string) {
+    this._cidrBlock = value;
+  }
+  public resetCidrBlock() {
+    this._cidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrBlockInput() {
+    return this._cidrBlock;
+  }
+
+  // from_port - computed: false, optional: false, required: true
+  private _fromPort?: number; 
+  public get fromPort() {
+    return this.getNumberAttribute('from_port');
+  }
+  public set fromPort(value: number) {
+    this._fromPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fromPortInput() {
+    return this._fromPort;
+  }
+
+  // icmp_code - computed: false, optional: true, required: false
+  private _icmpCode?: number; 
+  public get icmpCode() {
+    return this.getNumberAttribute('icmp_code');
+  }
+  public set icmpCode(value: number) {
+    this._icmpCode = value;
+  }
+  public resetIcmpCode() {
+    this._icmpCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpCodeInput() {
+    return this._icmpCode;
+  }
+
+  // icmp_type - computed: false, optional: true, required: false
+  private _icmpType?: number; 
+  public get icmpType() {
+    return this.getNumberAttribute('icmp_type');
+  }
+  public set icmpType(value: number) {
+    this._icmpType = value;
+  }
+  public resetIcmpType() {
+    this._icmpType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpTypeInput() {
+    return this._icmpType;
+  }
+
+  // ipv6_cidr_block - computed: false, optional: true, required: false
+  private _ipv6CidrBlock?: string; 
+  public get ipv6CidrBlock() {
+    return this.getStringAttribute('ipv6_cidr_block');
+  }
+  public set ipv6CidrBlock(value: string) {
+    this._ipv6CidrBlock = value;
+  }
+  public resetIpv6CidrBlock() {
+    this._ipv6CidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6CidrBlockInput() {
+    return this._ipv6CidrBlock;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // rule_no - computed: false, optional: false, required: true
+  private _ruleNo?: number; 
+  public get ruleNo() {
+    return this.getNumberAttribute('rule_no');
+  }
+  public set ruleNo(value: number) {
+    this._ruleNo = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleNoInput() {
+    return this._ruleNo;
+  }
+
+  // to_port - computed: false, optional: false, required: true
+  private _toPort?: number; 
+  public get toPort() {
+    return this.getNumberAttribute('to_port');
+  }
+  public set toPort(value: number) {
+    this._toPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toPortInput() {
+    return this._toPort;
+  }
+}
+
+export class IngressPropertyList extends cdktn.ComplexList {
+  public internalValue? : IngressProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IngressPropertyOutputReference {
+    return new IngressPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+}

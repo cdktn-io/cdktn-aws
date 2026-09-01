@@ -1,0 +1,301 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsDatazoneEnvironmentBlueprintConfigurationConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#domain_id AwsDatazoneEnvironmentBlueprintConfiguration#domain_id}
+  */
+  readonly domainId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#enabled_regions AwsDatazoneEnvironmentBlueprintConfiguration#enabled_regions}
+  */
+  readonly enabledRegions: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#environment_blueprint_id AwsDatazoneEnvironmentBlueprintConfiguration#environment_blueprint_id}
+  */
+  readonly environmentBlueprintId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#global_parameters AwsDatazoneEnvironmentBlueprintConfiguration#global_parameters}
+  */
+  readonly globalParameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#manage_access_role_arn AwsDatazoneEnvironmentBlueprintConfiguration#manage_access_role_arn}
+  */
+  readonly manageAccessRoleArn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#provisioning_role_arn AwsDatazoneEnvironmentBlueprintConfiguration#provisioning_role_arn}
+  */
+  readonly provisioningRoleArn?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#region AwsDatazoneEnvironmentBlueprintConfiguration#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#regional_parameters AwsDatazoneEnvironmentBlueprintConfiguration#regional_parameters}
+  */
+  readonly regionalParameters?: { [key: string]: { [key: string]: string } } | cdktn.IResolvable;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration aws_datazone_environment_blueprint_configuration}
+*/
+export class AwsDatazoneEnvironmentBlueprintConfiguration extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_datazone_environment_blueprint_configuration";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsDatazoneEnvironmentBlueprintConfiguration resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsDatazoneEnvironmentBlueprintConfiguration to import
+  * @param importFromId The id of the existing AwsDatazoneEnvironmentBlueprintConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDatazoneEnvironmentBlueprintConfiguration to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_environment_blueprint_configuration", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_environment_blueprint_configuration aws_datazone_environment_blueprint_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsDatazoneEnvironmentBlueprintConfigurationConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsDatazoneEnvironmentBlueprintConfigurationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_datazone_environment_blueprint_configuration',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._domainId = config.domainId;
+    this._enabledRegions = config.enabledRegions;
+    this._environmentBlueprintId = config.environmentBlueprintId;
+    this._globalParameters = config.globalParameters;
+    this._manageAccessRoleArn = config.manageAccessRoleArn;
+    this._provisioningRoleArn = config.provisioningRoleArn;
+    this._region = config.region;
+    this._regionalParameters = config.regionalParameters;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // domain_id - computed: false, optional: false, required: true
+  private _domainId?: string; 
+  public get domainId() {
+    return this.getStringAttribute('domain_id');
+  }
+  public set domainId(value: string) {
+    this._domainId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainIdInput() {
+    return this._domainId;
+  }
+
+  // enabled_regions - computed: false, optional: false, required: true
+  private _enabledRegions?: string[]; 
+  public get enabledRegions() {
+    return this.getListAttribute('enabled_regions');
+  }
+  public set enabledRegions(value: string[]) {
+    this._enabledRegions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledRegionsInput() {
+    return this._enabledRegions;
+  }
+
+  // environment_blueprint_id - computed: false, optional: false, required: true
+  private _environmentBlueprintId?: string; 
+  public get environmentBlueprintId() {
+    return this.getStringAttribute('environment_blueprint_id');
+  }
+  public set environmentBlueprintId(value: string) {
+    this._environmentBlueprintId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentBlueprintIdInput() {
+    return this._environmentBlueprintId;
+  }
+
+  // global_parameters - computed: false, optional: true, required: false
+  private _globalParameters?: { [key: string]: string }; 
+  public get globalParameters() {
+    return this.getStringMapAttribute('global_parameters');
+  }
+  public set globalParameters(value: { [key: string]: string }) {
+    this._globalParameters = value;
+  }
+  public resetGlobalParameters() {
+    this._globalParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalParametersInput() {
+    return this._globalParameters;
+  }
+
+  // manage_access_role_arn - computed: false, optional: true, required: false
+  private _manageAccessRoleArn?: string; 
+  public get manageAccessRoleArn() {
+    return this.getStringAttribute('manage_access_role_arn');
+  }
+  public set manageAccessRoleArn(value: string) {
+    this._manageAccessRoleArn = value;
+  }
+  public resetManageAccessRoleArn() {
+    this._manageAccessRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manageAccessRoleArnInput() {
+    return this._manageAccessRoleArn;
+  }
+
+  // provisioning_role_arn - computed: false, optional: true, required: false
+  private _provisioningRoleArn?: string; 
+  public get provisioningRoleArn() {
+    return this.getStringAttribute('provisioning_role_arn');
+  }
+  public set provisioningRoleArn(value: string) {
+    this._provisioningRoleArn = value;
+  }
+  public resetProvisioningRoleArn() {
+    this._provisioningRoleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisioningRoleArnInput() {
+    return this._provisioningRoleArn;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // regional_parameters - computed: false, optional: true, required: false
+  private _regionalParameters?: { [key: string]: { [key: string]: string } } | cdktn.IResolvable; 
+  public get regionalParameters() {
+    return this.interpolationForAttribute('regional_parameters');
+  }
+  public set regionalParameters(value: { [key: string]: { [key: string]: string } } | cdktn.IResolvable) {
+    this._regionalParameters = value;
+  }
+  public resetRegionalParameters() {
+    this._regionalParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionalParametersInput() {
+    return this._regionalParameters;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      domain_id: cdktn.stringToTerraform(this._domainId),
+      enabled_regions: cdktn.listMapper(cdktn.stringToTerraform, false)(this._enabledRegions),
+      environment_blueprint_id: cdktn.stringToTerraform(this._environmentBlueprintId),
+      global_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(this._globalParameters),
+      manage_access_role_arn: cdktn.stringToTerraform(this._manageAccessRoleArn),
+      provisioning_role_arn: cdktn.stringToTerraform(this._provisioningRoleArn),
+      region: cdktn.stringToTerraform(this._region),
+      regional_parameters: cdktn.hashMapper(cdktn.hashMapper(cdktn.stringToTerraform))(this._regionalParameters),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      domain_id: {
+        value: cdktn.stringToHclTerraform(this._domainId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled_regions: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._enabledRegions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      environment_blueprint_id: {
+        value: cdktn.stringToHclTerraform(this._environmentBlueprintId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      global_parameters: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._globalParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      manage_access_role_arn: {
+        value: cdktn.stringToHclTerraform(this._manageAccessRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      provisioning_role_arn: {
+        value: cdktn.stringToHclTerraform(this._provisioningRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      regional_parameters: {
+        value: cdktn.hashMapperHcl(cdktn.hashMapperHcl(cdktn.stringToHclTerraform))(this._regionalParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMapMap",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}

@@ -1,0 +1,2499 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsEksNodeGroupConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ami_type AwsEksNodeGroup#ami_type}
+  */
+  readonly amiType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#capacity_type AwsEksNodeGroup#capacity_type}
+  */
+  readonly capacityType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#cluster_name AwsEksNodeGroup#cluster_name}
+  */
+  readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#disk_size AwsEksNodeGroup#disk_size}
+  */
+  readonly diskSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#force_update_version AwsEksNodeGroup#force_update_version}
+  */
+  readonly forceUpdateVersion?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id AwsEksNodeGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#instance_types AwsEksNodeGroup#instance_types}
+  */
+  readonly instanceTypes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#labels AwsEksNodeGroup#labels}
+  */
+  readonly labels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name AwsEksNodeGroup#node_group_name}
+  */
+  readonly nodeGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_group_name_prefix AwsEksNodeGroup#node_group_name_prefix}
+  */
+  readonly nodeGroupNamePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_role_arn AwsEksNodeGroup#node_role_arn}
+  */
+  readonly nodeRoleArn: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#region AwsEksNodeGroup#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#release_version AwsEksNodeGroup#release_version}
+  */
+  readonly releaseVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#subnet_ids AwsEksNodeGroup#subnet_ids}
+  */
+  readonly subnetIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags AwsEksNodeGroup#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#tags_all AwsEksNodeGroup#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version AwsEksNodeGroup#version}
+  */
+  readonly version?: string;
+  /**
+  * launch_template block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#launch_template AwsEksNodeGroup#launch_template}
+  */
+  readonly launchTemplate?: AwsEksNodeGroup.LaunchTemplateProperty;
+  /**
+  * node_repair_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config AwsEksNodeGroup#node_repair_config}
+  */
+  readonly nodeRepairConfig?: AwsEksNodeGroup.NodeRepairConfigProperty;
+  /**
+  * remote_access block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#remote_access AwsEksNodeGroup#remote_access}
+  */
+  readonly remoteAccess?: AwsEksNodeGroup.RemoteAccessProperty;
+  /**
+  * scaling_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#scaling_config AwsEksNodeGroup#scaling_config}
+  */
+  readonly scalingConfig: AwsEksNodeGroup.ScalingConfigProperty;
+  /**
+  * taint block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#taint AwsEksNodeGroup#taint}
+  */
+  readonly taint?: AwsEksNodeGroup.TaintProperty[] | cdktn.IResolvable;
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#timeouts AwsEksNodeGroup#timeouts}
+  */
+  readonly timeouts?: AwsEksNodeGroup.TimeoutsProperty;
+  /**
+  * update_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_config AwsEksNodeGroup#update_config}
+  */
+  readonly updateConfig?: AwsEksNodeGroup.UpdateConfigProperty;
+  /**
+  * warm_pool_config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#warm_pool_config AwsEksNodeGroup#warm_pool_config}
+  */
+  readonly warmPoolConfig?: AwsEksNodeGroup.WarmPoolConfigProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group aws_eks_node_group}
+*/
+export class AwsEksNodeGroup extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_eks_node_group";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsEksNodeGroup resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsEksNodeGroup to import
+  * @param importFromId The id of the existing AwsEksNodeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEksNodeGroup to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_node_group", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group aws_eks_node_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsEksNodeGroupConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsEksNodeGroupConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_eks_node_group',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._amiType = config.amiType;
+    this._capacityType = config.capacityType;
+    this._clusterName = config.clusterName;
+    this._diskSize = config.diskSize;
+    this._forceUpdateVersion = config.forceUpdateVersion;
+    this._id = config.id;
+    this._instanceTypes = config.instanceTypes;
+    this._labels = config.labels;
+    this._nodeGroupName = config.nodeGroupName;
+    this._nodeGroupNamePrefix = config.nodeGroupNamePrefix;
+    this._nodeRoleArn = config.nodeRoleArn;
+    this._region = config.region;
+    this._releaseVersion = config.releaseVersion;
+    this._subnetIds = config.subnetIds;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._version = config.version;
+    this._launchTemplate.internalValue = config.launchTemplate;
+    this._nodeRepairConfig.internalValue = config.nodeRepairConfig;
+    this._remoteAccess.internalValue = config.remoteAccess;
+    this._scalingConfig.internalValue = config.scalingConfig;
+    this._taint.internalValue = config.taint;
+    this._timeouts.internalValue = config.timeouts;
+    this._updateConfig.internalValue = config.updateConfig;
+    this._warmPoolConfig.internalValue = config.warmPoolConfig;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // ami_type - computed: true, optional: true, required: false
+  private _amiType?: string; 
+  public get amiType() {
+    return this.getStringAttribute('ami_type');
+  }
+  public set amiType(value: string) {
+    this._amiType = value;
+  }
+  public resetAmiType() {
+    this._amiType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get amiTypeInput() {
+    return this._amiType;
+  }
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // capacity_type - computed: true, optional: true, required: false
+  private _capacityType?: string; 
+  public get capacityType() {
+    return this.getStringAttribute('capacity_type');
+  }
+  public set capacityType(value: string) {
+    this._capacityType = value;
+  }
+  public resetCapacityType() {
+    this._capacityType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityTypeInput() {
+    return this._capacityType;
+  }
+
+  // cluster_name - computed: false, optional: false, required: true
+  private _clusterName?: string; 
+  public get clusterName() {
+    return this.getStringAttribute('cluster_name');
+  }
+  public set clusterName(value: string) {
+    this._clusterName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterNameInput() {
+    return this._clusterName;
+  }
+
+  // disk_size - computed: true, optional: true, required: false
+  private _diskSize?: number; 
+  public get diskSize() {
+    return this.getNumberAttribute('disk_size');
+  }
+  public set diskSize(value: number) {
+    this._diskSize = value;
+  }
+  public resetDiskSize() {
+    this._diskSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeInput() {
+    return this._diskSize;
+  }
+
+  // force_update_version - computed: false, optional: true, required: false
+  private _forceUpdateVersion?: boolean | cdktn.IResolvable; 
+  public get forceUpdateVersion() {
+    return this.getBooleanAttribute('force_update_version');
+  }
+  public set forceUpdateVersion(value: boolean | cdktn.IResolvable) {
+    this._forceUpdateVersion = value;
+  }
+  public resetForceUpdateVersion() {
+    this._forceUpdateVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceUpdateVersionInput() {
+    return this._forceUpdateVersion;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // instance_types - computed: true, optional: true, required: false
+  private _instanceTypes?: string[]; 
+  public get instanceTypes() {
+    return this.getListAttribute('instance_types');
+  }
+  public set instanceTypes(value: string[]) {
+    this._instanceTypes = value;
+  }
+  public resetInstanceTypes() {
+    this._instanceTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTypesInput() {
+    return this._instanceTypes;
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
+  }
+
+  // node_group_name - computed: true, optional: true, required: false
+  private _nodeGroupName?: string; 
+  public get nodeGroupName() {
+    return this.getStringAttribute('node_group_name');
+  }
+  public set nodeGroupName(value: string) {
+    this._nodeGroupName = value;
+  }
+  public resetNodeGroupName() {
+    this._nodeGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupNameInput() {
+    return this._nodeGroupName;
+  }
+
+  // node_group_name_prefix - computed: true, optional: true, required: false
+  private _nodeGroupNamePrefix?: string; 
+  public get nodeGroupNamePrefix() {
+    return this.getStringAttribute('node_group_name_prefix');
+  }
+  public set nodeGroupNamePrefix(value: string) {
+    this._nodeGroupNamePrefix = value;
+  }
+  public resetNodeGroupNamePrefix() {
+    this._nodeGroupNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupNamePrefixInput() {
+    return this._nodeGroupNamePrefix;
+  }
+
+  // node_role_arn - computed: false, optional: false, required: true
+  private _nodeRoleArn?: string; 
+  public get nodeRoleArn() {
+    return this.getStringAttribute('node_role_arn');
+  }
+  public set nodeRoleArn(value: string) {
+    this._nodeRoleArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeRoleArnInput() {
+    return this._nodeRoleArn;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // release_version - computed: true, optional: true, required: false
+  private _releaseVersion?: string; 
+  public get releaseVersion() {
+    return this.getStringAttribute('release_version');
+  }
+  public set releaseVersion(value: string) {
+    this._releaseVersion = value;
+  }
+  public resetReleaseVersion() {
+    this._releaseVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get releaseVersionInput() {
+    return this._releaseVersion;
+  }
+
+  // resources - computed: true, optional: false, required: false
+  private _resources = new AwsEksNodeGroup.ResourcesPropertyList(this, "resources", false);
+  public get resources() {
+    return this._resources;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // subnet_ids - computed: false, optional: false, required: true
+  private _subnetIds?: string[]; 
+  public get subnetIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnet_ids'));
+  }
+  public set subnetIds(value: string[]) {
+    this._subnetIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdsInput() {
+    return this._subnetIds;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // version - computed: true, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // launch_template - computed: false, optional: true, required: false
+  private _launchTemplate = new AwsEksNodeGroup.LaunchTemplatePropertyOutputReference(this, "launch_template");
+  public get launchTemplate() {
+    return this._launchTemplate;
+  }
+  public putLaunchTemplate(value: AwsEksNodeGroup.LaunchTemplateProperty) {
+    this._launchTemplate.internalValue = value;
+  }
+  public resetLaunchTemplate() {
+    this._launchTemplate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get launchTemplateInput() {
+    return this._launchTemplate.internalValue;
+  }
+
+  // node_repair_config - computed: false, optional: true, required: false
+  private _nodeRepairConfig = new AwsEksNodeGroup.NodeRepairConfigPropertyOutputReference(this, "node_repair_config");
+  public get nodeRepairConfig() {
+    return this._nodeRepairConfig;
+  }
+  public putNodeRepairConfig(value: AwsEksNodeGroup.NodeRepairConfigProperty) {
+    this._nodeRepairConfig.internalValue = value;
+  }
+  public resetNodeRepairConfig() {
+    this._nodeRepairConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeRepairConfigInput() {
+    return this._nodeRepairConfig.internalValue;
+  }
+
+  // remote_access - computed: false, optional: true, required: false
+  private _remoteAccess = new AwsEksNodeGroup.RemoteAccessPropertyOutputReference(this, "remote_access");
+  public get remoteAccess() {
+    return this._remoteAccess;
+  }
+  public putRemoteAccess(value: AwsEksNodeGroup.RemoteAccessProperty) {
+    this._remoteAccess.internalValue = value;
+  }
+  public resetRemoteAccess() {
+    this._remoteAccess.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteAccessInput() {
+    return this._remoteAccess.internalValue;
+  }
+
+  // scaling_config - computed: false, optional: false, required: true
+  private _scalingConfig = new AwsEksNodeGroup.ScalingConfigPropertyOutputReference(this, "scaling_config");
+  public get scalingConfig() {
+    return this._scalingConfig;
+  }
+  public putScalingConfig(value: AwsEksNodeGroup.ScalingConfigProperty) {
+    this._scalingConfig.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalingConfigInput() {
+    return this._scalingConfig.internalValue;
+  }
+
+  // taint - computed: false, optional: true, required: false
+  private _taint = new AwsEksNodeGroup.TaintPropertyList(this, "taint", true);
+  public get taint() {
+    return this._taint;
+  }
+  public putTaint(value: AwsEksNodeGroup.TaintProperty[] | cdktn.IResolvable) {
+    this._taint.internalValue = value;
+  }
+  public resetTaint() {
+    this._taint.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taintInput() {
+    return this._taint.internalValue;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new AwsEksNodeGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: AwsEksNodeGroup.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // update_config - computed: false, optional: true, required: false
+  private _updateConfig = new AwsEksNodeGroup.UpdateConfigPropertyOutputReference(this, "update_config");
+  public get updateConfig() {
+    return this._updateConfig;
+  }
+  public putUpdateConfig(value: AwsEksNodeGroup.UpdateConfigProperty) {
+    this._updateConfig.internalValue = value;
+  }
+  public resetUpdateConfig() {
+    this._updateConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateConfigInput() {
+    return this._updateConfig.internalValue;
+  }
+
+  // warm_pool_config - computed: false, optional: true, required: false
+  private _warmPoolConfig = new AwsEksNodeGroup.WarmPoolConfigPropertyOutputReference(this, "warm_pool_config");
+  public get warmPoolConfig() {
+    return this._warmPoolConfig;
+  }
+  public putWarmPoolConfig(value: AwsEksNodeGroup.WarmPoolConfigProperty) {
+    this._warmPoolConfig.internalValue = value;
+  }
+  public resetWarmPoolConfig() {
+    this._warmPoolConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get warmPoolConfigInput() {
+    return this._warmPoolConfig.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      ami_type: cdktn.stringToTerraform(this._amiType),
+      capacity_type: cdktn.stringToTerraform(this._capacityType),
+      cluster_name: cdktn.stringToTerraform(this._clusterName),
+      disk_size: cdktn.numberToTerraform(this._diskSize),
+      force_update_version: cdktn.booleanToTerraform(this._forceUpdateVersion),
+      id: cdktn.stringToTerraform(this._id),
+      instance_types: cdktn.listMapper(cdktn.stringToTerraform, false)(this._instanceTypes),
+      labels: cdktn.hashMapper(cdktn.stringToTerraform)(this._labels),
+      node_group_name: cdktn.stringToTerraform(this._nodeGroupName),
+      node_group_name_prefix: cdktn.stringToTerraform(this._nodeGroupNamePrefix),
+      node_role_arn: cdktn.stringToTerraform(this._nodeRoleArn),
+      region: cdktn.stringToTerraform(this._region),
+      release_version: cdktn.stringToTerraform(this._releaseVersion),
+      subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      version: cdktn.stringToTerraform(this._version),
+      launch_template: awsEksNodeGroupLaunchTemplatePropertyToTerraform(this._launchTemplate.internalValue),
+      node_repair_config: awsEksNodeGroupNodeRepairConfigPropertyToTerraform(this._nodeRepairConfig.internalValue),
+      remote_access: awsEksNodeGroupRemoteAccessPropertyToTerraform(this._remoteAccess.internalValue),
+      scaling_config: awsEksNodeGroupScalingConfigPropertyToTerraform(this._scalingConfig.internalValue),
+      taint: cdktn.listMapper(awsEksNodeGroupTaintPropertyToTerraform, true)(this._taint.internalValue),
+      timeouts: awsEksNodeGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      update_config: awsEksNodeGroupUpdateConfigPropertyToTerraform(this._updateConfig.internalValue),
+      warm_pool_config: awsEksNodeGroupWarmPoolConfigPropertyToTerraform(this._warmPoolConfig.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      ami_type: {
+        value: cdktn.stringToHclTerraform(this._amiType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      capacity_type: {
+        value: cdktn.stringToHclTerraform(this._capacityType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster_name: {
+        value: cdktn.stringToHclTerraform(this._clusterName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_size: {
+        value: cdktn.numberToHclTerraform(this._diskSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      force_update_version: {
+        value: cdktn.booleanToHclTerraform(this._forceUpdateVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_types: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._instanceTypes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      labels: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._labels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      node_group_name: {
+        value: cdktn.stringToHclTerraform(this._nodeGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_group_name_prefix: {
+        value: cdktn.stringToHclTerraform(this._nodeGroupNamePrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_role_arn: {
+        value: cdktn.stringToHclTerraform(this._nodeRoleArn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_version: {
+        value: cdktn.stringToHclTerraform(this._releaseVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnet_ids: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._subnetIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version: {
+        value: cdktn.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      launch_template: {
+        value: awsEksNodeGroupLaunchTemplatePropertyToHclTerraform(this._launchTemplate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.LaunchTemplatePropertyList",
+      },
+      node_repair_config: {
+        value: awsEksNodeGroupNodeRepairConfigPropertyToHclTerraform(this._nodeRepairConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.NodeRepairConfigPropertyList",
+      },
+      remote_access: {
+        value: awsEksNodeGroupRemoteAccessPropertyToHclTerraform(this._remoteAccess.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.RemoteAccessPropertyList",
+      },
+      scaling_config: {
+        value: awsEksNodeGroupScalingConfigPropertyToHclTerraform(this._scalingConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.ScalingConfigPropertyList",
+      },
+      taint: {
+        value: cdktn.listMapperHcl(awsEksNodeGroupTaintPropertyToHclTerraform, true)(this._taint.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsEksNodeGroup.TaintPropertyList",
+      },
+      timeouts: {
+        value: awsEksNodeGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AwsEksNodeGroup.TimeoutsProperty",
+      },
+      update_config: {
+        value: awsEksNodeGroupUpdateConfigPropertyToHclTerraform(this._updateConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.UpdateConfigPropertyList",
+      },
+      warm_pool_config: {
+        value: awsEksNodeGroupWarmPoolConfigPropertyToHclTerraform(this._warmPoolConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsEksNodeGroup.WarmPoolConfigPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsEksNodeGroupAutoscalingGroupsPropertyToTerraform(struct?: AwsEksNodeGroup.AutoscalingGroupsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsEksNodeGroupAutoscalingGroupsPropertyToHclTerraform(struct?: AwsEksNodeGroup.AutoscalingGroupsProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsEksNodeGroupResourcesPropertyToTerraform(struct?: AwsEksNodeGroup.ResourcesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
+}
+
+
+export function awsEksNodeGroupResourcesPropertyToHclTerraform(struct?: AwsEksNodeGroup.ResourcesProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+
+export function awsEksNodeGroupLaunchTemplatePropertyToTerraform(struct?: AwsEksNodeGroup.LaunchTemplatePropertyOutputReference | AwsEksNodeGroup.LaunchTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    id: cdktn.stringToTerraform(struct!.id),
+    name: cdktn.stringToTerraform(struct!.name),
+    version: cdktn.stringToTerraform(struct!.version),
+  }
+}
+
+
+export function awsEksNodeGroupLaunchTemplatePropertyToHclTerraform(struct?: AwsEksNodeGroup.LaunchTemplatePropertyOutputReference | AwsEksNodeGroup.LaunchTemplateProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    id: {
+      value: cdktn.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktn.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktn.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupNodeRepairConfigOverridesPropertyToTerraform(struct?: AwsEksNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    min_repair_wait_time_mins: cdktn.numberToTerraform(struct!.minRepairWaitTimeMins),
+    node_monitoring_condition: cdktn.stringToTerraform(struct!.nodeMonitoringCondition),
+    node_unhealthy_reason: cdktn.stringToTerraform(struct!.nodeUnhealthyReason),
+    repair_action: cdktn.stringToTerraform(struct!.repairAction),
+  }
+}
+
+
+export function awsEksNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform(struct?: AwsEksNodeGroup.NodeRepairConfigOverridesProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    min_repair_wait_time_mins: {
+      value: cdktn.numberToHclTerraform(struct!.minRepairWaitTimeMins),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    node_monitoring_condition: {
+      value: cdktn.stringToHclTerraform(struct!.nodeMonitoringCondition),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    node_unhealthy_reason: {
+      value: cdktn.stringToHclTerraform(struct!.nodeUnhealthyReason),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    repair_action: {
+      value: cdktn.stringToHclTerraform(struct!.repairAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupNodeRepairConfigPropertyToTerraform(struct?: AwsEksNodeGroup.NodeRepairConfigPropertyOutputReference | AwsEksNodeGroup.NodeRepairConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    enabled: cdktn.booleanToTerraform(struct!.enabled),
+    max_parallel_nodes_repaired_count: cdktn.numberToTerraform(struct!.maxParallelNodesRepairedCount),
+    max_parallel_nodes_repaired_percentage: cdktn.numberToTerraform(struct!.maxParallelNodesRepairedPercentage),
+    max_unhealthy_node_threshold_count: cdktn.numberToTerraform(struct!.maxUnhealthyNodeThresholdCount),
+    max_unhealthy_node_threshold_percentage: cdktn.numberToTerraform(struct!.maxUnhealthyNodeThresholdPercentage),
+    node_repair_config_overrides: cdktn.listMapper(awsEksNodeGroupNodeRepairConfigOverridesPropertyToTerraform, true)(struct!.nodeRepairConfigOverrides),
+  }
+}
+
+
+export function awsEksNodeGroupNodeRepairConfigPropertyToHclTerraform(struct?: AwsEksNodeGroup.NodeRepairConfigPropertyOutputReference | AwsEksNodeGroup.NodeRepairConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    max_parallel_nodes_repaired_count: {
+      value: cdktn.numberToHclTerraform(struct!.maxParallelNodesRepairedCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_parallel_nodes_repaired_percentage: {
+      value: cdktn.numberToHclTerraform(struct!.maxParallelNodesRepairedPercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_unhealthy_node_threshold_count: {
+      value: cdktn.numberToHclTerraform(struct!.maxUnhealthyNodeThresholdCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_unhealthy_node_threshold_percentage: {
+      value: cdktn.numberToHclTerraform(struct!.maxUnhealthyNodeThresholdPercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    node_repair_config_overrides: {
+      value: cdktn.listMapperHcl(awsEksNodeGroupNodeRepairConfigOverridesPropertyToHclTerraform, true)(struct!.nodeRepairConfigOverrides),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NodeRepairConfigOverridesPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupRemoteAccessPropertyToTerraform(struct?: AwsEksNodeGroup.RemoteAccessPropertyOutputReference | AwsEksNodeGroup.RemoteAccessProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    ec2_ssh_key: cdktn.stringToTerraform(struct!.ec2SshKey),
+    source_security_group_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.sourceSecurityGroupIds),
+  }
+}
+
+
+export function awsEksNodeGroupRemoteAccessPropertyToHclTerraform(struct?: AwsEksNodeGroup.RemoteAccessPropertyOutputReference | AwsEksNodeGroup.RemoteAccessProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    ec2_ssh_key: {
+      value: cdktn.stringToHclTerraform(struct!.ec2SshKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_security_group_ids: {
+      value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(struct!.sourceSecurityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupScalingConfigPropertyToTerraform(struct?: AwsEksNodeGroup.ScalingConfigPropertyOutputReference | AwsEksNodeGroup.ScalingConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    desired_size: cdktn.numberToTerraform(struct!.desiredSize),
+    max_size: cdktn.numberToTerraform(struct!.maxSize),
+    min_size: cdktn.numberToTerraform(struct!.minSize),
+  }
+}
+
+
+export function awsEksNodeGroupScalingConfigPropertyToHclTerraform(struct?: AwsEksNodeGroup.ScalingConfigPropertyOutputReference | AwsEksNodeGroup.ScalingConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    desired_size: {
+      value: cdktn.numberToHclTerraform(struct!.desiredSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_size: {
+      value: cdktn.numberToHclTerraform(struct!.maxSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_size: {
+      value: cdktn.numberToHclTerraform(struct!.minSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupTaintPropertyToTerraform(struct?: AwsEksNodeGroup.TaintProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    effect: cdktn.stringToTerraform(struct!.effect),
+    key: cdktn.stringToTerraform(struct!.key),
+    value: cdktn.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function awsEksNodeGroupTaintPropertyToHclTerraform(struct?: AwsEksNodeGroup.TaintProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    effect: {
+      value: cdktn.stringToHclTerraform(struct!.effect),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktn.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktn.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupTimeoutsPropertyToTerraform(struct?: AwsEksNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    create: cdktn.stringToTerraform(struct!.create),
+    delete: cdktn.stringToTerraform(struct!.delete),
+    update: cdktn.stringToTerraform(struct!.update),
+  }
+}
+
+
+export function awsEksNodeGroupTimeoutsPropertyToHclTerraform(struct?: AwsEksNodeGroup.TimeoutsProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    create: {
+      value: cdktn.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktn.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktn.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupUpdateConfigPropertyToTerraform(struct?: AwsEksNodeGroup.UpdateConfigPropertyOutputReference | AwsEksNodeGroup.UpdateConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_unavailable: cdktn.numberToTerraform(struct!.maxUnavailable),
+    max_unavailable_percentage: cdktn.numberToTerraform(struct!.maxUnavailablePercentage),
+    update_strategy: cdktn.stringToTerraform(struct!.updateStrategy),
+  }
+}
+
+
+export function awsEksNodeGroupUpdateConfigPropertyToHclTerraform(struct?: AwsEksNodeGroup.UpdateConfigPropertyOutputReference | AwsEksNodeGroup.UpdateConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_unavailable: {
+      value: cdktn.numberToHclTerraform(struct!.maxUnavailable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_unavailable_percentage: {
+      value: cdktn.numberToHclTerraform(struct!.maxUnavailablePercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    update_strategy: {
+      value: cdktn.stringToHclTerraform(struct!.updateStrategy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsEksNodeGroupWarmPoolConfigPropertyToTerraform(struct?: AwsEksNodeGroup.WarmPoolConfigPropertyOutputReference | AwsEksNodeGroup.WarmPoolConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    max_group_prepared_capacity: cdktn.numberToTerraform(struct!.maxGroupPreparedCapacity),
+    min_size: cdktn.numberToTerraform(struct!.minSize),
+    pool_state: cdktn.stringToTerraform(struct!.poolState),
+    reuse_on_scale_in: cdktn.booleanToTerraform(struct!.reuseOnScaleIn),
+  }
+}
+
+
+export function awsEksNodeGroupWarmPoolConfigPropertyToHclTerraform(struct?: AwsEksNodeGroup.WarmPoolConfigPropertyOutputReference | AwsEksNodeGroup.WarmPoolConfigProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    max_group_prepared_capacity: {
+      value: cdktn.numberToHclTerraform(struct!.maxGroupPreparedCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_size: {
+      value: cdktn.numberToHclTerraform(struct!.minSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    pool_state: {
+      value: cdktn.stringToHclTerraform(struct!.poolState),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reuse_on_scale_in: {
+      value: cdktn.booleanToHclTerraform(struct!.reuseOnScaleIn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsEksNodeGroup {
+export interface AutoscalingGroupsProperty {
+}
+export class AutoscalingGroupsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutoscalingGroupsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutoscalingGroupsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
+
+export class AutoscalingGroupsPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutoscalingGroupsPropertyOutputReference {
+    return new AutoscalingGroupsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ResourcesProperty {
+}
+export class ResourcesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcesProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcesProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // autoscaling_groups - computed: true, optional: false, required: false
+  private _autoscalingGroups = new AutoscalingGroupsPropertyList(this, "autoscaling_groups", false);
+  public get autoscalingGroups() {
+    return this._autoscalingGroups;
+  }
+
+  // remote_access_security_group_id - computed: true, optional: false, required: false
+  public get remoteAccessSecurityGroupId() {
+    return this.getStringAttribute('remote_access_security_group_id');
+  }
+}
+
+export class ResourcesPropertyList extends cdktn.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcesPropertyOutputReference {
+    return new ResourcesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LaunchTemplateProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#id AwsEksNodeGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#name AwsEksNodeGroup#name}
+  */
+  readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#version AwsEksNodeGroup#version}
+  */
+  readonly version: string;
+}
+export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LaunchTemplateProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LaunchTemplateProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._id = undefined;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._id = value.id;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+export interface NodeRepairConfigOverridesProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_repair_wait_time_mins AwsEksNodeGroup#min_repair_wait_time_mins}
+  */
+  readonly minRepairWaitTimeMins: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_monitoring_condition AwsEksNodeGroup#node_monitoring_condition}
+  */
+  readonly nodeMonitoringCondition: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_unhealthy_reason AwsEksNodeGroup#node_unhealthy_reason}
+  */
+  readonly nodeUnhealthyReason: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#repair_action AwsEksNodeGroup#repair_action}
+  */
+  readonly repairAction: string;
+}
+export class NodeRepairConfigOverridesPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NodeRepairConfigOverridesProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minRepairWaitTimeMins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minRepairWaitTimeMins = this._minRepairWaitTimeMins;
+    }
+    if (this._nodeMonitoringCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeMonitoringCondition = this._nodeMonitoringCondition;
+    }
+    if (this._nodeUnhealthyReason !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeUnhealthyReason = this._nodeUnhealthyReason;
+    }
+    if (this._repairAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repairAction = this._repairAction;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NodeRepairConfigOverridesProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._minRepairWaitTimeMins = undefined;
+      this._nodeMonitoringCondition = undefined;
+      this._nodeUnhealthyReason = undefined;
+      this._repairAction = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._minRepairWaitTimeMins = value.minRepairWaitTimeMins;
+      this._nodeMonitoringCondition = value.nodeMonitoringCondition;
+      this._nodeUnhealthyReason = value.nodeUnhealthyReason;
+      this._repairAction = value.repairAction;
+    }
+  }
+
+  // min_repair_wait_time_mins - computed: false, optional: false, required: true
+  private _minRepairWaitTimeMins?: number; 
+  public get minRepairWaitTimeMins() {
+    return this.getNumberAttribute('min_repair_wait_time_mins');
+  }
+  public set minRepairWaitTimeMins(value: number) {
+    this._minRepairWaitTimeMins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minRepairWaitTimeMinsInput() {
+    return this._minRepairWaitTimeMins;
+  }
+
+  // node_monitoring_condition - computed: false, optional: false, required: true
+  private _nodeMonitoringCondition?: string; 
+  public get nodeMonitoringCondition() {
+    return this.getStringAttribute('node_monitoring_condition');
+  }
+  public set nodeMonitoringCondition(value: string) {
+    this._nodeMonitoringCondition = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeMonitoringConditionInput() {
+    return this._nodeMonitoringCondition;
+  }
+
+  // node_unhealthy_reason - computed: false, optional: false, required: true
+  private _nodeUnhealthyReason?: string; 
+  public get nodeUnhealthyReason() {
+    return this.getStringAttribute('node_unhealthy_reason');
+  }
+  public set nodeUnhealthyReason(value: string) {
+    this._nodeUnhealthyReason = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeUnhealthyReasonInput() {
+    return this._nodeUnhealthyReason;
+  }
+
+  // repair_action - computed: false, optional: false, required: true
+  private _repairAction?: string; 
+  public get repairAction() {
+    return this.getStringAttribute('repair_action');
+  }
+  public set repairAction(value: string) {
+    this._repairAction = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repairActionInput() {
+    return this._repairAction;
+  }
+}
+
+export class NodeRepairConfigOverridesPropertyList extends cdktn.ComplexList {
+  public internalValue? : NodeRepairConfigOverridesProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NodeRepairConfigOverridesPropertyOutputReference {
+    return new NodeRepairConfigOverridesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NodeRepairConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#enabled AwsEksNodeGroup#enabled}
+  */
+  readonly enabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_count AwsEksNodeGroup#max_parallel_nodes_repaired_count}
+  */
+  readonly maxParallelNodesRepairedCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_parallel_nodes_repaired_percentage AwsEksNodeGroup#max_parallel_nodes_repaired_percentage}
+  */
+  readonly maxParallelNodesRepairedPercentage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_count AwsEksNodeGroup#max_unhealthy_node_threshold_count}
+  */
+  readonly maxUnhealthyNodeThresholdCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unhealthy_node_threshold_percentage AwsEksNodeGroup#max_unhealthy_node_threshold_percentage}
+  */
+  readonly maxUnhealthyNodeThresholdPercentage?: number;
+  /**
+  * node_repair_config_overrides block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#node_repair_config_overrides AwsEksNodeGroup#node_repair_config_overrides}
+  */
+  readonly nodeRepairConfigOverrides?: NodeRepairConfigOverridesProperty[] | cdktn.IResolvable;
+}
+export class NodeRepairConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NodeRepairConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._maxParallelNodesRepairedCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxParallelNodesRepairedCount = this._maxParallelNodesRepairedCount;
+    }
+    if (this._maxParallelNodesRepairedPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxParallelNodesRepairedPercentage = this._maxParallelNodesRepairedPercentage;
+    }
+    if (this._maxUnhealthyNodeThresholdCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxUnhealthyNodeThresholdCount = this._maxUnhealthyNodeThresholdCount;
+    }
+    if (this._maxUnhealthyNodeThresholdPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxUnhealthyNodeThresholdPercentage = this._maxUnhealthyNodeThresholdPercentage;
+    }
+    if (this._nodeRepairConfigOverrides?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeRepairConfigOverrides = this._nodeRepairConfigOverrides?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NodeRepairConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._maxParallelNodesRepairedCount = undefined;
+      this._maxParallelNodesRepairedPercentage = undefined;
+      this._maxUnhealthyNodeThresholdCount = undefined;
+      this._maxUnhealthyNodeThresholdPercentage = undefined;
+      this._nodeRepairConfigOverrides.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._maxParallelNodesRepairedCount = value.maxParallelNodesRepairedCount;
+      this._maxParallelNodesRepairedPercentage = value.maxParallelNodesRepairedPercentage;
+      this._maxUnhealthyNodeThresholdCount = value.maxUnhealthyNodeThresholdCount;
+      this._maxUnhealthyNodeThresholdPercentage = value.maxUnhealthyNodeThresholdPercentage;
+      this._nodeRepairConfigOverrides.internalValue = value.nodeRepairConfigOverrides;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktn.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktn.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // max_parallel_nodes_repaired_count - computed: false, optional: true, required: false
+  private _maxParallelNodesRepairedCount?: number; 
+  public get maxParallelNodesRepairedCount() {
+    return this.getNumberAttribute('max_parallel_nodes_repaired_count');
+  }
+  public set maxParallelNodesRepairedCount(value: number) {
+    this._maxParallelNodesRepairedCount = value;
+  }
+  public resetMaxParallelNodesRepairedCount() {
+    this._maxParallelNodesRepairedCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxParallelNodesRepairedCountInput() {
+    return this._maxParallelNodesRepairedCount;
+  }
+
+  // max_parallel_nodes_repaired_percentage - computed: false, optional: true, required: false
+  private _maxParallelNodesRepairedPercentage?: number; 
+  public get maxParallelNodesRepairedPercentage() {
+    return this.getNumberAttribute('max_parallel_nodes_repaired_percentage');
+  }
+  public set maxParallelNodesRepairedPercentage(value: number) {
+    this._maxParallelNodesRepairedPercentage = value;
+  }
+  public resetMaxParallelNodesRepairedPercentage() {
+    this._maxParallelNodesRepairedPercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxParallelNodesRepairedPercentageInput() {
+    return this._maxParallelNodesRepairedPercentage;
+  }
+
+  // max_unhealthy_node_threshold_count - computed: false, optional: true, required: false
+  private _maxUnhealthyNodeThresholdCount?: number; 
+  public get maxUnhealthyNodeThresholdCount() {
+    return this.getNumberAttribute('max_unhealthy_node_threshold_count');
+  }
+  public set maxUnhealthyNodeThresholdCount(value: number) {
+    this._maxUnhealthyNodeThresholdCount = value;
+  }
+  public resetMaxUnhealthyNodeThresholdCount() {
+    this._maxUnhealthyNodeThresholdCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxUnhealthyNodeThresholdCountInput() {
+    return this._maxUnhealthyNodeThresholdCount;
+  }
+
+  // max_unhealthy_node_threshold_percentage - computed: false, optional: true, required: false
+  private _maxUnhealthyNodeThresholdPercentage?: number; 
+  public get maxUnhealthyNodeThresholdPercentage() {
+    return this.getNumberAttribute('max_unhealthy_node_threshold_percentage');
+  }
+  public set maxUnhealthyNodeThresholdPercentage(value: number) {
+    this._maxUnhealthyNodeThresholdPercentage = value;
+  }
+  public resetMaxUnhealthyNodeThresholdPercentage() {
+    this._maxUnhealthyNodeThresholdPercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxUnhealthyNodeThresholdPercentageInput() {
+    return this._maxUnhealthyNodeThresholdPercentage;
+  }
+
+  // node_repair_config_overrides - computed: false, optional: true, required: false
+  private _nodeRepairConfigOverrides = new NodeRepairConfigOverridesPropertyList(this, "node_repair_config_overrides", false);
+  public get nodeRepairConfigOverrides() {
+    return this._nodeRepairConfigOverrides;
+  }
+  public putNodeRepairConfigOverrides(value: NodeRepairConfigOverridesProperty[] | cdktn.IResolvable) {
+    this._nodeRepairConfigOverrides.internalValue = value;
+  }
+  public resetNodeRepairConfigOverrides() {
+    this._nodeRepairConfigOverrides.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeRepairConfigOverridesInput() {
+    return this._nodeRepairConfigOverrides.internalValue;
+  }
+}
+export interface RemoteAccessProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#ec2_ssh_key AwsEksNodeGroup#ec2_ssh_key}
+  */
+  readonly ec2SshKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#source_security_group_ids AwsEksNodeGroup#source_security_group_ids}
+  */
+  readonly sourceSecurityGroupIds?: string[];
+}
+export class RemoteAccessPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RemoteAccessProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ec2SshKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ec2SshKey = this._ec2SshKey;
+    }
+    if (this._sourceSecurityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSecurityGroupIds = this._sourceSecurityGroupIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RemoteAccessProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ec2SshKey = undefined;
+      this._sourceSecurityGroupIds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ec2SshKey = value.ec2SshKey;
+      this._sourceSecurityGroupIds = value.sourceSecurityGroupIds;
+    }
+  }
+
+  // ec2_ssh_key - computed: false, optional: true, required: false
+  private _ec2SshKey?: string; 
+  public get ec2SshKey() {
+    return this.getStringAttribute('ec2_ssh_key');
+  }
+  public set ec2SshKey(value: string) {
+    this._ec2SshKey = value;
+  }
+  public resetEc2SshKey() {
+    this._ec2SshKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ec2SshKeyInput() {
+    return this._ec2SshKey;
+  }
+
+  // source_security_group_ids - computed: false, optional: true, required: false
+  private _sourceSecurityGroupIds?: string[]; 
+  public get sourceSecurityGroupIds() {
+    return cdktn.Fn.tolist(this.getListAttribute('source_security_group_ids'));
+  }
+  public set sourceSecurityGroupIds(value: string[]) {
+    this._sourceSecurityGroupIds = value;
+  }
+  public resetSourceSecurityGroupIds() {
+    this._sourceSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSecurityGroupIdsInput() {
+    return this._sourceSecurityGroupIds;
+  }
+}
+export interface ScalingConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#desired_size AwsEksNodeGroup#desired_size}
+  */
+  readonly desiredSize: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_size AwsEksNodeGroup#max_size}
+  */
+  readonly maxSize: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size AwsEksNodeGroup#min_size}
+  */
+  readonly minSize: number;
+}
+export class ScalingConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ScalingConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._desiredSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.desiredSize = this._desiredSize;
+    }
+    if (this._maxSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxSize = this._maxSize;
+    }
+    if (this._minSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minSize = this._minSize;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ScalingConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._desiredSize = undefined;
+      this._maxSize = undefined;
+      this._minSize = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._desiredSize = value.desiredSize;
+      this._maxSize = value.maxSize;
+      this._minSize = value.minSize;
+    }
+  }
+
+  // desired_size - computed: false, optional: false, required: true
+  private _desiredSize?: number; 
+  public get desiredSize() {
+    return this.getNumberAttribute('desired_size');
+  }
+  public set desiredSize(value: number) {
+    this._desiredSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredSizeInput() {
+    return this._desiredSize;
+  }
+
+  // max_size - computed: false, optional: false, required: true
+  private _maxSize?: number; 
+  public get maxSize() {
+    return this.getNumberAttribute('max_size');
+  }
+  public set maxSize(value: number) {
+    this._maxSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSizeInput() {
+    return this._maxSize;
+  }
+
+  // min_size - computed: false, optional: false, required: true
+  private _minSize?: number; 
+  public get minSize() {
+    return this.getNumberAttribute('min_size');
+  }
+  public set minSize(value: number) {
+    this._minSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minSizeInput() {
+    return this._minSize;
+  }
+}
+export interface TaintProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#effect AwsEksNodeGroup#effect}
+  */
+  readonly effect: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#key AwsEksNodeGroup#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#value AwsEksNodeGroup#value}
+  */
+  readonly value?: string;
+}
+export class TaintPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TaintProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._effect !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.effect = this._effect;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TaintProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._effect = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._effect = value.effect;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // effect - computed: false, optional: false, required: true
+  private _effect?: string; 
+  public get effect() {
+    return this.getStringAttribute('effect');
+  }
+  public set effect(value: string) {
+    this._effect = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get effectInput() {
+    return this._effect;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class TaintPropertyList extends cdktn.ComplexList {
+  public internalValue? : TaintProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TaintPropertyOutputReference {
+    return new TaintPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface TimeoutsProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#create AwsEksNodeGroup#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#delete AwsEksNodeGroup#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update AwsEksNodeGroup#update}
+  */
+  readonly update?: string;
+}
+export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+export interface UpdateConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable AwsEksNodeGroup#max_unavailable}
+  */
+  readonly maxUnavailable?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_unavailable_percentage AwsEksNodeGroup#max_unavailable_percentage}
+  */
+  readonly maxUnavailablePercentage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#update_strategy AwsEksNodeGroup#update_strategy}
+  */
+  readonly updateStrategy?: string;
+}
+export class UpdateConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): UpdateConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxUnavailable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailable = this._maxUnavailable;
+    }
+    if (this._maxUnavailablePercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailablePercentage = this._maxUnavailablePercentage;
+    }
+    if (this._updateStrategy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.updateStrategy = this._updateStrategy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: UpdateConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxUnavailable = undefined;
+      this._maxUnavailablePercentage = undefined;
+      this._updateStrategy = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxUnavailable = value.maxUnavailable;
+      this._maxUnavailablePercentage = value.maxUnavailablePercentage;
+      this._updateStrategy = value.updateStrategy;
+    }
+  }
+
+  // max_unavailable - computed: false, optional: true, required: false
+  private _maxUnavailable?: number; 
+  public get maxUnavailable() {
+    return this.getNumberAttribute('max_unavailable');
+  }
+  public set maxUnavailable(value: number) {
+    this._maxUnavailable = value;
+  }
+  public resetMaxUnavailable() {
+    this._maxUnavailable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxUnavailableInput() {
+    return this._maxUnavailable;
+  }
+
+  // max_unavailable_percentage - computed: false, optional: true, required: false
+  private _maxUnavailablePercentage?: number; 
+  public get maxUnavailablePercentage() {
+    return this.getNumberAttribute('max_unavailable_percentage');
+  }
+  public set maxUnavailablePercentage(value: number) {
+    this._maxUnavailablePercentage = value;
+  }
+  public resetMaxUnavailablePercentage() {
+    this._maxUnavailablePercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxUnavailablePercentageInput() {
+    return this._maxUnavailablePercentage;
+  }
+
+  // update_strategy - computed: false, optional: true, required: false
+  private _updateStrategy?: string; 
+  public get updateStrategy() {
+    return this.getStringAttribute('update_strategy');
+  }
+  public set updateStrategy(value: string) {
+    this._updateStrategy = value;
+  }
+  public resetUpdateStrategy() {
+    this._updateStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateStrategyInput() {
+    return this._updateStrategy;
+  }
+}
+export interface WarmPoolConfigProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#max_group_prepared_capacity AwsEksNodeGroup#max_group_prepared_capacity}
+  */
+  readonly maxGroupPreparedCapacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#min_size AwsEksNodeGroup#min_size}
+  */
+  readonly minSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#pool_state AwsEksNodeGroup#pool_state}
+  */
+  readonly poolState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_node_group#reuse_on_scale_in AwsEksNodeGroup#reuse_on_scale_in}
+  */
+  readonly reuseOnScaleIn?: boolean | cdktn.IResolvable;
+}
+export class WarmPoolConfigPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WarmPoolConfigProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxGroupPreparedCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxGroupPreparedCapacity = this._maxGroupPreparedCapacity;
+    }
+    if (this._minSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minSize = this._minSize;
+    }
+    if (this._poolState !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.poolState = this._poolState;
+    }
+    if (this._reuseOnScaleIn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reuseOnScaleIn = this._reuseOnScaleIn;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WarmPoolConfigProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxGroupPreparedCapacity = undefined;
+      this._minSize = undefined;
+      this._poolState = undefined;
+      this._reuseOnScaleIn = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxGroupPreparedCapacity = value.maxGroupPreparedCapacity;
+      this._minSize = value.minSize;
+      this._poolState = value.poolState;
+      this._reuseOnScaleIn = value.reuseOnScaleIn;
+    }
+  }
+
+  // max_group_prepared_capacity - computed: true, optional: true, required: false
+  private _maxGroupPreparedCapacity?: number; 
+  public get maxGroupPreparedCapacity() {
+    return this.getNumberAttribute('max_group_prepared_capacity');
+  }
+  public set maxGroupPreparedCapacity(value: number) {
+    this._maxGroupPreparedCapacity = value;
+  }
+  public resetMaxGroupPreparedCapacity() {
+    this._maxGroupPreparedCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxGroupPreparedCapacityInput() {
+    return this._maxGroupPreparedCapacity;
+  }
+
+  // min_size - computed: true, optional: true, required: false
+  private _minSize?: number; 
+  public get minSize() {
+    return this.getNumberAttribute('min_size');
+  }
+  public set minSize(value: number) {
+    this._minSize = value;
+  }
+  public resetMinSize() {
+    this._minSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minSizeInput() {
+    return this._minSize;
+  }
+
+  // pool_state - computed: true, optional: true, required: false
+  private _poolState?: string; 
+  public get poolState() {
+    return this.getStringAttribute('pool_state');
+  }
+  public set poolState(value: string) {
+    this._poolState = value;
+  }
+  public resetPoolState() {
+    this._poolState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get poolStateInput() {
+    return this._poolState;
+  }
+
+  // reuse_on_scale_in - computed: true, optional: true, required: false
+  private _reuseOnScaleIn?: boolean | cdktn.IResolvable; 
+  public get reuseOnScaleIn() {
+    return this.getBooleanAttribute('reuse_on_scale_in');
+  }
+  public set reuseOnScaleIn(value: boolean | cdktn.IResolvable) {
+    this._reuseOnScaleIn = value;
+  }
+  public resetReuseOnScaleIn() {
+    this._reuseOnScaleIn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reuseOnScaleInInput() {
+    return this._reuseOnScaleIn;
+  }
+}
+}

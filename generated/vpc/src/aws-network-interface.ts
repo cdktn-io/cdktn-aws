@@ -1,0 +1,1202 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface
+// generated from terraform resource schema — do not edit by hand
+
+import { Construct } from 'constructs';
+import * as cdktn from 'cdktn';
+export interface AwsNetworkInterfaceConfig extends cdktn.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#description AwsNetworkInterface#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#enable_primary_ipv6 AwsNetworkInterface#enable_primary_ipv6}
+  */
+  readonly enablePrimaryIpv6?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#id AwsNetworkInterface#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#interface_type AwsNetworkInterface#interface_type}
+  */
+  readonly interfaceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefix_count AwsNetworkInterface#ipv4_prefix_count}
+  */
+  readonly ipv4PrefixCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv4_prefixes AwsNetworkInterface#ipv4_prefixes}
+  */
+  readonly ipv4Prefixes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_count AwsNetworkInterface#ipv6_address_count}
+  */
+  readonly ipv6AddressCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list AwsNetworkInterface#ipv6_address_list}
+  */
+  readonly ipv6AddressList?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_address_list_enabled AwsNetworkInterface#ipv6_address_list_enabled}
+  */
+  readonly ipv6AddressListEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_addresses AwsNetworkInterface#ipv6_addresses}
+  */
+  readonly ipv6Addresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefix_count AwsNetworkInterface#ipv6_prefix_count}
+  */
+  readonly ipv6PrefixCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ipv6_prefixes AwsNetworkInterface#ipv6_prefixes}
+  */
+  readonly ipv6Prefixes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip AwsNetworkInterface#private_ip}
+  */
+  readonly privateIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list AwsNetworkInterface#private_ip_list}
+  */
+  readonly privateIpList?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ip_list_enabled AwsNetworkInterface#private_ip_list_enabled}
+  */
+  readonly privateIpListEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips AwsNetworkInterface#private_ips}
+  */
+  readonly privateIps?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#private_ips_count AwsNetworkInterface#private_ips_count}
+  */
+  readonly privateIpsCount?: number;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#region AwsNetworkInterface#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#security_groups AwsNetworkInterface#security_groups}
+  */
+  readonly securityGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#source_dest_check AwsNetworkInterface#source_dest_check}
+  */
+  readonly sourceDestCheck?: boolean | cdktn.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#subnet_id AwsNetworkInterface#subnet_id}
+  */
+  readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags AwsNetworkInterface#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#tags_all AwsNetworkInterface#tags_all}
+  */
+  readonly tagsAll?: { [key: string]: string };
+  /**
+  * attachment block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#attachment AwsNetworkInterface#attachment}
+  */
+  readonly attachment?: AwsNetworkInterface.AttachmentProperty[] | cdktn.IResolvable;
+  /**
+  * ena_srd_specification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_specification AwsNetworkInterface#ena_srd_specification}
+  */
+  readonly enaSrdSpecification?: AwsNetworkInterface.EnaSrdSpecificationProperty;
+}
+
+/**
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface aws_network_interface}
+*/
+export class AwsNetworkInterface extends cdktn.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_network_interface";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a AwsNetworkInterface resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AwsNetworkInterface to import
+  * @param importFromId The id of the existing AwsNetworkInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkInterface to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_network_interface", importId: importFromId, provider });
+      }
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface aws_network_interface} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AwsNetworkInterfaceConfig
+  */
+  public constructor(scope: Construct, id: string, config: AwsNetworkInterfaceConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_network_interface',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._description = config.description;
+    this._enablePrimaryIpv6 = config.enablePrimaryIpv6;
+    this._id = config.id;
+    this._interfaceType = config.interfaceType;
+    this._ipv4PrefixCount = config.ipv4PrefixCount;
+    this._ipv4Prefixes = config.ipv4Prefixes;
+    this._ipv6AddressCount = config.ipv6AddressCount;
+    this._ipv6AddressList = config.ipv6AddressList;
+    this._ipv6AddressListEnabled = config.ipv6AddressListEnabled;
+    this._ipv6Addresses = config.ipv6Addresses;
+    this._ipv6PrefixCount = config.ipv6PrefixCount;
+    this._ipv6Prefixes = config.ipv6Prefixes;
+    this._privateIp = config.privateIp;
+    this._privateIpList = config.privateIpList;
+    this._privateIpListEnabled = config.privateIpListEnabled;
+    this._privateIps = config.privateIps;
+    this._privateIpsCount = config.privateIpsCount;
+    this._region = config.region;
+    this._securityGroups = config.securityGroups;
+    this._sourceDestCheck = config.sourceDestCheck;
+    this._subnetId = config.subnetId;
+    this._tags = config.tags;
+    this._tagsAll = config.tagsAll;
+    this._attachment.internalValue = config.attachment;
+    this._enaSrdSpecification.internalValue = config.enaSrdSpecification;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // arn - computed: true, optional: false, required: false
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // enable_primary_ipv6 - computed: true, optional: true, required: false
+  private _enablePrimaryIpv6?: boolean | cdktn.IResolvable; 
+  public get enablePrimaryIpv6() {
+    return this.getBooleanAttribute('enable_primary_ipv6');
+  }
+  public set enablePrimaryIpv6(value: boolean | cdktn.IResolvable) {
+    this._enablePrimaryIpv6 = value;
+  }
+  public resetEnablePrimaryIpv6() {
+    this._enablePrimaryIpv6 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePrimaryIpv6Input() {
+    return this._enablePrimaryIpv6;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // interface_type - computed: true, optional: true, required: false
+  private _interfaceType?: string; 
+  public get interfaceType() {
+    return this.getStringAttribute('interface_type');
+  }
+  public set interfaceType(value: string) {
+    this._interfaceType = value;
+  }
+  public resetInterfaceType() {
+    this._interfaceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceTypeInput() {
+    return this._interfaceType;
+  }
+
+  // ipv4_prefix_count - computed: true, optional: true, required: false
+  private _ipv4PrefixCount?: number; 
+  public get ipv4PrefixCount() {
+    return this.getNumberAttribute('ipv4_prefix_count');
+  }
+  public set ipv4PrefixCount(value: number) {
+    this._ipv4PrefixCount = value;
+  }
+  public resetIpv4PrefixCount() {
+    this._ipv4PrefixCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv4PrefixCountInput() {
+    return this._ipv4PrefixCount;
+  }
+
+  // ipv4_prefixes - computed: true, optional: true, required: false
+  private _ipv4Prefixes?: string[]; 
+  public get ipv4Prefixes() {
+    return cdktn.Fn.tolist(this.getListAttribute('ipv4_prefixes'));
+  }
+  public set ipv4Prefixes(value: string[]) {
+    this._ipv4Prefixes = value;
+  }
+  public resetIpv4Prefixes() {
+    this._ipv4Prefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv4PrefixesInput() {
+    return this._ipv4Prefixes;
+  }
+
+  // ipv6_address_count - computed: true, optional: true, required: false
+  private _ipv6AddressCount?: number; 
+  public get ipv6AddressCount() {
+    return this.getNumberAttribute('ipv6_address_count');
+  }
+  public set ipv6AddressCount(value: number) {
+    this._ipv6AddressCount = value;
+  }
+  public resetIpv6AddressCount() {
+    this._ipv6AddressCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressCountInput() {
+    return this._ipv6AddressCount;
+  }
+
+  // ipv6_address_list - computed: true, optional: true, required: false
+  private _ipv6AddressList?: string[]; 
+  public get ipv6AddressList() {
+    return this.getListAttribute('ipv6_address_list');
+  }
+  public set ipv6AddressList(value: string[]) {
+    this._ipv6AddressList = value;
+  }
+  public resetIpv6AddressList() {
+    this._ipv6AddressList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressListInput() {
+    return this._ipv6AddressList;
+  }
+
+  // ipv6_address_list_enabled - computed: false, optional: true, required: false
+  private _ipv6AddressListEnabled?: boolean | cdktn.IResolvable; 
+  public get ipv6AddressListEnabled() {
+    return this.getBooleanAttribute('ipv6_address_list_enabled');
+  }
+  public set ipv6AddressListEnabled(value: boolean | cdktn.IResolvable) {
+    this._ipv6AddressListEnabled = value;
+  }
+  public resetIpv6AddressListEnabled() {
+    this._ipv6AddressListEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressListEnabledInput() {
+    return this._ipv6AddressListEnabled;
+  }
+
+  // ipv6_addresses - computed: true, optional: true, required: false
+  private _ipv6Addresses?: string[]; 
+  public get ipv6Addresses() {
+    return cdktn.Fn.tolist(this.getListAttribute('ipv6_addresses'));
+  }
+  public set ipv6Addresses(value: string[]) {
+    this._ipv6Addresses = value;
+  }
+  public resetIpv6Addresses() {
+    this._ipv6Addresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6AddressesInput() {
+    return this._ipv6Addresses;
+  }
+
+  // ipv6_prefix_count - computed: true, optional: true, required: false
+  private _ipv6PrefixCount?: number; 
+  public get ipv6PrefixCount() {
+    return this.getNumberAttribute('ipv6_prefix_count');
+  }
+  public set ipv6PrefixCount(value: number) {
+    this._ipv6PrefixCount = value;
+  }
+  public resetIpv6PrefixCount() {
+    this._ipv6PrefixCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6PrefixCountInput() {
+    return this._ipv6PrefixCount;
+  }
+
+  // ipv6_prefixes - computed: true, optional: true, required: false
+  private _ipv6Prefixes?: string[]; 
+  public get ipv6Prefixes() {
+    return cdktn.Fn.tolist(this.getListAttribute('ipv6_prefixes'));
+  }
+  public set ipv6Prefixes(value: string[]) {
+    this._ipv6Prefixes = value;
+  }
+  public resetIpv6Prefixes() {
+    this._ipv6Prefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6PrefixesInput() {
+    return this._ipv6Prefixes;
+  }
+
+  // mac_address - computed: true, optional: false, required: false
+  public get macAddress() {
+    return this.getStringAttribute('mac_address');
+  }
+
+  // outpost_arn - computed: true, optional: false, required: false
+  public get outpostArn() {
+    return this.getStringAttribute('outpost_arn');
+  }
+
+  // owner_id - computed: true, optional: false, required: false
+  public get ownerId() {
+    return this.getStringAttribute('owner_id');
+  }
+
+  // private_dns_name - computed: true, optional: false, required: false
+  public get privateDnsName() {
+    return this.getStringAttribute('private_dns_name');
+  }
+
+  // private_ip - computed: true, optional: true, required: false
+  private _privateIp?: string; 
+  public get privateIp() {
+    return this.getStringAttribute('private_ip');
+  }
+  public set privateIp(value: string) {
+    this._privateIp = value;
+  }
+  public resetPrivateIp() {
+    this._privateIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpInput() {
+    return this._privateIp;
+  }
+
+  // private_ip_list - computed: true, optional: true, required: false
+  private _privateIpList?: string[]; 
+  public get privateIpList() {
+    return this.getListAttribute('private_ip_list');
+  }
+  public set privateIpList(value: string[]) {
+    this._privateIpList = value;
+  }
+  public resetPrivateIpList() {
+    this._privateIpList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpListInput() {
+    return this._privateIpList;
+  }
+
+  // private_ip_list_enabled - computed: false, optional: true, required: false
+  private _privateIpListEnabled?: boolean | cdktn.IResolvable; 
+  public get privateIpListEnabled() {
+    return this.getBooleanAttribute('private_ip_list_enabled');
+  }
+  public set privateIpListEnabled(value: boolean | cdktn.IResolvable) {
+    this._privateIpListEnabled = value;
+  }
+  public resetPrivateIpListEnabled() {
+    this._privateIpListEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpListEnabledInput() {
+    return this._privateIpListEnabled;
+  }
+
+  // private_ips - computed: true, optional: true, required: false
+  private _privateIps?: string[]; 
+  public get privateIps() {
+    return cdktn.Fn.tolist(this.getListAttribute('private_ips'));
+  }
+  public set privateIps(value: string[]) {
+    this._privateIps = value;
+  }
+  public resetPrivateIps() {
+    this._privateIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpsInput() {
+    return this._privateIps;
+  }
+
+  // private_ips_count - computed: true, optional: true, required: false
+  private _privateIpsCount?: number; 
+  public get privateIpsCount() {
+    return this.getNumberAttribute('private_ips_count');
+  }
+  public set privateIpsCount(value: number) {
+    this._privateIpsCount = value;
+  }
+  public resetPrivateIpsCount() {
+    this._privateIpsCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpsCountInput() {
+    return this._privateIpsCount;
+  }
+
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // security_groups - computed: true, optional: true, required: false
+  private _securityGroups?: string[]; 
+  public get securityGroups() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_groups'));
+  }
+  public set securityGroups(value: string[]) {
+    this._securityGroups = value;
+  }
+  public resetSecurityGroups() {
+    this._securityGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupsInput() {
+    return this._securityGroups;
+  }
+
+  // source_dest_check - computed: false, optional: true, required: false
+  private _sourceDestCheck?: boolean | cdktn.IResolvable; 
+  public get sourceDestCheck() {
+    return this.getBooleanAttribute('source_dest_check');
+  }
+  public set sourceDestCheck(value: boolean | cdktn.IResolvable) {
+    this._sourceDestCheck = value;
+  }
+  public resetSourceDestCheck() {
+    this._sourceDestCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDestCheckInput() {
+    return this._sourceDestCheck;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // tags_all - computed: true, optional: true, required: false
+  private _tagsAll?: { [key: string]: string }; 
+  public get tagsAll() {
+    return this.getStringMapAttribute('tags_all');
+  }
+  public set tagsAll(value: { [key: string]: string }) {
+    this._tagsAll = value;
+  }
+  public resetTagsAll() {
+    this._tagsAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsAllInput() {
+    return this._tagsAll;
+  }
+
+  // attachment - computed: false, optional: true, required: false
+  private _attachment = new AwsNetworkInterface.AttachmentPropertyList(this, "attachment", true);
+  public get attachment() {
+    return this._attachment;
+  }
+  public putAttachment(value: AwsNetworkInterface.AttachmentProperty[] | cdktn.IResolvable) {
+    this._attachment.internalValue = value;
+  }
+  public resetAttachment() {
+    this._attachment.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachmentInput() {
+    return this._attachment.internalValue;
+  }
+
+  // ena_srd_specification - computed: false, optional: true, required: false
+  private _enaSrdSpecification = new AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference(this, "ena_srd_specification");
+  public get enaSrdSpecification() {
+    return this._enaSrdSpecification;
+  }
+  public putEnaSrdSpecification(value: AwsNetworkInterface.EnaSrdSpecificationProperty) {
+    this._enaSrdSpecification.internalValue = value;
+  }
+  public resetEnaSrdSpecification() {
+    this._enaSrdSpecification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enaSrdSpecificationInput() {
+    return this._enaSrdSpecification.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      description: cdktn.stringToTerraform(this._description),
+      enable_primary_ipv6: cdktn.booleanToTerraform(this._enablePrimaryIpv6),
+      id: cdktn.stringToTerraform(this._id),
+      interface_type: cdktn.stringToTerraform(this._interfaceType),
+      ipv4_prefix_count: cdktn.numberToTerraform(this._ipv4PrefixCount),
+      ipv4_prefixes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipv4Prefixes),
+      ipv6_address_count: cdktn.numberToTerraform(this._ipv6AddressCount),
+      ipv6_address_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipv6AddressList),
+      ipv6_address_list_enabled: cdktn.booleanToTerraform(this._ipv6AddressListEnabled),
+      ipv6_addresses: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipv6Addresses),
+      ipv6_prefix_count: cdktn.numberToTerraform(this._ipv6PrefixCount),
+      ipv6_prefixes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._ipv6Prefixes),
+      private_ip: cdktn.stringToTerraform(this._privateIp),
+      private_ip_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._privateIpList),
+      private_ip_list_enabled: cdktn.booleanToTerraform(this._privateIpListEnabled),
+      private_ips: cdktn.listMapper(cdktn.stringToTerraform, false)(this._privateIps),
+      private_ips_count: cdktn.numberToTerraform(this._privateIpsCount),
+      region: cdktn.stringToTerraform(this._region),
+      security_groups: cdktn.listMapper(cdktn.stringToTerraform, false)(this._securityGroups),
+      source_dest_check: cdktn.booleanToTerraform(this._sourceDestCheck),
+      subnet_id: cdktn.stringToTerraform(this._subnetId),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
+      attachment: cdktn.listMapper(awsNetworkInterfaceAttachmentPropertyToTerraform, true)(this._attachment.internalValue),
+      ena_srd_specification: awsNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(this._enaSrdSpecification.internalValue),
+    };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktn.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_primary_ipv6: {
+        value: cdktn.booleanToHclTerraform(this._enablePrimaryIpv6),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interface_type: {
+        value: cdktn.stringToHclTerraform(this._interfaceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv4_prefix_count: {
+        value: cdktn.numberToHclTerraform(this._ipv4PrefixCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ipv4_prefixes: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._ipv4Prefixes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      ipv6_address_count: {
+        value: cdktn.numberToHclTerraform(this._ipv6AddressCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ipv6_address_list: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._ipv6AddressList),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      ipv6_address_list_enabled: {
+        value: cdktn.booleanToHclTerraform(this._ipv6AddressListEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      ipv6_addresses: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._ipv6Addresses),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      ipv6_prefix_count: {
+        value: cdktn.numberToHclTerraform(this._ipv6PrefixCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ipv6_prefixes: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._ipv6Prefixes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      private_ip: {
+        value: cdktn.stringToHclTerraform(this._privateIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip_list: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._privateIpList),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      private_ip_list_enabled: {
+        value: cdktn.booleanToHclTerraform(this._privateIpListEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      private_ips: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._privateIps),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      private_ips_count: {
+        value: cdktn.numberToHclTerraform(this._privateIpsCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_groups: {
+        value: cdktn.listMapperHcl(cdktn.stringToHclTerraform, false)(this._securityGroups),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      source_dest_check: {
+        value: cdktn.booleanToHclTerraform(this._sourceDestCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      subnet_id: {
+        value: cdktn.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tags_all: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tagsAll),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      attachment: {
+        value: cdktn.listMapperHcl(awsNetworkInterfaceAttachmentPropertyToHclTerraform, true)(this._attachment.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AwsNetworkInterface.AttachmentPropertyList",
+      },
+      ena_srd_specification: {
+        value: awsNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(this._enaSrdSpecification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AwsNetworkInterface.EnaSrdSpecificationPropertyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
+}
+
+export function awsNetworkInterfaceAttachmentPropertyToTerraform(struct?: AwsNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    device_index: cdktn.numberToTerraform(struct!.deviceIndex),
+    instance: cdktn.stringToTerraform(struct!.instance),
+    network_card_index: cdktn.numberToTerraform(struct!.networkCardIndex),
+  }
+}
+
+
+export function awsNetworkInterfaceAttachmentPropertyToHclTerraform(struct?: AwsNetworkInterface.AttachmentProperty | cdktn.IResolvable): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    device_index: {
+      value: cdktn.numberToHclTerraform(struct!.deviceIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    instance: {
+      value: cdktn.stringToHclTerraform(struct!.instance),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    network_card_index: {
+      value: cdktn.numberToHclTerraform(struct!.networkCardIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct?: AwsNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdUdpSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    ena_srd_udp_enabled: cdktn.booleanToTerraform(struct!.enaSrdUdpEnabled),
+  }
+}
+
+
+export function awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct?: AwsNetworkInterface.EnaSrdUdpSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdUdpSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    ena_srd_udp_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enaSrdUdpEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export function awsNetworkInterfaceEnaSrdSpecificationPropertyToTerraform(struct?: AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    ena_srd_enabled: cdktn.booleanToTerraform(struct!.enaSrdEnabled),
+    ena_srd_udp_specification: awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToTerraform(struct!.enaSrdUdpSpecification),
+  }
+}
+
+
+export function awsNetworkInterfaceEnaSrdSpecificationPropertyToHclTerraform(struct?: AwsNetworkInterface.EnaSrdSpecificationPropertyOutputReference | AwsNetworkInterface.EnaSrdSpecificationProperty): any {
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    ena_srd_enabled: {
+      value: cdktn.booleanToHclTerraform(struct!.enaSrdEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ena_srd_udp_specification: {
+      value: awsNetworkInterfaceEnaSrdUdpSpecificationPropertyToHclTerraform(struct!.enaSrdUdpSpecification),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EnaSrdUdpSpecificationPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
+export namespace AwsNetworkInterface {
+export interface AttachmentProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#device_index AwsNetworkInterface#device_index}
+  */
+  readonly deviceIndex: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#instance AwsNetworkInterface#instance}
+  */
+  readonly instance: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#network_card_index AwsNetworkInterface#network_card_index}
+  */
+  readonly networkCardIndex?: number;
+}
+export class AttachmentPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AttachmentProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deviceIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceIndex = this._deviceIndex;
+    }
+    if (this._instance !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instance = this._instance;
+    }
+    if (this._networkCardIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkCardIndex = this._networkCardIndex;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AttachmentProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deviceIndex = undefined;
+      this._instance = undefined;
+      this._networkCardIndex = undefined;
+    }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deviceIndex = value.deviceIndex;
+      this._instance = value.instance;
+      this._networkCardIndex = value.networkCardIndex;
+    }
+  }
+
+  // attachment_id - computed: true, optional: false, required: false
+  public get attachmentId() {
+    return this.getStringAttribute('attachment_id');
+  }
+
+  // device_index - computed: false, optional: false, required: true
+  private _deviceIndex?: number; 
+  public get deviceIndex() {
+    return this.getNumberAttribute('device_index');
+  }
+  public set deviceIndex(value: number) {
+    this._deviceIndex = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceIndexInput() {
+    return this._deviceIndex;
+  }
+
+  // instance - computed: false, optional: false, required: true
+  private _instance?: string; 
+  public get instance() {
+    return this.getStringAttribute('instance');
+  }
+  public set instance(value: string) {
+    this._instance = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceInput() {
+    return this._instance;
+  }
+
+  // network_card_index - computed: true, optional: true, required: false
+  private _networkCardIndex?: number; 
+  public get networkCardIndex() {
+    return this.getNumberAttribute('network_card_index');
+  }
+  public set networkCardIndex(value: number) {
+    this._networkCardIndex = value;
+  }
+  public resetNetworkCardIndex() {
+    this._networkCardIndex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkCardIndexInput() {
+    return this._networkCardIndex;
+  }
+}
+
+export class AttachmentPropertyList extends cdktn.ComplexList {
+  public internalValue? : AttachmentProperty[] | cdktn.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AttachmentPropertyOutputReference {
+    return new AttachmentPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EnaSrdUdpSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_enabled AwsNetworkInterface#ena_srd_udp_enabled}
+  */
+  readonly enaSrdUdpEnabled?: boolean | cdktn.IResolvable;
+}
+export class EnaSrdUdpSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EnaSrdUdpSpecificationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enaSrdUdpEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enaSrdUdpEnabled = this._enaSrdUdpEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EnaSrdUdpSpecificationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enaSrdUdpEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enaSrdUdpEnabled = value.enaSrdUdpEnabled;
+    }
+  }
+
+  // ena_srd_udp_enabled - computed: false, optional: true, required: false
+  private _enaSrdUdpEnabled?: boolean | cdktn.IResolvable; 
+  public get enaSrdUdpEnabled() {
+    return this.getBooleanAttribute('ena_srd_udp_enabled');
+  }
+  public set enaSrdUdpEnabled(value: boolean | cdktn.IResolvable) {
+    this._enaSrdUdpEnabled = value;
+  }
+  public resetEnaSrdUdpEnabled() {
+    this._enaSrdUdpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enaSrdUdpEnabledInput() {
+    return this._enaSrdUdpEnabled;
+  }
+}
+export interface EnaSrdSpecificationProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_enabled AwsNetworkInterface#ena_srd_enabled}
+  */
+  readonly enaSrdEnabled?: boolean | cdktn.IResolvable;
+  /**
+  * ena_srd_udp_specification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/network_interface#ena_srd_udp_specification AwsNetworkInterface#ena_srd_udp_specification}
+  */
+  readonly enaSrdUdpSpecification?: EnaSrdUdpSpecificationProperty;
+}
+export class EnaSrdSpecificationPropertyOutputReference extends cdktn.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): EnaSrdSpecificationProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enaSrdEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enaSrdEnabled = this._enaSrdEnabled;
+    }
+    if (this._enaSrdUdpSpecification?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enaSrdUdpSpecification = this._enaSrdUdpSpecification?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EnaSrdSpecificationProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enaSrdEnabled = undefined;
+      this._enaSrdUdpSpecification.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enaSrdEnabled = value.enaSrdEnabled;
+      this._enaSrdUdpSpecification.internalValue = value.enaSrdUdpSpecification;
+    }
+  }
+
+  // ena_srd_enabled - computed: false, optional: true, required: false
+  private _enaSrdEnabled?: boolean | cdktn.IResolvable; 
+  public get enaSrdEnabled() {
+    return this.getBooleanAttribute('ena_srd_enabled');
+  }
+  public set enaSrdEnabled(value: boolean | cdktn.IResolvable) {
+    this._enaSrdEnabled = value;
+  }
+  public resetEnaSrdEnabled() {
+    this._enaSrdEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enaSrdEnabledInput() {
+    return this._enaSrdEnabled;
+  }
+
+  // ena_srd_udp_specification - computed: false, optional: true, required: false
+  private _enaSrdUdpSpecification = new EnaSrdUdpSpecificationPropertyOutputReference(this, "ena_srd_udp_specification");
+  public get enaSrdUdpSpecification() {
+    return this._enaSrdUdpSpecification;
+  }
+  public putEnaSrdUdpSpecification(value: EnaSrdUdpSpecificationProperty) {
+    this._enaSrdUdpSpecification.internalValue = value;
+  }
+  public resetEnaSrdUdpSpecification() {
+    this._enaSrdUdpSpecification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enaSrdUdpSpecificationInput() {
+    return this._enaSrdUdpSpecification.internalValue;
+  }
+}
+}
