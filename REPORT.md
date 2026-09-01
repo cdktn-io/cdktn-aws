@@ -238,17 +238,20 @@ external map at all.
 * **Deep-path imports regress** (§3): grouping is one service per door, so `lambda + s3` is 205
   modules against the reference's 144 for two resources.
 
-## 7. Decisions that are the user's
+## 7. Decisions that were the user's — all three now settled
 
 Permanent, and all three needed **before the first tag**:
 
 1. **The Go directory / `packageName` convention** — `aws` + slug with underscores stripped
    (`lex_v2_models` → `awslexv2models`). It is the directory, the tag prefix and the last element of
-   every import path, forever.
-2. **The fleet versioning scheme** — the tooling proposes lockstep on this repository's own semver
-   (not the provider version); the root `package.json` is a `0.0.0` **placeholder**.
-3. **Whether to create the real GitHub repositories and publish anything at all.** Nothing has ever
-   been pushed from this workspace.
+   every import path, forever. **Confirmed.**
+2. **The fleet versioning scheme** — lockstep on this repository's own semver, not the provider
+   version. **Confirmed**; the root `package.json` is off its placeholder at **0.1.0**, the proposed
+   first release.
+3. **Whether to create the real GitHub repositories and publish anything at all** — **yes.**
+   Still nothing has been pushed from this workspace: the ordered procedure is
+   [`docs/m4-publishing.md`](./docs/m4-publishing.md) §3, and `.github/workflows/release.yml` is
+   dispatch-only with `dry_run` defaulting to true until it has run once.
 
 ## Appendix — evidence
 
