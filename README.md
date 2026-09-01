@@ -59,12 +59,23 @@ a breaking change for us because the slug becomes the submodule name.
   get mounted into the resource class's namespace rather than living flat at module scope.
 * **M2 — full generation + jsii.** Generate all 257 groups, compile the jsii assembly, package for
   JS/Python, and measure against the published `@cdktn/provider-aws`: JS cold start, Python import,
-  `.jsii` size, doc-file count, compile time and peak RSS.
+  `.jsii` size, doc-file count, compile time and peak RSS. *Stage 1 (full generation, provider
+  functions, per-group hashes) is done — see [`docs/m2-scale.md`](./docs/m2-scale.md).*
 * **M3 — Go multi-module spike.** Feasibility only: a core Go module embedding the jsii runtime
   tarball plus one source-only module per group, published under
   `github.com/cdktn-io/cdktn-aws-go`. Verdict, not a product.
 * **M4 — publishing shape + report.** What actually ships (package names, versioning against the
   provider version, the release pipeline), plus the write-up of M2/M3 numbers.
+
+## M2 — full generation (stage 1, done)
+
+`generated/` now carries **all 258 packages** (257 groups + the synthetic `provider`): 2,401
+classes, 9,856 nested property types, 84.7 MiB of TypeScript, emitted in about three seconds and
+type-checked in about 85 seconds. The provider package also exposes the four aws provider-defined
+functions as `new AwsProvider(this, "aws", {...}).functions.arnParse(arn)`, and
+`generated/hashes.json` carries a per-group content hash so the Go release step can tag only the
+groups that actually moved. Numbers, the struct-sharding verdict (not needed) and the two M1 rules
+that only broke at scale are in [`docs/m2-scale.md`](./docs/m2-scale.md).
 
 ## M1 — the generator (done)
 
@@ -77,7 +88,8 @@ the class through a merged `namespace`. `generated/` carries the three M1 packag
 [`tools/aws2cdk/README.md`](./tools/aws2cdk/README.md).
 
 ```
-pnpm generate        # regenerate generated/ from schemas/schema.json + groups.json
+pnpm generate        # regenerate ALL 258 packages from schemas/schema.json + groups.json
+pnpm generate:m1     # just the three M1 pilot packages, for a fast inner loop
 pnpm typecheck       # tsc --noEmit: workspace, generator, and each generated package
 pnpm test            # jest contract tests over the committed mini fixture
 pnpm jsii            # compile each generated package standalone with real jsii

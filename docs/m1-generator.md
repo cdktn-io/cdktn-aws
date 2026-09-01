@@ -79,14 +79,16 @@ output. It is not an M2 item.
 
 ## Deferred to M2
 
-**Provider-defined functions.** The aws provider declares four. The vendored generator emits them
+**Provider-defined functions.** *(Done in M2 — see [`m2-scale.md`](./m2-scale.md).)* The aws provider declares four. The vendored generator emits them
 as a second top-level class (`AwsProviderFunctions`) in a sibling file, memoized behind a
 `functions` getter on the provider class. M1 does not emit either: it is a second export shape with
 its own jsii surface, orthogonal to everything M1 is proving, and skipping it costs nothing that
 the M1 acceptance depends on. `vendored/cdktn/emitter/provider-functions-emitter.ts` and
 `models/provider-function-model.ts` are vendored and unused, ready for M2 to switch on.
 
-**Struct sharding.** The vendored generator shards a resource's structs across
+**Struct sharding.** *(Resolved in M2: not needed — the merged-namespace form compiles a 6.9 MB /
+4,647-export file in 1.2 s of `tsc` and 4.6 s of `jsii`, and `jsii-pacmak --targets go` emits a
+valid module from it. See [`m2-scale.md`](./m2-scale.md).)* The vendored generator shards a resource's structs across
 `structs<N>.ts` files once their export count passes 400, to stay under jsii's export ceiling. The
 grouped emitter drops that: nested types live inside the resource's merged namespace, and sharding
 them across files would require cross-file namespace merging. No M1 resource comes close, but the
@@ -112,6 +114,10 @@ Two things a reader should know but that are not open questions:
   (`type` and `delete` in Go, `internal` in C#, `lambda` in Python). `@cdktn/provider-aws` emits the
   same warnings on the same attributes. Zero `JSII3` (missing README) and zero `JSII6` (peer not in
   devDependencies), which is what the M1 acceptance actually requires.
+* **The mapper-name uniqueness claim above did not survive M2.** Prefixing a mapper with its
+  owning class name is not injective when one class name is a prefix of another
+  (`AwsWafv2WebAcl` + `RuleActionAllow…` vs `AwsWafv2WebAclRule` + `ActionAllow…`); M2 added a
+  package-wide fallback. The three M1 groups are unaffected and still emit byte-identically.
 * **`aws_lambda_capacity_provider` is not a typo.** The pinned 6.62.0 schema really does carry it.
 
 ## Acceptance E — the runtime-contract method
