@@ -33,10 +33,29 @@
  * nested-type references, and in cdktn-aws's case a `providerVersionConstraint` the reference
  * build also has). Everything the runtime actually calls into IS compared.
  *
+ * ## Where the reference side comes from
+ *
+ * Three sources, tried in order, so `pnpm check:contract` is runnable on a fresh clone:
+ *
+ *  1. an explicitly passed `<refFile>`, or a `@cdktn/provider-aws` tree at `../ref-provider-aws`;
+ *  2. otherwise **the repo's own baseline**: `bin/baseline.ts` drives the *unmodified* vendored
+ *     cdk-terrain pipeline over the pinned schema and emits exactly the flat
+ *     `providers/aws/<dir>/index.ts` shape `@cdktn/provider-aws` ships. That is what makes this
+ *     check self-contained — no sibling clone, no network. It needs the (gitignored) 34 MB schema
+ *     dump, which is the same input every other tool here needs;
+ *  3. otherwise the check **skips with a warning and exit 0**, because with no schema dump and no
+ *     reference tree there is nothing to compare and a hard failure would only teach CI to ignore
+ *     it. Pass `--strict` to turn that skip into an exit-2 failure — what a release pipeline,
+ *     which does have the dump, should do.
+ *
  * Usage: node scripts/runtime-contract-diff.mjs <ourFile> <ourClass> <refFile> <refClass>
- *        node scripts/runtime-contract-diff.mjs        (defaults to aws_lb vs ~/cdktn/ref-provider-aws)
+ *        node scripts/runtime-contract-diff.mjs                 (defaults to aws_lb)
+ *        node scripts/runtime-contract-diff.mjs --strict        (a missing reference is a failure)
+ *        node scripts/runtime-contract-diff.mjs --schema <dump> (pin the dump source 2 uses)
  */
-import { readFileSync, existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readFileSync, existsSync } from "node:fs";
+import * as os from "node:os";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -55,27 +74,89 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."
 const rawArgs = process.argv.slice(2);
 const aliases = [];
 const positional = [];
+let strict = false;
+/** `--schema <path>` pins the dump the baseline reference is generated from, bypassing the search. */
+let schemaArg;
 for (let i = 0; i < rawArgs.length; i++) {
   if (rawArgs[i] === "--alias") {
     const [ours, ref] = (rawArgs[++i] ?? "").split("=");
     if (!ours || !ref) throw new Error("--alias expects Ours=Ref");
     aliases.push({ ours, ref });
+  } else if (rawArgs[i] === "--strict") {
+    strict = true;
+  } else if (rawArgs[i] === "--schema") {
+    schemaArg = rawArgs[++i];
   } else positional.push(rawArgs[i]);
 }
 const [ourFileArg, ourClassArg, refFileArg, refClassArg] = positional;
 const ourFile = ourFileArg ?? path.join(repoRoot, "generated", "elb", "src", "aws-lb.ts");
 const ourClass = ourClassArg ?? "AwsLb";
-const refFile = refFileArg ?? path.resolve(repoRoot, "..", "ref-provider-aws", "src", "lb", "index.ts");
+const refFileArgOrDefault =
+  refFileArg ?? path.resolve(repoRoot, "..", "ref-provider-aws", "src", "lb", "index.ts");
 const refClass = refClassArg ?? "Lb";
 
-if (!existsSync(refFile)) {
-  console.error(
-    `reference build not found at ${refFile}\n` +
-      `Acceptance E needs a @cdktn/provider-aws tree generated at the same provider pin.\n` +
-      `Either clone one next to this repo, or point at one explicitly:\n` +
-      `  node scripts/runtime-contract-diff.mjs <ourFile> <ourClass> <refFile> <refClass>`,
+/** The same resolution order `tools/groups-core` and `tools/aws2cdk/src/schema.ts` use. */
+function resolveSchemaPath() {
+  if (schemaArg !== undefined) return existsSync(schemaArg) ? schemaArg : undefined;
+  const candidates = [
+    process.env.CDKTN_AWS_SCHEMA,
+    path.join(repoRoot, "schemas", "schema.json"),
+    path.resolve(repoRoot, "..", "cdktn-grouped-resources", "schemas", "schema.json"),
+  ].filter(Boolean);
+  return candidates.find((c) => existsSync(c));
+}
+
+/**
+ * `.../src/lb/index.ts` -> `aws_lb`, `.../src/data-aws-lb/index.ts` -> `aws_lb`. Both the
+ * reference build and our baseline runner name that directory with cdk-terrain's own convention,
+ * because the baseline IS that generator, unmodified.
+ */
+function terraformTypeForRefDir(dir) {
+  return dir.startsWith("data-aws-") ? `aws_${dir.slice("data-aws-".length)}` : `aws_${dir}`;
+}
+
+/**
+ * Source 2: emit the reference side here, from the pinned schema, with the unmodified vendored
+ * pipeline. Returns the path to the file corresponding to `refFile`, or undefined if there is no
+ * schema dump to generate it from.
+ */
+function generateBaselineRef(refFile) {
+  const schema = resolveSchemaPath();
+  if (!schema) return undefined;
+  const refDir = path.basename(path.dirname(refFile));
+  const type = terraformTypeForRefDir(refDir);
+  const outDir = mkdtempSync(path.join(os.tmpdir(), "aws2cdk-baseline-"));
+  console.log(`  generating the reference side with bin/baseline.ts (${type}) -> ${outDir}`);
+  execFileSync(
+    "pnpm",
+    ["--filter", "@cdktn-aws/aws2cdk", "exec", "tsx", "bin/baseline.ts", outDir, type],
+    { cwd: repoRoot, stdio: ["ignore", "ignore", "inherit"], env: { ...process.env, CDKTN_AWS_SCHEMA: schema } },
   );
-  process.exit(2);
+  const out = path.join(outDir, "providers", "aws", refDir, "index.ts");
+  if (!existsSync(out)) {
+    throw new Error(`baseline produced no ${path.relative(outDir, out)} for "${type}"`);
+  }
+  return out;
+}
+
+let refFile = refFileArgOrDefault;
+if (!existsSync(refFile)) {
+  refFile = generateBaselineRef(refFileArgOrDefault);
+}
+if (!refFile) {
+  const message =
+    `no reference build available.\n` +
+    `  looked for a @cdktn/provider-aws tree at ${refFileArgOrDefault}\n` +
+    `  and found no provider schema dump to regenerate one from with bin/baseline.ts\n` +
+    `  (set $CDKTN_AWS_SCHEMA, or put one at schemas/schema.json — see schemas/main.tf).\n` +
+    `  A reference tree can also be passed explicitly:\n` +
+    `    node scripts/runtime-contract-diff.mjs <ourFile> <ourClass> <refFile> <refClass>`;
+  if (strict) {
+    console.error(`runtime-contract-diff: ${message}`);
+    process.exit(2);
+  }
+  console.warn(`runtime-contract-diff: SKIPPED — ${message}`);
+  process.exit(0);
 }
 
 const lcfirst = (s) => s.charAt(0).toLowerCase() + s.slice(1);

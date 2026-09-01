@@ -118,7 +118,10 @@ Two things a reader should know but that are not open questions:
 
 `scripts/runtime-contract-diff.mjs`. Both sides are generated from the *same* schema at the *same*
 pin (6.62.0): ours from `schemas/schema.json`, the reference from a `@cdktn/provider-aws` tree
-built at that pin. Each file is rewritten into one common spelling by erasing exactly the two
+built at that pin — or, when no such tree is checked out, from `bin/baseline.ts`, which drives the
+*unmodified* vendored pipeline over the same dump and emits the same flat
+`providers/aws/<dir>/index.ts` shape. The second source is what makes the check runnable on a fresh
+clone; with neither available (no dump either) it skips with a warning, or fails under `--strict`. Each file is rewritten into one common spelling by erasing exactly the two
 things the naming schemes disagree about (our `AwsLb.` qualifier + `Property` infix; their `Lb`
 resource-name prefix), then every mapper function and every `OutputReference` / `List` / `Map`
 class is compared **byte for byte**. The resource class and its config interface are excluded: they

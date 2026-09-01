@@ -84,7 +84,10 @@ pnpm jsii            # compile each generated package standalone with real jsii
 pnpm pacmak:go elb   # jsii-pacmak --targets go on one package
 pnpm synth:smoke     # cdktn synth with validation ON, two group packages at once
 pnpm check:imports   # gate: zero cross-group imports, nothing at a shared root
-pnpm check:contract  # diff the emitted runtime contract against @cdktn/provider-aws
+pnpm check:contract  # diff the emitted runtime contract against a reference build
+                     #   (a ../ref-provider-aws tree if present, else generated on the spot with
+                     #    pnpm baseline; skips with a warning if neither is available, --strict
+                     #    to fail instead)
 pnpm check:groups    # M0 gate: groups.json coverage and group moves
 pnpm baseline <dir>  # the unmodified vendored pipeline, for comparison
 ```
