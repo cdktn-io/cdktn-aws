@@ -18,6 +18,11 @@ generated/*/lib/
 generated/*/dist/
 generated/*/.jsii
 generated/*/.warnings.jsii.js
+# The monolithic @cdktn/aws assembly (scripts/build-monolith.mjs): a copy of every group's src/
+# plus one barrel, compiled by jsii and packed by jsii-pacmak. Wholly derived from `generated/`,
+# so nothing in it is committed.
+monolith/
+
 # jsii writes this one itself on every compile; the generator does not emit it and nothing reads
 # it (these packages are private and never published).
 generated/*/.npmignore

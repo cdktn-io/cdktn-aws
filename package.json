@@ -6,6 +6,7 @@
   "description": "PoC: cdk-terrain provider bindings for terraform-provider-aws, regrouped into service modules",
   "scripts": {
     "baseline": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/baseline.ts",
+    "build:monolith": "node scripts/build-monolith.mjs",
     "check:contract": "node scripts/runtime-contract-diff.mjs",
     "check:groups": "pnpm --filter @cdktn-aws/check-groups run start",
     "check:imports": "node scripts/check-no-cross-group-imports.mjs",
@@ -15,6 +16,7 @@
     "generate:m1": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/generate.ts generated m1",
     "jsii": "node scripts/build-generated.mjs",
     "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
+    "pacmak:python": "node scripts/build-monolith.mjs --pacmak python",
     "pacmak:go": "node scripts/build-generated.mjs --pacmak-go",
     "synth:smoke": "node scripts/synth-smoke.mjs",
     "test": "jest",
