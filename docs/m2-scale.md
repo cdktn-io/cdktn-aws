@@ -205,7 +205,7 @@ tried.
 | `pnpm check:groups` | PASS — 257 groups, 100 % of the schema mapped |
 | `pnpm check:contract` | PASS — `aws_lb` 22/22 units identical to the reference build |
 | `pnpm test` | 308 tests, 2 suites |
-| `pnpm synth:smoke` | PASS, validation ON |
+| `pnpm synth:smoke` | PASS, validation ON — needs `node scripts/build-generated.mjs provider elb lambda` first (it loads the compiled `lib/`); the script says so and exits 1 if it is missing |
 | `pnpm jsii <group>` on the six largest | OK, JSII3 0 / JSII6 0 everywhere |
 
 The naming-grammar sweep is now a **full** sweep, not a sample: `scale.test.ts` reads every `.ts`

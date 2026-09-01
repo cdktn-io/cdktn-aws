@@ -15,10 +15,11 @@
  * packages load into one program at the same time, and the resulting `cdk.tf.json` names the real
  * terraform types.
  *
- * Requires `pnpm jsii` to have run (it loads `generated/<group>/lib`).
+ * Requires the compiled `lib/` of the groups it loads:
+ *   node scripts/build-generated.mjs provider elb lambda
  * Usage: node scripts/synth-smoke.mjs
  */
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { createRequire } from "node:module";
 import * as os from "node:os";
 import * as path from "node:path";
@@ -26,6 +27,19 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
+
+// A clean checkout has sources but no `lib/`, and `require`ing one straight away dies with a bare
+// MODULE_NOT_FOUND stack that says nothing about what to run. Name the command instead.
+const BUILD_CMD = "node scripts/build-generated.mjs provider elb lambda";
+const missing = ["provider", "elb"].filter(
+  (group) => !existsSync(path.join(repoRoot, "generated", group, "lib", "index.js")),
+);
+if (missing.length > 0) {
+  console.error(
+    `synth-smoke: no compiled lib/ for ${missing.join(", ")} — run \`${BUILD_CMD}\` first.`,
+  );
+  process.exit(1);
+}
 
 // `cdktn` is a devDependency of each generated package, not of the repo root, so it is resolved
 // through one of them — the same copy the compiled lib/ was type-checked and linked against.
