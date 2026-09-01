@@ -6,6 +6,7 @@
   "description": "PoC: cdk-terrain provider bindings for terraform-provider-aws, regrouped into service modules",
   "scripts": {
     "baseline": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/baseline.ts",
+    "bench:js": "node scripts/bench-js-coldstart.mjs",
     "build:monolith": "node scripts/build-monolith.mjs",
     "check:contract": "node scripts/runtime-contract-diff.mjs",
     "check:groups": "pnpm --filter @cdktn-aws/check-groups run start",
@@ -15,9 +16,11 @@
     "generate": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/generate.ts",
     "generate:m1": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/generate.ts generated m1",
     "jsii": "node scripts/build-generated.mjs",
+    "measure:dedup": "node --max-old-space-size=12288 scripts/measure-struct-dedup.mjs",
     "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
     "pacmak:python": "node scripts/build-monolith.mjs --pacmak python",
     "pacmak:go": "node scripts/build-generated.mjs --pacmak-go",
+    "project:go": "node scripts/project-go-size.mjs",
     "synth:smoke": "node scripts/synth-smoke.mjs",
     "test": "jest",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json && node scripts/typecheck-generated.mjs"
