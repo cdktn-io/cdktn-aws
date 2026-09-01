@@ -1,0 +1,32 @@
+{
+  "$comment": "Human decisions the miner must preserve across re-runs. tools/mine-groups reads this; nothing curated is hardcoded in its source. Rationale for every entry: docs/curation.md.",
+  "pinnedProviderVersion": "6.62.0",
+  "providerRepo": "https://github.com/hashicorp/terraform-provider-aws.git",
+  "providerTag": "v6.62.0",
+
+  "slugOverrides": {
+    "ARC (Application Recovery Controller) Region Switch": "arc_region_switch",
+    "ARC (Application Recovery Controller) Zonal Shift": "arc_zonal_shift",
+    "IVS (Interactive Video)": "ivs",
+    "IVS (Interactive Video) Chat": "ivs_chat",
+    "Outposts": "outposts",
+    "Outposts (EC2)": "outposts_ec2",
+    "VPN (Client)": "vpn_client",
+    "VPN (Site-to-Site)": "vpn_site_to_site"
+  },
+
+  "aliases": {
+    "aws_alb": "aws_lb",
+    "aws_alb_listener": "aws_lb_listener",
+    "aws_alb_listener_certificate": "aws_lb_listener_certificate",
+    "aws_alb_listener_rule": "aws_lb_listener_rule",
+    "aws_alb_target_group": "aws_lb_target_group",
+    "aws_alb_target_group_attachment": "aws_lb_target_group_attachment"
+  },
+
+  "manualAssignments": {
+    "resources": {},
+    "dataSources": {},
+    "ephemeralResources": {}
+  }
+}

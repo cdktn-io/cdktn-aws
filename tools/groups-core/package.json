@@ -1,0 +1,11 @@
+{
+  "name": "@cdktn-aws/groups-core",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
