@@ -1,0 +1,19 @@
+{
+  "name": "@cdktn-aws/check-groups",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "type": "module",
+  "description": "CI gate: groups.json covers the schema exactly once, and no resource moves group without a docs/group-moves.md marker",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@cdktn-aws/groups-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
