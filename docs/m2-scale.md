@@ -214,8 +214,8 @@ file of every group and matches every top-level export and namespace member agai
 seconds over 2,660 files, so there was no reason to sample.
 
 Full `jsii` over all 258 packages is not run in the default gate set — the six largest take 12 s
-between them, so the whole tree is on the order of ten minutes, which belongs in CI rather than in
-`pnpm test`.
+between them, so the whole tree is on the order of ten minutes, which belongs in CI (**to be added
+in M3; tracked** below — this repo has no CI yet) rather than in `pnpm test`.
 
 ## What is committed
 
@@ -223,3 +223,20 @@ All 258 packages' sources — `package.json`, `README.md`, `tsconfig.json`, `src
 `hashes.json`. That is ~7 MB compressed, nowhere near a size that would justify committing a
 representative subset and gitignoring the rest. Everything `jsii`/`jsii-pacmak` write (`lib/`,
 `dist/`, `.jsii`, `.warnings.jsii.js`, `.npmignore`) stays gitignored, unchanged from M1.
+
+## M3 carry-forwards
+
+Things M2 established but deliberately did not act on:
+
+* **Repo CI.** There is none today; every gate above is a local `pnpm` script run by hand. M3 adds
+  it, and the full-fleet `jsii` gate over all 258 packages (~10 minutes) is the first job that only
+  makes sense there.
+* **The hash input-order caveat interacts with the release lever.** `changedGroups` tags a Go module
+  only when its group hash moved, so the key-order sensitivity noted above is not cosmetic: an
+  unsorted dump would tag all 258 at once. M3's release step should sanity-check the *number* of
+  moved hashes against the provider diff before it tags anything.
+* **The Go `packageName` convention needs the user's confirmation.** `goPackageName` is `aws` + the
+  slug with underscores *removed* (`lex_v2_models` → `awslexv2models`, `sagemaker_ai` →
+  `awssagemakerai`), because jsii requires `^[a-z][a-z0-9]*$`. That string is the directory inside
+  `github.com/cdktn-io/cdktn-aws-go`, the tag prefix, and the import path every Go consumer writes —
+  none of which can change after the first tag. Confirm it before M3 tags, not after.
