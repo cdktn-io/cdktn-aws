@@ -60,17 +60,24 @@ export function fleetVersion(repoRoot, env = process.env) {
  */
 export function stampManifests(packageDirs, version) {
   const originals = new Map();
-  for (const dir of packageDirs) {
-    const file = path.join(dir, "package.json");
-    const before = readFileSync(file, "utf8");
-    const manifest = JSON.parse(before);
-    if (manifest.version === version) continue;
-    originals.set(file, before);
-    manifest.version = version;
-    // The generator writes these manifests with 2-space indent and a trailing newline
-    // (tools/aws2cdk/src/manifest.ts); restoring is byte-exact anyway, but a stamped tree that
-    // differs only in `version` keeps `git diff` readable while a build is in flight.
-    writeFileSync(file, `${JSON.stringify(manifest, null, 2)}\n`);
+  try {
+    for (const dir of packageDirs) {
+      const file = path.join(dir, "package.json");
+      const before = readFileSync(file, "utf8");
+      const manifest = JSON.parse(before);
+      if (manifest.version === version) continue;
+      originals.set(file, before);
+      manifest.version = version;
+      // The generator writes these manifests with 2-space indent and a trailing newline
+      // (tools/aws2cdk/src/manifest.ts); restoring is byte-exact anyway, but a stamped tree that
+      // differs only in `version` keeps `git diff` readable while a build is in flight.
+      writeFileSync(file, `${JSON.stringify(manifest, null, 2)}\n`);
+    }
+  } catch (err) {
+    // A throw partway through (unreadable manifest, full disk) would otherwise leave the manifests
+    // it had already stamped dirty, with no restore function ever reaching the caller.
+    for (const [file, before] of originals) writeFileSync(file, before);
+    throw err;
   }
   let restored = false;
   return function restore() {
