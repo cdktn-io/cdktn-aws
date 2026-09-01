@@ -63,11 +63,30 @@ a breaking change for us because the slug becomes the submodule name.
   provider functions, per-group hashes) in [`docs/m2-scale.md`](./docs/m2-scale.md), stage 2 (the
   monolithic build and every headline number) in
   [`docs/m2-metrics.md`](./docs/m2-metrics.md).
-* **M3 — Go multi-module spike.** Feasibility only: a core Go module embedding the jsii runtime
-  tarball plus one source-only module per group, published under
-  `github.com/cdktn-io/cdktn-aws-go`. Verdict, not a product.
+* **M3 — the Go fleet.** 258 sibling Go modules under `github.com/cdktn-io/cdktn-aws-go`, one per
+  group, no root module. **Done** — stage 1 (the fleet build, isolation, size gate) and stage 2 (the
+  consumer measurement, the release planner, CI) both in [`docs/m3-go.md`](./docs/m3-go.md). The
+  option it executes was decided in `go-split-spike/VERDICT.md`.
 * **M4 — publishing shape + report.** What actually ships (package names, versioning against the
   provider version, the release pipeline), plus the write-up of M2/M3 numbers.
+
+## M3 — the Go fleet (done)
+
+258 sibling Go modules, one per group, **no root `go.mod`** — nothing may ever count the whole tree.
+One pinned `jsii` (5.9.53) and one pinned `jsii-pacmak` (1.140.0) build all of them in **105 s** at
+12-way; every module's imports resolve only to itself, cdktn core, constructs, the jsii runtime and
+the standard library, so there is no shared assembly and none of Option B's version-skew hazard. The
+worst module is 11.6 % of `x/mod/zip`'s per-module cap, measured with `zip.CheckDir` itself.
+
+A 36-module consumer ([`examples/go-consumer`](./examples/go-consumer/)) synthesises with cdktn's
+validations **on** in **324 ms** — 90 ms of one-time jsii bootstrap plus **6.2 ms per group actually
+imported**, which lands within 5 % of the model the spike extrapolated from three modules. The
+rejected alternative paid **849 ms** to load one whole-library assembly before constructing
+anything.
+
+Releases tag **only the groups whose content hash moved**: `node scripts/release.mjs --from <ref>`
+prints the plan, the tag list and the commands, and has no mode that runs them. CI is two workflows
+(`.github/workflows/`) and has never executed — nothing is pushed yet.
 
 ## M2 — full generation (stage 1, done)
 

@@ -210,6 +210,59 @@ Two consequences for slug decisions:
 * "we can tidy the names up later" is false for Go in a way it is only *awkward* for JS and Python.
   A slug that reads badly is worth fixing before the first release and worth living with after it.
 
+## (g) The release
+
+A bump PR is not a release. Once it has merged, the Go fleet is cut with
+`scripts/release.mjs`, which is **dry-run only**: it prints the plan and the commands and never
+runs `git tag` or `git push`. The full argument is in [`m3-go.md`](./m3-go.md) § "Versioning and
+release"; this is the order to do it in.
+
+```bash
+node scripts/release.mjs --from <previous release ref>     # --to defaults to HEAD
+```
+
+1. **Read the plan before the commands.** The version is the root `package.json` semver (lockstep,
+   every module the same), and the tag list covers *only* the groups whose `hashes.json` entry
+   moved. That is the whole point: 258 tags per release is ~13k a year, and every consumer's
+   `git ls-remote` pays for them forever.
+2. **Clear every warning it prints.** Each one is a way the plan can be right-looking and wrong:
+   * *all N groups changed* — almost always a differently key-ordered schema dump, not the
+     provider. Compare the count against the `groups.json` diff before tagging anything.
+   * *a group disappeared* — its module and every tag it ever had stay on the module proxy
+     forever. Record the decision in `group-moves.md` first.
+   * *nothing changed* — check the refs.
+3. **Run the printed commands yourself.** They build and pack only the changed groups, copy each
+   `generated/<slug>/dist/go/<packageName>/` into `cdktn-aws-go` verbatim, `go mod tidy` (pacmak
+   emits no `go.sum`, and a tag without one is unverifiable), re-run the isolation and size gates,
+   then commit, tag and push.
+4. **Smoke-test the proxy before announcing anything.**
+
+   ```bash
+   GOPROXY=https://proxy.golang.org GOSUMDB=sum.golang.org GOFLAGS=-mod=mod \
+     go mod download github.com/cdktn-io/cdktn-aws-go/<packageName>@vX.Y.Z
+   ```
+
+   A local `go build` never touches `proxy.golang.org` or `sum.golang.org`. Every **first** publish
+   of a module path must be checked here: a path that fails to resolve is close to unrepairable,
+   because the proxy caches the outcome and the name is spent. The plan lists one command per newly
+   added group plus one already-published module.
+
+### The `/vN` event — major >= 2
+
+At semver major 2 and above, `jsii-pacmak` appends `/vN` to every module path
+(`determineMajorVersionSuffix`, verified in its source). This is not a per-module decision:
+
+* all 258 import paths change **at once** — `.../awsmsk` becomes `.../awsmsk/v2`;
+* the repository needs `awsmsk/v2/` directories beside the v1 ones;
+* tags become `awsmsk/v2/v2.0.0`;
+* consumers edit their imports by hand. Go's import-path-is-identity rule means `awsmsk/v2` is a
+  *different package*, not the same package at a new version, so there is no automatic migration and
+  a program can legally hold both.
+
+`scripts/release.mjs` warns whenever the plan's major is >= 2 and emits the suffixed paths and tags,
+but the decision is a deliberate, rare, repo-wide event and belongs in its own PR — never folded
+into a provider bump.
+
 ## Checklist
 
 ```
@@ -224,4 +277,14 @@ Two consequences for slug decisions:
 [ ] pnpm typecheck && pnpm test
 [ ] pnpm generate leaves git status clean
 [ ] release notes list every acknowledged move as a breaking change
+```
+
+Then, after the bump PR merges (see (g)):
+
+```
+[ ] node scripts/release.mjs --from <previous release ref>   (dry run; it has no other mode)
+[ ] every warning it printed is cleared, not skimmed
+[ ] changed-group count reconciles with the groups.json diff
+[ ] go mod tidy ran before any tag was created
+[ ] proxy smoke test passes for every newly added module path
 ```

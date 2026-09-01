@@ -242,26 +242,226 @@ green without the assertion quietly evaporating.
 | Go isolation | `node scripts/check-go-module-isolation.mjs --root ../cdktn-aws-go` | PASS, 0 violations |
 | tidy + build | `node scripts/go-tidy-build.mjs --root ../cdktn-aws-go` | 258/258, 48.0 s |
 | size | `node scripts/check-go-size.mjs --root ../cdktn-aws-go` | PASS, 0 over cap |
-| manifests + inventory | `pnpm test` | 2,120 tests, 3 suites |
+| manifests + inventory | `pnpm test` | 2,142 tests, 4 suites (stage 2 added the release-plan suite) |
+| consumer synth | `node scripts/go-consumer.mjs` | 36 modules, PASS, 324 ms |
+| release plan | `node scripts/release.mjs --from <ref>` | dry run only, never tags |
 
-All six are scripts with exit codes, which is what M2's "repo CI" carry-forward needs. Wiring them
-into a workflow is stage 2.
+All six are scripts with exit codes, which is what M2's "repo CI" carry-forward needs. Stage 2 wires
+them into workflows (below) and adds the consumer measurement, the release planner and its tests.
 
-## Deferred to stage 2
+## Consumer cost at scale
 
-* **Kernel cost.** The VERDICT measured Option A's consumer cost on a 3-module prototype: ~90 ms
-  one-time jsii bootstrap plus ~1.4 ms + 0.019 ms per KB of tarball per assembly loaded. That model
-  predicts a realistic 5–10 group app at 20–45 ms, but nothing here re-measures it against the real
-  fleet, where the tarballs are up to 300× the prototype's. A consumer synth against the assembled
-  repo — several groups plus `awsprovider`, validation on — is stage 2's job, and it is the number
-  that decides whether the per-group model needs a lazy-load story.
-* **CI.** The six gates above run by hand today.
-* **Release.** Tag fan-out (`awsdetective/vX.Y.Z` × 258 lockstep), driven off `changedGroups` from
-  `hashes.json` so an unchanged group does not gain a tag. M2 flagged the sanity check this needs:
-  compare the *number* of moved hashes against the provider diff before tagging anything, because a
-  differently key-ordered schema dump would move all 258 at once.
-* **Publishing.** Nothing is pushed and no GitHub repository exists yet; `cdktn-aws-go` is a local
-  git repository with a configured `origin` and three signed commits.
+VERDICT open risk **#2**, and the number that decides whether the per-group model needs a lazy-load
+story. The VERDICT priced Option A's consumer cost from a **three**-module prototype: ~90 ms of
+one-time jsii bootstrap, plus ~1.4 ms + 0.019 ms per KB of tarball for each assembly loaded, giving
+20–45 ms for a realistic 5–10 group app. The real fleet's tarballs run up to 300× that prototype's,
+so the model was an extrapolation with no data past 3.4 MB.
+
+[`examples/go-consumer`](../examples/go-consumer/) is that program at realistic scale: **36 modules**
+— `awsprovider` plus **35 group modules** spanning `awsec2`, `awss3`, `awsiam`, `awslambda`,
+`awselb`, `awsrds`, `awsecs`, `awseks`, `awscloudfront`, `awsglue` … down to `awsswf` (13 KB) and
+`awsusernotificationscontacts` (10 KB) — one resource constructed from each, a provider-defined
+function invoked, and `app.Synth()` run with **validations ON**.
+
+```console
+node scripts/go-consumer.mjs           # writes go.work against ../cdktn-aws-go, builds, runs
+node scripts/go-consumer.mjs --runs 3
+```
+
+### Measured
+
+Same machine as the rest of this document; three consecutive runs, warm module cache.
+
+| | run 1 | run 2 | run 3 |
+| --- | ---: | ---: | ---: |
+| kernel bootstrap (`cdktn.NewApp`, incl. `cdktn` + `constructs`) | 91.9 ms | 90.1 ms | 85.4 ms |
+| `awsprovider` assembly (80 KB tarball) | 3.4 ms | 3.0 ms | 3.2 ms |
+| 35 group assemblies, first touch each | 221.0 ms | 220.8 ms | 212.6 ms |
+| per group assembly, mean | 6.31 ms | 6.31 ms | 6.07 ms |
+| construct-only control (2nd resource from a loaded assembly) | 0.25 ms | 0.27 ms | 0.22 ms |
+| `app.Synth()` | 7.3 ms | 7.2 ms | 7.3 ms |
+| **total wall** | **324.4 ms** | **322.1 ms** | **309.3 ms** |
+
+The construct-only control is what makes the per-assembly number mean something: constructing a
+second resource out of an already-loaded assembly costs **0.24 ms**, so essentially all of the
+6.2 ms is assembly load, not construction.
+
+### Against the VERDICT's extrapolation
+
+Fitting the 35 measured first-touch times against each module's embedded tarball size:
+
+| | one-time bootstrap | per assembly | per KB of tarball |
+| --- | ---: | ---: | ---: |
+| VERDICT model (3 assemblies, ≤3.4 MB) | ~90 ms | 1.4 ms | 0.019 ms |
+| M3 measurement (35 assemblies, 8.5 MB total, largest 1.11 MB) | **85–92 ms** | **1.19 ms** | **0.0208 ms** |
+
+Summed over these 35 groups the model predicts **210.5 ms** against a measured **212.6–221.0 ms** —
+inside 5 %, with no sign of a super-linear term at 12× the assembly count. Per module the two agree
+across three orders of magnitude of tarball size:
+
+| module | tarball | measured | model |
+| --- | ---: | ---: | ---: |
+| `awsec2` | 1,111.8 KB | 23.38 ms | 22.52 ms |
+| `awselb` | 662.5 KB | 16.64 ms | 13.99 ms |
+| `awss3` | 628.2 KB | 15.79 ms | 13.34 ms |
+| `awsiam` | 280.1 KB | 8.74 ms | 6.72 ms |
+| `awsathena` | 111.4 KB | 3.69 ms | 3.52 ms |
+| `awsdetective` | 26.0 KB | 2.00 ms | 1.89 ms |
+| `awsswf` | 13.1 KB | 0.89 ms | 1.65 ms |
+
+**Risk #2 is closed, and the answer is that no lazy-load story is needed.** A 36-module program —
+far more than a real stack imports — costs 324 ms end to end, of which 90 ms is a bootstrap every
+cdktn Go program pays whatever it imports. The realistic 5–10 group app the VERDICT was arguing
+about lands where it said: bootstrap plus 20–45 ms.
+
+The comparison that decided the option is worth restating with both numbers now measured:
+**Option B's rejected consumer paid 849 ms to load its single whole-library `core` before
+constructing anything, no matter how little it imported.** Option A pays 6 ms per group actually
+imported. At 35 groups — a deliberately extreme consumer — A is still 3.9× cheaper than B is at one.
+
+### What else the run proves
+
+Not a benchmark artefact: the program asserts on the synthesised `cdk.tf.json` and exits non-zero
+otherwise. All 35 terraform types present under `resource`/`data`; `required_providers.aws` =
+`hashicorp/aws` at **6.62.0** and the *only* required provider (36 assemblies, one provider);
+`provider.aws[0].region` as configured; and `output.bucket_arn` rendering
+`${provider::aws::arn_build("aws", "s3", "", "", "consumer-bucket")}` — a provider-defined function
+surviving Go → jsii → HCL. Synth ran with no `SkipValidation` and no `skipValidation` context, so
+`ValidateProviderPresence` really did walk a stack holding resources from 35 independent assemblies.
+
+One real finding fell out of it: cdktn's `ValidateProviderFunctionTargetSupport` **failed** the first
+run, because provider-defined functions need terraform ≥1.8 / opentofu ≥1.7 and cdktn's default
+targets are the older baseline. The example declares `targetVersions` accordingly. That is the fix
+the validation asks for; `skipValidation: true` would have been the cover-up, and the run would have
+emitted an expression no supported binary can evaluate.
+
+## Versioning and release
+
+### The version number
+
+**Lockstep**, as VERDICT §5 concluded: every module in a release carries the same version. Mixed
+versions are *safe* under Option A — each group is its own jsii assembly, so there is no shared
+`core` to skew against, which is exactly the hazard that sank Option B — but lockstep keeps the
+support matrix explainable and lets one pinned `jsii-pacmak` pack the whole release, which matters
+because pacmak stamps its own `jsii-runtime-go` version into every `go.mod`.
+
+The number is **this repository's own semver**, read from the root `package.json`. Not the provider
+version, for three reasons:
+
+1. **The Go API surface is not a function of the provider alone.** It is a function of the provider
+   schema *and* the generator *and* the pinned jsii/pacmak. A generator change can rename types
+   across all 258 modules with no provider change at all; a provider patch release can change
+   nothing we emit. A version that tracked only one of those inputs would lie about the other two.
+2. **`aws 6.62.0` → `v6.62.0` costs the `/vN` suffix on day one.** Go requires `/v6` in every import
+   path at major ≥ 2, so every one of the 258 import paths would be born with a suffix, and every
+   provider major would be a repo-wide path rewrite whether or not our API broke.
+3. **Precedent.** `cdktf-provider-aws` carries its own semver, separate from the provider version it
+   wraps, for the same reason: the binding's compatibility story is the binding's, not the
+   provider's. The provider pin is *recorded* — in `hashes.json`, in every package description, and
+   in the generated `providerVersionConstraint` — and is not the version.
+
+`scripts/release.mjs` refuses anything that is not a plain semver rather than tagging 258 modules
+with it.
+
+### The tag fan-out, and only tagging what moved
+
+VERDICT §5 names tag growth as the durable cost of one repository: 258 tags per release is ~13k a
+year at a weekly cadence, and every consumer's `git ls-remote` and every full clone pays for them
+forever. The mitigation it identifies as *the single biggest operational argument for Option A*
+— tag only the groups that actually changed, which Option B's shared `core` makes impossible — is
+what `generated/hashes.json` exists for.
+
+```console
+node scripts/release.mjs --from v0.0.9              # --to defaults to HEAD
+node scripts/release.mjs --from v0.0.9 --json
+```
+
+It reads `generated/hashes.json` at two git refs of *this* repository, and prints the changed
+groups, the exact tag list (`awsdetective/v0.1.0`, …) and the full command sequence: build and pack
+only the changed groups, copy each `generated/<slug>/dist/go/<packageName>/` into `cdktn-aws-go`,
+`go mod tidy` (pacmak emits no `go.sum`, so a tag without one is unverifiable), run the isolation
+and size gates, commit, tag, push, and smoke-test the proxy.
+
+**`--dry-run` is the default and the only mode implemented.** Nothing in this repository can create
+or push a tag; `--execute` is refused rather than ignored. The tag fan-out is the one step that is
+unrepairable after a push, so it is a human pasting commands they have read.
+
+Four sanity checks are folded into the plan as loud warnings, because each is a way it can be
+catastrophically right-looking and wrong:
+
+| warning | why |
+| --- | --- |
+| **all N groups changed** | M2's hazard: struct members are emitted in the schema dump's key order, so a differently key-ordered `terraform providers schema -json` moves every hash at once and looks exactly like a provider-wide change. Compare the count against the provider diff before tagging. |
+| **nothing changed** | A release that tags nothing is usually wrong refs, not a quiet bump. |
+| **a group disappeared** | Its module and every tag it ever had stay on the proxy forever. That is a curation decision (`docs/group-moves.md`), never a silent consequence of a diff. |
+| **major ≥ 2** | The `/vN` event, below. |
+
+The changed-group diff is unit-tested against a fixture of two refs' manifests
+(`tools/aws2cdk/test/release-plan.test.ts`, 22 tests): changed, added, removed and unchanged groups
+in one diff, the `/vN` tag shape, and the command ordering (tidy before tag, smoke test after push).
+
+### Two runbook items the planner cannot check for you
+
+* **The `/vN` path rewrite (VERDICT risk #7).** At semver major ≥ 2, `jsii-pacmak` appends `/vN` to
+  every module path (`determineMajorVersionSuffix`). All 258 import paths change at once, the
+  repository needs `awsdetective/v2/` directories beside the v1 ones, and consumers edit imports by
+  hand — Go's import-path-is-identity rule means there is no migration. Plan it as a deliberate,
+  rare, repo-wide event.
+* **The proxy first-publish smoke test (VERDICT risk #6).** A local `go build` never touches
+  `proxy.golang.org` or `sum.golang.org`. A module path that fails to resolve there is not
+  released, and the failure is close to unrepairable: the proxy caches the outcome and the name is
+  spent. Every first publish gets `GOPROXY=https://proxy.golang.org GOSUMDB=sum.golang.org go mod
+  download …` before anything is announced.
+
+Both are written into the release section of
+[`provider-bump-runbook.md`](./provider-bump-runbook.md), which is where the checklist lives.
+
+## CI
+
+The repository had no CI at all until now. Two workflows, both validated with `actionlint` 1.7.12
+(clean) — and neither has ever *run*, because nothing is pushed and no GitHub repository exists yet.
+What is claimed here is that the YAML is well-formed and the commands are the ones this document
+reports; the first real run is the first push.
+
+### `.github/workflows/ci.yml` — every pull request
+
+| job | what it runs |
+| --- | --- |
+| `checks` | `pnpm typecheck` (tools + all 258 generated packages), `pnpm test` (2,142 assertions incl. the manifest and inventory suites), `pnpm check:imports` |
+| `schema-gates` | `pnpm check:groups`; `pnpm mine` twice, byte-compared against the committed `groups.json`; `pnpm generate` twice with `git diff --exit-code`; `runtime-contract-diff --strict` |
+| `synth-smoke` | `build-generated.mjs provider elb lambda` (the prerequisite the test names), then `pnpm synth:smoke` |
+| `fleet-jsii` | 8-way matrix, `build-fleet.mjs --jsii --shard i/8`, then an explicit **JSII3 == 0 and JSII6 == 0** assertion read out of the run record |
+| `fleet-pack-size` | shards 1 and 5 only: full `jsii` + `jsii-pacmak --targets go`, `check-go-module-isolation`, and the `zip.CheckDir` size gate |
+
+The four schema-fed gates are one job on purpose: the ~34 MB dump is gitignored and has to be
+produced by `terraform providers schema -json`, so `.github/actions/provider-schema` caches it
+keyed on `schemas/PROVIDER_VERSION` and four separate jobs would pay for it four times.
+
+`--shard i/N` is new in `build-fleet.mjs`. It is not `index % N`: the fleet spans three orders of
+magnitude in size, so an index split leaves one shard carrying `lex_v2_models` (60 MB packed) and
+`waf` while another finishes in seconds, and a matrix costs its slowest leg. Groups are dealt
+largest-first into whichever shard is currently lightest, weighted by the committed `hashes.json`
+byte counts — deterministic, so the same commit always produces the same eight shards, and even:
+**10.6 MiB of source in every one of the eight.**
+
+### `.github/workflows/fleet-full.yml` — nightly, on demand, and on a label
+
+All eight shards packed and measured, plus a summary job that fails unless all **258** modules were
+measured and none is over the cap. Why not every PR: packing the fleet is ~880 CPU-seconds and
+~540 MiB of output, and on two-core hosted runners that is minutes added to every PR to re-prove a
+bound whose worst module sits at 11.6 % of the cap with 8.6× of headroom, and which cannot move
+without the schema moving. A PR that really does change the shape of the output asks for the full
+run with the `full-fleet` label.
+
+## Still deferred
+
+* **Publishing.** Nothing is pushed and no GitHub repository exists; `cdktn-aws-go` is a local git
+  repository with a configured `origin` and signed commits. The proxy smoke test above is therefore
+  written down, not performed.
+* **CI has never executed.** See above.
+* **The Go consumer is built in workspace mode**, against a local checkout, because the fleet is
+  unpublished. The `replace` directives that make that work are generated and gitignored; the
+  committed `go.mod` requires each module at a placeholder `v0.0.0`.
 
 ## Appendix — all 258 modules by size
 
