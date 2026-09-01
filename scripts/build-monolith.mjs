@@ -24,10 +24,11 @@
  *   node scripts/build-monolith.mjs --assemble-only # just write monolith/
  *   node scripts/build-monolith.mjs --pacmak python # ...and pack a target after compiling
  */
-import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, writeFileSync, symlinkSync, statSync } from "node:fs";
+import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, readFileSync, writeFileSync, symlinkSync, statSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
+import { monolithManifest } from "./monolith-manifest.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generatedDir = path.join(repoRoot, "generated");
@@ -38,11 +39,30 @@ const args = process.argv.slice(2);
 const assembleOnly = args.includes("--assemble-only");
 const pacmakIdx = args.indexOf("--pacmak");
 const pacmakTargets = pacmakIdx >= 0 ? args[pacmakIdx + 1].split(",") : [];
+// The manifest carries no `targets.go` (scripts/monolith-manifest.mjs explains why), so pacmak
+// would fail here anyway — but it would fail with a jsii diagnostic, not with the reason. The one
+// Go distribution is the 258-module fleet; a monolithic Go module is past x/mod/zip's cap and its
+// module path would be permanently spent by the attempt.
+if (pacmakTargets.includes("go")) {
+  console.error(
+    "refusing --pacmak go on the monolith: the Go distribution is the per-group fleet " +
+      "(scripts/build-fleet.mjs → cdktn-aws-go). See docs/m3-go.md and scripts/monolith-manifest.mjs.",
+  );
+  process.exit(1);
+}
 /** jsii holds the whole 2.18M-line program in memory; the default 4 GB ceiling is not enough. */
 const heapMb = Number(process.env.CDKTN_AWS_HEAP_MB ?? 16384);
 
 const PROVIDER_VERSION = "6.62.0";
-const VERSION = "0.0.0";
+/**
+ * The package version. Defaults to this repository's own semver (the fleet versioning scheme:
+ * `@cdktn/aws` and the 258 Go modules all move on cdktn-aws's version, not the provider's — see
+ * docs/m3-go.md § "Versioning and release"); `PACKAGE_VERSION` overrides it, which is how
+ * release.yml passes the validated dispatch input and how the npm placeholder is built at 0.0.0.
+ */
+const VERSION =
+  process.env.PACKAGE_VERSION ??
+  JSON.parse(readFileSync(path.join(repoRoot, "package.json"), "utf8")).version;
 
 const groups = readdirSync(generatedDir, { withFileTypes: true })
   .filter((e) => e.isDirectory())
@@ -83,43 +103,12 @@ writeFileSync(
   ].join("\n"),
 );
 
+// The manifest is emitted by scripts/monolith-manifest.mjs — one place, so the four permanent
+// registry names and the deliberately-absent `targets.go` block can be asserted by
+// tools/aws2cdk/test/monolith-manifest.test.ts without compiling anything.
 writeFileSync(
   path.join(monolithDir, "package.json"),
-  JSON.stringify(
-    {
-      name: "@cdktn/aws",
-      version: VERSION,
-      description: `cdk-terrain bindings for terraform-provider-aws ${PROVIDER_VERSION}, in ${groups.length} service submodules`,
-      license: "MPL-2.0",
-      private: true,
-      author: { name: "cdktn-io", organization: true },
-      repository: { type: "git", url: "https://github.com/cdktn-io/cdktn-aws.git" },
-      stability: "experimental",
-      main: "lib/index.js",
-      types: "lib/index.d.ts",
-      jsii: {
-        outdir: "dist",
-        versionFormat: "short",
-        tsc: { outDir: "lib", rootDir: "src" },
-        targets: {
-          // Target naming follows @cdktn/provider-aws's own conventions verbatim, so the two are
-          // directly comparable on every registry (its distName is "cdktn-provider-aws", module
-          // "cdktn_provider_aws", java "io.cdktn.providers.aws").
-          python: { distName: "cdktn-aws", module: "cdktn_aws" },
-          java: {
-            package: "io.cdktn.aws",
-            maven: { groupId: "io.cdktn", artifactId: "cdktn-aws" },
-          },
-          dotnet: { namespace: "Io.Cdktn.Aws", packageId: "Io.Cdktn.Aws" },
-          go: { moduleName: "github.com/cdktn-io/cdktn-aws-go", packageName: "aws" },
-        },
-      },
-      peerDependencies: { cdktn: "^0.24.0", constructs: "^10.7.0" },
-      devDependencies: { cdktn: "0.24.0", constructs: "10.7.0" },
-    },
-    null,
-    2,
-  ) + "\n",
+  JSON.stringify(monolithManifest({ groups, version: VERSION, providerVersion: PROVIDER_VERSION }), null, 2) + "\n",
 );
 
 writeFileSync(
