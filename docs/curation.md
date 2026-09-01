@@ -240,6 +240,9 @@ ours): any CloudFormation property/attribute maps.
 
 ## Notes for the next provider bump
 
+The step-by-step procedure, including what to do when each gate fails, lives in
+[`provider-bump-runbook.md`](./provider-bump-runbook.md). In outline:
+
 `groups.json` is the source of truth; the miner only *proposes*. On a provider bump:
 
 1. update `mine-config.json` (`providerTag`, `pinnedProviderVersion`), `schemas/PROVIDER_VERSION`

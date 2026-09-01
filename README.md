@@ -20,6 +20,7 @@ generator arrives in M1.
 | `tools/groups-core` | shared types, schema reader, slug rule, deterministic serializer. |
 | `docs/curation.md` | why every curated entry is what it is; counts; what M0 leaves out. |
 | `docs/group-moves.md` | the breaking-change marker file gate B reads. |
+| `docs/provider-bump-runbook.md` | the human-intervention playbook for moving to a new provider version. |
 
 ```bash
 pnpm install
