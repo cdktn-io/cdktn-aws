@@ -197,6 +197,10 @@ around the `require` alone, median of 7 after one discarded warm-up.
 * The bare `require('@cdktn/aws')` at 0.5 ms is reported for completeness only. It loads nothing,
   so it is not a number to pitch.
 
+Provenance: the **reference** arm of this table (the 1,100.0 ms headline figure and its siblings)
+was measured in the original round and accepted then; the fix-round re-verification re-measured only
+our arm and did not re-install or re-time `@cdktn/provider-aws` 25.3.0.
+
 ### (b) Python import
 
 ```bash
@@ -241,9 +245,15 @@ numbers by a lot, so a measurement is only meaningful with both packages in the 
 
 | regime | ours | reference | |
 | --- | ---: | ---: | ---: |
-| `JSII_RUNTIME_PACKAGE_CACHE=disabled` — tarball extracted per process | 1,707.6 ms | 2,806.7 ms | −39.2 % |
+| `JSII_RUNTIME_PACKAGE_CACHE=disabled` — tarball extracted per process ‡ | 1,707.6 ms | 2,806.7 ms | −39.2 % |
 | **cached, no type index** — the first runs after install (table above) | **429.6 ms** | **1,263.7 ms** | **−66.0 %** |
 | cached + type index — the steady state on a machine that has used the package | 160.9 ms | 1,244.7 ms | −87.1 %, 7.7× |
+
+‡ The `disabled` row is the **high-variance** regime of the three: every sample re-extracts a
+~42 MB tarball, so it is dominated by filesystem noise and re-measurement moves our number by
+around 8 %. The direction and the conclusion are stable across re-runs; the absolute milliseconds
+on that row are not, and should not be quoted to four significant figures. The two cached rows
+re-measure tightly.
 
 The reference barely moves between the last two rows (1,263.7 → 1,244.7) because its cost is
 `require`-ing 2,402 modules, which no index avoids; ours drops 2.7× because, with the barrel lazy,
