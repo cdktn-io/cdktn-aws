@@ -218,9 +218,10 @@ build. In order:
    publishing. Only after a clean dry run, dispatch with `dry_run: false`. Push-to-tag auto-release
    is deliberately not wired until both have succeeded once.
 
-**Version.** The root `package.json` is at **0.1.0** — the proposed first release, and no longer the
-`0.0.0` placeholder `release.mjs` refuses to tag 258 modules with. The scheme is this repository's
-own semver, in lockstep across `@cdktn/aws` and all 258 Go modules, disconnected from the provider
+**Version.** The root `package.json` is at **0.1.1** — the corrected first release (§7 says what
+0.1.0 shipped and why it is not it), and no longer the `0.0.0` placeholder `release.mjs` refuses to
+tag 258 modules with. The scheme is this repository's own semver, in lockstep across `@cdktn/aws`
+and all 258 Go modules, disconnected from the provider
 version ([`m3-go.md`](./m3-go.md) § "Versioning and release"). `release.yml` will refuse a dispatch
 whose version does not equal `package.json`'s: the bump is a reviewed PR, never a push from a job
 holding publishing credentials.
@@ -242,8 +243,8 @@ three were needed *before the first tag*, and all three are now settled:
    import-path-is-identity rule means it can never be changed, only abandoned. **Confirmed.**
 2. **The fleet versioning scheme: lockstep on this repository's own semver**, not the provider
    version. **Confirmed.**
-3. **Whether to create the real repositories and publish at all: yes**, at 0.1.0, by the ordering
-   above.
+3. **Whether to create the real repositories and publish at all: yes**, at 0.1.1 (0.1.0 was
+   attempted and is superseded — §6 and §7), by the ordering above.
 
 ## 4. Tag-growth policy
 
@@ -322,7 +323,11 @@ The stamp is asserted end to end on a real build of one group in
 that the manifest came back). Note that a stamp with major ≥ 2 makes pacmak emit `/vN` module paths,
 which `build-fleet.mjs` rejects against the manifest — see §4, it is its own PR.
 
-**Recovery procedure.** Re-dispatch `release.yml` with the *same* version (`0.1.0`, `dry_run=false`).
+**Recovery procedure.** Re-dispatch `release.yml` with the release version and `dry_run=false`.
+That was going to be the *same* number, `0.1.0`, until §7 found a second defect in what 0.1.0
+published; the corrected release is **0.1.1**, at which no registry holds anything yet, so every
+one of the checks below simply finds nothing and publishes. The skip logic still matters — it is
+what makes a *second* failure of the Go half re-runnable.
 Each of the five publish jobs first asks its registry whether that version is already there — npm
 `npm view`, PyPI `/pypi/cdktn-aws/<v>/json`, Maven Central's `.pom` on `repo1.maven.org`, NuGet's
 flat container, and `gh release view v<v>` — and on a hit logs "already … — this job has nothing to
@@ -330,3 +335,46 @@ do" and succeeds without publishing. Found means skip; not found means attempt, 
 lag a publish by minutes and every one of these registries refuses a true duplicate on its own.
 `release_go` keeps its `needs:` unchanged: the registries still gate on the fleet building and
 passing every gate, so a second failure of the Go half fails the run rather than shipping again.
+
+## 7. What 0.1.0 shipped, and why the release is 0.1.1
+
+The version conflict in §6 was not the only defect in 0.1.0. What reached npm, PyPI, Maven Central
+and NuGet was **the whole monolith `src/` tree**, next to the `lib/` it was compiled into:
+
+| | files | unpacked |
+|---|---|---|
+| `@cdktn/aws@0.1.0` | 7,990 | 550,672,898 B (525 MB) |
+| 0.1.1, this branch | 5,327 | 461,985,456 B (441 MB) |
+
+2,661 of the removed files are `.ts` sources that no consumer of a compiled jsii assembly can use.
+The tarball is not only the npm artifact: `jsii-pacmak` embeds it verbatim as the jsii kernel
+payload inside the Python wheel (`cdktn_aws/_jsii/`), the Java jar and the .NET package, so every
+language downloaded and extracted the same 88 MB of dead TypeScript on install.
+
+**Cause.** `jsii-pacmak` writes the `.npmignore` that excludes `src/` itself — but only on the
+branch where the outdir comes from `package.json` (`lib/npm-modules.js#updateAllNpmIgnores`).
+`scripts/package.mjs` passes `--outdir dist`, which takes the other branch and skips the step
+entirely. That is why `generated/<group>/.npmignore` exists — the fleet build passes no `--outdir`,
+so pacmak writes it there, which is also why the Go modules were never affected — and why
+`monolith/` never had one.
+
+**Fix.** `scripts/monolith-manifest.mjs` now emits `MONOLITH_NPMIGNORE` alongside the manifest
+(pacmak's own default content, the same shape `@cdktn/provider-aws` publishes), `build-monolith.mjs`
+writes it into `monolith/`, and `scripts/check-js-tarball.mjs` reads the *packed bytes* back after
+`jsii-pacmak --targets js` and fails the build on any `.ts` outside `lib/**/*.d.ts`, on `tsconfig*`
+or `*.tsbuildinfo`, or on a missing `LICENSE`, `NOTICE`, `README.md`, `.jsii` or `lib/`. It prints
+the file count and unpacked size, so every release logs what it shipped. The allowlist is asserted
+in `monolith-manifest.test.ts` and the check itself in `js-tarball-gate.test.ts`, against real
+tarballs.
+
+**What the remaining 441 MB is** — and it is all load-bearing, which is why this stops here:
+`.jsii` 150 MB (the assembly every non-JS target reads), `lib/**/*.js` 256 MB, `lib/**/*.d.ts`
+42 MB. The `.js` figure is inflated by `inlineSourceMap` + `inlineSources`, which carry each
+module's TypeScript back into its own `.js`; those two settings are jsii's generated-tsconfig
+contract, enforced by `jsii --validate-tsconfig generated`, so dropping them is a change to the
+compile shape and belongs in its own PR, not in a packaging fix.
+
+**Follow-up for the account owner:** `npm deprecate '@cdktn/aws@0.1.0' "superseded by 0.1.1 —
+0.1.0's tarball included the TypeScript sources"`. The version cannot be unpublished after 72 hours
+and should not be; a deprecation notice is what tells an installer to move. The equivalent is worth
+doing on PyPI (yank) once 0.1.1 is up.

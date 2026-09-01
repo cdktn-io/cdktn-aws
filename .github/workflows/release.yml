@@ -45,7 +45,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version to release (no leading v), e.g. 0.1.0. Must equal package.json's version."
+        description: "Version to release (no leading v), e.g. 0.1.1. Must equal package.json's version."
         required: true
         type: string
       dry_run:
