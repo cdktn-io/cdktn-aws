@@ -26,3 +26,11 @@ monolith/
 # jsii writes this one itself on every compile; the generator does not emit it and nothing reads
 # it (these packages are private and never published).
 generated/*/.npmignore
+
+# examples/go-consumer IS committed — it is a proof artifact, not scratch. What is not committed is
+# the workspace `scripts/go-consumer.mjs` writes, which names directories on one machine, plus the
+# compiled binary and the synth output. See examples/go-consumer/README.md.
+examples/go-consumer/go.work
+examples/go-consumer/go.work.sum
+examples/go-consumer/go-consumer
+examples/*/cdktn.out/
