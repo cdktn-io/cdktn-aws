@@ -15,7 +15,7 @@ Mined 2026-09-01 from `hashicorp/terraform-provider-aws` at tag **v6.62.0**, joi
 | data sources | 679 | 676 via doc frontmatter + 3 via the alias table |
 | ephemeral resources | 10 | all via doc frontmatter |
 | aliases | 6 | all `aws_alb*` |
-| slug overrides | 8 | the four collision pairs |
+| slug overrides | 14 | 8 for the four collision pairs, 6 for slug shortening |
 | hand assignments | 0 | none were needed |
 | unmapped after curation | **0** | the gate has no misc bucket |
 
@@ -53,6 +53,97 @@ qualified sibling carries the qualifier as a suffix**, and the qualifier is take
 position upstream put it in (inside the parentheses for VPN and Outposts, after them for ARC and
 IVS). All eight slugs are stable identifiers we intend to keep across provider bumps; renaming one
 later is a breaking change and goes through `docs/group-moves.md`.
+
+## Slug shortening — six overrides beyond the collision pairs
+
+The base rule derives the slug from upstream's *prose* subcategory, which is sometimes a full
+service name where AWS itself uses a short code everywhere else (`aws_oam_link` lives in a group
+called `cloudwatch_observability_access_manager`). The slug is the submodule name in every target
+language, and in Go it is a permanent import-path segment, so it is worth fixing **before** the
+first publish and not worth touching after.
+
+### The test
+
+A slug is renamed only when **all three** hold. If any is uncertain, the slug is left alone — an
+awkward-but-honest slug costs less than a made-up abbreviation nobody can guess.
+
+1. **It is egregiously long**: 20 characters or more. Below that there is nothing to fix.
+2. **The short form is attested, not invented**: it is the terraform resource prefix used
+   consistently by *every* member of the group, and/or the acronym upstream itself puts in the
+   subcategory title's parentheses, and/or the AWS service code (the IAM prefix / CFN namespace,
+   lowercased). We never coin an abbreviation.
+3. **The result is genuinely short**: ≤ 14 characters and materially shorter than the original.
+   This is what separates a service code from a mere respelling — dropping the underscores out of
+   `route_53_recovery_control_config` to get `route53recoverycontrolconfig` buys nothing.
+
+Criterion 3 also rules out *brand-prefix dropping*: `elemental_medialive` → `medialive` or
+`cloudwatch_synthetics` → `synthetics` is not a shortening to a code, it is a rename to a different
+name, and it would break up families that currently sort together.
+
+### Applied
+
+| subcategory | slug was | slug is | attestation |
+| --- | --- | --- | --- |
+| `CloudWatch Observability Access Manager` | `cloudwatch_observability_access_manager` (39) | `oam` | all 7 members are `aws_oam_*`; IAM prefix `oam:`; CFN `AWS::Oam` |
+| `Managed Streaming for Kafka Connect` | `managed_streaming_for_kafka_connect` (35) | `mskconnect` | all 6 members are `aws_mskconnect_*`; IAM prefix `kafkaconnect:` is spelled `mskconnect` by the provider and the console |
+| `Serverless Application Repository` | `serverless_application_repository` (33) | `serverlessrepo` | IAM prefix `serverlessrepo:`; CFN `AWS::ServerlessRepo`. The terraform prefix here is the *long* spelling (`aws_serverlessapplicationrepository_*`), so the service code is the attestation, not the prefix |
+| `Managed Streaming for Kafka` | `managed_streaming_for_kafka` (27) | `msk` | all 16 members are `aws_msk_*`; the product is branded "Amazon MSK" |
+| `DynamoDB Accelerator (DAX)` | `dynamodb_accelerator` (20) | `dax` | upstream's own title parenthetical is the acronym; all 3 members are `aws_dax_*`; IAM prefix `dax:` |
+| `OpenSearch Ingestion (OSIS)` | `opensearch_ingestion` (20) | `osis` | upstream's own title parenthetical is the acronym; all 3 members are `aws_osis_*`; IAM prefix `osis:` |
+
+The first four are the set the sweep started from; `dax` and `osis` are what the sweep of all 257
+slugs added, on the strongest possible evidence — upstream writes the acronym in the title itself,
+and the base rule discards it only because it sits in parentheses.
+
+Every one of the 28 affected names is recorded in [`group-moves.md`](./group-moves.md): a group-key
+rename is reported by gate B as a move of every member. None of the six touches `elb`, `lambda` or
+`provider`, so the committed `generated/` tree is unaffected.
+
+### Considered, kept
+
+The remaining 36 slugs of 20+ characters, and why each one stays. (Slugs under 20 characters were not
+candidates at all; the two notable ones are `recycle_bin` — upstream title `Recycle Bin (RBin)`,
+members `aws_rbin_*`, so it would pass criterion 2 but has nothing to gain — and `documentdb`,
+whose members are `aws_docdb_*`.)
+
+| slug | short form that exists | why kept |
+| --- | --- | --- |
+| `payment_cryptography_control_plane` | `paymentcryptography` (19) | respelling, not a code; fails criterion 3 |
+| `elemental_mediapackage_version_2` | `mediapackagev2` | brand-prefix drop; would split the `elemental_*` family |
+| `route_53_recovery_control_config` | `route53recoverycontrolconfig` (28) | respelling; fails criterion 3 |
+| `cloudwatch_application_insights` | `applicationinsights` (19) | respelling + brand-prefix drop |
+| `cloudwatch_networkflow_monitor` | `networkflowmonitor` (18) | brand-prefix drop; `cloudwatch_*` family stays together |
+| `cloudwatch_observability_admin` | `observabilityadmin` (18) | as above |
+| `ssm_incident_manager_incidents` | `ssmincidents` (12) | passes 1 and 3, but `ssmincidents` is a namespace spelling (CFN `AWS::SSMIncidents`, IAM `ssm-incidents:`) rather than a code anyone says out loud, and it splits the `ssm_*` family. Borderline — revisit before first publish |
+| `user_experience_customization` | `uxc` (3) | `aws_uxc_*` is consistent, but the service is brand new and `uxc` is not established anywhere a reader would recognise it. Borderline — revisit before first publish |
+| `cloudwatch_internet_monitor` | `internetmonitor` (15) | brand-prefix drop |
+| `route_53_recovery_readiness` | `route53recoveryreadiness` (24) | respelling |
+| `service_catalog_appregistry` | `servicecatalogappregistry` (25) | respelling |
+| `user_notifications_contacts` | `notificationscontacts` (21) | respelling; fails criterion 3 |
+| `cloudwatch_network_monitor` | `networkmonitor` (14) | brand-prefix drop; would sit confusingly next to `network_manager`/`network_firewall` |
+| `chime_sdk_media_pipelines` | `chimesdkmediapipelines` (22) | respelling |
+| `connect_customer_profiles` | `customerprofiles` (16) | brand-prefix drop; loses the Connect family |
+| `application_auto_scaling` | `appautoscaling` (14) | `app` for `application` is the provider's own contraction, not an AWS service code (CFN is `AWS::ApplicationAutoScaling`); the long form is unambiguous next to `auto_scaling` / `auto_scaling_plans` |
+| `cloudfront_keyvaluestore` | `cloudfrontkeyvaluestore` (23) | respelling |
+| `cloudwatch_evidently` | `evidently` (9) | brand-prefix drop (family) |
+| `cloudwatch_synthetics` | `synthetics` (10) | brand-prefix drop (family) |
+| `codestar_connections` | `codestarconnections` (19) | respelling |
+| `codestar_notifications` | `codestarnotifications` (21) | respelling |
+| `cost_and_usage_report` | `cur` (3) | `aws_cur_*` and IAM `cur:` both attest it, but `cur` reads as an English word fragment and the group is a single resource — the clarity loss outweighs 18 characters. Borderline |
+| `cost_optimization_hub` | `costoptimizationhub` (19) | respelling |
+| `elemental_mediaconvert` | `mediaconvert` | brand-prefix drop (family) |
+| `elemental_mediapackage` | `mediapackage` | brand-prefix drop (family) |
+| `elemental_mediastore` | `mediastore` | brand-prefix drop (family) |
+| `end_user_messaging_sms` | `pinpointsmsvoicev2` (18) | the terraform prefix is the *old* product name; following it would pin us to a deprecated brand |
+| `eventbridge_scheduler` | `scheduler` (9) | brand-prefix drop, and a bare `scheduler` is meaninglessly generic |
+| `kinesis_analytics_v2` | `kinesisanalyticsv2` (18) | respelling |
+| `mainframe_modernization` | `m2` (2) | `m2` is the real service code (CFN `AWS::M2`, `aws_m2_*`), but a two-letter slug is unguessable and unsearchable; AWS's own UI never says "M2". Deliberately kept long |
+| `opensearch_serverless` | `opensearchserverless` (20) | respelling |
+| `resource_groups_tagging` | `resourcegroupstaggingapi` (24) | longer, not shorter |
+| `timestream_for_influxdb` | `timestreaminfluxdb` (18) | respelling |
+| `verified_permissions` | `verifiedpermissions` (19) | respelling |
+| `waf_classic_regional` | `wafregional` (11) | drops "classic", which is the load-bearing word distinguishing it from `wafv2` |
+| `web_services_budgets` | `budgets` (7) | tempting — the title is just "AWS Budgets" with the brand mangled — but this is a brand-prefix drop, not a service code, and the base rule's output is at least traceable to upstream. Borderline; the cleaner fix is upstream renaming the subcategory |
 
 ## The `aws_alb*` aliases
 

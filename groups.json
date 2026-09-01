@@ -796,21 +796,6 @@
       "dataSources": [],
       "ephemeralResources": []
     },
-    "cloudwatch_observability_access_manager": {
-      "title": "CloudWatch Observability Access Manager",
-      "resources": [
-        "aws_oam_link",
-        "aws_oam_sink",
-        "aws_oam_sink_policy"
-      ],
-      "dataSources": [
-        "aws_oam_link",
-        "aws_oam_links",
-        "aws_oam_sink",
-        "aws_oam_sinks"
-      ],
-      "ephemeralResources": []
-    },
     "cloudwatch_observability_admin": {
       "title": "CloudWatch Observability Admin",
       "resources": [
@@ -1193,6 +1178,16 @@
       ],
       "ephemeralResources": []
     },
+    "dax": {
+      "title": "DynamoDB Accelerator (DAX)",
+      "resources": [
+        "aws_dax_cluster",
+        "aws_dax_parameter_group",
+        "aws_dax_subnet_group"
+      ],
+      "dataSources": [],
+      "ephemeralResources": []
+    },
     "detective": {
       "title": "Detective",
       "resources": [
@@ -1373,16 +1368,6 @@
         "aws_dynamodb_table_item",
         "aws_dynamodb_tables"
       ],
-      "ephemeralResources": []
-    },
-    "dynamodb_accelerator": {
-      "title": "DynamoDB Accelerator (DAX)",
-      "resources": [
-        "aws_dax_cluster",
-        "aws_dax_parameter_group",
-        "aws_dax_subnet_group"
-      ],
-      "dataSources": [],
       "ephemeralResources": []
     },
     "ebs": {
@@ -2500,44 +2485,6 @@
       ],
       "ephemeralResources": []
     },
-    "managed_streaming_for_kafka": {
-      "title": "Managed Streaming for Kafka",
-      "resources": [
-        "aws_msk_cluster",
-        "aws_msk_cluster_policy",
-        "aws_msk_configuration",
-        "aws_msk_replicator",
-        "aws_msk_scram_secret_association",
-        "aws_msk_serverless_cluster",
-        "aws_msk_single_scram_secret_association",
-        "aws_msk_topic",
-        "aws_msk_vpc_connection"
-      ],
-      "dataSources": [
-        "aws_msk_bootstrap_brokers",
-        "aws_msk_broker_nodes",
-        "aws_msk_cluster",
-        "aws_msk_configuration",
-        "aws_msk_kafka_version",
-        "aws_msk_topic",
-        "aws_msk_vpc_connection"
-      ],
-      "ephemeralResources": []
-    },
-    "managed_streaming_for_kafka_connect": {
-      "title": "Managed Streaming for Kafka Connect",
-      "resources": [
-        "aws_mskconnect_connector",
-        "aws_mskconnect_custom_plugin",
-        "aws_mskconnect_worker_configuration"
-      ],
-      "dataSources": [
-        "aws_mskconnect_connector",
-        "aws_mskconnect_custom_plugin",
-        "aws_mskconnect_worker_configuration"
-      ],
-      "ephemeralResources": []
-    },
     "memorydb": {
       "title": "MemoryDB",
       "resources": [
@@ -2584,6 +2531,44 @@
         "aws_mq_broker",
         "aws_mq_broker_engine_types",
         "aws_mq_broker_instance_type_offerings"
+      ],
+      "ephemeralResources": []
+    },
+    "msk": {
+      "title": "Managed Streaming for Kafka",
+      "resources": [
+        "aws_msk_cluster",
+        "aws_msk_cluster_policy",
+        "aws_msk_configuration",
+        "aws_msk_replicator",
+        "aws_msk_scram_secret_association",
+        "aws_msk_serverless_cluster",
+        "aws_msk_single_scram_secret_association",
+        "aws_msk_topic",
+        "aws_msk_vpc_connection"
+      ],
+      "dataSources": [
+        "aws_msk_bootstrap_brokers",
+        "aws_msk_broker_nodes",
+        "aws_msk_cluster",
+        "aws_msk_configuration",
+        "aws_msk_kafka_version",
+        "aws_msk_topic",
+        "aws_msk_vpc_connection"
+      ],
+      "ephemeralResources": []
+    },
+    "mskconnect": {
+      "title": "Managed Streaming for Kafka Connect",
+      "resources": [
+        "aws_mskconnect_connector",
+        "aws_mskconnect_custom_plugin",
+        "aws_mskconnect_worker_configuration"
+      ],
+      "dataSources": [
+        "aws_mskconnect_connector",
+        "aws_mskconnect_custom_plugin",
+        "aws_mskconnect_worker_configuration"
       ],
       "ephemeralResources": []
     },
@@ -2684,6 +2669,21 @@
       ],
       "ephemeralResources": []
     },
+    "oam": {
+      "title": "CloudWatch Observability Access Manager",
+      "resources": [
+        "aws_oam_link",
+        "aws_oam_sink",
+        "aws_oam_sink_policy"
+      ],
+      "dataSources": [
+        "aws_oam_link",
+        "aws_oam_links",
+        "aws_oam_sink",
+        "aws_oam_sinks"
+      ],
+      "ephemeralResources": []
+    },
     "opensearch": {
       "title": "OpenSearch",
       "resources": [
@@ -2701,16 +2701,6 @@
       "dataSources": [
         "aws_opensearch_domain"
       ],
-      "ephemeralResources": []
-    },
-    "opensearch_ingestion": {
-      "title": "OpenSearch Ingestion (OSIS)",
-      "resources": [
-        "aws_osis_pipeline",
-        "aws_osis_pipeline_endpoint",
-        "aws_osis_resource_policy"
-      ],
-      "dataSources": [],
       "ephemeralResources": []
     },
     "opensearch_serverless": {
@@ -2796,6 +2786,16 @@
         "aws_organizations_policy",
         "aws_organizations_resource_tags"
       ],
+      "ephemeralResources": []
+    },
+    "osis": {
+      "title": "OpenSearch Ingestion (OSIS)",
+      "resources": [
+        "aws_osis_pipeline",
+        "aws_osis_pipeline_endpoint",
+        "aws_osis_resource_policy"
+      ],
+      "dataSources": [],
       "ephemeralResources": []
     },
     "outposts": {
@@ -3487,7 +3487,7 @@
       "dataSources": [],
       "ephemeralResources": []
     },
-    "serverless_application_repository": {
+    "serverlessrepo": {
       "title": "Serverless Application Repository",
       "resources": [
         "aws_serverlessapplicationrepository_cloudformation_stack"

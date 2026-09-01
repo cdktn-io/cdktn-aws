@@ -7,10 +7,16 @@
   "slugOverrides": {
     "ARC (Application Recovery Controller) Region Switch": "arc_region_switch",
     "ARC (Application Recovery Controller) Zonal Shift": "arc_zonal_shift",
+    "CloudWatch Observability Access Manager": "oam",
+    "DynamoDB Accelerator (DAX)": "dax",
     "IVS (Interactive Video)": "ivs",
     "IVS (Interactive Video) Chat": "ivs_chat",
+    "Managed Streaming for Kafka": "msk",
+    "Managed Streaming for Kafka Connect": "mskconnect",
+    "OpenSearch Ingestion (OSIS)": "osis",
     "Outposts": "outposts",
     "Outposts (EC2)": "outposts_ec2",
+    "Serverless Application Repository": "serverlessrepo",
     "VPN (Client)": "vpn_client",
     "VPN (Site-to-Site)": "vpn_site_to_site"
   },

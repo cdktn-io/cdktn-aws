@@ -36,3 +36,46 @@ no entry here.
 
 No moves. This is the baseline: `groups.json` was created at this provider version, so there is
 nothing to move from.
+
+## v6.62.0 — slug shortening to established service codes
+
+Not a provider bump: the provider pin is unchanged. Six group **keys** were renamed to the
+established AWS service code for the service (`docs/curation.md`, "Slug shortening"). A group-key
+rename is indistinguishable from a move as far as gate B is concerned — it reports **every member
+of the group** as `old_slug -> new_slug`, on every surface the member appears on — so all 28 names
+below are listed. Nothing changed group in the sense of "was regrouped": the members are exactly
+the same, the box they sit in has a shorter name.
+
+Free of consumer cost *this time only*: no `@cdktn/aws-*` package has been published or tagged yet,
+so no import path exists to break. After the first release these renames become breaking (a new Go
+module path and tag prefix, a new jsii submodule) and must not be done casually — see
+[`provider-bump-runbook.md`](./provider-bump-runbook.md) §(e).
+
+- `aws_dax_cluster`: `dynamodb_accelerator` -> `dax`
+- `aws_dax_parameter_group`: `dynamodb_accelerator` -> `dax`
+- `aws_dax_subnet_group`: `dynamodb_accelerator` -> `dax`
+- `aws_msk_bootstrap_brokers`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_broker_nodes`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_cluster`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_cluster_policy`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_configuration`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_kafka_version`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_replicator`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_scram_secret_association`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_serverless_cluster`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_single_scram_secret_association`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_topic`: `managed_streaming_for_kafka` -> `msk`
+- `aws_msk_vpc_connection`: `managed_streaming_for_kafka` -> `msk`
+- `aws_mskconnect_connector`: `managed_streaming_for_kafka_connect` -> `mskconnect`
+- `aws_mskconnect_custom_plugin`: `managed_streaming_for_kafka_connect` -> `mskconnect`
+- `aws_mskconnect_worker_configuration`: `managed_streaming_for_kafka_connect` -> `mskconnect`
+- `aws_oam_link`: `cloudwatch_observability_access_manager` -> `oam`
+- `aws_oam_links`: `cloudwatch_observability_access_manager` -> `oam`
+- `aws_oam_sink`: `cloudwatch_observability_access_manager` -> `oam`
+- `aws_oam_sink_policy`: `cloudwatch_observability_access_manager` -> `oam`
+- `aws_oam_sinks`: `cloudwatch_observability_access_manager` -> `oam`
+- `aws_osis_pipeline`: `opensearch_ingestion` -> `osis`
+- `aws_osis_pipeline_endpoint`: `opensearch_ingestion` -> `osis`
+- `aws_osis_resource_policy`: `opensearch_ingestion` -> `osis`
+- `aws_serverlessapplicationrepository_application`: `serverless_application_repository` -> `serverlessrepo`
+- `aws_serverlessapplicationrepository_cloudformation_stack`: `serverless_application_repository` -> `serverlessrepo`
