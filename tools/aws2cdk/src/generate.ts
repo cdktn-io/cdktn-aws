@@ -238,6 +238,10 @@ function emitEntry(
   });
 
   const code = new CodeMaker();
+  // The vendored `TerraformProviderGenerator` sets this, and every `@cdktn/provider-*` tree is
+  // emitted with it. Keeping it makes the emitted text directly comparable to the reference
+  // build, which is what `scripts/runtime-contract-diff.mjs` (acceptance E) relies on.
+  code.indentation = 2;
   const nsFile = "namespace-body.ts";
   const topFile = "top-level.ts";
   const structEmitter = new StructEmitter(code);
@@ -332,7 +336,10 @@ export function generate(options: GenerateOptions): GenerateResult {
 
     const pkgDir = path.join(options.outDir, slug);
     const srcDir = path.join(pkgDir, "src");
-    fs.rmSync(pkgDir, { recursive: true, force: true });
+    // Only `src/` is wiped, never the package directory: these are pnpm workspace members, so
+    // `pkgDir/node_modules` holds the cdktn/constructs symlinks that jsii and tsc both need, and
+    // removing them on every regeneration would mean a `pnpm install` between generate and build.
+    fs.rmSync(srcDir, { recursive: true, force: true });
     fs.mkdirSync(srcDir, { recursive: true });
 
     const entries: EmittedEntry[] = [];

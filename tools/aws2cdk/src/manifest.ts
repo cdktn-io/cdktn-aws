@@ -88,38 +88,51 @@ Every construct here needs an \`AwsProvider\` in the same stack — see \`@cdktn
 }
 
 /**
- * The package's own tsconfig. jsii writes one itself on every compile, but committing it keeps
- * `tsc --noEmit` over the generated tree (acceptance B) honest about the exact options jsii uses,
- * and keeps an editor open on `generated/` from reporting phantom errors.
+ * The package's own tsconfig, committed alongside the sources.
+ *
+ * jsii normally writes this file itself and refuses to run when one it did not generate is
+ * present. The generated packages instead pass `--tsconfig tsconfig.json --validate-tsconfig
+ * generated`, jsii's own "full ownership over the file, but stay compatible with what
+ * --generate-tsconfig would have written" mode — so the options below mirror jsii's generated
+ * config exactly, and jsii itself enforces that they keep doing so.
+ *
+ * `incremental` is required by that rule set, so the build info it writes
+ * (`lib/tsconfig.tsbuildinfo`) is gitignored along with the rest of `lib/`.
+ *
+ * Committing it means the exact options jsii compiles with are visible in review and are the same
+ * ones `tsc --noEmit` uses for acceptance B — one file, not two that can drift.
  */
 export function tsconfigFor(): unknown {
   return {
     compilerOptions: {
-      alwaysStrict: true,
-      declaration: true,
-      esModuleInterop: false,
-      experimentalDecorators: true,
+      outDir: "lib",
+      rootDir: "src",
+      declarationMap: false,
       inlineSourceMap: true,
       inlineSources: true,
+      alwaysStrict: true,
+      declaration: true,
+      incremental: true,
+      tsBuildInfoFile: "lib/tsconfig.tsbuildinfo",
       lib: ["es2020"],
-      module: "CommonJS",
-      moduleResolution: "node",
+      module: "commonjs",
       noEmitOnError: true,
       noFallthroughCasesInSwitch: true,
       noImplicitAny: true,
       noImplicitReturns: true,
       noImplicitThis: true,
-      noUnusedLocals: false,
-      noUnusedParameters: false,
+      noUnusedLocals: true,
+      noUnusedParameters: true,
       resolveJsonModule: true,
+      skipLibCheck: true,
       strict: true,
       strictNullChecks: true,
       strictPropertyInitialization: true,
       stripInternal: false,
-      target: "ES2020",
-      outDir: "lib",
-      rootDir: "src",
+      target: "es2020",
+      composite: false,
     },
     include: ["src/**/*.ts"],
+    exclude: ["node_modules"],
   };
 }

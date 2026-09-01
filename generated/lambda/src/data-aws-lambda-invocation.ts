@@ -6,35 +6,35 @@
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
 export interface DataAwsLambdaInvocationConfig extends cdktn.TerraformMetaArguments {
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#function_name DataAwsLambdaInvocation#function_name}
-    */
-    readonly functionName: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#id DataAwsLambdaInvocation#id}
-    *
-    * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-    * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-    */
-    readonly id?: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#input DataAwsLambdaInvocation#input}
-    */
-    readonly input: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#qualifier DataAwsLambdaInvocation#qualifier}
-    */
-    readonly qualifier?: string;
-    /**
-    * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
-    *
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#region DataAwsLambdaInvocation#region}
-    */
-    readonly region?: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#tenant_id DataAwsLambdaInvocation#tenant_id}
-    */
-    readonly tenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#function_name DataAwsLambdaInvocation#function_name}
+  */
+  readonly functionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#id DataAwsLambdaInvocation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#input DataAwsLambdaInvocation#input}
+  */
+  readonly input: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#qualifier DataAwsLambdaInvocation#qualifier}
+  */
+  readonly qualifier?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#region DataAwsLambdaInvocation#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#tenant_id DataAwsLambdaInvocation#tenant_id}
+  */
+  readonly tenantId?: string;
 }
 
 /**
@@ -42,215 +42,215 @@ export interface DataAwsLambdaInvocationConfig extends cdktn.TerraformMetaArgume
 */
 export class DataAwsLambdaInvocation extends cdktn.TerraformDataSource {
 
-    // =================
-    // STATIC PROPERTIES
-    // =================
-    public static readonly tfResourceType = "aws_lambda_invocation";
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_lambda_invocation";
 
-    // ==============
-    // STATIC Methods
-    // ==============
-    /**
-    * Generates CDKTN code for importing a DataAwsLambdaInvocation resource upon running "cdktn plan <stack-name>"
-    * @param scope The scope in which to define this construct
-    * @param importToId The construct id used in the generated config for the DataAwsLambdaInvocation to import
-    * @param importFromId The id of the existing DataAwsLambdaInvocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#import import section} in the documentation of this resource for the id to use
-    * @param provider? Optional instance of the provider where the DataAwsLambdaInvocation to import is found
-    */
-    public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a DataAwsLambdaInvocation resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAwsLambdaInvocation to import
+  * @param importFromId The id of the existing DataAwsLambdaInvocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsLambdaInvocation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_invocation", importId: importFromId, provider });
       }
 
-    // ===========
-    // INITIALIZER
-    // ===========
+  // ===========
+  // INITIALIZER
+  // ===========
 
-    /**
-    * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation aws_lambda_invocation} Data Source
-    *
-    * @param scope The scope in which to define this construct
-    * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-    * @param options DataAwsLambdaInvocationConfig
-    */
-    public constructor(scope: Construct, id: string, config: DataAwsLambdaInvocationConfig) {
-        super(scope, id, {
-            terraformResourceType: 'aws_lambda_invocation',
-            terraformGeneratorMetadata: {
-                providerName: 'aws',
-                providerVersion: '6.62.0',
-                providerVersionConstraint: '~> 6.0'
-            },
-            provider: config.provider,
-            dependsOn: config.dependsOn,
-            count: config.count,
-            lifecycle: config.lifecycle,
-            provisioners: config.provisioners,
-            connection: config.connection,
-            forEach: config.forEach
-        });
-        this._functionName = config.functionName;
-        this._id = config.id;
-        this._input = config.input;
-        this._qualifier = config.qualifier;
-        this._region = config.region;
-        this._tenantId = config.tenantId;
-    }
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_invocation aws_lambda_invocation} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAwsLambdaInvocationConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAwsLambdaInvocationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'aws_lambda_invocation',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._functionName = config.functionName;
+    this._id = config.id;
+    this._input = config.input;
+    this._qualifier = config.qualifier;
+    this._region = config.region;
+    this._tenantId = config.tenantId;
+  }
 
-    // ==========
-    // ATTRIBUTES
-    // ==========
+  // ==========
+  // ATTRIBUTES
+  // ==========
 
-    // function_name - computed: false, optional: false, required: true
-    private _functionName?: string; 
-    public get functionName() {
-        return this.getStringAttribute('function_name');
-    }
-    public set functionName(value: string) {
-        this._functionName = value;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get functionNameInput() {
-        return this._functionName;
-    }
+  // function_name - computed: false, optional: false, required: true
+  private _functionName?: string; 
+  public get functionName() {
+    return this.getStringAttribute('function_name');
+  }
+  public set functionName(value: string) {
+    this._functionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionNameInput() {
+    return this._functionName;
+  }
 
-    // id - computed: true, optional: true, required: false
-    private _id?: string; 
-    public get id() {
-        return this.getStringAttribute('id');
-    }
-    public set id(value: string) {
-        this._id = value;
-    }
-    public resetId() {
-        this._id = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get idInput() {
-        return this._id;
-    }
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
-    // input - computed: false, optional: false, required: true
-    private _input?: string; 
-    public get input() {
-        return this.getStringAttribute('input');
-    }
-    public set input(value: string) {
-        this._input = value;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get inputInput() {
-        return this._input;
-    }
+  // input - computed: false, optional: false, required: true
+  private _input?: string; 
+  public get input() {
+    return this.getStringAttribute('input');
+  }
+  public set input(value: string) {
+    this._input = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputInput() {
+    return this._input;
+  }
 
-    // qualifier - computed: false, optional: true, required: false
-    private _qualifier?: string; 
-    public get qualifier() {
-        return this.getStringAttribute('qualifier');
-    }
-    public set qualifier(value: string) {
-        this._qualifier = value;
-    }
-    public resetQualifier() {
-        this._qualifier = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get qualifierInput() {
-        return this._qualifier;
-    }
+  // qualifier - computed: false, optional: true, required: false
+  private _qualifier?: string; 
+  public get qualifier() {
+    return this.getStringAttribute('qualifier');
+  }
+  public set qualifier(value: string) {
+    this._qualifier = value;
+  }
+  public resetQualifier() {
+    this._qualifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierInput() {
+    return this._qualifier;
+  }
 
-    // region - computed: true, optional: true, required: false
-    private _region?: string; 
-    public get region() {
-        return this.getStringAttribute('region');
-    }
-    public set region(value: string) {
-        this._region = value;
-    }
-    public resetRegion() {
-        this._region = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get regionInput() {
-        return this._region;
-    }
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
 
-    // result - computed: true, optional: false, required: false
-    public get result() {
-        return this.getStringAttribute('result');
-    }
+  // result - computed: true, optional: false, required: false
+  public get result() {
+    return this.getStringAttribute('result');
+  }
 
-    // tenant_id - computed: false, optional: true, required: false
-    private _tenantId?: string; 
-    public get tenantId() {
-        return this.getStringAttribute('tenant_id');
-    }
-    public set tenantId(value: string) {
-        this._tenantId = value;
-    }
-    public resetTenantId() {
-        this._tenantId = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get tenantIdInput() {
-        return this._tenantId;
-    }
+  // tenant_id - computed: false, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
 
-    // =========
-    // SYNTHESIS
-    // =========
+  // =========
+  // SYNTHESIS
+  // =========
 
-    protected synthesizeAttributes(): { [name: string]: any } {
-        return {
-            function_name: cdktn.stringToTerraform(this._functionName),
-            id: cdktn.stringToTerraform(this._id),
-            input: cdktn.stringToTerraform(this._input),
-            qualifier: cdktn.stringToTerraform(this._qualifier),
-            region: cdktn.stringToTerraform(this._region),
-            tenant_id: cdktn.stringToTerraform(this._tenantId),
-        };
-    }
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      function_name: cdktn.stringToTerraform(this._functionName),
+      id: cdktn.stringToTerraform(this._id),
+      input: cdktn.stringToTerraform(this._input),
+      qualifier: cdktn.stringToTerraform(this._qualifier),
+      region: cdktn.stringToTerraform(this._region),
+      tenant_id: cdktn.stringToTerraform(this._tenantId),
+    };
+  }
 
-    protected synthesizeHclAttributes(): { [name: string]: any } {
-        const attrs = {
-            function_name: {
-                value: cdktn.stringToHclTerraform(this._functionName),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            id: {
-                value: cdktn.stringToHclTerraform(this._id),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            input: {
-                value: cdktn.stringToHclTerraform(this._input),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            qualifier: {
-                value: cdktn.stringToHclTerraform(this._qualifier),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            region: {
-                value: cdktn.stringToHclTerraform(this._region),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            tenant_id: {
-                value: cdktn.stringToHclTerraform(this._tenantId),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-        };
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      function_name: {
+        value: cdktn.stringToHclTerraform(this._functionName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input: {
+        value: cdktn.stringToHclTerraform(this._input),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      qualifier: {
+        value: cdktn.stringToHclTerraform(this._qualifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tenant_id: {
+        value: cdktn.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
 
-        // remove undefined attributes
-        return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
-    }
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

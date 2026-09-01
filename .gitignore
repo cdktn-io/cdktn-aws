@@ -10,3 +10,11 @@ tmp/
 # schemas/PROVIDER_VERSION (the pin groups.json was mined at) IS committed.
 schemas/schema.json
 schemas/.terraform*
+
+# Build artifacts of the generated group packages. `generated/<group>/{package.json,README.md,
+# tsconfig.json,src/}` IS committed (sibling repos commit their `src/` the same way); everything
+# jsii and jsii-pacmak write is not.
+generated/*/lib/
+generated/*/dist/
+generated/*/.jsii
+generated/*/.warnings.jsii.js

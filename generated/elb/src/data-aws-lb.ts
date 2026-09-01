@@ -6,37 +6,37 @@
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
 export interface DataAwsLbConfig extends cdktn.TerraformMetaArguments {
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#arn DataAwsLb#arn}
-    */
-    readonly arn?: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#id DataAwsLb#id}
-    *
-    * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-    * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-    */
-    readonly id?: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#name DataAwsLb#name}
-    */
-    readonly name?: string;
-    /**
-    * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
-    *
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#region DataAwsLb#region}
-    */
-    readonly region?: string;
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#tags DataAwsLb#tags}
-    */
-    readonly tags?: { [key: string]: string };
-    /**
-    * timeouts block
-    *
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#timeouts DataAwsLb#timeouts}
-    */
-    readonly timeouts?: DataAwsLb.TimeoutsProperty;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#arn DataAwsLb#arn}
+  */
+  readonly arn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#id DataAwsLb#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#name DataAwsLb#name}
+  */
+  readonly name?: string;
+  /**
+  * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#region DataAwsLb#region}
+  */
+  readonly region?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#tags DataAwsLb#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * timeouts block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#timeouts DataAwsLb#timeouts}
+  */
+  readonly timeouts?: DataAwsLb.TimeoutsProperty;
 }
 
 /**
@@ -44,517 +44,517 @@ export interface DataAwsLbConfig extends cdktn.TerraformMetaArguments {
 */
 export class DataAwsLb extends cdktn.TerraformDataSource {
 
-    // =================
-    // STATIC PROPERTIES
-    // =================
-    public static readonly tfResourceType = "aws_lb";
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "aws_lb";
 
-    // ==============
-    // STATIC Methods
-    // ==============
-    /**
-    * Generates CDKTN code for importing a DataAwsLb resource upon running "cdktn plan <stack-name>"
-    * @param scope The scope in which to define this construct
-    * @param importToId The construct id used in the generated config for the DataAwsLb to import
-    * @param importFromId The id of the existing DataAwsLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
-    * @param provider? Optional instance of the provider where the DataAwsLb to import is found
-    */
-    public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTN code for importing a DataAwsLb resource upon running "cdktn plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAwsLb to import
+  * @param importFromId The id of the existing DataAwsLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsLb to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb", importId: importFromId, provider });
       }
 
-    // ===========
-    // INITIALIZER
-    // ===========
+  // ===========
+  // INITIALIZER
+  // ===========
 
-    /**
-    * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb aws_lb} Data Source
-    *
-    * @param scope The scope in which to define this construct
-    * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-    * @param options DataAwsLbConfig = {}
-    */
-    public constructor(scope: Construct, id: string, config: DataAwsLbConfig = {}) {
-        super(scope, id, {
-            terraformResourceType: 'aws_lb',
-            terraformGeneratorMetadata: {
-                providerName: 'aws',
-                providerVersion: '6.62.0',
-                providerVersionConstraint: '~> 6.0'
-            },
-            provider: config.provider,
-            dependsOn: config.dependsOn,
-            count: config.count,
-            lifecycle: config.lifecycle,
-            provisioners: config.provisioners,
-            connection: config.connection,
-            forEach: config.forEach
-        });
-        this._arn = config.arn;
-        this._id = config.id;
-        this._name = config.name;
-        this._region = config.region;
-        this._tags = config.tags;
-        this._timeouts.internalValue = config.timeouts;
-    }
+  /**
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb aws_lb} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAwsLbConfig = {}
+  */
+  public constructor(scope: Construct, id: string, config: DataAwsLbConfig = {}) {
+    super(scope, id, {
+      terraformResourceType: 'aws_lb',
+      terraformGeneratorMetadata: {
+        providerName: 'aws',
+        providerVersion: '6.62.0',
+        providerVersionConstraint: '~> 6.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
+    });
+    this._arn = config.arn;
+    this._id = config.id;
+    this._name = config.name;
+    this._region = config.region;
+    this._tags = config.tags;
+    this._timeouts.internalValue = config.timeouts;
+  }
 
-    // ==========
-    // ATTRIBUTES
-    // ==========
+  // ==========
+  // ATTRIBUTES
+  // ==========
 
-    // access_logs - computed: true, optional: false, required: false
-    private _accessLogs = new DataAwsLb.AccessLogsPropertyList(this, "access_logs", false);
-    public get accessLogs() {
-        return this._accessLogs;
-    }
+  // access_logs - computed: true, optional: false, required: false
+  private _accessLogs = new DataAwsLb.AccessLogsPropertyList(this, "access_logs", false);
+  public get accessLogs() {
+    return this._accessLogs;
+  }
 
-    // arn - computed: true, optional: true, required: false
-    private _arn?: string; 
-    public get arn() {
-        return this.getStringAttribute('arn');
-    }
-    public set arn(value: string) {
-        this._arn = value;
-    }
-    public resetArn() {
-        this._arn = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get arnInput() {
-        return this._arn;
-    }
+  // arn - computed: true, optional: true, required: false
+  private _arn?: string; 
+  public get arn() {
+    return this.getStringAttribute('arn');
+  }
+  public set arn(value: string) {
+    this._arn = value;
+  }
+  public resetArn() {
+    this._arn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get arnInput() {
+    return this._arn;
+  }
 
-    // arn_suffix - computed: true, optional: false, required: false
-    public get arnSuffix() {
-        return this.getStringAttribute('arn_suffix');
-    }
+  // arn_suffix - computed: true, optional: false, required: false
+  public get arnSuffix() {
+    return this.getStringAttribute('arn_suffix');
+  }
 
-    // client_keep_alive - computed: true, optional: false, required: false
-    public get clientKeepAlive() {
-        return this.getNumberAttribute('client_keep_alive');
-    }
+  // client_keep_alive - computed: true, optional: false, required: false
+  public get clientKeepAlive() {
+    return this.getNumberAttribute('client_keep_alive');
+  }
 
-    // connection_logs - computed: true, optional: false, required: false
-    private _connectionLogs = new DataAwsLb.ConnectionLogsPropertyList(this, "connection_logs", false);
-    public get connectionLogs() {
-        return this._connectionLogs;
-    }
+  // connection_logs - computed: true, optional: false, required: false
+  private _connectionLogs = new DataAwsLb.ConnectionLogsPropertyList(this, "connection_logs", false);
+  public get connectionLogs() {
+    return this._connectionLogs;
+  }
 
-    // customer_owned_ipv4_pool - computed: true, optional: false, required: false
-    public get customerOwnedIpv4Pool() {
-        return this.getStringAttribute('customer_owned_ipv4_pool');
-    }
+  // customer_owned_ipv4_pool - computed: true, optional: false, required: false
+  public get customerOwnedIpv4Pool() {
+    return this.getStringAttribute('customer_owned_ipv4_pool');
+  }
 
-    // desync_mitigation_mode - computed: true, optional: false, required: false
-    public get desyncMitigationMode() {
-        return this.getStringAttribute('desync_mitigation_mode');
-    }
+  // desync_mitigation_mode - computed: true, optional: false, required: false
+  public get desyncMitigationMode() {
+    return this.getStringAttribute('desync_mitigation_mode');
+  }
 
-    // dns_name - computed: true, optional: false, required: false
-    public get dnsName() {
-        return this.getStringAttribute('dns_name');
-    }
+  // dns_name - computed: true, optional: false, required: false
+  public get dnsName() {
+    return this.getStringAttribute('dns_name');
+  }
 
-    // dns_record_client_routing_policy - computed: true, optional: false, required: false
-    public get dnsRecordClientRoutingPolicy() {
-        return this.getStringAttribute('dns_record_client_routing_policy');
-    }
+  // dns_record_client_routing_policy - computed: true, optional: false, required: false
+  public get dnsRecordClientRoutingPolicy() {
+    return this.getStringAttribute('dns_record_client_routing_policy');
+  }
 
-    // drop_invalid_header_fields - computed: true, optional: false, required: false
-    public get dropInvalidHeaderFields() {
-        return this.getBooleanAttribute('drop_invalid_header_fields');
-    }
+  // drop_invalid_header_fields - computed: true, optional: false, required: false
+  public get dropInvalidHeaderFields() {
+    return this.getBooleanAttribute('drop_invalid_header_fields');
+  }
 
-    // enable_cross_zone_load_balancing - computed: true, optional: false, required: false
-    public get enableCrossZoneLoadBalancing() {
-        return this.getBooleanAttribute('enable_cross_zone_load_balancing');
-    }
+  // enable_cross_zone_load_balancing - computed: true, optional: false, required: false
+  public get enableCrossZoneLoadBalancing() {
+    return this.getBooleanAttribute('enable_cross_zone_load_balancing');
+  }
 
-    // enable_deletion_protection - computed: true, optional: false, required: false
-    public get enableDeletionProtection() {
-        return this.getBooleanAttribute('enable_deletion_protection');
-    }
+  // enable_deletion_protection - computed: true, optional: false, required: false
+  public get enableDeletionProtection() {
+    return this.getBooleanAttribute('enable_deletion_protection');
+  }
 
-    // enable_http2 - computed: true, optional: false, required: false
-    public get enableHttp2() {
-        return this.getBooleanAttribute('enable_http2');
-    }
+  // enable_http2 - computed: true, optional: false, required: false
+  public get enableHttp2() {
+    return this.getBooleanAttribute('enable_http2');
+  }
 
-    // enable_prefix_for_ipv6_source_nat - computed: true, optional: false, required: false
-    public get enablePrefixForIpv6SourceNat() {
-        return this.getStringAttribute('enable_prefix_for_ipv6_source_nat');
-    }
+  // enable_prefix_for_ipv6_source_nat - computed: true, optional: false, required: false
+  public get enablePrefixForIpv6SourceNat() {
+    return this.getStringAttribute('enable_prefix_for_ipv6_source_nat');
+  }
 
-    // enable_tls_version_and_cipher_suite_headers - computed: true, optional: false, required: false
-    public get enableTlsVersionAndCipherSuiteHeaders() {
-        return this.getBooleanAttribute('enable_tls_version_and_cipher_suite_headers');
-    }
+  // enable_tls_version_and_cipher_suite_headers - computed: true, optional: false, required: false
+  public get enableTlsVersionAndCipherSuiteHeaders() {
+    return this.getBooleanAttribute('enable_tls_version_and_cipher_suite_headers');
+  }
 
-    // enable_waf_fail_open - computed: true, optional: false, required: false
-    public get enableWafFailOpen() {
-        return this.getBooleanAttribute('enable_waf_fail_open');
-    }
+  // enable_waf_fail_open - computed: true, optional: false, required: false
+  public get enableWafFailOpen() {
+    return this.getBooleanAttribute('enable_waf_fail_open');
+  }
 
-    // enable_xff_client_port - computed: true, optional: false, required: false
-    public get enableXffClientPort() {
-        return this.getBooleanAttribute('enable_xff_client_port');
-    }
+  // enable_xff_client_port - computed: true, optional: false, required: false
+  public get enableXffClientPort() {
+    return this.getBooleanAttribute('enable_xff_client_port');
+  }
 
-    // enable_zonal_shift - computed: true, optional: false, required: false
-    public get enableZonalShift() {
-        return this.getBooleanAttribute('enable_zonal_shift');
-    }
+  // enable_zonal_shift - computed: true, optional: false, required: false
+  public get enableZonalShift() {
+    return this.getBooleanAttribute('enable_zonal_shift');
+  }
 
-    // enforce_security_group_inbound_rules_on_private_link_traffic - computed: true, optional: false, required: false
-    public get enforceSecurityGroupInboundRulesOnPrivateLinkTraffic() {
-        return this.getStringAttribute('enforce_security_group_inbound_rules_on_private_link_traffic');
-    }
+  // enforce_security_group_inbound_rules_on_private_link_traffic - computed: true, optional: false, required: false
+  public get enforceSecurityGroupInboundRulesOnPrivateLinkTraffic() {
+    return this.getStringAttribute('enforce_security_group_inbound_rules_on_private_link_traffic');
+  }
 
-    // health_check_logs - computed: true, optional: false, required: false
-    private _healthCheckLogs = new DataAwsLb.HealthCheckLogsPropertyList(this, "health_check_logs", false);
-    public get healthCheckLogs() {
-        return this._healthCheckLogs;
-    }
+  // health_check_logs - computed: true, optional: false, required: false
+  private _healthCheckLogs = new DataAwsLb.HealthCheckLogsPropertyList(this, "health_check_logs", false);
+  public get healthCheckLogs() {
+    return this._healthCheckLogs;
+  }
 
-    // id - computed: true, optional: true, required: false
-    private _id?: string; 
-    public get id() {
-        return this.getStringAttribute('id');
-    }
-    public set id(value: string) {
-        this._id = value;
-    }
-    public resetId() {
-        this._id = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get idInput() {
-        return this._id;
-    }
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
-    // idle_timeout - computed: true, optional: false, required: false
-    public get idleTimeout() {
-        return this.getNumberAttribute('idle_timeout');
-    }
+  // idle_timeout - computed: true, optional: false, required: false
+  public get idleTimeout() {
+    return this.getNumberAttribute('idle_timeout');
+  }
 
-    // internal - computed: true, optional: false, required: false
-    public get internal() {
-        return this.getBooleanAttribute('internal');
-    }
+  // internal - computed: true, optional: false, required: false
+  public get internal() {
+    return this.getBooleanAttribute('internal');
+  }
 
-    // ip_address_type - computed: true, optional: false, required: false
-    public get ipAddressType() {
-        return this.getStringAttribute('ip_address_type');
-    }
+  // ip_address_type - computed: true, optional: false, required: false
+  public get ipAddressType() {
+    return this.getStringAttribute('ip_address_type');
+  }
 
-    // ipam_pools - computed: true, optional: false, required: false
-    private _ipamPools = new DataAwsLb.IpamPoolsPropertyList(this, "ipam_pools", false);
-    public get ipamPools() {
-        return this._ipamPools;
-    }
+  // ipam_pools - computed: true, optional: false, required: false
+  private _ipamPools = new DataAwsLb.IpamPoolsPropertyList(this, "ipam_pools", false);
+  public get ipamPools() {
+    return this._ipamPools;
+  }
 
-    // load_balancer_type - computed: true, optional: false, required: false
-    public get loadBalancerType() {
-        return this.getStringAttribute('load_balancer_type');
-    }
+  // load_balancer_type - computed: true, optional: false, required: false
+  public get loadBalancerType() {
+    return this.getStringAttribute('load_balancer_type');
+  }
 
-    // name - computed: true, optional: true, required: false
-    private _name?: string; 
-    public get name() {
-        return this.getStringAttribute('name');
-    }
-    public set name(value: string) {
-        this._name = value;
-    }
-    public resetName() {
-        this._name = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get nameInput() {
-        return this._name;
-    }
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
 
-    // preserve_host_header - computed: true, optional: false, required: false
-    public get preserveHostHeader() {
-        return this.getBooleanAttribute('preserve_host_header');
-    }
+  // preserve_host_header - computed: true, optional: false, required: false
+  public get preserveHostHeader() {
+    return this.getBooleanAttribute('preserve_host_header');
+  }
 
-    // region - computed: true, optional: true, required: false
-    private _region?: string; 
-    public get region() {
-        return this.getStringAttribute('region');
-    }
-    public set region(value: string) {
-        this._region = value;
-    }
-    public resetRegion() {
-        this._region = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get regionInput() {
-        return this._region;
-    }
+  // region - computed: true, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
 
-    // secondary_ips_auto_assigned_per_subnet - computed: true, optional: false, required: false
-    public get secondaryIpsAutoAssignedPerSubnet() {
-        return this.getNumberAttribute('secondary_ips_auto_assigned_per_subnet');
-    }
+  // secondary_ips_auto_assigned_per_subnet - computed: true, optional: false, required: false
+  public get secondaryIpsAutoAssignedPerSubnet() {
+    return this.getNumberAttribute('secondary_ips_auto_assigned_per_subnet');
+  }
 
-    // security_groups - computed: true, optional: false, required: false
-    public get securityGroups() {
-        return cdktn.Fn.tolist(this.getListAttribute('security_groups'));
-    }
+  // security_groups - computed: true, optional: false, required: false
+  public get securityGroups() {
+    return cdktn.Fn.tolist(this.getListAttribute('security_groups'));
+  }
 
-    // subnet_mapping - computed: true, optional: false, required: false
-    private _subnetMapping = new DataAwsLb.SubnetMappingPropertyList(this, "subnet_mapping", true);
-    public get subnetMapping() {
-        return this._subnetMapping;
-    }
+  // subnet_mapping - computed: true, optional: false, required: false
+  private _subnetMapping = new DataAwsLb.SubnetMappingPropertyList(this, "subnet_mapping", true);
+  public get subnetMapping() {
+    return this._subnetMapping;
+  }
 
-    // subnets - computed: true, optional: false, required: false
-    public get subnets() {
-        return cdktn.Fn.tolist(this.getListAttribute('subnets'));
-    }
+  // subnets - computed: true, optional: false, required: false
+  public get subnets() {
+    return cdktn.Fn.tolist(this.getListAttribute('subnets'));
+  }
 
-    // tags - computed: true, optional: true, required: false
-    private _tags?: { [key: string]: string }; 
-    public get tags() {
-        return this.getStringMapAttribute('tags');
-    }
-    public set tags(value: { [key: string]: string }) {
-        this._tags = value;
-    }
-    public resetTags() {
-        this._tags = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get tagsInput() {
-        return this._tags;
-    }
+  // tags - computed: true, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
 
-    // vpc_id - computed: true, optional: false, required: false
-    public get vpcId() {
-        return this.getStringAttribute('vpc_id');
-    }
+  // vpc_id - computed: true, optional: false, required: false
+  public get vpcId() {
+    return this.getStringAttribute('vpc_id');
+  }
 
-    // xff_header_processing_mode - computed: true, optional: false, required: false
-    public get xffHeaderProcessingMode() {
-        return this.getStringAttribute('xff_header_processing_mode');
-    }
+  // xff_header_processing_mode - computed: true, optional: false, required: false
+  public get xffHeaderProcessingMode() {
+    return this.getStringAttribute('xff_header_processing_mode');
+  }
 
-    // zone_id - computed: true, optional: false, required: false
-    public get zoneId() {
-        return this.getStringAttribute('zone_id');
-    }
+  // zone_id - computed: true, optional: false, required: false
+  public get zoneId() {
+    return this.getStringAttribute('zone_id');
+  }
 
-    // timeouts - computed: false, optional: true, required: false
-    private _timeouts = new DataAwsLb.TimeoutsPropertyOutputReference(this, "timeouts");
-    public get timeouts() {
-        return this._timeouts;
-    }
-    public putTimeouts(value: DataAwsLb.TimeoutsProperty) {
-        this._timeouts.internalValue = value;
-    }
-    public resetTimeouts() {
-        this._timeouts.internalValue = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get timeoutsInput() {
-        return this._timeouts.internalValue;
-    }
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new DataAwsLb.TimeoutsPropertyOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: DataAwsLb.TimeoutsProperty) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
 
-    // =========
-    // SYNTHESIS
-    // =========
+  // =========
+  // SYNTHESIS
+  // =========
 
-    protected synthesizeAttributes(): { [name: string]: any } {
-        return {
-            arn: cdktn.stringToTerraform(this._arn),
-            id: cdktn.stringToTerraform(this._id),
-            name: cdktn.stringToTerraform(this._name),
-            region: cdktn.stringToTerraform(this._region),
-            tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-            timeouts: dataAwsLbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-        };
-    }
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      arn: cdktn.stringToTerraform(this._arn),
+      id: cdktn.stringToTerraform(this._id),
+      name: cdktn.stringToTerraform(this._name),
+      region: cdktn.stringToTerraform(this._region),
+      tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
+      timeouts: dataAwsLbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+    };
+  }
 
-    protected synthesizeHclAttributes(): { [name: string]: any } {
-        const attrs = {
-            arn: {
-                value: cdktn.stringToHclTerraform(this._arn),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            id: {
-                value: cdktn.stringToHclTerraform(this._id),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            name: {
-                value: cdktn.stringToHclTerraform(this._name),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            region: {
-                value: cdktn.stringToHclTerraform(this._region),
-                isBlock: false,
-                type: "simple",
-                storageClassType: "string",
-            },
-            tags: {
-                value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
-                isBlock: false,
-                type: "map",
-                storageClassType: "stringMap",
-            },
-            timeouts: {
-                value: dataAwsLbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
-                isBlock: true,
-                type: "struct",
-                storageClassType: "DataAwsLb.TimeoutsProperty",
-            },
-        };
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      arn: {
+        value: cdktn.stringToHclTerraform(this._arn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktn.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktn.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region: {
+        value: cdktn.stringToHclTerraform(this._region),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: dataAwsLbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAwsLb.TimeoutsProperty",
+      },
+    };
 
-        // remove undefined attributes
-        return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
-    }
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }
 
 export function dataAwsLbAccessLogsPropertyToTerraform(struct?: DataAwsLb.AccessLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
 }
 
 
 export function dataAwsLbAccessLogsPropertyToHclTerraform(struct?: DataAwsLb.AccessLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-    };
-    return attrs;
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 
 export function dataAwsLbConnectionLogsPropertyToTerraform(struct?: DataAwsLb.ConnectionLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
 }
 
 
 export function dataAwsLbConnectionLogsPropertyToHclTerraform(struct?: DataAwsLb.ConnectionLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-    };
-    return attrs;
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 
 export function dataAwsLbHealthCheckLogsPropertyToTerraform(struct?: DataAwsLb.HealthCheckLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
 }
 
 
 export function dataAwsLbHealthCheckLogsPropertyToHclTerraform(struct?: DataAwsLb.HealthCheckLogsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-    };
-    return attrs;
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 
 export function dataAwsLbIpamPoolsPropertyToTerraform(struct?: DataAwsLb.IpamPoolsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
 }
 
 
 export function dataAwsLbIpamPoolsPropertyToHclTerraform(struct?: DataAwsLb.IpamPoolsProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-    };
-    return attrs;
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 
 export function dataAwsLbSubnetMappingPropertyToTerraform(struct?: DataAwsLb.SubnetMappingProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+  }
 }
 
 
 export function dataAwsLbSubnetMappingPropertyToHclTerraform(struct?: DataAwsLb.SubnetMappingProperty): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-    };
-    return attrs;
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 
 export function dataAwsLbTimeoutsPropertyToTerraform(struct?: DataAwsLb.TimeoutsProperty | cdktn.IResolvable): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    return {
-        read: cdktn.stringToTerraform(struct!.read),
-    }
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  return {
+    read: cdktn.stringToTerraform(struct!.read),
+  }
 }
 
 
 export function dataAwsLbTimeoutsPropertyToHclTerraform(struct?: DataAwsLb.TimeoutsProperty | cdktn.IResolvable): any {
-    if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
-    if (cdktn.isComplexElement(struct)) {
-        throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
-    }
-    const attrs = {
-        read: {
-            value: cdktn.stringToHclTerraform(struct!.read),
-            isBlock: false,
-            type: "simple",
-            storageClassType: "string",
-        },
-    };
+  if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktn.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
+  }
+  const attrs = {
+    read: {
+      value: cdktn.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
 
-    // remove undefined attributes
-    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 
@@ -562,385 +562,385 @@ export namespace DataAwsLb {
 export interface AccessLogsProperty {
 }
 export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
+  private isEmptyObject = false;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param complexObjectIndex the index of this item in the list
-    * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-        super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
 
-    public get internalValue(): AccessLogsProperty | undefined {
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        return hasAnyValues ? internalValueResult : undefined;
-    }
+  public get internalValue(): AccessLogsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: AccessLogsProperty | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-        }
+  public set internalValue(value: AccessLogsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
     }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
-    // bucket - computed: true, optional: false, required: false
-    public get bucket() {
-        return this.getStringAttribute('bucket');
-    }
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
 
-    // enabled - computed: true, optional: false, required: false
-    public get enabled() {
-        return this.getBooleanAttribute('enabled');
-    }
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
 
-    // prefix - computed: true, optional: false, required: false
-    public get prefix() {
-        return this.getStringAttribute('prefix');
-    }
+  // prefix - computed: true, optional: false, required: false
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
 }
 
 export class AccessLogsPropertyList extends cdktn.ComplexList {
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
-        super(terraformResource, terraformAttribute, wrapsSet);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
 
-    /**
-    * @param index the index of the item to return
-    */
-    public get(index: number): AccessLogsPropertyOutputReference {
-        return new AccessLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-    }
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessLogsPropertyOutputReference {
+    return new AccessLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface ConnectionLogsProperty {
 }
 export class ConnectionLogsPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
+  private isEmptyObject = false;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param complexObjectIndex the index of this item in the list
-    * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-        super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
 
-    public get internalValue(): ConnectionLogsProperty | undefined {
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        return hasAnyValues ? internalValueResult : undefined;
-    }
+  public get internalValue(): ConnectionLogsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: ConnectionLogsProperty | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-        }
+  public set internalValue(value: ConnectionLogsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
     }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
-    // bucket - computed: true, optional: false, required: false
-    public get bucket() {
-        return this.getStringAttribute('bucket');
-    }
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
 
-    // enabled - computed: true, optional: false, required: false
-    public get enabled() {
-        return this.getBooleanAttribute('enabled');
-    }
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
 
-    // prefix - computed: true, optional: false, required: false
-    public get prefix() {
-        return this.getStringAttribute('prefix');
-    }
+  // prefix - computed: true, optional: false, required: false
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
 }
 
 export class ConnectionLogsPropertyList extends cdktn.ComplexList {
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
-        super(terraformResource, terraformAttribute, wrapsSet);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
 
-    /**
-    * @param index the index of the item to return
-    */
-    public get(index: number): ConnectionLogsPropertyOutputReference {
-        return new ConnectionLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-    }
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConnectionLogsPropertyOutputReference {
+    return new ConnectionLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface HealthCheckLogsProperty {
 }
 export class HealthCheckLogsPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
+  private isEmptyObject = false;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param complexObjectIndex the index of this item in the list
-    * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-        super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
 
-    public get internalValue(): HealthCheckLogsProperty | undefined {
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        return hasAnyValues ? internalValueResult : undefined;
-    }
+  public get internalValue(): HealthCheckLogsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: HealthCheckLogsProperty | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-        }
+  public set internalValue(value: HealthCheckLogsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
     }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
-    // bucket - computed: true, optional: false, required: false
-    public get bucket() {
-        return this.getStringAttribute('bucket');
-    }
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
 
-    // enabled - computed: true, optional: false, required: false
-    public get enabled() {
-        return this.getBooleanAttribute('enabled');
-    }
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
 
-    // prefix - computed: true, optional: false, required: false
-    public get prefix() {
-        return this.getStringAttribute('prefix');
-    }
+  // prefix - computed: true, optional: false, required: false
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
 }
 
 export class HealthCheckLogsPropertyList extends cdktn.ComplexList {
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
-        super(terraformResource, terraformAttribute, wrapsSet);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
 
-    /**
-    * @param index the index of the item to return
-    */
-    public get(index: number): HealthCheckLogsPropertyOutputReference {
-        return new HealthCheckLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-    }
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HealthCheckLogsPropertyOutputReference {
+    return new HealthCheckLogsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface IpamPoolsProperty {
 }
 export class IpamPoolsPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
+  private isEmptyObject = false;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param complexObjectIndex the index of this item in the list
-    * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-        super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
 
-    public get internalValue(): IpamPoolsProperty | undefined {
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        return hasAnyValues ? internalValueResult : undefined;
-    }
+  public get internalValue(): IpamPoolsProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: IpamPoolsProperty | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-        }
+  public set internalValue(value: IpamPoolsProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
     }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
-    // ipv4_ipam_pool_id - computed: true, optional: false, required: false
-    public get ipv4IpamPoolId() {
-        return this.getStringAttribute('ipv4_ipam_pool_id');
-    }
+  // ipv4_ipam_pool_id - computed: true, optional: false, required: false
+  public get ipv4IpamPoolId() {
+    return this.getStringAttribute('ipv4_ipam_pool_id');
+  }
 }
 
 export class IpamPoolsPropertyList extends cdktn.ComplexList {
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
-        super(terraformResource, terraformAttribute, wrapsSet);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
 
-    /**
-    * @param index the index of the item to return
-    */
-    public get(index: number): IpamPoolsPropertyOutputReference {
-        return new IpamPoolsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-    }
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IpamPoolsPropertyOutputReference {
+    return new IpamPoolsPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface SubnetMappingProperty {
 }
 export class SubnetMappingPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
+  private isEmptyObject = false;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param complexObjectIndex the index of this item in the list
-    * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-        super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
 
-    public get internalValue(): SubnetMappingProperty | undefined {
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        return hasAnyValues ? internalValueResult : undefined;
-    }
+  public get internalValue(): SubnetMappingProperty | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: SubnetMappingProperty | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-        }
+  public set internalValue(value: SubnetMappingProperty | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
     }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
-    // allocation_id - computed: true, optional: false, required: false
-    public get allocationId() {
-        return this.getStringAttribute('allocation_id');
-    }
+  // allocation_id - computed: true, optional: false, required: false
+  public get allocationId() {
+    return this.getStringAttribute('allocation_id');
+  }
 
-    // ipv6_address - computed: true, optional: false, required: false
-    public get ipv6Address() {
-        return this.getStringAttribute('ipv6_address');
-    }
+  // ipv6_address - computed: true, optional: false, required: false
+  public get ipv6Address() {
+    return this.getStringAttribute('ipv6_address');
+  }
 
-    // outpost_id - computed: true, optional: false, required: false
-    public get outpostId() {
-        return this.getStringAttribute('outpost_id');
-    }
+  // outpost_id - computed: true, optional: false, required: false
+  public get outpostId() {
+    return this.getStringAttribute('outpost_id');
+  }
 
-    // private_ipv4_address - computed: true, optional: false, required: false
-    public get privateIpv4Address() {
-        return this.getStringAttribute('private_ipv4_address');
-    }
+  // private_ipv4_address - computed: true, optional: false, required: false
+  public get privateIpv4Address() {
+    return this.getStringAttribute('private_ipv4_address');
+  }
 
-    // subnet_id - computed: true, optional: false, required: false
-    public get subnetId() {
-        return this.getStringAttribute('subnet_id');
-    }
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
 }
 
 export class SubnetMappingPropertyList extends cdktn.ComplexList {
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-    */
-    constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
-        super(terraformResource, terraformAttribute, wrapsSet);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet);
+  }
 
-    /**
-    * @param index the index of the item to return
-    */
-    public get(index: number): SubnetMappingPropertyOutputReference {
-        return new SubnetMappingPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-    }
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SubnetMappingPropertyOutputReference {
+    return new SubnetMappingPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface TimeoutsProperty {
-    /**
-    * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#read DataAwsLb#read}
-    */
-    readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#read DataAwsLb#read}
+  */
+  readonly read?: string;
 }
 export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
-    private isEmptyObject = false;
-    private resolvableValue?: cdktn.IResolvable;
+  private isEmptyObject = false;
+  private resolvableValue?: cdktn.IResolvable;
 
-    /**
-    * @param terraformResource The parent resource
-    * @param terraformAttribute The attribute on the parent resource this class is referencing
-    */
-    public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
-        super(terraformResource, terraformAttribute, false);
-    }
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktn.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
 
-    public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
-        if (this.resolvableValue) {
-            return this.resolvableValue;
-        }
-        let hasAnyValues = this.isEmptyObject;
-        const internalValueResult: any = {};
-        if (this._read !== undefined) {
-            hasAnyValues = true;
-            internalValueResult.read = this._read;
-        }
-        return hasAnyValues ? internalValueResult : undefined;
+  public get internalValue(): TimeoutsProperty | cdktn.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
     }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
 
-    public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
-        if (value === undefined) {
-            this.isEmptyObject = false;
-            this.resolvableValue = undefined;
-            this._read = undefined;
-        }
-        else if (cdktn.Tokenization.isResolvable(value)) {
-            this.isEmptyObject = false;
-            this.resolvableValue = value;
-        }
-        else {
-            this.isEmptyObject = Object.keys(value).length === 0;
-            this.resolvableValue = undefined;
-            this._read = value.read;
-        }
+  public set internalValue(value: TimeoutsProperty | cdktn.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._read = undefined;
     }
+    else if (cdktn.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._read = value.read;
+    }
+  }
 
-    // read - computed: false, optional: true, required: false
-    private _read?: string; 
-    public get read() {
-        return this.getStringAttribute('read');
-    }
-    public set read(value: string) {
-        this._read = value;
-    }
-    public resetRead() {
-        this._read = undefined;
-    }
-    // Temporarily expose input value. Use with caution.
-    public get readInput() {
-        return this._read;
-    }
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
 }
 }

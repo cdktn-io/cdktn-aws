@@ -1,33 +1,38 @@
 {
   "compilerOptions": {
-    "alwaysStrict": true,
-    "declaration": true,
-    "esModuleInterop": false,
-    "experimentalDecorators": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "declarationMap": false,
     "inlineSourceMap": true,
     "inlineSources": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "incremental": true,
+    "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo",
     "lib": [
       "es2020"
     ],
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "commonjs",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": false,
-    "target": "ES2020",
-    "outDir": "lib",
-    "rootDir": "src"
+    "target": "es2020",
+    "composite": false
   },
   "include": [
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

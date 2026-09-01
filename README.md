@@ -40,7 +40,7 @@ no external data. The `aws` provider does not — its first token is not a servi
 readable grouping upstream maintains is the hand-written `subcategory:` frontmatter on each doc
 page, which is also what drives the registry sidebar. `groups.json` is that mapping, mined once and
 then curated: this is Option C of
-[`cdktn-grouped-resources/docs/options.md`](../cdktn-grouped-resources/docs/options.md).
+[`docs/options.md`](./docs/options.md).
 
 `groups.json` is **handcrafted from here on**, per provider-bump PR. The miner stays in the repo but
 is not wired into automation: upstream renames subcategories for editorial reasons, and a rename is
@@ -69,7 +69,7 @@ a breaking change for us because the slug becomes the submodule name.
 
 The sibling PoC (`cdktn-awscc`, 1,494 resources regrouped into 276 modules) measured these on the
 same machine — see
-[`cdktn-grouped-resources/docs/phase1-results.md`](../cdktn-grouped-resources/docs/phase1-results.md):
+[`docs/phase1-results.md`](../docs/phase1-results.md):
 
 * **JS cold start −93 %** (0.86 s → 0.06 s median for `require()` + touching one submodule), and
   `require.cache` from 1,913 to 145 entries — the noise-free half of that result. Needs grouping
