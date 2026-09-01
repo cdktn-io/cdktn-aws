@@ -467,6 +467,12 @@ reconcile jobs are where the fleet-level claims are actually made — and `go-si
 its own incompleteness out loud, so a green PR is never read as "all 258 modules are under the cap".
 That claim belongs to `fleet-full.yml` alone.
 
+Both reconcile jobs carry `if: ${{ !cancelled() }}` and assert `needs.<matrix>.result == 'success'`
+before anything else. They are the only two of the ten matrix-fed contexts the repository manager
+requires — shard names are matrix-expanded and would go stale on a re-shard — and a job skipped by
+an unmet `needs:` is reported to branch protection as *passing*, so without that pair a red shard
+would have left every required context green.
+
 The four schema-fed gates are one job on purpose: the ~34 MB dump is gitignored and has to be
 produced by `terraform providers schema -json`, so `.github/actions/provider-schema` caches it
 keyed on `schemas/PROVIDER_VERSION` and four separate jobs would pay for it four times.

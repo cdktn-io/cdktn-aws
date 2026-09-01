@@ -56,6 +56,12 @@ permissions: {}
 # merges included — permanently unmergeable. That is exactly what round 2 of that repo's PR #83
 # caught for cdktn-awscc. **Any rename below is a change to the manager too.** The two must be
 # reconciled before the manager's adoption PR is applied, not after.
+#
+# The manager requires the five non-matrix names only, because the shard names are matrix-expanded
+# contexts that go stale the moment the shard count changes. That is safe *only* because the two
+# reconcile jobs below carry `if: ${{ !cancelled() }}` plus an explicit `needs.*.result` gate: a
+# job skipped by an unmet `needs:` is reported to branch protection as passing, so without that
+# pair a red shard would leave every required context green.
 jobs:
   # ---------------------------------------------------------------------------------------------
   # The gates that need nothing but the checkout: no provider schema, no Go toolchain, no jsii.
@@ -237,10 +243,27 @@ jobs:
   fleet-jsii-reconcile:
     name: every group compiled exactly once, JSII3/JSII6 zero
     needs: fleet-jsii
+    # GitHub counts a *skipped* required check as passing, and a `needs:` job whose dependency
+    # failed is published as skipped — so the plain default would make this context green whenever
+    # a shard went red, i.e. advisory in exactly the case it exists to catch. The manager requires
+    # this name (and not the eight shard names), so it has to stand in for them: `!cancelled()`
+    # runs it whatever the shards did, and the first step below turns a red shard into a red
+    # required context. A cancelled run is still skipped on purpose — nothing was proven or
+    # disproven there, and cancellation is not a result to gate on.
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
+      - name: the eight shards must have passed
+        # Not redundant with the partition check below: a shard uploads its record `if: always()`,
+        # so it can leave a complete, self-consistent artifact and still have failed — the JSII3/
+        # JSII6 assertion runs after the compile, and any earlier step can fail before either.
+        env:
+          SHARDS_RESULT: ${{ needs.fleet-jsii.result }}
+        run: |
+          echo "fleet-jsii matrix result: $SHARDS_RESULT"
+          [ "$SHARDS_RESULT" = "success" ] || exit 1
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           persist-credentials: false
@@ -343,10 +366,19 @@ jobs:
   go-size-reconcile:
     name: PR size coverage (2 of 8 shards)
     needs: fleet-pack-size
+    # Same reason as fleet-jsii-reconcile above: a `needs:`-skipped job reports as passing to
+    # branch protection, and this is the only required context standing for the two size shards.
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
+      - name: both size shards must have passed
+        env:
+          SHARDS_RESULT: ${{ needs.fleet-pack-size.result }}
+        run: |
+          echo "fleet-pack-size matrix result: $SHARDS_RESULT"
+          [ "$SHARDS_RESULT" = "success" ] || exit 1
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           persist-credentials: false
