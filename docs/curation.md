@@ -160,3 +160,9 @@ ours): any CloudFormation property/attribute maps.
    a breaking change for consumers; record it in `docs/group-moves.md` (which is what unblocks
    gate B) and consider a `slugOverrides` entry pinning the old slug to the new title instead, if
    the rename is cosmetic.
+
+## M1 curation
+
+Decisions taken while building the generator — group selection, the naming choices the spec left
+open, what the awscc2cdk fork dropped and what it had to put back, and what is deferred to M2 —
+live in [`m1-generator.md`](./m1-generator.md), so this file stays the M0 record.

@@ -65,11 +65,34 @@ a breaking change for us because the slug becomes the submodule name.
 * **M4 — publishing shape + report.** What actually ships (package names, versioning against the
   provider version, the release pipeline), plus the write-up of M2/M3 numbers.
 
+## M1 — the generator (done)
+
+`tools/aws2cdk` reads the pinned schema plus `groups.json` and emits one **standalone jsii package
+per service group**: classes named after the full terraform type (`AwsLambdaFunction`, `DataAwsLb`,
+`EphemeralAwsLambdaInvocation`), `<Class>Config` interfaces, and every nested block type mounted on
+the class through a merged `namespace`. `generated/` carries the three M1 packages (`elb`,
+`lambda`, `provider`); the decisions behind them are in
+[`docs/m1-generator.md`](./docs/m1-generator.md), the fork provenance in
+[`tools/aws2cdk/README.md`](./tools/aws2cdk/README.md).
+
+```
+pnpm generate        # regenerate generated/ from schemas/schema.json + groups.json
+pnpm typecheck       # tsc --noEmit: workspace, generator, and each generated package
+pnpm test            # jest contract tests over the committed mini fixture
+pnpm jsii            # compile each generated package standalone with real jsii
+pnpm pacmak:go elb   # jsii-pacmak --targets go on one package
+pnpm synth:smoke     # cdktn synth with validation ON, two group packages at once
+pnpm check:imports   # gate: zero cross-group imports, nothing at a shared root
+pnpm check:contract  # diff the emitted runtime contract against @cdktn/provider-aws
+pnpm check:groups    # M0 gate: groups.json coverage and group moves
+pnpm baseline <dir>  # the unmodified vendored pipeline, for comparison
+```
+
 ## What we expect to gain
 
 The sibling PoC (`cdktn-awscc`, 1,494 resources regrouped into 276 modules) measured these on the
 same machine — see
-[`docs/phase1-results.md`](../docs/phase1-results.md):
+[`docs/phase1-results.md`](./docs/phase1-results.md):
 
 * **JS cold start −93 %** (0.86 s → 0.06 s median for `require()` + touching one submodule), and
   `require.cache` from 1,913 to 145 entries — the noise-free half of that result. Needs grouping
