@@ -66,7 +66,11 @@ function print(plan: ReleasePlan, goRoot: string): void {
 
   console.log("release plan — DRY RUN (the only mode: this tool never runs git tag or git push)");
   console.log("");
-  console.log(`  fleet version    : ${plan.version}   (lockstep, every tagged module)`);
+  const versionNote =
+    plan.version === "0.0.0"
+      ? "  <-- PLACEHOLDER, bump package.json before a real release"
+      : "   (lockstep, every tagged module)";
+  console.log(`  fleet version    : ${plan.version}${versionNote}`);
   console.log(`  module root      : ${GO_MODULE_ROOT}`);
   console.log(`  from             : ${plan.beforeRef}  (aws ${plan.providerVersionBefore})`);
   console.log(`  to               : ${plan.afterRef}  (aws ${plan.providerVersionAfter})`);

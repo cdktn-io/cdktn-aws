@@ -131,6 +131,14 @@ export function planRelease(input: PlanInput): ReleasePlan {
 
   const totalGroups = Object.keys(after.groups).length;
   const warnings: string[] = [];
+  if (version === "0.0.0") {
+    warnings.push(
+      'PLACEHOLDER VERSION — the root package.json is still at "0.0.0", so this plan tags every ' +
+        'module as `<packageName>/v0.0.0`. That is legal semver and the proxy would accept it, ' +
+        "but it is a non-version: bump package.json (or pass --version X.Y.Z) before a real " +
+        "release. A v0.0.0 tag is permanent on the module proxy and cannot be recalled.",
+    );
+  }
   const moved = changes.filter((c) => c.kind === "changed").length;
   if (totalGroups > 0 && moved === totalGroups) {
     warnings.push(

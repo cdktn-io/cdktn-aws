@@ -125,6 +125,14 @@ describe("planRelease — the warnings that stop a wrong release", () => {
   it("says nothing about /vN below major 2", () => {
     expect(plan({ version: "1.9.9" }).warnings.join("\n")).not.toMatch(/\/vN|gains a/);
   });
+
+  it("warns that 0.0.0 is the un-bumped placeholder, not a version", () => {
+    // The root package.json ships at 0.0.0, so this is what every dry run prints today. It is
+    // valid semver, which is exactly why `fleetVersion` cannot reject it — the guard has to be a
+    // warning, and a v0.0.0 tag on the module proxy is permanent.
+    expect(plan({ version: "0.0.0" }).warnings.join("\n")).toMatch(/PLACEHOLDER VERSION/);
+    expect(plan({ version: "0.1.0" }).warnings.join("\n")).not.toMatch(/PLACEHOLDER VERSION/);
+  });
 });
 
 describe("tag and module naming", () => {
