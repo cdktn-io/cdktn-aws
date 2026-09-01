@@ -94,9 +94,11 @@ Headline, measured not argued (full method and every caveat in
   with 206 `require.cache` entries instead of 2,572 and 81 MB RSS instead of 831 MB. This needs the
   **lazify** pass on the compiled barrel, not just the grouping: both libraries' `index.js` is eager
   as TypeScript emits it, and eager-vs-eager the two are within 12 %.
-* **Python import −9.1 %** (1,119.5 ms vs 1,231.2 ms). Small, and structurally so: jsii-pacmak
-  already emits lazy Python submodules for *both* shapes, and ~1.1 s of the 1.12 s is the jsii
-  kernel loading the embedded assembly tarball. 6× fewer modules resident if everything is touched.
+* **Python import −66.0 %** (429.6 ms vs 1,263.7 ms, 2.9×) for the same "import and reach two
+  services". jsii-pacmak already emits lazy *Python* submodules for both shapes, so that part is
+  parity — the win is that the lazify pass runs before pacmak, so the npm tarball embedded in our
+  wheel carries the lazy barrel (1 `require` against the reference's 2,402) and the jsii kernel
+  stops loading 2,402 modules to reach one. 6× fewer modules resident if everything is touched.
 * **9.3× fewer doc files** — 1,290 against the reference's measured 12,015.
 * **Registry bytes are a wash** — the assembly is 0.1 % smaller, `lib/` 2.3 % smaller. Grouping is
   not a size story on npm.

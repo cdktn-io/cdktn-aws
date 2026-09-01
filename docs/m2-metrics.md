@@ -18,7 +18,7 @@ produced a number is printed next to it; all of them are `pnpm` scripts in this 
 | **JS cold start**, import + reach two services | **45.2 ms** | 1,100.0 ms | **−95.9 %** (24.3×) |
 | `require.cache` entries after that | **206** | 2,572 | −92.0 % |
 | node RSS after that | **81 MB** | 831 MB | −90.3 % |
-| **Python import**, import + reach two services | **1,119.5 ms** | 1,231.2 ms | **−9.1 %** |
+| **Python import**, import + reach two services | **429.6 ms** | 1,263.7 ms | **−66.0 %** (2.9×) |
 | `sys.modules` if every submodule is touched | **833** | 5,121 | −83.7 % |
 | **Doc files** (jsii-docgen, 5 languages) | **1,290** (projected) | 12,015 (measured) | −89.3 % |
 | **jsii wall time** | **39.5 s**, 7.2 GB peak RSS | not re-measured | — |
@@ -28,9 +28,11 @@ produced a number is printed next to it; all of them are `pnpm` scripts in this 
 | npm `lib/` bytes | 312,316,455 B | 319,570,579 B | −2.3 % |
 | **Projected Go monolith** | 644.5 MB = **122.9 % of the 500 MB cap** | — | over |
 
-The two things to take from this table: the **JS cold start is the win** (and it needs the lazify
-pass, not just the grouping), and the **Go monolith does not fit** — which is the first-party
-number M3 exists to act on.
+The two things to take from this table: **cold start is the win in both languages** — and in both
+it is the lazify pass on the compiled barrel that produces it, not the grouping on its own — and
+the **Go monolith does not fit**, which is the first-party number M3 exists to act on. The lazify
+pass is a JS rewrite, but it is the JS the jsii kernel loads for Python too, so it carries: see
+§2.
 
 Everything that is *bytes on a registry* is a wash. Same 30,714 types, so the assembly is the same
 size to within 0.1 %; `lib/` is the same to within 2.3 %. Grouping does not make the library
@@ -99,7 +101,8 @@ barrel too. The build asserts all 258 getters resolve before continuing (`lazify
 41,412 B -> 4,453 B, all 258 getters resolve`); a getter that threw would otherwise stay invisible
 until a consumer touched it.
 
-This is the pass the sibling PoC's `−93 %` depended on, and it is where our `−95.9 %` comes from.
+This is the pass the sibling PoC's `−93 %` depended on, and it is where our `−95.9 %` comes from —
+and, because it runs before pacmak, where the Python `−66.0 %` in §3(b) comes from too.
 `--no-lazify` builds the eager form for comparison.
 
 ## 2. Python packaging + submodule lazification
@@ -108,24 +111,45 @@ This is the pass the sibling PoC's `−93 %` depended on, and it is where our `�
 pnpm pacmak:python           # jsii-pacmak --targets python, ~27 s
 ```
 
-**No lazify step is needed on the Python side, and none was added.** jsii-pacmak 1.140.0 already
-emits lazy submodules: `cdktn_aws/__init__.py` contains a `_SUBMODULES` set and a module-level
-`__getattr__` that `importlib.import_module`s on first attribute access, with **zero**
-`from . import <submodule>` lines for the 258. The reference package does the same thing (it is the
-same pacmak feature), so this is parity, not an advantage — the advantage is that our
-`__init__.py` is 24,224 B against the reference's 356,312 B, and our `_jsii/__init__.py` is
-15,417 B against 245,576 B, because there are 258 names to register instead of 2,405.
+**No *Python-side* lazify step is needed, and none was added — but the JS-side one is what makes
+the Python import fast, and it carries into the wheel.** Two separate mechanisms, and it is worth
+keeping them apart:
+
+* **Python submodules are lazy by pacmak.** jsii-pacmak 1.140.0 emits a `_SUBMODULES` set and a
+  module-level `__getattr__` in `cdktn_aws/__init__.py` that `importlib.import_module`s on first
+  attribute access, with **zero** `from . import <submodule>` lines for the 258. The reference
+  package does the same thing (same pacmak feature), so *that* part is parity. The advantage there
+  is only size: our `__init__.py` is 24,224 B against the reference's 356,312 B and our
+  `_jsii/__init__.py` 15,417 B against 245,576 B, because there are 258 names to register instead
+  of 2,405.
+* **The jsii kernel's JS is not lazy by pacmak — it is lazy because we made it so.** A jsii Python
+  package ships the npm tarball inside itself (`cdktn_aws/_jsii/aws@0.0.0.jsii.tgz`) and the kernel
+  `require`s it in a Node child process on first use. Because `build-monolith.mjs` rewrites
+  `lib/index.js` *before* pacmak runs, the tarball in our wheel carries the lazy barrel: its
+  `package/lib/index.js` contains **1** `require(` against the reference tarball's **2,402**. So
+  importing `cdktn_aws` starts a kernel that loads one file, while importing
+  `cdktn_provider_aws` starts a kernel that loads 2,402 modules. That is the whole Python win in
+  §3(b), and it is the same pass, not a second one.
+
+Verify it on the shipped artifact rather than trusting the build log:
+
+```bash
+unzip -p monolith/dist/python/cdktn_aws-0.0.0-py3-none-any.whl 'cdktn_aws/_jsii/*.tgz' \
+  | tar -xzO package/lib/index.js | grep -c 'require('     # -> 1
+```
 
 | | ours | `cdktn-provider-aws` 25.3.0 |
 | --- | ---: | ---: |
 | dist name / module | `cdktn-aws` / `cdktn_aws` | `cdktn-provider-aws` / `cdktn_provider_aws` |
 | wheel | **62,419,552 B** | 69,098,649 B |
-| sdist | **61,981,480 B** | 65,987,953 B |
+| sdist | **61,980,948 B** | 65,987,953 B |
 | installed files | **522** | 4,810 |
-| installed bytes | 495,869,693 | 498,123,183 |
-| embedded assembly tarball | 41,918,526 B | 45,246,255 B |
+| installed bytes | 495,860,311 | 498,108,759 |
+| embedded assembly tarball | 41,910,704 B | 45,246,255 B |
+| `require(` in the tarball's `lib/index.js` | **1** | 2,402 |
+| lazy Python submodules | yes (pacmak native) | yes (pacmak native) |
+| lazy kernel barrel | **yes (our lazify pass)** | no |
 | `__init__.py` | 24,224 B | 356,312 B |
-| lazy submodules | yes (pacmak native) | yes (pacmak native) |
 
 Nothing was published anywhere. The wheel was installed into a throwaway venv only to time it.
 
@@ -176,29 +200,65 @@ around the `require` alone, median of 7 after one discarded warm-up.
 ### (b) Python import
 
 ```bash
+export JSII_RUNTIME_PACKAGE_CACHE_ROOT=$(mktemp -d)   # see "cache regimes" below
 <venv>/bin/python scripts/bench-py-import.py cdktn_aws --touch lambda_,s3 --runs 5
 <venv>/bin/python scripts/bench-py-import.py cdktn_provider_aws --touch lambda_function,s3_bucket --runs 5
 <venv>/bin/python scripts/bench-py-import.py cdktn_aws --all --runs 3        # eager upper bound
 ```
 
-Fresh interpreter per sample, median of 5 after a discarded warm-up.
+Fresh interpreter per sample, median of 5 after a discarded warm-up, both packages in the same
+cache regime (jsii package cache populated, no assembly index — the state a machine is in for the
+first runs after `pip install`; the other two regimes are below and the win holds in all three).
 
 | case | ours | reference | |
 | --- | ---: | ---: | ---: |
-| bare `import` | 1,108.6 ms | 1,222.0 ms | −9.3 % |
-| **import + reach two services** | **1,119.5 ms** | **1,231.2 ms** | **−9.1 %** |
+| bare `import` | 410.1 ms | 1,234.0 ms | −66.8 % |
+| **import + reach two services** | **429.6 ms** | **1,263.7 ms** | **−66.0 %, 2.9×** |
 | `sys.modules` after that | 321 | 321 | — |
-| every submodule touched (eager upper bound) | 1,835.8 ms | 2,240.6 ms | −18.1 % |
+| every submodule touched (eager upper bound) | 881.4 ms | 2,269.7 ms | −61.2 % |
 | `sys.modules` after that | **833** | 5,121 | −83.7 % |
 
-**The Python win is small, and the reason is structural, not fixable by grouping.** Both packages
-are already lazy, so nothing is being avoided that the reference does not also avoid; ~1.1 s of the
-1.12 s is the jsii kernel starting Node and loading the embedded assembly tarball (41.9 MB ours, 45.2 MB theirs), which every jsii Python package pays regardless of shape. Grouping buys the
-difference in tarball size and in how much `__init__.py` the interpreter parses — 9 %.
+**The Python win is real and it is the same lazify pass as the JS one.** Both packages get lazy
+*Python* submodules from pacmak, so nothing there is being avoided that the reference does not also
+avoid — but a jsii Python package's import cost is not Python, it is the kernel: a Node child
+process that `require`s the embedded npm tarball. Ours carries the lazified barrel (1 `require`),
+the reference's carries the eager one (2,402), so their kernel loads 2,402 modules on the way to
+`s3_bucket` and ours loads the two service submodules you asked for. That is the ~830 ms.
 
-The eager row is the interesting one for M4: if a future pacmak ever stopped emitting lazy
-submodules, the grouped shape would be 18 % ahead and hold 6× fewer modules resident. That is the
-insurance the grouping buys, not the headline.
+The `sys.modules` counts are identical at 321 in the touch row precisely because the difference is
+not on the Python side — same interpreter work, radically different kernel work.
+
+The eager row (`--all`, every submodule resolved) is no longer a hypothetical for M4: it is the
+honest upper bound, and even there the grouped shape is 61 % ahead with 6× fewer Python modules
+resident, because touching 258 doors is cheaper than touching 2,402 whatever the laziness.
+
+#### Cache regimes, and why the command above pins one
+
+The jsii runtime keeps a package cache (`~/Library/Caches/com.amazonaws.jsii/package-cache` on
+macOS) holding the *extracted* tarball, and after a process has walked the whole assembly it also
+leaves a persistent type index (`.jsii.runtime-index.v1`) next to it. Both change the absolute
+numbers by a lot, so a measurement is only meaningful with both packages in the same state:
+
+| regime | ours | reference | |
+| --- | ---: | ---: | ---: |
+| `JSII_RUNTIME_PACKAGE_CACHE=disabled` — tarball extracted per process | 1,707.6 ms | 2,806.7 ms | −39.2 % |
+| **cached, no type index** — the first runs after install (table above) | **429.6 ms** | **1,263.7 ms** | **−66.0 %** |
+| cached + type index — the steady state on a machine that has used the package | 160.9 ms | 1,244.7 ms | −87.1 %, 7.7× |
+
+The reference barely moves between the last two rows (1,263.7 → 1,244.7) because its cost is
+`require`-ing 2,402 modules, which no index avoids; ours drops 2.7× because, with the barrel lazy,
+what remains *is* assembly parsing. The middle row is reported as the headline because it is what
+the documented commands produce on a machine that has not seen the package before.
+
+> The 1,119.5 / 1,231.2 ms pair that stood here before Stage 2's review was an **eager-build**
+> measurement of ours against a correct reference: it was taken before `build-monolith.mjs` ran
+> lazify ahead of pacmak, so the wheel under test still had the 258-`require` barrel. The
+> arithmetic checks out — `require`-ing all 258 compiled submodules the way an eager barrel does
+> costs **936–950 ms** and 2,802 `require.cache` entries
+> (`node -e 'for (const d of fs.readdirSync("monolith/lib")) require(...)'`), which on top of the
+> ~0.16 s indexed kernel floor is the ~1.11 s that was recorded. The check that catches this class
+> of error is the one-line `grep -c 'require('` on the shipped wheel in §2; run it before quoting
+> any Python number.
 
 The `--all` walk uses `pkgutil.iter_modules`, not the generated `_SUBMODULES` set: jsii modules
 call `publication.publish()`, which strips private names, so `_SUBMODULES` is not reachable at
@@ -213,7 +273,7 @@ runtime.
 | npm `lib/` bytes | 312,316,455 | 319,570,579 | −2.3 % |
 | npm package bytes (unpacked) | — | 469,918,136 | — |
 | python installed files | 522 | 4,810 | −89.1 % |
-| python installed bytes | 495,869,693 | 498,123,183 | −0.5 % |
+| python installed bytes | 495,860,311 | 498,108,759 | −0.5 % |
 
 The doc figure is the one **projection** in this table, and it is exact arithmetic rather than an
 estimate: jsii-docgen emits one file per submodule per language, and the reference's tree is
@@ -387,6 +447,12 @@ pnpm bench:js -- --ref <that directory> --runs 7   # metric (a)
 uv venv --python 3.12 venv-ref && uv pip install --python venv-ref/bin/python cdktn-provider-aws
 uv venv --python 3.12 venv-ours && uv pip install --python venv-ours/bin/python \
     monolith/dist/python/cdktn_aws-0.0.0-py3-none-any.whl
+
+# metric (b). Pin a scratch jsii package cache so both packages are in the SAME regime;
+# and confirm the wheel under test is the lazified one before trusting any timing.
+unzip -p monolith/dist/python/cdktn_aws-0.0.0-py3-none-any.whl 'cdktn_aws/_jsii/*.tgz' \
+  | tar -xzO package/lib/index.js | grep -c 'require('     # must print 1, not 258
+export JSII_RUNTIME_PACKAGE_CACHE_ROOT=$(mktemp -d)
 venv-ours/bin/python scripts/bench-py-import.py cdktn_aws --touch lambda_,s3 --runs 5
 venv-ref/bin/python  scripts/bench-py-import.py cdktn_provider_aws --touch lambda_function,s3_bucket --runs 5
 ```
