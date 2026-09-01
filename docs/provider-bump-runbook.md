@@ -27,7 +27,10 @@ described in [`curation.md`](./curation.md). This file is the order to do it in.
    ```
 
    Or point `$CDKTN_AWS_SCHEMA` at a dump produced elsewhere. `pnpm check:groups` prints the path it
-   resolved, so a stale dump is visible in the log rather than silent.
+   resolved, so a stale dump is visible in the log rather than silent. Check the dump is key-sorted
+   (it is, out of `terraform`'s own `encoding/json`) — struct members are emitted in the schema's
+   key order, so a differently-ordered dump moves *all* 258 group hashes at once and falsely re-tags
+   every Go module; see the hash-design note in [`m2-scale.md`](./m2-scale.md).
 3. **Run the miner as a proposal.**
 
    ```bash

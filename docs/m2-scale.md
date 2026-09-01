@@ -175,6 +175,14 @@ Design (`tools/aws2cdk/src/hashes.ts`):
   Path-and-length framing means neither a rename nor a moved file boundary can collide with a
   different tree. No mtime, no inode, no absolute path — so the hash is identical on any machine
   and from any directory (asserted by moving the tree and re-hashing).
+* **The one input the hash is not independent of is the schema dump's key order.** Shuffling the
+  *entry* order of the dump changes nothing — the hashes come out byte-identical, because the
+  generator sorts resources by name — but a struct's members are emitted in the order the schema
+  object lists them, i.e. in the dump's own deep key order. `terraform providers schema -json`
+  serializes through Go's `encoding/json`, which sorts map keys, so every dump we have seen is
+  key-sorted and this is inert in practice. It is not inert if that ever stops being true: a
+  differently-ordered dump would move all 258 group hashes at once and falsely re-tag all 258 Go
+  modules. Mass hash movement with an unchanged provider version is the symptom.
 * **Locality** falls straight out of the zero-cross-group-imports invariant: nothing is shared, so
   a change to one group's schema input can only move that group's hash.
 * Only a **full** run writes the manifest; a partial run (`pnpm generate:m1`, or named groups)
