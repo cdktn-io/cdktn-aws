@@ -193,4 +193,10 @@ type references, and the release mechanics.
 
 ## License
 
-MPL-2.0, matching the cdktn provider repos.
+MPL-2.0 ([`LICENSE`](./LICENSE)), matching the cdktn provider repos.
+
+[`NOTICE`](./NOTICE) is the attribution map: what is vendored (the cdk-terrain provider generator,
+MPL-2.0, at a pinned commit), what is adapted and where each adaptation is written down, what is
+original cdktn-io code that merely borrows an idea, and why every file under `generated/` carries a
+`cdktn-io` copyright rather than an upstream one. The SPDX header at the top of each source file is
+the authoritative statement for that file; `NOTICE` explains the shape.

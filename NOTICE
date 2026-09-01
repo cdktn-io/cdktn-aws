@@ -1,0 +1,159 @@
+cdktn-aws
+Copyright (c) 2026 cdktn-io contributors
+
+This package is licensed as a whole under the Mozilla Public License, Version 2.0 (MPL-2.0) — see
+LICENSE. It vendors and adapts source from one upstream project, under that same license. This
+file explains the structure; the SPDX headers at the top of each individual source file are the
+authoritative statement for that file.
+
+## Why MPL-2.0 at the root
+
+cdktn-aws is one of the cdktn-io "provider" family of packages (alongside cdktn-io/cdk-terrain
+itself, cdktn-io/cdktn-provider-* and cdktn-io/cdktn-awscc), all of which are MPL-2.0. The
+package's runtime core — the parser/model/emitter pipeline under tools/aws2cdk/src/grouped/ and
+its unmodified counterpart under tools/aws2cdk/src/vendored/cdktn/ — is an adaptation of
+cdktn-io/cdk-terrain's `@cdktn/provider-generator` (itself MPL-2.0, HashiCorp-originated), and the
+generated/ tree it produces (1,711 resources and 679 data sources across 258 packages — the actual
+shipped product) is a Terraform CDK provider binding in the same family as cdktn-provider-aws.
+Root MPL-2.0 keeps this package's license consistent with the rest of the fleet.
+
+This is a free choice, not a legal requirement: MPL-2.0 §3.3 explicitly allows combining
+MPL-covered files with differently-licensed files into a "Larger Work" distributed under terms of
+your choosing, provided each MPL-covered *file* keeps its MPL notice and remains available under
+MPL-2.0. That condition is met here (see below). Unlike its sibling cdktn-awscc, this package
+vendors **no Apache-2.0 code at all** — none of the aws-cdk `spec2cdk`, `scope-map.json` or
+`lazify` trees were forked (tools/aws2cdk/README.md, "Not forked, and deliberately absent"), so
+there is no Apache-2.0 §4 obligation to discharge and no per-vendoring-root LICENSE copy is
+required anywhere in this repository. `package.json` has declared `"license": "MPL-2.0"` since the
+repository was created; nothing changed it.
+
+## MPL-2.0 portions — cdktn-io/cdk-terrain
+
+Copyright (c) 2020 HashiCorp, Inc. (cdk-terrain is a fork of hashicorp/terraform-cdk.)
+Licensed under the Mozilla Public License, Version 2.0.
+
+Vendored from https://github.com/cdktn-io/cdk-terrain at commit
+`358edc7c39b0b380ba89fd31881f0577fe9b6214`, `packages/@cdktn/provider-generator/src/**`. The copy
+was taken by way of cdktn-io/cdktn-awscc's own vendored copy at
+`tools/awscc2cdk/src/vendored/cdktn`, commit `607943cf794d752a3d4f132bd6a25aa5bb0c0be3`, which is
+byte-identical to those cdk-terrain origins — the per-file origin table is in
+tools/aws2cdk/src/vendored/VENDORED.md.
+
+* `tools/aws2cdk/src/vendored/cdktn/**` (21 files) — the classic cdk-terrain provider generator,
+  copied verbatim except for one mechanical adaptation inherited from the awscc copy: four files
+  (`models/struct.ts`, `models/attribute-type-model.ts`, `models/supported-stored-classes.ts`,
+  `emitter/struct-emitter.ts`) had their import of the package-local `util.ts` shortened from
+  `../../../util` to `../util`, because this tree is two directories shallower than upstream's.
+  Every file carries the original `// Copyright (c) HashiCorp, Inc` /
+  `// SPDX-License-Identifier: MPL-2.0` header. VENDORED.md records the adaptation for the whole
+  tree, which is what the modification-note convention below points at. This tree is never edited:
+  `bin/baseline.ts` drives it unmodified, which is both the fork proof and the reference side of
+  the runtime-contract diff.
+* `tools/aws2cdk/src/grouped/**` — a second, deliberately-diverging copy of the same upstream: this
+  is what actually generates the grouped, per-service-module output. It was forked from
+  cdktn-awscc's `tools/awscc2cdk/src/grouped/**` (same commit as above) rather than from
+  cdk-terrain directly, and then had every CloudFormation-specific rule removed and the provider /
+  data-source / ephemeral-resource / write-only support restored from the vendored generator; the
+  per-file change table is in tools/aws2cdk/README.md, "Fork provenance". Every file that differs
+  from its `vendored/cdktn/` counterpart carries the HashiCorp MPL-2.0 header plus an "Adapted from
+  src/vendored/cdktn/… — see tools/aws2cdk/README.md" modification note describing what changed:
+  `resource-parser.ts`, `models/index.ts`, `models/resource-model.ts`, `models/struct.ts`,
+  `models/attribute-type-model.ts`, `emitter/attributes-emitter.ts`, `emitter/resource-emitter.ts`,
+  `emitter/struct-emitter.ts`. The files that are byte-identical to their vendored counterpart —
+  `loop-detection.ts`, `sanitized-comments.ts`, `util.ts`, `models/attribute-model.ts`,
+  `models/scope.ts`, `models/supported-stored-classes.ts` (verified by diff) — correctly carry the
+  header with no modification note, since none is needed.
+* `tools/aws2cdk/src/grouped/namespace-context.ts` — has no cdk-terrain counterpart. It is
+  cdktn-awscc's own original code, forked here with the code verbatim and only its doc-comment
+  examples retargeted from awscc's naming to this repository's; cdktn-awscc is MPL-2.0 and
+  cdktn-io holds it, so the file carries the `// Copyright (c) cdktn-io` header plus a note naming
+  the fork origin, not a HashiCorp one.
+
+MPL-2.0 §3.1/§3.4 requirements met: every MPL-covered file keeps HashiCorp's copyright/SPDX notice
+in its own header (verbatim copies) or that notice plus a stated modification (adapted copies);
+none of that source text is removed or altered in a way that hides the modification. §3.1's "make
+the source available" obligation is met by this repository itself, which ships the source. No
+per-subtree LICENSE copy is needed: the root LICENSE is the same MPL-2.0 that covers every vendored
+file, so a recipient of any part of this repository already has the license text that applies to it
+(contrast cdktn-awscc, which vendors Apache-2.0 trees and therefore carries a LICENSE copy at each
+of those vendoring roots to satisfy Apache-2.0 §4(a)).
+
+## Original cdktn-io code that is inspired by, but not copied from, upstream
+
+Neither of these is a copy or an adaptation of any upstream file; no third-party copyright header
+applies to either, and both are covered by this package's own MPL-2.0 root license.
+
+* `tools/aws2cdk/src/naming.ts` — forked from cdktn-awscc's `src/naming.ts`, which is itself
+  original cdktn-io code (its own header says it was "inspired by ideas from" aws-cdk's spec2cdk
+  sanitizers, none of which are vendored here). Only the deterministic collision algorithm was
+  kept; every CloudFormation-specific rule was removed and replaced with terraform-type-derived
+  naming.
+* The **lazify pass** in `scripts/build-monolith.mjs` — original code, ~20 lines, which replaces
+  the compiled barrel `monolith/lib/index.js` wholesale with one self-replacing getter per
+  submodule. It is *not* derived from aws-cdk's `tools/@aws-cdk/lazify` (Apache-2.0), which
+  cdktn-awscc vendors in full at `tools/lazify/`: that tool is a 428-line TypeScript-AST transform
+  that rewrites arbitrary compiled files, and none of it is present here — no file of it was
+  copied, adapted, or consulted line-by-line. What is shared is the technique (a lazy getter that
+  caches its `require`), which is not itself copyrightable expression, and the observation that a
+  jsii barrel must be lazified before pacmak runs so the tarball the jsii kernel loads for
+  Python/Java/.NET carries the lazy barrel too. Because nothing was copied, no Apache-2.0
+  attribution is owed — but the debt of the *idea* is recorded here, and in the pass's own comment,
+  because pretending otherwise would misrepresent where it came from. See docs/m2-metrics.md,
+  "The lazify pass".
+
+## `generated/` — the 258 emitted binding packages
+
+All 2,660 committed `.ts` files under `generated/<group>/src/` (per-resource files and per-package
+`index.ts` barrels; not `package.json`, `tsconfig.json` or `hashes.json`, which are plain data with
+no comment syntax or authorial content, and not `generated/<group>/lib/`, which is gitignored
+compiler output) carry:
+
+    // Copyright (c) cdktn-io
+    // SPDX-License-Identifier: MPL-2.0
+
+**Reasoning, and why this is not "Copyright IBM Corp." / "Copyright (c) HashiCorp, Inc.":**
+cdktn-io/cdktn-provider-aws (the sibling, projen-generated provider package) stamps
+"Copyright IBM Corp. 2021, 2026 / SPDX-License-Identifier: MPL-2.0" on every generated file. That
+header is *not* emitted by cdk-terrain's provider-generator itself — confirmed by reading
+`tools/aws2cdk/src/vendored/cdktn/provider-generator.ts`, which only ever writes
+`// generated from terraform resource schema`, no copyright line — it is stamped afterward by that
+repository's own `copywrite` tool, which applies the project's declared license/copyright header
+project-wide, generated output included, without distinguishing authored from generated files.
+
+Copying that IBM/HashiCorp attribution onto *our* generated/ tree would misattribute authorship:
+`generated/` here is the output of this package's own generator (`tools/aws2cdk/src/grouped/**`),
+which is a heavily-adapted derivative of cdk-terrain's generator, not a copy of it (see
+tools/aws2cdk/README.md for what changed structurally: 258 standalone per-service packages with
+namespace-qualified nested types, instead of cdk-terrain's one flat per-resource-directory
+assembly). The emitted text — class/interface names, property lists, JSDoc — is newly authored by
+running that adapted tool over public schema data (the `terraform-provider-aws` schema, pinned in
+schemas/PROVIDER_VERSION); no upstream source text is copied into it. So the header identifies the
+actual author (cdktn-io) and the actual license the combined output is distributed under, while
+still following the *precedent* cdktn-provider-aws set — that generated Terraform CDK bindings
+should carry a copyright + SPDX header at all, in that two-line `//` shape (matching the style used
+throughout this codebase's hand-written MPL headers, rather than the `/** */` block form the
+copywrite tool happens to emit).
+
+The header is emitted by `tools/aws2cdk/src/generate.ts`, the only code path that writes to
+`generated/`. The same two lines are stamped on the barrel `scripts/build-monolith.mjs` writes into
+the published `@cdktn/aws` assembly, and the Go, Python, Java and .NET distributions are
+`jsii-pacmak`'s translations of exactly that source.
+
+## Modification-note convention
+
+Per MPL-2.0 §3.4(a), every adapted (not byte-identical) vendored file states what changed, either
+in its own header (short adaptations) or via a pointer to a longer writeup
+(`tools/aws2cdk/src/vendored/VENDORED.md` for the vendored tree,
+`tools/aws2cdk/README.md` § "Fork provenance" for the grouped tree) for adaptations too long to
+summarize in a header comment. Byte-identical vendored files carry the upstream header/notice with
+no modification note, since none occurred (verified by diffing each grouped file against its
+vendored counterpart, and the vendored tree against its pinned-commit origin — see the VENDORED.md
+table).
+
+## Third-party dependencies
+
+Ordinary npm and Go dependencies (jest, typescript, jsii, jsii-pacmak, cdktn, constructs,
+golang.org/x/mod, …) are not vendored — they are installed by `pnpm` and `go` and carry their own
+licenses under `node_modules/` and the module cache, unrelated to this NOTICE. The same is true of
+`terraform-provider-aws` itself: this repository pins and reads its published schema (a data file
+fetched at build time and never committed), and does not vendor any of its source.
