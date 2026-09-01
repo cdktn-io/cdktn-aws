@@ -29,6 +29,11 @@ function main(): number {
   // Every schema name is covered exactly once; nothing in groups.json is
   // invented. No misc bucket exists, so an unmapped name is a hard failure.
   const counts: Record<string, number> = {};
+  // Per surface: how many schema names on that surface resolve via the alias
+  // table. An alias name can exist on more than one surface (aws_alb and
+  // friends are both a resource and a data source), so the sum of these is
+  // larger than the alias table itself — see docs/curation.md (6 + 3).
+  const aliasResolved: Record<string, number> = {};
   for (const surface of SURFACES) {
     const schemaNames = new Set(schema.names[surface]);
     const unmapped: string[] = [];
@@ -52,6 +57,9 @@ function main(): number {
     }
     const covered = schemaNames.size - unmapped.length;
     counts[surface] = schemaNames.size;
+    aliasResolved[surface] = schema.names[surface].filter(
+      (n) => groups.aliases[n] !== undefined,
+    ).length;
     console.log(
       `  gate A  ${surface.padEnd(19)} ${String(covered).padStart(5)}/${String(schemaNames.size).padEnd(5)} ` +
         `covered  (${((100 * covered) / schemaNames.size).toFixed(2)}%)`,
@@ -78,9 +86,15 @@ function main(): number {
     }
   }
 
+  const aliasTableSize = Object.keys(groups.aliases).length;
+  const aliasResolvedTotal = SURFACES.reduce((n, s) => n + aliasResolved[s], 0);
+  const aliasPerSurface = SURFACES.filter((s) => aliasResolved[s] > 0)
+    .map((s) => `${s} ${aliasResolved[s]}`)
+    .join(", ");
   console.log(
     `  gate A  ${"groups".padEnd(19)} ${String(Object.keys(groups.groups).length).padStart(5)}` +
-      `        ${Object.keys(groups.aliases).length} aliases resolved`,
+      `        ${aliasTableSize}-entry alias table resolves ` +
+      `${aliasResolvedTotal} schema name(s) (${aliasPerSurface})`,
   );
 
   // -------------------------------------------------------- determinism ----
@@ -138,7 +152,8 @@ function main(): number {
   console.log(
     `PASS  ${Object.keys(groups.groups).length} groups, ${counts.resources} resources, ` +
       `${counts.dataSources} data sources, ${counts.ephemeralResources} ephemeral resources, ` +
-      `${Object.keys(groups.aliases).length} aliases — 100% of the schema mapped, 0 duplicates.`,
+      `${aliasTableSize} aliases (${aliasResolvedTotal} schema names resolved) — ` +
+      `100% of the schema mapped, 0 duplicates.`,
   );
   return 0;
 }
