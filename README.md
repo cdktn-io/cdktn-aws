@@ -72,7 +72,9 @@ a breaking change for us because the slug becomes the submodule name.
 
 ## M3 — the Go fleet (done)
 
-258 sibling Go modules, one per group, **no root `go.mod`** — nothing may ever count the whole tree.
+258 sibling Go modules, one per group, **no root `go.mod`** — the repository root is deliberately
+not a module, so `go build ./...` there cannot mean the wrong thing and no consumer can depend on an
+empty path.
 One pinned `jsii` (5.9.53) and one pinned `jsii-pacmak` (1.140.0) build all of them in **105 s** at
 12-way; every module's imports resolve only to itself, cdktn core, constructs, the jsii runtime and
 the standard library, so there is no shared assembly and none of Option B's version-skew hazard. The

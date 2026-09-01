@@ -105,9 +105,14 @@ cdktn-aws-go/
 ```
 
 `generated/<group>/dist/go/<packageName>/` is copied verbatim; nothing is rewritten on the way in.
-There is **no root `go.mod`**, and the README states why: `x/mod/zip` excludes nested `go.mod`
-subtrees from a parent's zip, so 258 siblings cannot inflate each other — but only while no parent
-module exists. The fleet totals 540.94 MiB, so a root module would exceed the cap on its own.
+There is **no root `go.mod`**, and the reason is not the size cap. `x/mod/zip` omits every file
+under a nested `go.mod` from a parent's zip *unconditionally* ("directory is in another module"),
+so a root module here would zip to a near-empty tree — `README.md` and nothing else — not to the
+fleet's 540.94 MiB. The cap is enforced 258 times, once per sibling module, and the worst is at
+11.58 %. The invariant is there for tooling and consumer semantics: a root module makes
+`go build ./...` at the repository root resolve against a module that contains no packages, and it
+publishes a `github.com/cdktn-io/cdktn-aws-go` path that consumers can `go get` and depend on
+forever for nothing. It is asserted in `manifests.test.ts` and mutation-tested.
 
 ### `go mod tidy` and `go build`
 
@@ -187,7 +192,7 @@ the worst module is **8.6×**.
 | claim | M2 projection | M3 measurement | |
 | --- | ---: | ---: | --- |
 | largest group (`lex_v2_models`) | 60,178,411 B = **11.48 %** | 60,722,732 B = **11.58 %** | +0.9 % error |
-| unsplit Go monolith | 644,538,536 B = **122.9 % of cap** | 567,214,581 B = **108.2 %** summed over the fleet | over the cap either way |
+| unsplit Go monolith | 644,538,536 B = **122.9 % of cap** | 567,214,581 B = **108.2 %** summed over the fleet | see the floor below |
 | any single module over cap | none | none | holds |
 
 The projection was accurate on the group it mattered for. The monolith figure it produced was 14 %
@@ -195,9 +200,21 @@ high, and the honest comparison is narrower than it looks: **567,214,581 B is th
 modules, not the size of a monolith.** It includes 43,494,025 B of per-module overhead a monolith
 would not pay — 258 embedded jsii tarballs, 258 `LICENSE`/`README.md`/`main.go`/`version` sets — and
 it excludes whatever a single 2,401-class Go package would spend on the flat-namespace collisions it
-would have to disambiguate. So the right reading is: a real monolith lands somewhere in the
-**567–645 MB** band, i.e. **108–123 % of the cap**, and is undownloadable at either end. The split is
-not a margin call.
+would have to disambiguate.
+
+Carrying that subtraction out rather than leaving it as a caveat: 567,214,581 − 43,494,025 =
+**523,720,556 B = 99.89 % of the cap** — just *under*. That is the honest floor, and it is a floor
+in the strict sense: the one adjustment pushing the other way (collision disambiguation in a single
+2,401-class package) is real but unquantified, so it can only move the number up, never down. So
+the correct statement is that a monolith lands somewhere from **~99.9 % of the cap upward**, with
+the M2 projection's 644,538,536 B (122.9 %) at the top of the plausible range.
+
+At the low end this *is* a margin call — a monolith would ship at best with a fraction of a percent
+of headroom, on a tree that grows with every upstream provider release. It would be over the cap on
+some near-future minor and stay there, with no recourse short of the split. That is an argument for
+the split, but it is a weaker one than "undownloadable at either end", and the doc should not claim
+the stronger one. **The per-module gate is unaffected and is not a projection at all**: all 258
+modules are measured by `zip.CheckDir`, and the worst sits at 11.58 % of the cap.
 
 What the split actually buys, priced: a consumer of one group downloads the median 956,808 B, or
 60.7 MB in the very worst case, instead of the whole library.
@@ -229,9 +246,13 @@ tagged). Asserted equal: `groups.json` + the synthetic `provider` == the directo
 has no root `go.mod`, and each module's `go.mod` first line declares exactly the path its manifest
 promised.
 
-The Go-repo half is addressed through `CDKTN_AWS_GO_ROOT` (default `../cdktn-aws-go`) and reports as
-*skipped*, visibly, when that checkout is absent — so a fresh clone of this repo alone still runs
-green without the assertion quietly evaporating.
+The Go-repo half is addressed through `CDKTN_AWS_GO_ROOT` (default `../cdktn-aws-go`). Locally, an
+absent checkout reports as *skipped*, visibly — a fresh clone of this repo alone still runs green.
+Under `CI` it does not skip: an absent or wrong `CDKTN_AWS_GO_ROOT` **fails the suite** with the
+sibling path in the message, because 259 assertions reported as green-because-unrun is exactly the
+failure mode this suite exists to prevent (the same treatment `scale.test.ts` got in M2). A workflow
+that genuinely has no Go checkout says so in writing with `CDKTN_AWS_GO_ROOT=none`, which is what
+`ci.yml` does today and what gets deleted the moment `cdktn-aws-go` has a remote a runner can clone.
 
 ## Gate summary
 
@@ -242,7 +263,7 @@ green without the assertion quietly evaporating.
 | Go isolation | `node scripts/check-go-module-isolation.mjs --root ../cdktn-aws-go` | PASS, 0 violations |
 | tidy + build | `node scripts/go-tidy-build.mjs --root ../cdktn-aws-go` | 258/258, 48.0 s |
 | size | `node scripts/check-go-size.mjs --root ../cdktn-aws-go` | PASS, 0 over cap |
-| manifests + inventory | `pnpm test` | 2,142 tests, 4 suites (stage 2 added the release-plan suite) |
+| manifests + inventory | `pnpm test` | 2,143 tests, 4 suites (stage 2 added the release-plan suite) |
 | consumer synth | `node scripts/go-consumer.mjs` | 36 modules, PASS, 324 ms |
 | release plan | `node scripts/release.mjs --from <ref>` | dry run only, never tags |
 
@@ -281,6 +302,11 @@ Same machine as the rest of this document; three consecutive runs, warm module c
 | construct-only control (2nd resource from a loaded assembly) | 0.25 ms | 0.27 ms | 0.22 ms |
 | `app.Synth()` | 7.3 ms | 7.2 ms | 7.3 ms |
 | **total wall** | **324.4 ms** | **322.1 ms** | **309.3 ms** |
+
+Run-to-run spread is a few percent and these three runs are not a bound: an independent re-run on
+the same machine reproduced the total to within ~1 % but landed the group-assembly total ~3 % above
+this table (223.9–227.9 ms). Read every figure here as ±5 %; nothing below turns on more precision
+than that.
 
 The construct-only control is what makes the per-assembly number mean something: constructing a
 second resource out of an already-loaded assembly costs **0.24 ms**, so essentially all of the
@@ -427,11 +453,19 @@ reports; the first real run is the first push.
 
 | job | what it runs |
 | --- | --- |
-| `checks` | `pnpm typecheck` (tools + all 258 generated packages), `pnpm test` (2,142 assertions incl. the manifest and inventory suites), `pnpm check:imports` |
+| `checks` | `pnpm typecheck` (tools + all 258 generated packages), `pnpm test` (2,143 assertions incl. the manifest and inventory suites), `pnpm check:imports` |
 | `schema-gates` | `pnpm check:groups`; `pnpm mine` twice, byte-compared against the committed `groups.json`; `pnpm generate` twice with `git diff --exit-code`; `runtime-contract-diff --strict` |
 | `synth-smoke` | `build-generated.mjs provider elb lambda` (the prerequisite the test names), then `pnpm synth:smoke` |
 | `fleet-jsii` | 8-way matrix, `build-fleet.mjs --jsii --shard i/8`, then an explicit **JSII3 == 0 and JSII6 == 0** assertion read out of the run record |
+| `fleet-jsii-reconcile` | downloads all eight shard records and asserts they **partition** `generated/hashes.json` — every group compiled by exactly one shard, none missed, none twice — with the JSII3/JSII6 totals summed across shards rather than per shard |
 | `fleet-pack-size` | shards 1 and 5 only: full `jsii` + `jsii-pacmak --targets go`, `check-go-module-isolation`, and the `zip.CheckDir` size gate |
+| `go-size-reconcile` | adds the two size shards up, refuses a shard that measured nothing, and prints in the log how many of the 258 modules this PR did *not* measure |
+
+A sharded gate is not a fleet gate until something adds the shards up: eight legs that each report
+`0/0 OK` exit zero, and so does a shard-dealer bug that drops a group from every leg. The two
+reconcile jobs are where the fleet-level claims are actually made — and `go-size-reconcile` states
+its own incompleteness out loud, so a green PR is never read as "all 258 modules are under the cap".
+That claim belongs to `fleet-full.yml` alone.
 
 The four schema-fed gates are one job on purpose: the ~34 MB dump is gitignored and has to be
 produced by `terraform providers schema -json`, so `.github/actions/provider-schema` caches it
