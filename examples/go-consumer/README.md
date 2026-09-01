@@ -10,8 +10,8 @@ to 300× that prototype's. The measurements it prints are the subject of
 
 ## Running it
 
-The fleet is **not published** — nothing under `github.com/cdktn-io/cdktn-aws-go` resolves through
-the module proxy — so the example is built in workspace mode against a local checkout:
+The example is built in **workspace mode**, against a local checkout of the fleet, so that it
+measures and proves the tree in *this* repository rather than the last release:
 
 ```console
 node scripts/go-consumer.mjs             # writes go.work, then go build + go run
@@ -22,6 +22,12 @@ node scripts/go-consumer.mjs --root /elsewhere/cdktn-aws-go
 The fleet root defaults to `../cdktn-aws-go` and honours `CDKTN_AWS_GO_ROOT`, the same convention
 `scripts/check-go-size.mjs` and the manifest tests use.
 
+A *consumer* needs none of this. The fleet is published: every module under
+`github.com/cdktn-io/cdktn-aws-go` resolves at **v0.1.1** through `proxy.golang.org` — verified
+against the proxy directly (`.../awsprovider/@latest` → `v0.1.1`, tag `awsprovider/v0.1.1`). Outside
+this repository, `go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.1.1` and no workspace at all is
+the whole story.
+
 ## Why `go.work` is generated and not committed
 
 `go.work` names directories on the machine it was written on. Committing one would bake this
@@ -31,12 +37,13 @@ committed is `go.mod`, `main.go` and this file: the parts that are the proof art
 
 The generated workspace uses `replace`, not `use`, for the fleet modules. Go rejects a module that
 is both a workspace module and a replacement target, and without a replacement the placeholder
-`v0.0.0` in `go.mod` is resolved against a repository that does not exist yet. `replace` is also
-what a real consumer of an unpublished module writes, and the single line they delete once the
-fleet is tagged.
+`v0.0.0` in `go.mod` would be resolved against the proxy — which is to say against the *last
+release*, not against the checkout this example is here to measure.
 
-`go.mod` requires each fleet module at `v0.0.0`. That version is a placeholder and is never
-resolved; when the fleet is tagged, the requires become real versions and the workspace goes away.
+`go.mod` therefore requires each fleet module at `v0.0.0`. That version is a placeholder and is
+never resolved: the `replace` directives answer every one of those requires from disk. A consumer
+outside this repository writes the published version instead (**v0.1.1**) and has no `go.work` at
+all.
 
 ## What it asserts
 
@@ -48,7 +55,20 @@ fails the run rather than the review:
   provider — 36 assemblies must still describe one provider;
 * `provider.aws[0].region` is the region the `AwsProvider` construct was given;
 * `output.bucket_arn` renders `provider::aws::arn_build(…)`, i.e. a provider-defined function
-  survives the Go → jsii → HCL round trip;
+  survives the Go → jsii → HCL round trip. The example reaches it through the mounted accessor on
+  the provider instance, which is the front door:
+
+  ```go
+  provider := awsprovider.NewAwsProvider(stack, jsii.String("aws"), &awsprovider.AwsProviderConfig{
+      Region: jsii.String("eu-west-1"),
+  })
+  arn := provider.Functions().ArnBuild(jsii.String("aws"), jsii.String("s3"), jsii.String(""), jsii.String(""), jsii.String("consumer-bucket"))
+  ```
+
+  `Functions()` is lazy and passes the provider's own local name down, so the rendered
+  `provider::<name>::` namespace can never drift from the `required_providers` key. The standalone
+  `awsprovider.NewAwsProviderFunctions(localName)` is there for when you do not hold the instance —
+  its argument is the `required_providers` **local name**, not a provider alias;
 * synth ran with no `SkipValidation` and no `skipValidation` context — `ValidateProviderPresence`
   really did walk the stack.
 
