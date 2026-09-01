@@ -143,7 +143,14 @@ describe("provider-defined functions", () => {
     // into its own node_modules, so this exercises the emitted code end to end rather than
     // re-asserting the emitter's string output.
     const generated = path.join(generatedDir, "provider", "src", `${PROVIDER_FUNCTIONS_FILE_BASE}.ts`);
-    if (!fs.existsSync(generated)) return; // fresh tree without `pnpm generate` — nothing to load
+    // This is the only end-to-end assertion in the suite — it synthesizes real cdktn output from
+    // the committed tree — so a missing tree has to be loud. Returning early here would have
+    // reported the strongest test in the file as a pass while asserting nothing.
+    if (!fs.existsSync(generated))
+      throw new Error(
+        `${generated} is missing: the committed generated/ tree is required for this test. ` +
+          "Run `pnpm generate` (or restore generated/) and re-run.",
+      );
     /* eslint-disable @typescript-eslint/no-var-requires */
     const { AwsProviderFunctions } = require(generated);
     const cdktn = require(path.join(generatedDir, "provider", "node_modules", "cdktn"));
