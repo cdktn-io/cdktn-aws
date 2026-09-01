@@ -1,0 +1,20 @@
+{
+  "name": "cdktn-aws",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "description": "PoC: cdk-terrain provider bindings for terraform-provider-aws, regrouped into service modules",
+  "scripts": {
+    "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
+    "check:groups": "pnpm --filter @cdktn-aws/check-groups run start",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Scratch space for the miner: the blobless sparse clone of terraform-provider-aws
+# and the miner's own report. Never committed.
+tmp/
+
+# ~34 MB `terraform providers schema -json` dump; fetched/copied locally, never committed.
+# schemas/PROVIDER_VERSION (the pin groups.json was mined at) IS committed.
+schemas/schema.json
+schemas/.terraform*
