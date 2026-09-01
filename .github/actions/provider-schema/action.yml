@@ -1,0 +1,49 @@
+# Copyright (c) cdktn-io
+# SPDX-License-Identifier: MPL-2.0
+name: provider schema
+description: >-
+  Make the pinned `terraform providers schema -json` dump available at schemas/schema.json.
+  The dump is ~34 MB and gitignored, so every job that reads the schema has to produce it; the
+  cache key is the pin itself, so a bump regenerates it and nothing else does.
+
+runs:
+  using: composite
+  steps:
+    - name: restore the cached dump
+      id: cache
+      uses: actions/cache@v4
+      with:
+        path: schemas/schema.json
+        # schemas/PROVIDER_VERSION is one of the three places the pin lives, and check:groups fails
+        # if they disagree — so keying on it cannot serve a dump from the wrong provider version.
+        key: aws-provider-schema-${{ hashFiles('schemas/PROVIDER_VERSION') }}
+
+    - name: install terraform
+      if: steps.cache.outputs.cache-hit != 'true'
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_wrapper: false
+
+    - name: terraform providers schema -json
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      working-directory: schemas
+      run: |
+        set -euo pipefail
+        terraform init -input=false
+        terraform providers schema -json > schema.json
+
+    - name: the dump is the aws provider, and it parses
+      shell: bash
+      run: |
+        set -euo pipefail
+        node -e '
+          const s = require("./schemas/schema.json");
+          const key = "registry.terraform.io/hashicorp/aws";
+          if (!s.provider_schemas || !s.provider_schemas[key]) {
+            throw new Error(`schemas/schema.json has no ${key} — the dump is not the aws provider`);
+          }
+          const n = Object.keys(s.provider_schemas[key].resource_schemas ?? {}).length;
+          console.log(`schemas/schema.json: ${n} resource schemas at aws ${require("fs").readFileSync("schemas/PROVIDER_VERSION", "utf-8").trim()}`);
+          if (n < 1000) throw new Error(`only ${n} resource schemas — the dump looks truncated`);
+        '

@@ -1,0 +1,221 @@
+# Copyright (c) cdktn-io
+# SPDX-License-Identifier: MPL-2.0
+#
+# The pull-request gate. Every check here ran by hand through M1-M3 stage 1; this file is the
+# stage-2 job of making it run on every change.
+#
+# What is deliberately NOT here, and why:
+#
+#   * The full 258-group `jsii-pacmak --targets go` pack plus the whole-fleet `zip.CheckDir` size
+#     gate. Packing the fleet is ~880 CPU-seconds and produces ~540 MiB; on GitHub's two-core
+#     runners that is minutes added to every PR to re-prove a bound whose worst module sits at
+#     11.6 % of the cap with 8.6x of headroom. A PR packs and measures two of the eight shards, and
+#     `fleet-full.yml` does all eight nightly, on the `full-fleet` label, and on demand.
+#   * Anything that pushes, tags or publishes. `scripts/release.mjs` is dry-run-only by
+#     construction and no workflow runs it.
+#
+# The schema-fed gates are one job on purpose: the ~34 MB `terraform providers schema -json` dump
+# is what `check:groups`, `pnpm mine`, `pnpm generate` and the strict contract diff all need, and
+# splitting them would pay for it four times.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# One in-flight run per ref: these jobs are long and a superseded PR revision has nothing to say.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # ---------------------------------------------------------------------------------------------
+  # The gates that need nothing but the checkout: no provider schema, no Go toolchain, no jsii.
+  checks:
+    name: typecheck, tests and invariants
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: typecheck (tools, and all 258 generated packages separately)
+        run: pnpm typecheck
+
+      - name: contract, scale, manifest and inventory tests
+        # `manifests.test.ts` covers VERDICT risks #4 and #5 — the 258 machine-generated manifests
+        # whose three permanent strings are unrepairable after the first Go tag, and the four
+        # inventories that have to describe one group set. Its cdktn-aws-go half reports as visibly
+        # skipped here, because that checkout is not present on a runner.
+        run: pnpm test
+
+      - name: no cross-group imports (TypeScript)
+        run: pnpm check:imports
+
+  # ---------------------------------------------------------------------------------------------
+  # Everything that reads the pinned provider schema.
+  schema-gates:
+    name: groups, generate determinism and runtime contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - uses: ./.github/actions/provider-schema
+
+      - name: check:groups (gate A coverage, gate B moves, canonical form)
+        run: pnpm check:groups
+
+      - name: cache the provider website checkout the miner clones
+        uses: actions/cache@v4
+        with:
+          path: tmp/terraform-provider-aws
+          key: provider-website-${{ hashFiles('schemas/PROVIDER_VERSION') }}
+
+      - name: mine twice — byte-identical, and equal to the committed groups.json
+        # groups.json is the source of truth and the miner only ever proposes a diff against it
+        # (docs/provider-bump-runbook.md). On a PR that is not a bump the proposal must be empty,
+        # and it must be empty the same way twice: a miner that is not deterministic would make
+        # every future bump diff unreadable.
+        run: |
+          cp groups.json "${RUNNER_TEMP}/groups.committed.json"
+          pnpm mine
+          cmp "${RUNNER_TEMP}/groups.committed.json" groups.json
+          pnpm mine
+          cmp "${RUNNER_TEMP}/groups.committed.json" groups.json
+          git diff --exit-code -- groups.json
+
+      - name: generate twice — byte-identical, and equal to the committed tree
+        # `hashes.json` is what the Go release tags off, so a generator that is not a pure function
+        # of (groups.json, schema, generator) would re-tag 258 modules for nothing.
+        run: |
+          pnpm generate
+          git diff --exit-code -- generated/
+          pnpm generate
+          git diff --exit-code -- generated/
+
+      - name: runtime contract diff (strict)
+        # Without --strict a missing reference build is a skip with exit 0, which is right for a
+        # fresh clone and wrong here: this job has the schema dump, so it can always build the
+        # baseline reference, and a skip would only teach us to ignore the check.
+        run: node scripts/runtime-contract-diff.mjs --strict
+
+  # ---------------------------------------------------------------------------------------------
+  # The one end-to-end check: two independently compiled group assemblies plus the provider
+  # assembly, loaded into one program, synthesised with cdktn's validations ON.
+  synth-smoke:
+    name: synth smoke (validation on)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: compile the three groups the smoke test loads
+        # synth:smoke needs their lib/ and names this command when it is absent — running it here
+        # keeps a failure about the test rather than about the setup.
+        run: node scripts/build-generated.mjs provider elb lambda
+
+      - name: synth:smoke
+        run: pnpm synth:smoke
+
+  # ---------------------------------------------------------------------------------------------
+  # Every group compiled by the one pinned jsii. Sharded because the groups are independent by
+  # construction — zero cross-group imports, one assembly each — so this is embarrassingly parallel
+  # and the only limit is how many runners we ask for.
+  fleet-jsii:
+    name: jsii shard ${{ matrix.shard }}/8
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: jsii compile, shard ${{ matrix.shard }} of 8
+        # Shards are dealt largest-first by committed source bytes, so every leg carries the same
+        # ~10.6 MiB and the matrix costs its average rather than its worst group.
+        run: node scripts/build-fleet.mjs --jsii --shard ${{ matrix.shard }}/8
+
+      - name: JSII3 and JSII6 must be zero
+        # build-fleet already fails any group that emits either, but the M3 bar is stated as fleet
+        # totals — assert them from the run record so the numbers are in the log, not inferred.
+        run: |
+          node -e '
+            const r = require("./tmp/m3/fleet-jsii.json");
+            const j3 = r.codeTotals.JSII3 ?? 0;
+            const j6 = r.codeTotals.JSII6 ?? 0;
+            console.log(`${r.okCount}/${r.groups} OK, JSII3 ${j3}, JSII6 ${j6}`);
+            if (r.okCount !== r.groups || j3 !== 0 || j6 !== 0) process.exit(1);
+          '
+
+  # ---------------------------------------------------------------------------------------------
+  # Pack to Go and measure, on two of the eight shards. `check-go-size` calls x/mod/zip.CheckDir —
+  # the same function `go mod download` runs — so this is the proxy's decision, not an estimate.
+  fleet-pack-size:
+    name: pacmak + size shard ${{ matrix.shard }}/8
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Two representative eighths per PR. The deal is size-balanced and deterministic, so each
+        # shard carries a mix of giants and tiny groups and the same shard means the same groups on
+        # every run; shard 1 is where `lex_v2_models` — the 60 MB worst case, 11.6 % of the cap —
+        # lands. The other six are covered by fleet-full.yml.
+        shard: [1, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+          cache-dependency-path: tools/gosize/go.sum
+      - run: pnpm install --frozen-lockfile
+
+      - name: jsii + jsii-pacmak --targets go, shard ${{ matrix.shard }} of 8
+        run: node scripts/build-fleet.mjs --shard ${{ matrix.shard }}/8
+
+      - name: no cross-group imports in the packed Go
+        # The TypeScript check proves the invariant for source we write; this proves it for code
+        # jsii-pacmak writes, which is where Option B's shape (one shared `core` every group
+        # imports) would appear if it were going to appear anywhere.
+        run: node scripts/check-go-module-isolation.mjs
+
+      - name: zip.CheckDir size gate
+        run: node scripts/check-go-size.mjs --json tmp/m3/sizes-shard-${{ matrix.shard }}.json
+
+      - name: upload the size records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: go-size-shard-${{ matrix.shard }}
+          path: tmp/m3/
+          if-no-files-found: ignore

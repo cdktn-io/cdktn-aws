@@ -23,6 +23,7 @@
  *   node scripts/build-fleet.mjs --jsii               # compile only
  *   node scripts/build-fleet.mjs --pacmak-go acm elb  # pack two groups (needs their .jsii)
  *   node scripts/build-fleet.mjs --concurrency 8
+ *   node scripts/build-fleet.mjs --shard 3/8         # one eighth of the fleet, for a CI matrix
  *
  * Writes a machine-readable run record to `tmp/m3/fleet-<phase>.json` (tmp/ is gitignored).
  */
@@ -43,12 +44,63 @@ const concIdx = args.indexOf("--concurrency");
 const concurrency = concIdx >= 0 ? Number(args[concIdx + 1]) : Math.max(1, availableParallelism() - 2);
 const wantJsii = args.includes("--jsii") || !args.includes("--pacmak-go");
 const wantPacmak = args.includes("--pacmak-go") || !args.includes("--jsii");
-const only = args.filter((a, i) => !a.startsWith("--") && !(concIdx >= 0 && i === concIdx + 1));
+const shardIdx = args.indexOf("--shard");
+const shardArg = shardIdx >= 0 ? args[shardIdx + 1] : undefined;
+const only = args.filter(
+  (a, i) =>
+    !a.startsWith("--") &&
+    !(concIdx >= 0 && i === concIdx + 1) &&
+    !(shardIdx >= 0 && i === shardIdx + 1),
+);
 
-const groups = readdirSync(generatedDir, { withFileTypes: true })
+const allGroups = readdirSync(generatedDir, { withFileTypes: true })
   .filter((e) => e.isDirectory() && (only.length === 0 || only.includes(e.name)))
   .map((e) => e.name)
   .sort();
+
+/**
+ * `--shard i/N` — the slice of the fleet this worker owns, 1-based.
+ *
+ * Not `groups.filter((_, k) => k % N === i)`: the fleet spans three orders of magnitude in size
+ * (`lex_v2_models` is 60 MB packed, `awsswf` is 88 KB), and any index-based split leaves one shard
+ * carrying the two giants while another finishes in seconds — a matrix is only as fast as its
+ * slowest leg. Groups are dealt largest-first into whichever shard is currently lightest (LPT),
+ * using the committed `hashes.json` byte counts, so the split is balanced AND identical on every
+ * machine and every run: the same commit always produces the same shards.
+ */
+function shardOf(groups) {
+  if (!shardArg) return groups;
+  const m = /^(\d+)\/(\d+)$/.exec(shardArg);
+  if (!m) {
+    console.error(`--shard expects "i/N" (1-based), got ${JSON.stringify(shardArg)}`);
+    process.exit(2);
+  }
+  const [index, total] = [Number(m[1]), Number(m[2])];
+  if (index < 1 || index > total) {
+    console.error(`--shard ${shardArg}: index must be in 1..${total}`);
+    process.exit(2);
+  }
+  const hashesFile = path.join(generatedDir, "hashes.json");
+  const bytes = existsSync(hashesFile)
+    ? JSON.parse(readFileSync(hashesFile, "utf8")).groups
+    : undefined;
+  const weight = (g) => bytes?.[g]?.bytes ?? 1;
+  const bins = Array.from({ length: total }, () => ({ load: 0, groups: [] }));
+  // Ties broken by name so the deal is total-ordered, not readdir-ordered.
+  for (const g of [...groups].sort((a, b) => weight(b) - weight(a) || (a < b ? -1 : 1))) {
+    const bin = bins.reduce((min, b) => (b.load < min.load ? b : min));
+    bin.load += weight(g);
+    bin.groups.push(g);
+  }
+  const mine = bins[index - 1];
+  console.log(
+    `shard ${index}/${total}: ${mine.groups.length} of ${groups.length} groups, ` +
+      `${(mine.load / 1024 / 1024).toFixed(1)} MiB of source`,
+  );
+  return mine.groups.sort();
+}
+
+const groups = shardOf(allGroups);
 
 if (groups.length === 0) {
   console.error("no groups matched — is `generated/` populated? (run `pnpm generate`)");
