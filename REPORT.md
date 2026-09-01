@@ -228,8 +228,13 @@ external map at all.
   been fetched through `proxy.golang.org`; the first-publish proxy smoke test is written down, not
   performed. **CI has never executed** — both workflows are `actionlint`-clean transcriptions of
   commands run by hand, and the first push is their first test.
-* **Java and .NET were never packed.** Only `--targets python` (monolith) and `--targets go` (fleet)
-  were run. Their behaviour on a 258-submodule assembly is unknown.
+* ~~**Java and .NET were never packed.**~~ **Retired — both were packed, and both work.**
+  `jsii-pacmak --targets java` on the 258-submodule monolith: **418.3 s wall, 7.08 GB peak RSS,
+  576 MB output** (jar 141.6 MB, sources 74.6 MB, javadoc 361.3 MB). `--targets dotnet`:
+  **60.3 s wall, 2.37 GB peak RSS, 67 MB output** (`Io.Cdktn.Aws.0.0.0.nupkg` 65.9 MB + symbols).
+  No errors, no diagnostics, no manifest changes needed. The remaining unknown is not pacmak but
+  the registries: a 361 MB javadoc jar is a large thing to hand Maven Central, and neither upload
+  has ever been attempted (docs/m4-publishing.md §5).
 * **Deep-path imports regress** (§3): grouping is one service per door, so `lambda + s3` is 205
   modules against the reference's 144 for two resources.
 

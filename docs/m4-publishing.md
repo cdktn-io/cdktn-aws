@@ -4,9 +4,14 @@ What actually ships, from which build, in what order, and what has to happen onc
 can happen at all.
 
 This describes **wiring that exists** — every script and workflow named here is in the repository
-and every number is from [`m2-metrics.md`](./m2-metrics.md), [`m3-go.md`](./m3-go.md) or
-[`m2-scale.md`](./m2-scale.md) — plus the gap between that wiring and a real release. **Nothing has
-ever been published, pushed, or tagged from this workspace.** Neither GitHub repository exists.
+and every number is from [`m2-metrics.md`](./m2-metrics.md), [`m3-go.md`](./m3-go.md),
+[`m2-scale.md`](./m2-scale.md) or §5 below — plus the gap between that wiring and a real release.
+**Nothing has ever been published, pushed, or tagged from this workspace.** Neither GitHub
+repository exists.
+
+Since M4 was first written the publishing half has been built: `.github/workflows/release.yml`
+exists (dispatch-only, dry-run by default), `pnpm package` builds the publishable artifacts, and
+Java and .NET have been packed for real. §3 is the remaining checklist and it is now specific.
 
 ## 1. Two pipelines out of one generated tree
 
@@ -46,22 +51,40 @@ One jsii assembly, 258 submodules, `import { lambda } from '@cdktn/aws'`. The pe
 inputs to the monolith copy step and to the fleet's pacmak runs. Publishing 258 npm packages was
 never the plan and no manifest allows it.
 
-`monolith/package.json` (written by `build-monolith.mjs`, gitignored) declares four jsii targets:
+`monolith/package.json` (emitted by [`scripts/monolith-manifest.mjs`](../scripts/monolith-manifest.mjs)
+for `build-monolith.mjs`; gitignored) declares **three** jsii targets, all now packed:
 
-| target | declared as | packed in the PoC? |
-| --- | --- | --- |
-| python | `cdktn-aws` / `cdktn_aws` | **yes** — `pnpm pacmak:python`, wheel 62,419,552 B, sdist 61,980,948 B |
-| java | `io.cdktn:cdktn-aws`, package `io.cdktn.aws` | **no — never run** |
-| dotnet | `Io.Cdktn.Aws` | **no — never run** |
-| go | `github.com/cdktn-io/cdktn-aws-go`, package `aws` | **no, and it must never be** — see below |
+| target | declared as | packed | wall | peak RSS | output |
+| --- | --- | --- | --- | --- | --- |
+| js | `@cdktn/aws` | yes | 8.0 s | — | `dist/js/aws@0.0.0.jsii.tgz`, 48,619,611 B |
+| python | `cdktn-aws` / `cdktn_aws` | yes | — | — | wheel 62,419,552 B, sdist 61,980,948 B |
+| java | `io.cdktn:cdktn-aws`, package `io.cdktn.aws` | **yes** | **418.3 s** | **7.08 GB** | 576 MB: jar 141,616,569 B, sources 74,406,642 B, javadoc 361,265,305 B, pom 5,348 B (+ md5/sha1) |
+| dotnet | `Io.Cdktn.Aws` | **yes** | **60.3 s** | **2.37 GB** | 67 MB: `Io.Cdktn.Aws.0.0.0.nupkg` 65,921,939 B + `.snupkg` |
+| ~~go~~ | — | **removed from the manifest** | | | see below |
 
-The **monolith's `go` target is the thing that does not fit** and is the reason M3 exists. It is
-present only because a jsii manifest carries all targets; `pacmak --targets go` must never be
-invoked on `monolith/`, and the target block should be deleted from the emitted manifest before the
-first real release rather than left as a loaded gun. The Go distribution comes from the fleet.
+The Java and .NET runs were the two unknowns M4 originally listed as "never packed". Both are
+retired: `jsii-pacmak` handles 258 submodules on both targets with no errors, no diagnostics and no
+manifest changes (measured 2026-09-01, macOS arm64, jsii-pacmak 1.140.0, Corretto 20 + Maven
+3.9.16, .NET SDK 6.0.428; CI uses Corretto 11 and .NET 8.x, so treat these as the shape of the cost,
+not a promise about the runner). Java is the expensive one — seven minutes and a 7 GB working set,
+the same order as the jsii compile itself — and its **361 MB javadoc jar is the largest single file
+this repository would ever upload anywhere**. That is a registry question, not a pacmak question,
+and it has not been asked yet.
 
-Two more publish-blocking facts about that manifest as it stands: `"private": true` (the PoC guard
-against an accidental `npm publish`) and `"version": "0.0.0"`.
+**The monolith's `go` target is gone from the emitted manifest**, which is what M4 said had to
+happen before the first release. It does not fit — one Go module carrying all 258 groups is past
+`x/mod/zip`'s 524,288,000 B cap, so `go mod download` refuses it and the module path is spent
+permanently — and leaving it declared was a loaded gun one `pacmak --targets go` away from firing.
+Three things now stand in the way: the manifest declares no `go` target,
+`scripts/build-monolith.mjs` refuses `--pacmak go` by name, and `scripts/package.mjs` refuses the
+`go` target by name. `tools/aws2cdk/test/monolith-manifest.test.ts` asserts the absence so it cannot
+come back. The Go distribution comes from the fleet, and only from the fleet.
+
+The other two publish blockers M4 named are also gone: the manifest is `"private": false` (npm
+refuses to publish a tarball marked private) and its version is this repository's own semver, with
+`PACKAGE_VERSION` overriding it — which is how `release.yml` passes a validated dispatch input and
+how the npm placeholder is built at `0.0.0`. The published tarball now also carries `LICENSE` and
+`NOTICE`.
 
 ### (b) The Go fleet — `cdktn-aws-go`
 
@@ -113,48 +136,111 @@ shards; **generation determinism** (`generate` twice, byte-identical); **shard r
 agreement** — `groups.json` + `provider` == `generated/` == `hashes.json` keys == `cdktn-aws-go`
 module directories, asserted in `manifests.test.ts`.
 
-## 3. First-release checklist — none of this has been done
+## 3. First-release checklist
 
-**Registry pre-registration** (from operating the cdktn provider fleet, not from this repo):
+Ordering matters more than any single item: the repository-manager PR has to be merged *and
+applied* before `cdktn-aws` can be pushed (it is what creates the branch protection, the secrets,
+the `pypi` environment and the empty `cdktn-aws-go`), and the trusted-publisher registrations have
+to exist before a real release runs, but the npm one needs a tarball that only this repository can
+build. In order:
 
-* **npm.** Trusted publishing is configured fleet-wide and npm has **no pending-publisher concept**,
-  so a brand-new package cannot be published by automation first. `@cdktn/aws@0.0.0` must be
-  published **manually once** as a placeholder before any workflow can take over.
-* **PyPI.** Supports a *pending* publisher — configure `cdktn-aws` as pending against the repository
-  and workflow; no placeholder release needed.
-* **Maven Central / NuGet.** Not exercised at all (see §5). Namespace/prefix registration
-  (`io.cdktn`, `Io.Cdktn.*`) is its own multi-day process and is not costed here.
-* **Go.** No registry. The proxy smoke test in §2.5 is the whole registration story, and it is the
-  one step that is unrepairable if it fails.
+1. **Merge and apply the `cdktn-repository-manager` adoption PR** — a second entry in
+   `CustomConstructsStack`, alongside `cdktn-awscc`. It creates: branch protection on `cdktn-aws`
+   (required checks = `protectMainChecks`, see below), the 11 publishing secrets + 4 aliases,
+   dependabot, the Slack webhook, `team-cdk-terrain` admin, the `pypi` repository environment, and
+   `cdktn-io/cdktn-aws-go` as an **empty** repository with `protectMain: false`. Confirm
+   `deploy.yml`'s `custom-constructs` leg applied cleanly; the plan is ~29 resources.
+   *`protectMainChecks` must be the check contexts `ci.yml` actually produces* — they are listed in
+   a comment at the top of `ci.yml`, and with `enforce_admins: true` a required context no job
+   produces makes every PR permanently unmergeable. This is the exact mistake PR #83's second review
+   round caught for `cdktn-awscc`.
+2. **Push `cdktn-aws` and get CI green.** `ci.yml` and `fleet-full.yml` have never executed. Expect
+   setup-level breakage (action versions, cache keys, runner tool versions, the 16 GB heap flag on a
+   standard runner) that local runs cannot surface. Nothing below is worth attempting until the PR
+   gate is green.
+3. **Both repositories start empty; do not hand-seed either.** `cdktn-aws-go` in particular is
+   created by Terraform with an auto-init commit and nothing else — no template, no workflows, no
+   branch protection — and the first content it ever receives should come from a real `release.yml`
+   run, so that its commit identity, its per-module `go.mod` files and its tags are what a release
+   actually produces. `~/cdktn/cdktn-aws-go` on a developer machine is a local staging build, not
+   the seed. Same rule for `cdktn-aws`: it is adopted as an existing repository, so it must be
+   pushed by hand once (step 2) — but only the real repository content, no bootstrap scaffolding.
+4. **npm placeholder, then Trusted Publisher.** npm has no pending-publisher concept, so a
+   brand-new package cannot be published by automation first. Build a **real** `0.0.0` tarball
+   through the real pipeline — never a hand-written stub, because the point is that the manifest npm
+   registers against is the manifest every later release ships:
 
-**Repository and manifest state:**
+   ```bash
+   PACKAGE_VERSION=0.0.0 PACMAK_TARGETS=js pnpm package     # -> dist/js/aws@0.0.0.jsii.tgz
+   npm login                                                # the @cdktn org's publisher account
+   npm publish dist/js/*.tgz --access public                # the ONLY manual publish this package needs
+   ```
 
-- [ ] Create `cdktn-io/cdktn-aws` and `cdktn-io/cdktn-aws-go` on GitHub. Neither exists.
-      `cdktn-aws-go` is a local git repository with `origin` configured and signed commits; nothing
-      has been pushed.
-- [ ] Bump the root `package.json` off its `0.0.0` **placeholder** to a real semver.
-      `release.mjs` warns that `0.0.0` is a placeholder rather than tagging 258 modules with it.
-- [ ] Flip `monolith/package.json` `"private": true` → `false` (it is generated by
-      `build-monolith.mjs`, so this is a change to the script) and drop the `go` target from it.
+   That exact invocation is exercised and current: it assembles 258 submodules, compiles with the
+   pinned jsii (JSII3 0 / JSII6 0), lazifies the barrel, asserts all 258 getters resolve, and writes
+   a 48,619,611 B tarball in ~52 s wall on a developer machine. Then on npmjs.com: package →
+   **Settings → Trusted Publisher → GitHub Actions**, with
+
+   | field | value |
+   | --- | --- |
+   | Organization or user | `cdktn-io` |
+   | Repository | `cdktn-aws` |
+   | Workflow filename | `release.yml` |
+   | Environment name | **blank** — `release_npm` deliberately declares no GitHub environment |
+
+   Then disable classic publish access / any leftover automation tokens for the package. Sanity
+   check: `npm view @cdktn/aws` shows `0.0.0` and the panel names `cdktn-io/cdktn-aws` + `release.yml`.
+5. **PyPI pending publisher** — no placeholder needed, and it can be registered before the project
+   exists. pypi.org → Publishing → Add a pending publisher, with PyPI project name `cdktn-aws`,
+   owner `cdktn-io`, repository `cdktn-aws`, workflow name `release.yml`, environment name **`pypi`**.
+   All three of those strings have to keep matching `release.yml`'s `release_pypi` job and the
+   `github_repository_environment` the manager creates; the pending publisher converts to a
+   confirmed one on the first real run.
+6. **Maven Central / NuGet.** Namespace/prefix registration (`io.cdktn`, `Io.Cdktn.*`) is its own
+   multi-day process, and the fleet's existing `MAVEN_*` / `NUGET_API_KEY` secrets already cover the
+   credentials — but neither upload has ever been attempted from this package, and the Java bundle
+   is 576 MB with a 361 MB javadoc jar (§1(a)). Check Central's per-file limits before the first
+   real run rather than during it.
+7. **Go: no registry, one unrepairable step.** `GO_GITHUB_TOKEN` is not a Go-specific secret — it is
+   an alias of the fleet-wide `gh-token` PAT that the manager provisions on every repo, and it is
+   the only credential the Go publish needs. `publib-golang` reads each `dist/go/<dir>/go.mod`,
+   derives `github.com/cdktn-io/cdktn-aws-go` from the module path, clones it, syncs the tree,
+   commits once as `team-cdk-terrain <github-team-cdk-terrain@cdktn.io>`, and creates one
+   `<dir>/v<version>` tag per module — 258 of them on the first release, because there is no previous
+   release to diff against. Then, before announcing anything, the proxy smoke test in §2.5 for every
+   first-published module path: the proxy caches a failure and the name is spent.
+8. **Dispatch a dry run, then the real release.** `release.yml` is `workflow_dispatch`-only and
+   `dry_run` defaults to **true**: a dry run builds everything, runs every gate including the
+   258-module `zip.CheckDir` size gate, and prints exactly what each registry would receive without
+   publishing. Only after a clean dry run, dispatch with `dry_run: false`. Push-to-tag auto-release
+   is deliberately not wired until both have succeeded once.
+
+**Version.** The root `package.json` is at **0.1.0** — the proposed first release, and no longer the
+`0.0.0` placeholder `release.mjs` refuses to tag 258 modules with. The scheme is this repository's
+own semver, in lockstep across `@cdktn/aws` and all 258 Go modules, disconnected from the provider
+version ([`m3-go.md`](./m3-go.md) § "Versioning and release"). `release.yml` will refuse a dispatch
+whose version does not equal `package.json`'s: the bump is a reviewed PR, never a push from a job
+holding publishing credentials.
+
+**Still open:**
+
 - [ ] Delete `CDKTN_AWS_GO_ROOT: none` from `ci.yml` the moment `cdktn-aws-go` has a remote a runner
       can clone — until then 259 inventory assertions are legitimately skipped, in writing.
-- [ ] Write the publishing workflow. **There is none**: the repository has exactly two workflows and
-      neither pushes, tags or publishes anything.
-- [ ] **CI first run.** `ci.yml` and `fleet-full.yml` are `actionlint`-clean and transcribe commands
-      that were run by hand — but neither has ever executed. Expect setup-level breakage (action
-      versions, cache keys, runner tool versions) that local runs cannot surface.
+- [ ] Wire the changed-groups-only release path (`scripts/release.mjs`) into `release.yml` for the
+      second release onward. It is implemented and unit-tested; it is unwired because the first
+      release has nothing to diff against.
 
-**The three decisions that are the user's, not the implementer's** — all three are permanent and
-all three are needed *before the first tag*:
+**The three decisions that were the user's, not the implementer's** — all three are permanent, all
+three were needed *before the first tag*, and all three are now settled:
 
-1. **The Go dir / `packageName` convention.** `aws` + slug with underscores stripped
+1. **The Go dir / `packageName` convention: `aws` + slug with underscores stripped**
    (`lex_v2_models` → `awslexv2models`), forced into jsii's `^[a-z][a-z0-9]*$`. That string is the
    directory, the tag prefix and the last element of every consumer's import path, and Go's
-   import-path-is-identity rule means it can never be changed, only abandoned.
-2. **The fleet versioning scheme.** The tooling proposes lockstep on *this repository's* semver (not
-   the provider version — see [`m3-go.md`](./m3-go.md) § "Versioning and release" for the three
-   reasons). The scheme itself needs sign-off.
-3. **Whether to create the real repositories and publish at all.**
+   import-path-is-identity rule means it can never be changed, only abandoned. **Confirmed.**
+2. **The fleet versioning scheme: lockstep on this repository's own semver**, not the provider
+   version. **Confirmed.**
+3. **Whether to create the real repositories and publish at all: yes**, at 0.1.0, by the ordering
+   above.
 
 ## 4. Tag-growth policy
 
@@ -175,11 +261,15 @@ consumers edit imports by hand. It belongs in its own PR, never folded into a pr
 
 ## 5. Deliberately not built
 
-* **No publishing automation of any kind.** No release workflow, no npm/PyPI credentials, no
-  trusted-publishing configuration. `release.mjs` cannot tag or push by construction.
-* **Java and .NET were never packed.** The targets are declared in the monolith manifest; only
-  `--targets python` (monolith) and `--targets go` (fleet, all 258) were ever run. Their build time,
-  output size and any pacmak breakage on a 258-submodule assembly are **unknown**, not assumed fine.
+* **No release has ever run.** `.github/workflows/release.yml` now exists — dispatch-only, dry-run
+  by default, every publish step gated — but it has never executed, and neither has `ci.yml`. The
+  credentials it names are provisioned by the repository manager and the two trusted-publisher
+  registrations are still to be made (§3). `release.mjs`, the changed-groups planner, still cannot
+  tag or push by construction and is not wired into the workflow.
+* ~~**Java and .NET were never packed.**~~ Both are packed and measured (§1(a)): 418.3 s / 7.08 GB /
+  576 MB for Java, 60.3 s / 2.37 GB / 67 MB for .NET, no errors on either. What remains unknown is
+  the *upload* — no artifact of this package has ever been sent to Maven Central or NuGet, and the
+  361 MB javadoc jar is worth checking against Central's limits before a real run.
 * **`jsii-docgen` was never run.** The "1,290 doc files" figure is exact arithmetic (258 × 5), not a
   measurement; docgen is not even a dependency of this repo.
 * **The per-group content-hash release flow has never met a real registry.** The changed-group diff
