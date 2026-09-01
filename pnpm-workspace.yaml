@@ -1,4 +1,8 @@
 packages:
   - tools/*
+  # Each generated group is a standalone jsii package (go-split-spike VERDICT, Option A).
+  # They are workspace members so pnpm links their cdktn/constructs devDependency mirror, which
+  # is what `tsc --noEmit` and `jsii` both need to resolve.
+  - generated/*
 allowBuilds:
   esbuild: true

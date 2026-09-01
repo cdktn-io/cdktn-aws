@@ -5,9 +5,13 @@
   "license": "MPL-2.0",
   "description": "PoC: cdk-terrain provider bindings for terraform-provider-aws, regrouped into service modules",
   "scripts": {
-    "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
+    "baseline": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/baseline.ts",
     "check:groups": "pnpm --filter @cdktn-aws/check-groups run start",
-    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json"
+    "check:imports": "node scripts/check-no-cross-group-imports.mjs",
+    "generate": "pnpm --filter @cdktn-aws/aws2cdk exec tsx bin/generate.ts",
+    "mine": "pnpm --filter @cdktn-aws/mine-groups run start",
+    "test": "jest",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tools/aws2cdk/tsconfig.json && node scripts/typecheck-generated.mjs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",

@@ -1,0 +1,243 @@
+// Copyright (c) HashiCorp, Inc
+// SPDX-License-Identifier: MPL-2.0
+// Adapted from src/vendored/cdktn/emitter/resource-emitter.ts — see tools/aws2cdk/README.md.
+//
+// Everything emitted here is TOP LEVEL (outside the resource's merged `namespace`) — the caller
+// (src/generate.ts) wraps this whole call in `withQualifier(resource.className, ...)` so any
+// nested-struct type this attribute code touches (via attribute-type-model.ts) is referenced as
+// `<ClassName>.<StructName>`, not the bare name that only resolves inside the namespace itself.
+//
+// The awscc fork this was taken from had trimmed the provider / data-source / ephemeral-resource
+// branches and the write-only registration gate; all four are restored verbatim from the vendored
+// original, because groups.json groups data sources and ephemeral resources too and M1 ships a
+// real generated AwsProvider. The two CFN name-map statics that fork added are gone — cdktn-aws
+// carries no CloudFormation map (see docs/curation.md).
+//
+// Still not carried over: the provider-defined-functions getter. See docs/curation.md.
+import { CodeMaker } from "codemaker";
+import { ResourceModel } from "../models";
+import { AttributesEmitter } from "./attributes-emitter";
+import { sanitizedComment } from "../sanitized-comments";
+
+export class ResourceEmitter {
+  attributesEmitter: AttributesEmitter;
+
+  constructor(private readonly code: CodeMaker) {
+    this.attributesEmitter = new AttributesEmitter(this.code);
+  }
+
+  public emit(resource: ResourceModel) {
+    this.code.line();
+
+    const comment = sanitizedComment(this.code);
+    comment.line(`Represents a {@link ${resource.linkToDocs} ${resource.terraformResourceType}}`);
+    comment.end();
+    this.code.openBlock(`export class ${resource.className} extends cdktn.${resource.parentClassName}`);
+
+    this.emitHeader("STATIC PROPERTIES");
+    this.emitStaticProperties(resource);
+
+    // An ephemeral resource has no state to import into, so upstream emits no
+    // `generateConfigForImport` for one.
+    if (!resource.isEphemeralResource) {
+      this.emitHeader("STATIC Methods");
+      this.emitStaticMethods(resource);
+    }
+
+    this.emitHeader("INITIALIZER");
+    this.emitInitializer(resource);
+
+    this.emitHeader("ATTRIBUTES");
+    this.emitResourceAttributes(resource);
+
+    this.emitHeader("SYNTHESIS");
+    this.emitResourceSynthesis(resource);
+    this.emitHclResourceSynthesis(resource);
+
+    this.code.closeBlock(); // construct
+  }
+
+  private emitHeader(title: string) {
+    this.code.line();
+    this.code.line("// " + "=".repeat(title.length));
+    this.code.line(`// ${title}`);
+    this.code.line("// " + "=".repeat(title.length));
+  }
+
+  private emitStaticProperties(resource: ResourceModel) {
+    this.code.line(`public static readonly tfResourceType = "${resource.terraformResourceType}";`);
+  }
+
+  private emitStaticMethods(resource: ResourceModel) {
+    const comment = sanitizedComment(this.code);
+    comment.line(
+      `Generates CDKTN code for importing a ${resource.className} resource upon running "cdktn plan <stack-name>"`,
+    );
+    comment.line(`@param scope The scope in which to define this construct`);
+    comment.line(
+      `@param importToId The construct id used in the generated config for the ${resource.className} to import`,
+    );
+    comment.line(
+      `@param importFromId The id of the existing ${resource.className} that should be imported. Refer to the {@link ${resource.linkToDocs}#import import section} in the documentation of this resource for the id to use`,
+    );
+    comment.line(
+      `@param provider? Optional instance of the provider where the ${resource.className} to import is found`,
+    );
+    comment.end();
+    this.code.line(
+      `public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
+        return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "${resource.terraformResourceType}", importId: importFromId, provider });
+      }`,
+    );
+  }
+
+  private emitHclResourceSynthesis(resource: ResourceModel) {
+    this.code.line();
+    this.code.openBlock(`protected synthesizeHclAttributes(): { [name: string]: any }`);
+    this.code.open(`const attrs = {`);
+
+    const registerWriteOnlyUsage = this.supportsWriteOnlyRegistration(resource);
+    for (const att of resource.synthesizableAttributes) {
+      this.attributesEmitter.emitToHclTerraform(att, false, registerWriteOnlyUsage);
+    }
+
+    this.code.close(`};`);
+
+    if (resource.synthesizableAttributes.length > 0) {
+      this.code.line();
+      this.code.line(`// remove undefined attributes`);
+      this.code.line(
+        `return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))`,
+      );
+    } else {
+      this.code.line(`return attrs;`);
+    }
+
+    this.code.closeBlock();
+  }
+
+  private emitResourceSynthesis(resource: ResourceModel) {
+    this.code.line();
+    this.code.openBlock(`protected synthesizeAttributes(): { [name: string]: any }`);
+    this.code.open(`return {`);
+
+    const registerWriteOnlyUsage = this.supportsWriteOnlyRegistration(resource);
+    for (const att of resource.synthesizableAttributes) {
+      this.attributesEmitter.emitToTerraform(att, false, registerWriteOnlyUsage);
+    }
+
+    this.code.close(`};`);
+    this.code.closeBlock();
+  }
+
+  // `markWriteOnlyAttribute` (called from the generated `synthesizeAttributes()` /
+  // `synthesizeHclAttributes()` for write-only attributes, see AttributesEmitter) lives on
+  // TerraformResource — so only managed resources can register write-only usage; data sources,
+  // providers and ephemeral resources only get the deprecated getter. Verbatim from the vendored
+  // original, which explains the semantics at length.
+  private supportsWriteOnlyRegistration(resource: ResourceModel): boolean {
+    return resource.parentClassName === "TerraformResource";
+  }
+
+  private emitResourceAttributes(resource: ResourceModel) {
+    for (const att of resource.attributes) {
+      this.attributesEmitter.emit(
+        att,
+        this.attributesEmitter.needsResetEscape(att, resource.attributes),
+        this.attributesEmitter.needsInputEscape(att, resource.attributes),
+      );
+    }
+  }
+
+  private emitInitializer(resource: ResourceModel) {
+    this.code.line();
+    const comment = sanitizedComment(this.code);
+    comment.line(
+      `Create a new {@link ${resource.linkToDocs} ${resource.terraformResourceType}} ${
+        resource.isDataSource
+          ? "Data Source"
+          : resource.isEphemeralResource
+            ? "Ephemeral Resource"
+            : "Resource"
+      }`,
+    );
+    comment.line(``);
+    comment.line(`@param scope The scope in which to define this construct`);
+    comment.line(`@param id The scoped construct ID. Must be unique amongst siblings in the same scope`);
+    comment.line(`@param options ${resource.configStruct.attributeType}`);
+    comment.end();
+    this.code.openBlock(
+      `public constructor(scope: Construct, id: string, config: ${resource.configStruct.attributeType})`,
+    );
+
+    if (resource.isProvider) {
+      this.emitProviderSuper(resource);
+    } else if (resource.isEphemeralResource) {
+      this.emitEphemeralResourceSuper(resource);
+    } else {
+      this.emitResourceSuper(resource);
+    }
+
+    for (const att of resource.configStruct.assignableAttributes) {
+      if (att.setterType._type === "stored_class") {
+        this.code.line(`this.${att.storageName}.internalValue = config.${att.name};`);
+      } else {
+        this.code.line(`this.${att.storageName} = config.${att.name};`);
+      }
+    }
+
+    this.code.closeBlock();
+  }
+
+  private emitResourceSuper(resource: ResourceModel) {
+    this.code.open(`super(scope, id, {`);
+    this.code.line(`terraformResourceType: '${resource.terraformResourceType}',`);
+    this.emitTerraformGeneratorMetadata(resource);
+    this.code.line(`provider: config.provider,`);
+    this.code.line(`dependsOn: config.dependsOn,`);
+    this.code.line(`count: config.count,`);
+    this.code.line(`lifecycle: config.lifecycle,`);
+    this.code.line(`provisioners: config.provisioners,`);
+    this.code.line(`connection: config.connection,`);
+    this.code.line(`forEach: config.forEach`);
+    this.code.close(`});`);
+  }
+
+  private emitEphemeralResourceSuper(resource: ResourceModel) {
+    this.code.open(`super(scope, id, {`);
+    this.code.line(`terraformResourceType: '${resource.terraformResourceType}',`);
+    this.emitTerraformGeneratorMetadata(resource);
+    this.code.line(`provider: config.provider,`);
+    this.code.line(`dependsOn: config.dependsOn,`);
+    this.code.line(`count: config.count,`);
+    this.code.line(`lifecycle: config.lifecycle,`);
+    this.code.line(`forEach: config.forEach`);
+    this.code.close(`});`);
+  }
+
+  private emitProviderSuper(resource: ResourceModel) {
+    this.code.open(`super(scope, id, {`);
+    this.code.line(`terraformResourceType: '${resource.terraformResourceType}',`);
+    this.emitTerraformGeneratorMetadata(resource);
+    this.code.line(`terraformProviderSource: '${resource.terraformProviderSource}'`);
+    this.code.close(`});`);
+  }
+
+  private emitTerraformGeneratorMetadata(resource: ResourceModel) {
+    this.code.open(`terraformGeneratorMetadata: {`);
+    this.code.line(
+      `providerName: '${resource.provider}'${
+        resource.providerVersion || resource.providerVersionConstraint ? "," : ""
+      }`,
+    );
+    if (resource.providerVersion) {
+      this.code.line(
+        `providerVersion: '${resource.providerVersion}'${resource.providerVersionConstraint ? "," : ""}`,
+      );
+    }
+    if (resource.providerVersionConstraint) {
+      this.code.line(`providerVersionConstraint: '${resource.providerVersionConstraint}'`);
+    }
+    this.code.close(`},`);
+  }
+}
