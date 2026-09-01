@@ -1,10 +1,15 @@
+// Copyright (c) cdktn-io
+// SPDX-License-Identifier: MPL-2.0
+// Forked from cdktn-io/cdktn-awscc's src/grouped/namespace-context.ts — see the fork-provenance
+// table in tools/aws2cdk/README.md. The code is verbatim; only the doc comments are retargeted
+// from awscc's naming (CcVPC / CcVPCProps) to this repo's (AwsVpc / AwsVpcConfig).
 /**
  * A resource's nested types (`TagProperty`, `TagPropertyOutputReference`, …) are declared once,
- * inside `export namespace CcVPC { ... }`, but referenced from two places: from *inside* that same
+ * inside `export namespace AwsVpc { ... }`, but referenced from two places: from *inside* that same
  * namespace (sibling struct interfaces/classes referencing each other — no qualification needed,
- * plain scoping resolves it) and from *outside* it (the `CcVPCProps` interface and the `CcVPC`
+ * plain scoping resolves it) and from *outside* it (the `AwsVpcConfig` interface and the `AwsVpc`
  * class body, both emitted at the top level of the file — TypeScript's class+namespace
- * declaration-merging trick exposes nested members only under the qualified name `CcVPC.Foo`, not
+ * declaration-merging trick exposes nested members only under the qualified name `AwsVpc.Foo`, not
  * bare `Foo`, even from inside the class's own methods).
  *
  * `models/attribute-type-model.ts`'s `StructAttributeTypeModel` is the one place a struct's type
@@ -44,8 +49,8 @@ export function qualify(name: string): string {
  * *different* resources in the *same module* commonly both have (say) a `tags` attribute, so a
  * bare `tagsPropertyToTerraform` from each collides the moment the module's `index.ts` re-exports
  * both files with `export *`. `resourcePrefix()` is the current resource's own class name,
- * incorporated into every mapper function name (`ccVPCTagsPropertyToTerraform` vs.
- * `ccSubnetTagsPropertyToTerraform`) to keep them unique module-wide. Unlike the toggled
+ * incorporated into every mapper function name (`awsVpcTagsPropertyToTerraform` vs.
+ * `awsSubnetTagsPropertyToTerraform`) to keep them unique module-wide. Unlike the toggled
  * `qualifier` above, this is set once for the whole resource file and read unconditionally by
  * `StructAttributeTypeModel#toTerraformFunction`/`#toHclTerraformFunction` (models/attribute-type-
  * model.ts) and by `emitter/struct-emitter.ts`'s `emitStructMappers`, so a call to a mapper

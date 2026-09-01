@@ -30,7 +30,7 @@ last touched there in `7f149a551c69274e6b4d2baf14eafc32f4d69f8f`). Files taken f
 | this repo | awscc2cdk origin | change |
 | --- | --- | --- |
 | `src/vendored/cdktn/**` | `src/vendored/cdktn/**` | verbatim |
-| `src/grouped/namespace-context.ts` | `src/grouped/namespace-context.ts` | verbatim |
+| `src/grouped/namespace-context.ts` | `src/grouped/namespace-context.ts` | code verbatim; doc-comment examples retargeted from `CcVPC`/`CcVPCProps` to `AwsVpc`/`AwsVpcConfig`, SPDX header added |
 | `src/grouped/loop-detection.ts` | `src/grouped/loop-detection.ts` | verbatim |
 | `src/grouped/sanitized-comments.ts` | `src/grouped/sanitized-comments.ts` | verbatim |
 | `src/grouped/util.ts` | `src/grouped/util.ts` | verbatim |
