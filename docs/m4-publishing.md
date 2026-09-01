@@ -138,6 +138,34 @@ module directories, asserted in `manifests.test.ts`.
 
 ## 3. First-release checklist
 
+> ### ⚠️ Before the next release: the `release` environment
+>
+> `release.yml` is `workflow_dispatch`-only, and a dispatch runs the workflow file **from whatever
+> ref the dispatcher chooses** — so before this change any branch anyone could push was a code path
+> to npm, PyPI, Maven Central, NuGet, the `v*` tags on this repository and a push token for
+> `cdktn-aws-go`. A `if: github.ref == 'refs/heads/main'` check inside the workflow does not fix
+> that: the attacker's branch contains the check, and can delete it. The control has to live outside
+> the workflow file, in repository settings GitHub evaluates before the job starts — a **deployment
+> environment** with a branch policy, reviewers, and the secrets scoped to it.
+>
+> Every publishing job now declares one: `release` for `release_npm`, `release_maven`,
+> `release_nuget`, `release_go` and `release_github`; `release_pypi` keeps **`pypi`**, because the
+> PyPI trusted publisher binds that exact name. Three things must happen, in this order:
+>
+> 1. **Apply the `cdktn-repository-manager` PR that creates the `release` environment** with
+>    deployment branch policy = protected branches only, plus required reviewers. Naming an
+>    environment that does not exist does not fail the run — **GitHub auto-creates it with no
+>    protection whatsoever**, which gates nothing while looking like it does. Until that apply lands,
+>    the branch restriction is not in force. Verify at Settings → Environments that `release` shows a
+>    deployment branch rule and is not marked as having been created by a workflow run.
+> 2. **Add environment `release` to the npm Trusted Publisher for `@cdktn/aws`** (npmjs.com →
+>    package → Settings → Trusted Publisher → Environment name → `release`). The job's OIDC token now
+>    carries an `environment` claim; a publisher config with a blank Environment may reject or ignore
+>    a token that has one depending on how npm matches the claim, and a release is not the place to
+>    discover which. Treat this as a **required** pre-release step. (Step 4 below reflects it.)
+> 3. **PyPI needs no change** — its pending/confirmed publisher is already registered against
+>    environment `pypi`, and `release_pypi` still declares exactly that.
+
 Ordering matters more than any single item: the repository-manager PR has to be merged *and
 applied* before `cdktn-aws` can be pushed (it is what creates the branch protection, the secrets,
 the `pypi` environment and the empty `cdktn-aws-go`), and the trusted-publisher registrations have
@@ -147,7 +175,9 @@ build. In order:
 1. **Merge and apply the `cdktn-repository-manager` adoption PR** — a second entry in
    `CustomConstructsStack`, alongside `cdktn-awscc`. It creates: branch protection on `cdktn-aws`
    (required checks = `protectMainChecks`, see below), the 11 publishing secrets + 4 aliases,
-   dependabot, the Slack webhook, `team-cdk-terrain` admin, the `pypi` repository environment, and
+   dependabot, the Slack webhook, `team-cdk-terrain` admin, the `pypi` **and `release`** repository
+   environments (the latter with a protected-branches-only deployment policy and reviewers — see the
+   box above; an unapplied environment is auto-created unprotected), and
    `cdktn-io/cdktn-aws-go` as an **empty** repository with `protectMain: false`. Confirm
    `deploy.yml`'s `custom-constructs` leg applied cleanly; the plan is ~29 resources.
    *`protectMainChecks` must be the check contexts `ci.yml` actually produces* — they are listed in
@@ -189,7 +219,7 @@ build. In order:
    | Organization or user | `cdktn-io` |
    | Repository | `cdktn-aws` |
    | Workflow filename | `release.yml` |
-   | Environment name | **blank** — `release_npm` deliberately declares no GitHub environment |
+   | Environment name | **`release`** — `release_npm` declares `environment: release`; see the box at the top of this section |
 
    Then disable classic publish access / any leftover automation tokens for the package. Sanity
    check: `npm view @cdktn/aws` shows `0.0.0` and the panel names `cdktn-io/cdktn-aws` + `release.yml`.
@@ -228,6 +258,11 @@ holding publishing credentials.
 
 **Still open:**
 
+- [ ] Apply the `cdktn-repository-manager` PR that creates the **`release`** environment (protected
+      branches only + reviewers) **before** the next dispatch — until it applies, GitHub auto-creates
+      `release` unprotected on first use and the branch restriction is not in force.
+- [ ] Set the npm Trusted Publisher's **Environment name** to `release` for `@cdktn/aws`, before the
+      next release. Both items are the box at the top of this section.
 - [ ] Delete `CDKTN_AWS_GO_ROOT: none` from `ci.yml` the moment `cdktn-aws-go` has a remote a runner
       can clone — until then 259 inventory assertions are legitimately skipped, in writing.
 - [ ] Wire the changed-groups-only release path (`scripts/release.mjs`) into `release.yml` for the
@@ -323,6 +358,30 @@ The stamp is asserted end to end on a real build of one group in
 that the manifest came back). Note that a stamp with major ≥ 2 makes pacmak emit `/vN` module paths,
 which `build-fleet.mjs` rejects against the manifest — see §4, it is its own PR.
 
+**Two ways the stamp could still go wrong, both refused rather than documented**
+(`tools/aws2cdk/test/fleet-build-safety.test.ts`):
+
+* **`--pacmak-go` over a stale assembly.** The pacmak-only phase reuses an existing compile, and
+  pacmak reads the version out of the `.jsii`, not out of the manifest this run stamps — so
+  `PACKAGE_VERSION=Y node scripts/build-fleet.mjs --pacmak-go <group>` over an assembly compiled at
+  X would pack at X. The assertion that caught it used to fire *after* `rmSync(dist/go)`, destroying
+  the good output on the way. It is now a pre-flight over every selected group, before anything is
+  deleted, and it exits 2 naming the command to run instead
+  (`PACKAGE_VERSION=Y node scripts/build-fleet.mjs <group>` — compile and pack in one run). It does
+  not silently recompile: `--pacmak-go` exists so each tool's wall time is a number on its own, and
+  a phase flag that sometimes runs the other phase makes that and this recovery procedure lie.
+* **Two builds of one group at once.** The restore writes back *the bytes the build snapshotted*, so
+  an overlapping build snapshots the first one's stamp and restores a release version into the
+  committed manifest — both builds succeeding, tree quietly wrong. CI shards are disjoint by
+  construction, but the recovery procedure below is a human running `build-fleet.mjs` locally,
+  possibly beside a build that has not finished. `scripts/build-lock.mjs` takes an atomic
+  `mkdir`-based lock per group under `tmp/fleet-locks/` (gitignored) covering
+  stamp → jsii → pacmak → restore; a second build exits 2 with the owner's pid and what to do, and a
+  lock whose owner is gone is reclaimed with a warning. The header of that file records why building
+  from a copy outside the repository is not the alternative it looks like: `generated/*` are pnpm
+  workspace members and the compile resolves `cdktn`/`constructs` through the symlink farm that
+  membership creates.
+
 **Recovery procedure.** Re-dispatch `release.yml` with the release version and `dry_run=false`.
 That was going to be the *same* number, `0.1.0`, until §7 found a second defect in what 0.1.0
 published; the corrected release is **0.1.1**, at which no registry holds anything yet, so every
@@ -366,6 +425,14 @@ or `*.tsbuildinfo`, or on a missing `LICENSE`, `NOTICE`, `README.md`, `.jsii` or
 the file count and unpacked size, so every release logs what it shipped. The allowlist is asserted
 in `monolith-manifest.test.ts` and the check itself in `js-tarball-gate.test.ts`, against real
 tarballs.
+
+The first version of that gate read the tarball by interpolating its path into `/bin/sh -c` with
+`JSON.stringify` — which is JSON quoting, not shell quoting, so a `$(…)` or a backtick in the
+filename executed, in a script that runs inside the release pipeline. It now reads the archive
+in-process: one streaming gunzip and a walk over the 512-byte tar headers
+(`scripts/tar-list.mjs`), yielding both the entry list and the unpacked byte total with no shell
+and no `tar` child at all. `js-tarball-gate.test.ts` packs fixtures whose names *are* those payloads
+and asserts the side-effect file never appears.
 
 **What the remaining 441 MB is** — and it is all load-bearing, which is why this stops here:
 `.jsii` 150 MB (the assembly every non-JS target reads), `lib/**/*.js` 256 MB, `lib/**/*.d.ts`
