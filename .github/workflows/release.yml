@@ -64,6 +64,21 @@ concurrency:
 # the GitHub Release job's alone, `id-token: write` the two OIDC publish jobs' alone.
 permissions: {}
 
+# WHICH BRANCH MAY PUBLISH. `workflow_dispatch` runs the workflow file from whatever ref the
+# dispatcher picks, so a branch is a code path into every credential this workflow can reach. An
+# `if: github.ref == …` guard here would be worthless: it lives in the same file the attacker's
+# branch is allowed to rewrite. The control that cannot be edited from the branch is a deployment
+# ENVIRONMENT — its branch policy and its reviewers are repository settings, evaluated by GitHub
+# before the job starts, and the secrets can be scoped to it. So every job that can publish declares
+# one: `release` for npm/Maven/NuGet/Go/the GitHub Release, and `pypi` for PyPI, which must keep that
+# exact name because the PyPI trusted publisher binds to it.
+#
+# The `release` environment's protection rules (deployment branch policy: protected branches only,
+# plus required reviewers) are created by cdktn-repository-manager, Terraform-side. An environment
+# NAMED HERE BUT NOT YET APPLIED IS AUTO-CREATED BY GITHUB WITH NO PROTECTION AT ALL — it would
+# gate nothing. The manager's PR therefore has to be applied before the next release; until it is,
+# treat the guarantee below as absent. See docs/m4-publishing.md §3.
+
 env:
   # jsii holds the whole 2.18M-line program in memory; the monolith compile peaks around 7.2 GB RSS
   # and the default 4 GB ceiling is not enough (docs/m2-metrics.md).
@@ -274,7 +289,9 @@ jobs:
     runs-on: ubuntu-latest
     # The only job in this workflow that may write to this repository, and all it writes is the
     # release and its tag. `gh release create` on a tag that does not exist creates it at the
-    # dispatched ref, which is how this repository's own semver becomes a git tag.
+    # dispatched ref, which is how this repository's own semver becomes a git tag — which is exactly
+    # why it is gated: an unprotected branch must not be able to mint a `v*` tag on this repo.
+    environment: release
     permissions:
       contents: write
     steps:
@@ -337,9 +354,14 @@ jobs:
     # published languages and no Go. Plain `needs:` is what does that: no `if:` here overrides it.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
-    # No `environment:` — the npm Trusted Publisher for @cdktn/aws is registered with the
-    # Environment field left BLANK (docs/m4-publishing.md §3). Adding one here silently breaks the
-    # OIDC claim match.
+    # REQUIRES A ONE-TIME npm CHANGE BEFORE THE NEXT RELEASE. The npm Trusted Publisher for
+    # @cdktn/aws was registered with the Environment field left blank. With `environment: release`
+    # the OIDC token now carries an `environment` claim, and npm's matching of a token that has one
+    # against a publisher config that does not is not something to find out during a publish: set
+    # the publisher's Environment to `release` on npmjs.com FIRST. docs/m4-publishing.md §3 is the
+    # checklist. The environment gate is not optional — without it any branch a contributor can
+    # push is a path to this repository's npm identity.
+    environment: release
     permissions:
       id-token: write
       contents: read
@@ -440,6 +462,8 @@ jobs:
     # none do.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds the Maven signing key and the Central Portal credentials — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
@@ -506,6 +530,8 @@ jobs:
     # none do.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds NUGET_API_KEY — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
@@ -557,6 +583,8 @@ jobs:
     name: Publish the fleet to cdktn-aws-go
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds GO_GITHUB_TOKEN, which can push to cdktn-io/cdktn-aws-go — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
