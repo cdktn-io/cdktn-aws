@@ -213,6 +213,37 @@ describe("surfaces", () => {
   });
 });
 
+describe("provider version", () => {
+  const AWS_FQPN = "registry.terraform.io/hashicorp/aws";
+  const pinned = fs
+    .readFileSync(path.join(__dirname, "..", "..", "..", "schemas", "PROVIDER_VERSION"), "utf-8")
+    .trim();
+
+  it("carries the pin in the fixture rather than falling back to 'latest'", () => {
+    // `terraform providers schema -json` records no version; src/schema.ts synthesizes
+    // provider_versions from schemas/PROVIDER_VERSION for every real run, and the fixture has to
+    // do the same or these snapshots pin output `pnpm generate` never produces.
+    expect(pinned).toBe("6.62.0");
+    expect(miniSchema().provider_versions?.[AWS_FQPN]).toBe(pinned);
+  });
+
+  it("stamps the pinned version into every doc link and into the generator metadata", () => {
+    // Only links the generator itself writes: a file-header `// <url>`, or a `{@link <url>}` on a
+    // member. A registry URL sitting inside an upstream *description* (the `region` attribute
+    // links to `/aws/latest/docs#aws-configuration-reference`) is upstream prose carried through
+    // verbatim and is deliberately not rewritten.
+    const emittedLink = /(?:^\/\/ |\{@link )https:\/\/registry\.terraform\.io\/providers\/hashicorp\/aws\/([^/]+)\/docs/gm;
+    const files = fileBytes(outDir);
+    const versions = new Set(
+      Object.values(files).flatMap((text) => [...text.matchAll(emittedLink)].map((m) => m[1])),
+    );
+    expect(versions.size).toBeGreaterThan(0);
+    expect([...versions]).toEqual([pinned]);
+    expect(read("provider/src/aws-provider.ts")).toContain(`providerVersion: '${pinned}'`);
+    expect(read("provider/src/aws-provider.ts")).not.toContain("providerVersion: 'latest'");
+  });
+});
+
 describe("aliases", () => {
   it("generates an alias as its own class inside its canonical target's group", () => {
     const elb = result.groups.find((g) => g.slug === "elb")!;

@@ -1,5 +1,8 @@
 {
   "format_version": "1.0",
+  "provider_versions": {
+    "registry.terraform.io/hashicorp/aws": "6.62.0"
+  },
   "provider_schemas": {
     "registry.terraform.io/hashicorp/aws": {
       "provider": {

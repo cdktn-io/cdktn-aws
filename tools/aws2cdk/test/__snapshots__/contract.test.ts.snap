@@ -3,179 +3,179 @@
 exports[`snapshots emits a stable alias resource 1`] = `
 "// Copyright (c) cdktn-io
 // SPDX-License-Identifier: MPL-2.0
-// https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb
 // generated from terraform resource schema — do not edit by hand
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
 export interface AwsAlbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#client_keep_alive AwsAlb#client_keep_alive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#client_keep_alive AwsAlb#client_keep_alive}
   */
   readonly clientKeepAlive?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#customer_owned_ipv4_pool AwsAlb#customer_owned_ipv4_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#customer_owned_ipv4_pool AwsAlb#customer_owned_ipv4_pool}
   */
   readonly customerOwnedIpv4Pool?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#desync_mitigation_mode AwsAlb#desync_mitigation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#desync_mitigation_mode AwsAlb#desync_mitigation_mode}
   */
   readonly desyncMitigationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#dns_record_client_routing_policy AwsAlb#dns_record_client_routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#dns_record_client_routing_policy AwsAlb#dns_record_client_routing_policy}
   */
   readonly dnsRecordClientRoutingPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#drop_invalid_header_fields AwsAlb#drop_invalid_header_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#drop_invalid_header_fields AwsAlb#drop_invalid_header_fields}
   */
   readonly dropInvalidHeaderFields?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_cross_zone_load_balancing AwsAlb#enable_cross_zone_load_balancing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_cross_zone_load_balancing AwsAlb#enable_cross_zone_load_balancing}
   */
   readonly enableCrossZoneLoadBalancing?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_deletion_protection AwsAlb#enable_deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_deletion_protection AwsAlb#enable_deletion_protection}
   */
   readonly enableDeletionProtection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_http2 AwsAlb#enable_http2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_http2 AwsAlb#enable_http2}
   */
   readonly enableHttp2?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_prefix_for_ipv6_source_nat AwsAlb#enable_prefix_for_ipv6_source_nat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_prefix_for_ipv6_source_nat AwsAlb#enable_prefix_for_ipv6_source_nat}
   */
   readonly enablePrefixForIpv6SourceNat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_tls_version_and_cipher_suite_headers AwsAlb#enable_tls_version_and_cipher_suite_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_tls_version_and_cipher_suite_headers AwsAlb#enable_tls_version_and_cipher_suite_headers}
   */
   readonly enableTlsVersionAndCipherSuiteHeaders?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_waf_fail_open AwsAlb#enable_waf_fail_open}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_waf_fail_open AwsAlb#enable_waf_fail_open}
   */
   readonly enableWafFailOpen?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_xff_client_port AwsAlb#enable_xff_client_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_xff_client_port AwsAlb#enable_xff_client_port}
   */
   readonly enableXffClientPort?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enable_zonal_shift AwsAlb#enable_zonal_shift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enable_zonal_shift AwsAlb#enable_zonal_shift}
   */
   readonly enableZonalShift?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enforce_security_group_inbound_rules_on_private_link_traffic AwsAlb#enforce_security_group_inbound_rules_on_private_link_traffic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enforce_security_group_inbound_rules_on_private_link_traffic AwsAlb#enforce_security_group_inbound_rules_on_private_link_traffic}
   */
   readonly enforceSecurityGroupInboundRulesOnPrivateLinkTraffic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#id AwsAlb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#id AwsAlb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#idle_timeout AwsAlb#idle_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#idle_timeout AwsAlb#idle_timeout}
   */
   readonly idleTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#internal AwsAlb#internal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#internal AwsAlb#internal}
   */
   readonly internal?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#ip_address_type AwsAlb#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ip_address_type AwsAlb#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#load_balancer_type AwsAlb#load_balancer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#load_balancer_type AwsAlb#load_balancer_type}
   */
   readonly loadBalancerType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#name AwsAlb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name AwsAlb#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#name_prefix AwsAlb#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#name_prefix AwsAlb#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#preserve_host_header AwsAlb#preserve_host_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#preserve_host_header AwsAlb#preserve_host_header}
   */
   readonly preserveHostHeader?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#region AwsAlb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#region AwsAlb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#secondary_ips_auto_assigned_per_subnet AwsAlb#secondary_ips_auto_assigned_per_subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#secondary_ips_auto_assigned_per_subnet AwsAlb#secondary_ips_auto_assigned_per_subnet}
   */
   readonly secondaryIpsAutoAssignedPerSubnet?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#security_groups AwsAlb#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#security_groups AwsAlb#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#subnets AwsAlb#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnets AwsAlb#subnets}
   */
   readonly subnets?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#tags AwsAlb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags AwsAlb#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#tags_all AwsAlb#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#tags_all AwsAlb#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#xff_header_processing_mode AwsAlb#xff_header_processing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#xff_header_processing_mode AwsAlb#xff_header_processing_mode}
   */
   readonly xffHeaderProcessingMode?: string;
   /**
   * access_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#access_logs AwsAlb#access_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#access_logs AwsAlb#access_logs}
   */
   readonly accessLogs?: AwsAlb.AccessLogsProperty;
   /**
   * connection_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#connection_logs AwsAlb#connection_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#connection_logs AwsAlb#connection_logs}
   */
   readonly connectionLogs?: AwsAlb.ConnectionLogsProperty;
   /**
   * health_check_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#health_check_logs AwsAlb#health_check_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#health_check_logs AwsAlb#health_check_logs}
   */
   readonly healthCheckLogs?: AwsAlb.HealthCheckLogsProperty;
   /**
   * ipam_pools block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#ipam_pools AwsAlb#ipam_pools}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipam_pools AwsAlb#ipam_pools}
   */
   readonly ipamPools?: AwsAlb.IpamPoolsProperty;
   /**
   * minimum_load_balancer_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#minimum_load_balancer_capacity AwsAlb#minimum_load_balancer_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#minimum_load_balancer_capacity AwsAlb#minimum_load_balancer_capacity}
   */
   readonly minimumLoadBalancerCapacity?: AwsAlb.MinimumLoadBalancerCapacityProperty;
   /**
   * subnet_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#subnet_mapping AwsAlb#subnet_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_mapping AwsAlb#subnet_mapping}
   */
   readonly subnetMapping?: AwsAlb.SubnetMappingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#timeouts AwsAlb#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#timeouts AwsAlb#timeouts}
   */
   readonly timeouts?: AwsAlb.TimeoutsProperty;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb aws_alb}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb aws_alb}
 */
 export class AwsAlb extends cdktn.TerraformResource {
 
@@ -191,7 +191,7 @@ export class AwsAlb extends cdktn.TerraformResource {
   * Generates CDKTN code for importing a AwsAlb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AwsAlb to import
-  * @param importFromId The id of the existing AwsAlb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AwsAlb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AwsAlb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -203,7 +203,7 @@ export class AwsAlb extends cdktn.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb aws_alb} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb aws_alb} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -214,7 +214,7 @@ export class AwsAlb extends cdktn.TerraformResource {
       terraformResourceType: 'aws_alb',
       terraformGeneratorMetadata: {
         providerName: 'aws',
-        providerVersion: 'latest',
+        providerVersion: '6.62.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -1428,15 +1428,15 @@ export function awsAlbTimeoutsPropertyToHclTerraform(struct?: AwsAlb.TimeoutsPro
 export namespace AwsAlb {
 export interface AccessLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#bucket AwsAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enabled AwsAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#prefix AwsAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1531,15 +1531,15 @@ export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectionLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#bucket AwsAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enabled AwsAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#prefix AwsAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1634,15 +1634,15 @@ export class ConnectionLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#bucket AwsAlb#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#bucket AwsAlb#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#enabled AwsAlb#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#enabled AwsAlb#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#prefix AwsAlb#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#prefix AwsAlb#prefix}
   */
   readonly prefix?: string;
 }
@@ -1737,7 +1737,7 @@ export class HealthCheckLogsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface IpamPoolsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#ipv4_ipam_pool_id AwsAlb#ipv4_ipam_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv4_ipam_pool_id AwsAlb#ipv4_ipam_pool_id}
   */
   readonly ipv4IpamPoolId: string;
 }
@@ -1788,7 +1788,7 @@ export class IpamPoolsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MinimumLoadBalancerCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#capacity_units AwsAlb#capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#capacity_units AwsAlb#capacity_units}
   */
   readonly capacityUnits: number;
 }
@@ -1839,19 +1839,19 @@ export class MinimumLoadBalancerCapacityPropertyOutputReference extends cdktn.Co
 }
 export interface SubnetMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#allocation_id AwsAlb#allocation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#allocation_id AwsAlb#allocation_id}
   */
   readonly allocationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#ipv6_address AwsAlb#ipv6_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#ipv6_address AwsAlb#ipv6_address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#private_ipv4_address AwsAlb#private_ipv4_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#private_ipv4_address AwsAlb#private_ipv4_address}
   */
   readonly privateIpv4Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#subnet_id AwsAlb#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#subnet_id AwsAlb#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -2005,15 +2005,15 @@ export class SubnetMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#create AwsAlb#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#create AwsAlb#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#delete AwsAlb#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#delete AwsAlb#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb#update AwsAlb#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb#update AwsAlb#update}
   */
   readonly update?: string;
 }
@@ -2126,47 +2126,47 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 exports[`snapshots emits a stable data source 1`] = `
 "// Copyright (c) cdktn-io
 // SPDX-License-Identifier: MPL-2.0
-// https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb
 // generated from terraform resource schema — do not edit by hand
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
 export interface DataAwsLbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#arn DataAwsLb#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#arn DataAwsLb#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#id DataAwsLb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#id DataAwsLb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#name DataAwsLb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#name DataAwsLb#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#region DataAwsLb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#region DataAwsLb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#tags DataAwsLb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#tags DataAwsLb#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#timeouts DataAwsLb#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#timeouts DataAwsLb#timeouts}
   */
   readonly timeouts?: DataAwsLb.TimeoutsProperty;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb aws_lb}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb aws_lb}
 */
 export class DataAwsLb extends cdktn.TerraformDataSource {
 
@@ -2182,7 +2182,7 @@ export class DataAwsLb extends cdktn.TerraformDataSource {
   * Generates CDKTN code for importing a DataAwsLb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAwsLb to import
-  * @param importFromId The id of the existing DataAwsLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAwsLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAwsLb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
@@ -2194,7 +2194,7 @@ export class DataAwsLb extends cdktn.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb aws_lb} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb aws_lb} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2205,7 +2205,7 @@ export class DataAwsLb extends cdktn.TerraformDataSource {
       terraformResourceType: 'aws_lb',
       terraformGeneratorMetadata: {
         providerName: 'aws',
-        providerVersion: 'latest',
+        providerVersion: '6.62.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -3007,7 +3007,7 @@ export class SubnetMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/lb#read DataAwsLb#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#read DataAwsLb#read}
   */
   readonly read?: string;
 }
@@ -3076,42 +3076,42 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 exports[`snapshots emits a stable ephemeral resource 1`] = `
 "// Copyright (c) cdktn-io
 // SPDX-License-Identifier: MPL-2.0
-// https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation
+// https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation
 // generated from terraform resource schema — do not edit by hand
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
 export interface EphemeralAwsLambdaInvocationConfig extends cdktn.TerraformEphemeralMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#client_context EphemeralAwsLambdaInvocation#client_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#client_context EphemeralAwsLambdaInvocation#client_context}
   */
   readonly clientContext?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#function_name EphemeralAwsLambdaInvocation#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#function_name EphemeralAwsLambdaInvocation#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#log_type EphemeralAwsLambdaInvocation#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#log_type EphemeralAwsLambdaInvocation#log_type}
   */
   readonly logType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#payload EphemeralAwsLambdaInvocation#payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#payload EphemeralAwsLambdaInvocation#payload}
   */
   readonly payload: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#qualifier EphemeralAwsLambdaInvocation#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#qualifier EphemeralAwsLambdaInvocation#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation#region EphemeralAwsLambdaInvocation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation#region EphemeralAwsLambdaInvocation#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation aws_lambda_invocation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation aws_lambda_invocation}
 */
 export class EphemeralAwsLambdaInvocation extends cdktn.TerraformEphemeralResource {
 
@@ -3125,7 +3125,7 @@ export class EphemeralAwsLambdaInvocation extends cdktn.TerraformEphemeralResour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/latest/docs/ephemeral-resources/lambda_invocation aws_lambda_invocation} Ephemeral Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/ephemeral-resources/lambda_invocation aws_lambda_invocation} Ephemeral Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3136,7 +3136,7 @@ export class EphemeralAwsLambdaInvocation extends cdktn.TerraformEphemeralResour
       terraformResourceType: 'aws_lambda_invocation',
       terraformGeneratorMetadata: {
         providerName: 'aws',
-        providerVersion: 'latest',
+        providerVersion: '6.62.0',
         providerVersionConstraint: '~> 6.0'
       },
       provider: config.provider,
@@ -3338,7 +3338,7 @@ exports[`snapshots emits stable package manifests: elb/README.md 1`] = `
 "# @cdktn/aws-elb
 
 cdk-terrain bindings for the **ELB (Elastic Load Balancing)** group of \`terraform-provider-aws\`
-latest — 2 resources, 1 data source.
+6.62.0 — 2 resources, 1 data source.
 
 Generated by \`tools/aws2cdk\` from the pinned provider schema and the repo-root \`groups.json\`.
 Do not edit by hand.
@@ -3356,7 +3356,7 @@ exports[`snapshots emits stable package manifests: elb/package.json 1`] = `
   "name": "@cdktn/aws-elb",
   "version": "0.0.0",
   "private": true,
-  "description": "cdk-terrain bindings for the ELB (Elastic Load Balancing) group of terraform-provider-aws latest",
+  "description": "cdk-terrain bindings for the ELB (Elastic Load Balancing) group of terraform-provider-aws 6.62.0",
   "license": "MPL-2.0",
   "author": {
     "name": "cdktn-io",
@@ -3399,7 +3399,7 @@ exports[`snapshots emits stable package manifests: lambda/README.md 1`] = `
 "# @cdktn/aws-lambda
 
 cdk-terrain bindings for the **Lambda** group of \`terraform-provider-aws\`
-latest — 2 resources, 0 data sources, 1 ephemeral resource.
+6.62.0 — 2 resources, 0 data sources, 1 ephemeral resource.
 
 Generated by \`tools/aws2cdk\` from the pinned provider schema and the repo-root \`groups.json\`.
 Do not edit by hand.
@@ -3417,7 +3417,7 @@ exports[`snapshots emits stable package manifests: lambda/package.json 1`] = `
   "name": "@cdktn/aws-lambda",
   "version": "0.0.0",
   "private": true,
-  "description": "cdk-terrain bindings for the Lambda group of terraform-provider-aws latest",
+  "description": "cdk-terrain bindings for the Lambda group of terraform-provider-aws 6.62.0",
   "license": "MPL-2.0",
   "author": {
     "name": "cdktn-io",
@@ -3460,7 +3460,7 @@ exports[`snapshots emits stable package manifests: provider/README.md 1`] = `
 "# @cdktn/aws-provider
 
 cdk-terrain bindings for the **AWS Provider** group of \`terraform-provider-aws\`
-latest — 0 resources, 0 data sources.
+6.62.0 — 0 resources, 0 data sources.
 
 Generated by \`tools/aws2cdk\` from the pinned provider schema and the repo-root \`groups.json\`.
 Do not edit by hand.
@@ -3478,7 +3478,7 @@ exports[`snapshots emits stable package manifests: provider/package.json 1`] = `
   "name": "@cdktn/aws-provider",
   "version": "0.0.0",
   "private": true,
-  "description": "cdk-terrain bindings for the AWS Provider group of terraform-provider-aws latest",
+  "description": "cdk-terrain bindings for the AWS Provider group of terraform-provider-aws 6.62.0",
   "license": "MPL-2.0",
   "author": {
     "name": "cdktn-io",
