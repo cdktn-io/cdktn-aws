@@ -4,6 +4,10 @@
 # The whole fleet: all 258 groups compiled, packed to Go, and measured against x/mod/zip's
 # per-module source cap.
 #
+# THIS WORKFLOW HAS NEVER EXECUTED. It was authored in M3 stage 2 and the repository has no pushed
+# remote branches, so neither the cron nor the label trigger has ever fired. Every step below is a
+# transcription of a command run by hand locally; the first real run is also this file's first test.
+#
 # This is separate from ci.yml because it is the expensive half. Packing the fleet is ~880 CPU
 # seconds and ~540 MiB of output; ci.yml compiles all 258 on every PR (cheap, ~320 CPU seconds) but
 # packs and measures only two of the eight shards, on the argument that the size bound has 8.6x of

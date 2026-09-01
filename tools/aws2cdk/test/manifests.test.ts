@@ -129,7 +129,26 @@ describe("inventory drift", () => {
     expect(Object.keys(hashes.groups).sort()).toEqual(groupDirs);
   });
 
-  const describeGoRepo = fs.existsSync(goRepo) ? describe : describe.skip;
+  // Locally, a missing cdktn-aws-go checkout is an ordinary state — the repo is a sibling clone,
+  // not a submodule — so the Go half reports as visibly skipped. In CI it is not: an unset or wrong
+  // CDKTN_AWS_GO_ROOT would turn 259 assertions (the module inventory, the no-root-go.mod
+  // invariant, and all 258 module paths) into a green run that asserted none of them. Same
+  // treatment as `requireGeneratedTree` in scale.test.ts — fail with the fix in the message.
+  //
+  // The one CI escape hatch is `CDKTN_AWS_GO_ROOT=none`, which a workflow sets *deliberately* and
+  // in writing to say "no Go checkout is reachable from this runner". An absent repo with no such
+  // declaration is a broken job, not a configuration.
+  const goRepoDeclaredAbsent = process.env.CDKTN_AWS_GO_ROOT === "none";
+  if (!goRepoDeclaredAbsent && !fs.existsSync(goRepo) && process.env.CI) {
+    throw new Error(
+      `the assembled Go fleet is not at ${goRepo}, and this is a CI run, where skipping it would ` +
+        "report 259 unrun assertions as green. Check out cdktn-io/cdktn-aws-go as a sibling of " +
+        `this repository (${path.resolve(repoRoot, "..", "cdktn-aws-go")}), point ` +
+        "CDKTN_AWS_GO_ROOT at it, or set CDKTN_AWS_GO_ROOT=none to declare in the workflow that " +
+        "this runner has none.",
+    );
+  }
+  const describeGoRepo = !goRepoDeclaredAbsent && fs.existsSync(goRepo) ? describe : describe.skip;
   describeGoRepo(`the assembled Go fleet at ${goRepo}`, () => {
     it("has exactly one module directory per group, named by targets.go.packageName", () => {
       const dirs = fs
@@ -141,7 +160,11 @@ describe("inventory drift", () => {
       expect(dirs).toEqual(expected);
     });
 
-    it("has no root go.mod — a parent module would put the whole fleet in one over-cap zip", () => {
+    // Not a size assertion: `x/mod/zip` omits nested-`go.mod` subtrees from a parent's zip
+    // unconditionally, so a root module would pack near-empty rather than over-cap. It is banned
+    // because it would make `go build ./...` at the root resolve against a package-less module,
+    // and because it would publish a permanent module path meaning nothing.
+    it("has no root go.mod — the root is not a module, for tooling and import-path reasons", () => {
       expect(fs.existsSync(path.join(goRepo, "go.mod"))).toBe(false);
     });
 

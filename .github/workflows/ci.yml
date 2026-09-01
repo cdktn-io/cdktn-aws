@@ -4,6 +4,12 @@
 # The pull-request gate. Every check here ran by hand through M1-M3 stage 1; this file is the
 # stage-2 job of making it run on every change.
 #
+# THIS WORKFLOW HAS NEVER EXECUTED. It was authored in M3 stage 2 and the repository has no pushed
+# remote branches, so no run has ever been scheduled: every command below is one that was run by
+# hand locally, transcribed. Treat the first real run as the workflow's own smoke test — expect
+# setup-level breakage (action versions, cache keys, runner tool versions) that local runs cannot
+# have surfaced.
+#
 # What is deliberately NOT here, and why:
 #
 #   * The full 258-group `jsii-pacmak --targets go` pack plus the whole-fleet `zip.CheckDir` size
@@ -53,8 +59,15 @@ jobs:
       - name: contract, scale, manifest and inventory tests
         # `manifests.test.ts` covers VERDICT risks #4 and #5 — the 258 machine-generated manifests
         # whose three permanent strings are unrepairable after the first Go tag, and the four
-        # inventories that have to describe one group set. Its cdktn-aws-go half reports as visibly
-        # skipped here, because that checkout is not present on a runner.
+        # inventories that have to describe one group set.
+        #
+        # CDKTN_AWS_GO_ROOT=none is the test's explicit "this runner has no Go checkout"
+        # declaration: cdktn-aws-go has no remote a runner can clone yet, so its 259 assertions
+        # skip here. Without the declaration the test *fails* on a CI runner rather than skipping,
+        # so an unset or wrong CDKTN_AWS_GO_ROOT can never pass as green. DELETE THIS LINE and
+        # check the repo out here the moment it has a reachable remote.
+        env:
+          CDKTN_AWS_GO_ROOT: none
         run: pnpm test
 
       - name: no cross-group imports (TypeScript)
@@ -173,6 +186,67 @@ jobs:
             if (r.okCount !== r.groups || j3 !== 0 || j6 !== 0) process.exit(1);
           '
 
+      - name: upload the shard's compile record
+        # The reconciliation job below needs the per-group keys to prove the eight shards partition
+        # the fleet. Without this every shard is green on its own and nobody adds them up.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jsii-shard-${{ matrix.shard }}
+          path: tmp/m3/fleet-jsii.json
+          if-no-files-found: error
+
+  # ---------------------------------------------------------------------------------------------
+  # Eight green shards are not the same claim as "the fleet compiles". A shard that silently
+  # compiled nothing reports 0/0 OK and exits 0; a shard-dealing bug that dropped a group from every
+  # leg would too. This job is the only place the fleet-level claim is actually made.
+  fleet-jsii-reconcile:
+    name: every group compiled exactly once, JSII3/JSII6 zero
+    needs: fleet-jsii
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # No merge-multiple: every shard's file is named fleet-jsii.json, so merging would leave one
+      # of the eight and the count would look right for the wrong reason.
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: jsii-shard-*
+          path: shards
+      - name: the eight shards partition generated/, and add up to zero JSII3/JSII6
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const dirs = fs.readdirSync("shards").sort();
+            if (dirs.length !== 8) {
+              throw new Error(`expected 8 shard records, got ${dirs.length}: ${dirs.join(", ")}`);
+            }
+            // hashes.json is the inventory the release step tags off, so it is the right
+            // definition of "the fleet" to reconcile against — not a hardcoded 258.
+            const expected = new Set(
+              Object.keys(JSON.parse(fs.readFileSync("generated/hashes.json", "utf-8")).groups),
+            );
+            const seen = new Map();
+            let j3 = 0, j6 = 0, ok = 0;
+            for (const d of dirs) {
+              const r = JSON.parse(fs.readFileSync(`shards/${d}/fleet-jsii.json`, "utf-8"));
+              j3 += r.codeTotals.JSII3 ?? 0;
+              j6 += r.codeTotals.JSII6 ?? 0;
+              ok += r.okCount;
+              for (const g of Object.keys(r.perGroupMs)) {
+                if (seen.has(g)) throw new Error(`${g} compiled by both ${seen.get(g)} and ${d}`);
+                seen.set(g, d);
+              }
+            }
+            const missing = [...expected].filter((g) => !seen.has(g)).sort();
+            const extra = [...seen.keys()].filter((g) => !expected.has(g)).sort();
+            console.log(`${seen.size}/${expected.size} groups compiled, ${ok} OK, JSII3 ${j3}, JSII6 ${j6}`);
+            if (missing.length) console.error(`never compiled by any shard: ${missing.join(", ")}`);
+            if (extra.length) console.error(`compiled but not in hashes.json: ${extra.join(", ")}`);
+            if (missing.length || extra.length || ok !== expected.size || j3 !== 0 || j6 !== 0) {
+              process.exit(1);
+            }
+          '
+
   # ---------------------------------------------------------------------------------------------
   # Pack to Go and measure, on two of the eight shards. `check-go-size` calls x/mod/zip.CheckDir —
   # the same function `go mod download` runs — so this is the proxy's decision, not an estimate.
@@ -219,3 +293,54 @@ jobs:
           name: go-size-shard-${{ matrix.shard }}
           path: tmp/m3/
           if-no-files-found: ignore
+
+  # ---------------------------------------------------------------------------------------------
+  # The two size shards, added up in one place — so a green PR states what it actually proved. This
+  # is a partial gate by design (six eighths are fleet-full.yml's job) and the summary says so out
+  # loud, because "PR green" must never be read as "258 modules under the cap".
+  go-size-reconcile:
+    name: PR size coverage (2 of 8 shards)
+    needs: fleet-pack-size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: go-size-shard-*
+          path: shards
+          merge-multiple: true
+      - name: both shards measured something, nothing is over the cap, and the gap is named
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const files = fs.readdirSync("shards").filter((f) => /^sizes-shard-\d+\.json$/.test(f)).sort();
+            if (files.length !== 2) {
+              throw new Error(`expected the 2 PR shard records, got ${files.length}: ${files.join(", ")}`);
+            }
+            const shards = files.map((f) => JSON.parse(fs.readFileSync(`shards/${f}`, "utf-8")));
+            const cap = shards[0].cap;
+            const records = shards.flatMap((s) => s.records);
+            const seen = new Set();
+            for (const r of records) {
+              if (seen.has(r.module)) throw new Error(`${r.module} measured by both shards`);
+              seen.add(r.module);
+            }
+            // A shard that packed nothing exits 0 with an empty record set, which would otherwise
+            // read as "0 over the cap".
+            if (records.length === 0) throw new Error("the shards measured no modules at all");
+            const total = Object.keys(
+              JSON.parse(fs.readFileSync("generated/hashes.json", "utf-8")).groups,
+            ).length;
+            records.sort((a, b) => b.totalValidBytes - a.totalValidBytes);
+            const worst = records[0];
+            const pct = ((100 * worst.totalValidBytes) / cap).toFixed(2);
+            console.log(`shards 1 and 5: ${records.length} of ${total} modules measured`);
+            console.log(`worst here: ${worst.module} ${worst.totalValidBytes} B = ${pct} % of the ${cap} B cap`);
+            console.log(
+              `NOT PROVEN BY THIS RUN: the other ${total - records.length} modules. ` +
+                "fleet-full.yml measures all 258 nightly, on the `full-fleet` label, and on demand.",
+            );
+            const over = records.filter((r) => !r.pass);
+            for (const r of over) console.error(`OVER CAP ${r.module} ${r.totalValidBytes} B`);
+            if (over.length > 0) process.exit(1);
+          '
