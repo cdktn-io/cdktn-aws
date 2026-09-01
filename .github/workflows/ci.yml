@@ -125,7 +125,13 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - uses: $/.github/actions/provider-schema
+      # Workspace-relative form, not the `$/` self-repository form zizmor's audit prefers: `$/`
+      # needs runner agent >= 2.336.0 and Depot's current image is older — the job fails in 0s at
+      # assignment ("requires runner version 2.336.0 or later", first main run 33527219338). The
+      # checkout above uses persist-credentials:false and no earlier step writes the workspace, so
+      # the substitution risk `$/` guards against is not live here. Revisit when Depot's agent
+      # catches up.
+      - uses: ./.github/actions/provider-schema # zizmor: ignore[self-repository]
 
       - name: check:groups (gate A coverage, gate B moves, canonical form)
         run: pnpm check:groups
