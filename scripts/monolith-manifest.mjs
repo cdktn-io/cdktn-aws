@@ -26,6 +26,49 @@
 export const MONOLITH_TARGETS = ["python", "java", "dotnet"];
 
 /**
+ * The `.npmignore` that goes next to the manifest, and the reason it has to be written by hand.
+ *
+ * `jsii-pacmak` writes exactly this file itself (`lib/npm-modules.js#updateNpmIgnore`, opinionated
+ * defaults on a fresh file) — but ONLY on the branch where the outdir comes from `package.json`.
+ * `scripts/package.mjs` passes `--outdir dist`, which takes the other branch and skips the whole
+ * `updateAllNpmIgnores` step. That is why `generated/<group>/.npmignore` exists (gitignored, written
+ * by the fleet build, which passes no `--outdir`) while `monolith/` never got one, and why
+ * `@cdktn/aws@0.1.0` shipped its entire `src/` tree: 7,990 files, 550,672,898 B unpacked, of which
+ * 2,661 are `.ts` sources that no consumer of a compiled jsii assembly can use. The same tarball is
+ * the jsii kernel payload embedded in the Python wheel and the Java/.NET packages, so the bloat was
+ * paid again by every language.
+ *
+ * The content is pacmak's own default verbatim — the same shape `@cdktn/provider-aws` publishes
+ * (projen writes it there; `/src/`, `!/lib/**`, `!.jsii`) — plus one explicit `/src/` line, because
+ * `*.ts` excluding the tree is a consequence of every file in it happening to end in `.ts` and this
+ * is not the place to rely on that.
+ */
+export const MONOLITH_NPMIGNORE = [
+  "# Written by scripts/build-monolith.mjs, not by jsii-pacmak: `--outdir` skips its",
+  "# .npmignore pass. See scripts/monolith-manifest.mjs for the whole story.",
+  "",
+  "# Exclude typescript source and config",
+  "*.ts",
+  "tsconfig.json",
+  "*.tsbuildinfo",
+  "",
+  "# Include javascript files and typescript declarations",
+  "!*.js",
+  "!*.d.ts",
+  "",
+  "# Exclude jsii outdir",
+  "dist",
+  "",
+  "# Include .jsii and .jsii.gz",
+  "!.jsii",
+  "!.jsii.gz",
+  "",
+  "# The compiled assembly is the product; the sources it was compiled from are not.",
+  "/src/",
+  "",
+].join("\n");
+
+/**
  * @param {{ groups: string[], version: string, providerVersion: string }} opts
  * @returns {object} the exact object written to `monolith/package.json`
  */
@@ -75,6 +118,12 @@ if (process.argv[1] && process.argv[1].endsWith("monolith-manifest.mjs")) {
     const i = process.argv.indexOf(`--${name}`);
     return i >= 0 && i + 1 < process.argv.length ? process.argv[i + 1] : fallback;
   };
+  // `--npmignore` prints the allowlist instead of the manifest — the other half of what this module
+  // emits into `monolith/`, and the half that keeps `src/` out of the published tarball.
+  if (process.argv.includes("--npmignore")) {
+    process.stdout.write(MONOLITH_NPMIGNORE);
+    process.exit(0);
+  }
   const groups = arg("groups", "")
     .split(",")
     .map((s) => s.trim())

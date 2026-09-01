@@ -30,6 +30,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, wri
 import { spawnSync } from "node:child_process";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
+import { checkJsTarball, soleTarball } from "./check-js-tarball.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const monolithDir = path.join(repoRoot, "monolith");
@@ -117,6 +118,24 @@ for (const target of targets) {
   const bytes = dirBytes(outDir);
   perTarget[target] = { seconds: secs, bytes, human: humanMB(bytes) };
   console.log(`[package] dist/${target}: ${humanMB(bytes)} in ${secs}s`);
+
+  // The js tarball is the one artifact every other target also ships: pacmak embeds it verbatim as
+  // the jsii kernel payload inside the wheel, the jar and the nupkg. Gate it here, at the only
+  // point where it exists and before anything can publish it — 0.1.0 went out with `src/` in it.
+  if (target === "js") {
+    try {
+      const tgz = soleTarball(outDir);
+      const { files, bytes: unpacked } = checkJsTarball(tgz);
+      perTarget[target].tarball = { name: path.basename(tgz), files, unpackedBytes: unpacked };
+      console.log(
+        `[package] tarball gate: ${path.basename(tgz)} OK — ${files} files, ` +
+          `${unpacked} B (${humanMB(unpacked)}) unpacked, no sources`,
+      );
+    } catch (err) {
+      console.error(err.message);
+      process.exit(1);
+    }
+  }
 }
 
 writeFileSync(
