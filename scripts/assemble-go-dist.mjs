@@ -16,6 +16,8 @@
  *   * two groups claiming one directory (impossible by the manifest test, asserted again here)
  *   * a module directory with no go.mod
  *   * fewer modules than `generated/hashes.json` has groups
+ *   * a module whose `version` file is not EXACTLY the release version — the failure that killed
+ *     the first release after five registries had already published (scripts/fleet-version.mjs)
  *
  * `go mod tidy` still has to run over the result before anything is tagged — pacmak emits no
  * `go.sum` and a tag without one is unverifiable (scripts/go-tidy-build.mjs).
@@ -28,6 +30,7 @@
 import { readdirSync, existsSync, readFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fleetVersion, readGoVersionFile, GO_VERSION_FILE } from "./fleet-version.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generatedDir = path.join(repoRoot, "generated");
@@ -43,6 +46,26 @@ const expected = Object.keys(
   JSON.parse(readFileSync(path.join(generatedDir, "hashes.json"), "utf8")).groups,
 ).sort();
 
+/**
+ * The version every assembled module must declare — `PACKAGE_VERSION`, else this repository's own
+ * semver, exactly as `scripts/build-fleet.mjs` stamped it.
+ */
+const version = fleetVersion(repoRoot);
+
+/**
+ * publib's `GoReleaser.extractVersion` reads this file and compares its RAW contents to `$VERSION`,
+ * so "0.1.0\n" is a conflict and not a match. Asserted here on every module, in both modes: this is
+ * the last place before `publib-golang` where a mis-stamped fleet is still cheap to notice.
+ */
+function versionProblem(moduleDir) {
+  const file = path.join(moduleDir, GO_VERSION_FILE);
+  if (!existsSync(file)) return `${path.relative(repoRoot, file)} is missing`;
+  const raw = readGoVersionFile(moduleDir);
+  return raw === version
+    ? undefined
+    : `${path.relative(repoRoot, file)} is ${JSON.stringify(raw)}, expected ${JSON.stringify(version)}`;
+}
+
 if (verifyOnly) {
   const dirs = existsSync(outDir)
     ? readdirSync(outDir, { withFileTypes: true })
@@ -57,9 +80,16 @@ if (verifyOnly) {
   if (existsSync(path.join(outDir, "go.mod"))) {
     problems.push(`${outDir}/go.mod exists — the root must not be a module (docs/m3-go.md)`);
   }
-  for (const p of problems) console.error(p);
+  for (const dir of dirs) {
+    const problem = versionProblem(path.join(outDir, dir));
+    if (problem) problems.push(problem);
+  }
+  for (const p of problems.slice(0, 20)) console.error(p);
+  if (problems.length > 20) console.error(`… and ${problems.length - 20} more`);
   if (problems.length > 0) process.exit(1);
-  console.log(`${path.relative(repoRoot, outDir)}: ${dirs.length} modules, no root go.mod`);
+  console.log(
+    `${path.relative(repoRoot, outDir)}: ${dirs.length} modules at v${version}, no root go.mod`,
+  );
   process.exit(0);
 }
 
@@ -88,6 +118,14 @@ for (const group of expected) {
     }
     seen.set(mod.name, group);
     cpSync(src, path.join(outDir, mod.name), { recursive: true });
+    const problem = versionProblem(path.join(outDir, mod.name));
+    if (problem) {
+      console.error(
+        `${group}: ${problem}\nRe-pack it with the release version: ` +
+          `PACKAGE_VERSION=${version} node scripts/build-fleet.mjs ${group}`,
+      );
+      process.exit(1);
+    }
   }
 }
 
@@ -115,5 +153,5 @@ if (seen.size === 0) {
 }
 
 console.log(
-  `assembled ${path.relative(repoRoot, outDir)}: ${seen.size}${allowPartial ? ` of ${expected.length}` : ""} modules, no root go.mod`,
+  `assembled ${path.relative(repoRoot, outDir)}: ${seen.size}${allowPartial ? ` of ${expected.length}` : ""} modules at v${version}, no root go.mod`,
 );

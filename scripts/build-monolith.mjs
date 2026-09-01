@@ -28,7 +28,8 @@ import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, readFileSync, write
 import { spawnSync } from "node:child_process";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
-import { monolithManifest } from "./monolith-manifest.mjs";
+import { MONOLITH_NPMIGNORE, monolithManifest } from "./monolith-manifest.mjs";
+import { checkJsTarball, soleTarball } from "./check-js-tarball.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generatedDir = path.join(repoRoot, "generated");
@@ -118,6 +119,12 @@ writeFileSync(
   path.join(monolithDir, "package.json"),
   JSON.stringify(monolithManifest({ groups, version: VERSION, providerVersion: PROVIDER_VERSION }), null, 2) + "\n",
 );
+
+// ...and the allowlist that keeps `src/` out of the packed tarball. It is emitted here rather than
+// left to jsii-pacmak because `scripts/package.mjs` passes `--outdir`, which skips pacmak's own
+// .npmignore pass — the omission that shipped 550 MB of TypeScript as @cdktn/aws@0.1.0.
+// scripts/check-js-tarball.mjs is the gate that proves this file did its job.
+writeFileSync(path.join(monolithDir, ".npmignore"), MONOLITH_NPMIGNORE);
 
 writeFileSync(
   path.join(monolithDir, "README.md"),
@@ -274,4 +281,15 @@ for (const name of SUBMODULES) {
 
 for (const target of pacmakTargets) {
   run(`jsii-pacmak --targets ${target}`, bin("jsii-pacmak"), ["--targets", target]);
+  // Same gate scripts/package.mjs applies, so the direct `--pacmak js` route cannot produce an
+  // unchecked tarball either.
+  if (target === "js") {
+    try {
+      const { files, bytes } = await checkJsTarball(soleTarball(path.join(monolithDir, "dist", "js")));
+      console.log(`tarball gate: OK — ${files} files, ${bytes} B unpacked, no sources`);
+    } catch (err) {
+      console.error(err.message);
+      process.exit(1);
+    }
+  }
 }

@@ -45,7 +45,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version to release (no leading v), e.g. 0.1.0. Must equal package.json's version."
+        description: "Version to release (no leading v), e.g. 0.1.1. Must equal package.json's version."
         required: true
         type: string
       dry_run:
@@ -63,6 +63,21 @@ concurrency:
 # Least privilege by default; every job below declares exactly what it needs. `contents: write` is
 # the GitHub Release job's alone, `id-token: write` the two OIDC publish jobs' alone.
 permissions: {}
+
+# WHICH BRANCH MAY PUBLISH. `workflow_dispatch` runs the workflow file from whatever ref the
+# dispatcher picks, so a branch is a code path into every credential this workflow can reach. An
+# `if: github.ref == …` guard here would be worthless: it lives in the same file the attacker's
+# branch is allowed to rewrite. The control that cannot be edited from the branch is a deployment
+# ENVIRONMENT — its branch policy and its reviewers are repository settings, evaluated by GitHub
+# before the job starts, and the secrets can be scoped to it. So every job that can publish declares
+# one: `release` for npm/Maven/NuGet/Go/the GitHub Release, and `pypi` for PyPI, which must keep that
+# exact name because the PyPI trusted publisher binds to it.
+#
+# The `release` environment's protection rules (deployment branch policy: protected branches only,
+# plus required reviewers) are created by cdktn-repository-manager, Terraform-side. An environment
+# NAMED HERE BUT NOT YET APPLIED IS AUTO-CREATED BY GITHUB WITH NO PROTECTION AT ALL — it would
+# gate nothing. The manager's PR therefore has to be applied before the next release; until it is,
+# treat the guarantee below as absent. See docs/m4-publishing.md §3.
 
 env:
   # jsii holds the whole 2.18M-line program in memory; the monolith compile peaks around 7.2 GB RSS
@@ -182,10 +197,19 @@ jobs:
           package-manager-cache: false
       - run: pnpm install --frozen-lockfile
 
+      # PACKAGE_VERSION is what stamps the packed modules — the committed generated/<group>/
+      # manifests stay at 0.0.0 and are restored after the build (scripts/fleet-version.mjs). Release
+      # 0.1.0 failed here: the fleet packed 0.0.0 while five registries published 0.1.0. It reaches
+      # the script through `env` only, never interpolated into `run:`, and the script rejects
+      # anything that is not a plain semver.
       - name: jsii + jsii-pacmak --targets go, shard ${{ matrix.shard }} of 8
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
         run: node scripts/build-fleet.mjs --shard ${{ matrix.shard }}/8
 
       - name: collect this shard's modules
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
         run: node scripts/assemble-go-dist.mjs --out dist/go --allow-partial
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -231,7 +255,11 @@ jobs:
           path: dist/go
           merge-multiple: true
 
-      - name: every group present exactly once, and no root go.mod
+      # …and every module's `version` file is exactly this release's version: publib compares those
+      # bytes to $VERSION and refuses the whole fleet on the first mismatch.
+      - name: every group present exactly once, at the release version, and no root go.mod
+        env:
+          PACKAGE_VERSION: ${{ inputs.version }}
         run: node scripts/assemble-go-dist.mjs --out dist/go --verify
 
       # pacmak emits no go.sum, and a tag without one is unverifiable by the checksum database.
@@ -261,7 +289,9 @@ jobs:
     runs-on: ubuntu-latest
     # The only job in this workflow that may write to this repository, and all it writes is the
     # release and its tag. `gh release create` on a tag that does not exist creates it at the
-    # dispatched ref, which is how this repository's own semver becomes a git tag.
+    # dispatched ref, which is how this repository's own semver becomes a git tag — which is exactly
+    # why it is gated: an unprotected branch must not be able to mint a `v*` tag on this repo.
+    environment: release
     permissions:
       contents: write
     steps:
@@ -272,8 +302,28 @@ jobs:
         with:
           name: dist-monolith
           path: dist
+      # PARTIAL-RELEASE RECOVERY. Five of the six targets published 0.1.0 and the Go fleet did not,
+      # so the recovery is to re-dispatch the same version — which means every publish job has to be
+      # a no-op when its target already exists. Found = skip and succeed; not found = publish. A
+      # registry that is merely slow to index therefore still gets a publish attempt, and every one
+      # of these registries refuses a true duplicate on its own (docs/m4-publishing.md §5).
+      - name: already released?
+        id: published
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          if gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "GitHub Release v$VERSION already exists — this job has nothing to do"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "no GitHub Release v$VERSION yet"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Create GitHub Release
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && steps.published.outputs.found != 'true' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ needs.build_monolith.outputs.version }}
@@ -304,9 +354,14 @@ jobs:
     # published languages and no Go. Plain `needs:` is what does that: no `if:` here overrides it.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
-    # No `environment:` — the npm Trusted Publisher for @cdktn/aws is registered with the
-    # Environment field left BLANK (docs/m4-publishing.md §3). Adding one here silently breaks the
-    # OIDC claim match.
+    # REQUIRES A ONE-TIME npm CHANGE BEFORE THE NEXT RELEASE. The npm Trusted Publisher for
+    # @cdktn/aws was registered with the Environment field left blank. With `environment: release`
+    # the OIDC token now carries an `environment` claim, and npm's matching of a token that has one
+    # against a publisher config that does not is not something to find out during a publish: set
+    # the publisher's Environment to `release` on npmjs.com FIRST. docs/m4-publishing.md §3 is the
+    # checklist. The environment gate is not optional — without it any branch a contributor can
+    # push is a path to this repository's npm identity.
+    environment: release
     permissions:
       id-token: write
       contents: read
@@ -324,8 +379,23 @@ jobs:
       # reviewed pin — never a floating range in a job that holds a publishing identity.
       - name: Ensure npm supports Trusted Publishing
         run: npm install -g npm@11.19.1 && npm --version # zizmor: ignore[adhoc-packages] exact pin, reviewed
+      # See release_github's "already released?" — a re-dispatch of a partially-failed release must
+      # skip what already shipped rather than fail on it.
+      - name: already released?
+        id: published
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          if npm view "@cdktn/aws@$VERSION" version >/dev/null 2>&1; then
+            echo "@cdktn/aws@$VERSION is already on npm — this job has nothing to do"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "@cdktn/aws@$VERSION is not on npm yet"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && steps.published.outputs.found != 'true' }}
         run: npm publish dist/js/*.tgz --provenance --access public
       - name: DRY RUN — what would be published to npm
         if: ${{ inputs.dry_run }}
@@ -356,8 +426,24 @@ jobs:
         with:
           name: dist-monolith
           path: dist
+      # See release_github's "already released?". `skip-existing` below already makes the upload
+      # itself idempotent; this makes the *decision* visible in the log of a recovery run.
+      - name: already released?
+        id: published
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          status="$(curl -sS -o /dev/null -w '%{http_code}' "https://pypi.org/pypi/cdktn-aws/$VERSION/json" || echo 000)"
+          if [ "$status" = "200" ]; then
+            echo "cdktn-aws $VERSION is already on PyPI — this job has nothing to do"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "PyPI has no cdktn-aws $VERSION (HTTP $status)"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && steps.published.outputs.found != 'true' }}
         uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           packages-dir: dist/python
@@ -376,6 +462,8 @@ jobs:
     # none do.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds the Maven signing key and the Central Portal credentials — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
@@ -399,8 +487,26 @@ jobs:
         with:
           name: dist-monolith
           path: dist
+      # See release_github's "already released?". Maven Central's index can lag a publish by minutes,
+      # so a not-found here only means "attempt it": the Central Portal rejects a redeploy of an
+      # existing io.cdktn:cdktn-aws:<version> itself.
+      - name: already released?
+        id: published
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          url="https://repo1.maven.org/maven2/io/cdktn/cdktn-aws/$VERSION/cdktn-aws-$VERSION.pom"
+          status="$(curl -sS -o /dev/null -w '%{http_code}' -I "$url" || echo 000)"
+          if [ "$status" = "200" ]; then
+            echo "io.cdktn:cdktn-aws:$VERSION is already on Maven Central — this job has nothing to do"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Maven Central has no io.cdktn:cdktn-aws:$VERSION (HTTP $status)"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && steps.published.outputs.found != 'true' }}
         env:
           MAVEN_SERVER_ID: central-ossrh
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
@@ -424,6 +530,8 @@ jobs:
     # none do.
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds NUGET_API_KEY — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
@@ -441,8 +549,25 @@ jobs:
         with:
           name: dist-monolith
           path: dist
+      # See release_github's "already released?". The flat container is the package content API the
+      # restore path itself reads; ids in its URLs are lower-cased (Io.Cdktn.Aws -> io.cdktn.aws).
+      - name: already released?
+        id: published
+        env:
+          VERSION: ${{ needs.build_monolith.outputs.version }}
+        run: |
+          set -euo pipefail
+          url="https://api.nuget.org/v3-flatcontainer/io.cdktn.aws/$VERSION/io.cdktn.aws.$VERSION.nupkg"
+          status="$(curl -sS -o /dev/null -w '%{http_code}' -I "$url" || echo 000)"
+          if [ "$status" = "200" ]; then
+            echo "Io.Cdktn.Aws $VERSION is already on nuget.org — this job has nothing to do"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "nuget.org has no Io.Cdktn.Aws $VERSION (HTTP $status)"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Publish
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && steps.published.outputs.found != 'true' }}
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: pnpm exec publib-nuget dist/dotnet
@@ -458,6 +583,8 @@ jobs:
     name: Publish the fleet to cdktn-aws-go
     needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
+    # Holds GO_GITHUB_TOKEN, which can push to cdktn-io/cdktn-aws-go — env-scoped, branch-gated.
+    environment: release
     permissions:
       contents: read
     steps:
@@ -504,6 +631,11 @@ jobs:
           # No credential, no clone: this prints the tag set publib-golang would create, from the
           # same go.mod files it would read. Once cdktn-aws-go exists, `PUBLIB_DRYRUN=true
           # pnpm exec publib-golang dist/go` is the deeper dry run — it clones and diffs for real.
+          #
+          # It also runs publib's OWN version check on every module. Release 0.1.0's dry run was
+          # green while the real run died in `extractVersion`, because this step enumerated modules
+          # and never looked at their `version` files: publib compares the RAW file contents with
+          # $VERSION, so both "0.0.0" and "0.1.0\n" are conflicts. That comparison is now here.
           node -e '
             const fs = require("node:fs");
             const dirs = fs.readdirSync("dist/go").filter((d) => fs.existsSync(`dist/go/${d}/go.mod`)).sort();
@@ -515,4 +647,8 @@ jobs:
             const repos = new Set(dirs.map((d) => fs.readFileSync(`dist/go/${d}/go.mod`, "utf8").match(/module (.*)/)[1].split("/").slice(0, 3).join("/")));
             console.log(`target repository: ${[...repos].join(", ")}`);
             if (repos.size !== 1) { console.error("more than one target repository in dist/go"); process.exit(1); }
+            const bad = dirs.filter((d) => { const f = `dist/go/${d}/version`; return !fs.existsSync(f) || fs.readFileSync(f, "utf8") !== version; });
+            for (const d of bad.slice(0, 20)) console.error(`dist/go/${d}/version is ${fs.existsSync(`dist/go/${d}/version`) ? JSON.stringify(fs.readFileSync(`dist/go/${d}/version`, "utf8")) : "missing"}, expected ${JSON.stringify(version)}`);
+            if (bad.length > 0) { console.error(`${bad.length} of ${dirs.length} modules would be refused by publib extractVersion`); process.exit(1); }
+            console.log(`${dirs.length} of ${dirs.length} modules declare version ${version} exactly — publib would accept every one`);
           '

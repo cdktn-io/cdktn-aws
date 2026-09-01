@@ -86,6 +86,38 @@ describe("the monolith manifest", () => {
   });
 });
 
+describe("the .npmignore emitted beside it", () => {
+  // `@cdktn/aws@0.1.0` unpacked to 7,990 files / 550,672,898 B: the entire monolith `src/` tree
+  // alongside `lib/`, because `monolith/` had no allowlist. jsii-pacmak writes one itself — but only
+  // when the outdir comes from package.json, and `scripts/package.mjs` passes `--outdir`. So the
+  // file is emitted by hand, and `monolith/` is gitignored, which leaves this the only place the
+  // rule can be asserted without a 40-second jsii compile.
+  const npmignore = execFileSync(process.execPath, [script, "--npmignore"], { encoding: "utf-8" });
+  const lines = npmignore.split("\n").map((l) => l.trim());
+
+  it("excludes TypeScript sources and the src/ tree", () => {
+    expect(lines).toContain("*.ts");
+    expect(lines).toContain("/src/");
+  });
+
+  it("excludes build config that no consumer can use", () => {
+    expect(lines).toContain("tsconfig.json");
+    expect(lines).toContain("*.tsbuildinfo");
+  });
+
+  it("keeps the compiled output, the declarations and the assembly", () => {
+    expect(lines).toContain("!*.js");
+    expect(lines).toContain("!*.d.ts");
+    expect(lines).toContain("!.jsii");
+  });
+
+  it("never excludes the licence or the attribution map — MPL-2.0 §3.1", () => {
+    for (const required of ["LICENSE", "NOTICE", "README.md", "package.json"]) {
+      expect(lines).not.toContain(required);
+    }
+  });
+});
+
 describe("the per-group manifests still carry their Go targets", () => {
   // The other half of the same decision (all 258 asserted in manifests.test.ts).
   it("generated/lambda ships to cdktn-aws-go", () => {

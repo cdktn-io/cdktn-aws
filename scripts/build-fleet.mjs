@@ -26,12 +26,24 @@
  *   node scripts/build-fleet.mjs --shard 3/8         # one eighth of the fleet, for a CI matrix
  *
  * Writes a machine-readable run record to `tmp/m3/fleet-<phase>.json` (tmp/ is gitignored).
+ *
+ * VERSION STAMPING. The packed modules are built at `PACKAGE_VERSION` (default: this repository's
+ * own semver), not at the `0.0.0` the committed manifests carry — see scripts/fleet-version.mjs
+ * for the whole story, including why the manifests are stamped and restored rather than bumped.
+ *
+ * Two consequences of that stamp, both enforced below rather than documented and hoped for:
+ *   * `--pacmak-go` alone packs from the EXISTING `.jsii`, so it refuses to run when that assembly
+ *     was compiled at a different version — before it deletes the output it would replace.
+ *   * one group is built by one process at a time (scripts/build-lock.mjs), because two overlapping
+ *     builds would restore each other's stamp into the committed manifest.
  */
-import { readdirSync, existsSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { readdirSync, existsSync, readFileSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
 import { spawn } from "node:child_process";
 import { availableParallelism } from "node:os";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fleetVersion, stampManifests, writeGoVersionFile } from "./fleet-version.mjs";
+import { acquireGroupLocks } from "./build-lock.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generatedDir = path.join(repoRoot, "generated");
@@ -165,6 +177,10 @@ async function compile(group) {
 async function pack(group) {
   const cwd = path.join(generatedDir, group);
   const t0 = Date.now();
+  // pacmak adds to dist/ rather than replacing it, and the version is in the embedded tarball's
+  // NAME (`jsii/<pkg>-<version>.tgz`) — so a re-pack at a new version would otherwise ship the
+  // previous run's tarball alongside the current one. Start from nothing.
+  rmSync(path.join(cwd, "dist", "go"), { recursive: true, force: true });
   const r = await run(bin("jsii-pacmak"), ["--targets", "go"], cwd);
   const ms = Date.now() - t0;
   if (r.status !== 0) return { group, ok: false, ms, output: r.output };
@@ -189,17 +205,97 @@ async function pack(group) {
       output: `expected exactly one Go package directory "${target.packageName}", got ${JSON.stringify(goMods)}`,
     };
   }
-  const goMod = path.join(goDir, goMods[0], "go.mod");
+  const moduleDir = path.join(goDir, goMods[0]);
+  const goMod = path.join(moduleDir, "go.mod");
   if (!existsSync(goMod)) return { group, ok: false, ms, output: `no go.mod for ${goMods[0]}` };
   const declared = readFileSync(goMod, "utf8").split("\n")[0].trim();
   if (declared !== expected) {
     return { group, ok: false, ms, output: `go.mod declares "${declared}", expected "${expected}"` };
   }
+
+  // pacmak took the version from the stamped manifest, so this asserts the stamp actually reached
+  // the assembly — a module packed at the wrong number carries it in its embedded tarball too,
+  // where nothing downstream can fix it. Then the file is rewritten without pacmak's trailing
+  // newline, which is what publib's extractVersion compares against $VERSION byte-for-byte.
+  const packed = readFileSync(path.join(moduleDir, "version"), "utf8").trim();
+  if (packed !== releaseVersion) {
+    return { group, ok: false, ms, output: `pacmak packed version "${packed}", expected "${releaseVersion}"` };
+  }
+  writeGoVersionFile(moduleDir, releaseVersion);
   return { group, ok: true, ms, note: declared.slice("module ".length) };
 }
 
 const reportDir = path.join(repoRoot, "tmp", "m3");
 mkdirSync(reportDir, { recursive: true });
+
+const releaseVersion = fleetVersion(repoRoot);
+
+/**
+ * PACMAK-ONLY PRE-FLIGHT. `--pacmak-go` reuses an existing compile, and the version pacmak writes
+ * comes from the `.jsii` assembly that compile produced — NOT from the manifest this run stamps. So
+ * `PACKAGE_VERSION=Y --pacmak-go <g>` over an assembly compiled at X packs at X, and the assertion
+ * in `pack()` catches it only AFTER `rmSync(dist/go)` has already thrown away the good output.
+ *
+ * Checked here, before anything is deleted, over every group at once — a fleet is packed or it is
+ * not. It reports rather than silently running the jsii phase itself: `--pacmak-go` exists so that
+ * the wall time of each tool is a number on its own (see the header), and the recovery procedure in
+ * docs/m4-publishing.md §5 tells an operator which phase to re-run. A `--pacmak-go` that sometimes
+ * costs a compile would make both of those lie. The error names the exact command instead.
+ */
+function assertAssembliesMatch() {
+  const stale = [];
+  for (const group of groups) {
+    const assemblyFile = path.join(generatedDir, group, ".jsii");
+    if (!existsSync(assemblyFile)) {
+      stale.push(`${group}: no .jsii — never compiled`);
+      continue;
+    }
+    const compiled = JSON.parse(readFileSync(assemblyFile, "utf8")).version;
+    if (compiled !== releaseVersion) {
+      stale.push(`${group}: .jsii was compiled at ${compiled}, this run packs ${releaseVersion}`);
+    }
+  }
+  if (stale.length === 0) return;
+  const rerun = `PACKAGE_VERSION=${releaseVersion} node scripts/build-fleet.mjs ${groups.join(" ")}`;
+  console.error(
+    `--pacmak-go cannot pack ${stale.length} of ${groups.length} group(s) at v${releaseVersion}:\n` +
+      stale.slice(0, 10).map((s) => `  ${s}`).join("\n") +
+      (stale.length > 10 ? `\n  … and ${stale.length - 10} more` : "") +
+      "\n\npacmak takes the version from the assembly, not from package.json, so this would pack the\n" +
+      "old number — and nothing downstream can repair a module packed at the wrong version.\n" +
+      `Compile and pack in one run instead:\n  ${rerun}`,
+  );
+  process.exit(2);
+}
+if (wantPacmak && !wantJsii) assertAssembliesMatch();
+
+// EXCLUSIVITY. The stamp below mutates a committed file; a second build of the same group would
+// snapshot the stamped bytes and restore THOSE. scripts/build-lock.mjs has the whole story.
+let releaseLocks;
+try {
+  releaseLocks = acquireGroupLocks(repoRoot, groups);
+} catch (err) {
+  console.error(err.message);
+  process.exit(2);
+}
+
+// ONE handler, in this order, registered before the stamp is written: the manifests have to be back
+// at 0.0.0 *before* the lock is dropped, or the next build snapshots a stamped file — which is the
+// very race the lock exists to close. (Two separate 'exit' listeners would run in registration
+// order and get this backwards if the lock were registered first.)
+let restoreManifests = () => {};
+process.on("exit", () => {
+  restoreManifests();
+  releaseLocks();
+});
+
+// The stamp covers BOTH phases and is taken back out at the end (and on any exit): jsii bakes the
+// version into the .jsii assembly, and pacmak `npm pack`s the package again to embed it, so the
+// manifest has to read as the release version for the whole build and as 0.0.0 the moment it ends.
+restoreManifests = stampManifests(
+  groups.map((g) => path.join(generatedDir, g)),
+  releaseVersion,
+);
 
 let failed = 0;
 for (const [phase, want, worker, tool] of [
@@ -208,7 +304,9 @@ for (const [phase, want, worker, tool] of [
 ]) {
   if (!want) continue;
   const version = toolVersion(tool);
-  console.log(`\n=== ${phase} — ${tool}@${version}, ${groups.length} groups, concurrency ${concurrency} ===`);
+  console.log(
+    `\n=== ${phase} — ${tool}@${version}, ${groups.length} groups at v${releaseVersion}, concurrency ${concurrency} ===`,
+  );
   const t0 = Date.now();
   const results = await pool(groups, worker);
   const wallMs = Date.now() - t0;
@@ -232,6 +330,7 @@ for (const [phase, want, worker, tool] of [
         phase,
         tool,
         version,
+        releaseVersion,
         concurrency,
         groups: groups.length,
         okCount: results.length - bad.length,
@@ -247,4 +346,6 @@ for (const [phase, want, worker, tool] of [
   );
 }
 
+// `process.exit` fires the 'exit' handler above, and so does an uncaught throw — so the manifests
+// go back to 0.0.0 on every path out of this script, not only the happy one.
 process.exit(failed === 0 ? 0 : 1);

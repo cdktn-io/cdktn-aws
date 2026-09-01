@@ -138,6 +138,34 @@ module directories, asserted in `manifests.test.ts`.
 
 ## 3. First-release checklist
 
+> ### ⚠️ Before the next release: the `release` environment
+>
+> `release.yml` is `workflow_dispatch`-only, and a dispatch runs the workflow file **from whatever
+> ref the dispatcher chooses** — so before this change any branch anyone could push was a code path
+> to npm, PyPI, Maven Central, NuGet, the `v*` tags on this repository and a push token for
+> `cdktn-aws-go`. A `if: github.ref == 'refs/heads/main'` check inside the workflow does not fix
+> that: the attacker's branch contains the check, and can delete it. The control has to live outside
+> the workflow file, in repository settings GitHub evaluates before the job starts — a **deployment
+> environment** with a branch policy, reviewers, and the secrets scoped to it.
+>
+> Every publishing job now declares one: `release` for `release_npm`, `release_maven`,
+> `release_nuget`, `release_go` and `release_github`; `release_pypi` keeps **`pypi`**, because the
+> PyPI trusted publisher binds that exact name. Three things must happen, in this order:
+>
+> 1. **Apply the `cdktn-repository-manager` PR that creates the `release` environment** with
+>    deployment branch policy = protected branches only, plus required reviewers. Naming an
+>    environment that does not exist does not fail the run — **GitHub auto-creates it with no
+>    protection whatsoever**, which gates nothing while looking like it does. Until that apply lands,
+>    the branch restriction is not in force. Verify at Settings → Environments that `release` shows a
+>    deployment branch rule and is not marked as having been created by a workflow run.
+> 2. **Add environment `release` to the npm Trusted Publisher for `@cdktn/aws`** (npmjs.com →
+>    package → Settings → Trusted Publisher → Environment name → `release`). The job's OIDC token now
+>    carries an `environment` claim; a publisher config with a blank Environment may reject or ignore
+>    a token that has one depending on how npm matches the claim, and a release is not the place to
+>    discover which. Treat this as a **required** pre-release step. (Step 4 below reflects it.)
+> 3. **PyPI needs no change** — its pending/confirmed publisher is already registered against
+>    environment `pypi`, and `release_pypi` still declares exactly that.
+
 Ordering matters more than any single item: the repository-manager PR has to be merged *and
 applied* before `cdktn-aws` can be pushed (it is what creates the branch protection, the secrets,
 the `pypi` environment and the empty `cdktn-aws-go`), and the trusted-publisher registrations have
@@ -147,7 +175,9 @@ build. In order:
 1. **Merge and apply the `cdktn-repository-manager` adoption PR** — a second entry in
    `CustomConstructsStack`, alongside `cdktn-awscc`. It creates: branch protection on `cdktn-aws`
    (required checks = `protectMainChecks`, see below), the 11 publishing secrets + 4 aliases,
-   dependabot, the Slack webhook, `team-cdk-terrain` admin, the `pypi` repository environment, and
+   dependabot, the Slack webhook, `team-cdk-terrain` admin, the `pypi` **and `release`** repository
+   environments (the latter with a protected-branches-only deployment policy and reviewers — see the
+   box above; an unapplied environment is auto-created unprotected), and
    `cdktn-io/cdktn-aws-go` as an **empty** repository with `protectMain: false`. Confirm
    `deploy.yml`'s `custom-constructs` leg applied cleanly; the plan is ~29 resources.
    *`protectMainChecks` must be the check contexts `ci.yml` actually produces* — they are listed in
@@ -189,7 +219,7 @@ build. In order:
    | Organization or user | `cdktn-io` |
    | Repository | `cdktn-aws` |
    | Workflow filename | `release.yml` |
-   | Environment name | **blank** — `release_npm` deliberately declares no GitHub environment |
+   | Environment name | **`release`** — `release_npm` declares `environment: release`; see the box at the top of this section |
 
    Then disable classic publish access / any leftover automation tokens for the package. Sanity
    check: `npm view @cdktn/aws` shows `0.0.0` and the panel names `cdktn-io/cdktn-aws` + `release.yml`.
@@ -218,15 +248,21 @@ build. In order:
    publishing. Only after a clean dry run, dispatch with `dry_run: false`. Push-to-tag auto-release
    is deliberately not wired until both have succeeded once.
 
-**Version.** The root `package.json` is at **0.1.0** — the proposed first release, and no longer the
-`0.0.0` placeholder `release.mjs` refuses to tag 258 modules with. The scheme is this repository's
-own semver, in lockstep across `@cdktn/aws` and all 258 Go modules, disconnected from the provider
+**Version.** The root `package.json` is at **0.1.1** — the corrected first release (§7 says what
+0.1.0 shipped and why it is not it), and no longer the `0.0.0` placeholder `release.mjs` refuses to
+tag 258 modules with. The scheme is this repository's own semver, in lockstep across `@cdktn/aws`
+and all 258 Go modules, disconnected from the provider
 version ([`m3-go.md`](./m3-go.md) § "Versioning and release"). `release.yml` will refuse a dispatch
 whose version does not equal `package.json`'s: the bump is a reviewed PR, never a push from a job
 holding publishing credentials.
 
 **Still open:**
 
+- [ ] Apply the `cdktn-repository-manager` PR that creates the **`release`** environment (protected
+      branches only + reviewers) **before** the next dispatch — until it applies, GitHub auto-creates
+      `release` unprotected on first use and the branch restriction is not in force.
+- [ ] Set the npm Trusted Publisher's **Environment name** to `release` for `@cdktn/aws`, before the
+      next release. Both items are the box at the top of this section.
 - [ ] Delete `CDKTN_AWS_GO_ROOT: none` from `ci.yml` the moment `cdktn-aws-go` has a remote a runner
       can clone — until then 259 inventory assertions are legitimately skipped, in writing.
 - [ ] Wire the changed-groups-only release path (`scripts/release.mjs`) into `release.yml` for the
@@ -242,8 +278,8 @@ three were needed *before the first tag*, and all three are now settled:
    import-path-is-identity rule means it can never be changed, only abandoned. **Confirmed.**
 2. **The fleet versioning scheme: lockstep on this repository's own semver**, not the provider
    version. **Confirmed.**
-3. **Whether to create the real repositories and publish at all: yes**, at 0.1.0, by the ordering
-   above.
+3. **Whether to create the real repositories and publish at all: yes**, at 0.1.1 (0.1.0 was
+   attempted and is superseded — §6 and §7), by the ordering above.
 
 ## 4. Tag-growth policy
 
@@ -282,3 +318,130 @@ consumers edit imports by hand. It belongs in its own PR, never folded into a pr
 * **The Go consumer builds in workspace mode** against a local checkout, because the fleet is
   unpublished. Its committed `go.mod` requires each module at a placeholder `v0.0.0`; the `replace`
   directives are generated and gitignored.
+
+## 6. Version stamping, and recovering a partial release
+
+Release **0.1.0** (run 33531108440) published npm, PyPI, Maven Central, NuGet and the GitHub Release
+`v0.1.0`, and then `publib-golang` refused the fleet:
+
+```
+Repo version (0.1.0) conflicts with module version (0.0.0\n) for module in dist/go/awsaccountmanagement
+```
+
+Nothing reached `cdktn-aws-go` — it still has zero tags — so the release is recoverable, not
+half-published.
+
+**Where a Go module's version comes from.** `jsii-pacmak --targets go` takes it from
+`generated/<group>/package.json`, through the `.jsii` assembly, and writes it into three places:
+the `version` file, the embedded `jsii/<name>-<version>.tgz`, and that tarball's name in
+`jsii/jsii.go`. Those manifests are committed at `0.0.0` and must stay there — their bytes are
+hashed into `generated/hashes.json` and `pnpm generate` has to leave the tree clean — while the
+monolith honoured `PACKAGE_VERSION` and shipped 0.1.0. Hence the mismatch.
+
+**The stamp** (`scripts/fleet-version.mjs`, used by `build-fleet.mjs` and `assemble-go-dist.mjs`):
+
+* the fleet version is `PACKAGE_VERSION`, else this repository's own semver — the same rule
+  `build-monolith.mjs` follows, so the two halves cannot be built at two different numbers;
+* `build-fleet.mjs` writes it into the selected groups' manifests before the `jsii` phase and puts
+  the original bytes back on **every** exit path, so a stamped build leaves `git status` clean and
+  the committed manifests stay at `0.0.0`;
+* after packing, each module's `version` file is rewritten as **exactly** the version, with no
+  trailing newline. `publib`'s `GoReleaser.extractVersion` compares the file's raw contents with
+  `$VERSION` and does not trim, so pacmak's `0.1.0\n` is a conflict — and with `$VERSION` unset it
+  would tag `awsswf/v0.1.0\n` instead;
+* `assemble-go-dist.mjs` refuses any module whose `version` file is not that exact string, in both
+  its copy and `--verify` modes, and the `release_go` **dry run** now runs the same comparison and
+  prints the count. The 0.1.0 dry run was green because it enumerated modules without reading them.
+
+The stamp is asserted end to end on a real build of one group in
+`tools/aws2cdk/test/go-version-stamp.test.ts` (including that the embedded tarball moved too, and
+that the manifest came back). Note that a stamp with major ≥ 2 makes pacmak emit `/vN` module paths,
+which `build-fleet.mjs` rejects against the manifest — see §4, it is its own PR.
+
+**Two ways the stamp could still go wrong, both refused rather than documented**
+(`tools/aws2cdk/test/fleet-build-safety.test.ts`):
+
+* **`--pacmak-go` over a stale assembly.** The pacmak-only phase reuses an existing compile, and
+  pacmak reads the version out of the `.jsii`, not out of the manifest this run stamps — so
+  `PACKAGE_VERSION=Y node scripts/build-fleet.mjs --pacmak-go <group>` over an assembly compiled at
+  X would pack at X. The assertion that caught it used to fire *after* `rmSync(dist/go)`, destroying
+  the good output on the way. It is now a pre-flight over every selected group, before anything is
+  deleted, and it exits 2 naming the command to run instead
+  (`PACKAGE_VERSION=Y node scripts/build-fleet.mjs <group>` — compile and pack in one run). It does
+  not silently recompile: `--pacmak-go` exists so each tool's wall time is a number on its own, and
+  a phase flag that sometimes runs the other phase makes that and this recovery procedure lie.
+* **Two builds of one group at once.** The restore writes back *the bytes the build snapshotted*, so
+  an overlapping build snapshots the first one's stamp and restores a release version into the
+  committed manifest — both builds succeeding, tree quietly wrong. CI shards are disjoint by
+  construction, but the recovery procedure below is a human running `build-fleet.mjs` locally,
+  possibly beside a build that has not finished. `scripts/build-lock.mjs` takes an atomic
+  `mkdir`-based lock per group under `tmp/fleet-locks/` (gitignored) covering
+  stamp → jsii → pacmak → restore; a second build exits 2 with the owner's pid and what to do, and a
+  lock whose owner is gone is reclaimed with a warning. The header of that file records why building
+  from a copy outside the repository is not the alternative it looks like: `generated/*` are pnpm
+  workspace members and the compile resolves `cdktn`/`constructs` through the symlink farm that
+  membership creates.
+
+**Recovery procedure.** Re-dispatch `release.yml` with the release version and `dry_run=false`.
+That was going to be the *same* number, `0.1.0`, until §7 found a second defect in what 0.1.0
+published; the corrected release is **0.1.1**, at which no registry holds anything yet, so every
+one of the checks below simply finds nothing and publishes. The skip logic still matters — it is
+what makes a *second* failure of the Go half re-runnable.
+Each of the five publish jobs first asks its registry whether that version is already there — npm
+`npm view`, PyPI `/pypi/cdktn-aws/<v>/json`, Maven Central's `.pom` on `repo1.maven.org`, NuGet's
+flat container, and `gh release view v<v>` — and on a hit logs "already … — this job has nothing to
+do" and succeeds without publishing. Found means skip; not found means attempt, because an index can
+lag a publish by minutes and every one of these registries refuses a true duplicate on its own.
+`release_go` keeps its `needs:` unchanged: the registries still gate on the fleet building and
+passing every gate, so a second failure of the Go half fails the run rather than shipping again.
+
+## 7. What 0.1.0 shipped, and why the release is 0.1.1
+
+The version conflict in §6 was not the only defect in 0.1.0. What reached npm, PyPI, Maven Central
+and NuGet was **the whole monolith `src/` tree**, next to the `lib/` it was compiled into:
+
+| | files | unpacked |
+|---|---|---|
+| `@cdktn/aws@0.1.0` | 7,990 | 550,672,898 B (525 MB) |
+| 0.1.1, this branch | 5,327 | 461,985,456 B (441 MB) |
+
+2,661 of the removed files are `.ts` sources that no consumer of a compiled jsii assembly can use.
+The tarball is not only the npm artifact: `jsii-pacmak` embeds it verbatim as the jsii kernel
+payload inside the Python wheel (`cdktn_aws/_jsii/`), the Java jar and the .NET package, so every
+language downloaded and extracted the same 88 MB of dead TypeScript on install.
+
+**Cause.** `jsii-pacmak` writes the `.npmignore` that excludes `src/` itself — but only on the
+branch where the outdir comes from `package.json` (`lib/npm-modules.js#updateAllNpmIgnores`).
+`scripts/package.mjs` passes `--outdir dist`, which takes the other branch and skips the step
+entirely. That is why `generated/<group>/.npmignore` exists — the fleet build passes no `--outdir`,
+so pacmak writes it there, which is also why the Go modules were never affected — and why
+`monolith/` never had one.
+
+**Fix.** `scripts/monolith-manifest.mjs` now emits `MONOLITH_NPMIGNORE` alongside the manifest
+(pacmak's own default content, the same shape `@cdktn/provider-aws` publishes), `build-monolith.mjs`
+writes it into `monolith/`, and `scripts/check-js-tarball.mjs` reads the *packed bytes* back after
+`jsii-pacmak --targets js` and fails the build on any `.ts` outside `lib/**/*.d.ts`, on `tsconfig*`
+or `*.tsbuildinfo`, or on a missing `LICENSE`, `NOTICE`, `README.md`, `.jsii` or `lib/`. It prints
+the file count and unpacked size, so every release logs what it shipped. The allowlist is asserted
+in `monolith-manifest.test.ts` and the check itself in `js-tarball-gate.test.ts`, against real
+tarballs.
+
+The first version of that gate read the tarball by interpolating its path into `/bin/sh -c` with
+`JSON.stringify` — which is JSON quoting, not shell quoting, so a `$(…)` or a backtick in the
+filename executed, in a script that runs inside the release pipeline. It now reads the archive
+in-process: one streaming gunzip and a walk over the 512-byte tar headers
+(`scripts/tar-list.mjs`), yielding both the entry list and the unpacked byte total with no shell
+and no `tar` child at all. `js-tarball-gate.test.ts` packs fixtures whose names *are* those payloads
+and asserts the side-effect file never appears.
+
+**What the remaining 441 MB is** — and it is all load-bearing, which is why this stops here:
+`.jsii` 150 MB (the assembly every non-JS target reads), `lib/**/*.js` 256 MB, `lib/**/*.d.ts`
+42 MB. The `.js` figure is inflated by `inlineSourceMap` + `inlineSources`, which carry each
+module's TypeScript back into its own `.js`; those two settings are jsii's generated-tsconfig
+contract, enforced by `jsii --validate-tsconfig generated`, so dropping them is a change to the
+compile shape and belongs in its own PR, not in a packaging fix.
+
+**Follow-up for the account owner:** `npm deprecate '@cdktn/aws@0.1.0' "superseded by 0.1.1 —
+0.1.0's tarball included the TypeScript sources"`. The version cannot be unpublished after 72 hours
+and should not be; a deprecation notice is what tells an installer to move. The equivalent is worth
+doing on PyPI (yank) once 0.1.1 is up.
