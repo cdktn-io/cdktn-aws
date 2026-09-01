@@ -73,7 +73,11 @@ jobs:
   # ------------------------------------------------------------------ the monolith: js/python/java/dotnet
   build_monolith:
     name: build @cdktn/aws (js, python, java, dotnet)
-    runs-on: ubuntu-latest
+    # Fleet convention: the heavy jobs run on Depot's 8-core/32 GB runners, the light ones stay on
+    # GitHub's standard two-core image. This one needs both halves of that — the 16 GB heap above
+    # does not fit a standard runner's 16 GB of total RAM, the java pacmak target alone takes ~7
+    # minutes, and dist/ aggregates ~1 GB on a 14 GB standard disk.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     outputs:
@@ -157,7 +161,8 @@ jobs:
   # ------------------------------------------------------------------ the fleet: 258 Go modules
   build_fleet:
     name: pack go shard ${{ matrix.shard }}/8
-    runs-on: ubuntu-latest
+    # Depot: each leg is jsii + pacmak over an eighth of the fleet under the same 16 GB heap flag.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     strategy:
@@ -194,7 +199,8 @@ jobs:
   assemble_go:
     name: assemble and gate the 258-module fleet
     needs: build_fleet
-    runs-on: ubuntu-latest
+    # Depot: `go mod tidy` + `go build` over 258 modules, then the zip.CheckDir gate on all of them.
+    runs-on: depot-ubuntu-24.04-8
     permissions:
       contents: read
     steps:
@@ -209,7 +215,11 @@ jobs:
       - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: "1.25"
-          cache-dependency-path: tools/gosize/go.sum
+          # setup-go caches the module cache by default. This job's `go mod tidy` output is in the
+          # provenance path of the published Go tree, so it obeys the same rule build_monolith
+          # states: no cache restoration in a release build. `cache-dependency-path` goes with it —
+          # it only selects a cache key, and there is no cache to key.
+          cache: false
       - run: pnpm install --frozen-lockfile
 
       # merge-multiple: the eight shards hold disjoint module directories by construction, and the
@@ -288,7 +298,11 @@ jobs:
   # ------------------------------------------------------------------ npm (OIDC trusted publishing)
   release_npm:
     name: Publish to npm
-    needs: build_monolith
+    # `assemble_go` is a gate, not an input: this job consumes none of its artifacts. A release is
+    # all-or-nothing across the six targets, and npm/PyPI/Maven/NuGet publishes are irreversible —
+    # so a fleet that fails or is cancelled must take the registries with it rather than leave five
+    # published languages and no Go. Plain `needs:` is what does that: no `if:` here overrides it.
+    needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
     # No `environment:` — the npm Trusted Publisher for @cdktn/aws is registered with the
     # Environment field left BLANK (docs/m4-publishing.md §3). Adding one here silently breaks the
@@ -325,7 +339,9 @@ jobs:
   # ------------------------------------------------------------------ PyPI (OIDC trusted publishing)
   release_pypi:
     name: Publish to PyPI
-    needs: build_monolith
+    # `assemble_go` gates this job without feeding it — see release_npm: all six targets ship or
+    # none do.
+    needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
     # MUST stay `pypi`: the PyPI pending publisher for cdktn-aws is registered against
     # repository cdktn-io/cdktn-aws, workflow release.yml, environment pypi, and the environment
@@ -356,7 +372,9 @@ jobs:
   # ------------------------------------------------------------------ Maven Central
   release_maven:
     name: Publish to Maven Central
-    needs: build_monolith
+    # `assemble_go` gates this job without feeding it — see release_npm: all six targets ship or
+    # none do.
+    needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -402,7 +420,9 @@ jobs:
   # ------------------------------------------------------------------ NuGet
   release_nuget:
     name: Publish to NuGet Gallery
-    needs: build_monolith
+    # `assemble_go` gates this job without feeding it — see release_npm: all six targets ship or
+    # none do.
+    needs: [build_monolith, assemble_go]
     runs-on: ubuntu-latest
     permissions:
       contents: read
