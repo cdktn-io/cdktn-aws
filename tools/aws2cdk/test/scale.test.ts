@@ -243,8 +243,7 @@ describe("per-group content hashes", () => {
   });
 
   it("has a committed manifest covering every generated group", () => {
-    const manifest = readHashesManifest(generatedDir);
-    if (!manifest) return; // fresh tree without `pnpm generate`
+    const manifest = requireHashesManifest();
     const dirs = fs
       .readdirSync(generatedDir, { withFileTypes: true })
       .filter((e) => e.isDirectory())
@@ -255,13 +254,14 @@ describe("per-group content hashes", () => {
   });
 
   it("matches the bytes actually committed under generated/", () => {
-    const manifest = readHashesManifest(generatedDir);
-    if (!manifest) return;
+    const manifest = requireHashesManifest();
     // A spot check over a handful of groups rather than all 258: this reads and hashes real files,
     // and the full sweep is what `pnpm generate` + `git diff --exit-code` already proves in CI.
+    // Every one of the five is a committed group, so a missing directory is a broken checkout, not
+    // a group to skip — skipping would turn the spot check into an empty loop that still passes.
     for (const slug of ["elb", "lambda", "provider", "s3", "waf"]) {
       const pkgDir = path.join(generatedDir, slug);
-      if (!fs.existsSync(pkgDir)) continue;
+      requireGeneratedTree(pkgDir, `generated/${slug}`);
       const files = [
         "package.json",
         "README.md",
@@ -274,16 +274,17 @@ describe("per-group content hashes", () => {
 });
 
 describe("naming grammar over the whole generated tree", () => {
-  const groups = fs.existsSync(generatedDir)
-    ? fs
-        .readdirSync(generatedDir, { withFileTypes: true })
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name)
-        .sort()
-    : [];
+  // Read at describe time, and deliberately not guarded: `it.each([])` registers *no tests at all*
+  // and reports the suite green, so a tree-less checkout would silently retire the only full sweep
+  // in this file. Throwing here fails the whole suite with the command that fixes it.
+  requireGeneratedTree(generatedDir, "generated/");
+  const groups = fs
+    .readdirSync(generatedDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort();
 
   it("has all 258 packages present", () => {
-    if (groups.length === 0) return;
     expect(groups.length).toBeGreaterThanOrEqual(258);
   });
 
@@ -329,6 +330,32 @@ describe("naming grammar over the whole generated tree", () => {
     }
   });
 });
+
+/**
+ * `generated/` is a **committed** tree, not a build artifact: its absence is a broken checkout, and
+ * every check in this file that reads it is a check that degrades to nothing without it. So the
+ * guards throw and name the command, the way the end-to-end synth assertion above already does.
+ * (The Go repository is the opposite case — it is a separate checkout that may legitimately be
+ * absent, which is why `manifests.test.ts` reports *that* one as visibly skipped instead.)
+ */
+function requireGeneratedTree(dir: string, label: string): void {
+  if (fs.existsSync(dir)) return;
+  throw new Error(
+    `${label} is missing: the committed generated/ tree is required for this test. ` +
+      "Run `pnpm generate` (or restore generated/) and re-run.",
+  );
+}
+
+function requireHashesManifest() {
+  const manifest = readHashesManifest(generatedDir);
+  if (!manifest) {
+    throw new Error(
+      `generated/${HASHES_FILE} is missing: it is committed alongside the generated tree and is ` +
+        "what the Go release tags off. Run `pnpm generate` (or restore generated/) and re-run.",
+    );
+  }
+  return manifest;
+}
 
 function hashes(e: ReturnType<typeof emit>): Record<string, string> {
   return Object.fromEntries(e.result.groups.map((g) => [g.slug, g.hash]));
