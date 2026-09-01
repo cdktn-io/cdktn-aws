@@ -282,3 +282,51 @@ consumers edit imports by hand. It belongs in its own PR, never folded into a pr
 * **The Go consumer builds in workspace mode** against a local checkout, because the fleet is
   unpublished. Its committed `go.mod` requires each module at a placeholder `v0.0.0`; the `replace`
   directives are generated and gitignored.
+
+## 6. Version stamping, and recovering a partial release
+
+Release **0.1.0** (run 33531108440) published npm, PyPI, Maven Central, NuGet and the GitHub Release
+`v0.1.0`, and then `publib-golang` refused the fleet:
+
+```
+Repo version (0.1.0) conflicts with module version (0.0.0\n) for module in dist/go/awsaccountmanagement
+```
+
+Nothing reached `cdktn-aws-go` — it still has zero tags — so the release is recoverable, not
+half-published.
+
+**Where a Go module's version comes from.** `jsii-pacmak --targets go` takes it from
+`generated/<group>/package.json`, through the `.jsii` assembly, and writes it into three places:
+the `version` file, the embedded `jsii/<name>-<version>.tgz`, and that tarball's name in
+`jsii/jsii.go`. Those manifests are committed at `0.0.0` and must stay there — their bytes are
+hashed into `generated/hashes.json` and `pnpm generate` has to leave the tree clean — while the
+monolith honoured `PACKAGE_VERSION` and shipped 0.1.0. Hence the mismatch.
+
+**The stamp** (`scripts/fleet-version.mjs`, used by `build-fleet.mjs` and `assemble-go-dist.mjs`):
+
+* the fleet version is `PACKAGE_VERSION`, else this repository's own semver — the same rule
+  `build-monolith.mjs` follows, so the two halves cannot be built at two different numbers;
+* `build-fleet.mjs` writes it into the selected groups' manifests before the `jsii` phase and puts
+  the original bytes back on **every** exit path, so a stamped build leaves `git status` clean and
+  the committed manifests stay at `0.0.0`;
+* after packing, each module's `version` file is rewritten as **exactly** the version, with no
+  trailing newline. `publib`'s `GoReleaser.extractVersion` compares the file's raw contents with
+  `$VERSION` and does not trim, so pacmak's `0.1.0\n` is a conflict — and with `$VERSION` unset it
+  would tag `awsswf/v0.1.0\n` instead;
+* `assemble-go-dist.mjs` refuses any module whose `version` file is not that exact string, in both
+  its copy and `--verify` modes, and the `release_go` **dry run** now runs the same comparison and
+  prints the count. The 0.1.0 dry run was green because it enumerated modules without reading them.
+
+The stamp is asserted end to end on a real build of one group in
+`tools/aws2cdk/test/go-version-stamp.test.ts` (including that the embedded tarball moved too, and
+that the manifest came back). Note that a stamp with major ≥ 2 makes pacmak emit `/vN` module paths,
+which `build-fleet.mjs` rejects against the manifest — see §4, it is its own PR.
+
+**Recovery procedure.** Re-dispatch `release.yml` with the *same* version (`0.1.0`, `dry_run=false`).
+Each of the five publish jobs first asks its registry whether that version is already there — npm
+`npm view`, PyPI `/pypi/cdktn-aws/<v>/json`, Maven Central's `.pom` on `repo1.maven.org`, NuGet's
+flat container, and `gh release view v<v>` — and on a hit logs "already … — this job has nothing to
+do" and succeeds without publishing. Found means skip; not found means attempt, because an index can
+lag a publish by minutes and every one of these registries refuses a true duplicate on its own.
+`release_go` keeps its `needs:` unchanged: the registries still gate on the fleet building and
+passing every gate, so a second failure of the Go half fails the run rather than shipping again.
