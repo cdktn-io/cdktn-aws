@@ -23,6 +23,7 @@ import { FQPN, parseFQPN, ProviderName } from "@cdktn/provider-schema";
 import { Schema } from "@cdktn/commons";
 import { AttributeModel } from "./attribute-model";
 import { Struct, ConfigStruct } from "./struct";
+import { ProviderFunctionsModel } from "../../vendored/cdktn/models/provider-function-model";
 
 /** `provider` | `resource` | `data_source` | `ephemeral_resource`, as the vendored parser uses. */
 export type TerraformSchemaType =
@@ -58,6 +59,14 @@ export class ResourceModel {
   public terraformProviderName: string;
   public attributes: AttributeModel[];
   public schema: Schema;
+  /**
+   * Only set (by src/generate.ts) when `isProvider` is true and the provider schema declares
+   * provider-defined functions. Drives whether `ResourceEmitter` emits the memoized `functions`
+   * getter and its import of the sibling `provider-functions.ts` file. Verbatim from the vendored
+   * original except for that file path: the grouped layout puts both files in the same package
+   * `src/`, so the import is `./provider-functions`, not `../provider-functions/index`.
+   */
+  public providerFunctionsModel?: ProviderFunctionsModel;
   public readonly structs: Struct[];
   private readonly terraformSchemaType: TerraformSchemaType;
 

@@ -44,6 +44,13 @@ import { ResourceModel, TerraformSchemaType } from "./grouped/models";
 import { ResourceEmitter } from "./grouped/emitter/resource-emitter";
 import { StructEmitter } from "./grouped/emitter/struct-emitter";
 import { withQualifier, withResourcePrefix } from "./grouped/namespace-context";
+import {
+  assertNoFunctionsGetterCollision,
+  buildProviderFunctionsModel,
+  ProviderFunctionsModel,
+} from "./vendored/cdktn/models/provider-function-model";
+import { ProviderFunctionsEmitter } from "./vendored/cdktn/emitter/provider-functions-emitter";
+import { hashGroupFiles } from "./hashes";
 
 /**
  * Licence header stamped on every `.ts` file written under `generated/`. That content is the
@@ -82,6 +89,9 @@ export interface GroupResult {
   readonly slug: string;
   readonly files: string[];
   readonly entries: EmittedEntry[];
+  /** content hash of this package's own committed files — see `src/hashes.ts`. */
+  readonly hash: string;
+  readonly bytes: number;
 }
 
 export interface GenerateResult {
@@ -198,12 +208,20 @@ function renderVirtualFile(code: CodeMaker, filePath: string): string {
   return found.buffer;
 }
 
-function emitEntry(
-  planned: PlannedEntry,
-  srcDir: string,
-  fqpn: string,
-  providerVersion: string,
-): EmittedEntry {
+/**
+ * The parsed, fully-named model of one schema entry — everything the renderer needs, and nothing
+ * written to disk yet.
+ *
+ * Building every entry of a group BEFORE rendering any of them is what makes the group-wide
+ * mapper-name collision fallback (`naming.mapperPrefixesForGroup`) possible: a mapper's name
+ * depends on the other resources in the same package, so it cannot be decided one file at a time.
+ */
+interface BuiltEntry {
+  readonly planned: PlannedEntry;
+  readonly resource: ResourceModel;
+}
+
+function buildEntry(planned: PlannedEntry, fqpn: string, providerVersion: string): BuiltEntry {
   const isProvider = planned.schemaType === "provider";
   const parsed = parseResourceAttributes(planned.schema, {
     providerName: "aws",
@@ -237,6 +255,13 @@ function emitEntry(
     terraformProviderSource: PROVIDER_SOURCE,
   });
 
+  return { planned, resource };
+}
+
+function emitEntry(built: BuiltEntry, srcDir: string, mapperPrefix: string): EmittedEntry {
+  const { planned, resource } = built;
+  const className = resource.className;
+
   const code = new CodeMaker();
   // The vendored `TerraformProviderGenerator` sets this, and every `@cdktn/provider-*` tree is
   // emitted with it. Keeping it makes the emitted text directly comparable to the reference
@@ -246,7 +271,9 @@ function emitEntry(
   const topFile = "top-level.ts";
   const structEmitter = new StructEmitter(code);
 
-  withResourcePrefix(className, () => {
+  // `mapperPrefix` is the class name for all but the handful of resources whose mapper names would
+  // otherwise collide with a sibling's inside the same package — see `naming.mapperPrefixesForGroup`.
+  withResourcePrefix(mapperPrefix, () => {
     // Namespace body: every nested struct's interface + OutputReference/List/Map classes. All type
     // references here are to *sibling* namespace members, so no qualification — but mapper function
     // *names* are always resource-prefixed regardless of region, hence `withResourcePrefix` around
@@ -271,7 +298,7 @@ function emitEntry(
       new ResourceEmitter(code).emit(resource);
     });
     for (const struct of resource.structs) {
-      structEmitter.emitStructMappers(struct, className);
+      structEmitter.emitStructMappers(struct, className, mapperPrefix);
     }
     code.closeFile(topFile);
   });
@@ -291,7 +318,7 @@ function emitEntry(
   ].join("\n");
 
   const body =
-    parsed.structs.length > 0
+    resource.structs.length > 0
       ? `${topLevel}\nexport namespace ${className} {\n${namespaceBody}}\n`
       : `${topLevel}`;
 
@@ -302,8 +329,40 @@ function emitEntry(
     schemaType: planned.schemaType,
     className,
     fileBase,
-    nestedTypes: parsed.structs.length,
+    nestedTypes: resource.structs.length,
   };
+}
+
+/**
+ * The provider group's second source file, holding `AwsProviderFunctions`.
+ *
+ * Placement is option A of the provider-functions research note: the wrapper class lives in the
+ * SAME package as the provider construct that exposes it, so `AwsProvider.functions` needs no
+ * cross-group import and the call shape stays exactly what `@cdktn/provider-aws` consumers already
+ * write — `new AwsProvider(this, "aws", {...}).functions.arnParse(arn)`. The alternative (a
+ * dedicated `fn` group) would have had to take the provider's local name as a plain constructor
+ * argument to avoid importing the provider package, for a worse call site.
+ *
+ * The class body itself is emitted by the UNMODIFIED vendored `ProviderFunctionsEmitter`; only the
+ * file path differs from upstream (`src/provider-functions.ts` instead of
+ * `providers/aws/provider-functions/index.ts`).
+ */
+export const PROVIDER_FUNCTIONS_FILE_BASE = "provider-functions";
+
+function emitProviderFunctions(model: ProviderFunctionsModel, srcDir: string): void {
+  const code = new CodeMaker();
+  code.indentation = 2;
+  const file = `${PROVIDER_FUNCTIONS_FILE_BASE}.ts`;
+  code.openFile(file);
+  new ProviderFunctionsEmitter(code).emit(model);
+  code.closeFile(file);
+
+  const header = [
+    ...GENERATED_LICENSE_HEADER,
+    `// generated from the provider schema's \`functions\` section — do not edit by hand`,
+    ``,
+  ].join("\n");
+  fs.writeFileSync(path.join(srcDir, file), `${header}${renderVirtualFile(code, file)}`);
 }
 
 export function generate(options: GenerateOptions): GenerateResult {
@@ -342,15 +401,55 @@ export function generate(options: GenerateOptions): GenerateResult {
     fs.rmSync(srcDir, { recursive: true, force: true });
     fs.mkdirSync(srcDir, { recursive: true });
 
-    const entries: EmittedEntry[] = [];
-    for (const planned of planGroup(options.schema, fqpn, members)) {
-      entries.push(emitEntry(planned, srcDir, fqpn, providerVersion));
+    // Two passes: build every model first, so the mapper prefixes can be decided with the whole
+    // package's naming in view, then render.
+    const built = planGroup(options.schema, fqpn, members).map((planned) =>
+      buildEntry(planned, fqpn, providerVersion),
+    );
+    const mapperPrefixes = naming.mapperPrefixesForGroup(
+      built.map((b) => ({
+        className: b.resource.className,
+        structNames: b.resource.structs.map((s) => s.name),
+      })),
+    );
+
+    // Provider-defined functions are a provider-scoped surface in the schema (`provider.functions`,
+    // a sibling of `provider.provider`) and stay provider-scoped here: the model is attached to the
+    // provider construct's model BEFORE it is rendered, because that is what makes the resource
+    // emitter write the `functions` getter and its import.
+    const providerEntry = built.find((b) => b.resource.isProvider);
+    let providerFunctions: ProviderFunctionsModel | undefined;
+    if (providerEntry) {
+      providerFunctions = buildProviderFunctionsModel(
+        "aws",
+        options.schema.provider_schemas[fqpn]?.functions,
+      );
+      if (providerFunctions) {
+        assertNoFunctionsGetterCollision(
+          "aws",
+          providerEntry.resource.attributes.map((a) => a.name),
+        );
+        providerEntry.resource.providerFunctionsModel = providerFunctions;
+      }
     }
 
-    const files: string[] = entries.map((e) => `${slug}/src/${e.fileBase}.ts`);
+    const entries: EmittedEntry[] = built.map((b) =>
+      emitEntry(b, srcDir, mapperPrefixes[b.resource.className]),
+    );
 
-    const indexLines = [...entries]
-      .map((e) => `export * from './${e.fileBase}';`)
+    const extraFileBases: string[] = [];
+    if (providerFunctions) {
+      emitProviderFunctions(providerFunctions, srcDir);
+      extraFileBases.push(PROVIDER_FUNCTIONS_FILE_BASE);
+    }
+
+    const files: string[] = [
+      ...entries.map((e) => `${slug}/src/${e.fileBase}.ts`),
+      ...extraFileBases.map((b) => `${slug}/src/${b}.ts`),
+    ];
+
+    const indexLines = [...entries.map((e) => e.fileBase), ...extraFileBases]
+      .map((fileBase) => `export * from './${fileBase}';`)
       .sort(cmp);
     fs.writeFileSync(
       path.join(srcDir, "index.ts"),
@@ -368,7 +467,15 @@ export function generate(options: GenerateOptions): GenerateResult {
     files.push(`${slug}/package.json`, `${slug}/README.md`, `${slug}/tsconfig.json`);
 
     files.sort(cmp);
-    results.push({ slug, files, entries });
+    // Hashed from what was actually written, read back off disk: the hash then describes the
+    // committed tree rather than the generator's intent about it.
+    const relToPkg = files.map((f) => f.slice(slug.length + 1));
+    const hash = hashGroupFiles(pkgDir, relToPkg);
+    const bytes = relToPkg.reduce(
+      (n, rel) => n + fs.statSync(path.join(pkgDir, ...rel.split("/"))).size,
+      0,
+    );
+    results.push({ slug, files, entries, hash, bytes });
     allFiles.push(...files);
     void npmPackageName(slug);
   }

@@ -69,19 +69,21 @@ export class StructEmitter {
 
   /** The two top-level mapper functions for a nested struct (never called for a `ConfigStruct` —
    * the resource's own attributes are synthesized directly in the resource class body instead). */
-  public emitStructMappers(struct: Struct, qualifyName: string) {
-    this.emitMapperFunction(struct, qualifyName, false);
-    this.emitMapperFunction(struct, qualifyName, true);
+  public emitStructMappers(struct: Struct, qualifyName: string, mapperPrefix: string) {
+    this.emitMapperFunction(struct, qualifyName, mapperPrefix, false);
+    this.emitMapperFunction(struct, qualifyName, mapperPrefix, true);
   }
 
-  private emitMapperFunction(struct: Struct, qualifyName: string, hcl: boolean) {
+  private emitMapperFunction(struct: Struct, qualifyName: string, mapperPrefix: string, hcl: boolean) {
     const qualified = `${qualifyName}.${struct.name}`;
-    // Prefixed with the owning resource's class name (`downcaseFirst(qualifyName)`), matching
+    // Prefixed with the owning resource's mapper prefix (its class name, or that plus `Mapper`
+    // when a sibling resource in the same package would otherwise produce the same name — see
+    // `naming.mapperPrefixesForGroup`), matching
     // `StructAttributeTypeModel#toTerraformFunction`/`#toHclTerraformFunction`
     // (models/attribute-type-model.ts, via namespace-context.ts's `resourcePrefix()`) exactly —
     // a bare `tagsPropertyToTerraform` from two different resources in the same module would
     // collide the moment the module's index.ts re-exports both files with `export *`.
-    const namePrefix = downcaseFirst(qualifyName);
+    const namePrefix = downcaseFirst(mapperPrefix);
     const fnName = hcl ? `${namePrefix}${struct.name}ToHclTerraform` : `${namePrefix}${struct.name}ToTerraform`;
     const outputRefType = struct.isSingleItem ? `${qualifyName}.${struct.outputReferenceName} | ` : "";
 

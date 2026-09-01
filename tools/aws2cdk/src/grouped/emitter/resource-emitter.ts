@@ -13,7 +13,11 @@
 // real generated AwsProvider. The two CFN name-map statics that fork added are gone — cdktn-aws
 // carries no CloudFormation map (see docs/curation.md).
 //
-// Still not carried over: the provider-defined-functions getter. See docs/curation.md.
+// M2 restored the provider-defined-functions getter (docs/m2-scale.md). The only departure from
+// the vendored original is the import path: upstream emits two sibling *directories*
+// (`providers/aws/provider/index.ts` and `providers/aws/provider-functions/index.ts`), so its
+// import steps up a level; the grouped layout puts both files flat in the `provider` package's own
+// `src/`, so it is a plain `./provider-functions`.
 import { CodeMaker } from "codemaker";
 import { ResourceModel } from "../models";
 import { AttributesEmitter } from "./attributes-emitter";
@@ -28,6 +32,12 @@ export class ResourceEmitter {
 
   public emit(resource: ResourceModel) {
     this.code.line();
+
+    if (resource.isProvider && resource.providerFunctionsModel) {
+      this.code.line(
+        `import { ${resource.providerFunctionsModel.className} } from './provider-functions';`,
+      );
+    }
 
     const comment = sanitizedComment(this.code);
     comment.line(`Represents a {@link ${resource.linkToDocs} ${resource.terraformResourceType}}`);
@@ -50,11 +60,38 @@ export class ResourceEmitter {
     this.emitHeader("ATTRIBUTES");
     this.emitResourceAttributes(resource);
 
+    if (resource.isProvider && resource.providerFunctionsModel) {
+      this.emitHeader("PROVIDER-DEFINED FUNCTIONS");
+      this.emitFunctionsGetter(resource.providerFunctionsModel);
+    }
+
     this.emitHeader("SYNTHESIS");
     this.emitResourceSynthesis(resource);
     this.emitHclResourceSynthesis(resource);
 
     this.code.closeBlock(); // construct
+  }
+
+  // Memoized `functions` getter on a provider class that declares provider-defined functions.
+  // The local name to invoke functions under is derived from `this.terraformResourceType`, not
+  // baked in as a constant: cdktn's `TerraformProvider` keys both `required_providers` and the
+  // `provider` block off `terraformResourceType`, so whatever this instance's
+  // `terraformResourceType` is IS its correct required_providers local name — the instance always
+  // knows its own local name, so no override parameter is needed here. Verbatim from the vendored
+  // original.
+  private emitFunctionsGetter(model: NonNullable<ResourceModel["providerFunctionsModel"]>) {
+    this.code.line(`private _functions?: ${model.className};`);
+    this.code.line();
+
+    const comment = sanitizedComment(this.code);
+    comment.line(`Provider-defined functions of the ${model.providerName} provider.`);
+    comment.end();
+    this.code.openBlock(`public get functions(): ${model.className}`);
+    this.code.openBlock(`if (!this._functions)`);
+    this.code.line(`this._functions = new ${model.className}(this.terraformResourceType);`);
+    this.code.closeBlock();
+    this.code.line(`return this._functions;`);
+    this.code.closeBlock();
   }
 
   private emitHeader(title: string) {

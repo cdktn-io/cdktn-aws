@@ -194,6 +194,120 @@ export function propertyTypeNamesForResource(
 }
 
 /**
+ * Inserted at the class/struct boundary of a mapper function name when, and only when, the plain
+ * concatenation would collide — see `mapperPrefixesForGroup`.
+ */
+export const MAPPER_DISAMBIGUATOR = "Mapper";
+
+export interface MapperNamingEntry {
+  readonly className: string;
+  /** the resource's already-resolved nested-type names (each ending in `Property`) */
+  readonly structNames: readonly string[];
+}
+
+/**
+ * The PascalCase mapper-name prefix for every resource in ONE group, keyed by class name.
+ *
+ * Mapper functions are module-level (jsii ignores functions, so they cannot live in the merged
+ * namespace) and the group barrel re-exports every file with `export *`, which makes their names a
+ * GROUP-wide flat namespace. M1 prefixed each with its owning class name and asserted that was
+ * enough. At 257-group scale it is not: string concatenation is not injective when one class name
+ * is a prefix of another. Two real cases in aws 6.62.0 —
+ *
+ *     AwsWafv2WebAcl  + RuleActionAllowProperty  ┐ both spell
+ *     AwsWafv2WebAclRule  + ActionAllowProperty  ┘ awsWafv2WebAclRuleActionAllowPropertyToTerraform
+ *     AwsS3Bucket + ObjectLockConfigurationRuleProperty ┐ both spell
+ *     AwsS3BucketObjectLockConfiguration + RuleProperty ┘ awsS3Bucket…RulePropertyToTerraform
+ *
+ * — 42 duplicate exports in `waf` and `s3`, which `tsc` reports as TS2308 on the barrel and which
+ * would otherwise let one mapper silently shadow another.
+ *
+ * The fallback: every class in a colliding cluster gets `Mapper` inserted at the boundary
+ * (`awsWafv2WebAclMapperRuleActionAllowPropertyToTerraform`). It is applied to the whole cluster,
+ * not just to a "loser", so the result does not depend on iteration order; a class not in any
+ * cluster keeps the plain prefix, which is why the three M1 groups emit byte-identically to
+ * before. The disambiguator is alphanumeric, so `NAME_GRAMMAR.mapperFunction` still holds.
+ *
+ * A residual collision after the rewrite would need a class name containing `Mapper` at exactly
+ * the splice point; that is asserted against rather than assumed, and generation aborts loudly if
+ * it ever happens (same convention as the model's collision asserts).
+ */
+export function mapperPrefixesForGroup(
+  entries: readonly MapperNamingEntry[],
+): Record<string, string> {
+  const prefixes: Record<string, string> = {};
+  for (const e of entries) prefixes[e.className] = e.className;
+
+  // Appending the disambiguator can, in principle, walk one class's names onto a *third* class's
+  // (a class name that already ends in `…Mapper<leaf>`). So it is applied to a fixed point rather
+  // than once: each round appends another `Mapper` to whichever classes are still in conflict.
+  // Every round strictly grows the prefixes of the conflicting classes only, so it terminates; the
+  // bound is a guard against a pathological input, not an expected outcome — no aws 6.62.0 group
+  // needs more than one round.
+  for (let round = 0; round < MAX_MAPPER_DISAMBIGUATION_ROUNDS; round++) {
+    const conflicted = conflictedClasses(entries, prefixes);
+    if (conflicted.size === 0) break;
+    for (const cls of conflicted) prefixes[cls] = `${prefixes[cls]}${MAPPER_DISAMBIGUATOR}`;
+  }
+
+  assertUniqueMapperNames(entries, prefixes);
+  return prefixes;
+}
+
+const MAX_MAPPER_DISAMBIGUATION_ROUNDS = 8;
+
+/** Class names that share a mapper name with some *other* class under the current prefixes. */
+function conflictedClasses(
+  entries: readonly MapperNamingEntry[],
+  prefixes: Record<string, string>,
+): Set<string> {
+  const owners = new Map<string, Set<string>>();
+  for (const e of entries) {
+    for (const struct of e.structNames) {
+      const key = collisionKey(`${downcaseFirst(prefixes[e.className])}${struct}`);
+      const set = owners.get(key);
+      if (set) set.add(e.className);
+      else owners.set(key, new Set([e.className]));
+    }
+  }
+  const conflicted = new Set<string>();
+  for (const set of owners.values()) {
+    if (set.size > 1) for (const cls of [...set].sort()) conflicted.add(cls);
+  }
+  return conflicted;
+}
+
+function assertUniqueMapperNames(
+  entries: readonly MapperNamingEntry[],
+  prefixes: Record<string, string>,
+): void {
+  const seen = new Map<string, string>();
+  const collisions: string[] = [];
+  for (const e of [...entries].sort((a, b) => (a.className < b.className ? -1 : 1))) {
+    for (const struct of [...e.structNames].sort()) {
+      const name = `${downcaseFirst(prefixes[e.className])}${struct}`;
+      const key = collisionKey(name);
+      const previous = seen.get(key);
+      if (previous !== undefined && previous !== e.className) {
+        collisions.push(`${name}: ${previous} + ${e.className}`);
+      } else {
+        seen.set(key, e.className);
+      }
+    }
+  }
+  if (collisions.length > 0) {
+    throw new Error(
+      `mapper function name collisions that the "${MAPPER_DISAMBIGUATOR}" fallback did not ` +
+        `resolve:\n  ${collisions.join("\n  ")}`,
+    );
+  }
+}
+
+function downcaseFirst(s: string): string {
+  return s.length === 0 ? s : `${s.charAt(0).toLowerCase()}${s.slice(1)}`;
+}
+
+/**
  * The grammar every emitted exported name must match. Asserted over the whole emitted tree by the
  * contract tests — this is what makes the "last-resort numeric suffix" claim above checkable
  * rather than aspirational.

@@ -2303,6 +2303,95 @@
           "description_kind": "plain"
         }
       },
+      "functions": {
+        "arn_build": {
+          "description": "Builds an ARN from its constituent parts",
+          "summary": "arn_build Function",
+          "return_type": "string",
+          "parameters": [
+            {
+              "name": "partition",
+              "description": "Partition in which the resource is located",
+              "type": "string"
+            },
+            {
+              "name": "service",
+              "description": "Service namespace",
+              "type": "string"
+            },
+            {
+              "name": "region",
+              "description": "Region code",
+              "type": "string"
+            },
+            {
+              "name": "account_id",
+              "description": "AWS account identifier",
+              "type": "string"
+            },
+            {
+              "name": "resource",
+              "description": "Resource section, typically composed of a resource type and identifier",
+              "type": "string"
+            }
+          ]
+        },
+        "arn_parse": {
+          "description": "Parses an ARN into its constituent parts",
+          "summary": "arn_parse Function",
+          "return_type": [
+            "object",
+            {
+              "account_id": "string",
+              "partition": "string",
+              "region": "string",
+              "resource": "string",
+              "service": "string"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "arn",
+              "description": "ARN (Amazon Resource Name) to parse",
+              "type": "string"
+            }
+          ]
+        },
+        "trim_iam_role_path": {
+          "description": "Trims the path prefix from an IAM role Amazon Resource Name (ARN). This function can be used when services require role ARNs to be passed without a path.",
+          "summary": "trim_iam_role_path Function",
+          "return_type": "string",
+          "parameters": [
+            {
+              "name": "arn",
+              "description": "IAM role Amazon Resource Name (ARN)",
+              "type": "string"
+            }
+          ]
+        },
+        "user_agent": {
+          "description": "Formats a User-Agent product for use with the user_agent argument in the provider or provider_meta block.",
+          "summary": "user_agent Function",
+          "return_type": "string",
+          "parameters": [
+            {
+              "name": "product_name",
+              "description": "Product name.",
+              "type": "string"
+            },
+            {
+              "name": "product_version",
+              "description": "Product version.",
+              "type": "string"
+            },
+            {
+              "name": "comment",
+              "description": "Comment describing any additional product details.",
+              "type": "string"
+            }
+          ]
+        }
+      },
       "resource_schemas": {
         "aws_alb": {
           "version": 0,

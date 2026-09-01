@@ -20,6 +20,7 @@
  *  | data `aws_lb`                  | a data source, which the awscc fork this generator was taken from could not emit at all |
  *  | ephemeral `aws_lambda_invocation` | an ephemeral resource — proves the vendored 0.24 machinery supports the third surface |
  *  | the `provider` block           | the AwsProvider construct, incl. its Python-reserved `lambda` attribute |
+ *  | the `functions` section        | all four provider-defined functions — three `string` returns and `arn_parse`'s `object` return, which is the only one the emitter maps to a bare `cdktn.IResolvable` |
  *
  * Usage: node extract-fixture.mjs [--check]
  */
@@ -71,6 +72,10 @@ const miniSchema = {
   provider_schemas: {
     [AWS_FQPN]: {
       provider: aws.provider,
+      // All four; there is nothing to slice. `functions` is a provider-scoped sibling of
+      // `provider`, not a per-resource surface (their doc pages all carry `subcategory: ""`), so
+      // it belongs to the synthetic `provider` group rather than to any service group.
+      functions: aws.functions,
       resource_schemas: pick(aws.resource_schemas, FIXTURE_RESOURCES, "resource_schemas"),
       data_source_schemas: pick(aws.data_source_schemas, FIXTURE_DATA_SOURCES, "data_source_schemas"),
       ephemeral_resource_schemas: pick(
