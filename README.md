@@ -6,10 +6,13 @@ jsii submodule per resource into **257 service submodules** mined from the provi
 `subcategory:` frontmatter — the same shape `aws-cdk-lib` uses (`aws_ec2`, `aws_s3`, …) and the same
 shape the Terraform registry sidebar already presents to users.
 
-Nothing is published from here yet. This repo currently holds the grouping map and its gate; the
-generator arrives in M1.
+**Nothing is published, pushed or tagged from here.** All four milestones are complete as a proof of
+concept; the exportable synthesis — what was hypothesised, what was measured, what upstreaming into
+cdk-terrain core would take, and the three decisions still waiting on a human — is
+[**`REPORT.md`**](./REPORT.md). The publishing shape and the first-release checklist are
+[`docs/m4-publishing.md`](./docs/m4-publishing.md).
 
-## What is in here today (M0)
+## The grouping map (M0)
 
 | path | what |
 | --- | --- |
@@ -67,8 +70,13 @@ a breaking change for us because the slug becomes the submodule name.
   group, no root module. **Done** — stage 1 (the fleet build, isolation, size gate) and stage 2 (the
   consumer measurement, the release planner, CI) both in [`docs/m3-go.md`](./docs/m3-go.md). The
   option it executes was decided in `go-split-spike/VERDICT.md`.
-* **M4 — publishing shape + report.** What actually ships (package names, versioning against the
-  provider version, the release pipeline), plus the write-up of M2/M3 numbers.
+* **M4 — publishing shape + report. Done.** The two pipelines (the one `@cdktn/aws` assembly to
+  npm/PyPI, the 258-module Go fleet to `cdktn-aws-go`), the release ordering and gates, the
+  first-release checklist and the tag-growth policy are in
+  [`docs/m4-publishing.md`](./docs/m4-publishing.md); the synthesis of every M0–M3 number, the
+  upstreaming list and the open risks are in [`REPORT.md`](./REPORT.md). Still nothing published:
+  neither GitHub repository exists, no workflow has ever run, and `scripts/release.mjs` has no mode
+  that tags.
 
 ## M3 — the Go fleet (done)
 
