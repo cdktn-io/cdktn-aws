@@ -59,8 +59,10 @@ a breaking change for us because the slug becomes the submodule name.
   get mounted into the resource class's namespace rather than living flat at module scope.
 * **M2 — full generation + jsii.** Generate all 257 groups, compile the jsii assembly, package for
   JS/Python, and measure against the published `@cdktn/provider-aws`: JS cold start, Python import,
-  `.jsii` size, doc-file count, compile time and peak RSS. *Stage 1 (full generation, provider
-  functions, per-group hashes) is done — see [`docs/m2-scale.md`](./docs/m2-scale.md).*
+  `.jsii` size, doc-file count, compile time and peak RSS. **Done** — stage 1 (full generation,
+  provider functions, per-group hashes) in [`docs/m2-scale.md`](./docs/m2-scale.md), stage 2 (the
+  monolithic build and every headline number) in
+  [`docs/m2-metrics.md`](./docs/m2-metrics.md).
 * **M3 — Go multi-module spike.** Feasibility only: a core Go module embedding the jsii runtime
   tarball plus one source-only module per group, published under
   `github.com/cdktn-io/cdktn-aws-go`. Verdict, not a product.
@@ -76,6 +78,33 @@ functions as `new AwsProvider(this, "aws", {...}).functions.arnParse(arn)`, and
 `generated/hashes.json` carries a per-group content hash so the Go release step can tag only the
 groups that actually moved. Numbers, the struct-sharding verdict (not needed) and the two M1 rules
 that only broke at scale are in [`docs/m2-scale.md`](./docs/m2-scale.md).
+
+## M2 — the monolithic build (stage 2, done)
+
+The published shape is **one** jsii assembly, `@cdktn/aws`, whose barrel re-exports each group as a
+submodule (`import { lambda } from '@cdktn/aws'; new lambda.AwsLambdaFunction(...)`). It compiles in
+**39.5 s** with a 16 GB heap and 7.2 GB peak RSS, with **zero JSII3/JSII6**, into a 150 MB assembly
+carrying **exactly the same 30,714 types** as `@cdktn/provider-aws` 25.3.0 — reachable through 258
+doors instead of 2,402.
+
+Headline, measured not argued (full method and every caveat in
+[`docs/m2-metrics.md`](./docs/m2-metrics.md)):
+
+* **JS cold start −95.9 %** — 45.2 ms vs 1,100.0 ms to import the library and reach two services,
+  with 206 `require.cache` entries instead of 2,572 and 81 MB RSS instead of 831 MB. This needs the
+  **lazify** pass on the compiled barrel, not just the grouping: both libraries' `index.js` is eager
+  as TypeScript emits it, and eager-vs-eager the two are within 12 %.
+* **Python import −9.1 %** (1,119.5 ms vs 1,231.2 ms). Small, and structurally so: jsii-pacmak
+  already emits lazy Python submodules for *both* shapes, and ~1.1 s of the 1.12 s is the jsii
+  kernel loading the embedded assembly tarball. 6× fewer modules resident if everything is touched.
+* **9.3× fewer doc files** — 1,290 against the reference's measured 12,015.
+* **Registry bytes are a wash** — the assembly is 0.1 % smaller, `lib/` 2.3 % smaller. Grouping is
+  not a size story on npm.
+* **The unsplit Go monolith does not fit**: projected at 644.5 MB, **122.9 % of the 524,288,000 B
+  module-proxy cap**, from a fit over seven really-packed groups. The go-split-spike measured the
+  *smaller* awscc provider's monolith at 78.7 % of that cap; aws crosses it. Largest single group is
+  11.5 % of the cap. M3's split is now the only shape a Go distribution can take, not a size
+  hypothesis.
 
 ## M1 — the generator (done)
 
@@ -101,6 +130,10 @@ pnpm check:contract  # diff the emitted runtime contract against a reference bui
                      #    pnpm baseline; skips with a warning if neither is available, --strict
                      #    to fail instead)
 pnpm check:groups    # M0 gate: groups.json coverage and group moves
+pnpm build:monolith  # assemble the ONE published assembly, @cdktn/aws, and compile it with jsii
+pnpm pacmak:python   # ...and jsii-pacmak --targets python
+pnpm measure:dedup   # struct shape-hash census across the generated tree
+pnpm project:go      # project per-group / monolith Go sizes against the module-proxy cap
 pnpm baseline <dir>  # the unmodified vendored pipeline, for comparison
 ```
 
@@ -121,10 +154,11 @@ same machine — see
 Those are the targets for M2. They are the sibling's numbers, not ours — `cdktn-aws` is bigger
 (1,711 resources, 679 data sources) and has to re-measure everything.
 
-**Go package size is a hypothesis, not a claim.** `@cdktn/provider-awscc` already exceeds the Go
-module proxy's ~500 MB limit, and per-group Go modules are the obvious escape hatch — but whether
-the split actually clears the cap, and what it costs in build time and cross-module type references,
-is exactly what M3 is for. No size win is claimed until M3 reports.
+**Go package size was a hypothesis; the cap half of it is now measured.** M2 stage 2 projects the
+unsplit aws Go monolith at **122.9 % of the module proxy's 524,288,000 B cap** and every individual
+group at under 11.5 % of it, from `jsii-pacmak --targets go` runs on seven real groups — so the
+split is required, not merely preferred. What M3 still owes is the rest: build time, cross-module
+type references, and the release mechanics.
 
 ## License
 
