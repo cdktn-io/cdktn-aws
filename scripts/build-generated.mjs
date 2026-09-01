@@ -15,7 +15,7 @@
  *
  * Usage: node scripts/build-generated.mjs [--pacmak-go] [group ...]
  */
-import { readdirSync, existsSync } from "node:fs";
+import { readdirSync, existsSync, readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -63,18 +63,38 @@ for (const group of groups) {
       console.error(`jsii-pacmak ${group}: FAIL\n${p.stdout}${p.stderr}`);
       continue;
     }
+    // The expected import path comes from the package's OWN manifest (src/manifest.ts wrote it),
+    // not from the directory name — the directory name is pacmak's output, i.e. the thing under
+    // test. `module <path>` is the first line of a go.mod by definition, and that path is
+    // permanent after the first release (see docs/provider-bump-runbook.md, the Go note), so it
+    // is asserted rather than echoed.
+    const target = JSON.parse(readFileSync(path.join(cwd, "package.json"), "utf8")).jsii.targets.go;
+    const expected = `${target.moduleName}/${target.packageName}`;
     const goMods = readdirSync(path.join(cwd, "dist", "go"), { withFileTypes: true })
       .filter((e) => e.isDirectory())
       .map((e) => e.name);
-    for (const mod of goMods) {
-      const goMod = path.join(cwd, "dist", "go", mod, "go.mod");
-      if (!existsSync(goMod)) {
-        failed++;
-        console.error(`jsii-pacmak ${group}: no go.mod for ${mod}`);
-        continue;
-      }
-      console.log(`jsii-pacmak ${group}: module github.com/cdktn-io/cdktn-aws-go/${mod}`);
+    if (goMods.length !== 1 || goMods[0] !== target.packageName) {
+      failed++;
+      console.error(
+        `jsii-pacmak ${group}: expected exactly one Go package directory "${target.packageName}", got ${JSON.stringify(goMods)}`,
+      );
+      continue;
     }
+    const goMod = path.join(cwd, "dist", "go", goMods[0], "go.mod");
+    if (!existsSync(goMod)) {
+      failed++;
+      console.error(`jsii-pacmak ${group}: no go.mod for ${goMods[0]}`);
+      continue;
+    }
+    const declared = readFileSync(goMod, "utf8").split("\n")[0].trim();
+    if (declared !== `module ${expected}`) {
+      failed++;
+      console.error(
+        `jsii-pacmak ${group}: go.mod declares "${declared}", expected "module ${expected}"`,
+      );
+      continue;
+    }
+    console.log(`jsii-pacmak ${group}: ${declared} (asserted against dist/go/${goMods[0]}/go.mod)`);
   }
 }
 
