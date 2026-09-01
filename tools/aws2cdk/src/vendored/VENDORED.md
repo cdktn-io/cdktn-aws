@@ -38,7 +38,8 @@ names, so none of it has a job here — see `docs/curation.md`, "What the awscc2
 
 ## Origins
 
-All rows: `/Users/vincentsmet/cdktn/cdk-terrain/packages/@cdktn/provider-generator`, commit
+All rows: `packages/@cdktn/provider-generator` in
+[`open-constructs/cdk-terrain`](https://github.com/open-constructs/cdk-terrain), commit
 `358edc7c39b0b380ba89fd31881f0577fe9b6214`.
 
 | vendored | origin path (below that package) |
