@@ -69,6 +69,11 @@ interface Binding {
   readonly clause: string;
   /** which slot of an import clause it occupies, so a residual can be spelled back correctly */
   readonly form: "default" | "star" | "named";
+  /**
+   * `import type { … }` or `import { type X }`. A type-only import erases; turning it into a value
+   * import adds a runtime require the file never had, which `verbatimModuleSyntax` calls an error.
+   */
+  readonly typeOnly: boolean;
 }
 
 const lineOf = (node: Node): number => node.getStartLineNumber();
@@ -168,6 +173,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         statement: decl,
         clause: byDefault.getText(),
         form: "default",
+        typeOnly: decl.isTypeOnly(),
       });
     }
 
@@ -186,6 +192,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         statement: decl,
         clause: `* as ${star.getText()}`,
         form: "star",
+        typeOnly: decl.isTypeOnly(),
       });
     }
 
@@ -205,6 +212,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         statement: decl,
         clause: spec.getText(),
         form: "named",
+        typeOnly: decl.isTypeOnly() || spec.isTypeOnly(),
       });
     }
   }
@@ -230,6 +238,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         statement,
         clause: nameNode.getText(),
         form: "star",
+        typeOnly: false,
       });
       continue;
     }
@@ -250,6 +259,7 @@ function classicBindings(file: SourceFile, index: SymbolIndex): Binding[] {
         statement,
         clause: element.getText(),
         form: "named",
+        typeOnly: false,
       });
     }
   }
@@ -401,7 +411,9 @@ function residualImport(statement: ImportDeclaration | VariableStatement, kept: 
     const clauses = kept.filter((b) => b.form === "default").map((b) => b.clause);
     if (star) clauses.push(star.clause);
     else if (named.length > 0) clauses.push(`{ ${named.map((b) => b.clause).join(", ")} }`);
-    return `import ${clauses.join(", ")} from '${specifier}';`;
+    // A declaration-level `type` keyword belongs to the whole clause, so it survives with it.
+    const keyword = statement.isTypeOnly() ? "import type" : "import";
+    return `${keyword} ${clauses.join(", ")} from '${specifier}';`;
   }
   const specifier = requiredSpecifier(statement)!;
   const declaration = statement.getDeclarations()[0];
@@ -605,6 +617,10 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
   const edits: Edit[] = [];
   const groupsUsed = new Set<string>();
   const retargetedRoots: Binding[] = [];
+  // The merged group import is `import type` only when EVERY binding folded into it was type-only.
+  // Mixed contributors make it a value import: erasing a binding the file uses at runtime is worse
+  // than adding a `type` keyword the file did not ask for.
+  let groupImportIsTypeOnly = true;
   let rewrites = 0;
 
   const taken = declaredNames(file);
@@ -629,7 +645,10 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
       // import; everything else lands under the group barrel member this file will import.
       const text = binding.detail.kind === "root" ? o.member! : `${aliasOf(o.group!)}.${o.member}`;
       edits.push({ start: o.start, end: o.end, text });
-      if (o.group) groupsUsed.add(o.group);
+      if (o.group) {
+        groupsUsed.add(o.group);
+        groupImportIsTypeOnly &&= binding.typeOnly;
+      }
       rewrites++;
     }
     if (binding.detail.kind === "root") retargetedRoots.push(binding);
@@ -668,7 +687,12 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
       .sort()
       .map((g) => (aliasOf(g) === g ? g : `${g} as ${aliasOf(g)}`))
       .join(", ");
-    edits.push({ start: insertAt, end: insertAt, text: `import { ${members} } from '${TARGET_PACKAGE}';\n` });
+    const keyword = groupImportIsTypeOnly ? "import type" : "import";
+    edits.push({
+      start: insertAt,
+      end: insertAt,
+      text: `${keyword} { ${members} } from '${TARGET_PACKAGE}';\n`,
+    });
   }
 
   unmapped.push(...unhandledClassicImports(file, statements, relative));

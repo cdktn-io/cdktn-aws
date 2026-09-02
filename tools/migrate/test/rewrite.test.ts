@@ -216,6 +216,57 @@ describe("what it refuses to guess", () => {
   });
 });
 
+describe("type-only imports", () => {
+  it("keeps the `type` keyword when every binding folded in was type-only", () => {
+    // A type-only import erases. Emitting a value import here adds a runtime require the file never
+    // had — an error under `verbatimModuleSyntax`, and a changed behaviour on an otherwise green run.
+    expect(
+      migrated(
+        [
+          "import type { S3BucketConfig } from '@cdktn/provider-aws/lib/s3-bucket';",
+          "import { type IamRoleConfig } from '@cdktn/provider-aws/lib/iam-role';",
+          "export const bucket: S3BucketConfig = { bucket: 'x' };",
+          "export const role: IamRoleConfig = { assumeRolePolicy: '{}' };",
+        ].join("\n"),
+      ),
+    ).toBe(
+      [
+        "import type { iam, s3 } from '@cdktn/aws';",
+        "export const bucket: s3.TfBucketConfig = { bucket: 'x' };",
+        "export const role: iam.TfRoleConfig = { assumeRolePolicy: '{}' };",
+      ].join("\n"),
+    );
+  });
+
+  it("emits a value import as soon as one contributor is a value import", () => {
+    const after = migrated(
+      [
+        "import type { S3BucketConfig } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "import { IamRole } from '@cdktn/provider-aws/lib/iam-role';",
+        "export const bucket: S3BucketConfig = { bucket: 'x' };",
+        "export const role = (s: any) => new IamRole(s, 'r', { assumeRolePolicy: '{}' });",
+      ].join("\n"),
+    );
+    expect(after).toContain("import { iam, s3 } from '@cdktn/aws';");
+    expect(after).not.toContain("import type");
+  });
+
+  it("spells the `type` keyword back on a residual classic import", () => {
+    const result = migrate(
+      [
+        "import type { S3BucketConfig, S3BucketInvented } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "export const bucket: S3BucketConfig = { bucket: 'x' };",
+        "export type Other = S3BucketInvented;",
+      ].join("\n"),
+    );
+    expect(result.after).toContain(
+      "import type { S3BucketInvented } from '@cdktn/provider-aws/lib/s3-bucket';",
+    );
+    expect(result.after).toContain("import type { s3 } from '@cdktn/aws';");
+    expect(rewriteDefects(result.after)).toEqual([]);
+  });
+});
+
 describe("a binding with more than one failing reference", () => {
   // One finding per reference, but ONE clause per binding: a held binding spelled twice is
   // `import { s3Bucket, s3Bucket }`, which is TS2300 — a file the tool wrote and broke.

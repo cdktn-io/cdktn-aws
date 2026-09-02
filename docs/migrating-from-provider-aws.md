@@ -80,7 +80,9 @@ It rewrites:
   report row each.
 
 If the group name is already bound in a file, the barrel member is aliased deterministically
-(`import { s3 as s3_ }`, then `s3_2`, `s3_3`).
+(`import { s3 as s3_ }`, then `s3_2`, `s3_3`). A type-only import stays type-only: when every
+binding merged into the group import came from `import type { … }` or `import { type X }`, the
+result is `import type { s3 } from '@cdktn/aws'` — mixed contributors make it a value import.
 
 ## What it reports instead of rewriting
 
@@ -91,7 +93,7 @@ could not move — so the file still compiles while you decide. While anything i
 imports still have to install. **The exit code is non-zero while anything is unmapped**, which is
 what lets a CI job gate on the tool.
 
-Known limits. Every one of them is reported at runtime except the three marked **silent**, which the
+Known limits. Every one of them is reported at runtime except the two marked **silent**, which the
 closing `grep` below is there to catch:
 
 | limit | what happens |
@@ -106,7 +108,6 @@ closing `grep` below is there to catch:
 | `import x = require('@cdktn/provider-aws/…')`, `import('…')` | reported — the specifier is recognised, the form is not rewritten |
 | a subpath with no map row | reported, and its import kept whole |
 | a default import (`import aws from '@cdktn/provider-aws'`) | reported — neither library has a default export, so the binding stays on the classic package, and a `* as` binding sharing that statement stays with it |
-| `import type { … }` of a classic type | **silent** — rewritten to a plain `import { s3 } from '@cdktn/aws'`; under `verbatimModuleSyntax` that is a runtime import the file did not have before |
 
 After a `--write` run, `grep -r '@cdktn/provider-aws' .` is the honest last step.
 
