@@ -5,6 +5,7 @@
  * than text, it never collides with a name the file already uses, it reports what it does not know
  * instead of guessing, and running it twice does nothing the second time.
  */
+import { assertRewriteSound, rewriteDefects } from "../src/rewrite";
 import { migrate, migrated } from "./helpers";
 
 describe("type positions", () => {
@@ -212,6 +213,86 @@ describe("what it refuses to guess", () => {
       "the classic submodule is used as a value, not as `<submodule>.<Symbol>`",
     ]);
     expect(result.after).toBe(result.before);
+  });
+});
+
+describe("a binding with more than one failing reference", () => {
+  // One finding per reference, but ONE clause per binding: a held binding spelled twice is
+  // `import { s3Bucket, s3Bucket }`, which is TS2300 — a file the tool wrote and broke.
+  it("spells a barrel namespace once, however many members are unmapped", () => {
+    const result = migrate(
+      [
+        "import { s3Bucket, iamRole } from '@cdktn/provider-aws';",
+        "export function build(scope: any) {",
+        "  new s3Bucket.S3BucketInvented(scope, 'a', {});",
+        "  new s3Bucket.S3BucketAlsoInvented(scope, 'b', {});",
+        "  new iamRole.IamRole(scope, 'r', {});",
+        "}",
+      ].join("\n"),
+    );
+    expect(result.unmapped.map((u) => u.symbol)).toEqual([
+      "s3Bucket.S3BucketInvented",
+      "s3Bucket.S3BucketAlsoInvented",
+    ]);
+    expect(result.after).toContain("import { s3Bucket } from '@cdktn/provider-aws';");
+    expect(result.after).toContain("import { iam } from '@cdktn/aws';");
+    expect(rewriteDefects(result.after)).toEqual([]);
+  });
+
+  it("spells a deep named import once when two positions refuse it", () => {
+    // Both refusals are in-place ones: a shorthand property and an export specifier.
+    const result = migrate(
+      [
+        "import { S3Bucket, S3BucketConfig } from '@cdktn/provider-aws/lib/s3-bucket';",
+        "const alias = { S3Bucket };",
+        "export { S3Bucket };",
+        "export const config: S3BucketConfig = { bucket: 'x' };",
+        "export const used = alias;",
+      ].join("\n"),
+    );
+    expect(result.unmapped).toHaveLength(2);
+    expect(result.after).toContain("import { S3Bucket } from '@cdktn/provider-aws/lib/s3-bucket';");
+    expect(result.after).toContain("import { s3 } from '@cdktn/aws';");
+    expect(rewriteDefects(result.after)).toEqual([]);
+  });
+
+  it("spells a `require` destructuring once when two members are unmapped", () => {
+    const result = migrate(
+      [
+        "const { s3Bucket, iamRole } = require('@cdktn/provider-aws');",
+        "export function build(scope: any) {",
+        "  new s3Bucket.S3BucketInvented(scope, 'a', {});",
+        "  new s3Bucket.S3BucketAlsoInvented(scope, 'b', {});",
+        "  new iamRole.IamRole(scope, 'r', {});",
+        "}",
+      ].join("\n"),
+    );
+    expect(result.unmapped).toHaveLength(2);
+    expect(result.after).toContain("const { s3Bucket } = require('@cdktn/provider-aws');");
+    expect(rewriteDefects(result.after)).toEqual([]);
+  });
+});
+
+describe("the structural backstop", () => {
+  it("names the file and refuses text that binds one import name twice", () => {
+    expect(() =>
+      assertRewriteSound(
+        "src/a.ts",
+        "import { s3Bucket } from '@cdktn/provider-aws';\n",
+        "import { s3Bucket, s3Bucket } from '@cdktn/provider-aws';\n",
+      ),
+    ).toThrow(/^src\/a\.ts: .*bind `s3Bucket` more than once/s);
+  });
+
+  it("refuses text that does not parse", () => {
+    expect(() => assertRewriteSound("src/a.ts", "const a = 1;\n", "export { s3.TfBucket };\n")).toThrow(
+      /src\/a\.ts: .*does not parse at line 1/s,
+    );
+  });
+
+  it("says nothing about a defect the input already had", () => {
+    const broken = "import { s3Bucket, s3Bucket } from '@cdktn/provider-aws';\n";
+    expect(() => assertRewriteSound("src/a.ts", broken, `${broken}export const x = 1;\n`)).not.toThrow();
   });
 });
 

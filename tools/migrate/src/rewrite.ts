@@ -412,6 +412,70 @@ function residualImport(statement: ImportDeclaration | VariableStatement, kept: 
   return `${statement.getDeclarationKind()} ${binding} = require('${specifier}');`;
 }
 
+/** Every name the file's imports and `require` destructurings bind, in source order. */
+function importedLocalNames(file: SourceFile): string[] {
+  const names: string[] = [];
+  for (const decl of file.getImportDeclarations()) {
+    const byDefault = decl.getDefaultImport();
+    if (byDefault) names.push(byDefault.getText());
+    const star = decl.getNamespaceImport();
+    if (star) names.push(star.getText());
+    for (const spec of decl.getNamedImports()) {
+      names.push((spec.getAliasNode() ?? spec.getNameNode()).getText());
+    }
+  }
+  for (const statement of file.getVariableStatements()) {
+    if (!requiredSpecifier(statement)) continue;
+    const nameNode = statement.getDeclarations()[0].getNameNode();
+    if (Node.isIdentifier(nameNode)) names.push(nameNode.getText());
+    else if (Node.isObjectBindingPattern(nameNode)) {
+      for (const element of nameNode.getElements()) names.push(element.getNameNode().getText());
+    }
+  }
+  return names;
+}
+
+/**
+ * What a rewritten file must never contain, whatever the edits did: text that does not parse, or
+ * two import bindings of one name (TS2300). Both are shapes a composed text edit can produce and
+ * neither is a wrong NAME, so no per-case assertion about spellings can catch them.
+ */
+export function rewriteDefects(text: string): string[] {
+  const project = new Project({ useInMemoryFileSystem: true, compilerOptions: { noLib: true } });
+  const file = project.createSourceFile("rewritten.ts", text);
+  const defects = project
+    .getProgram()
+    .getSyntacticDiagnostics(file)
+    .map((d) => {
+      const message = d.getMessageText();
+      return `does not parse at line ${d.getLineNumber() ?? 0}: ${
+        typeof message === "string" ? message : message.getMessageText()
+      }`;
+    });
+  const seen = new Set<string>();
+  for (const name of importedLocalNames(file)) {
+    if (seen.has(name)) defects.push(`the imports bind \`${name}\` more than once`);
+    seen.add(name);
+  }
+  return defects;
+}
+
+/**
+ * The structural backstop, run on every file the rewrite changes before anything is diffed or
+ * written. A defect the input already had is the consumer's, not ours — only one this run
+ * INTRODUCED stops it, and it stops it by throwing rather than by writing.
+ */
+export function assertRewriteSound(relative: string, before: string, after: string): void {
+  if (after === before) return;
+  const had = rewriteDefects(before);
+  const introduced = rewriteDefects(after).filter((d) => !had.includes(d));
+  if (introduced.length === 0) return;
+  throw new Error(
+    `${relative}: the rewrite produced a file that would not compile — ${introduced.join("; ")}. ` +
+      "Nothing was written. This is a bug in @cdktn/aws-migrate; please report it with the file.",
+  );
+}
+
 /** Is this literal in a module-specifier position — an import/export clause, `require`, `import()`? */
 function isModuleSpecifier(literal: Node): boolean {
   const parent = literal.getParent();
@@ -467,10 +531,12 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
   // bindings this run actually REMOVES, and that is not known until the last one has been decided.
   const moving: { binding: Binding; occurrences: readonly Occurrence[] }[] = [];
 
+  // A binding is HELD once however many findings it collects: one reference the map cannot place is
+  // enough to keep it, and a second would otherwise spell it twice in the residual clause list.
   const keep = (binding: Binding, finding: Unmapped) => {
     unmapped.push(finding);
     const kept = keptByStatement.get(binding.statement) ?? [];
-    kept.push(binding);
+    if (!kept.includes(binding)) kept.push(binding);
     keptByStatement.set(binding.statement, kept);
   };
 
@@ -606,7 +672,9 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
   }
 
   unmapped.push(...unhandledClassicImports(file, statements, relative));
-  return { file: relative, before, after: applyEdits(before, edits), rewrites, unmapped };
+  const after = applyEdits(before, edits);
+  assertRewriteSound(relative, before, after);
+  return { file: relative, before, after, rewrites, unmapped };
 }
 
 export interface MigrateOptions {
