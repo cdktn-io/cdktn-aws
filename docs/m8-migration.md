@@ -94,7 +94,7 @@ Every gate, run on this tree at the commit that closed the slice (macOS, 12 core
 
 | gate | command | result |
 | --- | --- | --- |
-| tests | `pnpm test` | 2,291 passed, 9 snapshots, 13 suites (2,253 generator + 38 migration tool), 8.7 s |
+| tests | `pnpm test` | 2,304 passed, 9 snapshots, 13 suites (2,255 generator + 49 migration tool), 8.3 s |
 | types | `pnpm typecheck` | root + `tools/aws2cdk` + `tools/migrate` + 258/258 generated packages OK, 57 s |
 | generator | `pnpm generate` ×2 | 3,434 files / 2,401 classes / **9,856 nested types** in 3.3 s; `git status` clean on both runs |
 | groups | `pnpm check:groups` | PASS — 257 groups, gate C: 259 prefixes, all used, 0 collisions |
@@ -120,46 +120,7 @@ Every gate, run on this tree at the commit that closed the slice (macOS, 12 core
 * **JSDoc `@type` annotations** are neither rewritten nor reported — they are comments, and the tool
   does not read them. The migration guide says to grep for `@cdktn/provider-aws` afterwards.
 
-## Round 1 review fixes
+## Review rounds
 
-Three defects an adversarial review found, all of them the same shape — the tool being *silent*
-about something it had not decided:
-
-* **`export { B }` where `B` is a classic import** was rewritten to `export { s3.TfBucket };`, which
-  does not parse. An export clause takes names, not qualified names. It now joins the shorthand
-  property assignment as a reported position (`rewrite.ts#resolve`).
-* **`declaredNames` read the imported name of an import specifier**, so
-  `import { readFileSync as s3 }` never marked `s3` as taken and the group barrel collided with it.
-  It reads the local name now — the only one that is bound.
-* **Import forms the tool does not model were passed over in silence** — `export … from`,
-  `export *`, `import x = require(…)`, `import('…')`, and the `index-structs/` subpath where the
-  large modules declare their structs. `package.json` had already dropped the classic dependency, so
-  a green run could leave a project importing a package it no longer depends on. There is now a
-  backstop that cannot be outgrown: after the edits, every classic specifier still in a
-  module-specifier position that this run did not decide about is reported, and the exit code says
-  so. `index-structs` is resolved properly (the module's index re-exports it), and a named import or
-  namespace binding whose submodule has no map row is kept and reported rather than dropped.
-
-Two cheaper follow-ons in the same pass: `package.json` keeps `@cdktn/provider-aws` beside
-`@cdktn/aws` while anything is unmapped (a residual import still has to install), and
-`migrate-verify`'s `includes("0 unmapped")` — which "10 unmapped" also satisfies — is anchored.
-8 new tests, 35 in the tool's suite. Deferred: emitting `import type` when every merged binding came
-from a type-only import; the behaviour is documented in the guide's limits table instead.
-
-## Round 2 review fixes
-
-Two more of the same shape, both on the paths round 1 opened:
-
-* **A default import of the classic package was dropped, or retargeted.** `classicBindings` read
-  the namespace and named bindings but never `getDefaultImport()`, so a sibling binding on the same
-  statement marked it handled and the round-1 backstop skipped it: `import d, { iamRole } from '…'`
-  lost `d` at exit 0, and `import d, * as ns from '…'` moved `d` onto `@cdktn/aws`, which has no
-  member it could reach. The default binding is a reported binding now, `residualImport` spells the
-  default slot back, and a statement that keeps ANY binding is never retargeted.
-* **A name kept in a residual import had been freed for the group barrel**, because the alias search
-  ran over every binding before knowing which ones the run would remove. `migrateFile` decides all
-  of them first and only then assigns aliases, over the names actually removed.
-
-3 new tests, 38 in the tool's suite. The evidence table's test row above is corrected to match.
-Also softened: the guide's limits table claimed every limit was reported — three are silent
-(JSDoc `@type`, `require(someVariable)`, `import type`), and they now say so.
+Each adversarial review round's defects and fixes are recorded, append-only, in
+[`docs/m8-migration-reviews.md`](./m8-migration-reviews.md).
