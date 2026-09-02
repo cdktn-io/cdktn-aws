@@ -307,3 +307,15 @@ they were only ever the dashed terraform type.
 The 11 `A`-suffixed classic names above are the reason the derivation runs the vendored parser
 instead of restating a rule; a re-implementation would have got every one of them wrong, and the
 2,401-row cross-check is what proved that before the map was committed.
+
+### The map grows a nested section, 2026-09-02 (M8)
+
+`naming-map.json` carried one row per generated class and nothing about nested block types, which
+is the smaller half of what a migrating consumer holds. Each entry now also carries
+`nested: { "<terraform path>": { className, classic } }` — one row per struct — plus a
+`mapperPrefix` on the five `s3`/`waf` entries whose mappers take the `Mapper` disambiguator, and the
+file publishes the fixed suffix rules that derive the OutputReference/List/Map classes and the two
+mapper functions on both sides. The classic side still comes from the vendored parser: the two
+parses are joined positionally and every row is checked to end in the PascalCased terraform path it
+claims. 9,856 nested rows; the file went from 866 KB to 3.0 MB. Nothing under `generated/` changed.
+The record is [`docs/m8-migration.md`](./m8-migration.md).
